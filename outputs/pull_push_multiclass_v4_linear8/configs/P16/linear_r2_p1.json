@@ -1,0 +1,14 @@
+{
+  "arms": [
+    {
+      "name": "linear_r2_p1",
+      "rho": 2.0,
+      "semantic_mode": "linear_pull_push",
+      "semantic_temperature": 0.1,
+      "source_logit_weight": 1.0,
+      "step_size": 0.00392156862745098,
+      "steps": 50,
+      "target_logit_weight": 1.0
+    }
+  ]
+}

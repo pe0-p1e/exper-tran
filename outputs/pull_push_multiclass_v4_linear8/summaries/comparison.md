@@ -1,0 +1,72 @@
+# Explicit pull+push versus InfoNCE (8 images per transition)
+
+Partial groups are shown with their actual denominators. Selection uses only tuning cells.
+
+| Pair | Split | Arm | Cells | TASR | ASR | Proxy | Target gain | Source drop |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| P14 | smoke | smoke_cls | 1 | 0/8 | 0/8 | 0/8 | 0.0101 | 0.0067 |
+| P14 | smoke | smoke_infonce | 1 | 0/8 | 0/8 | 0/8 | 0.0157 | 0.0096 |
+| P14 | smoke | smoke_linear | 1 | 0/8 | 0/8 | 0/8 | 0.0240 | 0.0182 |
+| P14 | tuning | cls_only | 3 | 1/24 | 2/24 | 17/24 | 0.0604 | 0.0876 |
+| P14 | tuning | infonce_baseline | 3 | 8/24 | 8/24 | 18/24 | 0.1937 | 0.2439 |
+| P14 | tuning | linear_r0.25_p0 | 3 | 5/24 | 6/24 | 14/24 | 0.1927 | 0.0936 |
+| P14 | tuning | linear_r0.25_p0.25 | 3 | 7/24 | 7/24 | 19/24 | 0.2042 | 0.1568 |
+| P14 | tuning | linear_r0.25_p0.5 | 3 | 8/24 | 9/24 | 19/24 | 0.1882 | 0.2332 |
+| P14 | tuning | linear_r0.25_p1 | 3 | 8/24 | 9/24 | 18/24 | 0.0430 | 0.4634 |
+| P14 | tuning | linear_r0.5_p0 | 3 | 4/24 | 4/24 | 16/24 | 0.2226 | 0.1036 |
+| P14 | tuning | linear_r0.5_p0.25 | 3 | 8/24 | 9/24 | 19/24 | 0.2286 | 0.1693 |
+| P14 | tuning | linear_r0.5_p0.5 | 3 | 12/24 | 13/24 | 18/24 | 0.2056 | 0.2670 |
+| P14 | tuning | linear_r0.5_p1 | 3 | 9/24 | 11/24 | 24/24 | 0.0270 | 0.5289 |
+| P14 | tuning | linear_r1_p0 | 3 | 7/24 | 7/24 | 18/24 | 0.2493 | 0.1154 |
+| P14 | tuning | linear_r1_p0.25 | 3 | 6/24 | 7/24 | 19/24 | 0.2468 | 0.1819 |
+| P14 | tuning | linear_r1_p0.5 | 3 | 9/24 | 10/24 | 21/24 | 0.2147 | 0.2850 |
+| P14 | tuning | linear_r1_p1 | 3 | 6/24 | 9/24 | 22/24 | 0.0012 | 0.5979 |
+| P14 | validation | cls_only | 7 | 9/56 | 22/56 | 40/56 | 0.0409 | 0.0735 |
+| P14 | validation | infonce_baseline | 7 | 43/56 | 45/56 | 51/56 | 0.1936 | 0.2459 |
+| P14 | validation | infonce_matched_linear | 7 | 44/56 | 46/56 | 50/56 | 0.1952 | 0.2450 |
+| P14 | validation | linear_r0.5_p0.5 | 7 | 44/56 | 46/56 | 52/56 | 0.2037 | 0.2707 |
+| P14 | validation | linear_r1_p0 | 7 | 38/56 | 38/56 | 52/56 | 0.2578 | 0.0863 |
+| P16 | smoke | smoke_cls | 1 | 0/8 | 0/8 | 0/8 | 0.0196 | 0.0228 |
+| P16 | smoke | smoke_infonce | 1 | 0/8 | 0/8 | 0/8 | 0.0610 | 0.0340 |
+| P16 | smoke | smoke_linear | 1 | 0/8 | 0/8 | 0/8 | 0.0488 | 0.0615 |
+| P16 | tuning | cls_only | 3 | 0/24 | 1/24 | 23/24 | 0.0410 | 0.0592 |
+| P16 | tuning | infonce_baseline | 3 | 3/24 | 4/24 | 24/24 | 0.3442 | 0.2525 |
+| P16 | tuning | linear_r0.5_p0 | 3 | 3/24 | 3/24 | 24/24 | 0.3581 | 0.1324 |
+| P16 | tuning | linear_r0.5_p0.25 | 3 | 3/24 | 4/24 | 24/24 | 0.3440 | 0.2514 |
+| P16 | tuning | linear_r0.5_p0.5 | 3 | 4/24 | 6/24 | 24/24 | 0.2859 | 0.4190 |
+| P16 | tuning | linear_r0.5_p1 | 3 | 1/24 | 3/24 | 24/24 | 0.0130 | 0.7878 |
+| P16 | tuning | linear_r1_p0 | 3 | 3/24 | 4/24 | 24/24 | 0.3600 | 0.1320 |
+| P16 | tuning | linear_r1_p0.25 | 3 | 3/24 | 4/24 | 24/24 | 0.3457 | 0.2590 |
+| P16 | tuning | linear_r1_p0.5 | 3 | 2/24 | 5/24 | 24/24 | 0.2840 | 0.4280 |
+| P16 | tuning | linear_r1_p1 | 3 | 3/24 | 3/24 | 24/24 | 0.0073 | 0.8028 |
+| P16 | tuning | linear_r2_p0 | 3 | 3/24 | 4/24 | 24/24 | 0.3621 | 0.1354 |
+| P16 | tuning | linear_r2_p0.25 | 3 | 4/24 | 4/24 | 24/24 | 0.3461 | 0.2627 |
+| P16 | tuning | linear_r2_p0.5 | 3 | 4/24 | 4/24 | 24/24 | 0.2838 | 0.4317 |
+| P16 | tuning | linear_r2_p1 | 3 | 3/24 | 3/24 | 24/24 | 0.0004 | 0.8144 |
+| P16 | validation | cls_only | 7 | 1/56 | 2/56 | 50/56 | 0.0316 | 0.0562 |
+| P16 | validation | infonce_baseline | 7 | 21/56 | 24/56 | 54/56 | 0.3126 | 0.2035 |
+| P16 | validation | infonce_matched_linear | 7 | 16/56 | 22/56 | 55/56 | 0.2521 | 0.3597 |
+| P16 | validation | linear_r0.5_p0 | 7 | 20/56 | 24/56 | 56/56 | 0.3292 | 0.0893 |
+| P16 | validation | linear_r0.5_p0.5 | 7 | 20/56 | 24/56 | 56/56 | 0.2524 | 0.3747 |
+| P19 | smoke | smoke_cls | 1 | 0/8 | 0/8 | 0/8 | 0.0016 | 0.0017 |
+| P19 | smoke | smoke_infonce | 1 | 0/8 | 0/8 | 0/8 | 0.0087 | 0.0012 |
+| P19 | smoke | smoke_linear | 1 | 0/8 | 0/8 | 0/8 | 0.0090 | 0.0026 |
+| P19 | tuning | cls_only | 3 | 1/24 | 1/24 | 18/24 | 0.0032 | 0.0076 |
+| P19 | tuning | infonce_baseline | 3 | 20/24 | 21/24 | 24/24 | 0.0223 | 0.0381 |
+| P19 | tuning | linear_r0.25_p0 | 3 | 11/24 | 13/24 | 23/24 | 0.0322 | 0.0030 |
+| P19 | tuning | linear_r0.25_p0.25 | 3 | 19/24 | 21/24 | 24/24 | 0.0311 | 0.0141 |
+| P19 | tuning | linear_r0.25_p0.5 | 3 | 20/24 | 22/24 | 24/24 | 0.0225 | 0.0366 |
+| P19 | tuning | linear_r0.25_p1 | 3 | 17/24 | 21/24 | 24/24 | -0.2550 | 0.3641 |
+| P19 | tuning | linear_r0.5_p0 | 3 | 9/24 | 13/24 | 24/24 | 0.0328 | 0.0034 |
+| P19 | tuning | linear_r0.5_p0.25 | 3 | 20/24 | 23/24 | 24/24 | 0.0313 | 0.0146 |
+| P19 | tuning | linear_r0.5_p0.5 | 3 | 21/24 | 23/24 | 24/24 | 0.0221 | 0.0386 |
+| P19 | tuning | linear_r0.5_p1 | 3 | 18/24 | 21/24 | 24/24 | -0.2747 | 0.3882 |
+| P19 | tuning | linear_r1_p0 | 3 | 12/24 | 14/24 | 24/24 | 0.0329 | 0.0034 |
+| P19 | tuning | linear_r1_p0.25 | 3 | 18/24 | 20/24 | 24/24 | 0.0313 | 0.0152 |
+| P19 | tuning | linear_r1_p0.5 | 3 | 22/24 | 23/24 | 24/24 | 0.0220 | 0.0394 |
+| P19 | tuning | linear_r1_p1 | 3 | 19/24 | 21/24 | 24/24 | -0.2796 | 0.3946 |
+| P19 | validation | cls_only | 7 | 10/56 | 19/56 | 54/56 | 0.0034 | 0.0051 |
+| P19 | validation | infonce_baseline | 7 | 43/56 | 49/56 | 55/56 | 0.0211 | 0.0372 |
+| P19 | validation | infonce_matched_linear | 7 | 43/56 | 49/56 | 56/56 | 0.0210 | 0.0384 |
+| P19 | validation | linear_r1_p0 | 7 | 34/56 | 34/56 | 55/56 | 0.0320 | 0.0025 |
+| P19 | validation | linear_r1_p0.5 | 7 | 45/56 | 49/56 | 56/56 | 0.0209 | 0.0389 |

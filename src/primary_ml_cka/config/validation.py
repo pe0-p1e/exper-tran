@@ -60,6 +60,7 @@ def validate_attack_config(
     if config.semantic_mode not in {
         "target_only",
         "prototype",
+        "linear_pull_push",
         "mean_reference",
         "multiclass_prototype",
     }:

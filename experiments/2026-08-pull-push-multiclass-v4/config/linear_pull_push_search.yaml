@@ -1,0 +1,12 @@
+# Eight images per transition, no 50-image attacks. Fix before launch.
+output_dir: outputs/pull_push_multiclass_v4_linear8
+tuning_transitions: [T02, T04, T08]
+validation_transitions: [T01, T03, T05, T06, T07, T09, T10]
+rho_multipliers: [0.5, 1.0, 2.0]
+push_weights: [0.0, 0.25, 0.5, 1.0]
+steps: 50
+step_size: 0.00392156862745098
+pairs:
+  P16: {rho: 1.0, tau: 0.1, push: 0.25}
+  P19: {rho: 0.5, tau: 0.1, push: 0.5}
+  P14: {rho: 0.5, tau: 0.2, push: 0.5}

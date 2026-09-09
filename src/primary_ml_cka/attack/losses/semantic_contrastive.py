@@ -8,6 +8,7 @@ import torch.nn.functional as functional
 SEMANTIC_MODES = (
     "target_only",
     "prototype",
+    "linear_pull_push",
     "mean_reference",
     "multiclass_prototype",
 )
@@ -113,7 +114,7 @@ def semantic_representation_loss(
     if source.shape[1] != adv.shape[1]:
         raise ValueError("Adversarial and source reference dimensions must match")
 
-    if mode == "prototype":
+    if mode in {"prototype", "linear_pull_push"}:
         target_center = functional.normalize(target.mean(dim=0, keepdim=True), dim=-1)
         source_center = functional.normalize(source.mean(dim=0, keepdim=True), dim=-1)
         target_similarity = (adv * target_center).sum(dim=-1)
@@ -121,6 +122,19 @@ def semantic_representation_loss(
     else:
         target_similarity = (adv @ target.T).mean(dim=-1)
         source_similarity = (adv @ source.T).mean(dim=-1)
+
+    if mode == "linear_pull_push":
+        # Separate cosine attraction and repulsion; no softmax or temperature.
+        # The +1 constants keep both components nonnegative without changing
+        # their gradients. We reuse the weight arguments for compatibility.
+        loss = (
+            target_logit_weight * (1.0 - target_similarity)
+            + source_logit_weight * (1.0 + source_similarity)
+        ).mean()
+        return SemanticContrastiveOutput(
+            loss, target_similarity.mean(), source_similarity.mean(),
+            (target_similarity - source_similarity).mean(),
+        )
 
     # With unit weights this is the original two-class InfoNCE objective.
     # Independent weights expose the gradient-direction ratio explicitly:

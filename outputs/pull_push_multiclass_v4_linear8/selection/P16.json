@@ -1,0 +1,38 @@
+{
+  "criterion": "TASR; ties lower rho then lower push",
+  "infonce_matched": {
+    "name": "infonce_matched_linear",
+    "rho": 0.5,
+    "semantic_mode": "prototype",
+    "semantic_temperature": 0.1,
+    "source_logit_weight": 0.5,
+    "step_size": 0.00392156862745098,
+    "steps": 50,
+    "target_logit_weight": 1.0
+  },
+  "linear": {
+    "name": "linear_r0.5_p0.5",
+    "rho": 0.5,
+    "semantic_mode": "linear_pull_push",
+    "semantic_temperature": 0.1,
+    "source_logit_weight": 0.5,
+    "step_size": 0.00392156862745098,
+    "steps": 50,
+    "target_logit_weight": 1.0
+  },
+  "pull_only": {
+    "name": "linear_r0.5_p0",
+    "rho": 0.5,
+    "semantic_mode": "linear_pull_push",
+    "semantic_temperature": 0.1,
+    "source_logit_weight": 0.0,
+    "step_size": 0.00392156862745098,
+    "steps": 50,
+    "target_logit_weight": 1.0
+  },
+  "selected_on": [
+    "T02",
+    "T04",
+    "T08"
+  ]
+}

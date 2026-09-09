@@ -3,6 +3,7 @@
 
 import argparse
 import gc
+import hashlib
 import json
 import os
 from dataclasses import asdict
@@ -44,6 +45,7 @@ def main() -> None:
     )
     parser.add_argument("--steps", type=int, help="Smoke-only step override")
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--strict-resume", action="store_true")
     parser.add_argument("--fail-on-error", action="store_true")
     args = parser.parse_args()
     if not torch.cuda.is_available():
@@ -127,8 +129,9 @@ def main() -> None:
                 )
                 representation_pooling = str(arm.get("pooling", spec["pooling"]))
                 early_stop_proxy_gate = bool(arm.get("early_stop_proxy_gate", False))
-                if rho <= 0 or semantic_temperature <= 0:
-                    raise ValueError("rho and semantic temperature must be positive")
+                if rho < 0 or semantic_temperature <= 0:
+                    raise ValueError("rho must be nonnegative and temperature positive")
+                auxiliary_lambda = 0.0 if rho == 0 else 1.0
                 if target_weight < 0 or source_weight < 0:
                     raise ValueError("Pull/push weights must be non-negative")
                 if target_weight == 0 and source_weight == 0:
@@ -137,9 +140,21 @@ def main() -> None:
                 state_path = (
                     args.output_dir / "states" / pair_id / transition_id / f"{arm_name}.json"
                 )
+                signature = hashlib.sha256(json.dumps({
+                    "raw": raw, "arm": arm, "steps": steps,
+                    "pair_id": pair_id, "transition_id": transition_id,
+                    "source": [asdict(record) for record in source],
+                    "references": [[asdict(record) for record in bank]
+                                   for bank in class_references],
+                }, sort_keys=True, default=str).encode()).hexdigest()
                 if args.resume and state_path.is_file():
                     state = json.loads(state_path.read_text(encoding="utf-8"))
                     if state.get("status") == "complete" and int(state["steps"]) == steps:
+                        if (args.strict_resume or "trial_signature" in state) and state.get("trial_signature") != signature:
+                            raise RuntimeError(
+                                f"Resume signature missing or changed: {state_path}; "
+                                "use a separate output/arm for this configuration"
+                            )
                         print(
                             f"trial={trial_index}/{trial_count} resume "
                             f"{pair_id}/{transition_id}/{arm_name}",
@@ -147,6 +162,7 @@ def main() -> None:
                         )
                         continue
                 state = {
+                    "trial_signature": signature,
                     "status": "running",
                     "pair_id": pair_id,
                     "transition_id": transition_id,
@@ -220,7 +236,7 @@ def main() -> None:
                         ),
                         source_batch_index=0,
                         reference_batch_index=0,
-                        lambda_cka=1.0,
+                        lambda_cka=auxiliary_lambda,
                         seed=trial_seed,
                         steps=steps,
                         attack_config=attack_config,
@@ -229,7 +245,7 @@ def main() -> None:
                         cka_source_weight=0.0,
                         cka_target_weight=0.0,
                         semantic_target_weight=1.0,
-                        gradient_ratio=rho,
+                        gradient_ratio=rho if rho > 0 else None,
                         objective_tag=arm_name,
                         early_stop_proxy_gate=early_stop_proxy_gate,
                         progress_interval=max(1, min(10, steps)),
@@ -253,7 +269,7 @@ def main() -> None:
                         / phase
                         / "batch_00"
                         / arm_name
-                        / "lambda_1"
+                        / f"lambda_{auxiliary_lambda:g}"
                     )
                     evaluation = evaluate_local_frozen_batch(
                         model_id=pair.target_model,

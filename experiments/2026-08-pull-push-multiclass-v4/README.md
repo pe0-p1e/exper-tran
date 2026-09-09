@@ -3,6 +3,51 @@
 The consolidated technical findings are in [REPORT.md](REPORT.md), and the
 tracked output inventory is in [RESULTS_MANIFEST.md](RESULTS_MANIFEST.md).
 
+## Explicit pull/push comparison (September 2026)
+
+The historical `prototype` loss remains two-class InfoNCE, including its
+weighted-logit variants. The new opt-in `linear_pull_push` mode minimizes
+`a * (1 - cos(e, target_center)) + b * (1 + cos(e, source_center))`.
+These are explicit attraction and repulsion components without softmax.
+Temperature has no effect in this mode. At a single image, the InfoNCE
+representation gradient is a positive scalar multiple of this gradient;
+differences can arise from sample weighting, saturation, and relative CLS
+strength over the attack trajectory. An improvement is therefore not assured.
+
+Run the complete resumable eight-image comparison:
+
+```bash
+bash experiments/2026-08-pull-push-multiclass-v4/run_linear_pull_push.sh
+```
+
+The plan in `config/linear_pull_push_search.yaml` freezes seed, layers,
+references, 50 steps and 1/255 step size. It uses the existing consensus-clean
+reserve eight images per transition, disjoint from scale50. Those reserve
+images have been used in earlier searches, so this is a development comparison,
+not a previously untouched test set. No 50-image run is started.
+
+The script first checks CLS, InfoNCE and explicit pull/push end to end with
+one step in all three pairs. Then each pair searches 12 linear arms (three
+rho values, four push weights including zero), plus CLS-only and the frozen
+historical InfoNCE baseline on T02/T04/T08. The best nonzero-push arm and
+best pull-only arm are frozen using tuning TASR; ties favor smaller rho,
+then smaller push. Seven other transitions compare CLS, historical InfoNCE,
+selected linear, selected pull-only and InfoNCE with the selected linear
+weights. This last control prevents attributing a better ratio to the loss
+form itself. A failed smoke stops the script. Resume checks the full trial
+configuration and manifest IDs.
+
+Results are written after every completed arm to
+`outputs/pull_push_multiclass_v4_linear8/summaries/linear_comparison.csv`
+and `comparison.md`, including TASR, ASR, proxy success, calibrated lambda,
+target/source similarities and separate pull/push components. Partial cells
+retain their actual denominator. `--stage summary` refreshes the table;
+`--stage smoke`, `tune`, or `validate` runs only the named stage.
+
+Use validation TASR to decide whether explicit pull/push improves on InfoNCE
+and whether push adds value over pull-only. A tie or failure in this grid
+only excludes these tested settings, not all possible pull/push objectives.
+
 ## Question
 
 Does binary source-target prototype pull+push or 10-class prototype

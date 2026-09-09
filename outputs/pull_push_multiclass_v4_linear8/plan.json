@@ -1,0 +1,47 @@
+{
+  "output_dir": "outputs/pull_push_multiclass_v4_linear8",
+  "pairs": {
+    "P14": {
+      "push": 0.5,
+      "rho": 0.5,
+      "tau": 0.2
+    },
+    "P16": {
+      "push": 0.25,
+      "rho": 1.0,
+      "tau": 0.1
+    },
+    "P19": {
+      "push": 0.5,
+      "rho": 0.5,
+      "tau": 0.1
+    }
+  },
+  "push_weights": [
+    0.0,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "rho_multipliers": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "step_size": 0.00392156862745098,
+  "steps": 50,
+  "tuning_transitions": [
+    "T02",
+    "T04",
+    "T08"
+  ],
+  "validation_transitions": [
+    "T01",
+    "T03",
+    "T05",
+    "T06",
+    "T07",
+    "T09",
+    "T10"
+  ]
+}
