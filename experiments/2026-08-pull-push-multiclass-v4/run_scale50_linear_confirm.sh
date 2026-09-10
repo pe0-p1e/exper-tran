@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+EXPERIMENT="$ROOT/experiments/2026-08-pull-push-multiclass-v4"
+CONFIG="$EXPERIMENT/config/scale50_linear_confirm.yaml"
+OUTPUT="${V4_SCALE50_OUTPUT:-$ROOT/outputs/pull_push_multiclass_v4_scale50_diverse10}"
+PYTHON="$ROOT/.venv-primary-ml-cka/bin/python"
+
+cd "$ROOT"
+PYTHONPATH="$ROOT/src" "$PYTHON" "$EXPERIMENT/src/run_scale50.py" \
+  --config "$CONFIG" --output-dir "$OUTPUT" --resume

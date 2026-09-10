@@ -109,6 +109,20 @@ class Scale50Test(unittest.TestCase):
             (17, 15, 17),
         )
 
+    def test_linear_confirmation_is_isolated_and_uses_selected_linear_arms(self):
+        raw = load_experiment(EXPERIMENT_ROOT / "config" / "scale50_linear_confirm.yaml")
+        specs = pair_specs(raw)
+        self.assertEqual(raw["state_namespace"], "states_scale50_linear_confirm")
+        self.assertEqual(raw["objective_tag"], "linear_pull_push_confirm")
+        self.assertEqual(raw["summary_filename"], "scale50_linear_confirm_results.csv")
+        self.assertEqual(
+            tuple(specs[pair]["semantic_mode"] for pair in specs),
+            ("linear_pull_push", "linear_pull_push", "linear_pull_push"),
+        )
+        self.assertEqual(specs["P14"]["selected_rho"], 0.5)
+        self.assertEqual(specs["P16"]["selected_rho"], 0.5)
+        self.assertEqual(specs["P19"]["selected_rho"], 1.0)
+
 
 if __name__ == "__main__":
     unittest.main()

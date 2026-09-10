@@ -131,6 +131,7 @@ def attack_batches(
     semantic_temperature = float(
         spec.get("semantic_temperature", raw["semantic_temperature"])
     )
+    semantic_mode = str(spec.get("semantic_mode", raw.get("semantic_mode", "prototype")))
     early_stop_proxy_gate = bool(spec.get("early_stop_proxy_gate", False))
     state_namespace = run_setting(raw, "state_namespace", "states_scale50")
     objective_tag = run_setting(raw, "objective_tag", OBJECTIVE_TAG)
@@ -148,7 +149,7 @@ def attack_batches(
         require_proxy_free_generation=True,
         reference_bank_size=reference_count,
         cls_loss_mode="margin_only",
-        semantic_mode="prototype",
+        semantic_mode=semantic_mode,
         semantic_temperature=semantic_temperature,
         representation_type=str(spec["representation_type"]),
         representation_layer=int(spec["representation_layer"]),
@@ -196,6 +197,7 @@ def attack_batches(
             "target_logit_weight": float(spec["target_logit_weight"]),
             "source_logit_weight": float(spec["source_logit_weight"]),
             "semantic_temperature": semantic_temperature,
+            "semantic_mode": semantic_mode,
             "representation_layer": int(spec["representation_layer"]),
             "early_stop_proxy_gate": early_stop_proxy_gate,
             "objective_tag": objective_tag,
@@ -230,7 +232,7 @@ def attack_batches(
                 prompt=prompt,
                 cls_loss_mode="margin_only",
                 lambda_cls=1.0,
-                semantic_mode="prototype",
+                semantic_mode=semantic_mode,
                 semantic_temperature=semantic_temperature,
                 semantic_target_logit_weight=float(spec["target_logit_weight"]),
                 semantic_source_logit_weight=float(spec["source_logit_weight"]),
@@ -387,6 +389,9 @@ def summarize(output_dir: Path, raw: dict) -> None:
                     "semantic_temperature": spec.get(
                         "semantic_temperature", raw["semantic_temperature"]
                     ),
+                    "semantic_mode": spec.get(
+                        "semantic_mode", raw.get("semantic_mode", "prototype")
+                    ),
                     "representation_layer": spec["representation_layer"],
                     "steps": spec.get("steps", raw.get("steps", 50)),
                     "step_size": spec.get(
@@ -394,6 +399,18 @@ def summarize(output_dir: Path, raw: dict) -> None:
                     ),
                     "proxy_hits": proxy_hits,
                     "proxy_percent": 100 * proxy_hits / total,
+                    # Primary transfer metric: only images satisfying the
+                    # strong proxy target criterion are eligible.  Raw target
+                    # hits remain below solely as an unconditional diagnostic.
+                    "eligible_tasr_hits": conditional_numerator,
+                    "eligible_tasr_denominator": conditional_denominator,
+                    "eligible_tasr_percent": (
+                        100 * conditional_numerator / conditional_denominator
+                        if conditional_denominator
+                        else 0.0
+                    ),
+                    "unconditional_tasr_hits": tasr_hits,
+                    "unconditional_tasr_percent": 100 * tasr_hits / clean_valid,
                     "tasr_hits": tasr_hits,
                     "tasr_percent": 100 * tasr_hits / clean_valid,
                     "asr_hits": asr_hits,
