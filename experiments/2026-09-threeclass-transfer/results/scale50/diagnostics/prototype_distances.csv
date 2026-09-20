@@ -1,0 +1,19 @@
+pair_id,proxy_model,transition_id,source_label,source_name,target_label,target_name,prototype_cosine,prototype_cosine_distance
+P14,Qwen/Qwen3.5-2B,G01,1,goldfish,2,monarch butterfly,0.7309703826904297,0.2690296173095703
+P14,Qwen/Qwen3.5-2B,G02,1,goldfish,7,volcano,0.7625746726989746,0.2374253273010254
+P14,Qwen/Qwen3.5-2B,G03,2,monarch butterfly,1,goldfish,0.7309703826904297,0.2690296173095703
+P14,Qwen/Qwen3.5-2B,G04,2,monarch butterfly,7,volcano,0.7255595922470093,0.2744404077529907
+P14,Qwen/Qwen3.5-2B,G05,7,volcano,1,goldfish,0.7625746726989746,0.2374253273010254
+P14,Qwen/Qwen3.5-2B,G06,7,volcano,2,monarch butterfly,0.7255595922470093,0.2744404077529907
+P16,OpenGVLab/InternVL3_5-2B-HF,G01,1,goldfish,2,monarch butterfly,0.7947627305984497,0.2052372694015503
+P16,OpenGVLab/InternVL3_5-2B-HF,G02,1,goldfish,7,volcano,0.7222886681556702,0.27771133184432983
+P16,OpenGVLab/InternVL3_5-2B-HF,G03,2,monarch butterfly,1,goldfish,0.7947627305984497,0.2052372694015503
+P16,OpenGVLab/InternVL3_5-2B-HF,G04,2,monarch butterfly,7,volcano,0.6717710494995117,0.3282289505004883
+P16,OpenGVLab/InternVL3_5-2B-HF,G05,7,volcano,1,goldfish,0.7222886681556702,0.27771133184432983
+P16,OpenGVLab/InternVL3_5-2B-HF,G06,7,volcano,2,monarch butterfly,0.6717710494995117,0.3282289505004883
+P19,google/gemma-4-E2B-it,G01,1,goldfish,2,monarch butterfly,0.9831581115722656,0.016841888427734375
+P19,google/gemma-4-E2B-it,G02,1,goldfish,7,volcano,0.9817671775817871,0.01823282241821289
+P19,google/gemma-4-E2B-it,G03,2,monarch butterfly,1,goldfish,0.9831581115722656,0.016841888427734375
+P19,google/gemma-4-E2B-it,G04,2,monarch butterfly,7,volcano,0.9753291606903076,0.024670839309692383
+P19,google/gemma-4-E2B-it,G05,7,volcano,1,goldfish,0.9817671775817871,0.01823282241821289
+P19,google/gemma-4-E2B-it,G06,7,volcano,2,monarch butterfly,0.9753291606903076,0.024670839309692383

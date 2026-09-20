@@ -1,0 +1,118 @@
+catalog_mode: three_class_transfer
+seed: 42
+candidate_count: 64
+attack_count: 50
+reference_count: 48
+candidate_split: train
+candidate_offset: 48
+semantic_temperature: 0.1
+common_across_pairs: true
+state_namespace: states_threeclass_scale50
+objective_tag: best_pull_push_50
+summary_filename: threeclass_scale50_results.csv
+classes:
+- label: 1
+  wnid: n01443537
+  name: goldfish
+  domain: animal
+- label: 2
+  wnid: n02279972
+  name: monarch butterfly
+  domain: insect
+- label: 3
+  wnid: n07753275
+  name: pineapple
+  domain: food
+- label: 4
+  wnid: n02676566
+  name: acoustic guitar
+  domain: instrument
+- label: 5
+  wnid: n03642806
+  name: laptop
+  domain: electronics
+- label: 6
+  wnid: n07920052
+  name: espresso
+  domain: beverage
+- label: 7
+  wnid: n09472597
+  name: volcano
+  domain: natural scene
+- label: 8
+  wnid: n04099969
+  name: rocking chair
+  domain: furniture
+- label: 9
+  wnid: n04254680
+  name: soccer ball
+  domain: sports equipment
+- label: 10
+  wnid: n04146614
+  name: school bus
+  domain: transport
+pairs:
+- pair_id: P14
+  representation_type: vision_encoder
+  representation_layer: 17
+  pooling: mean
+  selected_rho: 0.0
+  target_logit_weight: 1.5
+  source_logit_weight: 0.5
+  lambda_cls: 0.0
+  lambda_cka: 1.0
+  semantic_mode: linear_pull_push
+  steps: 50
+  step_size: 0.00392156862745098
+- pair_id: P16
+  representation_type: vision_encoder
+  representation_layer: 17
+  pooling: mean
+  selected_rho: 0.0
+  target_logit_weight: 1.5
+  source_logit_weight: 0.5
+  lambda_cls: 0.0
+  lambda_cka: 0.5
+  semantic_mode: linear_pull_push
+  steps: 50
+  step_size: 0.00392156862745098
+- pair_id: P19
+  representation_type: vision_encoder
+  representation_layer: 15
+  pooling: mean
+  selected_rho: 0.0
+  target_logit_weight: 1.5
+  source_logit_weight: 0.5
+  lambda_cls: 0.0
+  lambda_cka: 1.0
+  semantic_mode: linear_pull_push
+  steps: 50
+  step_size: 0.00392156862745098
+transitions:
+- id: G01
+  source: 1
+  target: 2
+- id: G02
+  source: 1
+  target: 7
+- id: G03
+  source: 2
+  target: 1
+- id: G04
+  source: 2
+  target: 7
+- id: G05
+  source: 7
+  target: 1
+- id: G06
+  source: 7
+  target: 2
+arms:
+- name: full_pull_push
+  semantic_mode: linear_pull_push
+  steps: 50
+  step_size: 0.00392156862745098
+- name: second_loss_only
+  semantic_mode: linear_pull_push
+  steps: 50
+  step_size: 0.00392156862745098

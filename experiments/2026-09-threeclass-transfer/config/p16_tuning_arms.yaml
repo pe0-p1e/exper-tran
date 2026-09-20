@@ -1,0 +1,37 @@
+arms:
+  - name: p16_full_target_pull
+    semantic_mode: linear_pull_push
+    lambda_cls: 1.0
+    lambda_cka: 1.0
+    rho: 0.25
+    target_logit_weight: 1.5
+    source_logit_weight: 0.5
+    steps: 50
+    step_size: 0.00392156862745098
+  - name: p16_full_push_strong
+    semantic_mode: linear_pull_push
+    lambda_cls: 1.0
+    lambda_cka: 1.0
+    rho: 0.25
+    target_logit_weight: 1.0
+    source_logit_weight: 1.5
+    steps: 50
+    step_size: 0.00392156862745098
+  - name: p16_second_target_pull
+    semantic_mode: linear_pull_push
+    lambda_cls: 0.0
+    lambda_cka: 1.0
+    rho: 0.0
+    target_logit_weight: 1.5
+    source_logit_weight: 0.5
+    steps: 50
+    step_size: 0.00392156862745098
+  - name: p16_second_target_pull_half
+    semantic_mode: linear_pull_push
+    lambda_cls: 0.0
+    lambda_cka: 0.5
+    rho: 0.0
+    target_logit_weight: 1.5
+    source_logit_weight: 0.5
+    steps: 50
+    step_size: 0.00392156862745098

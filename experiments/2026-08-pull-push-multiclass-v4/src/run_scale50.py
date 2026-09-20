@@ -59,6 +59,7 @@ def artifact_dir(
     transition_id: str,
     batch: int,
     objective_tag: str = OBJECTIVE_TAG,
+    lambda_cka: float = 1.0,
 ) -> Path:
     return (
         output_dir
@@ -67,7 +68,7 @@ def artifact_dir(
         / f"v4_scale50_{transition_id}"
         / f"batch_{batch:02d}"
         / objective_tag
-        / "lambda_1"
+        / f"lambda_{lambda_cka:g}"
     )
 
 
@@ -133,6 +134,9 @@ def attack_batches(
     )
     semantic_mode = str(spec.get("semantic_mode", raw.get("semantic_mode", "prototype")))
     early_stop_proxy_gate = bool(spec.get("early_stop_proxy_gate", False))
+    lambda_cls = float(spec.get("lambda_cls", 1.0))
+    lambda_cka = float(spec.get("lambda_cka", 1.0))
+    selected_rho = float(spec.get("selected_rho", 0.0))
     state_namespace = run_setting(raw, "state_namespace", "states_scale50")
     objective_tag = run_setting(raw, "objective_tag", OBJECTIVE_TAG)
     attack_config = AttackConfig(
@@ -193,7 +197,9 @@ def attack_batches(
             "seed": int(raw["seed"]) + batch_index,
             "steps": steps,
             "step_size": step_size,
-            "rho": float(spec["selected_rho"]),
+            "rho": selected_rho,
+            "lambda_cls": lambda_cls,
+            "lambda_cka": lambda_cka,
             "target_logit_weight": float(spec["target_logit_weight"]),
             "source_logit_weight": float(spec["source_logit_weight"]),
             "semantic_temperature": semantic_temperature,
@@ -216,7 +222,7 @@ def attack_batches(
                 source_reference_records=source_references,
                 source_batch_index=batch_index,
                 reference_batch_index=0,
-                lambda_cka=1.0,
+                lambda_cka=lambda_cka,
                 seed=int(raw["seed"]) + batch_index,
                 steps=steps,
                 attack_config=attack_config,
@@ -225,13 +231,13 @@ def attack_batches(
                 cka_source_weight=0.0,
                 cka_target_weight=0.0,
                 semantic_target_weight=1.0,
-                gradient_ratio=float(spec["selected_rho"]),
+                gradient_ratio=selected_rho if selected_rho > 0 and lambda_cls > 0 else None,
                 objective_tag=objective_tag,
                 early_stop_proxy_gate=early_stop_proxy_gate,
                 progress_interval=max(1, min(10, steps)),
                 prompt=prompt,
                 cls_loss_mode="margin_only",
-                lambda_cls=1.0,
+                lambda_cls=lambda_cls,
                 semantic_mode=semantic_mode,
                 semantic_temperature=semantic_temperature,
                 semantic_target_logit_weight=float(spec["target_logit_weight"]),
@@ -292,6 +298,7 @@ def evaluate_batches(
                 transition.transition_id,
                 batch_index,
                 objective_tag,
+                float(state.get("lambda_cka", 1.0)),
             )
             clean = tuple(
                 generator.generate_label(artifacts / f"{index:02d}_clean.png", prompt)

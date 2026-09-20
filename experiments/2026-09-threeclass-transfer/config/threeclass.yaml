@@ -1,0 +1,54 @@
+catalog_mode: three_class_transfer
+seed: 42
+candidate_count: 64
+attack_count: 8
+reference_count: 48
+candidate_split: train
+candidate_offset: 48
+semantic_temperature: 0.1
+rho: 0.25
+common_across_pairs: true
+
+# Semantic labels remain ImageNet 1..10; only the model-facing answer code is
+# zero-based in the shared prompt (class 1->0, class 2->1, class 7->6).
+classes:
+  - {label: 1, wnid: n01443537, name: goldfish, domain: animal}
+  - {label: 2, wnid: n02279972, name: monarch butterfly, domain: insect}
+  - {label: 3, wnid: n07753275, name: pineapple, domain: food}
+  - {label: 4, wnid: n02676566, name: acoustic guitar, domain: instrument}
+  - {label: 5, wnid: n03642806, name: laptop, domain: electronics}
+  - {label: 6, wnid: n07920052, name: espresso, domain: beverage}
+  - {label: 7, wnid: n09472597, name: volcano, domain: natural scene}
+  - {label: 8, wnid: n04099969, name: rocking chair, domain: furniture}
+  - {label: 9, wnid: n04254680, name: soccer ball, domain: sports equipment}
+  - {label: 10, wnid: n04146614, name: school bus, domain: transport}
+
+pairs:
+  - {pair_id: P14, representation_type: vision_encoder, representation_layer: 17, pooling: mean}
+  - {pair_id: P16, representation_type: vision_encoder, representation_layer: 17, pooling: mean}
+  - {pair_id: P19, representation_type: vision_encoder, representation_layer: 15, pooling: mean}
+
+# All six directed edges among goldfish (1), butterfly (2), and volcano (7).
+transitions:
+  - {id: G01, source: 1, target: 2}
+  - {id: G02, source: 1, target: 7}
+  - {id: G03, source: 2, target: 1}
+  - {id: G04, source: 2, target: 7}
+  - {id: G05, source: 7, target: 1}
+  - {id: G06, source: 7, target: 2}
+
+arms:
+  - name: full_pull_push
+    semantic_mode: linear_pull_push
+    lambda_cls: 1.0
+    lambda_cka: 1.0
+    rho: 0.25
+    steps: 50
+    step_size: 0.00392156862745098
+  - name: second_loss_only
+    semantic_mode: linear_pull_push
+    lambda_cls: 0.0
+    lambda_cka: 1.0
+    rho: 0.0
+    steps: 50
+    step_size: 0.00392156862745098

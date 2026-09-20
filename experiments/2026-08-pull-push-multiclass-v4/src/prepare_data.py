@@ -127,7 +127,7 @@ def main() -> None:
             )
 
     print(
-        f"prepared transitions=10 candidates={candidate_count} "
+        f"prepared transitions={len(transitions(raw))} candidates={candidate_count} "
         f"references_per_class={reference_count} candidate_split={candidate_split} ",
         f"candidate_offset={candidate_offset}",
         flush=True,

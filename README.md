@@ -47,3 +47,6 @@ records. See `docs/reproduction.md` before starting GPU work.
 - `experiments/2026-08-pull-push-multiclass-v4`: compares binary prototype
   pull+push against 10-class prototype loss across ten semantically diverse
   ImageNet transitions, with smaller-step schedules on three small-to-large pairs.
+- `experiments/2026-09-threeclass-transfer`: evaluates all six directed
+  goldfish/butterfly/volcano transfers, compares CLS plus pull-push against the
+  second loss alone, tunes P14/P19, and confirms selected settings on 50 images.

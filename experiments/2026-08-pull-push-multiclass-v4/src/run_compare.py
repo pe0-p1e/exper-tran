@@ -131,7 +131,11 @@ def main() -> None:
                 early_stop_proxy_gate = bool(arm.get("early_stop_proxy_gate", False))
                 if rho < 0 or semantic_temperature <= 0:
                     raise ValueError("rho must be nonnegative and temperature positive")
-                auxiliary_lambda = 0.0 if rho == 0 else 1.0
+                lambda_cls = float(arm.get("lambda_cls", 1.0))
+                lambda_cka = float(arm.get("lambda_cka", 1.0))
+                cls_loss_mode = str(arm.get("cls_loss_mode", "margin_only"))
+                if lambda_cls < 0 or lambda_cka <= 0:
+                    raise ValueError("lambda_cls must be non-negative and lambda_cka positive")
                 if target_weight < 0 or source_weight < 0:
                     raise ValueError("Pull/push weights must be non-negative")
                 if target_weight == 0 and source_weight == 0:
@@ -173,6 +177,9 @@ def main() -> None:
                     "steps": steps,
                     "step_size": step_size,
                     "rho": rho,
+                    "lambda_cls": lambda_cls,
+                    "lambda_cka": lambda_cka,
+                    "cls_loss_mode": cls_loss_mode,
                     "semantic_temperature": semantic_temperature,
                     "target_logit_weight": target_weight,
                     "source_logit_weight": source_weight,
@@ -236,7 +243,7 @@ def main() -> None:
                         ),
                         source_batch_index=0,
                         reference_batch_index=0,
-                        lambda_cka=auxiliary_lambda,
+                        lambda_cka=lambda_cka,
                         seed=trial_seed,
                         steps=steps,
                         attack_config=attack_config,
@@ -245,13 +252,13 @@ def main() -> None:
                         cka_source_weight=0.0,
                         cka_target_weight=0.0,
                         semantic_target_weight=1.0,
-                        gradient_ratio=rho if rho > 0 else None,
+                        gradient_ratio=rho if rho > 0 and lambda_cls > 0 else None,
                         objective_tag=arm_name,
                         early_stop_proxy_gate=early_stop_proxy_gate,
                         progress_interval=max(1, min(10, steps)),
                         prompt=prompt,
-                        cls_loss_mode="margin_only",
-                        lambda_cls=1.0,
+                        cls_loss_mode=cls_loss_mode,
+                        lambda_cls=lambda_cls,
                         semantic_mode=str(arm["semantic_mode"]),
                         semantic_temperature=semantic_temperature,
                         semantic_target_logit_weight=target_weight,
@@ -269,7 +276,7 @@ def main() -> None:
                         / phase
                         / "batch_00"
                         / arm_name
-                        / f"lambda_{auxiliary_lambda:g}"
+                        / f"lambda_{lambda_cka:g}"
                     )
                     evaluation = evaluate_local_frozen_batch(
                         model_id=pair.target_model,
