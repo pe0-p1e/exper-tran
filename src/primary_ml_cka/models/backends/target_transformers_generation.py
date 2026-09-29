@@ -12,12 +12,14 @@ from transformers import AutoModelForImageTextToText, BitsAndBytesConfig
 from primary_ml_cka.models.common.loading import freeze_module
 
 
-def load_target_for_generation(snapshot: Path, device: torch.device):
+def load_target_for_generation(snapshot: Path, device: torch.device, precision: str = "auto"):
     if device.type != "cuda":
         raise ValueError("Target generation requires CUDA")
+    if precision not in {"auto", "bf16", "int8"}:
+        raise ValueError("precision must be 'auto', 'bf16', or 'int8'")
     weight_bytes = sum(path.stat().st_size for path in snapshot.glob("*.safetensors"))
     load_kwargs = {}
-    if weight_bytes > 12_000_000_000:
+    if precision == "int8" or (precision == "auto" and weight_bytes > 12_000_000_000):
         load_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
     model = AutoModelForImageTextToText.from_pretrained(
         snapshot,

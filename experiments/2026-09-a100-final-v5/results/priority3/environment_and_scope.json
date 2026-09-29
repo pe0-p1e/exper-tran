@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-29T09:37:22.728486+00:00",
+  "pairs": [
+    "P02",
+    "P14",
+    "P23"
+  ],
+  "scope": "two cross-family, one intra-family",
+  "transitions_per_pair": 90,
+  "clean_valid_images_per_cell": 50,
+  "total_main_images": 13500,
+  "python": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+  "torch": "2.5.1+cu124",
+  "cuda_runtime": "12.4",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "model_revisions": {
+    "Qwen/Qwen3.5-4B": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "google/gemma-4-E4B-it": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+    "Qwen/Qwen3.5-2B": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "OpenGVLab/InternVL3_5-4B-HF": "6bd4487402110ef9889ba50eb7aefeb302526fed"
+  }
+}

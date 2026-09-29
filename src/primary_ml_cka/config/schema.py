@@ -47,6 +47,7 @@ class AttackConfig:
     representation_type: str = "legacy_projected"
     representation_layer: int = -1
     representation_pooling: str = "mean"
+    generative_precision: str = "nf4"
 
 
 @dataclass(frozen=True, slots=True)

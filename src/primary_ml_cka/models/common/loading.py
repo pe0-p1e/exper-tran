@@ -9,11 +9,17 @@ from primary_ml_cka.domain.identifiers import MODEL_REVISIONS
 
 def local_snapshot(hf_home: Path, model_id: str, revision: str | None = None) -> Path:
     revision = revision or MODEL_REVISIONS[model_id]
-    model_dir = hf_home / "hub" / f"models--{model_id.replace('/', '--')}"
-    snapshot = model_dir / "snapshots" / revision
-    if not snapshot.is_dir():
-        raise FileNotFoundError(f"Missing pinned local snapshot: {snapshot}")
-    return snapshot
+    model_dir_name = f"models--{model_id.replace('/', '--')}"
+    snapshots = (
+        hf_home / "hub" / model_dir_name / "snapshots" / revision,
+        hf_home / model_dir_name / "snapshots" / revision,
+    )
+    for snapshot in snapshots:
+        if snapshot.is_dir():
+            return snapshot
+    raise FileNotFoundError(
+        "Missing pinned local snapshot; checked " + " and ".join(str(path) for path in snapshots)
+    )
 
 
 def freeze_module(module: torch.nn.Module) -> torch.nn.Module:

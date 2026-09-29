@@ -75,6 +75,7 @@ def load_proxy(
     model = load_generative_proxy(
         snapshot,
         device,
+        precision=attack_config.generative_precision,
         modules_to_not_convert=(
             vision_precision_skip_modules(model_id) if keep_vision_bf16 else ()
         ),

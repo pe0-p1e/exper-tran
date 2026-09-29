@@ -1,0 +1,7 @@
+pair_id,transition_id,source_class,target_class,image_index,target_hit,proxy_target_hit,clean_parsed_label,adversarial_parsed_label,clean_png,adversarial_png
+P02,T01,goldfish,monarch butterfly,9,True,True,1,2,P02_T01_09_hit_clean.png,P02_T01_09_hit_adv.png
+P02,T01,goldfish,monarch butterfly,0,False,True,1,1,P02_T01_00_miss_clean.png,P02_T01_00_miss_adv.png
+P14,T01,goldfish,monarch butterfly,1,True,True,1,2,P14_T01_01_hit_clean.png,P14_T01_01_hit_adv.png
+P14,T01,goldfish,monarch butterfly,0,False,True,1,1,P14_T01_00_miss_clean.png,P14_T01_00_miss_adv.png
+P23,T01,goldfish,monarch butterfly,3,True,True,1,2,P23_T01_03_hit_clean.png,P23_T01_03_hit_adv.png
+P23,T01,goldfish,monarch butterfly,0,False,True,1,1,P23_T01_00_miss_clean.png,P23_T01_00_miss_adv.png

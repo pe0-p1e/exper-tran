@@ -30,6 +30,7 @@ MODEL_PAIRS = (
         "google/gemma-4-E2B-it",
     ),
     ModelPair("P14", ExperimentType.INTRA_FAMILY, "Qwen/Qwen3.5-2B", "Qwen/Qwen3.5-4B"),
+    ModelPair("P23", ExperimentType.CROSS_FAMILY, "Qwen/Qwen3.5-2B", "OpenGVLab/InternVL3_5-4B-HF"),
     ModelPair("P20", ExperimentType.INTRA_FAMILY, "Qwen/Qwen3.5-4B", "Qwen/Qwen3.5-2B"),
     ModelPair(
         "P16",

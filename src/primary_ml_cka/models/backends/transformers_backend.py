@@ -15,26 +15,32 @@ def load_generative_proxy(
     device: torch.device,
     *,
     modules_to_not_convert: tuple[str, ...] = (),
+    precision: str = "nf4",
 ):
     if device.type != "cuda":
         raise ValueError("Generative proxies require CUDA")
+    if precision not in {"nf4", "bf16"}:
+        raise ValueError(f"Unsupported generative proxy precision: {precision}")
     quantization_kwargs = {}
     if modules_to_not_convert:
         quantization_kwargs["llm_int8_skip_modules"] = list(modules_to_not_convert)
-    quantization = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_use_double_quant=True,
-        **quantization_kwargs,
-    )
-    model = AutoModelForImageTextToText.from_pretrained(
-        snapshot,
-        local_files_only=True,
-        trust_remote_code=False,
-        quantization_config=quantization,
-        device_map={"": device.index or 0},
-        torch_dtype=torch.bfloat16,
-    )
+    load_kwargs = {
+        "local_files_only": True,
+        "trust_remote_code": False,
+        "device_map": {"": device.index or 0},
+        "torch_dtype": torch.bfloat16,
+    }
+    if precision == "nf4":
+        quantization = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_use_double_quant=True,
+            **quantization_kwargs,
+        )
+        load_kwargs["quantization_config"] = quantization
+    elif modules_to_not_convert:
+        raise ValueError("modules_to_not_convert is only supported with nf4 precision")
+    model = AutoModelForImageTextToText.from_pretrained(snapshot, **load_kwargs)
     model.config.use_cache = False
     return freeze_module(model)

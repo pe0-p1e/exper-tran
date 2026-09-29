@@ -339,6 +339,7 @@ def attack_one_batch(
     representation_pooling: str = "mean",
     gradient_trace_steps: tuple[int, ...] = (),
     checkpoint_steps: tuple[int, ...] = (),
+    allow_reference_bank_smaller_than_attack: bool = False,
 ) -> AttackRunResult:
     # The public ``seed`` controls the complete attack, including any stochastic
     # work performed while materializing a quantized proxy.  Previously only the
@@ -378,6 +379,7 @@ def attack_one_batch(
         resolved_reference_batch,
         batch_size,
         reference_count=reference_bank_size,
+        allow_reference_smaller_batch=allow_reference_bank_smaller_than_attack,
     )
     source_references = (
         fixed_reference_batch(
@@ -385,6 +387,7 @@ def attack_one_batch(
             0,
             batch_size,
             reference_count=reference_bank_size,
+            allow_reference_smaller_batch=allow_reference_bank_smaller_than_attack,
         )
         if source_reference_records
         else ()
@@ -396,6 +399,7 @@ def attack_one_batch(
                 0,
                 batch_size,
                 reference_count=reference_bank_size,
+                allow_reference_smaller_batch=allow_reference_bank_smaller_than_attack,
             )
             for records in class_reference_records
         )
@@ -426,18 +430,16 @@ def attack_one_batch(
             pooling=representation_pooling,
         )
         clean_semantic = (
-            clean_representation.semantic_embeddings
-            if clean_representation.semantic_embeddings is not None
-            else clean_representation.embeddings
-        ).detach().float()
-        z_clean = (
-            clean_representation.tokens.detach().float()
-            if needs_token_reference
-            else None
+            (
+                clean_representation.semantic_embeddings
+                if clean_representation.semantic_embeddings is not None
+                else clean_representation.embeddings
+            )
+            .detach()
+            .float()
         )
-        clean_mask = (
-            clean_representation.mask.detach() if needs_token_reference else None
-        )
+        z_clean = clean_representation.tokens.detach().float() if needs_token_reference else None
+        clean_mask = clean_representation.mask.detach() if needs_token_reference else None
     del clean_representation
     semantic_class_reference = None
     if needs_token_reference:
@@ -511,7 +513,7 @@ def attack_one_batch(
     state = MomentumPGDState(initial, torch.zeros_like(initial))
     effective_lambda_cka = lambda_cka
     diagnostics = None
-    if lambda_cka > 0 and gradient_ratio is not None:
+    if lambda_cka > 0 and gradient_ratio is not None and lambda_cls > 0:
         calibration_proxy = proxy.target_loss(
             state.adversarial,
             data_config.target_human_label,
@@ -582,18 +584,27 @@ def attack_one_batch(
         calibration_grad_cosine = 0.0
     initial_total = float("nan")
     last_losses = None
-    last_proxy = None
     gradient_trace_rows: list[dict[str, object]] = []
     checkpoint_adversarials: dict[int, torch.Tensor] = {}
     for step in range(steps):
-        proxy_output = proxy.target_loss(
-            state.adversarial,
-            data_config.target_human_label,
-            prompt,
-            cls_loss_mode,
+        # When classification contributes no loss, avoid the expensive
+        # language-model forward entirely. Proxy scoring is still performed
+        # once on the final frozen PNG below.
+        proxy_output = (
+            proxy.target_loss(
+                state.adversarial,
+                data_config.target_human_label,
+                prompt,
+                cls_loss_mode,
+            )
+            if lambda_cls > 0
+            else None
+        )
+        proxy_loss = (
+            proxy_output.loss if proxy_output is not None else state.adversarial.new_zeros(())
         )
         if effective_lambda_cka == 0:
-            losses = primary_loss(proxy_output.loss, 0, lambda_cls=lambda_cls)
+            losses = primary_loss(proxy_loss, 0, lambda_cls=lambda_cls)
         else:
             adv_representation = proxy.image_embeddings(
                 state.adversarial,
@@ -602,7 +613,7 @@ def attack_one_batch(
                 pooling=representation_pooling,
             )
             losses = primary_loss(
-                proxy_output.loss,
+                proxy_loss,
                 effective_lambda_cka,
                 adv_representation.tokens,
                 z_clean,
@@ -621,9 +632,7 @@ def attack_one_batch(
                 semantic_reference=semantic_reference,
                 semantic_source_reference=semantic_source_reference,
                 semantic_class_reference=semantic_class_reference,
-                semantic_target_class_index=human_label_to_index(
-                    data_config.target_human_label
-                ),
+                semantic_target_class_index=human_label_to_index(data_config.target_human_label),
                 semantic_mode=semantic_mode,
                 semantic_temperature=semantic_temperature,
                 semantic_target_logit_weight=semantic_target_logit_weight,
@@ -634,33 +643,52 @@ def attack_one_batch(
             )
         if not torch.isfinite(losses.total):
             raise RuntimeError(f"Non-finite total loss at step {step}")
-        if step in gradient_trace_steps:
+        if step in gradient_trace_steps and proxy_output is not None:
             gradient_trace_rows.append(
                 _gradient_trace_row(step, state.adversarial, proxy_output, losses.cka)
             )
-        step_diagnostics = proxy_target_diagnostics(
-            proxy_output.class_logits,
-            target_index=human_label_to_index(data_config.target_human_label),
-            required_margin=attack_config.class_margin,
-            required_probability=attack_config.proxy_probability_threshold,
+        step_diagnostics = (
+            proxy_target_diagnostics(
+                proxy_output.class_logits,
+                target_index=human_label_to_index(data_config.target_human_label),
+                required_margin=attack_config.class_margin,
+                required_probability=attack_config.proxy_probability_threshold,
+            )
+            if proxy_output is not None
+            else None
         )
-        robust_stop_diagnostics = proxy_target_diagnostics(
-            proxy_output.class_logits,
-            target_index=human_label_to_index(data_config.target_human_label),
-            required_margin=attack_config.class_margin + 0.5,
-            required_probability=max(attack_config.proxy_probability_threshold, 0.95),
+        robust_stop_diagnostics = (
+            proxy_target_diagnostics(
+                proxy_output.class_logits,
+                target_index=human_label_to_index(data_config.target_human_label),
+                required_margin=attack_config.class_margin + 0.5,
+                required_probability=max(attack_config.proxy_probability_threshold, 0.95),
+            )
+            if proxy_output is not None
+            else None
         )
         if progress_interval and (step == 0 or (step + 1) % progress_interval == 0):
-            print(
-                f"{pair.pair_id} lambda={lambda_cka:g} step={step + 1}/{steps} "
-                f"closed_set={step_diagnostics.hit_count}/{step_diagnostics.denominator} "
-                f"min_margin={step_diagnostics.minimum_logit_margin:.4f} "
-                f"min_probability={step_diagnostics.minimum_target_probability:.4f}",
-                flush=True,
-            )
-        if early_stop_proxy_gate and step > 0 and robust_stop_diagnostics.all_hit:
+            if step_diagnostics is None:
+                print(
+                    f"{pair.pair_id} lambda={lambda_cka:g} step={step + 1}/{steps} "
+                    f"classification=skipped loss={float(losses.total.detach()):.6g}",
+                    flush=True,
+                )
+            else:
+                print(
+                    f"{pair.pair_id} lambda={lambda_cka:g} step={step + 1}/{steps} "
+                    f"closed_set={step_diagnostics.hit_count}/{step_diagnostics.denominator} "
+                    f"min_margin={step_diagnostics.minimum_logit_margin:.4f} "
+                    f"min_probability={step_diagnostics.minimum_target_probability:.4f}",
+                    flush=True,
+                )
+        if (
+            early_stop_proxy_gate
+            and step > 0
+            and robust_stop_diagnostics is not None
+            and robust_stop_diagnostics.all_hit
+        ):
             last_losses = losses
-            last_proxy = proxy_output
             print(
                 f"{pair.pair_id} lambda={lambda_cka:g} early-stop at step {step + 1}: "
                 "robust closed-set proxy gate reached",
@@ -676,6 +704,7 @@ def attack_one_batch(
             if (
                 lambda_cka > 0
                 and gradient_ratio is None
+                and lambda_cls > 0
                 and pair.proxy_model not in memory_heavy_diagnostic_proxies
             ):
                 diagnostics = component_gradient_diagnostics(
@@ -698,8 +727,7 @@ def attack_one_batch(
             # several full-resolution adversarial batches to remain resident.
             checkpoint_adversarials[completed_step] = state.adversarial.detach().cpu()
         last_losses = losses
-        last_proxy = proxy_output
-    assert last_losses is not None and last_proxy is not None
+    assert last_losses is not None
     adversarial = state.adversarial.detach()
     with torch.no_grad():
         final_proxy = proxy.target_loss(
@@ -841,10 +869,7 @@ def attack_one_batch(
                 "proxy_min_margin": checkpoint_diagnostics.minimum_logit_margin,
                 "proxy_min_probability": checkpoint_diagnostics.minimum_target_probability,
                 "proxy_free_hit_count": (
-                    sum(
-                        label == data_config.target_human_label
-                        for label in checkpoint_free_labels
-                    )
+                    sum(label == data_config.target_human_label for label in checkpoint_free_labels)
                     if checkpoint_free_labels is not None
                     else None
                 ),
@@ -960,9 +985,7 @@ def attack_one_batch(
             adversarial_semantic_metrics.semantic_gap - clean_semantic_metrics.semantic_gap
         ),
         semantic_negative_kind=(
-            "strongest_non_target"
-            if semantic_mode == "multiclass_prototype"
-            else "source"
+            "strongest_non_target" if semantic_mode == "multiclass_prototype" else "source"
         ),
         class_reference_ids=tuple(
             tuple(record.image_id for record in records) for records in class_references

@@ -1,0 +1,415 @@
+seed: 42
+catalog_mode: full_directed_pairs
+candidate_count: 64
+attack_count: 50
+reference_count: 48
+candidate_split: train
+candidate_offset: 48
+common_across_pairs: true
+semantic_temperature: 0.1
+semantic_mode: linear_pull_push
+batch_size: 50
+generative_precision: bf16
+lambda_cls: 0
+lambda_cka: 1
+state_namespace: states_layer_100
+summary_filename: single_proxy_full90_priority3.csv
+allow_reference_bank_smaller_than_attack: true
+classes:
+- label: 1
+  wnid: n01443537
+  name: goldfish
+  domain: animal
+- label: 2
+  wnid: n02279972
+  name: monarch butterfly
+  domain: insect
+- label: 3
+  wnid: n07753275
+  name: pineapple
+  domain: food
+- label: 4
+  wnid: n02676566
+  name: acoustic guitar
+  domain: instrument
+- label: 5
+  wnid: n03642806
+  name: laptop
+  domain: electronics
+- label: 6
+  wnid: n07920052
+  name: espresso
+  domain: beverage
+- label: 7
+  wnid: n09472597
+  name: volcano
+  domain: natural scene
+- label: 8
+  wnid: n04099969
+  name: rocking chair
+  domain: furniture
+- label: 9
+  wnid: n04254680
+  name: soccer ball
+  domain: sports equipment
+- label: 10
+  wnid: n04146614
+  name: school bus
+  domain: transport
+pairs:
+- pair_id: P02
+  representation_type: vision_encoder
+  representation_layer_percent: 100
+  pooling: mean
+  selected_rho: 0
+  lambda_cls: 0
+  lambda_cka: 1
+  semantic_mode: linear_pull_push
+  semantic_target_weight: 1.5
+  semantic_source_weight: 0.5
+  target_logit_weight: 1.5
+  source_logit_weight: 0.5
+  generative_precision: bf16
+  steps: 50
+  step_size: 0.00392156862745098
+- pair_id: P14
+  representation_type: vision_encoder
+  representation_layer_percent: 100
+  pooling: mean
+  selected_rho: 0
+  lambda_cls: 0
+  lambda_cka: 1
+  semantic_mode: linear_pull_push
+  semantic_target_weight: 1.5
+  semantic_source_weight: 0.5
+  target_logit_weight: 1.5
+  source_logit_weight: 0.5
+  generative_precision: bf16
+  steps: 50
+  step_size: 0.00392156862745098
+- pair_id: P23
+  representation_type: vision_encoder
+  representation_layer_percent: 100
+  pooling: mean
+  selected_rho: 0
+  lambda_cls: 0
+  lambda_cka: 1
+  semantic_mode: linear_pull_push
+  semantic_target_weight: 1.5
+  semantic_source_weight: 0.5
+  target_logit_weight: 1.5
+  source_logit_weight: 0.5
+  generative_precision: bf16
+  steps: 50
+  step_size: 0.00392156862745098
+transitions:
+- id: T01
+  source: 1
+  target: 2
+- id: T02
+  source: 2
+  target: 1
+- id: T03
+  source: 3
+  target: 4
+- id: T04
+  source: 4
+  target: 3
+- id: T05
+  source: 5
+  target: 6
+- id: T06
+  source: 6
+  target: 5
+- id: T07
+  source: 7
+  target: 8
+- id: T08
+  source: 8
+  target: 7
+- id: T09
+  source: 9
+  target: 10
+- id: T10
+  source: 10
+  target: 9
+- id: T11
+  source: 1
+  target: 3
+- id: T12
+  source: 1
+  target: 4
+- id: T13
+  source: 1
+  target: 5
+- id: T14
+  source: 1
+  target: 6
+- id: T15
+  source: 1
+  target: 7
+- id: T16
+  source: 1
+  target: 8
+- id: T17
+  source: 1
+  target: 9
+- id: T18
+  source: 1
+  target: 10
+- id: T19
+  source: 2
+  target: 3
+- id: T20
+  source: 2
+  target: 4
+- id: T21
+  source: 2
+  target: 5
+- id: T22
+  source: 2
+  target: 6
+- id: T23
+  source: 2
+  target: 7
+- id: T24
+  source: 2
+  target: 8
+- id: T25
+  source: 2
+  target: 9
+- id: T26
+  source: 2
+  target: 10
+- id: T27
+  source: 3
+  target: 1
+- id: T28
+  source: 3
+  target: 2
+- id: T29
+  source: 3
+  target: 5
+- id: T30
+  source: 3
+  target: 6
+- id: T31
+  source: 3
+  target: 7
+- id: T32
+  source: 3
+  target: 8
+- id: T33
+  source: 3
+  target: 9
+- id: T34
+  source: 3
+  target: 10
+- id: T35
+  source: 4
+  target: 1
+- id: T36
+  source: 4
+  target: 2
+- id: T37
+  source: 4
+  target: 5
+- id: T38
+  source: 4
+  target: 6
+- id: T39
+  source: 4
+  target: 7
+- id: T40
+  source: 4
+  target: 8
+- id: T41
+  source: 4
+  target: 9
+- id: T42
+  source: 4
+  target: 10
+- id: T43
+  source: 5
+  target: 1
+- id: T44
+  source: 5
+  target: 2
+- id: T45
+  source: 5
+  target: 3
+- id: T46
+  source: 5
+  target: 4
+- id: T47
+  source: 5
+  target: 7
+- id: T48
+  source: 5
+  target: 8
+- id: T49
+  source: 5
+  target: 9
+- id: T50
+  source: 5
+  target: 10
+- id: T51
+  source: 6
+  target: 1
+- id: T52
+  source: 6
+  target: 2
+- id: T53
+  source: 6
+  target: 3
+- id: T54
+  source: 6
+  target: 4
+- id: T55
+  source: 6
+  target: 7
+- id: T56
+  source: 6
+  target: 8
+- id: T57
+  source: 6
+  target: 9
+- id: T58
+  source: 6
+  target: 10
+- id: T59
+  source: 7
+  target: 1
+- id: T60
+  source: 7
+  target: 2
+- id: T61
+  source: 7
+  target: 3
+- id: T62
+  source: 7
+  target: 4
+- id: T63
+  source: 7
+  target: 5
+- id: T64
+  source: 7
+  target: 6
+- id: T65
+  source: 7
+  target: 9
+- id: T66
+  source: 7
+  target: 10
+- id: T67
+  source: 8
+  target: 1
+- id: T68
+  source: 8
+  target: 2
+- id: T69
+  source: 8
+  target: 3
+- id: T70
+  source: 8
+  target: 4
+- id: T71
+  source: 8
+  target: 5
+- id: T72
+  source: 8
+  target: 6
+- id: T73
+  source: 8
+  target: 9
+- id: T74
+  source: 8
+  target: 10
+- id: T75
+  source: 9
+  target: 1
+- id: T76
+  source: 9
+  target: 2
+- id: T77
+  source: 9
+  target: 3
+- id: T78
+  source: 9
+  target: 4
+- id: T79
+  source: 9
+  target: 5
+- id: T80
+  source: 9
+  target: 6
+- id: T81
+  source: 9
+  target: 7
+- id: T82
+  source: 9
+  target: 8
+- id: T83
+  source: 10
+  target: 1
+- id: T84
+  source: 10
+  target: 2
+- id: T85
+  source: 10
+  target: 3
+- id: T86
+  source: 10
+  target: 4
+- id: T87
+  source: 10
+  target: 5
+- id: T88
+  source: 10
+  target: 6
+- id: T89
+  source: 10
+  target: 7
+- id: T90
+  source: 10
+  target: 8
+arms:
+- name: pull_push_standard
+  semantic_mode: linear_pull_push
+  steps: 50
+  step_size: 0.00392156862745098
+- name: multiclass_standard
+  semantic_mode: multiclass_prototype
+  steps: 50
+  step_size: 0.00392156862745098
+- name: pull_push_small_steps
+  semantic_mode: linear_pull_push
+  steps: 100
+  step_size: 0.00196078431372549
+- name: multiclass_small_steps
+  semantic_mode: multiclass_prototype
+  steps: 100
+  step_size: 0.00196078431372549
+objective_tag: layer_100
+pilot_selection_layer_percent: 100
+pilot_selection_metric: micro TASR over clean-valid images in 10 directed pilot transitions
+pilot_transition_ids:
+- T01
+- T02
+- T03
+- T04
+- T05
+- T06
+- T07
+- T08
+- T09
+- T10
+main_scope_note: 'Priority evaluation: two cross-family pairs P02/P23 and one intra-family
+  control P14. P14 and P23 share the Qwen3.5-2B proxy. Other pair artifacts are retained
+  but excluded from this round.'
+excluded_pairs_deferred:
+- P16
+- P19
+- P20
+- P21
+- P22

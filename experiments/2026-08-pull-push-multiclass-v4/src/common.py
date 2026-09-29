@@ -107,7 +107,7 @@ def validate_experiment(raw: dict) -> None:
         raise ValueError("Undirected transition edges must not repeat")
     for spec in raw["pairs"]:
         pair = get_pair(str(spec["pair_id"]))
-        if pair.pair_id not in {"P14", "P16", "P19"}:
+        if pair.pair_id not in {"P14", "P16", "P19", "P23"}:
             raise ValueError("Primary V4 optimization is restricted to P14/P16/P19")
     arms = {str(arm["name"]): arm for arm in raw["arms"]}
     required = (

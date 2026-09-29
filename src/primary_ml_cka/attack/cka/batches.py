@@ -8,10 +8,13 @@ def fixed_reference_batch(
     source_batch_index: int,
     batch_size: int,
     reference_count: int | None = None,
+    allow_reference_smaller_batch: bool = False,
 ) -> tuple[ImageRecord, ...]:
     count = batch_size if reference_count is None else reference_count
-    if count < batch_size:
+    if count < batch_size and not allow_reference_smaller_batch:
         raise ValueError("Reference count must be at least one attack batch")
+    if count < 1:
+        raise ValueError("Reference count must be positive")
     if len(pool) < count:
         raise ValueError(f"Reference pool has {len(pool)} images; requested {count}")
     start = source_batch_index * batch_size

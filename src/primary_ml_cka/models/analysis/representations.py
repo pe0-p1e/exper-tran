@@ -28,7 +28,7 @@ def _visual_tokens(
     if generative:
         output = model.get_image_features(**visual, return_dict=True)
         tokens = output.pooler_output
-        if isinstance(tokens, (tuple, list)):
+        if isinstance(tokens, tuple | list):
             if len(tokens) != 1:
                 raise RuntimeError("Analysis extracts exactly one image at a time")
             tokens = tokens[0]
@@ -49,6 +49,7 @@ def extract_representations(
     image_paths: Sequence[Path],
     hf_home: Path,
     device: torch.device,
+    precision: str = "auto",
 ) -> torch.Tensor:
     """Load one model, extract pooled visual states, then release it."""
     snapshot = local_snapshot(hf_home, model_id, MODEL_REVISIONS[model_id])
@@ -59,7 +60,7 @@ def extract_representations(
             AutoModel.from_pretrained(snapshot, local_files_only=True).to(device)
         )
     else:
-        model = load_target_for_generation(snapshot, device)
+        model = load_target_for_generation(snapshot, device, precision=precision)
     rows = []
     try:
         with torch.no_grad():
