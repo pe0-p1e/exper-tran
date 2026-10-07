@@ -173,6 +173,90 @@ If `lambda_cls == 0`, the attack loop must skip language/classification forward 
 
 All jobs must be resumable by pair / class transition / layer / ablation arm / ensemble configuration.
 
+### Required performance optimization
+
+Experiment completion time matters. Optimize the implementation before launching the full matrix, while preserving exact numerical/scientific semantics.
+
+Required optimizations:
+
+1. **Skip unused language forwards**
+   - When classification-loss weight is zero, do not call the language head/decoder during iterative attack steps.
+   - Only run proxy classification when needed for clean screening and final proxy-success evaluation.
+
+2. **Use BF16 and inference/autocast correctly**
+   - Use BF16 for supported model weights/forwards on A100.
+   - Keep gradient-bearing image tensors in a numerically safe dtype as required.
+   - Use `torch.inference_mode()` / `no_grad()` for all non-attack evaluation, reference extraction, clean screening, target evaluation, CKA/RSA feature extraction, and plotting data generation.
+
+3. **Cache all invariant reference embeddings**
+   - Compute each model/class/reference-bank embedding once per model revision + layer + preprocessing configuration.
+   - Cache source/target prototypes and reusable clean embeddings on disk.
+   - Never recompute the 48-image reference bank inside each transition or each attack step.
+
+4. **Cache clean screening and manifests**
+   - Run clean prediction/screening once per model + dataset manifest.
+   - Reuse the resulting clean-valid masks across experiments that share the same model and cohort definition.
+
+5. **Reuse loaded models aggressively**
+   - Order jobs to minimize checkpoint reloads.
+   - For Single Proxy and layer sweeps, group all transitions/layers that share the same proxy before unloading it.
+   - For target evaluation, batch all frozen adversarial examples for the same target and evaluate them in as few model loads as possible.
+   - Do not repeatedly load the same model for each class pair if memory can be safely reused.
+
+6. **Batch reference/analysis extraction**
+   - Extract target/proxy embeddings for DeltaR, CKA, RSA, variance, PCA/t-SNE inputs in batches.
+   - Save high-dimensional embeddings once and run all post-hoc analyses from cached embeddings.
+   - PCA/t-SNE, variance, asymmetry, and correlation code must not rerun model inference if cached embeddings already exist.
+
+7. **Avoid redundant PNG generation and decoding**
+   - Save each adversarial image once under a deterministic artifact key.
+   - Reuse frozen adversarial images for target evaluation and all post-hoc analyses.
+   - Prefer batched tensor pipelines during attack; PNG encoding is an artifact/export step, not part of the inner optimization loop.
+
+8. **A100 batch-size calibration**
+   - Calibrate the largest safe batch per proxy/model family using a real gradient step.
+   - Target <=75 GiB peak reserved VRAM.
+   - Persist calibrated batch sizes so later jobs do not recalibrate unnecessarily.
+
+9. **Model-aware scheduling**
+   - Group jobs by currently loaded proxy/target to reduce load/unload overhead.
+   - When multiple independent lightweight post-hoc tasks fit safely, they may be parallelized.
+   - Do not run concurrent GPU jobs that cause memory pressure, nondeterministic OOMs, or change attack semantics.
+
+10. **DataLoader / CPU pipeline**
+    - Use pinned memory and a sensible number of workers for image decode/transform.
+    - Avoid repeated preprocessing of the same reference images when tensors/features can be cached.
+    - Ensure CPU I/O does not starve the A100.
+
+11. **Optional PyTorch optimizations, only after correctness check**
+    - TF32 may be enabled for non-sensitive matmul paths if outputs/attack decisions remain unchanged within tolerance.
+    - `torch.compile` may be used only for stable repeated modules after a correctness and speed benchmark; do not spend substantial time compiling highly dynamic generation code.
+    - Do not enable an optimization merely because it exists; retain it only if measured wall-clock time improves.
+
+12. **No scientific shortcuts**
+    - Performance optimization must not reduce steps, images, reference count, precision below the specified protocol, model size, layer count, or number of experiment cells.
+    - Do not replace models with smaller variants for speed.
+    - Do not reuse attack outputs across scientifically different loss/layer/ensemble settings.
+
+### Performance benchmark and acceptance
+
+Before the full matrix, benchmark at least one representative 30-image attack cell before and after optimization.
+
+Record:
+- wall-clock seconds per attack step/cell;
+- images/second where meaningful;
+- model load time;
+- reference-embedding extraction time;
+- target-evaluation throughput;
+- peak allocated/reserved VRAM.
+
+Create:
+`outputs/a100_precommercial_v6/audits/performance_benchmark.json`
+
+and summarize the optimizations and measured speedups in the final report.
+
+Prefer optimizations that reduce repeated model forward passes and model reloads; these are expected to dominate micro-optimizations.
+
 ---
 
 ## Model naming and main deepest layers
