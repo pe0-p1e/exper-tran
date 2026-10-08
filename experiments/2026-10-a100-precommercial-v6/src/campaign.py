@@ -191,7 +191,7 @@ def stage(name: str) -> None:
             cid = f"{proxy}__to__{target}__reverse"
             run_cell("reverse_direction", cid, lambda p=proxy,t=target,l=layer: run_single(family="reverse_direction", proxy=p, target=t, layer=l, pull=.75, push=.25, transitions=rev))
     elif name in {"10_embedding_extraction", "11_representation_analysis", "12_joint_pca_tsne", "13_asymmetry", "14_correlation", "15_validation", "16_final_report"}:
-        run([PY, str(SRC / "analyze_campaign.py"), "--stage", name], name=name, check=False)
+        run([PY, str(SRC / "analyze_campaign.py"), "--stage", name], name=name)
     elif name == "smoke":
         def smoke_one(family, proxy, target, layer, pull=.75, push=.25):
             tag = f"smoke_{family}_{proxy}_{target}_{layer}_{pull}_{push}"
