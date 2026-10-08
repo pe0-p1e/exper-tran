@@ -68,6 +68,15 @@ MODEL_REVISIONS = {
     "openai/clip-vit-large-patch14": "32bd64288804d66eefd0ccbe215aa642df71cc41",
     "openai/clip-vit-base-patch32": "c7244be81152024ce0e99ac8d2e373a8953d9f9a",
     "google/siglip2-so400m-patch14-384": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+    # Immutable V6 campaign revisions. Kept here so all proxy/analysis taps
+    # record the same model snapshot used by the runner.
+    "Qwen/Qwen3.5-9B": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "Qwen/Qwen3.5-27B": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "OpenGVLab/InternVL3_5-8B-HF": "741a7d03020411e666c6109218ab71e08151ef86",
+    "OpenGVLab/InternVL3_5-14B-HF": "226b96d5912e69159abc0384cefcbd51487fdce0",
+    "google/gemma-4-26B-A4B-it": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+    "google/gemma-4-31B-it": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "facebook/dinov2-large": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
 }
 
 

@@ -1,0 +1,92 @@
+{
+  "Qwen3.5-2B": {
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "family": "qwen",
+    "expected_vision_depth": 24
+  },
+  "Qwen3.5-4B": {
+    "repo_id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "family": "qwen",
+    "expected_vision_depth": 24
+  },
+  "Qwen3.5-9B": {
+    "repo_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "family": "qwen",
+    "expected_vision_depth": 27
+  },
+  "Qwen3.5-27B": {
+    "repo_id": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "family": "qwen",
+    "expected_vision_depth": 27
+  },
+  "InternVL3.5-2B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "InternVL3.5-4B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-4B-HF",
+    "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "InternVL3.5-8B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "InternVL3.5-14B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-14B-HF",
+    "revision": "226b96d5912e69159abc0384cefcbd51487fdce0",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "Gemma 4 E2B-it": {
+    "repo_id": "google/gemma-4-E2B-it",
+    "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+    "family": "gemma4",
+    "expected_vision_depth": 16
+  },
+  "Gemma 4 E4B-it": {
+    "repo_id": "google/gemma-4-E4B-it",
+    "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+    "family": "gemma4",
+    "expected_vision_depth": 16
+  },
+  "Gemma 4 26B-A4B-it": {
+    "repo_id": "google/gemma-4-26B-A4B-it",
+    "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+    "family": "gemma4",
+    "expected_vision_depth": 27
+  },
+  "Gemma 4 31B-it": {
+    "repo_id": "google/gemma-4-31B-it",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "family": "gemma4",
+    "expected_vision_depth": 27
+  },
+  "CLIP ViT-L/14": {
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "family": "clip",
+    "expected_vision_depth": 24
+  },
+  "SigLIP2-So400m-patch14-384": {
+    "repo_id": "google/siglip2-so400m-patch14-384",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+    "family": "siglip2",
+    "expected_vision_depth": 27
+  },
+  "DINOv2-Large": {
+    "repo_id": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "family": "dinov2",
+    "expected_vision_depth": 24
+  }
+}

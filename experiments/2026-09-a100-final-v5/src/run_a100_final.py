@@ -34,6 +34,7 @@ from primary_ml_cka.models.backends.target_transformers_generation import (
 )
 from primary_ml_cka.models.backends.transformers_backend import load_processor
 from primary_ml_cka.models.common.loading import local_snapshot
+from primary_ml_cka.models.proxies.registry import load_proxy
 from primary_ml_cka.models.targets.generation import TransformersTargetGenerator
 
 EXPERIMENT_ROOT = Path(__file__).resolve().parents[1]
@@ -95,9 +96,14 @@ def write_csv(path: Path, rows: list[dict]) -> None:
     temporary.replace(path)
 
 
-def validate_common_cohorts(output_dir: Path, pair_ids: tuple[str, ...], raw: dict) -> None:
+def validate_common_cohorts(
+    output_dir: Path,
+    pair_ids: tuple[str, ...],
+    raw: dict,
+    selected_transitions: tuple | None = None,
+) -> None:
     expected = int(raw["attack_count"])
-    for transition in transitions(raw):
+    for transition in selected_transitions or transitions(raw):
         cohorts = tuple(
             read_manifest(
                 transition_dir(output_dir, transition.transition_id)
@@ -124,6 +130,7 @@ def attack_batches(
     prompt: str,
     resume: bool,
     batch_size: int,
+    proxy_instance: object | None = None,
 ) -> None:
     pair = get_pair(pair_id)
     representation_layer = (
@@ -262,6 +269,7 @@ def attack_batches(
                 allow_reference_bank_smaller_than_attack=bool(
                     raw.get("allow_reference_bank_smaller_than_attack", False)
                 ),
+                proxy_instance=proxy_instance,
             )
             if result.proxy_target_hit_denominator != len(batch):
                 raise RuntimeError("Proxy denominator does not equal frozen batch size")
@@ -323,14 +331,27 @@ def evaluate_batches(
                 objective_tag,
                 float(state.get("lambda_cka", 1.0)),
             )
-            clean = tuple(
-                generator.generate_label(artifacts / f"{index:02d}_clean.png", prompt)
+            ordered_paths = tuple(
+                path
                 for index in range(count)
+                for path in (
+                    artifacts / f"{index:02d}_clean.png",
+                    artifacts / f"{index:02d}_adv.png",
+                )
             )
-            adversarial = tuple(
-                generator.generate_label(artifacts / f"{index:02d}_adv.png", prompt)
-                for index in range(count)
+            eval_batch_size = 2 if any(
+                marker in pair.target_model.lower()
+                for marker in ("27b", "31b", "14b")
+            ) else 8
+            generated = tuple(
+                item
+                for start in range(0, len(ordered_paths), eval_batch_size)
+                for item in generator.generate_labels(
+                    ordered_paths[start : start + eval_batch_size], prompt
+                )
             )
+            clean = generated[::2]
+            adversarial = generated[1::2]
             clean_labels = tuple(item.parsed_label for item in clean)
             adversarial_labels = tuple(item.parsed_label for item in adversarial)
             rates = attack_rates(
@@ -514,7 +535,7 @@ def main() -> None:
     if args.smoke:
         selected_transitions = (selected_transitions[0],) if selected_transitions else ()
     else:
-        validate_common_cohorts(args.output_dir, tuple(specs), raw)
+        validate_common_cohorts(args.output_dir, tuple(specs), raw, selected_transitions)
     prompt = classification_prompt(raw)
     class_references = tuple(
         read_manifest(
@@ -523,25 +544,59 @@ def main() -> None:
         for label in range(1, 11)
     )
     for pair_id in selected_pairs:
-        if args.evaluate_only:
-            lock_path = args.output_dir / run_setting(raw, "state_namespace", "states_a100_v5") / pair_id / "target_evaluation.lock"
-            lock_path.parent.mkdir(parents=True, exist_ok=True)
-            with lock_path.open("w", encoding="utf-8") as lock:
-                fcntl.flock(lock, fcntl.LOCK_EX)
-                pending_transitions = []
+        pair_for_attack = get_pair(pair_id)
+        if not args.evaluate_only:
+            shared_proxy = load_proxy(
+                pair_for_attack.proxy_model,
+                Path(".hf-cache"),
+                torch.device("cuda"),
+                AttackConfig(generative_precision=str(raw.get("generative_precision", "bf16"))),
+            )
+            try:
                 for transition in selected_transitions:
-                    path = state_path(
-                        args.output_dir,
-                        pair_id,
-                        transition.transition_id,
-                        0,
-                        run_setting(raw, "state_namespace", "states_a100_v5"),
+                    source = read_manifest(
+                        transition_dir(args.output_dir, transition.transition_id)
+                        / f"{pair_id}_attack_images.jsonl"
                     )
-                    if not path.is_file() or read_state(path).get("status") != "complete":
-                        pending_transitions.append(transition)
-                if not pending_transitions:
-                    print(f"resume evaluation pair={pair_id} all transitions complete", flush=True)
-                    continue
+                    if args.smoke:
+                        source = source[:2]
+                    attack_batches(
+                        pair_id=pair_id,
+                        transition=transition,
+                        spec=specs[pair_id],
+                        source=source,
+                        class_references=class_references,
+                        raw=raw,
+                        output_dir=args.output_dir,
+                        prompt=prompt,
+                        resume=args.resume,
+                        batch_size=int(raw["batch_size"]),
+                        proxy_instance=shared_proxy,
+                    )
+            finally:
+                # Black-box protocol: release all proxy weights before loading
+                # the target model for frozen-PNG evaluation.
+                del shared_proxy
+                gc.collect()
+                torch.cuda.empty_cache()
+        if args.attack_only:
+            continue
+        lock_path = args.output_dir / run_setting(raw, "state_namespace", "states_a100_v5") / pair_id / "target_evaluation.lock"
+        lock_path.parent.mkdir(parents=True, exist_ok=True)
+        with lock_path.open("w", encoding="utf-8") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            pending_transitions = []
+            for transition in selected_transitions:
+                path = state_path(
+                    args.output_dir,
+                    pair_id,
+                    transition.transition_id,
+                    0,
+                    run_setting(raw, "state_namespace", "states_a100_v5"),
+                )
+                if not path.is_file() or read_state(path).get("status") != "complete":
+                    pending_transitions.append(transition)
+            if pending_transitions:
                 pair = get_pair(pair_id)
                 snapshot = local_snapshot(Path(".hf-cache"), pair.target_model)
                 processor = load_processor(snapshot)
@@ -561,35 +616,6 @@ def main() -> None:
                     del generator, model, processor
                     gc.collect()
                     torch.cuda.empty_cache()
-            continue
-        for transition in selected_transitions:
-            source = read_manifest(
-                transition_dir(args.output_dir, transition.transition_id)
-                / f"{pair_id}_attack_images.jsonl"
-            )
-            if args.smoke:
-                source = source[:2]
-            if not args.evaluate_only:
-                attack_batches(
-                    pair_id=pair_id,
-                    transition=transition,
-                    spec=specs[pair_id],
-                    source=source,
-                    class_references=class_references,
-                    raw=raw,
-                    output_dir=args.output_dir,
-                    prompt=prompt,
-                    resume=args.resume,
-                    batch_size=int(raw["batch_size"]),
-                )
-            if not args.attack_only:
-                evaluate_batches(
-                    pair_id=pair_id,
-                    transition=transition,
-                    output_dir=args.output_dir,
-                    prompt=prompt,
-                    raw=raw,
-                )
     if not args.attack_only:
         summarize(args.output_dir, raw)
 

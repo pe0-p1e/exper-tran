@@ -180,13 +180,15 @@ class ContrastiveProxy(BaseProxy):
             image_features = _pooled_feature(
                 self.model.get_image_features(pixel_values=self.image_preprocess(image_chunk))
             )
-            scale = self.model.logit_scale.exp()
+            # Vision/text towers run in BF16 on A100, while closed-set
+            # prototype scoring stays FP32 for stable cross-model logits.
+            scale = self.model.logit_scale.float().exp()
             bias_parameter = getattr(self.model, "logit_bias", None)
-            normalized_images = functional.normalize(image_features, dim=-1)
-            classes = functional.normalize(self.class_embeddings, dim=-1)
+            normalized_images = functional.normalize(image_features.float(), dim=-1)
+            classes = functional.normalize(self.class_embeddings.float(), dim=-1)
             chunk_logits = scale * (normalized_images @ classes.T)
             if bias_parameter is not None:
-                chunk_logits = chunk_logits + bias_parameter
+                chunk_logits = chunk_logits + bias_parameter.float()
             return chunk_logits
 
         chunk_size = self.microbatch_size or images.shape[0]

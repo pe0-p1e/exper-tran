@@ -340,6 +340,7 @@ def attack_one_batch(
     gradient_trace_steps: tuple[int, ...] = (),
     checkpoint_steps: tuple[int, ...] = (),
     allow_reference_bank_smaller_than_attack: bool = False,
+    proxy_instance: object | None = None,
 ) -> AttackRunResult:
     # The public ``seed`` controls the complete attack, including any stochastic
     # work performed while materializing a quantized proxy.  Previously only the
@@ -421,7 +422,10 @@ def attack_one_batch(
     )
     timer = Timer()
     reset_peak_memory()
-    proxy = load_proxy(pair.proxy_model, project_root / ".hf-cache", device, attack_config)
+    owns_proxy = proxy_instance is None
+    proxy = proxy_instance or load_proxy(
+        pair.proxy_model, project_root / ".hf-cache", device, attack_config
+    )
     with torch.no_grad():
         clean_representation = proxy.image_embeddings(
             clean,
@@ -442,6 +446,32 @@ def attack_one_batch(
         clean_mask = clean_representation.mask.detach() if needs_token_reference else None
     del clean_representation
     semantic_class_reference = None
+    semantic_cache = getattr(proxy, "_v6_semantic_bank_cache", None)
+    if semantic_cache is None:
+        semantic_cache = {}
+        setattr(proxy, "_v6_semantic_bank_cache", semantic_cache)
+
+    def semantic_bank(records, images):
+        key = (
+            pair.proxy_model,
+            MODEL_REVISIONS[pair.proxy_model],
+            tuple(record.image_id for record in records),
+            representation_type,
+            representation_layer,
+            representation_pooling,
+        )
+        cached_bank = semantic_cache.get(key)
+        if cached_bank is None:
+            cached_bank = _detached_semantic_bank(
+                proxy,
+                images,
+                representation_type=representation_type,
+                layer=representation_layer,
+                pooling=representation_pooling,
+            ).detach().float().cpu()
+            semantic_cache[key] = cached_bank
+        return cached_bank.to(device=device, non_blocking=True)
+
     if needs_token_reference:
         assert reference_images is not None
         z_reference, reference_mask, semantic_reference_bank = _detached_embedding_bank(
@@ -472,13 +502,7 @@ def attack_one_batch(
         ]
     elif semantic_reference_bank is None:
         assert reference_images is not None
-        semantic_reference_bank = _detached_semantic_bank(
-            proxy,
-            reference_images,
-            representation_type=representation_type,
-            layer=representation_layer,
-            pooling=representation_pooling,
-        )
+        semantic_reference_bank = semantic_bank(references, reference_images)
     semantic_source_reference = None
     if uses_multiclass_semantic:
         assert semantic_class_reference is not None
@@ -486,13 +510,7 @@ def attack_one_batch(
             human_label_to_index(data_config.source_human_label)
         ]
     elif source_reference_images is not None:
-        semantic_source_reference = _detached_semantic_bank(
-            proxy,
-            source_reference_images,
-            representation_type=representation_type,
-            layer=representation_layer,
-            pooling=representation_pooling,
-        )
+        semantic_source_reference = semantic_bank(source_references, source_reference_images)
     aligned_target = None
     aligned_target_mask = None
     if lambda_cka > 0 and cka_target_weight > 0 and target_cka_mode == "clean_anchor_soft":
@@ -1003,9 +1021,10 @@ def attack_one_batch(
         log_name += f"_{objective_tag}"
     log_path = output_dir / "logs" / pair.pair_id / phase / f"{log_name}.json"
     write_json(log_path, result)
-    del proxy
-    gc.collect()
-    torch.cuda.empty_cache()
+    if owns_proxy:
+        del proxy
+        gc.collect()
+        torch.cuda.empty_cache()
     return result
 
 

@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 import torch
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoImageProcessor, AutoModel, AutoTokenizer
 
 from primary_ml_cka.config.schema import AttackConfig
 from primary_ml_cka.domain.identifiers import MODEL_REVISIONS
@@ -13,6 +13,7 @@ from primary_ml_cka.models.backends.transformers_backend import (
 from primary_ml_cka.models.common.loading import freeze_module, local_snapshot
 from primary_ml_cka.models.proxies.clip import CLIP_PREPROCESS
 from primary_ml_cka.models.proxies.contrastive import ContrastiveProxy
+from primary_ml_cka.models.proxies.dinov2 import DINOv2Proxy
 from primary_ml_cka.models.proxies.generative import GenerativeProxy
 from primary_ml_cka.models.proxies.siglip2 import SIGLIP2_PREPROCESS
 from primary_ml_cka.models.proxies.visual import (
@@ -43,8 +44,23 @@ def load_proxy(
 ):
     attack_config = attack_config or AttackConfig()
     snapshot = local_snapshot(hf_home, model_id, MODEL_REVISIONS[model_id])
+    if model_id == "facebook/dinov2-large":
+        model = freeze_module(
+            AutoModel.from_pretrained(
+                snapshot,
+                local_files_only=True,
+                torch_dtype=torch.bfloat16,
+            ).to(device)
+        )
+        image_processor = AutoImageProcessor.from_pretrained(snapshot, local_files_only=True)
+        image_size = int(image_processor.size.get("height", image_processor.size.get("shortest_edge", 518)))
+        return DINOv2Proxy(model, image_size=image_size)
     if model_id == "openai/clip-vit-large-patch14":
-        model = freeze_module(AutoModel.from_pretrained(snapshot, local_files_only=True).to(device))
+        model = freeze_module(
+            AutoModel.from_pretrained(
+                snapshot, local_files_only=True, torch_dtype=torch.bfloat16
+            ).to(device)
+        )
         tokenizer = AutoTokenizer.from_pretrained(snapshot, local_files_only=True)
         return ContrastiveProxy(
             model,
@@ -58,7 +74,11 @@ def load_proxy(
             microbatch_size=4,
         )
     if model_id == "google/siglip2-so400m-patch14-384":
-        model = freeze_module(AutoModel.from_pretrained(snapshot, local_files_only=True).to(device))
+        model = freeze_module(
+            AutoModel.from_pretrained(
+                snapshot, local_files_only=True, torch_dtype=torch.bfloat16
+            ).to(device)
+        )
         tokenizer = AutoTokenizer.from_pretrained(snapshot, local_files_only=True)
         return ContrastiveProxy(
             model,

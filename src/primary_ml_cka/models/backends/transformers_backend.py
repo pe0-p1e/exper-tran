@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import torch
@@ -30,6 +31,9 @@ def load_generative_proxy(
         "device_map": {"": device.index or 0},
         "torch_dtype": torch.bfloat16,
     }
+    attention_implementation = os.environ.get("PRIMARY_ML_CKA_ATTN_IMPLEMENTATION")
+    if attention_implementation:
+        load_kwargs["attn_implementation"] = attention_implementation
     if precision == "nf4":
         quantization = BitsAndBytesConfig(
             load_in_4bit=True,
