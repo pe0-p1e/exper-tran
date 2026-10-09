@@ -285,6 +285,8 @@ def main():
         for batch in state.get("batches",[]):
             for step in batch.get("gradient_diagnostics_by_step",[]): pairwise.extend(step.get("pairwise_gradient_cosine",{}).values())
         attacks=cell.get("attacks",[state.get("attack",{})])
+        if state.get("batches"):
+            attacks=state["batches"]
         runtime=sum(float(a.get("elapsed_seconds") or 0) for a in attacks)
         peak=max((float(a.get("peak_reserved_vram_gb",a.get("peak_reserved_vram_gib",0)) or 0) for a in attacks),default=0)
         row={"family":cell["family"],"condition":meta["condition"],"transition_id":tid,"source_label":source,"target_label":target,"source_class":label_names[source],"target_class":label_names[target],"proxy_models":"+".join(meta["proxy_names"]),"target_model":tname,"proxy_layer":meta["layer"],"pull_weight":meta["pull_weight"],"push_weight":meta["push_weight"],"N":len(clean),"clean_valid_denominator":len(clean),"proxy_success_count":denominator,"TASR_numerator":numerator,"TASR_denominator":denominator,"target_hits_among_proxy_success":numerator,"TASR":numerator/denominator if numerator is not None and denominator else None,"source_variance":class_stats[(tname,source)]["dispersion"],"target_variance":class_stats[(tname,target)]["dispersion"],"source_covariance_trace":class_stats[(tname,source)]["covariance_trace"],"target_covariance_trace":class_stats[(tname,target)]["covariance_trace"],"source_effective_rank":class_stats[(tname,source)]["effective_rank"],"target_effective_rank":class_stats[(tname,target)]["effective_rank"],"prototype_distance":float(1-zs@zt),"mean_delta_pull":float(dp.mean()),"mean_delta_push":float(dq.mean()),"mean_delta_R":float(dr.mean()),"median_delta_R":float(np.median(dr)),"clean_margin":float(margin0.mean()),"adversarial_margin":float(margin1.mean()),"margin_change":float((margin1-margin0).mean()),"gap_closure":float((margin1-margin0).mean()),"CKA":float(np.mean(cka_values)) if cka_values else None,"RSA":float(np.nanmean(rsa_values)) if rsa_values else None,"mean_pairwise_proxy_CKA":float(np.mean(proxy_pair_cka)) if proxy_pair_cka else None,"mean_pairwise_proxy_RSA":float(np.nanmean(proxy_pair_rsa)) if proxy_pair_rsa else None,"mean_gradient_cosine":float(np.mean(pairwise)) if pairwise else None,"runtime_seconds":runtime,"peak_reserved_vram_gib":peak}
@@ -360,6 +362,7 @@ def main():
         fig,ax=plt.subplots(figsize=(10,9)); image=ax.imshow(np.asarray(mat),vmin=-1,vmax=1,cmap="coolwarm"); ax.set_xticks(range(len(keys)),keys,rotation=65,ha="right"); ax.set_yticks(range(len(keys)),keys); fig.colorbar(image,ax=ax,label="Spearman ρ"); fig.tight_layout(); (analysis/"correlations").mkdir(parents=True,exist_ok=True); fig.savefig(analysis/"correlations/spearman_heatmap.png",dpi=180); plt.close(fig); return
     if args.stage=="15_validation":
         failures=[]
+        warnings=[]
         checked_images=0
         max_png_linf=0
         from PIL import Image
@@ -370,10 +373,16 @@ def main():
             diagnostics=[s.get("attack",{}) for s in cell.get("states",[state])]
             diagnostics.extend(state.get("batches",[]))
             for diagnostic in diagnostics:
+                step_count=diagnostic.get("steps")
+                if step_count is not None and int(step_count)!=50:
+                    failures.append({"state":str(cell["state_path"]),"error":f"production attack has {step_count} steps, expected 50"})
                 for key in ("linf_float","linf_png","max_linf"):
                     value=diagnostic.get(key)
                     if value is not None and float(value)>16/255+1e-6:
                         failures.append({"state":str(cell["state_path"]),"error":f"{key} exceeds epsilon 16/255: {value}"})
+                reserved=diagnostic.get("peak_reserved_vram_gib",diagnostic.get("peak_reserved_vram_gb"))
+                if reserved is not None and float(reserved)>75:
+                    warnings.append({"state":str(cell["state_path"]),"warning":f"peak reserved VRAM {float(reserved):.2f} GiB exceeded 75 GiB target"})
             if len(cell["proxy_mask"])!=len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"proxy mask length mismatch"})
             if len(cell["target_mask"])!=len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"target mask missing or length mismatch"})
             if any(value is None for value in cell["target_mask"]): failures.append({"state":str(cell["state_path"]),"error":"target mask contains unevaluated samples"})
@@ -398,6 +407,8 @@ def main():
             if row.get("TASR") is not None:
                 if row["TASR_denominator"]<=0 or row["TASR_numerator"]>row["TASR_denominator"] or abs(row["TASR"]-row["TASR_numerator"]/row["TASR_denominator"])>1e-12:
                     failures.append({"cell":row.get("condition"),"transition":row.get("transition_id"),"error":"TASR ratio inconsistent with explicit numerator/denominator"})
+            if row.get("N")!=30:
+                failures.append({"cell":row.get("condition"),"transition":row.get("transition_id"),"error":f"analysis row N={row.get('N')}; expected 30"})
         for status_path in (OUT/"audits/cell_states").glob("*.json"):
             data=json.loads(status_path.read_text())
             if data.get("status")!="complete": failures.append({"cell":status_path.stem,"error":data.get("error","incomplete")})
@@ -410,7 +421,8 @@ def main():
                 failures.append({"cell":str(state_path.relative_to(OUT)),"error":f"multiple-proxy cohort has {data.get('image_count',0)}/{expected_images} images"})
         (analysis/"validation").mkdir(parents=True,exist_ok=True)
         (analysis/"validation/failures.json").write_text(json.dumps(failures,indent=2)+"\n")
-        (analysis/"validation/summary.json").write_text(json.dumps({"measured_rows":len(metrics),"checked_attack_png_pairs":checked_images,"max_png_linf_integer":max_png_linf,"epsilon_integer_limit":16,"failure_count":len(failures),"failures_by_type":{kind:sum(1 for x in failures if kind in x.get("error","")) for kind in sorted({x.get("error","").split(":")[0] for x in failures})}},indent=2)+"\n")
+        (analysis/"validation/warnings.json").write_text(json.dumps(warnings,indent=2)+"\n")
+        (analysis/"validation/summary.json").write_text(json.dumps({"measured_rows":len(metrics),"checked_attack_png_pairs":checked_images,"max_png_linf_integer":max_png_linf,"epsilon_integer_limit":16,"failure_count":len(failures),"warning_count":len(warnings),"failures_by_type":{kind:sum(1 for x in failures if kind in x.get("error","")) for kind in sorted({x.get("error","").split(":")[0] for x in failures})}},indent=2)+"\n")
         return
     if args.stage=="16_final_report":
         write_csv(OUT/"reports/completion_matrix.csv",metrics)
@@ -438,7 +450,7 @@ def main():
         validation_path=analysis/"validation/summary.json"
         if validation_path.is_file():
             validation=json.loads(validation_path.read_text())
-            report.extend(["","## Result reasonableness checks","",f"Validated {validation['checked_attack_png_pairs']} frozen clean/adversarial PNG pairs; largest integer-pixel L∞ difference was {validation['max_png_linf_integer']}/255 (limit 16/255). Checked {validation['measured_rows']} measured rows and explicit proxy-conditioned TASR counts. Validation findings: {validation['failure_count']}. See `analysis/validation/failures.json` and `analysis/validation/summary.json` for details."])
+            report.extend(["","## Result reasonableness checks","",f"Validated {validation['checked_attack_png_pairs']} frozen clean/adversarial PNG pairs; largest integer-pixel L∞ difference was {validation['max_png_linf_integer']}/255 (limit 16/255). Checked {validation['measured_rows']} measured rows, 50-step settings, and explicit proxy-conditioned TASR counts. Structural/cohort findings: {validation['failure_count']}; resource warnings: {validation['warning_count']}. See `analysis/validation/failures.json`, `analysis/validation/warnings.json`, and `analysis/validation/summary.json` for details."])
         report.extend(["","## Output map","","`single_proxy/`, `layer_sweep/`, `multiple_proxy/`, and `ablation/` contain per-cell states and frozen PNGs. `analysis/embeddings/` stores reusable high-dimensional features. `analysis/pca/` and `analysis/tsne/` fit A/B references and both directions jointly. `analysis/variance/`, `analysis/representation_shift/`, `analysis/asymmetry/`, and `analysis/correlations/` contain the quantitative exports.","","t-SNE is a qualitative view only; all reported geometric measures use the original embedding dimensions. Failed or unavailable cells are listed in `audits/cell_status.jsonl` and `analysis/embedding_extraction_failures.json`."])
         (OUT/"reports").mkdir(parents=True,exist_ok=True); (OUT/"reports/final_report.md").write_text("\n".join(report)+"\n")
 
