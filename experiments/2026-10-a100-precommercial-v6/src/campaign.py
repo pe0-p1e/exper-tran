@@ -205,7 +205,8 @@ def stage(name: str) -> None:
                     if not cell.is_file():
                         continue
                     state = json.loads(cell.read_text())
-                    if state.get("status") in {"attack_complete", "complete"} and (int(state.get("image_count", 0)) != expected or state.get("target_evaluation_status") != "complete"):
+                    target_eval_incomplete = state.get("target_evaluation_status") != "complete" or any(batch.get("target_evaluation", {}).get("status") != "complete" for batch in state.get("batches", []))
+                    if state.get("status") in {"attack_complete", "complete"} and (int(state.get("image_count", 0)) != expected or target_eval_incomplete):
                         bad.append(tid)
                 if bad:
                     run([PY, str(SRC / "run_multi_proxy.py"), "--proxies", *proxies, "--target", target, "--condition", cond, "--transitions", *bad, "--output-dir", str(OUT)], name=f"repair-multi-cohort-{cond}")
