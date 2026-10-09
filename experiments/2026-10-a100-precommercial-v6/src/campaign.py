@@ -205,7 +205,9 @@ def stage(name: str) -> None:
                     if not cell.is_file():
                         continue
                     state = json.loads(cell.read_text())
-                    target_eval_incomplete = state.get("target_evaluation_status") != "complete" or any(batch.get("target_evaluation", {}).get("status") != "complete" for batch in state.get("batches", []))
+                    # parse_error means the model returned no exact class code;
+                    # that is a measured targeted miss, not an incomplete run.
+                    target_eval_incomplete = state.get("target_evaluation_status") != "complete" or any(batch.get("target_evaluation", {}).get("status") not in {"complete", "parse_error"} for batch in state.get("batches", []))
                     if state.get("status") in {"attack_complete", "complete"} and (int(state.get("image_count", 0)) != expected or target_eval_incomplete):
                         bad.append(tid)
                 if bad:

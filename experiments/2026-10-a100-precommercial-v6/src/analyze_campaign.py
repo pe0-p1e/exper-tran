@@ -207,7 +207,9 @@ def cka(x,y):
     x=torch.from_numpy(x).float(); y=torch.from_numpy(y).float()
     x-=x.mean(0,keepdim=True); y-=y.mean(0,keepdim=True)
     cross=x.T@y
-    return float(cross.square().sum()/(torch.linalg.matrix_norm(x.T@x)*torch.linalg.matrix_norm(y.T@y)).clamp_min(1e-12))
+    value=float(cross.square().sum()/(torch.linalg.matrix_norm(x.T@x)*torch.linalg.matrix_norm(y.T@y)).clamp_min(1e-12))
+    # Float32 roundoff can put identical-representation CKA a few ulps above 1.
+    return min(1.0,max(0.0,value))
 
 
 def rsa(x,y):
@@ -374,6 +376,7 @@ def main():
     if args.stage=="15_validation":
         failures=[]
         warnings=[]
+        target_invalid=[]
         checked_images=0
         max_png_linf=0
         from PIL import Image
@@ -401,14 +404,21 @@ def main():
             for batch in state.get("batches",[]):
                 evaluation=batch.get("target_evaluation",{})
                 if evaluation and evaluation.get("status")!="complete":
-                    failures.append({"state":str(cell["state_path"]),"error":f"ensemble target evaluation status={evaluation.get('status')}"})
+                    warnings.append({"state":str(cell["state_path"]),"warning":f"ensemble target parser status={evaluation.get('status')}; absent class labels count as target misses"})
             for state_part in cell.get("states",[state]):
                 target=state_part.get("target",{})
                 for key in ("clean_outputs","adversarial_outputs"):
                     outputs=target.get(key,[])
-                    bad=sum(1 for output in outputs if output.get("parser_status")!="ok")
-                    if bad:
-                        failures.append({"state":str(cell["state_path"]),"error":f"{key} contains {bad} parser failures"})
+                    for index,output in enumerate(outputs):
+                        if output.get("parser_status")!="ok":
+                            target_invalid.append({"family":cell["family"],"condition":meta["condition"],"transition_id":state_part.get("transition_id"),"batch_index":state_part.get("batch_index"),"image_index":index,"output_kind":key,"parser_status":output.get("parser_status"),"raw_output":output.get("raw_output"),"parsed_label":output.get("parsed_label"),"treatment":"no valid target class; counted as target miss"})
+                            warnings.append({"state":str(cell["state_path"]),"warning":f"{key}[{index}] was not an exact class code; counted as target miss"})
+            for batch_index,batch in enumerate(state.get("batches",[])):
+                evaluation=batch.get("target_evaluation",{})
+                for image_index,output in enumerate(evaluation.get("outputs",[])):
+                    for side,status_key,label_key in (("clean","clean_status","clean"),("adversarial","adv_status","adv")):
+                        if output.get(status_key)!="ok":
+                            target_invalid.append({"family":"multiple_proxy","condition":meta["condition"],"transition_id":state.get("transition_id"),"batch_index":batch_index,"image_index":image_index,"output_kind":side,"parser_status":output.get(status_key),"raw_output":None,"parsed_label":output.get(label_key),"treatment":"no valid target class; counted as target miss"})
             for clean_path,adv_path in zip(cell["clean"],cell["adv"],strict=True):
                 try:
                     with Image.open(clean_path) as image: clean_image=np.asarray(image.convert("RGB"),dtype=np.int16)
@@ -444,7 +454,8 @@ def main():
         (analysis/"validation").mkdir(parents=True,exist_ok=True)
         (analysis/"validation/failures.json").write_text(json.dumps(failures,indent=2)+"\n")
         (analysis/"validation/warnings.json").write_text(json.dumps(warnings,indent=2)+"\n")
-        (analysis/"validation/summary.json").write_text(json.dumps({"measured_rows":len(metrics),"checked_attack_png_pairs":checked_images,"max_png_linf_integer":max_png_linf,"epsilon_integer_limit":16,"failure_count":len(failures),"warning_count":len(warnings),"failures_by_type":{kind:sum(1 for x in failures if kind in x.get("error","")) for kind in sorted({x.get("error","").split(":")[0] for x in failures})}},indent=2)+"\n")
+        write_csv(analysis/"validation/target_output_diagnostics.csv",target_invalid)
+        (analysis/"validation/summary.json").write_text(json.dumps({"measured_rows":len(metrics),"checked_attack_png_pairs":checked_images,"max_png_linf_integer":max_png_linf,"epsilon_integer_limit":16,"strict_parser_nonclass_outputs":len(target_invalid),"nonclass_output_treatment":"counted as target misses because the task requires an exact class code","failure_count":len(failures),"warning_count":len(warnings),"failures_by_type":{kind:sum(1 for x in failures if kind in x.get("error","")) for kind in sorted({x.get("error","").split(":")[0] for x in failures})}},indent=2)+"\n")
         return
     if args.stage=="16_final_report":
         family_outputs={"single_proxy":"single_proxy","layer_sweep":"layer_sweep","multiple_proxy":"multiple_proxy","ablation":"ablation","reverse_direction":"single_proxy"}
@@ -484,7 +495,7 @@ def main():
         validation_path=analysis/"validation/summary.json"
         if validation_path.is_file():
             validation=json.loads(validation_path.read_text())
-            report.extend(["","## Result reasonableness checks","",f"Validated {validation['checked_attack_png_pairs']} frozen clean/adversarial PNG pairs; largest integer-pixel L∞ difference was {validation['max_png_linf_integer']}/255 (limit 16/255). Checked {validation['measured_rows']} measured rows, 50-step settings, and explicit proxy-conditioned TASR counts. Structural/cohort findings: {validation['failure_count']}; resource warnings: {validation['warning_count']}. See `analysis/validation/failures.json`, `analysis/validation/warnings.json`, and `analysis/validation/summary.json` for details."])
+            report.extend(["","## Result reasonableness checks","",f"Validated {validation['checked_attack_png_pairs']} frozen clean/adversarial PNG pairs; largest integer-pixel L∞ difference was {validation['max_png_linf_integer']}/255 (limit 16/255). Checked {validation['measured_rows']} measured rows, 50-step settings, and explicit proxy-conditioned TASR counts. Strict parsing rejected {validation['strict_parser_nonclass_outputs']} model outputs; these had no valid class code and are counted as target misses, with per-output records in `analysis/validation/target_output_diagnostics.csv`. Cohort shortfalls: {validation['failure_count']}; resource warnings: {validation['warning_count']}. See the validation JSON files for details."])
         report.extend(["","## Output map","","`single_proxy/`, `layer_sweep/`, `multiple_proxy/`, and `ablation/` contain per-cell states and frozen PNGs. `analysis/embeddings/` stores reusable high-dimensional features. `analysis/pca/` and `analysis/tsne/` fit A/B references and both directions jointly. `analysis/variance/`, `analysis/representation_shift/`, `analysis/asymmetry/`, and `analysis/correlations/` contain the quantitative exports.","","t-SNE is a qualitative view only; all reported geometric measures use the original embedding dimensions. Failed or unavailable cells are listed in `audits/cell_status.jsonl` and `analysis/embedding_extraction_failures.json`."])
         (OUT/"reports").mkdir(parents=True,exist_ok=True); (OUT/"reports/final_report.md").write_text("\n".join(report)+"\n")
 
