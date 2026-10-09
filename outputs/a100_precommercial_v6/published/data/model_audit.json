@@ -1,0 +1,401 @@
+[
+  {
+    "name": "Qwen3.5-2B",
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      256,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "qwen",
+    "gradient_linf": 213.66151428222656,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Qwen3.5-4B",
+    "repo_id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      256,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "qwen",
+    "gradient_linf": 322.5414123535156,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Qwen3.5-9B",
+    "repo_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "expected_depth": 27,
+    "status": "ok",
+    "vision_depth": 27,
+    "deepest_block": 26,
+    "representation_shape": [
+      2,
+      256,
+      1152
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "qwen",
+    "gradient_linf": 7.743313789367676,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Qwen3.5-27B",
+    "repo_id": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "expected_depth": 27,
+    "status": "ok",
+    "vision_depth": 27,
+    "deepest_block": 26,
+    "representation_shape": [
+      2,
+      256,
+      1152
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "qwen",
+    "gradient_linf": 59.850467681884766,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      1024,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "internvl",
+    "gradient_linf": 142.98275756835938,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "InternVL3.5-4B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-4B-HF",
+    "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      1024,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "internvl",
+    "gradient_linf": 133.99110412597656,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "InternVL3.5-8B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      1024,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "internvl",
+    "gradient_linf": 269.13763427734375,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "InternVL3.5-14B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-14B-HF",
+    "revision": "226b96d5912e69159abc0384cefcbd51487fdce0",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      1024,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "internvl",
+    "gradient_linf": 269.0576171875,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Gemma 4 E2B-it",
+    "repo_id": "google/gemma-4-E2B-it",
+    "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+    "expected_depth": 16,
+    "status": "ok",
+    "vision_depth": 16,
+    "deepest_block": 15,
+    "representation_shape": [
+      2,
+      2520,
+      768
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "gemma4",
+    "gradient_linf": 210.76377868652344,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Gemma 4 E4B-it",
+    "repo_id": "google/gemma-4-E4B-it",
+    "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+    "expected_depth": 16,
+    "status": "ok",
+    "vision_depth": 16,
+    "deepest_block": 15,
+    "representation_shape": [
+      2,
+      2520,
+      768
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "gemma4",
+    "gradient_linf": 211.4329376220703,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Gemma 4 26B-A4B-it",
+    "repo_id": "google/gemma-4-26B-A4B-it",
+    "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+    "expected_depth": 27,
+    "status": "ok",
+    "vision_depth": 27,
+    "deepest_block": 26,
+    "representation_shape": [
+      2,
+      2520,
+      1152
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "gemma4",
+    "gradient_linf": 1721.0865478515625,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "Gemma 4 31B-it",
+    "repo_id": "google/gemma-4-31B-it",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "expected_depth": 27,
+    "status": "ok",
+    "vision_depth": 27,
+    "deepest_block": 26,
+    "representation_shape": [
+      2,
+      2520,
+      1152
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "gemma4",
+    "gradient_linf": 1422.021240234375,
+    "target_inference": {
+      "status": [
+        "ok",
+        "ok"
+      ],
+      "parsed_labels": [
+        1,
+        1
+      ]
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      256,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "clip",
+    "gradient_linf": 4050.187255859375,
+    "target_inference": {
+      "status": "not_a_target_in_matrix"
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "SigLIP2-So400m-patch14-384",
+    "repo_id": "google/siglip2-so400m-patch14-384",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+    "expected_depth": 27,
+    "status": "ok",
+    "vision_depth": 27,
+    "deepest_block": 26,
+    "representation_shape": [
+      2,
+      729,
+      1152
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "siglip2",
+    "gradient_linf": 476.72515869140625,
+    "target_inference": {
+      "status": "not_a_target_in_matrix"
+    },
+    "closed_set_proxy_scoring": "ok"
+  },
+  {
+    "name": "DINOv2-Large",
+    "repo_id": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "expected_depth": 24,
+    "status": "ok",
+    "vision_depth": 24,
+    "deepest_block": 23,
+    "representation_shape": [
+      2,
+      324,
+      1024
+    ],
+    "representation_dtype": "torch.bfloat16",
+    "preprocessing": "dinov2",
+    "gradient_linf": 4497.529296875,
+    "target_inference": {
+      "status": "not_a_target_in_matrix"
+    },
+    "closed_set_proxy_scoring": "prototype_only"
+  }
+]

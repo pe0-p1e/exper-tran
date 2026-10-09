@@ -1,0 +1,222 @@
+[
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T07/batch_00.json",
+    "warning": "adversarial_outputs[4] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T07/batch_00.json",
+    "warning": "adversarial_outputs[4] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[5] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[2] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[7] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[1] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[2] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/single_proxy/work/single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[4] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T01/batch_00.json",
+    "warning": "adversarial_outputs[1] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[0] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[5] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[6] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[2] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[6] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75/P02/T07/batch_00.json",
+    "warning": "adversarial_outputs[2] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T03/batch_00.json",
+    "warning": "adversarial_outputs[3] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[0] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[5] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[6] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[1] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T05/batch_00.json",
+    "warning": "adversarial_outputs[6] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/ablation/work/ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/states_v6_ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00/P02/T09/batch_00.json",
+    "warning": "adversarial_outputs[7] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/reverse_direction/work/reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T08/batch_00.json",
+    "warning": "adversarial_outputs[4] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/reverse_direction/work/reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T08/batch_00.json",
+    "warning": "adversarial_outputs[1] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/reverse_direction/work/reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T08/batch_00.json",
+    "warning": "adversarial_outputs[6] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/reverse_direction/work/reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/states_v6_reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25/P02/T08/batch_00.json",
+    "warning": "adversarial_outputs[0] was not an exact class code; counted as target miss"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Qwen3.5-2B_Qwen3.5-4B__to__Gemma_4_31B-it/T07.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Qwen3.5-2B_Qwen3.5-4B__to__Gemma_4_31B-it/T05.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B__to__Gemma_4_31B-it/T05.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B__to__Gemma_4_31B-it/T05.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T05.json",
+    "warning": "peak reserved VRAM 77.29 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T05.json",
+    "warning": "peak reserved VRAM 77.29 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T05.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T05.json",
+    "warning": "peak reserved VRAM 77.22 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "peak reserved VRAM 77.22 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "peak reserved VRAM 77.27 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "peak reserved VRAM 77.24 GiB exceeded 75 GiB target"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Qwen3.5-2B__to__Gemma_4_31B-it/T05.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF/T05.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF/T01.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  },
+  {
+    "state": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF/T03.json",
+    "warning": "ensemble target parser status=parse_error; absent class labels count as target misses"
+  }
+]

@@ -1,0 +1,51 @@
+family,condition,transition_id,batch_index,image_index,output_kind,parser_status,raw_output,parsed_label,treatment
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T07,2,4,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T07,3,4,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T09,0,5,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T09,1,2,adversarial_outputs,invalid,None of the above,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T09,1,7,adversarial_outputs,invalid,None of the above,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T09,2,1,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T09,3,2,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+single_proxy,single_proxy__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T09,3,4,adversarial_outputs,invalid,None of the above,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T01,2,1,adversarial_outputs,invalid,None,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T05,0,0,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T05,0,5,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T05,0,6,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T05,1,2,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T05,2,6,adversarial_outputs,invalid,None,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.25-0.75,T07,2,2,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T03,2,3,adversarial_outputs,invalid,None,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T05,0,0,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T05,0,5,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T05,0,6,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T05,1,1,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T05,2,6,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+ablation,ablation__Gemma_4_E2B-it__to__Gemma_4_E4B-it__l15__p0.00-1.00,T09,0,7,adversarial_outputs,invalid,-1,,no valid target class; counted as target miss
+reverse_direction,reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T08,0,4,adversarial_outputs,invalid,None of the above,,no valid target class; counted as target miss
+reverse_direction,reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T08,1,1,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+reverse_direction,reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T08,1,6,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+reverse_direction,reverse_direction__Gemma_4_E2B-it__to__Gemma_4_26B-A4B-it__l15__p0.75-0.25,T08,2,0,adversarial_outputs,invalid,None of the provided,,no valid target class; counted as target miss
+multiple_proxy,Qwen3.5-2B_Qwen3.5-4B__to__Gemma_4_31B-it,T07,2,4,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Qwen3.5-2B_Qwen3.5-4B__to__Gemma_4_31B-it,T05,0,5,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B__to__Gemma_4_31B-it,T05,0,5,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B__to__Gemma_4_31B-it,T05,2,1,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T01,1,3,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T01,2,0,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T01,2,3,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T03,0,6,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T03,3,0,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T03,3,2,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF,T03,3,3,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it__to__InternVL3.5-14B-HF,T01,2,2,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it__to__InternVL3.5-14B-HF,T01,3,2,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it__to__InternVL3.5-14B-HF,T03,0,7,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it__to__InternVL3.5-14B-HF,T03,1,1,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it__to__InternVL3.5-14B-HF,T03,1,7,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Qwen3.5-2B__to__Gemma_4_31B-it,T05,0,5,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T05,1,1,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T01,0,2,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T01,2,1,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T01,2,2,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T01,2,5,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T03,1,1,adversarial,invalid,,,no valid target class; counted as target miss
+multiple_proxy,Gemma_4_E2B-it_Gemma_4_E4B-it__to__InternVL3.5-14B-HF,T03,1,7,adversarial,invalid,,,no valid target class; counted as target miss

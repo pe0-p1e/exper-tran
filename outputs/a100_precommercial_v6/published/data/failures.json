@@ -1,0 +1,70 @@
+[
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_SigLIP2-So400m-patch14-384__to__Qwen3.5-27B/T09.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_SigLIP2-So400m-patch14-384__to__Qwen3.5-27B/T07.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_SigLIP2-So400m-patch14-384__to__Qwen3.5-27B/T05.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_SigLIP2-So400m-patch14-384__to__Qwen3.5-27B/T01.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_SigLIP2-So400m-patch14-384__to__Qwen3.5-27B/T03.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T09.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/Gemma_4_E2B-it_Gemma_4_E4B-it_Gemma_4_26B-A4B-it__to__InternVL3.5-14B-HF/T07.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14__to__Qwen3.5-27B/T09.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14__to__Qwen3.5-27B/T07.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=1, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14__to__Qwen3.5-27B/T05.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=1, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14__to__Qwen3.5-27B/T01.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14__to__Qwen3.5-27B/T03.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=2, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_DINOv2-Large__to__Qwen3.5-27B/T09.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_DINOv2-Large__to__Qwen3.5-27B/T07.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=1, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_DINOv2-Large__to__Qwen3.5-27B/T05.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=1, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_DINOv2-Large__to__Qwen3.5-27B/T01.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30"
+  },
+  {
+    "cell": "multiple_proxy/attacks/InternVL3.5-2B-HF_Gemma_4_E2B-it_CLIP_ViT-L_14_DINOv2-Large__to__Qwen3.5-27B/T03.json",
+    "error": "multiple-proxy cohort status=insufficient_clean_valid; found=2, required=30"
+  }
+]

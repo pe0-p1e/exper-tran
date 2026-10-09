@@ -1,0 +1,19 @@
+{
+  "measured_rows": 368,
+  "checked_attack_png_pairs": 11040,
+  "max_png_linf_integer": 16,
+  "epsilon_integer_limit": 16,
+  "strict_parser_nonclass_outputs": 50,
+  "nonclass_output_treatment": "counted as target misses because the task requires an exact class code",
+  "ensemble_parse_error_batches": 17,
+  "resource_warning_entries": 12,
+  "resource_warning_states": 3,
+  "max_reserved_vram_warning_gib": 77.29,
+  "failure_count": 17,
+  "warning_count": 55,
+  "failures_by_type": {
+    "multiple-proxy cohort status=insufficient_clean_valid; found=0, required=30": 11,
+    "multiple-proxy cohort status=insufficient_clean_valid; found=1, required=30": 4,
+    "multiple-proxy cohort status=insufficient_clean_valid; found=2, required=30": 2
+  }
+}

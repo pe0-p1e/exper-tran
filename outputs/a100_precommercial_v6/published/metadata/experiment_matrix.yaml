@@ -1,0 +1,151 @@
+version: a100-precommercial-v6
+commercial_models: false
+
+hardware:
+  gpu: NVIDIA A100 80GB
+  precision: bf16
+  max_peak_reserved_gib: 75
+  batch_candidates: [8, 16, 24, 32, 48, 50]
+
+attack:
+  epsilon: 16/255
+  steps: 50
+  step_size: 1/255
+  momentum: 1.0
+  random_start: true
+  seed: 42
+  image_size: 224
+  pull_weight: 0.75
+  push_weight: 0.25
+  classification_loss_weight: 0.0
+  proxy_layer: deepest
+  target_analysis_layer: deepest
+  pooling: spatial_token_mean
+
+metric:
+  primary: TASR
+  definition: target_targeted_success_given_proxy_targeted_success
+  multiple_proxy_primary_condition: all_proxies_targeted_success
+
+data:
+  dataset: ImageNet-1K diverse-10
+  reference_images_per_class: 48
+  candidate_images_per_class_min: 64
+  attack_images_per_transition: 30
+  forward_pairs:
+    - [goldfish, monarch butterfly]
+    - [pineapple, acoustic guitar]
+    - [laptop, espresso]
+    - [volcano, rocking chair]
+    - [soccer ball, school bus]
+  reverse_pairs_for_mechanism:
+    - [monarch butterfly, goldfish]
+    - [acoustic guitar, pineapple]
+    - [espresso, laptop]
+    - [rocking chair, volcano]
+    - [school bus, soccer ball]
+
+single_proxy:
+  cross_family:
+    - [Qwen3.5-2B, InternVL3.5-4B-HF, 23]
+    - [Qwen3.5-2B, Gemma 4 E4B-it, 23]
+    - [InternVL3.5-2B-HF, Qwen3.5-4B, 23]
+    - [InternVL3.5-2B-HF, Gemma 4 E4B-it, 23]
+    - [Gemma 4 E2B-it, Qwen3.5-4B, 15]
+    - [Gemma 4 E2B-it, InternVL3.5-4B-HF, 15]
+  intra_family:
+    - [Gemma 4 E2B-it, Gemma 4 E4B-it, 15]
+    - [Gemma 4 E2B-it, Gemma 4 26B-A4B-it, 15]
+    - [Qwen3.5-2B, Qwen3.5-4B, 23]
+    - [Qwen3.5-2B, Qwen3.5-9B, 23]
+    - [InternVL3.5-2B-HF, InternVL3.5-4B-HF, 23]
+    - [InternVL3.5-2B-HF, InternVL3.5-8B-HF, 23]
+
+embedding_layer:
+  normalized_depths: [0.01, 0.25, 0.50, 0.75, 1.00]
+  pairs:
+    - [Qwen3.5-2B, Gemma 4 E4B-it]
+    - [InternVL3.5-2B-HF, Qwen3.5-4B]
+    - [Gemma 4 E2B-it, InternVL3.5-8B-HF]
+    - [Qwen3.5-2B, Qwen3.5-4B]
+    - [InternVL3.5-2B-HF, InternVL3.5-4B-HF]
+    - [Gemma 4 E2B-it, Gemma 4 E4B-it]
+
+multiple_proxy:
+  redesign_forbidden: true
+  block_1:
+    - target: Qwen3.5-27B
+      ensembles:
+        - [InternVL3.5-2B-HF]
+        - [InternVL3.5-2B-HF, InternVL3.5-4B-HF]
+        - [InternVL3.5-2B-HF, InternVL3.5-4B-HF, InternVL3.5-8B-HF]
+    - target: Gemma 4 31B-it
+      ensembles:
+        - [Qwen3.5-2B]
+        - [Qwen3.5-2B, Qwen3.5-4B]
+        - [Qwen3.5-2B, Qwen3.5-4B, Qwen3.5-9B]
+    - target: InternVL3.5-14B-HF
+      ensembles:
+        - [Gemma 4 E2B-it]
+        - [Gemma 4 E2B-it, Gemma 4 E4B-it]
+        - [Gemma 4 E2B-it, Gemma 4 E4B-it, Gemma 4 26B-A4B-it]
+  block_2:
+    - target: Qwen3.5-27B
+      ensembles:
+        - [InternVL3.5-2B-HF]
+        - [InternVL3.5-2B-HF, Gemma 4 E2B-it]
+        - [InternVL3.5-2B-HF, Gemma 4 E2B-it, CLIP ViT-L/14]
+        - [InternVL3.5-2B-HF, Gemma 4 E2B-it, CLIP ViT-L/14, SigLIP2-So400m-patch14-384]
+        - [InternVL3.5-2B-HF, Gemma 4 E2B-it, CLIP ViT-L/14, DINOv2-Large]
+    - target: Gemma 4 31B-it
+      ensembles:
+        - [Qwen3.5-2B]
+        - [Qwen3.5-2B, Qwen3.5-4B]
+        - [Qwen3.5-2B, Qwen3.5-4B, Qwen3.5-9B]
+    - target: InternVL3.5-14B-HF
+      ensembles:
+        - [Gemma 4 E2B-it]
+        - [Gemma 4 E2B-it, Gemma 4 E4B-it]
+        - [Gemma 4 E2B-it, Gemma 4 E4B-it, Gemma 4 26B-A4B-it]
+  gradient_fusion:
+    normalize_each_proxy_gradient: l1_per_sample
+    combine: equal_weight_mean
+    momentum_after_fusion: true
+
+ablation:
+  model_pairs:
+    - [Gemma 4 E2B-it, Gemma 4 E4B-it]
+    - [Qwen3.5-2B, Qwen3.5-4B]
+  pull_push_weights:
+    - [1.00, 0.00]
+    - [0.25, 0.75]
+    - [0.50, 0.50]
+    - [0.75, 0.25]
+    - [0.00, 1.00]
+
+analysis:
+  metrics:
+    - TASR
+    - DeltaR
+    - delta_pull
+    - delta_push
+    - source_embedding_dispersion
+    - target_embedding_dispersion
+    - covariance_trace
+    - effective_rank
+    - clean_margin
+    - adversarial_margin
+    - margin_change
+    - prototype_distance
+    - CKA
+    - RSA
+  joint_dimensionality_reduction:
+    pca: true
+    tsne: true
+    fit_source_and_target_classes_together: true
+    include_forward_and_reverse_clean_adv: true
+    tsne_random_state: 42
+  asymmetry: true
+  correlation:
+    method: spearman
+    export_heatmap: true

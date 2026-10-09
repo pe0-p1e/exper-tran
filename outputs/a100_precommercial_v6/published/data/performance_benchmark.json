@@ -1,0 +1,631 @@
+{
+  "hardware": "NVIDIA A100 80GB PCIe",
+  "torch": "2.6.0+cu124",
+  "max_peak_reserved_gib": 75,
+  "models": {
+    "CLIP ViT-L/14": {
+      "repo_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.2619050149987743,
+          "peak_allocated_gib": 1.510411262512207,
+          "peak_reserved_gib": 1.53125
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.24753217400211724,
+          "peak_allocated_gib": 1.5233354568481445,
+          "peak_reserved_gib": 1.5546875
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.35453788099766825,
+          "peak_allocated_gib": 1.536259651184082,
+          "peak_reserved_gib": 1.560546875
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.458082616001775,
+          "peak_allocated_gib": 1.5491838455200195,
+          "peak_reserved_gib": 1.583984375
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 0.7130928780024988,
+          "peak_allocated_gib": 1.5750322341918945,
+          "peak_reserved_gib": 1.61328125
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 0.7540167959996324,
+          "peak_allocated_gib": 1.578263282775879,
+          "peak_reserved_gib": 1.6328125
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "DINOv2-Large": {
+      "repo_id": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.04190335300154402,
+          "peak_allocated_gib": 1.8297538757324219,
+          "peak_reserved_gib": 1.86328125
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.06016617299974314,
+          "peak_allocated_gib": 3.0766525268554688,
+          "peak_reserved_gib": 3.13671875
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.08603284900163999,
+          "peak_allocated_gib": 4.323551177978516,
+          "peak_reserved_gib": 4.392578125
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.11223141099981149,
+          "peak_allocated_gib": 5.57049560546875,
+          "peak_reserved_gib": 5.646484375
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 0.16101431700008106,
+          "peak_allocated_gib": 8.064292907714844,
+          "peak_reserved_gib": 8.17578125
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 0.16415585600043414,
+          "peak_allocated_gib": 8.376026153564453,
+          "peak_reserved_gib": 8.509765625
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "Gemma 4 26B-A4B-it": {
+      "repo_id": "google/gemma-4-26B-A4B-it",
+      "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 2.1138471059966832,
+          "peak_allocated_gib": 52.81397533416748,
+          "peak_reserved_gib": 52.8515625
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 4.460625505998905,
+          "peak_allocated_gib": 52.86624050140381,
+          "peak_reserved_gib": 52.896484375
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 6.482510532998276,
+          "peak_allocated_gib": 52.91850566864014,
+          "peak_reserved_gib": 52.978515625
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 8.833246686001075,
+          "peak_allocated_gib": 52.970770835876465,
+          "peak_reserved_gib": 53.021484375
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 13.175312670002313,
+          "peak_allocated_gib": 53.07530117034912,
+          "peak_reserved_gib": 53.109375
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 13.649304733997269,
+          "peak_allocated_gib": 53.0883674621582,
+          "peak_reserved_gib": 53.12890625
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 27,
+      "deepest_block": 26,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "Gemma 4 E2B-it": {
+      "repo_id": "google/gemma-4-E2B-it",
+      "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 1.5053330599985202,
+          "peak_allocated_gib": 12.636913299560547,
+          "peak_reserved_gib": 12.669921875
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 3.2274029929976678,
+          "peak_allocated_gib": 12.674747467041016,
+          "peak_reserved_gib": 12.693359375
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 4.714370010999119,
+          "peak_allocated_gib": 12.712581634521484,
+          "peak_reserved_gib": 12.73828125
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 6.437566859000071,
+          "peak_allocated_gib": 12.750415802001953,
+          "peak_reserved_gib": 12.78125
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 9.38499277200026,
+          "peak_allocated_gib": 12.82608413696289,
+          "peak_reserved_gib": 12.849609375
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 10.116763911999442,
+          "peak_allocated_gib": 12.835542678833008,
+          "peak_reserved_gib": 12.869140625
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 16,
+      "deepest_block": 15,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "Gemma 4 E4B-it": {
+      "repo_id": "google/gemma-4-E4B-it",
+      "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 1.487820364000072,
+          "peak_allocated_gib": 17.92087459564209,
+          "peak_reserved_gib": 17.953125
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 3.2473726579992217,
+          "peak_allocated_gib": 17.95870876312256,
+          "peak_reserved_gib": 17.99609375
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 4.727806881997822,
+          "peak_allocated_gib": 17.996542930603027,
+          "peak_reserved_gib": 18.021484375
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 6.416781306001212,
+          "peak_allocated_gib": 18.034377098083496,
+          "peak_reserved_gib": 18.064453125
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 9.191022128998156,
+          "peak_allocated_gib": 18.110045433044434,
+          "peak_reserved_gib": 18.1328125
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 9.855346143998759,
+          "peak_allocated_gib": 18.11950397491455,
+          "peak_reserved_gib": 18.15234375
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 16,
+      "deepest_block": 15,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "InternVL3.5-2B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+      "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.1800293779997446,
+          "peak_allocated_gib": 6.369251728057861,
+          "peak_reserved_gib": 6.416015625
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.3400935819990991,
+          "peak_allocated_gib": 6.393879413604736,
+          "peak_reserved_gib": 6.4375
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.5066221169981873,
+          "peak_allocated_gib": 6.418507099151611,
+          "peak_reserved_gib": 6.462890625
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.6639758439996513,
+          "peak_allocated_gib": 6.443134784698486,
+          "peak_reserved_gib": 6.505859375
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 1.00123927399909,
+          "peak_allocated_gib": 6.492390155792236,
+          "peak_reserved_gib": 6.552734375
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 1.0659748679972836,
+          "peak_allocated_gib": 6.498547077178955,
+          "peak_reserved_gib": 6.5546875
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "InternVL3.5-4B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-4B-HF",
+      "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.2417667320005421,
+          "peak_allocated_gib": 9.832797527313232,
+          "peak_reserved_gib": 9.8515625
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.4944935909988999,
+          "peak_allocated_gib": 9.857425212860107,
+          "peak_reserved_gib": 9.89453125
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.7232104070026253,
+          "peak_allocated_gib": 9.882052898406982,
+          "peak_reserved_gib": 9.919921875
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.9205848880010308,
+          "peak_allocated_gib": 9.906680583953857,
+          "peak_reserved_gib": 9.943359375
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 1.3829741720001039,
+          "peak_allocated_gib": 9.955935955047607,
+          "peak_reserved_gib": 10.009765625
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 1.4461065449977468,
+          "peak_allocated_gib": 9.962092876434326,
+          "peak_reserved_gib": 10.01171875
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "InternVL3.5-8B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
+      "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.177015263998328,
+          "peak_allocated_gib": 17.880348682403564,
+          "peak_reserved_gib": 17.919921875
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.3382731199999398,
+          "peak_allocated_gib": 17.90497636795044,
+          "peak_reserved_gib": 17.94140625
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.5011226379974687,
+          "peak_allocated_gib": 17.929604053497314,
+          "peak_reserved_gib": 17.966796875
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.6671938619983848,
+          "peak_allocated_gib": 17.95423173904419,
+          "peak_reserved_gib": 18.009765625
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 0.9981685940001626,
+          "peak_allocated_gib": 18.00348711013794,
+          "peak_reserved_gib": 18.05859375
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 1.0576802950017736,
+          "peak_allocated_gib": 18.009644031524658,
+          "peak_reserved_gib": 18.05859375
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "Qwen3.5-2B": {
+      "repo_id": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.08978140600083862,
+          "peak_allocated_gib": 5.319413661956787,
+          "peak_reserved_gib": 5.3671875
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.135095650999574,
+          "peak_allocated_gib": 6.500443935394287,
+          "peak_reserved_gib": 6.56640625
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.17519294799785712,
+          "peak_allocated_gib": 7.681474208831787,
+          "peak_reserved_gib": 7.783203125
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.22963134300152888,
+          "peak_allocated_gib": 8.862504482269287,
+          "peak_reserved_gib": 9.001953125
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 0.33120692599914037,
+          "peak_allocated_gib": 11.224565029144287,
+          "peak_reserved_gib": 11.419921875
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 0.3419092570002249,
+          "peak_allocated_gib": 11.519822597503662,
+          "peak_reserved_gib": 11.73828125
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "Qwen3.5-4B": {
+      "repo_id": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.08189208299882011,
+          "peak_allocated_gib": 9.651976108551025,
+          "peak_reserved_gib": 9.689453125
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.12650221999865607,
+          "peak_allocated_gib": 10.833006381988525,
+          "peak_reserved_gib": 10.908203125
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.17100726200078498,
+          "peak_allocated_gib": 12.014036655426025,
+          "peak_reserved_gib": 12.125
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.22162423500049044,
+          "peak_allocated_gib": 13.195066928863525,
+          "peak_reserved_gib": 13.34375
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 0.32380480699794134,
+          "peak_allocated_gib": 15.557127475738525,
+          "peak_reserved_gib": 15.76171875
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 0.33387825499812607,
+          "peak_allocated_gib": 15.8523850440979,
+          "peak_reserved_gib": 16.08203125
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "Qwen3.5-9B": {
+      "repo_id": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.11007878999953391,
+          "peak_allocated_gib": 18.994304180145264,
+          "peak_reserved_gib": 19.03515625
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 0.16106940700046835,
+          "peak_allocated_gib": 20.445510387420654,
+          "peak_reserved_gib": 20.533203125
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 0.2235391089998302,
+          "peak_allocated_gib": 21.896716594696045,
+          "peak_reserved_gib": 22.013671875
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 0.29426359300123295,
+          "peak_allocated_gib": 23.347922801971436,
+          "peak_reserved_gib": 23.51171875
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 0.4246139900023991,
+          "peak_allocated_gib": 26.250335216522217,
+          "peak_reserved_gib": 26.470703125
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 0.44768777600256726,
+          "peak_allocated_gib": 26.613136768341064,
+          "peak_reserved_gib": 26.8359375
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 27,
+      "deepest_block": 26,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    },
+    "SigLIP2-So400m-patch14-384": {
+      "repo_id": "google/siglip2-so400m-patch14-384",
+      "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+      "trials": [
+        {
+          "batch_size": 8,
+          "status": "ok",
+          "seconds": 0.5451746209982957,
+          "peak_allocated_gib": 2.578253746032715,
+          "peak_reserved_gib": 2.587890625
+        },
+        {
+          "batch_size": 16,
+          "status": "ok",
+          "seconds": 1.0770856340022874,
+          "peak_allocated_gib": 2.5997743606567383,
+          "peak_reserved_gib": 2.611328125
+        },
+        {
+          "batch_size": 24,
+          "status": "ok",
+          "seconds": 1.5854855450015748,
+          "peak_allocated_gib": 2.6212949752807617,
+          "peak_reserved_gib": 2.63671875
+        },
+        {
+          "batch_size": 32,
+          "status": "ok",
+          "seconds": 2.0910362760005228,
+          "peak_allocated_gib": 2.642815589904785,
+          "peak_reserved_gib": 2.66015625
+        },
+        {
+          "batch_size": 48,
+          "status": "ok",
+          "seconds": 3.4520548549990053,
+          "peak_allocated_gib": 2.685856819152832,
+          "peak_reserved_gib": 2.708984375
+        },
+        {
+          "batch_size": 50,
+          "status": "ok",
+          "seconds": 3.5336059910005133,
+          "peak_allocated_gib": 2.691236972808838,
+          "peak_reserved_gib": 2.708984375
+        }
+      ],
+      "selected_batch_size": 50,
+      "vision_depth": 27,
+      "deepest_block": 26,
+      "selection_note": "largest measured batch with peak reserved <= limit; if all exceed limit, smallest successful batch"
+    }
+  }
+}

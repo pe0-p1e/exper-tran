@@ -1,0 +1,32 @@
+[
+  {
+    "example": "cross_family_Qwen2B_to_InternVL4B",
+    "proxy": "Qwen3.5-2B",
+    "target": "InternVL3.5-4B-HF",
+    "transition_id": "T01",
+    "source_class": "1",
+    "target_class": "2",
+    "sample_index": 0,
+    "epsilon": "16/255",
+    "steps": 50,
+    "pull_weight": 0.75,
+    "push_weight": 0.25,
+    "random_start": true,
+    "seed": 42
+  },
+  {
+    "example": "intra_family_Qwen2B_to_Qwen4B",
+    "proxy": "Qwen3.5-2B",
+    "target": "Qwen3.5-4B",
+    "transition_id": "T01",
+    "source_class": "1",
+    "target_class": "2",
+    "sample_index": 0,
+    "epsilon": "16/255",
+    "steps": 50,
+    "pull_weight": 0.75,
+    "push_weight": 0.25,
+    "random_start": true,
+    "seed": 42
+  }
+]
