@@ -147,7 +147,7 @@ def main() -> None:
             cell_path.parent.mkdir(parents=True, exist_ok=True)
             if cell_path.is_file():
                 old = json.loads(cell_path.read_text())
-                if old.get("status") in {"attack_complete", "complete"} and not args.smoke:
+                if old.get("status") in {"attack_complete", "complete"} and int(old.get("image_count", 0)) == expected and not args.smoke:
                     print(f"[multiple-proxy] resume {t_index}/{len(selected_transitions)} {transition.transition_id}", flush=True)
                     continue
             batch_size = min(args.batch_size, len(records))
@@ -158,9 +158,12 @@ def main() -> None:
                 seed = int(matrix["attack"]["seed"]) + batch_index
                 batch_dir = out / "multiple_proxy/attacks" / safe(args.condition) / transition.transition_id / f"batch_{batch_index:02d}"
                 state_file = batch_dir / "state.json"
-                if state_file.is_file() and json.loads(state_file.read_text()).get("status") in {"attack_complete", "complete"} and not args.smoke:
-                    batch_details.append(json.loads(state_file.read_text()))
-                    continue
+                if state_file.is_file() and not args.smoke:
+                    old_batch = json.loads(state_file.read_text())
+                    expected_ids = [record.image_id for record in batch_records]
+                    if old_batch.get("status") in {"attack_complete", "complete"} and old_batch.get("image_ids") == expected_ids:
+                        batch_details.append(old_batch)
+                        continue
                 batch_dir.mkdir(parents=True, exist_ok=True)
                 clean = _cuda_images(canonical, batch_records, 224)
                 epsilon = float(Fraction(str(matrix["attack"]["epsilon"])))

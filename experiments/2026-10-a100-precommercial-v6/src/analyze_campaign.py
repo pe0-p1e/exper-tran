@@ -56,7 +56,7 @@ def load_refs():
 
 
 def collect_cells():
-    cells = []
+    grouped = {}
     for family in ("single_proxy", "layer_sweep", "ablation", "reverse_direction", "smoke_single", "smoke_layer", "smoke_ablation"):
         for meta_path in (OUT / family / "work").glob("*/cell_meta.json"):
             meta = json.loads(meta_path.read_text())
@@ -76,7 +76,19 @@ def collect_cells():
                 attack = state.get("attack", {})
                 proxy_mask = attack.get("proxy_target_hit_mask", [])
                 target_mask = state.get("target", {}).get("target_hit_mask", [])
-                cells.append({"meta": meta, "family": family, "workspace": workspace, "state": state, "state_path": state_path, "clean": clean, "adv": adv, "proxy_mask": proxy_mask, "target_mask": target_mask})
+                key=(family,workspace,state["transition_id"])
+                cell=grouped.setdefault(key,{"meta":meta,"family":family,"workspace":workspace,"states":[],"state_paths":[],"clean":[],"adv":[],"proxy_mask":[],"target_mask":[]})
+                cell["states"].append(state); cell["state_paths"].append(state_path)
+                cell["clean"].extend(clean); cell["adv"].extend(adv)
+                cell["proxy_mask"].extend(proxy_mask); cell["target_mask"].extend(target_mask)
+    cells=[]
+    for cell in grouped.values():
+        cell["states"].sort(key=lambda s:int(s.get("batch_index",0)))
+        cell["state_paths"].sort(key=lambda p:int(json.loads(p.read_text()).get("batch_index",0)))
+        cell["state"]=cell["states"][0]
+        cell["state_path"]=cell["state_paths"][0]
+        cell["attacks"]=[s.get("attack",{}) for s in cell["states"]]
+        cells.append(cell)
     return cells
 
 
@@ -99,6 +111,9 @@ def collect_multi():
                 pm.append(bool(batch.get("all_proxy_success_mask", [])[i]))
                 ev = batch.get("target_evaluation", {})
                 tm.append(bool(ev.get("target_hit_mask", [])[i]) if i < len(ev.get("target_hit_mask", [])) else None)
+        if len(clean)!=30:
+            print(f"[analysis] exclude non-production ensemble cohort {state_path}: N={len(clean)}, expected=30",flush=True)
+            continue
         if clean and all(p.is_file() for p in (*clean, *adv)):
             proxy_names = state.get("proxy_models", state.get("proxies", []))
             proxy_revisions = state.get("proxy_revisions", {})
@@ -198,8 +213,12 @@ def main():
     label_names={int(x["label"]):x["name"] for x in yaml.safe_load((ROOT/"config/runner_template.yaml").read_text())["classes"]}
     transitions={str(x["id"]):(int(x["source"]),int(x["target"])) for x in yaml.safe_load((ROOT/"config/runner_template.yaml").read_text())["transitions"]}
     refs=load_refs(); cells=collect_cells()+collect_multi()
-    # Smoke analysis proves that target-side embeddings, metrics, and joint reduction run.
-    if args.stage=="smoke-analysis": cells=[c for c in cells if c["family"]=="smoke_single"]
+    # Smoke artifacts are useful for checking the pipeline, but must never enter
+    # the scientific tables, correlations, or final report.
+    if args.stage=="smoke-analysis":
+        cells=[c for c in cells if c["family"]=="smoke_single"]
+    else:
+        cells=[c for c in cells if not c["family"].startswith("smoke")]
     if args.stage=="10_embedding_extraction":
         groups={}
         for cell in cells:
@@ -265,8 +284,10 @@ def main():
         pairwise=[]
         for batch in state.get("batches",[]):
             for step in batch.get("gradient_diagnostics_by_step",[]): pairwise.extend(step.get("pairwise_gradient_cosine",{}).values())
-        attack=state.get("attack",{})
-        row={"family":cell["family"],"condition":meta["condition"],"transition_id":tid,"source_label":source,"target_label":target,"source_class":label_names[source],"target_class":label_names[target],"proxy_models":"+".join(meta["proxy_names"]),"target_model":tname,"proxy_layer":meta["layer"],"pull_weight":meta["pull_weight"],"push_weight":meta["push_weight"],"N":len(clean),"clean_valid_denominator":len(clean),"proxy_success_count":denominator,"TASR_numerator":numerator,"TASR_denominator":denominator,"target_hits_among_proxy_success":numerator,"TASR":numerator/denominator if numerator is not None and denominator else None,"source_variance":class_stats[(tname,source)]["dispersion"],"target_variance":class_stats[(tname,target)]["dispersion"],"source_covariance_trace":class_stats[(tname,source)]["covariance_trace"],"target_covariance_trace":class_stats[(tname,target)]["covariance_trace"],"source_effective_rank":class_stats[(tname,source)]["effective_rank"],"target_effective_rank":class_stats[(tname,target)]["effective_rank"],"prototype_distance":float(1-zs@zt),"mean_delta_pull":float(dp.mean()),"mean_delta_push":float(dq.mean()),"mean_delta_R":float(dr.mean()),"median_delta_R":float(np.median(dr)),"clean_margin":float(margin0.mean()),"adversarial_margin":float(margin1.mean()),"margin_change":float((margin1-margin0).mean()),"gap_closure":float((margin1-margin0).mean()),"CKA":float(np.mean(cka_values)) if cka_values else None,"RSA":float(np.nanmean(rsa_values)) if rsa_values else None,"mean_pairwise_proxy_CKA":float(np.mean(proxy_pair_cka)) if proxy_pair_cka else None,"mean_pairwise_proxy_RSA":float(np.nanmean(proxy_pair_rsa)) if proxy_pair_rsa else None,"mean_gradient_cosine":float(np.mean(pairwise)) if pairwise else None,"runtime_seconds":attack.get("elapsed_seconds"),"peak_reserved_vram_gib":attack.get("peak_reserved_vram_gib")}
+        attacks=cell.get("attacks",[state.get("attack",{})])
+        runtime=sum(float(a.get("elapsed_seconds") or 0) for a in attacks)
+        peak=max((float(a.get("peak_reserved_vram_gb",a.get("peak_reserved_vram_gib",0)) or 0) for a in attacks),default=0)
+        row={"family":cell["family"],"condition":meta["condition"],"transition_id":tid,"source_label":source,"target_label":target,"source_class":label_names[source],"target_class":label_names[target],"proxy_models":"+".join(meta["proxy_names"]),"target_model":tname,"proxy_layer":meta["layer"],"pull_weight":meta["pull_weight"],"push_weight":meta["push_weight"],"N":len(clean),"clean_valid_denominator":len(clean),"proxy_success_count":denominator,"TASR_numerator":numerator,"TASR_denominator":denominator,"target_hits_among_proxy_success":numerator,"TASR":numerator/denominator if numerator is not None and denominator else None,"source_variance":class_stats[(tname,source)]["dispersion"],"target_variance":class_stats[(tname,target)]["dispersion"],"source_covariance_trace":class_stats[(tname,source)]["covariance_trace"],"target_covariance_trace":class_stats[(tname,target)]["covariance_trace"],"source_effective_rank":class_stats[(tname,source)]["effective_rank"],"target_effective_rank":class_stats[(tname,target)]["effective_rank"],"prototype_distance":float(1-zs@zt),"mean_delta_pull":float(dp.mean()),"mean_delta_push":float(dq.mean()),"mean_delta_R":float(dr.mean()),"median_delta_R":float(np.median(dr)),"clean_margin":float(margin0.mean()),"adversarial_margin":float(margin1.mean()),"margin_change":float((margin1-margin0).mean()),"gap_closure":float((margin1-margin0).mean()),"CKA":float(np.mean(cka_values)) if cka_values else None,"RSA":float(np.nanmean(rsa_values)) if rsa_values else None,"mean_pairwise_proxy_CKA":float(np.mean(proxy_pair_cka)) if proxy_pair_cka else None,"mean_pairwise_proxy_RSA":float(np.nanmean(proxy_pair_rsa)) if proxy_pair_rsa else None,"mean_gradient_cosine":float(np.mean(pairwise)) if pairwise else None,"runtime_seconds":runtime,"peak_reserved_vram_gib":peak}
         metrics.append(row); cell_context.append((cell,meta,source,target))
         for i in range(len(clean)):
             perimage.append({"family":cell["family"],"condition":meta["condition"],"transition_id":tid,"image_index":i,"source_label":source,"target_label":target,"proxy_hit":pm[i] if i<len(pm) else None,"target_hit":tm[i] if i<len(tm) else None,"delta_pull":float(dp[i]),"delta_push":float(dq[i]),"DeltaR":float(dr[i]),"clean_margin":float(margin0[i]),"adversarial_margin":float(margin1[i]),"margin_change":float(margin1[i]-margin0[i])})
@@ -339,17 +360,57 @@ def main():
         fig,ax=plt.subplots(figsize=(10,9)); image=ax.imshow(np.asarray(mat),vmin=-1,vmax=1,cmap="coolwarm"); ax.set_xticks(range(len(keys)),keys,rotation=65,ha="right"); ax.set_yticks(range(len(keys)),keys); fig.colorbar(image,ax=ax,label="Spearman ρ"); fig.tight_layout(); (analysis/"correlations").mkdir(parents=True,exist_ok=True); fig.savefig(analysis/"correlations/spearman_heatmap.png",dpi=180); plt.close(fig); return
     if args.stage=="15_validation":
         failures=[]
+        checked_images=0
+        max_png_linf=0
+        from PIL import Image
         for cell,meta,s,t in cell_context:
             state=cell["state"]
-            for key in ("linf_float","linf_png"):
-                value=state.get("attack",{}).get(key)
-                if value is not None and float(value)>16/255+1/255+1e-7: failures.append({"state":str(cell["state_path"]),"error":f"{key} exceeds epsilon"})
+            # V5 single-proxy state stores diagnostics under attack; multi-proxy
+            # stores per-batch diagnostics. Validate both schemas when present.
+            diagnostics=[s.get("attack",{}) for s in cell.get("states",[state])]
+            diagnostics.extend(state.get("batches",[]))
+            for diagnostic in diagnostics:
+                for key in ("linf_float","linf_png","max_linf"):
+                    value=diagnostic.get(key)
+                    if value is not None and float(value)>16/255+1e-6:
+                        failures.append({"state":str(cell["state_path"]),"error":f"{key} exceeds epsilon 16/255: {value}"})
             if len(cell["proxy_mask"])!=len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"proxy mask length mismatch"})
-            if cell["target_mask"] and len(cell["target_mask"])!=len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"target mask length mismatch"})
+            if len(cell["target_mask"])!=len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"target mask missing or length mismatch"})
+            if any(value is None for value in cell["target_mask"]): failures.append({"state":str(cell["state_path"]),"error":"target mask contains unevaluated samples"})
+            if len(cell["clean"])!=30: failures.append({"state":str(cell["state_path"]),"error":f"expected 30 clean-valid images, found {len(cell['clean'])}"})
+            for clean_path,adv_path in zip(cell["clean"],cell["adv"],strict=True):
+                try:
+                    with Image.open(clean_path) as image: clean_image=np.asarray(image.convert("RGB"),dtype=np.int16)
+                    with Image.open(adv_path) as image: adv_image=np.asarray(image.convert("RGB"),dtype=np.int16)
+                    delta=int(np.abs(adv_image-clean_image).max())
+                    checked_images+=1; max_png_linf=max(max_png_linf,delta)
+                    if delta>16:
+                        failures.append({"state":str(cell["state_path"]),"image":adv_path.name,"error":f"PNG L_inf={delta}/255 exceeds epsilon 16/255"})
+                except Exception as exc:
+                    failures.append({"state":str(cell["state_path"]),"image":adv_path.name,"error":f"cannot validate PNG pair: {type(exc).__name__}: {exc}"})
+            den=sum(bool(x) for x in cell["proxy_mask"])
+            num=sum(bool(p) and bool(t) for p,t in zip(cell["proxy_mask"],cell["target_mask"],strict=False))
+            if num>den or den>len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"TASR numerator/denominator invariant violated"})
+        for row in metrics:
+            for key,value in row.items():
+                if isinstance(value,(float,np.floating)) and not math.isfinite(float(value)):
+                    failures.append({"cell":row.get("condition"),"transition":row.get("transition_id"),"error":f"non-finite metric {key}"})
+            if row.get("TASR") is not None:
+                if row["TASR_denominator"]<=0 or row["TASR_numerator"]>row["TASR_denominator"] or abs(row["TASR"]-row["TASR_numerator"]/row["TASR_denominator"])>1e-12:
+                    failures.append({"cell":row.get("condition"),"transition":row.get("transition_id"),"error":"TASR ratio inconsistent with explicit numerator/denominator"})
         for status_path in (OUT/"audits/cell_states").glob("*.json"):
             data=json.loads(status_path.read_text())
             if data.get("status")!="complete": failures.append({"cell":status_path.stem,"error":data.get("error","incomplete")})
-        (analysis/"validation").mkdir(parents=True,exist_ok=True); (analysis/"validation/failures.json").write_text(json.dumps(failures,indent=2)+"\n")
+        expected_images=30
+        for state_path in (OUT/"multiple_proxy/attacks").glob("*/*.json"):
+            data=json.loads(state_path.read_text())
+            if data.get("status") not in {"attack_complete","complete"}:
+                failures.append({"cell":str(state_path.relative_to(OUT)),"error":f"multiple-proxy cohort status={data.get('status')}; found={data.get('found','unknown')}, required={data.get('required',expected_images)}"})
+            elif int(data.get("image_count",0))!=expected_images:
+                failures.append({"cell":str(state_path.relative_to(OUT)),"error":f"multiple-proxy cohort has {data.get('image_count',0)}/{expected_images} images"})
+        (analysis/"validation").mkdir(parents=True,exist_ok=True)
+        (analysis/"validation/failures.json").write_text(json.dumps(failures,indent=2)+"\n")
+        (analysis/"validation/summary.json").write_text(json.dumps({"measured_rows":len(metrics),"checked_attack_png_pairs":checked_images,"max_png_linf_integer":max_png_linf,"epsilon_integer_limit":16,"failure_count":len(failures),"failures_by_type":{kind:sum(1 for x in failures if kind in x.get("error","")) for kind in sorted({x.get("error","").split(":")[0] for x in failures})}},indent=2)+"\n")
         return
     if args.stage=="16_final_report":
         write_csv(OUT/"reports/completion_matrix.csv",metrics)
@@ -374,6 +435,10 @@ def main():
         for r in metrics:
             tasr="—" if r['TASR'] is None else f"{r['TASR']:.3f}"
             report.append(f"| {r['family']} | {r['proxy_models']} | {r['target_model']} | {r['source_class']} → {r['target_class']} | {r['proxy_layer']} | {r['TASR_numerator']}/{r['TASR_denominator']} | {tasr} | {r['mean_delta_R']:.4f} | {r['CKA'] if r['CKA'] is not None else '—'} | {r['RSA'] if r['RSA'] is not None else '—'} |")
+        validation_path=analysis/"validation/summary.json"
+        if validation_path.is_file():
+            validation=json.loads(validation_path.read_text())
+            report.extend(["","## Result reasonableness checks","",f"Validated {validation['checked_attack_png_pairs']} frozen clean/adversarial PNG pairs; largest integer-pixel L∞ difference was {validation['max_png_linf_integer']}/255 (limit 16/255). Checked {validation['measured_rows']} measured rows and explicit proxy-conditioned TASR counts. Validation findings: {validation['failure_count']}. See `analysis/validation/failures.json` and `analysis/validation/summary.json` for details."])
         report.extend(["","## Output map","","`single_proxy/`, `layer_sweep/`, `multiple_proxy/`, and `ablation/` contain per-cell states and frozen PNGs. `analysis/embeddings/` stores reusable high-dimensional features. `analysis/pca/` and `analysis/tsne/` fit A/B references and both directions jointly. `analysis/variance/`, `analysis/representation_shift/`, `analysis/asymmetry/`, and `analysis/correlations/` contain the quantitative exports.","","t-SNE is a qualitative view only; all reported geometric measures use the original embedding dimensions. Failed or unavailable cells are listed in `audits/cell_status.jsonl` and `analysis/embedding_extraction_failures.json`."])
         (OUT/"reports").mkdir(parents=True,exist_ok=True); (OUT/"reports/final_report.md").write_text("\n".join(report)+"\n")
 

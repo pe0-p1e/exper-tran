@@ -191,6 +191,25 @@ def stage(name: str) -> None:
             cid = f"{proxy}__to__{target}__reverse"
             run_cell("reverse_direction", cid, lambda p=proxy,t=target,l=layer: run_single(family="reverse_direction", proxy=p, target=t, layer=l, pull=.75, push=.25, transitions=rev))
     elif name in {"10_embedding_extraction", "11_representation_analysis", "12_joint_pca_tsne", "13_asymmetry", "14_correlation", "15_validation", "16_final_report"}:
+        if name == "10_embedding_extraction":
+            # A prior smoke test shared one ensemble condition slug with the
+            # production singleton. Repair any completed-looking transition
+            # whose frozen cohort is not the required 30 images before feature
+            # extraction, so smoke artifacts can never enter final analyses.
+            expected = int(m["data"]["attack_images_per_transition"])
+            for proxies, target, _block in ensemble_rows():
+                cond = cohort_slug(proxies, target)
+                bad = []
+                for tid in fwd:
+                    cell = OUT / "multiple_proxy/attacks" / cond / f"{tid}.json"
+                    if not cell.is_file():
+                        continue
+                    state = json.loads(cell.read_text())
+                    if state.get("status") in {"attack_complete", "complete"} and int(state.get("image_count", 0)) != expected:
+                        bad.append(tid)
+                if bad:
+                    run([PY, str(SRC / "run_multi_proxy.py"), "--proxies", *proxies, "--target", target, "--condition", cond, "--transitions", *bad, "--output-dir", str(OUT)], name=f"repair-multi-cohort-{cond}")
+                    run([PY, str(SRC / "evaluate_multi_proxy.py"), "--condition", cond, "--target", target, "--transitions", *bad], name=f"evaluate-repaired-multi-{cond}")
         run([PY, str(SRC / "analyze_campaign.py"), "--stage", name], name=name)
     elif name == "smoke":
         def smoke_one(family, proxy, target, layer, pull=.75, push=.25):
