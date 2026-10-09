@@ -351,6 +351,9 @@ def main():
         # Pair forward/reverse cells with identical proxy, target, layer, and loss settings.
         for cell,meta,s,t in cell_context:
             if cell["family"] not in {"single_proxy","reverse_direction"}: continue
+            # Emit one canonical row per unordered class pair, oriented in the
+            # experiment matrix's forward direction (lower label -> higher).
+            if s>t: continue
             partner=next(((c,m,ss,tt) for c,m,ss,tt in cell_context if c["family"] in {"single_proxy","reverse_direction"} and ss==t and tt==s and m["proxy_names"]==meta["proxy_names"] and m["target_name"]==meta["target_name"] and m["layer"]==meta["layer"] and m["pull_weight"]==meta["pull_weight"] and m["push_weight"]==meta["push_weight"]),None)
             if not partner: continue
             r1=indexed.get((cell["family"],meta["condition"],cell["state"]["transition_id"])); c2,m2,_,_=partner; r2=indexed.get((c2["family"],m2["condition"],c2["state"]["transition_id"]))
