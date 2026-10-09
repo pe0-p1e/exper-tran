@@ -398,6 +398,17 @@ def main():
             if len(cell["target_mask"])!=len(cell["clean"]): failures.append({"state":str(cell["state_path"]),"error":"target mask missing or length mismatch"})
             if any(value is None for value in cell["target_mask"]): failures.append({"state":str(cell["state_path"]),"error":"target mask contains unevaluated samples"})
             if len(cell["clean"])!=30: failures.append({"state":str(cell["state_path"]),"error":f"expected 30 clean-valid images, found {len(cell['clean'])}"})
+            for batch in state.get("batches",[]):
+                evaluation=batch.get("target_evaluation",{})
+                if evaluation and evaluation.get("status")!="complete":
+                    failures.append({"state":str(cell["state_path"]),"error":f"ensemble target evaluation status={evaluation.get('status')}"})
+            for state_part in cell.get("states",[state]):
+                target=state_part.get("target",{})
+                for key in ("clean_outputs","adversarial_outputs"):
+                    outputs=target.get(key,[])
+                    bad=sum(1 for output in outputs if output.get("parser_status")!="ok")
+                    if bad:
+                        failures.append({"state":str(cell["state_path"]),"error":f"{key} contains {bad} parser failures"})
             for clean_path,adv_path in zip(cell["clean"],cell["adv"],strict=True):
                 try:
                     with Image.open(clean_path) as image: clean_image=np.asarray(image.convert("RGB"),dtype=np.int16)
