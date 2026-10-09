@@ -425,7 +425,6 @@ def main():
         (analysis/"validation/summary.json").write_text(json.dumps({"measured_rows":len(metrics),"checked_attack_png_pairs":checked_images,"max_png_linf_integer":max_png_linf,"epsilon_integer_limit":16,"failure_count":len(failures),"warning_count":len(warnings),"failures_by_type":{kind:sum(1 for x in failures if kind in x.get("error","")) for kind in sorted({x.get("error","").split(":")[0] for x in failures})}},indent=2)+"\n")
         return
     if args.stage=="16_final_report":
-        write_csv(OUT/"reports/completion_matrix.csv",metrics)
         family_outputs={"single_proxy":"single_proxy","layer_sweep":"layer_sweep","multiple_proxy":"multiple_proxy","ablation":"ablation","reverse_direction":"single_proxy"}
         for family,directory in family_outputs.items():
             write_csv(OUT/directory/"summaries"/f"{family}_results.csv",[r for r in metrics if r["family"]==family])
@@ -438,12 +437,25 @@ def main():
                     item=json.loads(line); latest[(item["family"],item["cell_id"])]=item
         status_rows=list(latest.values())
         write_csv(OUT/"reports/cell_execution_status.csv",status_rows)
+        completion_rows=[{**r,"execution_status":"complete" if r.get("N")==30 else "invalid_cohort","expected_N":30} for r in metrics]
+        for state_path in (OUT/"multiple_proxy/attacks").glob("*/*.json"):
+            data=json.loads(state_path.read_text())
+            if data.get("status") in {"attack_complete","complete"} and int(data.get("image_count",0))==30:
+                continue
+            completion_rows.append({"family":"multiple_proxy","condition":data.get("condition",state_path.parent.name),"transition_id":state_path.stem,"N":data.get("image_count",data.get("found")),"expected_N":data.get("required",30),"execution_status":data.get("status","invalid_cohort"),"error":data.get("error") or f"cohort shortfall: found {data.get('found',data.get('image_count',0))}, required {data.get('required',30)}"})
+        write_csv(OUT/"reports/completion_matrix.csv",completion_rows)
+        coverage={}
+        for row in completion_rows:
+            key=(row.get("family","unknown"),row.get("execution_status","unknown"))
+            coverage[key]=coverage.get(key,0)+1
         total_gpu_seconds=sum(float(r.get("runtime_seconds") or 0) for r in metrics)
         report=["# A100 Pre-Commercial V6 Experiment Report","",f"Generated UTC: {__import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat()}",f"Summed measured attack GPU runtime (cell-level): {total_gpu_seconds/3600:.2f} hours ({total_gpu_seconds:.0f} seconds). This sum excludes model audit, clean screening, calibration, and representation extraction.","","## Protocol","","Open-source models only. Pull/Push = 0.75/0.25 for the main method, CLS=0, epsilon=16/255, 50 steps, step size=1/255, momentum=1, random start, seed=42. TASR is target targeted success conditioned on proxy targeted success; numerator and denominator are exported explicitly. Multiple-proxy primary conditioning requires all ensemble proxies to hit.","","## Model revisions","","| Model | Repository | Revision | Vision depth |","|---|---|---|---:|"]
         audit=OUT/"audits/model_audit.json"
         if audit.is_file():
             for r in json.loads(audit.read_text()): report.append(f"| {r['name']} | {r['repo_id']} | `{r['revision']}` | {r.get('vision_depth','—')} |")
-        report.extend(["","## Completed measurements","",f"Measured transition cells: {len(metrics)}; per-image rows: {len(perimage)}; class dispersion rows: {len(class_rows)}.","","| Family | Proxy | Target | Direction | Layer | TASR numerator / denominator | TASR | ΔR | CKA | RSA |","|---|---|---|---|---:|---:|---:|---:|---:|---:|"])
+        report.extend(["","## Completed measurements","",f"Measured transition cells: {len(metrics)}; per-image rows: {len(perimage)}; class dispersion rows: {len(class_rows)}.","","Completion-matrix coverage, including screened ensemble shortfalls:"])
+        for (family,status),count in sorted(coverage.items()): report.append(f"- {family}: {status} = {count}")
+        report.extend(["","| Family | Proxy | Target | Direction | Layer | TASR numerator / denominator | TASR | ΔR | CKA | RSA |","|---|---|---|---|---:|---:|---:|---:|---:|---:|"])
         for r in metrics:
             tasr="—" if r['TASR'] is None else f"{r['TASR']:.3f}"
             report.append(f"| {r['family']} | {r['proxy_models']} | {r['target_model']} | {r['source_class']} → {r['target_class']} | {r['proxy_layer']} | {r['TASR_numerator']}/{r['TASR_denominator']} | {tasr} | {r['mean_delta_R']:.4f} | {r['CKA'] if r['CKA'] is not None else '—'} | {r['RSA'] if r['RSA'] is not None else '—'} |")
