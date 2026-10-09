@@ -164,18 +164,29 @@ def extract_group(model_name: str, model_id: str, revision: str, layer: int, pat
     if not missing: return values
     proxy = load_proxy(model_id, Path(os.environ.get("HF_HOME", ".hf-cache")), torch.device("cuda"), AttackConfig(generative_precision="bf16"))
     try:
-        for start in range(0, len(missing), 8):
-            group = missing[start:start+8]
+        start=0; batch_size=8
+        while start<len(missing):
+            group = missing[start:start+batch_size]
             rows=[]
             for path in group:
                 with Image.open(path) as im:
                     rows.append(ensure_canvas(pil_to_tensor(im.convert("RGB")).float().div(255).unsqueeze(0),224).squeeze(0))
             images=torch.stack(rows).cuda()
-            with torch.inference_mode():
-                output=proxy.image_embeddings(images,representation_type="vision_encoder",layer=layer,pooling="mean")
+            try:
+                with torch.inference_mode():
+                    output=proxy.image_embeddings(images,representation_type="vision_encoder",layer=layer,pooling="mean")
+            except torch.cuda.OutOfMemoryError:
+                if batch_size<=1: raise
+                batch_size=max(1,batch_size//2)
+                print(f"[extract] CUDA OOM for {model_name}; retrying with batch_size={batch_size}",flush=True)
+                del images,rows
+                gc.collect(); torch.cuda.empty_cache()
+                continue
             features=F.normalize(output.embeddings.float(),dim=-1).cpu().numpy()
             for path,feature in zip(group,features,strict=True): values[image_key(path)]=feature
-            print(f"[extract] {model_name} layer={layer} {min(start+len(group),len(missing))}/{len(missing)}",flush=True)
+            start+=len(group)
+            print(f"[extract] {model_name} layer={layer} {min(start,len(missing))}/{len(missing)} batch={batch_size}",flush=True)
+            del images,output,features,rows
     finally:
         del proxy; gc.collect(); torch.cuda.empty_cache()
     cache.parent.mkdir(parents=True,exist_ok=True)
