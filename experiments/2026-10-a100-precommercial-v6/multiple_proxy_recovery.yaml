@@ -1,0 +1,99 @@
+version: a100-precommercial-v6-multi-representation-recovery
+base_branch: experiment/a100-precommercial-v6
+legacy_results_read_only: outputs/a100_precommercial_v6/published/
+output_root: outputs/a100_precommercial_v6_multi_repr_recovery
+commercial_models: false
+
+scope:
+  experiment_family: multiple_proxy
+  matrix_source: experiments/2026-10-a100-precommercial-v6/experiment_matrix.yaml
+  preserve_existing_block_1_and_block_2: true
+  deduplicate_ensemble_rows_across_blocks: true
+  rerun_all_unique_ensembles_on_same_cohort: true
+  include_previous_17_insufficient_clean_valid_cells: true
+  do_not_rerun_single_proxy_layer_sweep_ablation: true
+
+data:
+  dataset: ImageNet-1K diverse-10
+  reference_images_per_class: 48
+  attack_images_per_transition: 30
+  directions: forward_pairs_from_existing_matrix
+  seed: 42
+  manifest_selection: deterministic_ground_truth_only
+  reuse_existing_canonical_images_and_reference_bank: true
+  prohibit_overlap_attack_reference: true
+  prohibit_model_output_dependent_cohort_selection: true
+  prohibit_proxy_clean_prediction_gate: true
+  prohibit_target_clean_prediction_gate: true
+  require_same_image_ids_per_direction_all_ensembles: true
+
+attack:
+  algorithm: v6_original_equal_gradient_fusion
+  epsilon: 16/255
+  norm: linf
+  steps: 50
+  step_size: 1/255
+  momentum: 1.0
+  random_start: true
+  seed: 42
+  image_size: 224
+  proxy_features: vision_encoder_intermediate_hidden_states
+  pooling: spatial_token_mean
+  layer: deepest_visual_block_each_proxy
+  pull_weight: 0.75
+  push_weight: 0.25
+  classification_loss_weight: 0.0
+  per_proxy_gradient_normalization: per_image_l1
+  proxy_gradient_fusion: equal_weight_mean
+  target_access_during_attack: forbidden
+  gradient_reuse_for_target: forbidden
+
+evaluation:
+  after_adversarial_png_frozen_only: true
+  primary: target_targeted_ASR_all
+  target_targeted_ASR_all_denominator: all_30_ground_truth_images
+  diagnostics:
+    - target_targeted_ASR_clean_correct_subset
+    - target_clean_accuracy
+    - target_output_parser_status
+    - target_hit_numerator
+    - per_proxy_image_embedding_delta_pull
+    - per_proxy_image_embedding_delta_push
+    - per_proxy_margin_change
+    - per_proxy_gradient_pairwise_cosine
+    - per_proxy_targeted_proxy_classifier_hit_if_available
+    - legacy_all_proxy_conditioned_TASR_if_denominator_nonzero
+    - proxy_any_hit_diagnostic
+    - proxy_majority_hit_diagnostic
+    - runtime_seconds
+    - peak_cuda_memory_gib
+    - model_revision_and_embedding_tap
+  zero_denominator: NA_never_zero
+  class_prediction_adapters: evaluation_only
+  report_label: explicitly_distinguish_ASR_from_TASR
+
+execution:
+  launcher: experiments/2026-10-a100-precommercial-v6/run_multiple_proxy_recovery.sh
+  resumable_at: ensemble_transition_batch
+  preserve_old_artifacts: true
+  write_new_results_only: true
+  smoke_test_n: 2
+  gpu: NVIDIA_A100_80GB
+  max_peak_reserved_gib: 75
+  retry_oom_with_safe_batches: true
+  final_report: reports/multiple_proxy_recovery_report.md
+  completion_matrix: reports/multiple_proxy_recovery_completion.csv
+  comparison_csv: reports/paired_ensemble_comparison.csv
+  validation_json: audits/recovery_validation.json
+  performance_json: audits/performance_benchmark.json
+
+quality_gate:
+  reference: experiments/2026-10-a100-precommercial-v6/V7_OPTIMIZATION_GATE.md
+  compare_on_identical_image_ids: true
+  best_single_proxy_baseline_per_target: true
+  primary_metric: target_targeted_ASR_all
+  paired_bootstrap_by_image: true
+  trigger_v7_if_improved_targets_fewer_than: 2
+  minimum_material_absolute_improvement_percentage_points: 5.0
+  forbid_target_feedback_for_proxy_selection: true
+  new_branch_only_if_gate_triggered: experiment/a100-precommercial-v7-adaptive-ensemble
