@@ -81,3 +81,7 @@ The published V6 package is an immutable historical baseline. The advisor clarif
 - Verify original 17 missing cells can now run without being excluded by the prior proxy-output intersection. Preserve errors for genuine OOM/model failures.
 
 **Conditional next phase:** [V7_OPTIMIZATION_GATE.md](V7_OPTIMIZATION_GATE.md). Only after the completed recovery report shows inadequate performance should Codex create an isolated V7 branch to experiment with better proxy selection, adaptive/conflict-aware gradient fusion, and image-gradient/input transformations. No commercial model calls.
+
+## Model parameter precision: strict BF16
+
+Advisor requirement (2026-10-14): **all floating-point parameters of all MLLMs must be BF16**, irrespective of proxy versus target role or model size. Quantized INT8/NF4, FP16 and mixed FP32/FP16 parameter subsets are forbidden in the recovery/V7 campaign. Conduct per-model recursive dtype + quantization audits before compute; FP32 input gradients and FP32 post-hoc statistics are still permitted. See AGENTS.md for the precise rule and A100 80GB sequential-offload strategy. The original two-block Multiple Proxy plan has 13 unique ensembles (65 × 30-image cells), not 14. Do not overwrite published V6.
