@@ -6,6 +6,9 @@ commercial_models: false
 
 scope:
   experiment_family: multiple_proxy
+  unique_ensembles_across_both_blocks: 13
+  unique_ensemble_transition_cells: 65
+  total_image_evaluation_rows: 1950
   matrix_source: experiments/2026-10-a100-precommercial-v6/experiment_matrix.yaml
   preserve_existing_block_1_and_block_2: true
   deduplicate_ensemble_rows_across_blocks: true
@@ -79,6 +82,18 @@ execution:
   write_new_results_only: true
   smoke_test_n: 2
   gpu: NVIDIA_A100_80GB
+  precision_policy:
+    all_mllm_floating_parameters: torch.bfloat16
+    all_mllm_roles: [proxy, target, auxiliary]
+    quantized_mllm_loading: forbidden
+    floating_model_parameter_fp32_or_fp16: forbidden
+    float32_image_gradients_and_posthoc_metrics: allowed
+    post_load_named_parameter_dtype_audit: required
+    post_load_quantization_state_audit: required
+    target_load_precision_explicit: bf16
+    surrogate_load_precision_explicit: bf16
+    on_precision_mismatch: hard_fail_correct_and_retry
+    on_multiple_large_proxies_over_vram: sequential_bf16_model_offload_no_quantization
   max_peak_reserved_gib: 75
   retry_oom_with_safe_batches: true
   final_report: reports/multiple_proxy_recovery_report.md
