@@ -1,5 +1,16 @@
 # V6 recovery protocol — Multiple Proxy, representation-only eligibility
 
+## Advisor precision requirement — strict BF16 for every MLLM (2026-10-14)
+
+**MANDATORY for V6 recovery and conditional V7:** Every floating-point **model parameter** of every participating MLLM (Qwen3.5, InternVL3.5, Gemma 4), **whether acting as proxy, auxiliary validator, or target evaluator**, must have dtype `torch.bfloat16` after loading. Vision towers, language towers, multimodal projectors, embeddings, output heads and any other floating-point parameter are included. No mixed FP32/FP16 parameter subsets, NF4/INT4, INT8, auto-quantization, or silent half-precision fallback. Also load CLIP/SigLIP2/DINOv2 floating model parameters as BF16 for a consistent proxy campaign unless a compatibility issue is explicitly reported and the affected experiment is stopped. Integer/bool buffers are exempt; image optimization tensors, gradients, loss accumulation and post-hoc geometry may legitimately use FP32 for numerical stability and **must not be confused with model parameter precision**.
+
+Immediately after each model load and *before its first inference or gradient step*, recursively inspect `named_parameters()` and save per-dtype floating-parameter counts, bytes, sample names, role, pinned model revision, quantization config, and device to the recovery audit. Check for quantized layers separately—looking only at `parameter.dtype` is not sufficient to rule out quantization. A mismatch is a **hard error**: correct the loader and retry; never start a scientific run with mixed-precision MLLM weights. Make sure every caller of `load_target_for_generation` requests `precision="bf16"` rather than `"auto"`, and every surrogate `AttackConfig` requests `generative_precision="bf16"`. Disable all `BitsAndBytesConfig` quantization paths in these campaigns.
+
+**Hardware constraint:** multi-proxy ensembles containing several large BF16 models may exceed the capacity of one A100 80GB. Never resolve this by quantizing, switching dtype, reducing model size, dropping a proxy, or silently skipping cells. Use deterministic sequential proxy forward/backward gradient accumulation with BF16 CPU/GPU offload (or verified multiple GPUs), preserving the exact equal-normalized-gradient mathematical update, reference embeddings, and all 50 steps; record offload overhead. If this is genuinely impossible, mark an explicit resource blocker with measured memory, not a fake success.
+
+**Matrix count correction:** the original two-block Multiple Proxy workbook contains **13 distinct ensemble configurations**, not 14: 9 unique from block 1 plus 4 new combinations in block 2 (its other rows duplicate block 1). Thus the fixed-cohort rerun covers **65 unique ensemble × directed-transition cells** at 30 images each = **1,950 image-evaluation rows**. Do not invent a fourteenth combination merely to meet the mistaken earlier count.
+
+
 **Status:** authoritative follow-up to the 2026-10-09 published V6 package. This file overrides only the pre-attack clean-output gating and reporting of the *new Multiple Proxy recovery*, not historical V6 methods/results, the other experiment families, or the original two-block ensemble matrix.
 
 ## Motivation and scientific correction
@@ -19,7 +30,7 @@ The fix is **not** to fake missing cells, silently change the original published
 
 1. Use only ImageNet ground-truth source labels, canonical image IDs, frozen seed 42, and deterministic sort/hash to choose exactly 30 images for each of the five forward transition pairs (T01/T03/T05/T07/T09); use the *same 30 image IDs* for **every** ensemble configuration within each direction. Reserve 48 reference images per class, disjoint from all attack-image IDs. Existing reference embeddings may be read if their revision+preprocessing+layer+image hashes match; never contaminate prototypes with attack images.
 2. Do **not** call any proxy, CLIP, SigLIP2, DINOv2 or target model's output prediction to decide whether an image may be attacked. All 30 ground-truth images enter the attack, irrespective of their clean predicted classes. A clean target misclassification is *recorded*, not silently dropped.
-3. This is a **new evaluation cohort**. Previous V6 single/multiple TASRs used model-dependent clean-valid samples. They are historical references only. For matched performance, rerun all **14 unique** Multiple Proxy ensemble configurations from `experiment_matrix.yaml` (3 Qwen-target scaling + 3 Gemma-target scaling + 3 InternVL-target scaling + 5 Qwen-target diversity = 14, with duplicate rows reused for the original two workbook blocks), five transitions each. That is 70 unique ensemble–transition cells at 30 images each; do not run duplicate spreadsheet rows twice. The original two-block table presentation remains unchanged.
+3. This is a **new evaluation cohort**. Previous V6 single/multiple TASRs used model-dependent clean-valid samples. They are historical references only. For matched performance, rerun all **13 unique** Multiple Proxy ensemble configurations from `experiment_matrix.yaml` (3 Qwen-target scaling + 3 Gemma-target scaling + 3 InternVL-target scaling + 5 Qwen-target diversity = 14, with duplicate rows reused for the original two workbook blocks), five transitions each. That is 65 unique ensemble–transition cells at 30 images each; do not run duplicate spreadsheet rows twice. The original two-block table presentation remains unchanged.
 4. If the 30 ground-truth images are not actually available or disjoint, stop with a *dataset-level* error and explain the missing files; do not resample based on model performance.
 
 ## Keep attack semantics unchanged
@@ -60,7 +71,7 @@ When comparing two ensembles, use paired image-level differences in `target_ASR_
 
 ## Acceptance checklist
 
-- 14 unique configurations × 5 directions × 30 source-ground-truth images = **70 unique cells and 2,100 sample evaluations** (some images reused across ensembles; total rows count, not number of distinct image IDs).
+- 13 unique configurations × 5 directions × 30 source-ground-truth images = **65 unique cells and 1,950 sample evaluations** (some images reused across ensembles; total rows count, not number of distinct image IDs).
 - The 17 previously skipped cells now undergo an actual optimization attempt and target evaluation; no `insufficient_clean_valid` on the basis of any proxy/target prediction. If A100 OOM or model error occurs, record a genuine execution failure and continue others.
 - Every cell uses same 30 image IDs for its direction, matching SHA256 of the selected image manifest.
 - Exact noise bound audited pixelwise on final saved PNG `max |adv-clean| <=16/255` and 50 steps, 0.75/0.25, BF16 where supported.
