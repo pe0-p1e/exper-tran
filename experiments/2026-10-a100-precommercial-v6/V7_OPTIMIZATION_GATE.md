@@ -1,5 +1,16 @@
 # Conditional V7: proxy selection, gradient fusion and perturbation optimization
 
+## Advisor precision requirement — strict BF16 for every MLLM (2026-10-14)
+
+**MANDATORY for V6 recovery and conditional V7:** Every floating-point **model parameter** of every participating MLLM (Qwen3.5, InternVL3.5, Gemma 4), **whether acting as proxy, auxiliary validator, or target evaluator**, must have dtype `torch.bfloat16` after loading. Vision towers, language towers, multimodal projectors, embeddings, output heads and any other floating-point parameter are included. No mixed FP32/FP16 parameter subsets, NF4/INT4, INT8, auto-quantization, or silent half-precision fallback. Also load CLIP/SigLIP2/DINOv2 floating model parameters as BF16 for a consistent proxy campaign unless a compatibility issue is explicitly reported and the affected experiment is stopped. Integer/bool buffers are exempt; image optimization tensors, gradients, loss accumulation and post-hoc geometry may legitimately use FP32 for numerical stability and **must not be confused with model parameter precision**.
+
+Immediately after each model load and *before its first inference or gradient step*, recursively inspect `named_parameters()` and save per-dtype floating-parameter counts, bytes, sample names, role, pinned model revision, quantization config, and device to the recovery audit. Check for quantized layers separately—looking only at `parameter.dtype` is not sufficient to rule out quantization. A mismatch is a **hard error**: correct the loader and retry; never start a scientific run with mixed-precision MLLM weights. Make sure every caller of `load_target_for_generation` requests `precision="bf16"` rather than `"auto"`, and every surrogate `AttackConfig` requests `generative_precision="bf16"`. Disable all `BitsAndBytesConfig` quantization paths in these campaigns.
+
+**Hardware constraint:** multi-proxy ensembles containing several large BF16 models may exceed the capacity of one A100 80GB. Never resolve this by quantizing, switching dtype, reducing model size, dropping a proxy, or silently skipping cells. Use deterministic sequential proxy forward/backward gradient accumulation with BF16 CPU/GPU offload (or verified multiple GPUs), preserving the exact equal-normalized-gradient mathematical update, reference embeddings, and all 50 steps; record offload overhead. If this is genuinely impossible, mark an explicit resource blocker with measured memory, not a fake success.
+
+**Matrix count correction:** the original two-block Multiple Proxy workbook contains **13 distinct ensemble configurations**, not 14: 9 unique from block 1 plus 4 new combinations in block 2 (its other rows duplicate block 1). Thus the fixed-cohort rerun covers **65 unique ensemble × directed-transition cells** at 30 images each = **1,950 image-evaluation rows**. Do not invent a fourteenth combination merely to meet the mistaken earlier count.
+
+
 **Do not create or execute V7 before V6 recovery is completed and checked.** This document is a conditional research plan, *not* permission to tune methods to the real target. The branch `experiment/a100-precommercial-v7-adaptive-ensemble` is created **only if the performance gate is triggered**.
 
 ## Decision gate after fixed-cohort recovery
