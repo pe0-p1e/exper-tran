@@ -1,5 +1,9 @@
 # AGENTS.md — A100 Pre-Commercial V6
 
+
+> **AUTHORITATIVE RECOVERY OVERRIDE — 2026-10-14.** This document describes the published V6 experiment as originally executed. A user/advisor clarification supersedes its **Multiple Proxy clean-valid selection rules and primary report-metric choice for the new recovery run only**. Read `MULTIPLE_PROXY_RECOVERY.md` and `multiple_proxy_recovery.yaml` before changing screening, code, or evaluation. The recovery must **not** require any Proxy (including CLIP, SigLIP2, DINOv2 or generative VLMs) to correctly predict the clean ground-truth class. The common cohort is fixed via ImageNet labels alone, independently of all model outputs. Attack generation remains image-embedding/prototype-only, target-evaluation-only, frozen PNG first. Separate legacy conditional TASR diagnostics from the new target-side ASR; never rewrite published legacy data or relabel a metric. Preserve the two original Multiple Proxy spreadsheet blocks. If recovery results do not outperform strong single-proxy baselines on the same cohort, follow `V7_OPTIMIZATION_GATE.md` for a **new**, separate branch.
+
+
 This directory defines the authoritative instructions for completing all open-source experiments before any commercial-model evaluation.
 
 ## Scope
