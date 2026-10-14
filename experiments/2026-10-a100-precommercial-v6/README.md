@@ -63,3 +63,21 @@ At minimum:
 - final Markdown report summarizing settings, completion, failures, and results.
 
 The exact scientific matrix and acceptance criteria are authoritative in `AGENTS.md`.
+
+
+## Post-publication recovery: Multiple Proxy (2026-10-14)
+
+The published V6 package is an immutable historical baseline. The advisor clarified that attacks operate on **intermediate image representations**; the all-proxy clean-output-correctness gate was an unnecessary data restriction for multi-proxy attacks.
+
+**Authoritative follow-up protocol:** [MULTIPLE_PROXY_RECOVERY.md](MULTIPLE_PROXY_RECOVERY.md), [multiple_proxy_recovery.yaml](multiple_proxy_recovery.yaml).
+
+- Keep BOTH original Multiple Proxy blocks and every listed ensemble unchanged.
+- Select 30 ground-truth ImageNet images per directed transition using a frozen common manifest, disjoint from the 48/class prototype reference bank; do NOT pre-screen on any proxy or target predictions.
+- Optimize using proxy image-embedding Pull/Push and equal-L1-gradient fusion exactly as V6; target models remain post-hoc evaluation only.
+- Rerun every unique Multiple Proxy ensemble on the same fixed cohort, including prior completed rows (because earlier clean-valid cohorts are not directly comparable).
+- Output into `outputs/a100_precommercial_v6_multi_repr_recovery/`; never overwrite `outputs/a100_precommercial_v6/` or published results.
+- Implement **one** resumable recovery launcher: `experiments/2026-10-a100-precommercial-v6/run_multiple_proxy_recovery.sh`.
+- Primary recovery metric: Target targeted ASR across all selected ground-truth images; report target-clean-correct conditional target ASR, per-proxy embedding margins, and legacy conditional TASR as **separate** metrics.
+- Verify original 17 missing cells can now run without being excluded by the prior proxy-output intersection. Preserve errors for genuine OOM/model failures.
+
+**Conditional next phase:** [V7_OPTIMIZATION_GATE.md](V7_OPTIMIZATION_GATE.md). Only after the completed recovery report shows inadequate performance should Codex create an isolated V7 branch to experiment with better proxy selection, adaptive/conflict-aware gradient fusion, and image-gradient/input transformations. No commercial model calls.
