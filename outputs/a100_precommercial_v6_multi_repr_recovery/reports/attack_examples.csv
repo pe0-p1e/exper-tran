@@ -1,0 +1,4 @@
+target,ensemble_id,transition_id,image_id,target_label,clean_example,successful_adversarial_example
+Gemma 4 31B-it,E06_Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B,T01,train/n01443537/n01443537_5133.JPEG,2,examples/Gemma_4_31B-it_T01_n01443537_5133_clean.png,examples/Gemma_4_31B-it_T01_n01443537_5133_adv.png
+InternVL3.5-14B-HF,E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,T01,train/n01443537/n01443537_138.JPEG,2,examples/InternVL3.5-14B-HF_T01_n01443537_138_clean.png,examples/InternVL3.5-14B-HF_T01_n01443537_138_adv.png
+Qwen3.5-27B,E12_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_SigLIP2-So400m-patch14-384,T01,train/n01443537/n01443537_138.JPEG,2,examples/Qwen3.5-27B_T01_n01443537_138_clean.png,examples/Qwen3.5-27B_T01_n01443537_138_adv.png

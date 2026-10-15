@@ -11,6 +11,7 @@ import torch
 from transformers import AutoModelForImageTextToText, BitsAndBytesConfig
 
 from primary_ml_cka.models.common.loading import freeze_module
+from primary_ml_cka.models.common.precision import assert_bf16_unquantized, strict_bf16_enabled
 
 
 def load_target_for_generation(snapshot: Path, device: torch.device, precision: str = "auto"):
@@ -18,6 +19,8 @@ def load_target_for_generation(snapshot: Path, device: torch.device, precision: 
         raise ValueError("Target generation requires CUDA")
     if precision not in {"auto", "bf16", "int8"}:
         raise ValueError("precision must be 'auto', 'bf16', or 'int8'")
+    if strict_bf16_enabled() and precision != "bf16":
+        raise ValueError("Strict A100 recovery requires target precision='bf16'")
     weight_bytes = sum(path.stat().st_size for path in snapshot.glob("*.safetensors"))
     load_kwargs = {}
     if precision == "int8" or (precision == "auto" and weight_bytes > 12_000_000_000):
@@ -32,5 +35,9 @@ def load_target_for_generation(snapshot: Path, device: torch.device, precision: 
         device_map={"": device.index or 0},
         **load_kwargs,
     )
+    if precision == "bf16":
+        model.to(dtype=torch.bfloat16)
+    if strict_bf16_enabled():
+        assert_bf16_unquantized(model, model_name=str(snapshot))
     model.config.use_cache = True
     return freeze_module(model)

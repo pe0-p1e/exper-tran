@@ -11,6 +11,7 @@ from primary_ml_cka.models.backends.transformers_backend import (
     load_processor,
 )
 from primary_ml_cka.models.common.loading import freeze_module, local_snapshot
+from primary_ml_cka.models.common.precision import assert_bf16_unquantized, strict_bf16_enabled
 from primary_ml_cka.models.proxies.clip import CLIP_PREPROCESS
 from primary_ml_cka.models.proxies.contrastive import ContrastiveProxy
 from primary_ml_cka.models.proxies.dinov2 import DINOv2Proxy
@@ -43,24 +44,28 @@ def load_proxy(
     attack_config: AttackConfig | None = None,
 ):
     attack_config = attack_config or AttackConfig()
+    if strict_bf16_enabled() and attack_config.generative_precision != "bf16":
+        raise ValueError("Strict A100 recovery requires AttackConfig(generative_precision='bf16')")
     snapshot = local_snapshot(hf_home, model_id, MODEL_REVISIONS[model_id])
     if model_id == "facebook/dinov2-large":
-        model = freeze_module(
-            AutoModel.from_pretrained(
+        model = AutoModel.from_pretrained(
                 snapshot,
                 local_files_only=True,
                 torch_dtype=torch.bfloat16,
-            ).to(device)
-        )
+            ).to(device=device, dtype=torch.bfloat16)
+        if strict_bf16_enabled():
+            assert_bf16_unquantized(model, model_name=model_id)
+        model = freeze_module(model)
         image_processor = AutoImageProcessor.from_pretrained(snapshot, local_files_only=True)
         image_size = int(image_processor.size.get("height", image_processor.size.get("shortest_edge", 518)))
         return DINOv2Proxy(model, image_size=image_size)
     if model_id == "openai/clip-vit-large-patch14":
-        model = freeze_module(
-            AutoModel.from_pretrained(
+        model = AutoModel.from_pretrained(
                 snapshot, local_files_only=True, torch_dtype=torch.bfloat16
-            ).to(device)
-        )
+            ).to(device=device, dtype=torch.bfloat16)
+        if strict_bf16_enabled():
+            assert_bf16_unquantized(model, model_name=model_id)
+        model = freeze_module(model)
         tokenizer = AutoTokenizer.from_pretrained(snapshot, local_files_only=True)
         return ContrastiveProxy(
             model,
@@ -74,11 +79,12 @@ def load_proxy(
             microbatch_size=4,
         )
     if model_id == "google/siglip2-so400m-patch14-384":
-        model = freeze_module(
-            AutoModel.from_pretrained(
+        model = AutoModel.from_pretrained(
                 snapshot, local_files_only=True, torch_dtype=torch.bfloat16
-            ).to(device)
-        )
+            ).to(device=device, dtype=torch.bfloat16)
+        if strict_bf16_enabled():
+            assert_bf16_unquantized(model, model_name=model_id)
+        model = freeze_module(model)
         tokenizer = AutoTokenizer.from_pretrained(snapshot, local_files_only=True)
         return ContrastiveProxy(
             model,

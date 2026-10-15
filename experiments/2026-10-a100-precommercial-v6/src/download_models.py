@@ -17,6 +17,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--models", nargs="*", help="Experiment-facing names; default is all")
     parser.add_argument("--cache", type=Path)
+    parser.add_argument("--output-dir", type=Path, default=ROOT.parents[1] / "outputs/a100_precommercial_v6")
     args = parser.parse_args()
     cache = (args.cache or Path(os.environ.get("HF_HOME", "/ephemeral/a100_precommercial_v6/model-cache/hf-cache"))).expanduser().resolve()
     cache.mkdir(parents=True, exist_ok=True)
@@ -38,7 +39,7 @@ def main() -> None:
         )
         records.append({"name": name, "repo_id": item["repo_id"], "revision": item["revision"], "snapshot": path})
         print(f"[download] complete {name}: {path}", flush=True)
-    audit = ROOT.parent.parent / "outputs/a100_precommercial_v6/audits/model_snapshots.json"
+    audit = args.output_dir.resolve() / "audits/model_snapshots.json"
     audit.parent.mkdir(parents=True, exist_ok=True)
     audit.write_text(json.dumps(records, indent=2) + "\n")
 

@@ -5,6 +5,7 @@ import torch
 from transformers import AutoModelForImageTextToText, AutoProcessor, BitsAndBytesConfig
 
 from primary_ml_cka.models.common.loading import freeze_module
+from primary_ml_cka.models.common.precision import assert_bf16_unquantized, strict_bf16_enabled
 
 
 def load_processor(snapshot: Path):
@@ -20,6 +21,8 @@ def load_generative_proxy(
 ):
     if device.type != "cuda":
         raise ValueError("Generative proxies require CUDA")
+    if strict_bf16_enabled() and precision != "bf16":
+        raise ValueError("Strict A100 recovery requires generative_precision='bf16'")
     if precision not in {"nf4", "bf16"}:
         raise ValueError(f"Unsupported generative proxy precision: {precision}")
     quantization_kwargs = {}
@@ -46,5 +49,11 @@ def load_generative_proxy(
     elif modules_to_not_convert:
         raise ValueError("modules_to_not_convert is only supported with nf4 precision")
     model = AutoModelForImageTextToText.from_pretrained(snapshot, **load_kwargs)
+    if precision == "bf16":
+        # Normalize any architecture-specific FP32 leftovers before the strict
+        # named-parameter audit; this does not alter the requested weight type.
+        model.to(dtype=torch.bfloat16)
+    if strict_bf16_enabled():
+        assert_bf16_unquantized(model, model_name=str(snapshot))
     model.config.use_cache = False
     return freeze_module(model)

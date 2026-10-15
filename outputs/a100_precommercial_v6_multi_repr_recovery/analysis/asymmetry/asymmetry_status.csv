@@ -1,0 +1,6 @@
+transition_id,status,reason
+T01,not_estimable_in_recovery_scope,Recovery override freezes only the five forward source-class cohorts; reverse-source cohorts are not part of the 65-cell recovery matrix.
+T03,not_estimable_in_recovery_scope,Recovery override freezes only the five forward source-class cohorts; reverse-source cohorts are not part of the 65-cell recovery matrix.
+T05,not_estimable_in_recovery_scope,Recovery override freezes only the five forward source-class cohorts; reverse-source cohorts are not part of the 65-cell recovery matrix.
+T07,not_estimable_in_recovery_scope,Recovery override freezes only the five forward source-class cohorts; reverse-source cohorts are not part of the 65-cell recovery matrix.
+T09,not_estimable_in_recovery_scope,Recovery override freezes only the five forward source-class cohorts; reverse-source cohorts are not part of the 65-cell recovery matrix.

@@ -1,0 +1,217 @@
+target,transition_id,group,image_id,x,y,fit_scope,fit_n,random_state
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_0,-7.204895496368408,-3.294142723083496,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_1,-7.787564277648926,-1.4396586418151855,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_2,-11.364041328430176,-0.9642953276634216,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_3,-18.739713668823242,3.500476598739624,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_4,-12.619498252868652,-4.20684814453125,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_5,-17.353439331054688,3.2901649475097656,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_6,-7.270962238311768,-5.856213569641113,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_7,-3.105990171432495,-8.575406074523926,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_8,-6.58328914642334,-4.088729381561279,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_9,-11.725953102111816,-2.7754461765289307,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_10,-19.849905014038086,2.2993152141571045,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_11,-6.7656378746032715,-10.498702049255371,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_12,-17.326814651489258,0.9772552251815796,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_13,-10.142217636108398,-5.351321697235107,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_14,-4.189328193664551,-9.764892578125,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_15,-7.9171929359436035,0.1415872424840927,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_16,-15.409993171691895,5.045136451721191,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_17,-6.724129676818848,-6.650436878204346,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_18,-16.46161651611328,-1.4833589792251587,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_19,-14.114845275878906,4.442176818847656,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_20,-14.869943618774414,1.6210359334945679,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_21,-16.41872215270996,4.013138294219971,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_22,-12.842671394348145,-1.2477563619613647,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_23,-9.239192962646484,-5.265233993530273,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_24,-6.632277488708496,-3.4541687965393066,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_25,-11.285222053527832,-4.842308044433594,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_26,-10.04916000366211,2.010626792907715,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_27,-16.021461486816406,4.617430210113525,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_28,-20.535112380981445,0.9036365151405334,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_29,-14.286663055419922,4.161771774291992,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_30,-17.180233001708984,-0.5451061725616455,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_31,-13.742082595825195,3.279580593109131,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_32,-13.774356842041016,-1.6455329656600952,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_33,-15.992782592773438,3.6997969150543213,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_34,-18.558374404907227,-0.7121829390525818,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_35,-16.69564437866211,1.407628059387207,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_36,-15.567747116088867,2.6993401050567627,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_37,-13.475034713745117,1.3957246541976929,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_38,-13.076705932617188,-0.052158500999212265,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_39,-14.440366744995117,-3.4464144706726074,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_40,-4.215648651123047,-10.495567321777344,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_41,-5.3375139236450195,-8.572672843933105,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_42,-20.736499786376953,2.8140010833740234,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_43,-11.733026504516602,-4.372724533081055,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_44,-5.0213212966918945,-7.219533920288086,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_45,-9.305235862731934,-6.490616321563721,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_46,-17.095083236694336,2.2463719844818115,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_7_reference,ref7_47,-1.0489718914031982,-9.183186531066895,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_0,15.430912971496582,1.8727688789367676,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_1,20.11570930480957,2.0179662704467773,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_2,23.256420135498047,-0.9725333452224731,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_3,19.745887756347656,-1.8467330932617188,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_4,21.16145896911621,-6.665378093719482,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_5,15.844788551330566,-2.7463510036468506,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_6,13.93156623840332,-2.8242058753967285,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_7,23.529720306396484,0.24381333589553833,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_8,24.1148624420166,0.2753406763076782,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_9,14.180773735046387,-2.8955485820770264,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_10,20.389827728271484,-0.04912658780813217,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_11,17.49420166015625,-0.669532835483551,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_12,22.433053970336914,-2.408768653869629,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_13,19.671411514282227,-4.162085056304932,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_14,18.909698486328125,-5.316515922546387,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_15,21.955888748168945,3.794102191925049,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_16,22.18574333190918,0.610946536064148,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_17,21.363388061523438,0.2992861866950989,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_18,21.13347816467285,-4.436123371124268,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_19,23.671358108520508,-1.5434277057647705,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_20,21.415592193603516,-3.5542068481445312,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_21,23.094932556152344,3.3849244117736816,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_22,22.74414825439453,-4.326167583465576,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_23,19.977415084838867,-2.6170597076416016,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_24,17.342525482177734,-5.5593366622924805,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_25,24.33209228515625,-0.08328883349895477,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_26,22.66142463684082,0.8963289260864258,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_27,24.40195655822754,1.2695988416671753,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_28,16.60587501525879,-3.6611926555633545,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_29,24.92793846130371,-1.072479248046875,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_30,17.453107833862305,-2.680938482284546,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_31,21.928447723388672,-5.51217794418335,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_32,18.468868255615234,1.869057297706604,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_33,21.015323638916016,-2.1224358081817627,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_34,22.604610443115234,3.3349246978759766,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_35,20.50252914428711,-5.247513294219971,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_36,19.106246948242188,-3.870692014694214,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_37,20.085594177246094,-3.0295629501342773,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_38,23.851511001586914,1.425906777381897,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_39,20.232223510742188,-5.330167293548584,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_40,17.914104461669922,-3.918362617492676,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_41,18.961254119873047,-3.1400718688964844,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_42,17.665393829345703,-1.958670735359192,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_43,20.765655517578125,-0.6249465346336365,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_44,20.399078369140625,0.1779937446117401,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_45,19.04053497314453,-1.8616617918014526,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_46,25.24483299255371,0.3594342768192291,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,class_8_reference,ref8_47,18.222232818603516,-4.799285411834717,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10021.JPEG,-8.005233764648438,-6.812962055206299,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10027.JPEG,-9.465133666992188,-4.044813632965088,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10043.JPEG,-12.913529396057129,-1.7481944561004639,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_1007.JPEG,-19.50238037109375,1.8415149450302124,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10084.JPEG,-13.935426712036133,-0.9035259485244751,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10163.JPEG,-14.321636199951172,-0.16023993492126465,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10417.JPEG,-17.721567153930664,4.721893787384033,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10539.JPEG,-16.535001754760742,-0.025113239884376526,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_1057.JPEG,-10.025378227233887,2.0139963626861572,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10964.JPEG,-20.07373809814453,1.3979116678237915,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_10974.JPEG,-5.383261203765869,-2.3975772857666016,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11069.JPEG,-6.080056190490723,-8.267610549926758,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11091.JPEG,-5.080833435058594,-4.806979656219482,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11096.JPEG,-14.559941291809082,-2.1823322772979736,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11142.JPEG,-17.577608108520508,-1.772025227546692,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11182.JPEG,-2.819101095199585,-0.9274702668190002,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11252.JPEG,-5.909172534942627,-9.732714653015137,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11258.JPEG,-17.689685821533203,2.3618857860565186,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11326.JPEG,-9.907186508178711,-6.897896766662598,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11345.JPEG,-0.5133440494537354,-9.073738098144531,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11358.JPEG,-3.32411789894104,-7.870008945465088,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11377.JPEG,-6.217458724975586,-7.634559154510498,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11403.JPEG,-5.916030406951904,-9.588541984558105,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_1157.JPEG,-7.714749813079834,-1.274487853050232,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11586.JPEG,-3.0817480087280273,-8.902060508728027,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11689.JPEG,-0.03782631829380989,-4.591857433319092,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_1169.JPEG,-16.50641632080078,-2.9736850261688232,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11694.JPEG,-6.943361759185791,-6.049449920654297,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11704.JPEG,-19.380752563476562,4.61506462097168,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,source_clean,train/n09472597/n09472597_11757.JPEG,-15.643592834472656,-1.5168867111206055,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10021.JPEG,4.134405136108398,-0.45664986968040466,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10027.JPEG,1.3240156173706055,1.294946551322937,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10043.JPEG,-1.094991683959961,8.138670921325684,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_1007.JPEG,0.9594649076461792,6.7609453201293945,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10084.JPEG,3.5421321392059326,6.19187068939209,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10163.JPEG,-6.843498229980469,8.690187454223633,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10417.JPEG,-6.641021728515625,5.714810371398926,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10539.JPEG,-9.897315979003906,6.306883811950684,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_1057.JPEG,6.180347442626953,3.893139362335205,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10964.JPEG,2.2482852935791016,9.947484970092773,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_10974.JPEG,-1.8633677959442139,2.8152596950531006,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11069.JPEG,5.156912803649902,-3.846565008163452,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11091.JPEG,6.473855018615723,0.920088529586792,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11096.JPEG,-6.945312023162842,2.0602962970733643,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11142.JPEG,-3.4467997550964355,4.048074245452881,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11182.JPEG,-1.3635333776474,-0.2953314185142517,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11252.JPEG,7.444684028625488,-4.515391826629639,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11258.JPEG,-1.5205479860305786,5.580825328826904,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11326.JPEG,4.008153438568115,2.461282253265381,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11345.JPEG,9.091089248657227,-0.7008435130119324,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11358.JPEG,3.8351848125457764,-5.998422145843506,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11377.JPEG,6.46425724029541,-2.7850539684295654,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11403.JPEG,8.632109642028809,-4.967360496520996,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_1157.JPEG,5.286980152130127,7.094499111175537,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11586.JPEG,6.403084754943848,-5.462830066680908,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11689.JPEG,1.1201685667037964,-4.058170318603516,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_1169.JPEG,1.5583988428115845,3.690267324447632,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11694.JPEG,2.1709647178649902,-1.223536491394043,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11704.JPEG,-3.6975622177124023,6.322776794433594,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E07_Gemma 4 E2B-it,train/n09472597/n09472597_11757.JPEG,-3.348869800567627,9.335006713867188,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10021.JPEG,4.085483551025391,-0.42663049697875977,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10027.JPEG,1.5634140968322754,1.29129958152771,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10043.JPEG,-0.9783658385276794,8.101485252380371,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_1007.JPEG,0.9687620997428894,6.648884296417236,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10084.JPEG,3.737422466278076,6.2331414222717285,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10163.JPEG,-6.825904369354248,8.636466979980469,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10417.JPEG,-6.6088056564331055,5.729945182800293,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10539.JPEG,-9.760865211486816,6.400773048400879,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_1057.JPEG,6.149479389190674,3.9987082481384277,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10964.JPEG,2.143911123275757,9.835356712341309,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_10974.JPEG,-1.7627040147781372,2.857870101928711,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11069.JPEG,5.174948215484619,-3.745579242706299,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11091.JPEG,6.576684474945068,0.8711788654327393,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11096.JPEG,-6.886791229248047,2.074775457382202,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11142.JPEG,-3.578108787536621,3.8903563022613525,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11182.JPEG,-1.5455185174942017,-0.35168904066085815,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11252.JPEG,7.535033226013184,-5.005668640136719,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11258.JPEG,-1.5354505777359009,5.583471775054932,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11326.JPEG,3.9207961559295654,2.4702868461608887,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11345.JPEG,9.206924438476562,-0.7521191239356995,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11358.JPEG,3.991079568862915,-6.003317832946777,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11377.JPEG,6.388320446014404,-2.6469836235046387,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11403.JPEG,8.466192245483398,-5.402373313903809,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_1157.JPEG,5.200061798095703,7.199278354644775,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11586.JPEG,6.611612796783447,-5.917783260345459,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11689.JPEG,1.2318915128707886,-4.015078067779541,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_1169.JPEG,1.3299782276153564,3.7145140171051025,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11694.JPEG,2.152320146560669,-1.1744810342788696,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11704.JPEG,-3.833629608154297,6.362232208251953,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E08_Gemma 4 E2B-it_Gemma 4 E4B-it,train/n09472597/n09472597_11757.JPEG,-3.3258438110351562,9.329343795776367,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10021.JPEG,4.500038146972656,-0.7658983469009399,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10027.JPEG,1.81850266456604,1.2915430068969727,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10043.JPEG,-0.8814348578453064,7.900539875030518,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_1007.JPEG,0.8070895075798035,6.628124237060547,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10084.JPEG,3.7397804260253906,5.955617904663086,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10163.JPEG,-6.426345348358154,8.738179206848145,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10417.JPEG,-6.409622669219971,5.662631034851074,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10539.JPEG,-9.490911483764648,6.521446228027344,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_1057.JPEG,6.225553512573242,3.382065773010254,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10964.JPEG,2.0919482707977295,9.635290145874023,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_10974.JPEG,-1.4079502820968628,2.9425692558288574,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11069.JPEG,5.5168962478637695,-4.12872314453125,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11091.JPEG,6.8096137046813965,0.6394715309143066,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11096.JPEG,-6.386649131774902,2.3419487476348877,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11142.JPEG,-3.67020845413208,3.9711990356445312,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11182.JPEG,-1.3061330318450928,-0.26359742879867554,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11252.JPEG,8.036260604858398,-4.232540607452393,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11258.JPEG,-1.096694827079773,5.464672565460205,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11326.JPEG,4.083383083343506,2.4420437812805176,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11345.JPEG,9.31247329711914,-0.7974295020103455,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11358.JPEG,4.3465895652771,-5.856465816497803,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11377.JPEG,6.95205020904541,-2.8812332153320312,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11403.JPEG,8.675025939941406,-4.400238513946533,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_1157.JPEG,5.297595977783203,6.95230770111084,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11586.JPEG,7.166677951812744,-6.035945415496826,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11689.JPEG,1.3881944417953491,-3.9753613471984863,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_1169.JPEG,1.3729621171951294,3.7451858520507812,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11694.JPEG,2.5094003677368164,-0.8518637418746948,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11704.JPEG,-3.4395434856414795,6.300994396209717,joint classes/references/clean/ensemble adversarials,216,42
+InternVL3.5-14B-HF,T07,adv_E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,train/n09472597/n09472597_11757.JPEG,-3.1757678985595703,9.041436195373535,joint classes/references/clean/ensemble adversarials,216,42

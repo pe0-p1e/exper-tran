@@ -1,0 +1,66 @@
+ensemble_id,target,transition_id,status,N,ASR_numerator,ASR_denominator
+E01_InternVL3.5-2B-HF,Qwen3.5-27B,T01,complete,30,0,30
+E01_InternVL3.5-2B-HF,Qwen3.5-27B,T03,complete,30,0,30
+E01_InternVL3.5-2B-HF,Qwen3.5-27B,T05,complete,30,0,30
+E01_InternVL3.5-2B-HF,Qwen3.5-27B,T07,complete,30,0,30
+E01_InternVL3.5-2B-HF,Qwen3.5-27B,T09,complete,30,0,30
+E02_InternVL3.5-2B-HF_InternVL3.5-4B-HF,Qwen3.5-27B,T01,complete,30,2,30
+E02_InternVL3.5-2B-HF_InternVL3.5-4B-HF,Qwen3.5-27B,T03,complete,30,0,30
+E02_InternVL3.5-2B-HF_InternVL3.5-4B-HF,Qwen3.5-27B,T05,complete,30,0,30
+E02_InternVL3.5-2B-HF_InternVL3.5-4B-HF,Qwen3.5-27B,T07,complete,30,0,30
+E02_InternVL3.5-2B-HF_InternVL3.5-4B-HF,Qwen3.5-27B,T09,complete,30,0,30
+E03_InternVL3.5-2B-HF_InternVL3.5-4B-HF_InternVL3.5-8B-HF,Qwen3.5-27B,T01,complete,30,2,30
+E03_InternVL3.5-2B-HF_InternVL3.5-4B-HF_InternVL3.5-8B-HF,Qwen3.5-27B,T03,complete,30,0,30
+E03_InternVL3.5-2B-HF_InternVL3.5-4B-HF_InternVL3.5-8B-HF,Qwen3.5-27B,T05,complete,30,0,30
+E03_InternVL3.5-2B-HF_InternVL3.5-4B-HF_InternVL3.5-8B-HF,Qwen3.5-27B,T07,complete,30,3,30
+E03_InternVL3.5-2B-HF_InternVL3.5-4B-HF_InternVL3.5-8B-HF,Qwen3.5-27B,T09,complete,30,0,30
+E04_Qwen3.5-2B,Gemma 4 31B-it,T01,complete,30,0,30
+E04_Qwen3.5-2B,Gemma 4 31B-it,T03,complete,30,0,30
+E04_Qwen3.5-2B,Gemma 4 31B-it,T05,complete,30,0,30
+E04_Qwen3.5-2B,Gemma 4 31B-it,T07,complete,30,0,30
+E04_Qwen3.5-2B,Gemma 4 31B-it,T09,complete,30,0,30
+E05_Qwen3.5-2B_Qwen3.5-4B,Gemma 4 31B-it,T01,complete,30,1,30
+E05_Qwen3.5-2B_Qwen3.5-4B,Gemma 4 31B-it,T03,complete,30,0,30
+E05_Qwen3.5-2B_Qwen3.5-4B,Gemma 4 31B-it,T05,complete,30,0,30
+E05_Qwen3.5-2B_Qwen3.5-4B,Gemma 4 31B-it,T07,complete,30,0,30
+E05_Qwen3.5-2B_Qwen3.5-4B,Gemma 4 31B-it,T09,complete,30,0,30
+E06_Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B,Gemma 4 31B-it,T01,complete,30,1,30
+E06_Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B,Gemma 4 31B-it,T03,complete,30,0,30
+E06_Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B,Gemma 4 31B-it,T05,complete,30,0,30
+E06_Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B,Gemma 4 31B-it,T07,complete,30,1,30
+E06_Qwen3.5-2B_Qwen3.5-4B_Qwen3.5-9B,Gemma 4 31B-it,T09,complete,30,0,30
+E07_Gemma 4 E2B-it,InternVL3.5-14B-HF,T01,complete,30,4,30
+E07_Gemma 4 E2B-it,InternVL3.5-14B-HF,T03,complete,30,0,30
+E07_Gemma 4 E2B-it,InternVL3.5-14B-HF,T05,complete,30,0,30
+E07_Gemma 4 E2B-it,InternVL3.5-14B-HF,T07,complete,30,4,30
+E07_Gemma 4 E2B-it,InternVL3.5-14B-HF,T09,complete,30,0,30
+E08_Gemma 4 E2B-it_Gemma 4 E4B-it,InternVL3.5-14B-HF,T01,complete,30,5,30
+E08_Gemma 4 E2B-it_Gemma 4 E4B-it,InternVL3.5-14B-HF,T03,complete,30,0,30
+E08_Gemma 4 E2B-it_Gemma 4 E4B-it,InternVL3.5-14B-HF,T05,complete,30,0,30
+E08_Gemma 4 E2B-it_Gemma 4 E4B-it,InternVL3.5-14B-HF,T07,complete,30,8,30
+E08_Gemma 4 E2B-it_Gemma 4 E4B-it,InternVL3.5-14B-HF,T09,complete,30,0,30
+E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,InternVL3.5-14B-HF,T01,complete,30,7,30
+E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,InternVL3.5-14B-HF,T03,complete,30,0,30
+E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,InternVL3.5-14B-HF,T05,complete,30,1,30
+E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,InternVL3.5-14B-HF,T07,complete,30,13,30
+E09_Gemma 4 E2B-it_Gemma 4 E4B-it_Gemma 4 26B-A4B-it,InternVL3.5-14B-HF,T09,complete,30,0,30
+E10_InternVL3.5-2B-HF_Gemma 4 E2B-it,Qwen3.5-27B,T01,complete,30,2,30
+E10_InternVL3.5-2B-HF_Gemma 4 E2B-it,Qwen3.5-27B,T03,complete,30,0,30
+E10_InternVL3.5-2B-HF_Gemma 4 E2B-it,Qwen3.5-27B,T05,complete,30,0,30
+E10_InternVL3.5-2B-HF_Gemma 4 E2B-it,Qwen3.5-27B,T07,complete,30,2,30
+E10_InternVL3.5-2B-HF_Gemma 4 E2B-it,Qwen3.5-27B,T09,complete,30,0,30
+E11_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14,Qwen3.5-27B,T01,complete,30,6,30
+E11_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14,Qwen3.5-27B,T03,complete,30,0,30
+E11_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14,Qwen3.5-27B,T05,complete,30,0,30
+E11_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14,Qwen3.5-27B,T07,complete,30,3,30
+E11_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14,Qwen3.5-27B,T09,complete,30,1,30
+E12_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_SigLIP2-So400m-patch14-384,Qwen3.5-27B,T01,complete,30,12,30
+E12_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_SigLIP2-So400m-patch14-384,Qwen3.5-27B,T03,complete,30,0,30
+E12_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_SigLIP2-So400m-patch14-384,Qwen3.5-27B,T05,complete,30,0,30
+E12_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_SigLIP2-So400m-patch14-384,Qwen3.5-27B,T07,complete,30,7,30
+E12_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_SigLIP2-So400m-patch14-384,Qwen3.5-27B,T09,complete,30,1,30
+E13_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_DINOv2-Large,Qwen3.5-27B,T01,complete,30,5,30
+E13_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_DINOv2-Large,Qwen3.5-27B,T03,complete,30,0,30
+E13_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_DINOv2-Large,Qwen3.5-27B,T05,complete,30,0,30
+E13_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_DINOv2-Large,Qwen3.5-27B,T07,complete,30,3,30
+E13_InternVL3.5-2B-HF_Gemma 4 E2B-it_CLIP ViT-L/14_DINOv2-Large,Qwen3.5-27B,T09,complete,30,0,30

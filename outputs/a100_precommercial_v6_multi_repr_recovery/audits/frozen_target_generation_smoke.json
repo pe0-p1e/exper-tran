@@ -1,0 +1,83 @@
+[
+  {
+    "target": "Gemma 4 31B-it",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "status": "pass",
+    "outputs": [
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      }
+    ]
+  },
+  {
+    "target": "InternVL3.5-14B-HF",
+    "revision": "226b96d5912e69159abc0384cefcbd51487fdce0",
+    "status": "pass",
+    "outputs": [
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      }
+    ]
+  },
+  {
+    "target": "Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "status": "pass",
+    "outputs": [
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      },
+      {
+        "raw_output": "0",
+        "parsed_label": 1,
+        "parser_status": "ok"
+      }
+    ]
+  }
+]

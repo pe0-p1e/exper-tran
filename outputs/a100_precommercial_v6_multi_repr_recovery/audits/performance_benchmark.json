@@ -1,0 +1,165 @@
+{
+  "method": "actual two-image gradient/generation smoke audit; no dtype downgrade; sequential per-proxy GPU residency",
+  "max_peak_reserved_gib": 75,
+  "per_model": {
+    "CLIP ViT-L/14": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 0.80859375,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "DINOv2-Large": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 0.57421875,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "Gemma 4 26B-A4B-it": {
+      "gradient_smoke": "pass",
+      "vision_depth": 27,
+      "deepest_block": 26,
+      "load_reserved_gib": 48.091796875,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "Gemma 4 E2B-it": {
+      "gradient_smoke": "pass",
+      "vision_depth": 16,
+      "deepest_block": 15,
+      "load_reserved_gib": 9.583984375,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "Gemma 4 E4B-it": {
+      "gradient_smoke": "pass",
+      "vision_depth": 16,
+      "deepest_block": 15,
+      "load_reserved_gib": 14.80859375,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "InternVL3.5-2B-HF": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 4.669921875,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "InternVL3.5-4B-HF": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 9.18359375,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "InternVL3.5-8B-HF": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 16.470703125,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "Qwen3.5-2B": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 4.14453125,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "Qwen3.5-4B": {
+      "gradient_smoke": "pass",
+      "vision_depth": 24,
+      "deepest_block": 23,
+      "load_reserved_gib": 8.46875,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "Qwen3.5-9B": {
+      "gradient_smoke": "pass",
+      "vision_depth": 27,
+      "deepest_block": 26,
+      "load_reserved_gib": 17.55859375,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    },
+    "SigLIP2-So400m-patch14-384": {
+      "gradient_smoke": "pass",
+      "vision_depth": 27,
+      "deepest_block": 26,
+      "load_reserved_gib": 2.13671875,
+      "attempted_batches": [
+        2
+      ],
+      "selected_batch": 2,
+      "selection_basis": "2-image BF16 gradient smoke"
+    }
+  },
+  "selected_attack_batch_size": 2,
+  "attempted_gradient_smoke_batch_sizes": [
+    2
+  ],
+  "runtime_oom_fallback_batch_sizes": [
+    1
+  ],
+  "larger_batch_sizes_not_calibrated": [
+    4
+  ],
+  "note": "Batch size 2 passed the model gradient smoke and recorded load peak was below 75 GiB; one-image fallback is configured for runtime OOM. Batch 4 was not benchmarked, so no claim is made that 2 is the maximum safe batch.",
+  "blockers": [],
+  "full_matrix_completed_cells": 65,
+  "measured_attack_gradient_seconds": 20115.581442190116,
+  "observed_peak_allocated_gib": 49.096970081329346,
+  "observed_peak_reserved_gib": 49.13671875,
+  "attack_batch_sizes": [
+    2
+  ],
+  "offload_modes": [
+    "Gemma-vision-only-resident+all-resident-BF16",
+    "all-resident-BF16"
+  ],
+  "forward_backward_counts": {
+    "attack_optimization_proxy_forward_passes": 232500,
+    "attack_optimization_image_gradient_backward_passes": 232500
+  }
+}
