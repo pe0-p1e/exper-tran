@@ -1,0 +1,116 @@
+version: a100-precommercial-v7-targeted-50
+branch: experiment/a100-precommercial-v7-targeted-50
+parent_commit: 1cbf551773154aeab38903d1df08d235f2f051e5
+prior_results_read_only: outputs/a100_precommercial_v6_multi_repr_recovery
+output_root: outputs/a100_precommercial_v7_targeted50
+commercial_models: false
+
+success_criteria:
+  metric: unconditional_target_targeted_ASR
+  exact_threshold: 0.50
+  preferred_strictly_above_threshold: 0.5333333333333333
+  targets:
+    - Qwen3.5-27B
+    - Gemma 4 31B-it
+    - InternVL3.5-14B-HF
+  transition_ids: [T01, T03, T05, T07, T09]
+  samples_per_target_transition: 30
+  passing_hits_each_target_transition: 15
+  preferred_hits_each_target_transition: 16
+  minimum_hits_per_target_over_five_transitions: 75
+  acceptance_aggregation: all_15_target_transition_cells_must_pass
+  no_excluded_difficult_samples: true
+  do_not_require_legacy_ensembles_all_to_pass: true
+  compare_against_strongest_single_proxy_on_same_cohort: true
+  avoid_target_result_feedback_for_method_selection: true
+  impossible_to_guarantee_upfront: true
+
+data:
+  source: V6_recovery_fixed_ImageNet_cohort
+  reference_images_per_class: 48
+  attack_images_per_transition: 30
+  manifest_paths_from: outputs/a100_precommercial_v6_multi_repr_recovery/manifests/attack_cohorts
+  unchanged_ids_and_order: true
+  target_model_output_dependent_cohort_selection: forbidden
+
+precision:
+  mllm_all_floating_parameter_dtype: bfloat16
+  vision_only_proxy_parameter_dtype: bfloat16
+  other_floating_model_dtypes: forbidden
+  quantized_model_weights: forbidden
+  recursively_audit_parameters_after_each_load: true
+  f32_gradient_and_analysis_accumulation: allowed
+  offload: sequential_bf16_cpu_gpu_if_required
+
+main_attack_budget:
+  epsilon: 16/255
+  norm: linf
+  steps: 50
+  step_size: 1/255
+  momentum: 1.0
+  random_start: true
+  seed: 42
+  final_robustness_seeds: [42,43,44]
+  image_canvas: 224
+  original_pull_weight: 0.75
+  original_push_weight: 0.25
+  loss_inputs: proxy_image_intermediate_representations_only
+  target_access_during_attack: forbidden
+  model_final_label_loss_during_attack: forbidden
+  save_png_before_target_evaluation: true
+  replay_target_evaluation_without_method_selection_feedback: true
+
+algorithm_arms:
+  - id: A0
+    description: v6_equal_l1_gradient_mean_representation_pull_push
+  - id: A1
+    description: target_vs_hardest_negative_image_prototype_margin
+  - id: A2
+    description: multi_layer_global_image_representation_pull_push
+  - id: A3
+    description: global_plus_local_patch_semantic_feature_matching
+  - id: F1
+    description: proxy_subset_selection_on_held_out_surrogates
+  - id: F2
+    description: AdaEA_inspired_surrogate_only_adaptive_gradient_weights
+  - id: F3
+    description: PCGrad_inspired_conflict_aware_projection
+  - id: F4
+    description: adaptive_weights_plus_conflict_reduction
+  - id: X1
+    description: input_diversity_resize_pad_differentiable
+  - id: X2
+    description: translation_invariant_gradient_smoothing
+  - id: X3
+    description: neighborhood_or_Dirichlet_distributional_gradient_aggregation
+  - id: X4
+    description: multi_restart_surrogate_only_candidate_selection
+
+separately_reported_attack_budgets:
+  steps: [50,100,200]
+  restarts: [1,3,5]
+  keep_epsilon_fixed: true
+  report_total_model_forward_backward_calls: true
+  do_not_mix_expanded_budget_with_primary_50_step_score: true
+
+evaluation:
+  exact_original_target_prompt_and_parser: true
+  output_metrics:
+    - target_ASR_all
+    - target_clean_correct_ASR
+    - target_clean_accuracy
+    - target_original_vs_target_prediction_confusion
+    - per_proxy_representation_margin
+    - target_delta_R_posthoc_only
+    - per_image_gradient_conflict
+    - imagewise_paired_bootstrap_CI
+    - runtime
+    - peak_gpu_reserved_gib
+    - model_forward_and_backward_counts
+    - per_seed_stats
+    - minimum_target_direction_ASR
+    - all_15_cells_above_threshold
+  zero_denominator_secondary_metrics: NA
+  successful_only_reporting: forbidden
+  target_tuning: forbidden
+  report_failures: required
