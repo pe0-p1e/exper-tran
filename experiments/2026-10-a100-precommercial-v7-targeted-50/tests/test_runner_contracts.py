@@ -24,3 +24,25 @@ def test_resume_rejects_modified_or_missing_pngs(tmp_path,monkeypatch):
     assert runner.valid_state(state,'locked') is None
     png.unlink()
     assert runner.valid_state(state,'locked') is None
+
+
+def test_reference_only_transforms_have_finite_image_gradients():
+    import torch
+    bank=torch.randn(10,48,6)
+    for mode in ['none','center','standardize']:
+        x=torch.randn(2,6,requires_grad=True)
+        scores=runner.feature_scores(x,bank,dict(feature_transform=mode,aggregation='centroid'))
+        grad=torch.autograd.grad(scores[:,1].sum(),x)[0]
+        assert torch.isfinite(scores).all() and torch.isfinite(grad).all()
+        assert grad.abs().sum()>0
+
+
+def test_spectral_view_reproducible_and_differentiable():
+    import torch
+    x=torch.rand(2,3,16,16,requires_grad=True)
+    a=runner.frequency_view(x,.15,torch.Generator().manual_seed(42))
+    b=runner.frequency_view(x,.15,torch.Generator().manual_seed(42))
+    assert torch.equal(a,b)
+    assert a.min()>=0 and a.max()<=1
+    grad=torch.autograd.grad(a.square().sum(),x)[0]
+    assert torch.isfinite(grad).all() and grad.abs().sum()>0

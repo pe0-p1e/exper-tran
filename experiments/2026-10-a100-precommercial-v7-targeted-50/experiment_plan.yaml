@@ -114,3 +114,15 @@ evaluation:
   successful_only_reporting: forbidden
   target_tuning: forbidden
   report_failures: required
+
+focused_research_priority_override:
+  broad_ablation_and_test_queue: paused_by_user_2026_10_18
+  launcher: run_focus_v7.sh
+  pilot_total_images_per_model: 10
+  pilot_images_per_direction: 2
+  use_model_outputs_for_image_selection: false
+  held_out_surrogate_native_validators: [Qwen3.5-9B, InternVL3.5-8B-HF, Gemma 4 E4B-it]
+  final_targets_used_for_tuning: false
+  exploratory_proxy_compositions: allowed
+  only_small_ablations_after_success: true
+  primary_30_image_cohort: unchanged

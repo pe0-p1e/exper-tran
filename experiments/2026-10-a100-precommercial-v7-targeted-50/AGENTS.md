@@ -64,3 +64,7 @@ A100 80GB; full model BF16; sequential offload; grouped reference cache; resume 
 - `scripts/run_all_v7.sh` or an unambiguous equivalent single resumable launcher; test-only `--preflight`, `--smoke`, `--resume` supported.
 - `reports/diagnostics.md`, `reports/controlled_ablation.csv`, `reports/target_direction_results.csv`, `reports/paired_baselines.csv`, `reports/final_report.md` with exact status/count; `audits/bf16.json`, `audits/linf.json`, `audits/model_revisions.json`, `audits/target_isolation.json`, `audits/runtime.json`.
 - Full model details, negative results, failure reasons, successful and failed examples. Commit source and compact results, not multi-gigabyte caches.
+
+### User execution-priority override — 2026-10-18
+
+Read `FOCUSED_RESEARCH.md`. Pause the broad test/ablation queue. First optimize promising algorithms AND alternative multi-proxy compositions using only ten fixed development images (two per direction) and native held-out-surrogate output validation. Run small ablations only after pilot performance is promising. No changes to the 30-image formal benchmark, no target feedback during tuning, no false claim of 15/30 from a two-image pilot. Default launcher follows the focused queue; preserve existing V7 locks and artifacts.

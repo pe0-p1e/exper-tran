@@ -1,3 +1,7 @@
+# Current execution priority
+
+The default launcher now follows `run_focus_v7.sh`: ten-image native-output surrogate optimization, alternative combinations, one locked final-target pilot, then at most two small ablations if successful. See `FOCUSED_RESEARCH.md`. The broad campaign below is paused; restore it only with an explicit `--legacy-full`.
+
 # Long-running V7 runner
 
 ```bash

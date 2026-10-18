@@ -40,6 +40,19 @@ class VisionProxy:
         self.forward_calls=0; self.backward_calls=0; self.image_forwards=0
         self.offload_seconds=0.
         self.bank={}
+        self.projected_bank=None
+        family=spec['family']
+        visual=self.model.model.visual if family=='qwen' else self.model.model.vision_tower if family in ('internvl','gemma4') else self.model.vision_model if family in ('clip','siglip2') else self.model
+        def count_forward(_module,args,kwargs):
+            self.forward_calls+=1
+            if family=='qwen':
+                grid=kwargs.get('grid_thw')
+                self.image_forwards+=len(grid) if grid is not None else 1
+            else:
+                px=kwargs.get('pixel_values')
+                if px is None:px=args[0]
+                self.image_forwards+=len(px)
+        self.counter_handle=visual.register_forward_pre_hook(count_forward,with_kwargs=True)
 
     def to(self, device):
         import time
@@ -59,7 +72,6 @@ class VisionProxy:
         packed={l:[] for l in self.layers}; masks={l:[] for l in self.layers}
         for chunk in x.split(size):
             def forward(inp):
-                self.forward_calls+=1; self.image_forwards+=len(inp)
                 if family=='qwen':
                     v=qwen_visual_inputs(inp)
                     output=self.model.model.visual(v['pixel_values'],grid_thw=v['image_grid_thw'],output_hidden_states=True,return_dict=True)
@@ -136,6 +148,26 @@ class VisionProxy:
         temp=path.with_suffix('.tmp.npz');np.savez_compressed(temp,**payload);temp.replace(path)
         self.bank={l:(torch.from_numpy(payload[f'z_{l}']).cuda(),torch.from_numpy(payload[f'p_{l}']).cuda()) for l in self.layers}
 
+    def projected_features(self, x):
+        if self.spec['family'] not in ('qwen','internvl'):
+            raise ValueError('Projector objective is currently audited for Qwen/InternVL only')
+        return self.proxy.image_embeddings(x,representation_type='legacy_projected',layer=-1,pooling='mean').embeddings.float()
+
+    def prepare_projected_bank(self):
+        if self.projected_bank is not None:return
+        manifests=[OUT/'manifests/class_references'/f'class_references_{i:02d}.jsonl' for i in range(1,11)]
+        key=fingerprint(dict(model=self.spec,refs=[sha(p) for p in manifests],tap='actual_post_merger_projected_tokens',version=1))
+        path=OUT/'cache/projected_references'/f'{key}.npy'
+        if path.exists():self.projected_bank=torch.from_numpy(np.load(path)).cuda();return
+        banks=[]
+        with torch.inference_mode():
+            for manifest in manifests:
+                banks.append(torch.cat([self.projected_features(images([r])).cpu() for r in records(manifest)]).numpy())
+        array=np.stack(banks);path.parent.mkdir(parents=True,exist_ok=True)
+        temp=path.with_suffix('.tmp.npy');np.save(temp,array);temp.replace(path)
+        self.projected_bank=torch.from_numpy(array).cuda()
+
     def close(self):
-        self.model.to('cpu');self.bank.clear();del self.proxy;del self.model
+        self.counter_handle.remove()
+        self.model.to('cpu');self.bank.clear();self.projected_bank=None;del self.proxy;del self.model
         gc.collect();torch.cuda.empty_cache()

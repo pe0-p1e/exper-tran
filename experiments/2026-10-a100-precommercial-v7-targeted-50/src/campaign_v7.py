@@ -127,7 +127,7 @@ def execute_frozen_tests(tests, task):
     expected=len(tests)*len(TARGETS)*len(TIDS)
     with (OUT/'reports/target_direction_results.csv').open() as f:done=list(csv.DictReader(f))
     complete=len(done)==expected and all(r['complete']=='True' for r in done)
-    atomic_json(OUT/'audits/execution_completion.json',dict(expected_cells=expected,observed_cells=len(done),all_complete=complete,failed_attempts=len(failures)))
+    atomic_json(OUT/'audits/execution_completion.json',dict(expected_cells=expected,observed_cells=len(done),all_complete=complete,failed_attempts=len(json.loads((OUT/'audits/campaign_failures.json').read_text())) if (OUT/'audits/campaign_failures.json').exists() else 0))
     if not complete:raise RuntimeError(f'Campaign incomplete: {len(done)}/{expected} cells; see failure audit')
     command(EXP/'src/finalize_v7.py',[],'final_validation.log')
     command(EXP/'src/analyze_v7.py',[],'posthoc_analysis.log')

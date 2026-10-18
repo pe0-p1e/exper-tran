@@ -36,23 +36,51 @@ def project(x,clean):
     return torch.maximum(torch.minimum(x,clean+16/255),clean-16/255).clamp(0,1)
 
 
+def feature_scores(z, bank, config):
+    transform=config.get('feature_transform','none')
+    if transform!='none':
+        center=bank.float().mean((0,1),keepdim=False).detach()
+        z=z.float()-center;bank=bank.float()-center
+        if transform=='standardize':
+            scale=bank.flatten(0,1).std(0).clamp_min(1e-3).detach()
+            z=z/scale;bank=bank/scale
+        elif transform!='center':raise ValueError(transform)
+    return class_scores(z,bank,aggregation=config['aggregation'],reference_temperature=config.get('reference_temperature',.05))
+
+
 def objective(proxy,x,source,target,config):
     fs=proxy.features(x);losses=[];margins=[]
     for l,(z,tokens,mask) in fs.items():
         bank,patches=proxy.bank[l]
-        scores=class_scores(z,bank,aggregation=config['aggregation'])
+        scores=feature_scores(z,bank,config)
         negatives=scores.clone();negatives[:,target-1]=-torch.inf
         margins.append(scores[:,target-1]-negatives.max(1).values)
         if config['loss']=='pull_push':loss=original_pull_push_loss(z,bank,source,target,reduction='none')
         else:
-            loss=all_class_margin_loss(scores,target,reduction='none')
+            loss=all_class_margin_loss(scores,target,reduction='none',temperature=config.get('temperature',.05),margin=config.get('margin',.05),negative_mode=config.get('negative_mode','logsumexp'))
             if config['loss']=='combined':loss=.5*loss+.5*original_pull_push_loss(z,bank,source,target,reduction='none')
         pw=config.get('patch_weight',0.)
         if pw:
             patch=local_patch_target_loss(tokens,patches[target-1],patches[source-1],patch_mask=mask,reduction='none')
             loss=(1-pw)*loss+pw*patch
         losses.append(loss)
-    return torch.stack(losses).mean(0),torch.stack(margins).mean(0)
+    layer_weights=config.get('layer_weights',[1.]*len(losses))
+    if len(layer_weights)!=len(losses) or min(layer_weights)<0 or sum(layer_weights)<=0:raise ValueError('Invalid layer weights')
+    w=x.new_tensor(layer_weights)/sum(layer_weights)
+    result=(torch.stack(losses)*w[:,None]).sum(0)
+    projector_weight=config.get('projector_weight',0.)
+    if projector_weight and proxy.spec['family'] in ('qwen','internvl'):
+        scores=feature_scores(proxy.projected_features(x),proxy.projected_bank,config)
+        projected=all_class_margin_loss(scores,target,reduction='none',temperature=config.get('temperature',.05),margin=config.get('margin',.05),negative_mode=config.get('negative_mode','logsumexp'))
+        result=(1-projector_weight)*result+projector_weight*projected
+    return result,torch.stack(margins).mean(0)
+
+
+def frequency_view(x,rho,rng):
+    # FFT spectrum-mask adaptation inspired by SSA, NOT the original DCT method.
+    spectrum=torch.fft.rfft2(x.float(),norm='ortho')
+    mask=(1-rho+2*rho*torch.rand(spectrum.shape,generator=rng)).to(x.device)
+    return torch.fft.irfft2(spectrum*mask,s=x.shape[-2:],norm='ortho').clamp(0,1)
 
 
 def valid_state(path,identity):
@@ -71,30 +99,40 @@ def main():
     p.add_argument('--method',choices=METHODS,default='A0')
     p.add_argument('--fusion',choices=['equal','weighted','pcgrad','weighted_pcgrad','consensus'],default='equal')
     p.add_argument('--transitions',nargs='+',default=TIDS)
-    p.add_argument('--split',choices=['dev','test','smoke'],default='dev')
+    p.add_argument('--split',choices=['dev','test','smoke','target_pilot'],default='dev')
     p.add_argument('--steps',type=int,default=50);p.add_argument('--seed',type=int,default=42)
     p.add_argument('--batch-size',type=int,default=2)
     p.add_argument('--input-diversity',action='store_true');p.add_argument('--smoothing',action='store_true')
     p.add_argument('--restarts',type=int,default=1)
+    p.add_argument('--config-json',type=Path)
+    p.add_argument('--run-label')
+    p.add_argument('--limit-per-direction',type=int)
     args=p.parse_args()
     if any(n in TARGETS for n in args.models):raise RuntimeError('Final target models forbidden in attack process')
     if args.steps<1 or args.batch_size<1 or args.restarts<1:raise ValueError('Positive budgets required')
     prepare_data()
     config=dict(METHODS[args.method]);config.update(fusion=args.fusion,input_diversity=args.input_diversity,smoothing=args.smoothing)
+    if args.config_json:config.update(json.loads(args.config_json.read_text()))
+    if args.limit_per_direction and (args.split=='test' or not 1<=args.limit_per_direction<=10):raise ValueError('Small pilots must use dev/smoke only')
     name=f"{args.method}__{args.fusion}__"+'+'.join(n.replace('/','_').replace(' ','_') for n in args.models)
     if args.input_diversity:name+='__DI'
     if args.smoothing:name+='__TI'
     name+=f'__s{args.seed}__i{args.steps}__r{args.restarts}'
+    if args.run_label:
+        if not all(c.isalnum() or c in '_-.' for c in args.run_label):raise ValueError('Invalid run label')
+        name=args.run_label+'__'+name
     config_hash=fingerprint(dict(config=config,models={n:REGISTRY[n] for n in args.models},code={f:sha(Path(__file__).parent/f) for f in ['run_v7_attack.py','representation_objectives.py','attack_optimizers.py','vision_features.py']}))
     directory=OUT/'attacks'/args.split/name
     proxies=[]
     try:
         # Loading one model at a time also verifies the exact pinned visual depth.
         for n in args.models:
-            model=VisionProxy(n,config['layers']);model.prepare_bank();model.to('cpu');proxies.append(model)
+            model=VisionProxy(n,config['layers']);model.prepare_bank()
+            if config.get('projector_weight') and model.spec['family'] in ('qwen','internvl'):model.prepare_projected_bank()
+            model.to('cpu');proxies.append(model)
             gc.collect();torch.cuda.empty_cache()
         # Models in this initial candidate pool fit together. Larger pools offload sequentially.
-        total=sum(sum(p.numel()*p.element_size() for p in m.model.parameters()) for m in proxies)/2**30
+        total=sum(sum(p.numel()*p.element_size() for p in (m.model.model.vision_tower if m.spec['family']=='gemma4' else m.model).parameters()) for m in proxies)/2**30
         resident=total<=35
         if resident:
             for m in proxies:m.to('cuda')
@@ -103,9 +141,10 @@ def main():
         def park(m):
             if not resident:m.to('cpu');gc.collect();torch.cuda.empty_cache()
         for tid in args.transitions:
-            manifest=OUT/'manifests'/('dev' if args.split=='smoke' else args.split)/f'{tid}.jsonl'
+            manifest=OUT/'manifests'/('dev' if args.split=='smoke' else 'test' if args.split=='target_pilot' else args.split)/f'{tid}.jsonl'
             all_records=records(manifest)
             if args.split=='smoke':all_records=all_records[:2]
+            if args.limit_per_direction:all_records=all_records[:args.limit_per_direction]
             source=int(all_records[0]['human_label']);target=source+1
             for start in range(0,len(all_records),args.batch_size):
                 batch=all_records[start:start+args.batch_size]
@@ -123,17 +162,35 @@ def main():
                     if restart:noise=torch.empty_like(clean).uniform_(-16/255,16/255,generator=rng)
                     adv=project(clean+noise,clean).detach().requires_grad_(True)
                     momentum=torch.zeros_like(adv)
+                    variance=[torch.zeros_like(adv) for _ in proxies]
                     di_rng=torch.Generator().manual_seed(args.seed+restart*10000+start)
                     history=[]
                     for step in range(args.steps):
                         grads=[];loss_values=[];margin_values=[]
                         # Shared DI view across proxies; candidates for adaptive weights are unaugmented.
                         di_state=di_rng.get_state()
-                        for m in proxies:
+                        for mi,m in enumerate(proxies):
                             activate(m);di_rng.set_state(di_state)
-                            view=differentiable_resize_pad(adv,generator=di_rng) if args.input_diversity else adv
-                            loss,margin=objective(m,view,source,target,config)
-                            grad=torch.autograd.grad(loss.sum(),adv)[0].detach().float();m.backward_calls+=1
+                            sample_grads=[];sample_losses=[];sample_margins=[]
+                            for _ in range(config.get('eot_samples',1)):
+                                look=adv
+                                if config.get('nesterov'):
+                                    look=project(adv-momentum/(momentum.abs().flatten(1).mean(1).clamp_min(1e-12)[:,None,None,None]*255),clean)
+                                view=differentiable_resize_pad(look,generator=di_rng) if args.input_diversity else look
+                                if config.get('frequency_rho',0):view=frequency_view(view,config['frequency_rho'],di_rng)
+                                loss,margin=objective(m,view,source,target,config)
+                                sample_grads.append(torch.autograd.grad(loss.sum(),adv)[0].detach().float());m.backward_calls+=1
+                                sample_losses.append(loss.detach());sample_margins.append(margin.detach())
+                            loss=torch.stack(sample_losses).mean(0);margin=torch.stack(sample_margins).mean(0)
+                            base_grad=torch.stack(sample_grads).mean(0);grad=base_grad+variance[mi]
+                            if config.get('variance_samples',0):
+                                neighbors=[]
+                                for _ in range(config['variance_samples']):
+                                    noise=(torch.rand(adv.shape,generator=di_rng).to(adv.device)*2-1)*(8/255)
+                                    local=project(adv.detach()+noise,clean).requires_grad_(True)
+                                    vl,_=objective(m,local,source,target,config)
+                                    neighbors.append(torch.autograd.grad(vl.sum(),local)[0].detach());m.backward_calls+=1
+                                variance[mi]=torch.stack(neighbors).mean(0)-base_grad
                             if not torch.isfinite(grad).all() or (grad.flatten(1).abs().sum(1)==0).any():raise RuntimeError(f'Invalid gradient: {m.name}/{tid}/step{step}')
                             grads.append(grad);loss_values.append(loss.detach());margin_values.append(margin.detach());park(m)
                         stack=torch.stack(grads);ng=normalize_pixel_gradients(stack)
@@ -150,7 +207,7 @@ def main():
                                         candidate_loss,_=objective(m,candidate,source,target,config)
                                         improvements[i,j]=current-candidate_loss
                                     park(m)
-                            weights=adaptive_weights_from_surrogate_lookahead(improvements).detach()
+                            weights=adaptive_weights_from_surrogate_lookahead(improvements,temperature=config.get('adaptive_temperature',.20)).detach()
                         fused=fuse_proxy_gradients(stack,mode=args.fusion,weights=weights)
                         if args.smoothing:
                             axis=torch.arange(-2,3,device='cuda').float();kernel=torch.exp(-axis.square()/2);kernel=kernel[:,None]*kernel[None,:];kernel=kernel/kernel.sum()

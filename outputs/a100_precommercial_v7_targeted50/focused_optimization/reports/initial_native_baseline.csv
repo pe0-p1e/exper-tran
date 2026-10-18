@@ -1,0 +1,16 @@
+model,transition,hits,denominator,native_ASR,condition
+Qwen3.5-9B,T01,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Qwen3.5-9B,T03,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Qwen3.5-9B,T05,1,2,0.5,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Qwen3.5-9B,T07,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Qwen3.5-9B,T09,1,2,0.5,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Gemma 4 E4B-it,T01,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Gemma 4 E4B-it,T03,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Gemma 4 E4B-it,T05,1,2,0.5,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Gemma 4 E4B-it,T07,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+Gemma 4 E4B-it,T09,1,2,0.5,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+InternVL3.5-8B-HF,T01,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+InternVL3.5-8B-HF,T03,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+InternVL3.5-8B-HF,T05,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+InternVL3.5-8B-HF,T07,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
+InternVL3.5-8B-HF,T09,2,2,1.0,A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1
