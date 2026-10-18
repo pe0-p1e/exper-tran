@@ -23,9 +23,19 @@ def main():
  r=OUT/'ten_hour_research';r.mkdir(parents=True,exist_ok=True)
  state=json.loads((r/'state.json').read_text()) if (r/'state.json').exists() else dict(results=[],failures=[],skipped=[])
  budget=json.loads((r/'budget.json').read_text()) if (r/'budget.json').exists() else {}
- shutil.copyfile(EXP/'ten_hour_plan.yaml',r/'experiment_plan.yaml')
+ shutil.copyfile(EXP/'twenty_hour_plan.yaml',r/'experiment_plan.yaml')
  atomic_json(r/'model_revisions.json',json.loads((OUT/'audits/model_revisions.json').read_text()))
  lock=json.loads((r/'selected_method_lock.json').read_text()) if (r/'selected_method_lock.json').exists() else {}
+ diagnostics=[]
+ for item in state['results']:
+  for path in Path(item['root']).glob('T*/batch_*/state.json'):
+   batch=json.loads(path.read_text())
+   for restart,trace in enumerate(batch.get('trace',[])):
+    if not trace:continue
+    cosines=np.array([x['pairwise_cosines'] for x in trace],dtype=float)
+    cancellation=np.array([x['cancellation_ratio'] for x in trace],dtype=float)
+    diagnostics.append(dict(condition=item['config']['id'],family=item['config'].get('family','unknown'),transition=batch['transition_id'],batch=path.parent.name,restart=restart,images=len(batch['image_ids']),mean_pairwise_gradient_cosine=float(cosines.mean()) if cosines.size else None,negative_pairwise_cosine_fraction=float((cosines<0).mean()) if cosines.size else None,mean_equal_mean_cancellation_ratio=float(cancellation.mean()),initial_proxy_losses=json.dumps(trace[0]['losses']),last_preupdate_proxy_losses=json.dumps(trace[-1]['losses']),initial_proxy_margins=json.dumps(trace[0]['margins']),last_preupdate_proxy_margins=json.dumps(trace[-1]['margins']),runtime_seconds=batch['runtime_seconds'],peak_reserved_gib=batch['peak_reserved_gib']))
+ savecsv(r/'gradient_mechanism_diagnostics.csv',diagnostics)
  rows=[];detailed=[];masks={};linf_violations=[];cohort_errors=[]
  for condition in lock.get('allowed_test_conditions',[]):
   for target in TARGETS:
@@ -80,7 +90,7 @@ def main():
   f.write(f'\n## Final execution validation\n\nProcess exit: {a.exit_code}; research conditions: {len(state["results"])}; failed attempts: {len(state["failures"])}. All final cells complete: {all_complete}. Selected method meets >=15/30 in all 15 cells: {goal}.\n')
   f.write('\n| Condition | Target | Direction | Hits/N | Clean-correct hits/N |\n|---|---|---|---|---|\n')
   for x in rows:f.write(f"| {x['condition']} | {x['target']} | {x['transition']} | {x['hits']}/{x['denominator']} | {x['clean_correct_hits']}/{x['clean_correct']} |\n")
-  f.write('\nLegacy conditional TASR is N/A because no all-proxy native-output hit event was measured. Missing measurements are not zero. Nested development confirmation is not an untouched generalization set. The final test cohort is independent and unchanged. Actual wall runtime is in end_of_budget.json; a budget of ten hours does not imply that ten hours of GPU compute occurred.\n')
+  f.write('\nLegacy conditional TASR is N/A because no all-proxy native-output hit event was measured. Missing measurements are not zero. Nested development confirmation is not an untouched generalization set. The final test cohort is independent and unchanged. Actual wall runtime is in end_of_budget.json; the 20-hour budget is an upper limit, not measured GPU compute. Gradient diagnostics describe pairwise cosine negativity, not pixelwise sign disagreement; cancellation ratio is measured for the unfused equal mean even when a different fusion is used. Trace endpoints are before their respective update.\n')
  # Export a few real success/failure examples, with raw answer metadata.
  gallery=[]
  for wanted in [True,False]:

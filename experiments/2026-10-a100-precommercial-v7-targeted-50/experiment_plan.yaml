@@ -126,3 +126,9 @@ focused_research_priority_override:
   exploratory_proxy_compositions: allowed
   only_small_ablations_after_success: true
   primary_30_image_cohort: unchanged
+
+user_approved_extended_research:
+  total_budget_hours: 20
+  plan: twenty_hour_plan.yaml
+  preserve_original_start_and_completed_work: true
+  final_target_feedback: forbidden

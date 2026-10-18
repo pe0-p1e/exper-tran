@@ -19,3 +19,7 @@ At most four GPU workers are permitted; the current conservative scheduler runs 
 Results are under `outputs/a100_precommercial_v7_targeted50/ten_hour_research/`. Partial measurements are not zeros. Undefined legacy conditional TASR remains N/A when native proxy hit masks were not measured. The finalizer checks frozen PNG hashes, uint8 perturbation bounds and test-cohort identity, emits paired comparisons and exact binomial intervals, and optionally performs post-hoc target geometry if budget remains. It must not describe budget-skipped analysis as completed.
 
 Full PNGs/checkpoints stay on persistent root storage. Only compact report data, audits and a few real examples are uploaded. Commercial APIs are not used.
+
+## Superseded budget
+
+The user subsequently extended this same campaign to a total 20-hour budget; see `TWENTY_HOUR_RESEARCH.md`. Historical filenames are retained to resume completed work.

@@ -14,9 +14,20 @@ exec > >(tee -a "$OUT/ten_hour_research/run.log") 2>&1
 PY="$ROOT/.venv-a100/bin/python"
 "$PY" -m pytest -q experiments/2026-10-a100-precommercial-v7-targeted-50/tests
 REMAINING="$($PY - <<'PY'
-import json,time,pathlib
+import json,time,pathlib,sys,os
+sys.path.insert(0,'experiments/2026-10-a100-precommercial-v7-targeted-50/src')
+from extended_research_plan import extended_budget
+from v7_common import atomic_json
 p=pathlib.Path('outputs/a100_precommercial_v7_targeted50/ten_hour_research/budget.json')
-print(max(1,int(json.loads(p.read_text())['deadline']-time.time())) if p.exists() else 36000)
+old=json.loads(p.read_text()) if p.exists() else None
+# User-approved total 20-hour budget, measured from the original campaign start.
+# Repeated resumes do not add another 20 hours or shorten a larger prior budget.
+budget=extended_budget(old,float(os.environ.get('V7_RESEARCH_HOURS','20')),time.time())
+lock=p.parent/'selected_method_lock.json'
+if old and lock.exists() and budget['deadline']!=old['deadline']:
+    raise RuntimeError('Cannot extend adaptive research after final method lock')
+atomic_json(p,budget)
+print(max(1,int(budget['deadline']-time.time())))
 PY
 )"
 set +e

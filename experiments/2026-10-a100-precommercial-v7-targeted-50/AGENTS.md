@@ -72,3 +72,7 @@ Read `FOCUSED_RESEARCH.md`. Pause the broad test/ablation queue. First optimize 
 ### Approved ten-hour campaign — 2026-10-18
 
 The user approved the ten-hour research prompt and requested actual execution. Read `TEN_HOUR_RESEARCH.md` and `ten_hour_plan.yaml`. Default launch now uses this time-budgeted research campaign, with the focused ten-image native-surrogate protocol, small loss mixtures, alternative proxy combinations, optimizer comparisons, independent method lock and untouched 30-image final evaluation. Budget exhaustion must leave honest partial reports and resumable artifacts. No final-target feedback may enter research selection.
+
+### User-approved twenty-hour extension — 2026-10-18
+
+The user explicitly requested additional research and a total 20-hour reservation. Read `TWENTY_HOUR_RESEARCH.md` and `twenty_hour_plan.yaml`. The original start time and completed artifacts are preserved; rerunning never adds another 20 hours. Keep final targets isolated. Add controlled layer/proxy removal, reference geometry and optimizer interactions, then nested 8-image/direction confirmation and matched singles. Existing scientific constraints remain unchanged.

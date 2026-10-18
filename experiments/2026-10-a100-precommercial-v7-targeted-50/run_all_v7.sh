@@ -15,7 +15,7 @@ export OMP_NUM_THREADS="${OMP_NUM_THREADS:-4}" OPENBLAS_NUM_THREADS="${OPENBLAS_
 MODE=tenhour
 for arg in "$@"; do
   case "$arg" in
-    --preflight) MODE=preflight;; --smoke) MODE=smoke;; --pilot|--focus) MODE=focus;; --ten-hour) MODE=tenhour;; --legacy-full) MODE=full;; --full|--resume) :;;
+    --preflight) MODE=preflight;; --smoke) MODE=smoke;; --pilot|--focus) MODE=focus;; --ten-hour|--twenty-hour) MODE=tenhour;; --legacy-full) MODE=full;; --full|--resume) :;;
     *) echo "Unknown option: $arg"; exit 2;;
   esac
 done
