@@ -58,7 +58,10 @@ def objective(proxy,x,source,target,config):
         if config['loss']=='pull_push':loss=original_pull_push_loss(z,bank,source,target,reduction='none')
         else:
             loss=all_class_margin_loss(scores,target,reduction='none',temperature=config.get('temperature',.05),margin=config.get('margin',.05),negative_mode=config.get('negative_mode','logsumexp'))
-            if config['loss']=='combined':loss=.5*loss+.5*original_pull_push_loss(z,bank,source,target,reduction='none')
+            if config['loss']=='combined':
+                mix=config.get('margin_weight',.5)
+                if not 0<=mix<=1:raise ValueError('Invalid margin mixture weight')
+                loss=mix*loss+(1-mix)*original_pull_push_loss(z,bank,source,target,reduction='none')
         pw=config.get('patch_weight',0.)
         if pw:
             patch=local_patch_target_loss(tokens,patches[target-1],patches[source-1],patch_mask=mask,reduction='none')

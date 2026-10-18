@@ -47,8 +47,8 @@ def dev_evaluate(root, validators):
         finally:m.close()
 
 
-def test_evaluate(root, target):
-    lock=OUT/'audits/method_lock.json'
+def test_evaluate(root, target, lock_override=None):
+    lock=lock_override or OUT/'audits/method_lock.json'
     if not lock.is_file():raise RuntimeError('Final target evaluation requires immutable method lock')
     decision=json.loads(lock.read_text())
     if root.name not in decision['allowed_test_conditions']:raise RuntimeError('Condition not predeclared in lock')
@@ -84,9 +84,9 @@ def test_evaluate(root, target):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--validators',nargs='+',default=['Qwen3.5-4B','InternVL3.5-4B-HF']);p.add_argument('--target',choices=TARGETS)
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--validators',nargs='+',default=['Qwen3.5-4B','InternVL3.5-4B-HF']);p.add_argument('--target',choices=TARGETS);p.add_argument('--method-lock',type=Path)
     a=p.parse_args()
-    if a.target:test_evaluate(a.root,a.target)
+    if a.target:test_evaluate(a.root,a.target,a.method_lock)
     else:dev_evaluate(a.root,a.validators)
 
 if __name__=='__main__':main()

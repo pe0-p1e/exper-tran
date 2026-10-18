@@ -29,7 +29,7 @@ def launch(cfg, smoke=False):
     cp=FOCUS/'configs'/f'{label}.json'
     if cp.exists() and json.loads(cp.read_text())!=options:raise RuntimeError('Never overwrite an existing research condition')
     atomic_json(cp,options)
-    args=['--models',*cfg['models'],'--method',method,'--fusion',cfg.get('fusion','equal'),'--split','dev','--limit-per-direction',2,'--steps',2 if smoke else 50,'--batch-size',2,'--run-label',label,'--config-json',cp]
+    args=['--models',*cfg['models'],'--method',method,'--fusion',cfg.get('fusion','equal'),'--split','dev','--limit-per-direction',cfg.get('n_per_direction',2),'--steps',2 if smoke else cfg.get('steps',50),'--seed',cfg.get('seed',42),'--restarts',cfg.get('restarts',1),'--batch-size',2,'--run-label',label,'--config-json',cp]
     if smoke:args+=['--transitions','T01']
     if cfg.get('di',True):args+=['--input-diversity']
     if cfg.get('ti'):args+=['--smoothing']
@@ -38,7 +38,7 @@ def launch(cfg, smoke=False):
     name=f"{label}__{method}__{cfg.get('fusion','equal')}__"+'+'.join(n.replace('/','_').replace(' ','_') for n in cfg['models'])
     if cfg.get('di',True):name+='__DI'
     if cfg.get('ti'):name+='__TI'
-    name+=f'__s42__i{2 if smoke else 50}__r1'
+    name+=f"__s{cfg.get('seed',42)}__i{2 if smoke else cfg.get('steps',50)}__r{cfg.get('restarts',1)}"
     return OUT/'attacks/dev'/name
 
 

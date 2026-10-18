@@ -1,0 +1,63 @@
+version: v7-ten-hour-native-surrogate-research
+budget_hours: 10
+resume_extends_deadline: false
+max_gpu_workers: 4
+actual_gpu_workers: 1
+parameter_precision: strict_bfloat16
+quantization: forbidden
+peak_reserved_gib_limit: 75
+attack:
+  image_size: 224
+  epsilon: 16/255
+  steps: 50
+  step_size: 1/255
+  momentum: 1
+  random_start: true
+  seed: 42
+  seed_confirmation: [43, 44]
+data:
+  reference_images_per_class: 48
+  pilot_images_per_direction: 2
+  pilot_total_images_per_model: 10
+  nested_confirmation_images_per_direction: 8
+  nested_confirmation_overlaps_initial_pilot: true
+  official_test_images_per_direction: 30
+  directions: [T01, T03, T05, T07, T09]
+  prediction_based_selection: false
+validation_models: [Qwen3.5-9B, InternVL3.5-8B-HF, Gemma 4 E4B-it]
+final_targets: [Qwen3.5-27B, InternVL3.5-14B-HF, Gemma 4 31B-it]
+selection:
+  metric: native_generated_label_targeted_ASR
+  ranking: [minimum_model_direction_ASR, pooled_ASR, runtime_tie_break]
+  select_best_ensemble_and_best_single_separately: true
+  target_feedback_for_selection: forbidden
+loss_ladder:
+  - original_pull_push_deepest
+  - centroid_margin_deepest
+  - reference_distribution_margin_deepest
+  - four_layer_margin
+  - global_local_patch_margin
+  - vision_projector_margin
+  - reference_centered_margin
+  - hardest_negative_margin
+mixtures:
+  margin_pull_push_weights: [0.25, 0.50, 0.75]
+  local_weights: [0.10, 0.35]
+  projector_weights: [0.25, 0.75]
+proxy_pool:
+  - CLIP ViT-L/14
+  - SigLIP2-So400m-patch14-384
+  - DINOv2-Large
+  - Qwen3.5-2B
+  - Qwen3.5-4B
+  - InternVL3.5-2B-HF
+  - InternVL3.5-4B-HF
+  - Gemma 4 E2B-it
+  - Gemma 4 26B-A4B-it
+optimizers: [equal, adaptive, pcgrad, adaptive_pcgrad, nesterov, variance_tuning, spectral_EOT, DI_control, TI]
+additional_forwards_are_reported: true
+reserve_for_final_generation_evaluation_seconds: 5400
+final_conditions: [selected_ensemble, strongest_validated_single, original_pull_push_same_ensemble]
+zero_denominator_conditional_TASR: NA
+partial_final_cells: explicitly_missing_not_zero
+output_root: outputs/a100_precommercial_v7_targeted50/ten_hour_research

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Post-freeze geometry. These features never enter method selection."""
 import json
+import argparse
 from pathlib import Path
 import numpy as np
 import torch
@@ -31,13 +32,15 @@ def rsa(x,y):
 
 
 def main():
-    lock=json.loads((OUT/'audits/method_lock.json').read_text())
+    parser=argparse.ArgumentParser();parser.add_argument('--method-lock',type=Path,default=OUT/'audits/method_lock.json');parser.add_argument('--analysis-dir',type=Path,default=OUT/'analysis');parser.add_argument('--results-csv',type=Path,default=OUT/'reports/target_direction_results.csv');args=parser.parse_args()
+    A=args.analysis_dir;A.mkdir(parents=True,exist_ok=True)
+    lock=json.loads(args.method_lock.read_text())
     states=[]
     for c in lock['allowed_test_conditions']:
         for p in sorted((OUT/'attacks/test'/c).glob('T*/batch_*/state.json')):
             d=json.loads(p.read_text());states.append((c,d))
     # Reuse frozen image features by content hash, model revision and pooling.
-    proxy_names=sorted(set(n for c in lock['test_conditions'] for n in c['models']))
+    proxy_names=sorted(set(n for c in lock.get('test_conditions',lock.get('configs',[])) for n in c['models']))
     all_names=list(TARGETS)+proxy_names
     summaries=[];image_rows=[];variance=[];features={}
     for name in all_names:
@@ -52,7 +55,7 @@ def main():
                 zs=[]
                 for path in paths:
                     key=fingerprint([sha(OUT/path),REGISTRY[name],m.layers,'V6_spatial_mean'])
-                    cache=OUT/'analysis/embeddings'/name.replace('/','_')/f'{key}.npy'
+                    cache=A/'embeddings'/name.replace('/','_')/f'{key}.npy'
                     if cache.exists():z=np.load(cache)
                     else:
                         with torch.inference_mode():z=m.features(load_png_tensor(OUT/path)[None].cuda())[m.layers[0]][0][0].float().cpu().numpy()
@@ -92,9 +95,9 @@ def main():
                                 offset=len(groups[0])+len(groups[1])
                                 for i in range(30):ax.annotate('',coords[offset+30+i],coords[offset+i],arrowprops=dict(arrowstyle='->',alpha=.25,lw=.5))
                             ax.legend(fontsize=8);ax.set_title(f'{name} {tid}: joint {mode.upper()}');fig.tight_layout();fig.savefig(dst/'plot.png',dpi=160);plt.close(fig)
-            writecsv(OUT/'analysis/representation_shift/summary.csv',summaries)
-            writecsv(OUT/'analysis/representation_shift/per_image.csv',image_rows)
-            writecsv(OUT/'analysis/variance/class_variance.csv',variance)
+            writecsv(A/'representation_shift/summary.csv',summaries)
+            writecsv(A/'representation_shift/per_image.csv',image_rows)
+            writecsv(A/'variance/class_variance.csv',variance)
         finally:m.close()
     cross=[]
     for c in lock['allowed_test_conditions']:
@@ -106,16 +109,18 @@ def main():
                     for kind,index in [('clean',0),('adversarial',1)]:
                         x=np.stack([features[c,tid,i,proxy][index] for i in ids]);y=np.stack([features[c,tid,i,target][index] for i in ids])
                         cross.append(dict(condition=c,target=target,proxy=proxy,transition=tid,kind=kind,CKA=cka(x,y),RSA=rsa(x,y)))
-    writecsv(OUT/'analysis/cross_model/cka_rsa.csv',cross)
+    writecsv(A/'cross_model/cka_rsa.csv',cross)
     # Correlations are exploratory aggregate associations, not a tuning criterion.
     import pandas as pd
-    table=pd.read_csv(OUT/'reports/target_direction_results.csv')
+    table=pd.read_csv(args.results_csv)
     geom=pd.DataFrame([r for r in summaries if r['model'] in TARGETS]).rename(columns={'model':'target'})
     joined=table.merge(geom,on=['condition','target','transition'],validate='one_to_one')
-    joined.to_csv(OUT/'analysis/measurement_table.csv',index=False)
+    joined.to_csv(A/'measurement_table.csv',index=False)
     cols=['ASR','DeltaR','delta_pull','delta_push','prototype_distance','clean_margin','margin_change','clean_adv_CKA','clean_adv_RSA']
-    corr=joined[cols].corr(method='spearman');dst=OUT/'analysis/correlations';dst.mkdir(parents=True,exist_ok=True);corr.to_csv(dst/'spearman.csv')
+    corr=joined[cols].corr(method='spearman');dst=A/'correlations';dst.mkdir(parents=True,exist_ok=True);corr.to_csv(dst/'spearman.csv')
     fig,ax=plt.subplots(figsize=(9,7));im=ax.imshow(corr,vmin=-1,vmax=1,cmap='coolwarm');ax.set_xticks(range(len(cols)),cols,rotation=65,ha='right');ax.set_yticks(range(len(cols)),cols);fig.colorbar(im,ax=ax);fig.tight_layout();fig.savefig(dst/'heatmap.png',dpi=160);plt.close(fig)
-    atomic_json(OUT/'audits/posthoc_analysis.json',dict(status='complete',method_lock_sha256=sha(OUT/'audits/method_lock.json'),target_feedback_for_attack=False,geometry_rows=len(summaries),cross_model_rows=len(cross),asymmetry='not_estimable_without_reverse_direction_runs',tsne='qualitative; distances not quantitative evidence'))
+    atomic_json(A/'posthoc_analysis.json',dict(status='complete',method_lock_sha256=sha(args.method_lock),target_feedback_for_attack=False,geometry_rows=len(summaries),cross_model_rows=len(cross),asymmetry='not_estimable_without_reverse_direction_runs',tsne='qualitative; distances not quantitative evidence'))
+
+    if A==OUT/'analysis':atomic_json(OUT/'audits/posthoc_analysis.json',json.loads((A/'posthoc_analysis.json').read_text()))
 
 if __name__=='__main__':main()

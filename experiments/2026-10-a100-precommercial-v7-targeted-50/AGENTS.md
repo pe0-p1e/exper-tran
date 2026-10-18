@@ -68,3 +68,7 @@ A100 80GB; full model BF16; sequential offload; grouped reference cache; resume 
 ### User execution-priority override — 2026-10-18
 
 Read `FOCUSED_RESEARCH.md`. Pause the broad test/ablation queue. First optimize promising algorithms AND alternative multi-proxy compositions using only ten fixed development images (two per direction) and native held-out-surrogate output validation. Run small ablations only after pilot performance is promising. No changes to the 30-image formal benchmark, no target feedback during tuning, no false claim of 15/30 from a two-image pilot. Default launcher follows the focused queue; preserve existing V7 locks and artifacts.
+
+### Approved ten-hour campaign — 2026-10-18
+
+The user approved the ten-hour research prompt and requested actual execution. Read `TEN_HOUR_RESEARCH.md` and `ten_hour_plan.yaml`. Default launch now uses this time-budgeted research campaign, with the focused ten-image native-surrogate protocol, small loss mixtures, alternative proxy combinations, optimizer comparisons, independent method lock and untouched 30-image final evaluation. Budget exhaustion must leave honest partial reports and resumable artifacts. No final-target feedback may enter research selection.
