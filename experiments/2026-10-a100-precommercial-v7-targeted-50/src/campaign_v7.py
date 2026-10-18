@@ -136,7 +136,9 @@ def execute_frozen_tests(tests, task):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--mode',choices=['preflight','smoke','pilot','full'],default='full');p.add_argument('--resume',action='store_true')
-    a=p.parse_args();prepare_data();failures=[]
+    a=p.parse_args();prepare_data()
+    failure_path=OUT/'audits/campaign_failures.json'
+    failures=json.loads(failure_path.read_text()) if failure_path.is_file() else []
     def task(label,fn):
         atomic_json(OUT/'audits/current_stage.json',dict(stage=label,started=time.time()))
         print(f'[stage] {label}',flush=True)
@@ -187,11 +189,17 @@ def main():
             ensure_models(c['models']);root=attack(c,'dev');evaluate_dev(root);return c
         result=task('fusion-dev '+condition_name(cfg),run)
         if result is not None:evaluated.append(result)
-    finalist=max((c for c in evaluated if len(c['models'])>1),key=dev_score)
+    finalist=max((c for c in evaluated if len(c['models'])>1 and c.get('restarts',1)==1),key=dev_score)
     # Finalist & matched individual proxies & original equal ensemble, seeds predeclared.
     tests=[{**finalist,'seed':s} for s in [42,43,44]]
-    tests+=[dict(models=[n],method=finalist['method']) for n in set(finalist['models']+INITIAL)]
-    tests+=[dict(models=[n],method='A0') for n in set(finalist['models']+INITIAL)]
+    tests+=[dict(models=[n],method=finalist['method']) for n in sorted(set(finalist['models']+INITIAL))]
+    tests+=[dict(models=[n],method='A0') for n in sorted(set(finalist['models']+INITIAL))]
+    # Separate computation controls: same proxy-image gradient count, with
+    # extra single-proxy budget visibly labeled in the condition name.
+    if len(finalist['models'])==2:
+        tests += [dict(models=[n],method=finalist['method'],steps=100) for n in finalist['models']]
+    elif len(finalist['models'])==3:
+        tests += [dict(models=[n],method=finalist['method'],restarts=3) for n in finalist['models']]
     tests += loss_configs
     tests += [c for c in candidates if len(c['models'])>1 and c.get('restarts',1)==1]
     tests+=[dict(models=INITIAL,method='A0'),dict(models=INITIAL,method=best_loss)]
