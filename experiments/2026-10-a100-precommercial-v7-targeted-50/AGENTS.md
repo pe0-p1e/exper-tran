@@ -5,6 +5,7 @@
 The user has explicitly overridden the earlier V6 recovery's `do_not_trigger_v7` gate: the observed max 13.3–14.0% pooled target ASR is far below the desired standard. This V7 is authorized **now**, independent of the old gate. Research objective: **>=50% targeted ASR on EACH of the three targets and EACH of the five original directed transitions**, NOT just the mean or whichever easy classes succeed. With 30 images per direction, `>=15/30` is the minimum, and `>=16/30` is the preferred strictly-above-50% milestone. For each target, all five directions must meet the minimum; selected final algorithm and evaluation protocol must be clearly identified. Report lower results truthfully; this is an aspirational performance target, not a license to fabricate success or game evaluation.
 
 You must read these before changes:
+- `ALGORITHM_REDESIGN.md` — mandatory detailed implementation of feature objective, ensemble fusion and transfer optimization, with controlled experiment ladder.
 - `../2026-10-a100-precommercial-v6/MULTIPLE_PROXY_RECOVERY.md`
 - `../2026-10-a100-precommercial-v6/multiple_proxy_recovery.yaml`
 - `../2026-10-a100-precommercial-v6/V7_OPTIMIZATION_GATE.md`
