@@ -122,6 +122,7 @@ def local_patch_target_loss(
     patch_mask: Tensor | None = None,
     temperature: float = 0.07,
     margin: float = 0.05,
+    reduction: Literal["mean", "none"] = "mean",
 ) -> Tensor:
     """Patch-level contrastive term with *surrogate-specific* patch prototypes.
 
@@ -161,9 +162,10 @@ def local_patch_target_loss(
         weights = patch_mask.float()
         if (weights.sum(dim=1) <= 0).any():
             raise ValueError("Image with no valid patch tokens")
-        return ((patch_loss * weights).sum(dim=1) /
-                weights.sum(dim=1)).mean()
-    return patch_loss.mean()
+        per_image = (patch_loss * weights).sum(dim=1) / weights.sum(dim=1)
+    else:
+        per_image = patch_loss.mean(dim=1)
+    return per_image.mean() if reduction == "mean" else per_image
 
 
 def combine_multi_layer(

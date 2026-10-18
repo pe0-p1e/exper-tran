@@ -105,3 +105,33 @@ def test_invalid_arguments_are_rejected():
         local_patch_target_loss(torch.zeros(2,4,8), torch.zeros(4,7), torch.zeros(4,7))
     with pytest.raises(ValueError):
         fuse_proxy_gradients(torch.randn(2, 1, 3, 4, 4), mode="weighted", weights=torch.zeros(2))
+
+
+def test_margin_descent_improves_target_against_all_rivals():
+    # Orthogonal reference classes make the intended direction unambiguous.
+    refs=torch.eye(10)[:,None,:].repeat(1,3,1).to(torch.bfloat16)
+    z=torch.zeros(1,10);z[0,0]=1;z.requires_grad_(True)
+    scores=class_scores(z,refs)
+    loss=all_class_margin_loss(scores,2)
+    grad=torch.autograd.grad(loss,z)[0]
+    after=class_scores(z-.1*grad,refs)
+    assert after[0,1]-after[0,0] > scores[0,1]-scores[0,0]
+    assert all_class_margin_loss(after,2) < loss
+
+
+def test_opposing_proxy_gradients_are_not_artificially_amplified():
+    gradients=torch.tensor([1.,-1.]).reshape(2,1,1,1,1).expand(2,1,3,2,2)
+    fused=fuse_proxy_gradients(gradients,mode='pcgrad')
+    assert torch.allclose(fused,torch.zeros_like(fused))
+
+
+def test_patch_per_image_reduction_matches_mean_and_ignores_padding():
+    x=torch.randn(3,7,5,requires_grad=True)
+    mask=torch.ones(3,7,dtype=torch.bool);mask[:,-1]=False
+    target=torch.randn(4,5);source=torch.randn(4,5)
+    per=local_patch_target_loss(x,target,source,patch_mask=mask,reduction='none')
+    mean=local_patch_target_loss(x,target,source,patch_mask=mask)
+    assert per.shape==(3,)
+    assert torch.allclose(per.mean(),mean)
+    grad=torch.autograd.grad(per.sum(),x)[0]
+    assert grad[:,-1].abs().max()==0
