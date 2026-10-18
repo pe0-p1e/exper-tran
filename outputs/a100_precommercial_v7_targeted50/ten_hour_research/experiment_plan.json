@@ -1,0 +1,29 @@
+{
+  "budget": {
+    "started": 1792342741.2735343,
+    "deadline": 1792414741.2735343,
+    "hours": 20.0
+  },
+  "validators": [
+    "Qwen3.5-9B",
+    "InternVL3.5-8B-HF",
+    "Gemma 4 E4B-it"
+  ],
+  "targets": [
+    "Qwen3.5-27B",
+    "InternVL3.5-14B-HF",
+    "Gemma 4 31B-it"
+  ],
+  "selection": "worst native surrogate direction ASR, pooled native ASR; cost tie break",
+  "initial_images_per_direction": 2,
+  "reference_count": 48,
+  "parameter_dtype": "bfloat16",
+  "final_target_feedback": false,
+  "extended_research_families": [
+    "layer_mechanism",
+    "proxy_complementarity",
+    "reference_geometry",
+    "interaction"
+  ],
+  "final_reserve_seconds": 21600
+}

@@ -1,0 +1,87 @@
+{
+  "selected": {
+    "config": {
+      "id": "T10_confirm_0",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "family": "confirmation",
+      "n_per_direction": 8
+    },
+    "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_confirm_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "score": [
+      0.75,
+      0.9666666666666667
+    ],
+    "seconds": 330.62166833877563
+  },
+  "configs": [
+    {
+      "id": "T10_final_0",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "family": "confirmation",
+      "n_per_direction": 30,
+      "seed": 42
+    },
+    {
+      "id": "T10_final_1",
+      "models": [
+        "Qwen3.5-2B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "family": "matched_single_confirmation",
+      "n_per_direction": 30,
+      "fusion": "equal",
+      "seed": 42
+    },
+    {
+      "id": "T10_final_pullpush",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A0",
+      "options": {},
+      "n_per_direction": 30,
+      "di": false
+    }
+  ],
+  "allowed_test_conditions": [
+    "focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+    "focus_T10_final_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1"
+  ],
+  "targets": [
+    "Qwen3.5-27B",
+    "InternVL3.5-14B-HF",
+    "Gemma 4 31B-it"
+  ],
+  "selection": "held-out surrogate native outputs only",
+  "final_target_feedback": false,
+  "validation_confirmation_is_nested": true,
+  "test_manifest_hashes": {
+    "T01": "e6f83cae3588ae90f0ef555ee2b8abe9cdcd5c647d0ca7276d809b8c20c728d2",
+    "T03": "c4835746e38de85160cd7330f5af7e2db5294c9b20464653147149b20cbd6b65",
+    "T05": "fe3d0cad89660c7842156cd16162a3154cb0b3c05100a892ee4433207a2fe56c",
+    "T07": "cdb48f1c51df6f463fe2730b82850fbd5500f8e15754ee856790bfbcd598a4f7",
+    "T09": "e4753c28b39117d7862719eb70c9e12700707a9848ac8965763865cf5d6c9af3"
+  }
+}

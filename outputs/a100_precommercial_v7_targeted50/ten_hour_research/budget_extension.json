@@ -1,0 +1,10 @@
+{
+  "request": "user approved more research and total 20 hours",
+  "at": 1792344121.4023368,
+  "previous_budget": {
+    "started": 1792342741.2735343,
+    "deadline": 1792378741.2735345,
+    "hours": 10
+  },
+  "preserve_original_start": true
+}

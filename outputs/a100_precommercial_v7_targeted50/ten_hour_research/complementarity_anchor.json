@@ -1,0 +1,15 @@
+{
+  "id": "T20_reference_2",
+  "models": [
+    "Qwen3.5-2B",
+    "InternVL3.5-2B-HF"
+  ],
+  "method": "A3",
+  "fusion": "equal",
+  "options": {
+    "patch_weight": 0.35,
+    "aggregation": "soft_reference",
+    "reference_temperature": 0.05
+  },
+  "family": "reference_geometry"
+}

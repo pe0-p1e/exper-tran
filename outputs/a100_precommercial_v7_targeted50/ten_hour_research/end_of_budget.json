@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "finished": 1792358344.5896482,
+  "research_conditions": 97,
+  "failed_attempts": 0,
+  "budget_skipped": [],
+  "budget": {
+    "started": 1792342741.2735343,
+    "deadline": 1792414741.2735343,
+    "hours": 20.0
+  },
+  "actual_wall_seconds": 15603.316118001938,
+  "all_final_cells_complete": true
+}
