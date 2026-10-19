@@ -1,0 +1,66 @@
+sheet,original_excel_row,proxy_or_ensemble,target,proxy_layer,pull_push,prior_displayed_metric,rerun_reason,directed_pairs,images_per_pair
+Single Proxy,2,Qwen3.5-2B,InternVL3.5-4B-HF,23,0.75/0.25,10.32%,poor_reoptimize,5,30
+Single Proxy,3,Qwen3.5-2B,Gemma 4 E4B-it,23,0.75/0.25,4.00%,poor_reoptimize,5,30
+Single Proxy,4,InternVL3.5-2B-HF,Qwen3.5-4B,23,0.75/0.25,0.67%,poor_reoptimize,5,30
+Single Proxy,5,InternVL3.5-2B-HF,Gemma 4 E4B-it,23,0.75/0.25,2.67%,poor_reoptimize,5,30
+Single Proxy,6,Gemma 4 E2B-it,Qwen3.5-4B,15,0.75/0.25,2.67%,poor_reoptimize,5,30
+Single Proxy,7,Gemma 4 E2B-it,InternVL3.5-4B-HF,15,0.75/0.25,10.00%,poor_reoptimize,5,30
+Single Proxy,11,Gemma 4 E2B-it,Gemma 4 E4B-it,15,0.75/0.25,100.00%,control_strict_bf16,5,30
+Single Proxy,12,Gemma 4 E2B-it,Gemma 4 26B-A4B-it,15,0.75/0.25,4.00%,poor_reoptimize,5,30
+Single Proxy,13,Qwen3.5-2B,Qwen3.5-4B,23,0.75/0.25,73.60%,control_strict_bf16,5,30
+Single Proxy,14,Qwen3.5-2B,Qwen3.5-9B,23,0.75/0.25,16.00%,poor_reoptimize,5,30
+Single Proxy,15,InternVL3.5-2B-HF,InternVL3.5-4B-HF,23,0.75/0.25,35.57%,poor_reoptimize,5,30
+Single Proxy,16,InternVL3.5-2B-HF,InternVL3.5-8B-HF,23,0.75/0.25,20.81%,poor_reoptimize,5,30
+Various Embedding Layers,2,Qwen3.5-2B,Gemma 4 E4B-it,0,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,3,Qwen3.5-2B,Gemma 4 E4B-it,5,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,4,Qwen3.5-2B,Gemma 4 E4B-it,11,0.75/0.25,5.36%,poor_reoptimize,5,30
+Various Embedding Layers,5,Qwen3.5-2B,Gemma 4 E4B-it,17,0.75/0.25,4.05%,poor_reoptimize,5,30
+Various Embedding Layers,6,Qwen3.5-2B,Gemma 4 E4B-it,23,0.75/0.25,4.00%,poor_reoptimize,5,30
+Various Embedding Layers,7,InternVL3.5-2B-HF,Qwen3.5-4B,0,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,8,InternVL3.5-2B-HF,Qwen3.5-4B,5,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,9,InternVL3.5-2B-HF,Qwen3.5-4B,11,0.75/0.25,2.65%,poor_reoptimize,5,30
+Various Embedding Layers,10,InternVL3.5-2B-HF,Qwen3.5-4B,17,0.75/0.25,1.34%,poor_reoptimize,5,30
+Various Embedding Layers,11,InternVL3.5-2B-HF,Qwen3.5-4B,23,0.75/0.25,0.67%,poor_reoptimize,5,30
+Various Embedding Layers,12,Gemma 4 E2B-it,InternVL3.5-8B-HF,0,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,13,Gemma 4 E2B-it,InternVL3.5-8B-HF,3,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,14,Gemma 4 E2B-it,InternVL3.5-8B-HF,7,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,15,Gemma 4 E2B-it,InternVL3.5-8B-HF,11,0.75/0.25,16.19%,poor_reoptimize,5,30
+Various Embedding Layers,16,Gemma 4 E2B-it,InternVL3.5-8B-HF,15,0.75/0.25,4.67%,poor_reoptimize,5,30
+Various Embedding Layers,17,Qwen3.5-2B,Qwen3.5-4B,0,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,18,Qwen3.5-2B,Qwen3.5-4B,5,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,19,Qwen3.5-2B,Qwen3.5-4B,11,0.75/0.25,91.96%,control_strict_bf16,5,30
+Various Embedding Layers,20,Qwen3.5-2B,Qwen3.5-4B,17,0.75/0.25,85.14%,control_strict_bf16,5,30
+Various Embedding Layers,21,Qwen3.5-2B,Qwen3.5-4B,23,0.75/0.25,72.80%,control_strict_bf16,5,30
+Various Embedding Layers,22,InternVL3.5-2B-HF,InternVL3.5-4B-HF,0,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,23,InternVL3.5-2B-HF,InternVL3.5-4B-HF,5,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,24,InternVL3.5-2B-HF,InternVL3.5-4B-HF,11,0.75/0.25,33.02%,poor_reoptimize,5,30
+Various Embedding Layers,25,InternVL3.5-2B-HF,InternVL3.5-4B-HF,17,0.75/0.25,44.30%,poor_reoptimize,5,30
+Various Embedding Layers,26,InternVL3.5-2B-HF,InternVL3.5-4B-HF,23,0.75/0.25,38.67%,poor_reoptimize,5,30
+Various Embedding Layers,27,Gemma 4 E2B-it,Gemma 4 E4B-it,0,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,28,Gemma 4 E2B-it,Gemma 4 E4B-it,3,0.75/0.25,N/A,undefined_proxy_denominator,5,30
+Various Embedding Layers,29,Gemma 4 E2B-it,Gemma 4 E4B-it,7,0.75/0.25,0.00%,poor_reoptimize,5,30
+Various Embedding Layers,30,Gemma 4 E2B-it,Gemma 4 E4B-it,11,0.75/0.25,95.19%,control_strict_bf16,5,30
+Various Embedding Layers,31,Gemma 4 E2B-it,Gemma 4 E4B-it,15,0.75/0.25,100.00%,control_strict_bf16,5,30
+Multiple Proxy,2,InternVL3.5-2B-HF,Qwen3.5-27B,per_model_deepest,0.75/0.25,0%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,3,InternVL3.5-2B-HF + InternVL3.5-4B-HF,Qwen3.5-27B,per_model_deepest,0.75/0.25,1.33%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,4,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,Qwen3.5-27B,per_model_deepest,0.75/0.25,3.33%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,5,Qwen3.5-2B,Gemma 4 31B-it,per_model_deepest,0.75/0.25,0%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,6,Qwen3.5-2B + Qwen3.5-4B,Gemma 4 31B-it,per_model_deepest,0.75/0.25,0.67%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,7,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,Gemma 4 31B-it,per_model_deepest,0.75/0.25,1.33%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,8,Gemma 4 E2B-it,InternVL3.5-14B-HF,per_model_deepest,0.75/0.25,5.33%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,9,Gemma 4 E2B-it + Gemma 4 E4B-it,InternVL3.5-14B-HF,per_model_deepest,0.75/0.25,8.67%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,10,Gemma 4 E2B-it + Gemma 4 E4B-it + Gemma 4 26B-A4B-it,InternVL3.5-14B-HF,per_model_deepest,0.75/0.25,14.00%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,14,InternVL3.5-2B-HF + Gemma 4 E2B-it,Qwen3.5-27B,per_model_deepest,0.75/0.25,2.67%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,15,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14,Qwen3.5-27B,per_model_deepest,0.75/0.25,6.67%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,16,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2,Qwen3.5-27B,per_model_deepest,0.75/0.25,13.33%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+Multiple Proxy,17,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2,Qwen3.5-27B,per_model_deepest,0.75/0.25,5.33%,poor_reoptimize_v6_bf16_baseline_reusable,5,30
+ABLATION STUDY,2,Gemma 4 E2B-it,Gemma 4 E4B-it,deepest,1.00/0.00,92.86%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,3,Gemma 4 E2B-it,Gemma 4 E4B-it,deepest,0.25/0.75,66.67%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,4,Gemma 4 E2B-it,Gemma 4 E4B-it,deepest,0.50/0.50,83.64%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,5,Gemma 4 E2B-it,Gemma 4 E4B-it,deepest,0.75/0.25,87.32%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,6,Gemma 4 E2B-it,Gemma 4 E4B-it,deepest,0.00/1.00,33.33%,expected_negative_control_keep,5,30
+ABLATION STUDY,2,Qwen3.5-2B,Qwen3.5-4B,deepest,1.00/0.00,92.86%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,3,Qwen3.5-2B,Qwen3.5-4B,deepest,0.25/0.75,66.67%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,4,Qwen3.5-2B,Qwen3.5-4B,deepest,0.50/0.50,83.64%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,5,Qwen3.5-2B,Qwen3.5-4B,deepest,0.75/0.25,87.32%,rerun_for_comparable_denominators,5,30
+ABLATION STUDY,6,Qwen3.5-2B,Qwen3.5-4B,deepest,0.00/1.00,33.33%,expected_negative_control_keep,5,30
