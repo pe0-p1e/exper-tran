@@ -43,6 +43,8 @@ def test_claude_requires_successful_only_image_read(tmp_path):
     with pytest.raises(InterfaceBlocker):parse_claude([events[0],events[-1]],'claude-test',image)
     with pytest.raises(InterfaceBlocker):parse_claude(events,'claude-test',tmp_path/'other.png')
     events[0]['init']['tools'].append('run_command')
+    assert parse_claude(events,'claude-test',image)[2]['tool_whitelist_enforced'] is False
+    events.insert(1,dict(event='step_update',step_update=dict(step_type='tool',state='DONE',tool_name='run_command')))
     with pytest.raises(InterfaceBlocker):parse_claude(events,'claude-test',image)
 
 
@@ -130,3 +132,19 @@ def test_ten_report_recounts_raw_answers_and_rejects_tools(monkeypatch,tmp_path)
     events.insert(1,dict(type='item.completed',item=dict(type='command_execution')))
     trace.write_text('\n'.join(json.dumps(e) for e in events))
     with pytest.raises(RuntimeError):report.verified_record(rid,request)
+
+
+def test_native_antigravity_media_requires_identical_frozen_bytes(monkeypatch,tmp_path):
+    import sqlite3
+    from commercial_cli_adapters import antigravity_media_audit
+    from proxy_study_protocol import sha
+    monkeypatch.setattr(Path,'home',classmethod(lambda cls:tmp_path))
+    sid='a'*8+'-'+ 'b'*4+'-'+ 'c'*4+'-'+ 'd'*4+'-'+ 'e'*12
+    root=tmp_path/'.gemini/antigravity-cli';db=root/'conversations'/(sid+'.db');db.parent.mkdir(parents=True)
+    media=root/'brain'/sid/'.tempmediaStorage/image.png';media.parent.mkdir(parents=True);media.write_bytes(b'frozen image')
+    with sqlite3.connect(db) as c:
+        c.execute('create table steps(step_type integer,status integer,step_payload blob,error_details blob)')
+        c.execute('insert into steps values(132,3,?,NULL)',(b'image/png\x00'+str(media).encode()+b'\x00',))
+    events=[dict(event='result',result=dict(conversation_id=sid))]
+    assert antigravity_media_audit(events,sha(media))['status']=='verified'
+    with pytest.raises(InterfaceBlocker):antigravity_media_audit(events,'different-hash')

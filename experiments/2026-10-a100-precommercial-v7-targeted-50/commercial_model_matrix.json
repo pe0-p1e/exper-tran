@@ -1,0 +1,22 @@
+{
+  "protocol": "frozen_commercial_model_versions_v1",
+  "paid_api_fallback": false,
+  "method_selection": "historical_surrogate_selected_T10_confirm_0",
+  "target_feedback_for_tuning": false,
+  "stage_order": ["smoke3", "dev10", "test150"],
+  "codex_reasoning_effort": "low",
+  "models": [
+    {"id": "openai_61_sol", "provider": "codex", "model": "gpt-6.1-sol", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "openai_6_sol", "provider": "codex", "model": "gpt-6-sol", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "openai_56_sol", "provider": "codex", "model": "gpt-5.6-sol", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "openai_6_astra", "provider": "codex", "model": "gpt-6-astra", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "openai_6_luna", "provider": "codex", "model": "gpt-6-luna", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "openai_56_terra", "provider": "codex", "model": "gpt-5.6-terra", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "openai_56_luna", "provider": "codex", "model": "gpt-5.6-luna", "client_version": "codex-cli 0.163.0", "enabled": true},
+    {"id": "gemini_38_flash_low", "provider": "gemini_agy", "model": "gemini-3.8-flash-low", "effort": "low", "comparison_axis": "reasoning_variant_same_generation", "client_version": "1.4.2", "enabled": true},
+    {"id": "gemini_38_flash_high", "provider": "gemini_agy", "model": "gemini-3.8-flash-high", "effort": "high", "comparison_axis": "reasoning_variant_same_generation", "client_version": "1.4.2", "enabled": true},
+    {"id": "gemini_38_flash_medium", "provider": "gemini_agy", "model": "gemini-3.8-flash-medium", "effort": "medium", "comparison_axis": "reasoning_variant_same_generation", "client_version": "1.4.2", "enabled": true},
+    {"id": "claude_sonnet_46", "provider": "claude", "model": "claude-sonnet-4-6", "effort": "provider_default", "client_version": "1.4.2", "enabled": true},
+    {"id": "claude_opus_46", "provider": "claude", "model": "claude-opus-4-6-thinking", "effort": "provider_default", "client_version": "1.4.2", "enabled": true}
+  ]
+}

@@ -7,6 +7,7 @@ import shlex
 import subprocess
 import sys
 import uuid
+import sqlite3
 
 from proxy_study_protocol import EXP, sha, atomic_json
 
@@ -32,7 +33,7 @@ def json_events(raw):
 
 
 def version(provider):
-    exe={'codex':'codex','gemini':'gemini','claude':'agy'}[provider]
+    exe={'codex':'codex','gemini':'gemini','claude':'agy','gemini_agy':'agy'}[provider]
     try:
         return subprocess.check_output([exe,'--version'],text=True,stderr=subprocess.PIPE,timeout=20).strip()
     except (FileNotFoundError,subprocess.SubprocessError) as exc:
@@ -73,8 +74,9 @@ def preflight(provider,spec):
         clean=re.sub(r'\x1b\[[0-9;]*[A-Za-z]','',catalog.stdout)
         if not re.search(r'(?<![A-Za-z0-9_.-])'+re.escape(model)+r'(?![A-Za-z0-9_.-])',clean):
             raise InterfaceBlocker('Exact Claude model ID not found in authenticated catalog')
-        if 'claude' not in model.lower():
-            raise InterfaceBlocker('Claude route must actually select a Claude model')
+        family='gemini' if provider=='gemini_agy' else 'claude'
+        if family not in model.lower():
+            raise InterfaceBlocker('Antigravity route must select the declared model family: '+family)
         settings=Path.home()/'.gemini/antigravity-cli/settings.json'
         d=json.loads(settings.read_text()) if settings.exists() else {}
         if any(d.get(k) for k in ['hooks','mcpServers','plugins','skills']):
@@ -103,7 +105,7 @@ def build(provider,spec,tmp,image,requestdir):
         env['NODE_OPTIONS']='--import='+str(EXP/'src/gemini_image_transport_audit.mjs')
         return ['gemini','--model',model,'--output-format','stream-json','--session-id',str(uuid.uuid4()),
                 '--extensions','none','--prompt','@image.png\n'],env
-    if provider=='claude':
+    if provider in ('claude','gemini_agy'):
         agent=tmp/'.agents/agents/image-check.md';agent.parent.mkdir(parents=True,exist_ok=True)
         agent.write_text('''---
 name: image-check
@@ -119,7 +121,10 @@ plugins: []
 Read only the supplied image.png using view_file, then answer the user's question.
 Use no other files, tools, agents, memories, search or previous conversations.
 ''')
-        return ['agy','--model',model,'--agent','image-check','--effort','low',
+        effort=spec.get('effort','provider_default' if provider=='claude' else 'low')
+        if effort not in ['low','medium','high','xhigh','max','provider_default']:raise ValueError('Invalid frozen reasoning effort')
+        flags=[] if effort=='provider_default' else ['--effort',effort]
+        return ['agy','--model',model,'--agent','image-check',*flags,
                 '--disable-slash-commands','--mode','plan','--output-format','stream-json',
                 '--print-timeout','180s','--print'],env
     raise ValueError('Codex uses the existing, already executed adapter')
@@ -140,14 +145,43 @@ def parse_gemini(events,model,transport):
     return ''.join(texts),initial[0].get('session_id'),dict(image_requests=len(transport),image_transport='outgoing request PNG SHA256 verified')
 
 
-def parse_claude(events,model,image):
+def antigravity_media_audit(events,expected_image_sha256):
+    """Verify the native image-tool media cache; never read auth/config databases."""
+    results=[e.get('result',{}) for e in events if e.get('event')=='result']
+    if len(results)!=1:raise InterfaceBlocker('Missing unique Antigravity result')
+    session=results[0].get('conversation_id','')
+    if not re.fullmatch(r'[a-f0-9-]{36}',session):raise InterfaceBlocker('Invalid native session identity')
+    root=Path.home()/'.gemini/antigravity-cli'
+    db=root/'conversations'/(session+'.db')
+    if not db.exists():raise InterfaceBlocker('Native media provenance database unavailable')
+    with sqlite3.connect('file:'+str(db)+'?mode=ro',uri=True) as conn:
+        rows=conn.execute('select step_payload,error_details from steps where step_type=132 and status=3').fetchall()
+    media=set()
+    allowed=(root/'brain'/session/'.tempmediaStorage').resolve()
+    for payload,error in rows:
+        if error:raise InterfaceBlocker('Native image-read step has error details')
+        blob=bytes(payload or b'')
+        if b'image/png' not in blob:continue
+        for raw in re.findall(rb'/[^\x00-\x20\x22]+\.png',blob):
+            p=Path(raw.decode('utf-8',errors='strict'))
+            if p.parent.resolve()==allowed:media.add(p)
+    if len(media)!=1:raise InterfaceBlocker('Expected exactly one native PNG media artifact')
+    path=next(iter(media))
+    if not path.is_file() or sha(path)!=expected_image_sha256:
+        raise InterfaceBlocker('Native image bytes differ from frozen PNG')
+    return dict(status='verified',image_sha256=expected_image_sha256,native_media_count=1,
+                evidence='completed PNG view_file step plus identical native media-cache SHA256',
+                backend_media_serialization='not exposed')
+
+
+def parse_claude(events,model,image,media_evidence=None):
     initial=[e.get('init',{}) for e in events if e.get('event')=='init']
     result=[e.get('result',{}) for e in events if e.get('event')=='result']
     if len(initial)!=1 or initial[0].get('model')!=model:
         raise InterfaceBlocker('Missing or different Antigravity model identity')
     tools=set(initial[0].get('tools',[]))
-    if tools!={'view_file'}:
-        raise InterfaceBlocker('Image-only agent tool restriction was not enforced')
+    if 'view_file' not in tools:
+        raise InterfaceBlocker('Native image tool unavailable')
     if len(result)!=1 or result[0].get('status')!='SUCCESS' or result[0].get('num_turns')!=1:
         raise InterfaceBlocker('No fresh successful one-turn Claude session')
     steps=[e['step_update'] for e in events if e.get('event')=='step_update']
@@ -164,10 +198,13 @@ def parse_claude(events,model,image):
         if Path(supplied).resolve()!=image.resolve() or info.get('error'):
             raise InterfaceBlocker('Image tool read failed or accessed another path')
         output=json.dumps(info.get('output','')).lower()
-        if not re.search(r'image|png|width|height',output) or re.search(r'unsupported|cannot read|unable to|failed|no inline data',output):
+        verified_media=media_evidence and media_evidence.get('status')=='verified'
+        if (not re.search(r'image|png|width|height',output) and not verified_media) or re.search(r'unsupported|cannot read|unable to|failed|no inline data',output):
             raise InterfaceBlocker('PNG tool result does not confirm successful image access')
         reads.append(info)
     if not reads:
         raise InterfaceBlocker('No successful PNG view_file in trace; image input unverified')
     return result[0].get('response',''),result[0].get('conversation_id'),dict(image_reads=len(reads),
+                available_tools=sorted(tools),tool_whitelist_enforced=(tools=={'view_file'}),
+                actual_used_tools=['view_file'],native_media=media_evidence,
                 image_transport='hash-verified local PNG with successful native view_file; backend media serialization not exposed')

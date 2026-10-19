@@ -12,7 +12,7 @@ import time
 
 from proxy_study_protocol import OUT, ROOT, EXP, atomic_json, sha, fingerprint
 from commercial_cli_adapters import (InterfaceBlocker, preflight, build, json_events,
-                                      parse_label, parse_gemini, parse_claude)
+                                      parse_label, parse_gemini, parse_claude, antigravity_media_audit)
 
 CONTROL=ROOT/'commercial_cli_campaign'
 PACK=OUT/'commercial_pilot3'
@@ -102,7 +102,7 @@ def invoke(provider,spec,rid,hashes,retry_failed=False):
         tmp=Path(folder);image=tmp/'image.png';shutil.copyfile(PACK/'blinded'/rid/'image.png',image)
         prompt=(PACK/'blinded'/rid/'prompt.txt').read_text()
         cmd,env=build(provider,spec,tmp,image,attempt)
-        if provider=='claude':
+        if provider in ('claude','gemini_agy'):
             cmd.append('Read image.png using view_file, then answer this question:\n'+prompt)
             stdin=None
         else:stdin=prompt
@@ -117,10 +117,13 @@ def invoke(provider,spec,rid,hashes,retry_failed=False):
                 p=attempt/'image_transport.jsonl'
                 transport=json_events(p.read_text()) if p.exists() else []
                 answer,session,evidence=parse_gemini(events,spec['model'],transport)
-            else:answer,session,evidence=parse_claude(events,spec['model'],image)
+            else:
+                media=antigravity_media_audit(events,sha(image))
+                answer,session,evidence=parse_claude(events,spec['model'],image,media)
             label=parse_label(answer)
             atomic_json(result,dict(identity=identity,request_id=rid,raw_output=answer,parsed_label=label,
                         parser_status='ok' if label is not None else 'invalid',session_id=session,
+                        execution_settings=dict(provider=provider,effort=spec.get('effort','provider_default' if provider=='claude' else 'low') if provider in ('claude','gemini_agy') else 'provider_default'),
                         started=start,finished=time.time(),evidence=evidence,attempt=attempt.name,
                         CLI_context_differs_from_direct_API=True,
                         serving_snapshot='not exposed; explicit model and observed client route only'))

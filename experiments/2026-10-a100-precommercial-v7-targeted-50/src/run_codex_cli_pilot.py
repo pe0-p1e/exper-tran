@@ -10,8 +10,8 @@ from proxy_study_protocol import OUT, ROOT, sha, atomic_json
 
 
 def checked_order(base, images):
-    if images not in (3,10):
-        raise ValueError('Only approved three- or ten-image cohorts are supported')
+    if images not in (3,10,150):
+        raise ValueError('Only frozen three-, ten-, or 150-image cohorts are supported')
     secret=json.loads((base/'private/manifest.json').read_text())
     order=json.loads((base/'request_order.json').read_text())
     ids=[rid for c in secret['cases'] for rid in c['requests'].values()]
@@ -30,7 +30,7 @@ def checked_order(base, images):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--model',required=True);p.add_argument('--limit',type=int)
-    p.add_argument('--images',type=int,choices=[3,10],default=3)
+    p.add_argument('--images',type=int,choices=[3,10,150],default=3)
     p.add_argument('--pack-dir',type=Path,default=OUT/'commercial_pilot3')
     p.add_argument('--result-dir',type=Path)
     a=p.parse_args()
@@ -65,6 +65,8 @@ def main():
             if old['identity']!=expected:
                 raise RuntimeError('Pilot identity changed; use another study directory')
             print('[resume pilot]',rid,flush=True);continue
+        if (record.parent/'stdout.jsonl').exists() or (record.parent/'transport_error.json').exists():
+            raise RuntimeError('Prior incomplete attempt retained; inspect/recover its trace before another request')
         record.parent.mkdir(parents=True,exist_ok=True)
         with tempfile.TemporaryDirectory(prefix='imagecheck-',dir='/tmp') as tmp:
             # No repository, manifests, ground truth, attack state or previous responses in CWD.
