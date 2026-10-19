@@ -39,3 +39,19 @@ def test_partial_measurements_do_not_become_headline_full_cohort_asr(tmp_path,mo
     assert rows[0]['denominator']==32 and rows[0]['hits']==1
     assert rows[0]['ASR'] is None and rows[0]['status']=='partial'
     assert next(r for r in directions if r['transition']=='T03')['ASR']==0
+
+
+def test_cka_rsa_use_matched_original_embeddings_and_handle_degenerate_features():
+    import numpy as np
+    rng=np.random.default_rng(42);x=rng.normal(size=(20,7));q,_=np.linalg.qr(rng.normal(size=(7,7)))
+    cka,rsa=tables.feature_similarity(x,x@q)
+    assert cka==pytest.approx(1.) and rsa==pytest.approx(1.)
+    assert tables.feature_similarity(np.ones((5,3)),np.ones((5,4)))==(None,None)
+
+
+def test_paired_intervals_keep_matched_directions_and_are_reproducible():
+    groups=[[1]*15+[0]*15 for _ in range(5)]
+    mean,lo,hi=tables.paired_interval(groups)
+    assert mean==.5 and lo<=mean<=hi
+    assert tables.paired_interval(groups)==(mean,lo,hi)
+    with pytest.raises(ValueError):tables.paired_interval(groups[:4])

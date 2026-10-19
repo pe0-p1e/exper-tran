@@ -124,3 +124,8 @@ planned items. Report the family-disjoint correction first when it finishes.
 Save complete outputs/checkpoints on persistent root disk. Push implementation,
 compact scientific data, reports and a few actual examples; omit full image
 corpora, embedding caches, tokens and model weights. V6 remains immutable.
+
+Prepared execution entry points are `run_proxy_selection.sh` and
+`run_category_generalization.sh`; see `PREPARED_RUNNERS.md` for phase gates,
+dataset requirements and the distinction between CPU validation and real GPU
+smoke tests. Neither launcher interrupts the running corrected campaign.
