@@ -80,3 +80,7 @@ The user explicitly requested additional research and a total 20-hour reservatio
 ### Strict family-disjoint correction — 2026-10-19
 
 Read `FAMILY_DISJOINT_RECOVERY.md`. The user requires excluding the entire target family from attack proxies: no Qwen for a Qwen target, no InternVL for an InternVL target, and no Gemma for a Gemma target. Preserve existing valid Gemma31B cross-family results and all historical measurements. Redo Qwen/InternVL using the fixed corrected matrix. No open-ended VQA now. Freeze settings before corrected evaluation and never retune from target outcomes. Default launcher runs the corrected family-disjoint campaign in a distinct output directory.
+
+### Commercial pilot and category-generalization planning — 2026-10-19
+
+The user now authorizes commercial preparation and a THREE-image initial CLI connectivity pilot, overriding the earlier blanket commercial ban only for this separate study. Read `COMMERCIAL_PILOT.md`. This does not add commercial calls to the running open-weight campaign. Actual model identity, authentication, image input and isolated context must be verified; paid API routes additionally require configured endpoint/model/access/spend settings. See `HELD_OUT_CLASS_GENERALIZATION.md` for the new-category generalization proposal; it is planned, not executed, and must not interrupt or change frozen current experiments. No open-ended VQA is launched now.

@@ -1,0 +1,9 @@
+{
+  "version": "1.4.2",
+  "manifest_url": "https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/manifests/linux_amd64.json",
+  "payload_sha512": "4a393afc1369cee94e817c1b430c9128d02b12ebd4d5703ace5cd47b2333e216d673fb0097cbf7195f757b110163ba9850e9eea3fdbbaddd4b25668b82c03f05",
+  "binary_sha256": "085f43e0d0628a8a8dabe1e547067818fa2c0adc86cfac98a3c4492918f455ef",
+  "installed": "/home/ubuntu/.local/bin/agy",
+  "authentication": "not_configured",
+  "no_inference_calls": true
+}

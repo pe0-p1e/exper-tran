@@ -1,0 +1,7 @@
+{
+  "status": "ready_for_authenticated_isolated_target_clients",
+  "archive_sha256": "ff292b00eb33e6c5ecefada3687be9e5a818da401db46c23264f123381f04c8b",
+  "images": 3,
+  "requests_per_model": 6,
+  "commercial_inference_calls": 0
+}

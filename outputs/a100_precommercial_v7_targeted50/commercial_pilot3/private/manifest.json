@@ -1,0 +1,100 @@
+{
+  "status": "prepared_no_commercial_measurements",
+  "N_unique_images": 3,
+  "N_requests_per_model": 6,
+  "selection": "first fixed GT-only dev image in T03/T05/T09; no output filtering",
+  "method_lock_sha256": "b9dfa507263a13c7842c05ae009b2c484d9f7a8b12e9257aa1521f1ad0bdacec",
+  "cases": [
+    {
+      "transition": "T03",
+      "image_id": "train/n07753275/n07753275_10472.JPEG",
+      "source_label": 3,
+      "target_label": 4,
+      "requests": {
+        "clean": "804a6e99d874def8",
+        "adversarial": "6bd417e27010f496"
+      },
+      "max_uint8_delta": 16,
+      "source_state": "attacks/dev/focus_T10_confirm_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/state.json",
+      "source_models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "steps": 50,
+      "seed": 42
+    },
+    {
+      "transition": "T05",
+      "image_id": "train/n03642806/n03642806_10243.JPEG",
+      "source_label": 5,
+      "target_label": 6,
+      "requests": {
+        "clean": "0a504862052c788a",
+        "adversarial": "4c5b3a312cec8124"
+      },
+      "max_uint8_delta": 16,
+      "source_state": "attacks/dev/focus_T10_confirm_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/state.json",
+      "source_models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "steps": 50,
+      "seed": 42
+    },
+    {
+      "transition": "T09",
+      "image_id": "train/n04254680/n04254680_10154.JPEG",
+      "source_label": 9,
+      "target_label": 10,
+      "requests": {
+        "clean": "5bae203a6c8c7120",
+        "adversarial": "a64c51cc102f7c75"
+      },
+      "max_uint8_delta": 16,
+      "source_state": "attacks/dev/focus_T10_confirm_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/state.json",
+      "source_models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "steps": 50,
+      "seed": 42
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "0a504862052c788a",
+      "image_sha256": "bacdce06285f0eb89e5b9912d6ba51ccef1073435e12f9c21c86adece1c9fcf2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    {
+      "request_id": "4c5b3a312cec8124",
+      "image_sha256": "03e565e031ef0282deca700d6531f96c7f2322a2da98128d63c13886db7c4efc",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    {
+      "request_id": "5bae203a6c8c7120",
+      "image_sha256": "07101f8823d8c363ced6c206bb30912dde401366325428f9480f7b863b42ca30",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    {
+      "request_id": "6bd417e27010f496",
+      "image_sha256": "0af2e6bb8b16e94019eb11b0caf95f328c00b8ad514f56121f66d84ea3f84e41",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    {
+      "request_id": "804a6e99d874def8",
+      "image_sha256": "7e704b1802a7a355987d5381cee74cfd22d937546b780c069d301df77cee6705",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    {
+      "request_id": "a64c51cc102f7c75",
+      "image_sha256": "cb2535f8a68834ac79ed34895cb107e9cd45c7a5d89b304783ae035c365e496d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    }
+  ],
+  "task": "fixed_10_class_recognition",
+  "not_for_algorithm_selection": true
+}
