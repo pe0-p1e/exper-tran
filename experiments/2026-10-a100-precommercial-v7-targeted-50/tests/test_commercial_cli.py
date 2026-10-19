@@ -86,3 +86,28 @@ for (const [hash,model] of [['wrong','fixed'],[h,'fallback']]) {{
 if(blocked!==2)process.exit(1);
 '''
     subprocess.run(['node','--input-type=module','-e',script],check=True)
+
+
+def test_ten_pack_rejects_changed_image_and_missing_requests(tmp_path):
+    from run_codex_cli_pilot import checked_order
+    from proxy_study_protocol import sha
+    cases=[];requests=[]
+    for i in range(10):
+        pair={}
+        for kind in ['clean','adversarial']:
+            rid=f'{i}_{kind}';pair[kind]=rid
+            folder=tmp_path/'blinded'/rid;folder.mkdir(parents=True)
+            (folder/'image.png').write_bytes(b'frozen image bytes')
+            (folder/'prompt.txt').write_text('fixed prompt')
+            requests.append(dict(request_id=rid,image_sha256=sha(folder/'image.png'),prompt_sha256=sha(folder/'prompt.txt')))
+        cases.append(dict(image_id=str(i),requests=pair))
+    (tmp_path/'private').mkdir()
+    (tmp_path/'private/manifest.json').write_text(json.dumps(dict(cases=cases,requests=requests)))
+    order=[r['request_id'] for r in requests]
+    (tmp_path/'request_order.json').write_text(json.dumps(order))
+    assert checked_order(tmp_path,10)==order
+    with pytest.raises(ValueError):checked_order(tmp_path,3)
+    (tmp_path/'blinded/0_clean/image.png').write_bytes(b'changed image')
+    with pytest.raises(ValueError):checked_order(tmp_path,10)
+    (tmp_path/'request_order.json').write_text(json.dumps(order[:-1]))
+    with pytest.raises(ValueError):checked_order(tmp_path,10)
