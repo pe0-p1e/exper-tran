@@ -1,0 +1,2 @@
+target,baseline,comparison,N,ASR_difference,CI_low,CI_high,paired_gains,paired_losses,discordant_binomial_p,multiple_comparisons
+Qwen3.5-27B,M15,M27,150,-0.02,-0.04666666666666667,0.006666666666666666,1,4,0.375,exploratory unadjusted; no significance-based selection

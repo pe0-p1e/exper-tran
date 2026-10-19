@@ -1,0 +1,1839 @@
+{
+  "protocol": "strict_family_disjoint",
+  "configs": [
+    {
+      "id": "P18_M11_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "Qwen3.5-2B",
+        "Qwen3.5-4B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M12_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M12_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M16_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M16_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M16_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M17_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M17_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M17_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M08_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M08_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M08_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M09_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M09_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M09_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M10_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M10_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M10_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M13_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M13_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M13_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M14_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M14_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M14_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M15_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M15_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M18_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M18_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M18_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M19_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M19_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M19_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M20_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M20_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M20_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M21_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M21_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M21_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M22_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "DINOv2-Base",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M22_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "DINOv2-Base",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M22_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "DINOv2-Base",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M27_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "SigLIP2-So400m-patch14-384",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M27_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "SigLIP2-So400m-patch14-384",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M28_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M28_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M28_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384",
+        "InternVL3.5-2B-HF",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M29_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M29_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M29_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14",
+        "InternVL3.5-2B-HF",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M30_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "DINOv2-Base",
+        "DINOv2-Large",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M30_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "DINOv2-Base",
+        "DINOv2-Large",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M30_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "DINOv2-Base",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M24_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14",
+        "DINOv2-Base",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M24_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14",
+        "DINOv2-Base",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M24_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-B/16",
+        "CLIP ViT-L/14",
+        "DINOv2-Base",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M25_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "Qwen3.5-2B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M25_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "Qwen3.5-2B"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M25_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M26_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M26_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M26_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "Gemma 4 E2B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M31_G",
+      "target": "Gemma 4 31B-it",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M31_I",
+      "target": "InternVL3.5-14B-HF",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    },
+    {
+      "id": "P18_M31_Q",
+      "target": "Qwen3.5-27B",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "method": "A3",
+      "options": {
+        "patch_weight": 0.35
+      },
+      "di": true,
+      "fusion": "equal",
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "kind": "controlled_composition"
+    }
+  ],
+  "allowed_test_conditions": [
+    "P18_M11_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1",
+    "P18_M12_G__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1",
+    "P18_M12_Q__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+    "P18_M16_G__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1",
+    "P18_M16_I__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1",
+    "P18_M16_Q__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1",
+    "P18_M17_G__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1",
+    "P18_M17_I__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+    "P18_M17_Q__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+    "P18_M08_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M08_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M08_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M09_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M09_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M09_Q__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M10_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M10_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M10_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M13_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1",
+    "P18_M13_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1",
+    "P18_M13_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M14_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M14_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M14_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M15_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M15_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M18_G__A3__equal__Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1",
+    "P18_M18_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+    "P18_M18_Q__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+    "P18_M19_G__A3__equal__DINOv2-Large__DI__s42__i50__r1",
+    "P18_M19_I__A3__equal__DINOv2-Large__DI__s42__i50__r1",
+    "P18_M19_Q__A3__equal__DINOv2-Large__DI__s42__i50__r1",
+    "P18_M20_G__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M20_I__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M20_Q__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+    "P18_M21_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1",
+    "P18_M21_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1",
+    "P18_M21_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1",
+    "P18_M22_G__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M22_I__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M22_Q__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M27_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M27_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M28_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M28_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M28_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M29_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M29_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M29_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M30_G__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M30_I__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M30_Q__A3__equal__DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M24_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M24_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M24_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+    "P18_M25_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1",
+    "P18_M25_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1",
+    "P18_M25_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M26_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "P18_M26_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M26_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1",
+    "P18_M31_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1",
+    "P18_M31_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+    "P18_M31_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1"
+  ],
+  "condition_targets": {
+    "P18_M11_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M12_G__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M12_Q__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M16_G__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M16_I__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M16_Q__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M17_G__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M17_I__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M17_Q__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M08_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M08_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M08_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M09_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M09_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M09_Q__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M10_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M10_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M10_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M13_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M13_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M13_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M14_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M14_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M14_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M15_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M15_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M18_G__A3__equal__Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M18_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M18_Q__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M19_G__A3__equal__DINOv2-Large__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M19_I__A3__equal__DINOv2-Large__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M19_Q__A3__equal__DINOv2-Large__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M20_G__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M20_I__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M20_Q__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M21_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M21_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M21_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M22_G__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M22_I__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M22_Q__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M27_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M27_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M28_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M28_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M28_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M29_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M29_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M29_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M30_G__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M30_I__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M30_Q__A3__equal__DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M24_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M24_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M24_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M25_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M25_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M25_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M26_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M26_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M26_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": "Qwen3.5-27B",
+    "P18_M31_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": "Gemma 4 31B-it",
+    "P18_M31_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "InternVL3.5-14B-HF",
+    "P18_M31_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": "Qwen3.5-27B"
+  },
+  "condition_models": {
+    "P18_M11_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1": [
+      "Qwen3.5-2B",
+      "Qwen3.5-4B"
+    ],
+    "P18_M12_G__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": [
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF"
+    ],
+    "P18_M12_Q__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ],
+    "P18_M16_G__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "Qwen3.5-2B",
+      "Qwen3.5-4B"
+    ],
+    "P18_M16_I__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "Qwen3.5-2B",
+      "Qwen3.5-4B"
+    ],
+    "P18_M16_Q__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF"
+    ],
+    "P18_M17_G__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF"
+    ],
+    "P18_M17_I__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ],
+    "P18_M17_Q__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ],
+    "P18_M08_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large"
+    ],
+    "P18_M08_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large"
+    ],
+    "P18_M08_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large"
+    ],
+    "P18_M09_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M09_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M09_Q__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M10_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "DINOv2-Large",
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M10_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "DINOv2-Large",
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M10_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "DINOv2-Large",
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M13_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Qwen3.5-2B"
+    ],
+    "P18_M13_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Qwen3.5-2B"
+    ],
+    "P18_M13_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M14_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M14_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M14_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M15_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M15_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Qwen3.5-2B",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M18_G__A3__equal__Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": [
+      "Qwen3.5-2B",
+      "Qwen3.5-4B",
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF"
+    ],
+    "P18_M18_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "Qwen3.5-2B",
+      "Qwen3.5-4B",
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ],
+    "P18_M18_Q__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF",
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ],
+    "P18_M19_G__A3__equal__DINOv2-Large__DI__s42__i50__r1": [
+      "DINOv2-Large"
+    ],
+    "P18_M19_I__A3__equal__DINOv2-Large__DI__s42__i50__r1": [
+      "DINOv2-Large"
+    ],
+    "P18_M19_Q__A3__equal__DINOv2-Large__DI__s42__i50__r1": [
+      "DINOv2-Large"
+    ],
+    "P18_M20_G__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M20_I__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M20_Q__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384"
+    ],
+    "P18_M21_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14"
+    ],
+    "P18_M21_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14"
+    ],
+    "P18_M21_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14"
+    ],
+    "P18_M22_G__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": [
+      "DINOv2-Base",
+      "DINOv2-Large"
+    ],
+    "P18_M22_I__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": [
+      "DINOv2-Base",
+      "DINOv2-Large"
+    ],
+    "P18_M22_Q__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": [
+      "DINOv2-Base",
+      "DINOv2-Large"
+    ],
+    "P18_M27_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "SigLIP2-So400m-patch14-384",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M27_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "SigLIP2-So400m-patch14-384",
+      "Qwen3.5-2B",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M28_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "DINOv2-Large",
+      "SigLIP2-So400m-patch14-384",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M28_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "DINOv2-Large",
+      "SigLIP2-So400m-patch14-384",
+      "Qwen3.5-2B",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M28_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "DINOv2-Large",
+      "SigLIP2-So400m-patch14-384",
+      "InternVL3.5-2B-HF",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M29_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M29_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14",
+      "Qwen3.5-2B",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M29_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14",
+      "InternVL3.5-2B-HF",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M30_G__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "DINOv2-Base",
+      "DINOv2-Large",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M30_I__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "DINOv2-Base",
+      "DINOv2-Large",
+      "Qwen3.5-2B",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M30_Q__A3__equal__DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "DINOv2-Base",
+      "DINOv2-Large",
+      "InternVL3.5-2B-HF",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M24_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14",
+      "DINOv2-Base",
+      "DINOv2-Large"
+    ],
+    "P18_M24_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14",
+      "DINOv2-Base",
+      "DINOv2-Large"
+    ],
+    "P18_M24_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1": [
+      "CLIP ViT-B/16",
+      "CLIP ViT-L/14",
+      "DINOv2-Base",
+      "DINOv2-Large"
+    ],
+    "P18_M25_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384",
+      "DINOv2-Large",
+      "Qwen3.5-2B"
+    ],
+    "P18_M25_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384",
+      "DINOv2-Large",
+      "Qwen3.5-2B"
+    ],
+    "P18_M25_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384",
+      "DINOv2-Large",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M26_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384",
+      "DINOv2-Large",
+      "InternVL3.5-2B-HF"
+    ],
+    "P18_M26_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384",
+      "DINOv2-Large",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M26_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1": [
+      "SigLIP2-So400m-patch14-384",
+      "DINOv2-Large",
+      "Gemma 4 E2B-it"
+    ],
+    "P18_M31_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Qwen3.5-2B",
+      "Qwen3.5-4B",
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF"
+    ],
+    "P18_M31_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "Qwen3.5-2B",
+      "Qwen3.5-4B",
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ],
+    "P18_M31_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "InternVL3.5-2B-HF",
+      "InternVL3.5-4B-HF",
+      "Gemma 4 E2B-it",
+      "Gemma 4 E4B-it"
+    ]
+  },
+  "model_revisions": {
+    "Qwen3.5-2B": {
+      "repo_id": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "family": "qwen",
+      "expected_vision_depth": 24
+    },
+    "Qwen3.5-4B": {
+      "repo_id": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "family": "qwen",
+      "expected_vision_depth": 24
+    },
+    "Qwen3.5-9B": {
+      "repo_id": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "family": "qwen",
+      "expected_vision_depth": 27
+    },
+    "Qwen3.5-27B": {
+      "repo_id": "Qwen/Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "family": "qwen",
+      "expected_vision_depth": 27
+    },
+    "InternVL3.5-2B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+      "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+      "family": "internvl",
+      "expected_vision_depth": 24
+    },
+    "InternVL3.5-4B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-4B-HF",
+      "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+      "family": "internvl",
+      "expected_vision_depth": 24
+    },
+    "InternVL3.5-8B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
+      "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+      "family": "internvl",
+      "expected_vision_depth": 24
+    },
+    "InternVL3.5-14B-HF": {
+      "repo_id": "OpenGVLab/InternVL3_5-14B-HF",
+      "revision": "226b96d5912e69159abc0384cefcbd51487fdce0",
+      "family": "internvl",
+      "expected_vision_depth": 24
+    },
+    "Gemma 4 E2B-it": {
+      "repo_id": "google/gemma-4-E2B-it",
+      "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+      "family": "gemma4",
+      "expected_vision_depth": 16
+    },
+    "Gemma 4 E4B-it": {
+      "repo_id": "google/gemma-4-E4B-it",
+      "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+      "family": "gemma4",
+      "expected_vision_depth": 16
+    },
+    "Gemma 4 26B-A4B-it": {
+      "repo_id": "google/gemma-4-26B-A4B-it",
+      "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+      "family": "gemma4",
+      "expected_vision_depth": 27
+    },
+    "Gemma 4 31B-it": {
+      "repo_id": "google/gemma-4-31B-it",
+      "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "family": "gemma4",
+      "expected_vision_depth": 27
+    },
+    "CLIP ViT-L/14": {
+      "repo_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "family": "clip",
+      "expected_vision_depth": 24
+    },
+    "SigLIP2-So400m-patch14-384": {
+      "repo_id": "google/siglip2-so400m-patch14-384",
+      "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+      "family": "siglip2",
+      "expected_vision_depth": 27
+    },
+    "DINOv2-Large": {
+      "repo_id": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "family": "dinov2",
+      "expected_vision_depth": 24
+    },
+    "CLIP ViT-B/32": {
+      "repo_id": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "family": "clip",
+      "expected_vision_depth": 12,
+      "native_image_size": 224,
+      "extension_loader_sha256": "9054649575322bd1af6e0ab95024cdaf776f1b86ef5ea8f4e6cd84b3f9858f5f"
+    },
+    "CLIP ViT-B/16": {
+      "repo_id": "openai/clip-vit-base-patch16",
+      "revision": "57c216476eefef5ab752ec549e440a49ae4ae5f3",
+      "family": "clip",
+      "expected_vision_depth": 12,
+      "native_image_size": 224,
+      "extension_loader_sha256": "9054649575322bd1af6e0ab95024cdaf776f1b86ef5ea8f4e6cd84b3f9858f5f"
+    },
+    "CLIP ViT-L/14@336": {
+      "repo_id": "openai/clip-vit-large-patch14-336",
+      "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+      "family": "clip",
+      "expected_vision_depth": 24,
+      "native_image_size": 336,
+      "extension_loader_sha256": "9054649575322bd1af6e0ab95024cdaf776f1b86ef5ea8f4e6cd84b3f9858f5f"
+    },
+    "DINOv2-Base": {
+      "repo_id": "facebook/dinov2-base",
+      "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "family": "dinov2",
+      "expected_vision_depth": 12,
+      "native_image_size": 256,
+      "config_image_size": 518,
+      "preprocessing": "V5-compatible differentiable square resize to processor shortest_edge=256; no center crop; variable-resolution DINO",
+      "extension_loader_sha256": "9054649575322bd1af6e0ab95024cdaf776f1b86ef5ea8f4e6cd84b3f9858f5f"
+    }
+  },
+  "manifest_hashes": {
+    "T01": "e6f83cae3588ae90f0ef555ee2b8abe9cdcd5c647d0ca7276d809b8c20c728d2",
+    "T03": "c4835746e38de85160cd7330f5af7e2db5294c9b20464653147149b20cbd6b65",
+    "T05": "fe3d0cad89660c7842156cd16162a3154cb0b3c05100a892ee4433207a2fe56c",
+    "T07": "cdb48f1c51df6f463fe2730b82850fbd5500f8e15754ee856790bfbcd598a4f7",
+    "T09": "e4753c28b39117d7862719eb70c9e12700707a9848ac8965763865cf5d6c9af3"
+  },
+  "reference_hashes": {
+    "1": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "2": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "3": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "4": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "5": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "6": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "7": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "8": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "9": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "10": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78"
+  },
+  "source_hashes": {
+    "run_v7_attack.py": "517b3f2e7f1dd15ad784956d47d930edd01225e470d7d49bf39154b9b0e03264",
+    "representation_objectives.py": "15739dc6bc568f4f5cac62628aac51333e8f36ce96c014c9815925484ef21c73",
+    "attack_optimizers.py": "745bd7bd5670441ea8e7d46aa09454a737d07a681ef2f609bb0e53428294b899",
+    "vision_features.py": "cf3b9b073cac4f8eaf7a5e4b81e679f58703f5e14885531aaf6dde1035af509b",
+    "proxy_study_protocol.py": "8001ff69b6d565a77a652eed25058dc8fbec1924c55d5c523feeb7adaa9b0329",
+    "proxy_study_worker.py": "2714c76e0ba54e0ef34ee2253d801c8a76f15fff2cb3632144100c5ec19b6998",
+    "run_proxy_study.py": "7c189f532301834c9e9a8cfc878fd36e50ddb30905c29bcb1bd30c6dc85df3f4",
+    "supplement_registry.py": "9054649575322bd1af6e0ab95024cdaf776f1b86ef5ea8f4e6cd84b3f9858f5f"
+  },
+  "evaluator_hashes": {
+    "experiments/2026-10-a100-precommercial-v7-targeted-50/src/evaluate_v7.py": "8de9e3fea1a60b0edd12873f724ad88c91ef0ec1c5a234066ee4ee4738cf2401",
+    "src/primary_ml_cka/models/targets/generation.py": "5c3365300778282a081b66aebdf3044345d095620d958b58403f625a05e71b35",
+    "src/primary_ml_cka/prompts/parser.py": "d970f2a8a699f549460a9692ad35b63bc8635d24cf4586a27557b238541dea42",
+    "src/primary_ml_cka/models/backends/target_transformers_generation.py": "b9a563a7ca9df46a608234d6d4a386bde9571130dae1d870263e78cfc21e8fd4",
+    "experiments/2026-09-a100-final-v5/src/common.py": "f04247fd334b9126a72a76ade8219396998bd3737aa6933b78dfdb5fc5dc1e3e",
+    "experiments/2026-10-a100-precommercial-v6/config/runner_template.yaml": "92c9cca26b5f501cef6bb85a401cd0a8b820cce51cbedc47986125a082220826"
+  },
+  "plan_sha256": "cdb405dea0e6d1e03aca8a3cea5ca4181c93d32d87101b167b2f32db039a50cc",
+  "method": "A3, four depths, centroid margin, patch .35, DI, equal L1",
+  "target_feedback_for_selection": false,
+  "batch_size": 2,
+  "design": "hypothesis-driven exploratory fixed-cohort comparison; not untouched confirmation"
+}

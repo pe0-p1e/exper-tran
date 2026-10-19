@@ -1,0 +1,34 @@
+{
+  "images": [
+    {
+      "transition": "T03",
+      "image_id": "train/n07753275/n07753275_10472.JPEG",
+      "clean_label": 3,
+      "adv_label": 3,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T05",
+      "image_id": "train/n03642806/n03642806_10243.JPEG",
+      "clean_label": 5,
+      "adv_label": 5,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T09",
+      "image_id": "train/n04254680/n04254680_10154.JPEG",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_correct": true,
+      "target_hit": false
+    }
+  ],
+  "hits": 0,
+  "denominator": 3,
+  "study": "three-image CLI connectivity pilot; not reliable ASR estimation",
+  "target_feedback_for_tuning": false,
+  "model": "gpt-6.1-sol",
+  "actual_server_snapshot": "not disclosed"
+}

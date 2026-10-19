@@ -1,0 +1,193 @@
+template,tier,target,proxies,K,status,attack_images,evaluated_images,hits,denominator,ASR,source,condition,attack_seconds,peak_reserved_gib,mean_gradient_cosine,negative_gradient_fraction,cancellation,error
+M11,core,Gemma 4 31B-it,Qwen3.5-2B + Qwen3.5-4B,2,COMPLETE,150,150,94,150,0.6266666666666667,new_supplement,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,2499.951639157982,12.98046875,0.14251439480468397,0.05733333333333333,0.7654209179878235,
+M11,core,Gemma 4 31B-it,Qwen3.5-2B + Qwen3.5-4B,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M11,core,InternVL3.5-14B-HF,Qwen3.5-2B + Qwen3.5-4B,2,PARTIAL,8,0,,,,study18,P18_M11_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,83.09841191898158,12.98046875,0.12891936015104874,0.05,0.7608884456753731,
+M11,core,InternVL3.5-14B-HF,Qwen3.5-2B + Qwen3.5-4B,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M11,core,Qwen3.5-27B,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,COMPLETE,150,150,117,150,0.78,new_supplement,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,1775.892570708951,14.287109375,0.17527339170935252,0.0004,0.7676257192929585,
+M11,core,Qwen3.5-27B,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M12,core,Gemma 4 31B-it,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,PARTIAL,8,0,,,,study18,P18_M12_G__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,52.617484517002595,14.287109375,0.16313715370371937,0.0,0.7635782255232334,
+M12,core,Gemma 4 31B-it,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M12,core,InternVL3.5-14B-HF,Gemma 4 E2B-it + Gemma 4 E4B-it,2,QUEUED,0,0,,,,new_supplement,XS_E08__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M12,core,InternVL3.5-14B-HF,Gemma 4 E2B-it + Gemma 4 E4B-it,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M12,core,Qwen3.5-27B,Gemma 4 E2B-it + Gemma 4 E4B-it,2,QUEUED,0,0,,,,study18,P18_M12_Q__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M12,core,Qwen3.5-27B,Gemma 4 E2B-it + Gemma 4 E4B-it,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M16,core,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + Qwen3.5-4B,3,QUEUED,0,0,,,,study18,P18_M16_G__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,0,,,,,
+M16,core,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + Qwen3.5-4B,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M16,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Qwen3.5-4B,3,QUEUED,0,0,,,,study18,P18_M16_I__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,0,,,,,
+M16,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Qwen3.5-4B,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M16,core,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + InternVL3.5-4B-HF,3,QUEUED,0,0,,,,study18,P18_M16_Q__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,0,,,,,
+M16,core,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + InternVL3.5-4B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M17,core,Gemma 4 31B-it,CLIP ViT-L/14 + InternVL3.5-2B-HF + InternVL3.5-4B-HF,3,QUEUED,0,0,,,,study18,P18_M17_G__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,0,,,,,
+M17,core,Gemma 4 31B-it,CLIP ViT-L/14 + InternVL3.5-2B-HF + InternVL3.5-4B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M17,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Gemma 4 E2B-it + Gemma 4 E4B-it,3,QUEUED,0,0,,,,study18,P18_M17_I__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M17,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Gemma 4 E2B-it + Gemma 4 E4B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M17,core,Qwen3.5-27B,CLIP ViT-L/14 + Gemma 4 E2B-it + Gemma 4 E4B-it,3,QUEUED,0,0,,,,study18,P18_M17_Q__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M17,core,Qwen3.5-27B,CLIP ViT-L/14 + Gemma 4 E2B-it + Gemma 4 E4B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M08,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large,2,QUEUED,0,0,,,,study18,P18_M08_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M08,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M08,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large,2,QUEUED,0,0,,,,study18,P18_M08_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M08,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M08,core,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large,2,QUEUED,0,0,,,,study18,P18_M08_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M08,core,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M09,core,Gemma 4 31B-it,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,2,QUEUED,0,0,,,,study18,P18_M09_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M09,core,Gemma 4 31B-it,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M09,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,2,QUEUED,0,0,,,,study18,P18_M09_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M09,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M09,core,Qwen3.5-27B,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,2,QUEUED,0,0,,,,study18,P18_M09_Q__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M09,core,Qwen3.5-27B,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M10,core,Gemma 4 31B-it,DINOv2-Large + SigLIP2-So400m-patch14-384,2,QUEUED,0,0,,,,study18,P18_M10_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M10,core,Gemma 4 31B-it,DINOv2-Large + SigLIP2-So400m-patch14-384,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M10,core,InternVL3.5-14B-HF,DINOv2-Large + SigLIP2-So400m-patch14-384,2,QUEUED,0,0,,,,study18,P18_M10_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M10,core,InternVL3.5-14B-HF,DINOv2-Large + SigLIP2-So400m-patch14-384,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M10,core,Qwen3.5-27B,DINOv2-Large + SigLIP2-So400m-patch14-384,2,QUEUED,0,0,,,,study18,P18_M10_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M10,core,Qwen3.5-27B,DINOv2-Large + SigLIP2-So400m-patch14-384,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M13,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B,3,QUEUED,0,0,,,,study18,P18_M13_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1,0,,,,,
+M13,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M13,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B,3,QUEUED,0,0,,,,study18,P18_M13_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1,0,,,,,
+M13,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M13,core,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large + InternVL3.5-2B-HF,3,QUEUED,0,0,,,,study18,P18_M13_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M13,core,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large + InternVL3.5-2B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M14,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + InternVL3.5-2B-HF,3,QUEUED,0,0,,,,study18,P18_M14_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M14,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + InternVL3.5-2B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M14,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Gemma 4 E2B-it,3,QUEUED,0,0,,,,study18,P18_M14_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M14,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Gemma 4 E2B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M14,core,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large + Gemma 4 E2B-it,3,QUEUED,0,0,,,,study18,P18_M14_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M14,core,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large + Gemma 4 E2B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M15,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + InternVL3.5-2B-HF,4,QUEUED,0,0,,,,study18,P18_M15_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M15,core,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + InternVL3.5-2B-HF,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M15,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M15_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M15,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M15,core,Qwen3.5-27B,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,COMPLETE,150,150,138,150,0.92,new_supplement,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,4288.063201547935,9.3046875,0.03263779982385329,0.05862222222222222,0.5287654492815336,
+M15,core,Qwen3.5-27B,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M18,core,Gemma 4 31B-it,Qwen3.5-2B + Qwen3.5-4B + InternVL3.5-2B-HF + InternVL3.5-4B-HF,4,QUEUED,0,0,,,,study18,P18_M18_G__A3__equal__Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,0,,,,,
+M18,core,Gemma 4 31B-it,Qwen3.5-2B + Qwen3.5-4B + InternVL3.5-2B-HF + InternVL3.5-4B-HF,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M18,core,InternVL3.5-14B-HF,Qwen3.5-2B + Qwen3.5-4B + Gemma 4 E2B-it + Gemma 4 E4B-it,4,QUEUED,0,0,,,,study18,P18_M18_I__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M18,core,InternVL3.5-14B-HF,Qwen3.5-2B + Qwen3.5-4B + Gemma 4 E2B-it + Gemma 4 E4B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M18,core,Qwen3.5-27B,InternVL3.5-2B-HF + InternVL3.5-4B-HF + Gemma 4 E2B-it + Gemma 4 E4B-it,4,QUEUED,0,0,,,,study18,P18_M18_Q__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M18,core,Qwen3.5-27B,InternVL3.5-2B-HF + InternVL3.5-4B-HF + Gemma 4 E2B-it + Gemma 4 E4B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M01,core,Gemma 4 31B-it,CLIP ViT-L/14,1,QUEUED,0,0,,,,new_subset_measurement,PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,0,,,,,
+M01,core,Gemma 4 31B-it,CLIP ViT-L/14,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M01,core,InternVL3.5-14B-HF,CLIP ViT-L/14,1,COMPLETE,150,150,122,150,0.8133333333333334,corrected_family_disjoint,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,280.96831294997537,1.220703125,,,1.0,
+M01,core,InternVL3.5-14B-HF,CLIP ViT-L/14,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M01,core,Qwen3.5-27B,CLIP ViT-L/14,1,COMPLETE,150,150,106,150,0.7066666666666667,corrected_family_disjoint,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,272.4867532679709,1.220703125,,,1.0,
+M01,core,Qwen3.5-27B,CLIP ViT-L/14,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M02,core,Gemma 4 31B-it,Qwen3.5-2B,1,COMPLETE,150,150,74,150,0.49333333333333335,historical_valid_Gemma_cross_family,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,397.4687296109878,4.513671875,,,1.0,
+M02,core,Gemma 4 31B-it,Qwen3.5-2B,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M02,core,InternVL3.5-14B-HF,Qwen3.5-2B,1,COMPLETE,150,150,112,150,0.7466666666666667,corrected_family_disjoint,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,390.9197577070008,4.513671875,,,1.0,
+M02,core,InternVL3.5-14B-HF,Qwen3.5-2B,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M02,core,Qwen3.5-27B,InternVL3.5-2B-HF,1,COMPLETE,150,150,92,150,0.6133333333333333,corrected_family_disjoint,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,276.85753714598104,5.45703125,,,1.0,
+M02,core,Qwen3.5-27B,InternVL3.5-2B-HF,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M03,core,Gemma 4 31B-it,InternVL3.5-2B-HF,1,QUEUED,0,0,,,,new_subset_measurement,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M03,core,Gemma 4 31B-it,InternVL3.5-2B-HF,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M03,core,InternVL3.5-14B-HF,Gemma 4 E2B-it,1,COMPLETE,150,150,93,150,0.62,corrected_family_disjoint,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,1408.6708242579843,3.515625,,,1.0,
+M03,core,InternVL3.5-14B-HF,Gemma 4 E2B-it,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M03,core,Qwen3.5-27B,Gemma 4 E2B-it,1,COMPLETE,150,150,51,150,0.34,corrected_family_disjoint,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,1425.7735588039577,3.515625,,,1.0,
+M03,core,Qwen3.5-27B,Gemma 4 E2B-it,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M04,core,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B,2,COMPLETE,150,150,110,150,0.7333333333333333,new_subset_measurement,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,2396.041090262108,5.47265625,0.029963745648274198,0.1192,0.7270325608094533,
+M04,core,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M04,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B,2,COMPLETE,150,150,132,150,0.88,new_subset_measurement,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,1406.589937567027,5.47265625,0.030387944516997473,0.12306666666666667,0.7270315948486328,
+M04,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M04,core,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,COMPLETE,150,150,126,150,0.84,new_subset_measurement,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,972.5036702000652,6.26171875,0.03791350895924261,0.025866666666666666,0.7253961292902629,
+M04,core,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M05,core,Gemma 4 31B-it,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,COMPLETE,150,150,122,150,0.8133333333333334,new_subset_measurement,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,1081.189999028924,6.26171875,0.03832456809815485,0.022,0.7253156952937444,
+M05,core,Gemma 4 31B-it,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M05,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Gemma 4 E2B-it,2,COMPLETE,150,150,128,150,0.8533333333333334,new_subset_measurement,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,3964.6524968370068,4.33984375,0.017333786528758357,0.14466666666666667,0.717471738743782,
+M05,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Gemma 4 E2B-it,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M05,core,Qwen3.5-27B,CLIP ViT-L/14 + Gemma 4 E2B-it,2,COMPLETE,150,150,114,150,0.76,new_subset_measurement,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,3961.930281652938,4.33984375,0.01750515320986451,0.14013333333333333,0.7176875508228938,
+M05,core,Qwen3.5-27B,CLIP ViT-L/14 + Gemma 4 E2B-it,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M06,core,Gemma 4 31B-it,Qwen3.5-2B + InternVL3.5-2B-HF,2,COMPLETE,150,150,116,150,0.7733333333333333,new_subset_measurement,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,2637.3048239270574,9.73046875,0.025909575915782867,0.0876,0.7254150527238846,
+M06,core,Gemma 4 31B-it,Qwen3.5-2B + InternVL3.5-2B-HF,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M06,core,InternVL3.5-14B-HF,Qwen3.5-2B + Gemma 4 E2B-it,2,COMPLETE,150,150,122,150,0.8133333333333334,new_subset_measurement,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,4084.398487352053,7.755859375,0.01602717306734509,0.17493333333333333,0.721406066497167,
+M06,core,InternVL3.5-14B-HF,Qwen3.5-2B + Gemma 4 E2B-it,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M06,core,Qwen3.5-27B,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,COMPLETE,150,150,117,150,0.78,new_subset_measurement,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,3644.175767765977,7.912109375,0.024692033264716157,0.15053333333333332,0.7174076514085134,
+M06,core,Qwen3.5-27B,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M07,core,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,3,COMPLETE,150,150,130,150,0.8666666666666667,historical_valid_Gemma_cross_family,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,900.3657613349787,10.533203125,0.03254342655780977,0.07217777777777777,0.6047560001611709,
+M07,core,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M07,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,3,COMPLETE,150,150,136,150,0.9066666666666666,corrected_family_disjoint,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,2285.643460711035,8.580078125,0.0223519944792885,0.1370222222222222,0.5988725417137146,
+M07,core,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M07,core,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,COMPLETE,150,150,131,150,0.8733333333333333,corrected_family_disjoint,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,2274.1257196379884,8.716796875,0.02847222311630095,0.09008888888888889,0.597587295571963,
+M07,core,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M19,extension,Gemma 4 31B-it,DINOv2-Large,1,QUEUED,0,0,,,,study18,P18_M19_G__A3__equal__DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M19,extension,Gemma 4 31B-it,DINOv2-Large,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M19,extension,InternVL3.5-14B-HF,DINOv2-Large,1,QUEUED,0,0,,,,study18,P18_M19_I__A3__equal__DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M19,extension,InternVL3.5-14B-HF,DINOv2-Large,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M19,extension,Qwen3.5-27B,DINOv2-Large,1,QUEUED,0,0,,,,study18,P18_M19_Q__A3__equal__DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M19,extension,Qwen3.5-27B,DINOv2-Large,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M20,extension,Gemma 4 31B-it,SigLIP2-So400m-patch14-384,1,QUEUED,0,0,,,,study18,P18_M20_G__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M20,extension,Gemma 4 31B-it,SigLIP2-So400m-patch14-384,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M20,extension,InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384,1,QUEUED,0,0,,,,study18,P18_M20_I__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M20,extension,InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M20,extension,Qwen3.5-27B,SigLIP2-So400m-patch14-384,1,QUEUED,0,0,,,,study18,P18_M20_Q__A3__equal__SigLIP2-So400m-patch14-384__DI__s42__i50__r1,0,,,,,
+M20,extension,Qwen3.5-27B,SigLIP2-So400m-patch14-384,1,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M21,extension,Gemma 4 31B-it,CLIP ViT-B/16 + CLIP ViT-L/14,2,QUEUED,0,0,,,,study18,P18_M21_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1,0,,,,,
+M21,extension,Gemma 4 31B-it,CLIP ViT-B/16 + CLIP ViT-L/14,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M21,extension,InternVL3.5-14B-HF,CLIP ViT-B/16 + CLIP ViT-L/14,2,QUEUED,0,0,,,,study18,P18_M21_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1,0,,,,,
+M21,extension,InternVL3.5-14B-HF,CLIP ViT-B/16 + CLIP ViT-L/14,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M21,extension,Qwen3.5-27B,CLIP ViT-B/16 + CLIP ViT-L/14,2,QUEUED,0,0,,,,study18,P18_M21_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14__DI__s42__i50__r1,0,,,,,
+M21,extension,Qwen3.5-27B,CLIP ViT-B/16 + CLIP ViT-L/14,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M22,extension,Gemma 4 31B-it,DINOv2-Base + DINOv2-Large,2,QUEUED,0,0,,,,study18,P18_M22_G__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M22,extension,Gemma 4 31B-it,DINOv2-Base + DINOv2-Large,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M22,extension,InternVL3.5-14B-HF,DINOv2-Base + DINOv2-Large,2,QUEUED,0,0,,,,study18,P18_M22_I__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M22,extension,InternVL3.5-14B-HF,DINOv2-Base + DINOv2-Large,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M22,extension,Qwen3.5-27B,DINOv2-Base + DINOv2-Large,2,QUEUED,0,0,,,,study18,P18_M22_Q__A3__equal__DINOv2-Base+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M22,extension,Qwen3.5-27B,DINOv2-Base + DINOv2-Large,2,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M27,extension,Gemma 4 31B-it,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + InternVL3.5-2B-HF,4,QUEUED,0,0,,,,study18,P18_M27_G__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M27,extension,Gemma 4 31B-it,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + InternVL3.5-2B-HF,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M27,extension,InternVL3.5-14B-HF,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M27_I__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M27,extension,InternVL3.5-14B-HF,CLIP ViT-L/14 + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M27,extension,Qwen3.5-27B,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,COMPLETE,150,150,135,150,0.9,new_supplement,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,4040.606574561025,10.84765625,0.028564634215384528,0.07655555555555556,0.5248369927008947,
+M27,extension,Qwen3.5-27B,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M28,extension,Gemma 4 31B-it,DINOv2-Large + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + InternVL3.5-2B-HF,4,QUEUED,0,0,,,,study18,P18_M28_G__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M28,extension,Gemma 4 31B-it,DINOv2-Large + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + InternVL3.5-2B-HF,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M28,extension,InternVL3.5-14B-HF,DINOv2-Large + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M28_I__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M28,extension,InternVL3.5-14B-HF,DINOv2-Large + SigLIP2-So400m-patch14-384 + Qwen3.5-2B + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M28,extension,Qwen3.5-27B,DINOv2-Large + SigLIP2-So400m-patch14-384 + InternVL3.5-2B-HF + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M28_Q__A3__equal__DINOv2-Large+SigLIP2-So400m-patch14-384+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M28,extension,Qwen3.5-27B,DINOv2-Large + SigLIP2-So400m-patch14-384 + InternVL3.5-2B-HF + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M29,extension,Gemma 4 31B-it,CLIP ViT-B/16 + CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,4,QUEUED,0,0,,,,study18,P18_M29_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M29,extension,Gemma 4 31B-it,CLIP ViT-B/16 + CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M29,extension,InternVL3.5-14B-HF,CLIP ViT-B/16 + CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M29_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M29,extension,InternVL3.5-14B-HF,CLIP ViT-B/16 + CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M29,extension,Qwen3.5-27B,CLIP ViT-B/16 + CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M29_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M29,extension,Qwen3.5-27B,CLIP ViT-B/16 + CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M30,extension,Gemma 4 31B-it,DINOv2-Base + DINOv2-Large + Qwen3.5-2B + InternVL3.5-2B-HF,4,QUEUED,0,0,,,,study18,P18_M30_G__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M30,extension,Gemma 4 31B-it,DINOv2-Base + DINOv2-Large + Qwen3.5-2B + InternVL3.5-2B-HF,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M30,extension,InternVL3.5-14B-HF,DINOv2-Base + DINOv2-Large + Qwen3.5-2B + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M30_I__A3__equal__DINOv2-Base+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M30,extension,InternVL3.5-14B-HF,DINOv2-Base + DINOv2-Large + Qwen3.5-2B + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M30,extension,Qwen3.5-27B,DINOv2-Base + DINOv2-Large + InternVL3.5-2B-HF + Gemma 4 E2B-it,4,QUEUED,0,0,,,,study18,P18_M30_Q__A3__equal__DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M30,extension,Qwen3.5-27B,DINOv2-Base + DINOv2-Large + InternVL3.5-2B-HF + Gemma 4 E2B-it,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M23,extension,Gemma 4 31B-it,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336,4,QUEUED,0,0,,,,new_supplement,XS_PSG_CLIP4__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336__DI__s42__i50__r1,0,,,,,
+M23,extension,Gemma 4 31B-it,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M23,extension,InternVL3.5-14B-HF,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336,4,QUEUED,0,0,,,,new_supplement,XS_PSI_CLIP4__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336__DI__s42__i50__r1,0,,,,,
+M23,extension,InternVL3.5-14B-HF,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M23,extension,Qwen3.5-27B,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336,4,QUEUED,0,0,,,,new_supplement,XS_PSQ_CLIP4__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336__DI__s42__i50__r1,0,,,,,
+M23,extension,Qwen3.5-27B,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M24,extension,Gemma 4 31B-it,CLIP ViT-B/16 + CLIP ViT-L/14 + DINOv2-Base + DINOv2-Large,4,QUEUED,0,0,,,,study18,P18_M24_G__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M24,extension,Gemma 4 31B-it,CLIP ViT-B/16 + CLIP ViT-L/14 + DINOv2-Base + DINOv2-Large,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M24,extension,InternVL3.5-14B-HF,CLIP ViT-B/16 + CLIP ViT-L/14 + DINOv2-Base + DINOv2-Large,4,QUEUED,0,0,,,,study18,P18_M24_I__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M24,extension,InternVL3.5-14B-HF,CLIP ViT-B/16 + CLIP ViT-L/14 + DINOv2-Base + DINOv2-Large,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M24,extension,Qwen3.5-27B,CLIP ViT-B/16 + CLIP ViT-L/14 + DINOv2-Base + DINOv2-Large,4,QUEUED,0,0,,,,study18,P18_M24_Q__A3__equal__CLIP_ViT-B_16+CLIP_ViT-L_14+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1,0,,,,,
+M24,extension,Qwen3.5-27B,CLIP ViT-B/16 + CLIP ViT-L/14 + DINOv2-Base + DINOv2-Large,4,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M25,extension,Gemma 4 31B-it,SigLIP2-So400m-patch14-384 + DINOv2-Large + Qwen3.5-2B,3,QUEUED,0,0,,,,study18,P18_M25_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1,0,,,,,
+M25,extension,Gemma 4 31B-it,SigLIP2-So400m-patch14-384 + DINOv2-Large + Qwen3.5-2B,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M25,extension,InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384 + DINOv2-Large + Qwen3.5-2B,3,QUEUED,0,0,,,,study18,P18_M25_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1,0,,,,,
+M25,extension,InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384 + DINOv2-Large + Qwen3.5-2B,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M25,extension,Qwen3.5-27B,SigLIP2-So400m-patch14-384 + DINOv2-Large + InternVL3.5-2B-HF,3,QUEUED,0,0,,,,study18,P18_M25_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M25,extension,Qwen3.5-27B,SigLIP2-So400m-patch14-384 + DINOv2-Large + InternVL3.5-2B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M26,extension,Gemma 4 31B-it,SigLIP2-So400m-patch14-384 + DINOv2-Large + InternVL3.5-2B-HF,3,QUEUED,0,0,,,,study18,P18_M26_G__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M26,extension,Gemma 4 31B-it,SigLIP2-So400m-patch14-384 + DINOv2-Large + InternVL3.5-2B-HF,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M26,extension,InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384 + DINOv2-Large + Gemma 4 E2B-it,3,QUEUED,0,0,,,,study18,P18_M26_I__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M26,extension,InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384 + DINOv2-Large + Gemma 4 E2B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M26,extension,Qwen3.5-27B,SigLIP2-So400m-patch14-384 + DINOv2-Large + Gemma 4 E2B-it,3,QUEUED,0,0,,,,study18,P18_M26_Q__A3__equal__SigLIP2-So400m-patch14-384+DINOv2-Large+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M26,extension,Qwen3.5-27B,SigLIP2-So400m-patch14-384 + DINOv2-Large + Gemma 4 E2B-it,3,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M31,extension,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + Qwen3.5-4B + InternVL3.5-2B-HF + InternVL3.5-4B-HF,6,QUEUED,0,0,,,,study18,P18_M31_G__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,0,,,,,
+M31,extension,Gemma 4 31B-it,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + Qwen3.5-4B + InternVL3.5-2B-HF + InternVL3.5-4B-HF,6,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M31,extension,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + Qwen3.5-4B + Gemma 4 E2B-it + Gemma 4 E4B-it,6,QUEUED,0,0,,,,study18,P18_M31_I__A3__equal__CLIP_ViT-L_14+DINOv2-Large+Qwen3.5-2B+Qwen3.5-4B+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M31,extension,InternVL3.5-14B-HF,CLIP ViT-L/14 + DINOv2-Large + Qwen3.5-2B + Qwen3.5-4B + Gemma 4 E2B-it + Gemma 4 E4B-it,6,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M31,extension,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large + InternVL3.5-2B-HF + InternVL3.5-4B-HF + Gemma 4 E2B-it + Gemma 4 E4B-it,6,QUEUED,0,0,,,,study18,P18_M31_Q__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-2B-HF+InternVL3.5-4B-HF+Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1,0,,,,,
+M31,extension,Qwen3.5-27B,CLIP ViT-L/14 + DINOv2-Large + InternVL3.5-2B-HF + InternVL3.5-4B-HF + Gemma 4 E2B-it + Gemma 4 E4B-it,6,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M32,extension,Gemma 4 31B-it,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336 + DINOv2-Base + DINOv2-Large + Qwen3.5-2B + InternVL3.5-2B-HF,8,QUEUED,0,0,,,,new_supplement,XS_PSG_CLIP4_D2_AB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,0,,,,,
+M32,extension,Gemma 4 31B-it,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336 + DINOv2-Base + DINOv2-Large + Qwen3.5-2B + InternVL3.5-2B-HF,8,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M32,extension,InternVL3.5-14B-HF,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336 + DINOv2-Base + DINOv2-Large + Qwen3.5-2B + Gemma 4 E2B-it,8,QUEUED,0,0,,,,new_supplement,XS_PSI_CLIP4_D2_AB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M32,extension,InternVL3.5-14B-HF,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336 + DINOv2-Base + DINOv2-Large + Qwen3.5-2B + Gemma 4 E2B-it,8,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'
+M32,extension,Qwen3.5-27B,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336 + DINOv2-Base + DINOv2-Large + InternVL3.5-2B-HF + Gemma 4 E2B-it,8,QUEUED,0,0,,,,new_supplement,XS_PSQ_CLIP4_D2_AB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,0,,,,,
+M32,extension,Qwen3.5-27B,CLIP ViT-B/32 + CLIP ViT-B/16 + CLIP ViT-L/14 + CLIP ViT-L/14@336 + DINOv2-Base + DINOv2-Large + InternVL3.5-2B-HF + Gemma 4 E2B-it,8,BLOCKED,,,,,,,,,,,,,dict() got multiple values for keyword argument 'target'

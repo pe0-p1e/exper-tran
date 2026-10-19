@@ -1,0 +1,805 @@
+{
+  "status": "PASS_WITH_CAVEATS",
+  "scope": "Independent CPU raw-output recount and PNG/dataset checks; historical BF16 event review, not fresh model reload or serial GPU replay",
+  "started": 1792430675.8590984,
+  "finished": 1792430701.4513946,
+  "complete_conditions": 25,
+  "summaries": [
+    {
+      "aliases": [
+        "E01",
+        "PSQ_A"
+      ],
+      "condition": "CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 92,
+      "denominator": 150,
+      "ASR": 0.6133333333333333,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E02"
+      ],
+      "condition": "XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 117,
+      "denominator": 150,
+      "ASR": 0.78,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E03"
+      ],
+      "condition": "XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 129,
+      "denominator": 150,
+      "ASR": 0.86,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E04",
+        "PSG_A"
+      ],
+      "condition": "focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 74,
+      "denominator": 150,
+      "ASR": 0.49333333333333335,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 8
+    },
+    {
+      "aliases": [
+        "E05"
+      ],
+      "condition": "XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 94,
+      "denominator": 150,
+      "ASR": 0.6266666666666667,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 5
+    },
+    {
+      "aliases": [
+        "E06"
+      ],
+      "condition": "XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 108,
+      "denominator": 150,
+      "ASR": 0.72,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 3
+    },
+    {
+      "aliases": [
+        "E07",
+        "PSI_B"
+      ],
+      "condition": "CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 93,
+      "denominator": 150,
+      "ASR": 0.62,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 1
+    },
+    {
+      "aliases": [
+        "E08"
+      ],
+      "condition": "XS_E08__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E09"
+      ],
+      "condition": "XS_E09__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it+Gemma_4_26B-A4B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "PARTIAL",
+      "attack_images": 112,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E10",
+        "PSQ_AB"
+      ],
+      "condition": "PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 117,
+      "denominator": 150,
+      "ASR": 0.78,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E11",
+        "PSQ_VAB"
+      ],
+      "condition": "CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 131,
+      "denominator": 150,
+      "ASR": 0.8733333333333333,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E12"
+      ],
+      "condition": "XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 135,
+      "denominator": 150,
+      "ASR": 0.9,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "E13"
+      ],
+      "condition": "XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 138,
+      "denominator": 150,
+      "ASR": 0.92,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_V"
+      ],
+      "condition": "CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 106,
+      "denominator": 150,
+      "ASR": 0.7066666666666667,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_B"
+      ],
+      "condition": "CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 51,
+      "denominator": 150,
+      "ASR": 0.34,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_VA"
+      ],
+      "condition": "PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 126,
+      "denominator": 150,
+      "ASR": 0.84,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_VB"
+      ],
+      "condition": "PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 114,
+      "denominator": 150,
+      "ASR": 0.76,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_V"
+      ],
+      "condition": "CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 122,
+      "denominator": 150,
+      "ASR": 0.8133333333333334,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 1
+    },
+    {
+      "aliases": [
+        "PSI_A"
+      ],
+      "condition": "CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 112,
+      "denominator": 150,
+      "ASR": 0.7466666666666667,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 1
+    },
+    {
+      "aliases": [
+        "PSI_VA"
+      ],
+      "condition": "PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 132,
+      "denominator": 150,
+      "ASR": 0.88,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 3
+    },
+    {
+      "aliases": [
+        "PSI_VB"
+      ],
+      "condition": "PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 128,
+      "denominator": 150,
+      "ASR": 0.8533333333333334,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_AB"
+      ],
+      "condition": "PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 122,
+      "denominator": 150,
+      "ASR": 0.8133333333333334,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 1
+    },
+    {
+      "aliases": [
+        "PSI_VAB"
+      ],
+      "condition": "CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 136,
+      "denominator": 150,
+      "ASR": 0.9066666666666666,
+      "clean_correct": 142,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 1
+    },
+    {
+      "aliases": [
+        "PSG_V"
+      ],
+      "condition": "PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_B"
+      ],
+      "condition": "PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_VA"
+      ],
+      "condition": "PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 110,
+      "denominator": 150,
+      "ASR": 0.7333333333333333,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 6
+    },
+    {
+      "aliases": [
+        "PSG_VB"
+      ],
+      "condition": "PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 122,
+      "denominator": 150,
+      "ASR": 0.8133333333333334,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 2
+    },
+    {
+      "aliases": [
+        "PSG_AB"
+      ],
+      "condition": "PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 116,
+      "denominator": 150,
+      "ASR": 0.7733333333333333,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 4
+    },
+    {
+      "aliases": [
+        "PSG_VAB"
+      ],
+      "condition": "focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "COMPLETE",
+      "attack_images": 150,
+      "evaluated_images": 150,
+      "hits": 130,
+      "denominator": 150,
+      "ASR": 0.8666666666666667,
+      "clean_correct": 150,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 1
+    },
+    {
+      "aliases": [
+        "PSQ_CLIP4"
+      ],
+      "condition": "XS_PSQ_CLIP4__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_CLIP4_DB"
+      ],
+      "condition": "XS_PSQ_CLIP4_DB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_CLIP4_DL"
+      ],
+      "condition": "XS_PSQ_CLIP4_DL__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Large__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_CLIP4_D2"
+      ],
+      "condition": "XS_PSQ_CLIP4_D2__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_CLIP4_D2_A"
+      ],
+      "condition": "XS_PSQ_CLIP4_D2_A__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSQ_CLIP4_D2_AB"
+      ],
+      "condition": "XS_PSQ_CLIP4_D2_AB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "Qwen3.5-27B",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_CLIP4"
+      ],
+      "condition": "XS_PSI_CLIP4__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_CLIP4_DB"
+      ],
+      "condition": "XS_PSI_CLIP4_DB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_CLIP4_DL"
+      ],
+      "condition": "XS_PSI_CLIP4_DL__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Large__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_CLIP4_D2"
+      ],
+      "condition": "XS_PSI_CLIP4_D2__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_CLIP4_D2_A"
+      ],
+      "condition": "XS_PSI_CLIP4_D2_A__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSI_CLIP4_D2_AB"
+      ],
+      "condition": "XS_PSI_CLIP4_D2_AB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "target": "InternVL3.5-14B-HF",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_CLIP4"
+      ],
+      "condition": "XS_PSG_CLIP4__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_CLIP4_DB"
+      ],
+      "condition": "XS_PSG_CLIP4_DB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_CLIP4_DL"
+      ],
+      "condition": "XS_PSG_CLIP4_DL__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Large__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_CLIP4_D2"
+      ],
+      "condition": "XS_PSG_CLIP4_D2__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_CLIP4_D2_A"
+      ],
+      "condition": "XS_PSG_CLIP4_D2_A__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+Qwen3.5-2B__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    },
+    {
+      "aliases": [
+        "PSG_CLIP4_D2_AB"
+      ],
+      "condition": "XS_PSG_CLIP4_D2_AB__A3__equal__CLIP_ViT-B_32+CLIP_ViT-B_16+CLIP_ViT-L_14+CLIP_ViT-L_14@336+DINOv2-Base+DINOv2-Large+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "target": "Gemma 4 31B-it",
+      "status": "NOT_STARTED",
+      "attack_images": 0,
+      "evaluated_images": 0,
+      "hits": 0,
+      "denominator": 0,
+      "ASR": null,
+      "clean_correct": 0,
+      "clean_already_target": 0,
+      "invalid_adv_outputs": 0
+    }
+  ],
+  "pngs_checked": 7724,
+  "max_uint8_delta": 16,
+  "parser_or_hit_mismatches": 0,
+  "data_groups": {
+    "reference": 480,
+    "test": 150,
+    "dev": 50
+  },
+  "overlaps": {
+    "reference__test": {
+      "image_id_overlap": 0,
+      "exact_pixel_overlap": 0
+    },
+    "reference__dev": {
+      "image_id_overlap": 0,
+      "exact_pixel_overlap": 0
+    },
+    "test__dev": {
+      "image_id_overlap": 0,
+      "exact_pixel_overlap": 0
+    }
+  },
+  "bf16_events": 976,
+  "failed_dtype_events": 0,
+  "evaluator_hashes_now": {
+    "experiments/2026-10-a100-precommercial-v7-targeted-50/src/evaluate_v7.py": "8de9e3fea1a60b0edd12873f724ad88c91ef0ec1c5a234066ee4ee4738cf2401",
+    "src/primary_ml_cka/models/targets/generation.py": "5c3365300778282a081b66aebdf3044345d095620d958b58403f625a05e71b35",
+    "src/primary_ml_cka/prompts/parser.py": "d970f2a8a699f549460a9692ad35b63bc8635d24cf4586a27557b238541dea42",
+    "src/primary_ml_cka/models/backends/target_transformers_generation.py": "b9a563a7ca9df46a608234d6d4a386bde9571130dae1d870263e78cfc21e8fd4",
+    "experiments/2026-09-a100-final-v5/src/common.py": "f04247fd334b9126a72a76ade8219396998bd3737aa6933b78dfdb5fc5dc1e3e",
+    "experiments/2026-10-a100-precommercial-v6/config/runner_template.yaml": "92c9cca26b5f501cef6bb85a401cd0a8b820cce51cbedc47986125a082220826"
+  },
+  "caveats": [
+    "Fixed ten-class forced-choice recognition, not open-ended QA.",
+    "30 images per direction; point estimates do not guarantee population ASR.",
+    "Existing evaluator cache keys omit evaluator/prompt/parser hashes; no demonstrated inflation. New study locks include them.",
+    "Historical cohort has been observed; further results are exploratory, requiring untouched confirmation.",
+    "Fresh B1 versus B2 target replay not performed by this CPU audit."
+  ]
+}
