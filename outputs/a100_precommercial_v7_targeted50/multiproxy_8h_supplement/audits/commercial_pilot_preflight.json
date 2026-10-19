@@ -1,0 +1,35 @@
+{
+  "captured_at": 1792397241.534336,
+  "prepared_pack": "commercial_pilot3/pilot3_blinded_inputs.zip",
+  "pack_sha256": "ff292b00eb33e6c5ecefada3687be9e5a818da401db46c23264f123381f04c8b",
+  "planned_images": 3,
+  "planned_conditions": 2,
+  "planned_models": 3,
+  "planned_image_evaluations": 18,
+  "actual_inference_requests": 0,
+  "routes": [
+    {
+      "client": "OpenAI/Codex",
+      "access_probe": " Logged in using ChatGPT",
+      "actual_verified_model_id": null,
+      "image_input_verified": false,
+      "isolated_session_verified": false,
+      "paid_spend_ceiling": null,
+      "inference_requests_made": 0,
+      "status": "BLOCKED",
+      "reason": "Exact image-capable model route and isolation not yet verified; Antigravity authentication missing; paid route/spend not configured"
+    },
+    {
+      "client": "Gemini/Claude Antigravity",
+      "access_probe": " Fetching available models...\nError: Please sign in to view available models. Launch the CLI without arguments to sign in.",
+      "actual_verified_model_id": null,
+      "image_input_verified": false,
+      "isolated_session_verified": false,
+      "paid_spend_ceiling": null,
+      "inference_requests_made": 0,
+      "status": "BLOCKED",
+      "reason": "Exact image-capable model route and isolation not yet verified; Antigravity authentication missing; paid route/spend not configured"
+    }
+  ],
+  "commercial_outputs_used_for_attack_selection": false
+}

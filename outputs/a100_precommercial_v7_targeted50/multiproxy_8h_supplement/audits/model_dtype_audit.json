@@ -1,0 +1,1263 @@
+[
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "supplement_proxy_calibration",
+    "audited_utc": "2026-10-19T08:13:27.779023+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 1
+  },
+  {
+    "model_name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "role": "supplement_proxy_calibration",
+    "audited_utc": "2026-10-19T08:13:31.237801+00:00",
+    "total_parameter_count": 2348347392,
+    "floating_parameter_count": 2348347392,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2348347392
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4696694784
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2348347392
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304012288
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608024576
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 2031739904
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 4063479808
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 12595200
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 25190400
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.embeddings.cls_token",
+        "model.vision_tower.embeddings.position_embeddings",
+        "model.vision_tower.embeddings.patch_embeddings.projection.weight",
+        "model.vision_tower.embeddings.patch_embeddings.projection.bias",
+        "model.vision_tower.encoder.layer.0.lambda_1",
+        "model.vision_tower.encoder.layer.0.lambda_2",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.weight",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.bias",
+        "model.vision_tower.encoder.layer.0.layernorm_before.weight",
+        "model.vision_tower.encoder.layer.0.layernorm_before.bias"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2348347392
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 5433978368,
+      "cuda_reserved_bytes": 5769265152,
+      "cuda_allocated_gib": 5.060786724090576,
+      "cuda_reserved_gib": 5.373046875
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 2
+  },
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:13:43.904356+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 3
+  },
+  {
+    "model_name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:13:47.307331+00:00",
+    "total_parameter_count": 2348347392,
+    "floating_parameter_count": 2348347392,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2348347392
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4696694784
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2348347392
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304012288
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608024576
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 2031739904
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 4063479808
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 12595200
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 25190400
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.embeddings.cls_token",
+        "model.vision_tower.embeddings.position_embeddings",
+        "model.vision_tower.embeddings.patch_embeddings.projection.weight",
+        "model.vision_tower.embeddings.patch_embeddings.projection.bias",
+        "model.vision_tower.encoder.layer.0.lambda_1",
+        "model.vision_tower.encoder.layer.0.lambda_2",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.weight",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.bias",
+        "model.vision_tower.encoder.layer.0.layernorm_before.weight",
+        "model.vision_tower.encoder.layer.0.layernorm_before.bias"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2348347392
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4714435584,
+      "cuda_reserved_bytes": 5037359104,
+      "cuda_allocated_gib": 4.390660285949707,
+      "cuda_reserved_gib": 4.69140625
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 4
+  },
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:14:08.662121+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 5
+  },
+  {
+    "model_name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:14:11.407201+00:00",
+    "total_parameter_count": 2348347392,
+    "floating_parameter_count": 2348347392,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2348347392
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4696694784
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2348347392
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304012288
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608024576
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 2031739904
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 4063479808
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 12595200
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 25190400
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.embeddings.cls_token",
+        "model.vision_tower.embeddings.position_embeddings",
+        "model.vision_tower.embeddings.patch_embeddings.projection.weight",
+        "model.vision_tower.embeddings.patch_embeddings.projection.bias",
+        "model.vision_tower.encoder.layer.0.lambda_1",
+        "model.vision_tower.encoder.layer.0.lambda_2",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.weight",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.bias",
+        "model.vision_tower.encoder.layer.0.layernorm_before.weight",
+        "model.vision_tower.encoder.layer.0.layernorm_before.bias"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2348347392
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4714435584,
+      "cuda_reserved_bytes": 5037359104,
+      "cuda_allocated_gib": 4.390660285949707,
+      "cuda_reserved_gib": 4.69140625
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 6
+  },
+  {
+    "model_name": "Qwen3.5-2B",
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "role": "supplement_proxy_calibration",
+    "audited_utc": "2026-10-19T08:21:42.016335+00:00",
+    "total_parameter_count": 2213241664,
+    "floating_parameter_count": 2213241664,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2213241664
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4426483328
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2213241664
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 306242560
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 612485120
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 1881825088
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 3763650176
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 25174016
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 50348032
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.visual.patch_embed.proj.weight",
+        "model.visual.patch_embed.proj.bias",
+        "model.visual.pos_embed.weight",
+        "model.visual.blocks.0.norm1.weight",
+        "model.visual.blocks.0.norm1.bias",
+        "model.visual.blocks.0.norm2.weight",
+        "model.visual.blocks.0.norm2.bias",
+        "model.visual.blocks.0.attn.qkv.weight",
+        "model.visual.blocks.0.attn.qkv.bias",
+        "model.visual.blocks.0.attn.proj.weight",
+        "model.visual.blocks.0.attn.proj.bias",
+        "model.visual.blocks.0.mlp.linear_fc1.weight",
+        "model.visual.blocks.0.mlp.linear_fc1.bias",
+        "model.visual.blocks.0.mlp.linear_fc2.weight",
+        "model.visual.blocks.0.mlp.linear_fc2.bias",
+        "model.visual.blocks.1.norm1.weight",
+        "model.visual.blocks.1.norm1.bias",
+        "model.visual.blocks.1.norm2.weight",
+        "model.visual.blocks.1.norm2.bias",
+        "model.visual.blocks.1.attn.qkv.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2213241664
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4426506752,
+      "cuda_reserved_bytes": 4450156544,
+      "cuda_allocated_gib": 4.1225056648254395,
+      "cuda_reserved_gib": 4.14453125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 7
+  },
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:21:45.523903+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 8
+  },
+  {
+    "model_name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:21:48.450004+00:00",
+    "total_parameter_count": 2348347392,
+    "floating_parameter_count": 2348347392,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2348347392
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4696694784
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2348347392
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304012288
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608024576
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 2031739904
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 4063479808
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 12595200
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 25190400
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.embeddings.cls_token",
+        "model.vision_tower.embeddings.position_embeddings",
+        "model.vision_tower.embeddings.patch_embeddings.projection.weight",
+        "model.vision_tower.embeddings.patch_embeddings.projection.bias",
+        "model.vision_tower.encoder.layer.0.lambda_1",
+        "model.vision_tower.encoder.layer.0.lambda_2",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.weight",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.bias",
+        "model.vision_tower.encoder.layer.0.layernorm_before.weight",
+        "model.vision_tower.encoder.layer.0.layernorm_before.bias"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2348347392
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4714435584,
+      "cuda_reserved_bytes": 5037359104,
+      "cuda_allocated_gib": 4.390660285949707,
+      "cuda_reserved_gib": 4.69140625
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 9
+  },
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:22:08.389758+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 10
+  },
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:22:11.100744+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 11
+  },
+  {
+    "model_name": "Qwen3.5-2B",
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:22:11.112664+00:00",
+    "total_parameter_count": 2213241664,
+    "floating_parameter_count": 2213241664,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2213241664
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4426483328
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2213241664
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 306242560
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 612485120
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 1881825088
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 3763650176
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 25174016
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 50348032
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.visual.patch_embed.proj.weight",
+        "model.visual.patch_embed.proj.bias",
+        "model.visual.pos_embed.weight",
+        "model.visual.blocks.0.norm1.weight",
+        "model.visual.blocks.0.norm1.bias",
+        "model.visual.blocks.0.norm2.weight",
+        "model.visual.blocks.0.norm2.bias",
+        "model.visual.blocks.0.attn.qkv.weight",
+        "model.visual.blocks.0.attn.qkv.bias",
+        "model.visual.blocks.0.attn.proj.weight",
+        "model.visual.blocks.0.attn.proj.bias",
+        "model.visual.blocks.0.mlp.linear_fc1.weight",
+        "model.visual.blocks.0.mlp.linear_fc1.bias",
+        "model.visual.blocks.0.mlp.linear_fc2.weight",
+        "model.visual.blocks.0.mlp.linear_fc2.bias",
+        "model.visual.blocks.1.norm1.weight",
+        "model.visual.blocks.1.norm1.bias",
+        "model.visual.blocks.1.norm2.weight",
+        "model.visual.blocks.1.norm2.bias",
+        "model.visual.blocks.1.attn.qkv.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2213241664
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4444232192,
+      "cuda_reserved_bytes": 4452253696,
+      "cuda_allocated_gib": 4.139013767242432,
+      "cuda_reserved_gib": 4.146484375
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 12
+  },
+  {
+    "model_name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:22:14.524034+00:00",
+    "total_parameter_count": 2348347392,
+    "floating_parameter_count": 2348347392,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2348347392
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4696694784
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2348347392
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304012288
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608024576
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 2031739904
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 4063479808
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 12595200
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 25190400
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.embeddings.cls_token",
+        "model.vision_tower.embeddings.position_embeddings",
+        "model.vision_tower.embeddings.patch_embeddings.projection.weight",
+        "model.vision_tower.embeddings.patch_embeddings.projection.bias",
+        "model.vision_tower.encoder.layer.0.lambda_1",
+        "model.vision_tower.encoder.layer.0.lambda_2",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.weight",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.bias",
+        "model.vision_tower.encoder.layer.0.layernorm_before.weight",
+        "model.vision_tower.encoder.layer.0.layernorm_before.bias"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2348347392
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4714435584,
+      "cuda_reserved_bytes": 5037359104,
+      "cuda_allocated_gib": 4.390660285949707,
+      "cuda_reserved_gib": 4.69140625
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 13
+  },
+  {
+    "model_name": "CLIP ViT-L/14",
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:22:34.981252+00:00",
+    "total_parameter_count": 427616513,
+    "floating_parameter_count": 427616513,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427616513
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855233026
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 427616513
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 303966208
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 607932416
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 863787520,
+      "cuda_reserved_bytes": 889192448,
+      "cuda_allocated_gib": 0.8044648170471191,
+      "cuda_reserved_gib": 0.828125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 14
+  },
+  {
+    "model_name": "Qwen3.5-2B",
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "role": "proxy",
+    "audited_utc": "2026-10-19T08:22:39.851072+00:00",
+    "total_parameter_count": 2213241664,
+    "floating_parameter_count": 2213241664,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2213241664
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4426483328
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2213241664
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 306242560
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 612485120
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 1881825088
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 3763650176
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 25174016
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 50348032
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.visual.patch_embed.proj.weight",
+        "model.visual.patch_embed.proj.bias",
+        "model.visual.pos_embed.weight",
+        "model.visual.blocks.0.norm1.weight",
+        "model.visual.blocks.0.norm1.bias",
+        "model.visual.blocks.0.norm2.weight",
+        "model.visual.blocks.0.norm2.bias",
+        "model.visual.blocks.0.attn.qkv.weight",
+        "model.visual.blocks.0.attn.qkv.bias",
+        "model.visual.blocks.0.attn.proj.weight",
+        "model.visual.blocks.0.attn.proj.bias",
+        "model.visual.blocks.0.mlp.linear_fc1.weight",
+        "model.visual.blocks.0.mlp.linear_fc1.bias",
+        "model.visual.blocks.0.mlp.linear_fc2.weight",
+        "model.visual.blocks.0.mlp.linear_fc2.bias",
+        "model.visual.blocks.1.norm1.weight",
+        "model.visual.blocks.1.norm1.bias",
+        "model.visual.blocks.1.norm2.weight",
+        "model.visual.blocks.1.norm2.bias",
+        "model.visual.blocks.1.attn.qkv.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2213241664
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4444232192,
+      "cuda_reserved_bytes": 4452253696,
+      "cuda_allocated_gib": 4.139013767242432,
+      "cuda_reserved_gib": 4.146484375
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 15
+  }
+]

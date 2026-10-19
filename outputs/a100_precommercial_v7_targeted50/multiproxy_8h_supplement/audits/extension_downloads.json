@@ -1,0 +1,54 @@
+[
+  {
+    "model": "CLIP ViT-B/32",
+    "status": "downloaded",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "snapshot": "/ephemeral/a100_precommercial_v6/model-cache/hf-cache/hub/models--openai--clip-vit-base-patch32/snapshots/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "weight_format": "pytorch_model.bin",
+    "depth": 12,
+    "config_image_size": 224,
+    "actual_input_size": 224,
+    "preprocessing": "V5-compatible CLIP native square resize",
+    "at": 1792396894.2789068,
+    "BF16_runtime_audit": "pending_GPU_load"
+  },
+  {
+    "model": "CLIP ViT-B/16",
+    "status": "downloaded",
+    "revision": "57c216476eefef5ab752ec549e440a49ae4ae5f3",
+    "snapshot": "/ephemeral/a100_precommercial_v6/model-cache/hf-cache/hub/models--openai--clip-vit-base-patch16/snapshots/57c216476eefef5ab752ec549e440a49ae4ae5f3",
+    "weight_format": "pytorch_model.bin",
+    "depth": 12,
+    "config_image_size": 224,
+    "actual_input_size": 224,
+    "preprocessing": "V5-compatible CLIP native square resize",
+    "at": 1792396894.3172119,
+    "BF16_runtime_audit": "pending_GPU_load"
+  },
+  {
+    "model": "CLIP ViT-L/14@336",
+    "status": "downloaded",
+    "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+    "snapshot": "/ephemeral/a100_precommercial_v6/model-cache/hf-cache/hub/models--openai--clip-vit-large-patch14-336/snapshots/ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+    "weight_format": "pytorch_model.bin",
+    "depth": 24,
+    "config_image_size": 336,
+    "actual_input_size": 336,
+    "preprocessing": "V5-compatible CLIP native square resize",
+    "at": 1792396894.3568194,
+    "BF16_runtime_audit": "pending_GPU_load"
+  },
+  {
+    "model": "DINOv2-Base",
+    "status": "downloaded",
+    "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "snapshot": "/ephemeral/a100_precommercial_v6/model-cache/hf-cache/hub/models--facebook--dinov2-base/snapshots/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "weight_format": "model.safetensors",
+    "depth": 12,
+    "config_image_size": 518,
+    "actual_input_size": 256,
+    "preprocessing": "V5-compatible differentiable square resize to processor shortest_edge=256; no center crop; variable-resolution DINO",
+    "at": 1792396894.3948045,
+    "BF16_runtime_audit": "pending_GPU_load"
+  }
+]

@@ -1,0 +1,251 @@
+[
+  {
+    "model_name": "CLIP ViT-B/32",
+    "repo_id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "role": "proxy_CPU_preflight_only",
+    "audited_utc": "2026-10-19T08:02:30.561414+00:00",
+    "total_parameter_count": 151277313,
+    "floating_parameter_count": 151277313,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 151277313
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 302554626
+    },
+    "parameter_counts_by_device": {
+      "cpu": 151277313
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 87849216
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 175698432
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 63165952
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 126331904
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 262145
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 12,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cpu": 151277313
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 0,
+      "cuda_reserved_bytes": 0,
+      "cuda_allocated_gib": 0.0,
+      "cuda_reserved_gib": 0.0
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 1
+  },
+  {
+    "model_name": "CLIP ViT-B/16",
+    "repo_id": "openai/clip-vit-base-patch16",
+    "revision": "57c216476eefef5ab752ec549e440a49ae4ae5f3",
+    "role": "proxy_CPU_preflight_only",
+    "audited_utc": "2026-10-19T08:02:57.201790+00:00",
+    "total_parameter_count": 149620737,
+    "floating_parameter_count": 149620737,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 149620737
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 299241474
+    },
+    "parameter_counts_by_device": {
+      "cpu": 149620737
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 86192640
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 172385280
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 63165952
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 126331904
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 262145
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 12,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cpu": 149620737
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 0,
+      "cuda_reserved_bytes": 0,
+      "cuda_allocated_gib": 0.0,
+      "cuda_reserved_gib": 0.0
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 2
+  },
+  {
+    "model_name": "CLIP ViT-L/14@336",
+    "repo_id": "openai/clip-vit-large-patch14-336",
+    "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+    "role": "proxy_CPU_preflight_only",
+    "audited_utc": "2026-10-19T08:04:37.263986+00:00",
+    "total_parameter_count": 427944193,
+    "floating_parameter_count": 427944193,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 427944193
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 855888386
+    },
+    "parameter_counts_by_device": {
+      "cpu": 427944193
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304293888
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608587776
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 123060480
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 246120960
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 589825
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "logit_scale",
+        "text_model.embeddings.token_embedding.weight",
+        "text_model.embeddings.position_embedding.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.weight",
+        "text_model.encoder.layers.0.self_attn.k_proj.bias",
+        "text_model.encoder.layers.0.self_attn.v_proj.weight",
+        "text_model.encoder.layers.0.self_attn.v_proj.bias",
+        "text_model.encoder.layers.0.self_attn.q_proj.weight",
+        "text_model.encoder.layers.0.self_attn.q_proj.bias",
+        "text_model.encoder.layers.0.self_attn.out_proj.weight",
+        "text_model.encoder.layers.0.self_attn.out_proj.bias",
+        "text_model.encoder.layers.0.layer_norm1.weight",
+        "text_model.encoder.layers.0.layer_norm1.bias",
+        "text_model.encoder.layers.0.mlp.fc1.weight",
+        "text_model.encoder.layers.0.mlp.fc1.bias",
+        "text_model.encoder.layers.0.mlp.fc2.weight",
+        "text_model.encoder.layers.0.mlp.fc2.bias",
+        "text_model.encoder.layers.0.layer_norm2.weight",
+        "text_model.encoder.layers.0.layer_norm2.bias",
+        "text_model.encoder.layers.1.self_attn.k_proj.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cpu": 427944193
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 0,
+      "cuda_reserved_bytes": 0,
+      "cuda_allocated_gib": 0.0,
+      "cuda_reserved_gib": 0.0
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 3
+  }
+]

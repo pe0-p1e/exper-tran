@@ -1,0 +1,287 @@
+{
+  "CLIP ViT-L/14": {
+    "passed": true,
+    "spec": {
+      "repo_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "family": "clip",
+      "expected_vision_depth": 24
+    },
+    "layers": [
+      5,
+      11,
+      17,
+      23
+    ],
+    "taps": [
+      {
+        "layer": 5,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 43.68373107910156
+      },
+      {
+        "layer": 11,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 179.95098876953125
+      },
+      {
+        "layer": 17,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 575.8768920898438
+      },
+      {
+        "layer": 23,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 402.04571533203125
+      }
+    ],
+    "measurements": [
+      {
+        "batch": 1,
+        "seconds": 0.39456585299922153,
+        "seconds_per_image_step": 0.39456585299922153,
+        "peak_reserved_gib": 1.017578125,
+        "peak_allocated_gib": 0.9953441619873047,
+        "free_gib": 68.5521240234375,
+        "safe": true
+      },
+      {
+        "batch": 2,
+        "seconds": 0.08863527500943746,
+        "seconds_per_image_step": 0.04431763750471873,
+        "peak_reserved_gib": 1.181640625,
+        "peak_allocated_gib": 1.1696815490722656,
+        "free_gib": 68.3880615234375,
+        "safe": true
+      },
+      {
+        "batch": 4,
+        "seconds": 0.08443726800032891,
+        "seconds_per_image_step": 0.02110931700008223,
+        "peak_reserved_gib": 1.53125,
+        "peak_allocated_gib": 1.5183563232421875,
+        "free_gib": 68.0384521484375,
+        "safe": true
+      }
+    ],
+    "reference_prepare_seconds": 1.5141754150390625,
+    "chosen_batch": 2,
+    "seconds_per_image_step": 0.04431763750471873,
+    "elapsed_seconds": 2.342580795288086,
+    "model_calls": {
+      "vision": 11,
+      "backward": 7,
+      "image_forwards": 19
+    }
+  },
+  "InternVL3.5-2B-HF": {
+    "passed": true,
+    "spec": {
+      "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+      "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+      "family": "internvl",
+      "expected_vision_depth": 24
+    },
+    "layers": [
+      5,
+      11,
+      17,
+      23
+    ],
+    "taps": [
+      {
+        "layer": 5,
+        "token_shape": [
+          1,
+          1024,
+          1024
+        ],
+        "valid_tokens": 1024,
+        "gradient_l1": 9.926244735717773
+      },
+      {
+        "layer": 11,
+        "token_shape": [
+          1,
+          1024,
+          1024
+        ],
+        "valid_tokens": 1024,
+        "gradient_l1": 40.52462387084961
+      },
+      {
+        "layer": 17,
+        "token_shape": [
+          1,
+          1024,
+          1024
+        ],
+        "valid_tokens": 1024,
+        "gradient_l1": 72.26664733886719
+      },
+      {
+        "layer": 23,
+        "token_shape": [
+          1,
+          1024,
+          1024
+        ],
+        "valid_tokens": 1024,
+        "gradient_l1": 63.84331512451172
+      }
+    ],
+    "measurements": [
+      {
+        "batch": 1,
+        "seconds": 0.10123769399069715,
+        "seconds_per_image_step": 0.10123769399069715,
+        "peak_reserved_gib": 5.587890625,
+        "peak_allocated_gib": 5.565574645996094,
+        "free_gib": 63.9818115234375,
+        "safe": true
+      },
+      {
+        "batch": 2,
+        "seconds": 0.11298467499727849,
+        "seconds_per_image_step": 0.056492337498639245,
+        "peak_reserved_gib": 6.095703125,
+        "peak_allocated_gib": 6.061756134033203,
+        "free_gib": 63.4739990234375,
+        "safe": true
+      },
+      {
+        "batch": 4,
+        "seconds": 0.17616492199886125,
+        "seconds_per_image_step": 0.04404123049971531,
+        "peak_reserved_gib": 7.091796875,
+        "peak_allocated_gib": 7.054119110107422,
+        "free_gib": 62.4779052734375,
+        "safe": true
+      }
+    ],
+    "reference_prepare_seconds": 1.8492131233215332,
+    "chosen_batch": 2,
+    "seconds_per_image_step": 0.056492337498639245,
+    "elapsed_seconds": 2.444161891937256,
+    "model_calls": {
+      "vision": 11,
+      "backward": 7,
+      "image_forwards": 19
+    }
+  },
+  "Qwen3.5-2B": {
+    "passed": true,
+    "spec": {
+      "repo_id": "Qwen/Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "family": "qwen",
+      "expected_vision_depth": 24
+    },
+    "layers": [
+      5,
+      11,
+      17,
+      23
+    ],
+    "taps": [
+      {
+        "layer": 5,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 12.883148193359375
+      },
+      {
+        "layer": 11,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 854.5662841796875
+      },
+      {
+        "layer": 17,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 497.90313720703125
+      },
+      {
+        "layer": 23,
+        "token_shape": [
+          1,
+          256,
+          1024
+        ],
+        "valid_tokens": 256,
+        "gradient_l1": 0.17054322361946106
+      }
+    ],
+    "measurements": [
+      {
+        "batch": 1,
+        "seconds": 0.9536885250126943,
+        "seconds_per_image_step": 0.9536885250126943,
+        "peak_reserved_gib": 4.31640625,
+        "peak_allocated_gib": 4.299916744232178,
+        "free_gib": 58.48028564453125,
+        "safe": true
+      },
+      {
+        "batch": 2,
+        "seconds": 0.3176333640003577,
+        "seconds_per_image_step": 0.15881668200017884,
+        "peak_reserved_gib": 4.474609375,
+        "peak_allocated_gib": 4.451932430267334,
+        "free_gib": 58.295166015625,
+        "safe": true
+      },
+      {
+        "batch": 4,
+        "seconds": 0.3032580150029389,
+        "seconds_per_image_step": 0.07581450375073473,
+        "peak_reserved_gib": 4.779296875,
+        "peak_allocated_gib": 4.7559638023376465,
+        "free_gib": 57.609619140625,
+        "safe": true
+      }
+    ],
+    "reference_prepare_seconds": 4.464576005935669,
+    "chosen_batch": 2,
+    "seconds_per_image_step": 0.15881668200017884,
+    "elapsed_seconds": 6.6153082847595215,
+    "model_calls": {
+      "vision": 11,
+      "backward": 7,
+      "image_forwards": 19
+    }
+  }
+}

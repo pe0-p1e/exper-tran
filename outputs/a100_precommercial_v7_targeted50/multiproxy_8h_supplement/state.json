@@ -1,0 +1,13 @@
+{
+  "started": 1792397596.9106085,
+  "failures": [],
+  "blocked": {},
+  "attacks": {},
+  "evaluations": {},
+  "user_authorized_shared_GPU": true,
+  "max_new_GPU_workers": 1,
+  "controller_superseded": true,
+  "live_scheduler_state": "pool_state.json",
+  "live_max_total_GPU_workers": 4,
+  "live_max_supplementary_GPU_workers": 3
+}

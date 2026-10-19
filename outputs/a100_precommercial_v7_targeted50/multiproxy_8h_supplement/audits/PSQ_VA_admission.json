@@ -1,0 +1,8 @@
+{
+  "estimated_attack_seconds": 1254.1122187877772,
+  "remaining_seconds": 27618.641324043274,
+  "admitted": true,
+  "shared_GPU": true,
+  "extra_worker_memory_cap_gib": 16,
+  "batch": 2
+}

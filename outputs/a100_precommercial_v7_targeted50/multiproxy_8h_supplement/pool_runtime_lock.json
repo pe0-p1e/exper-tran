@@ -1,0 +1,12 @@
+{
+  "max_total_GPU_workers": 4,
+  "global_memory_budget_gib": 72,
+  "primary_settings_unchanged": true,
+  "method_lock_sha256": "3d5504416c0ca8234e79c8cf9c578a2a2b75349f60b53194e3855910c983f6bb",
+  "source_hashes": {
+    "dynamic_pool.py": "246ad22a202baceccaf9442070a7efc934ad87c0b76234813482a4981c31e39d",
+    "pool_entry.py": "5c03f9621fa9d4d2fa935c323d75f1b1d4432232c51a6f6db17b97efc4f5a2c7"
+  },
+  "target_feedback_for_scheduling": false,
+  "batch": 2
+}

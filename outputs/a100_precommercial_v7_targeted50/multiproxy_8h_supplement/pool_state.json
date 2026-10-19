@@ -1,0 +1,59 @@
+{
+  "started": 1792398084.9503489,
+  "conditions": {
+    "PSI_VA": {
+      "attack_complete": false,
+      "evaluation_complete": false
+    },
+    "PSG_VB": {
+      "attack_complete": false,
+      "evaluation_complete": false
+    },
+    "PSQ_VA": {
+      "attack_complete": true,
+      "evaluation_complete": false
+    }
+  },
+  "failures": [],
+  "memory_events": [],
+  "completed_phases": [
+    {
+      "condition": "PSI_VA",
+      "phase": "calibration",
+      "finished": 1792398116.8514764
+    },
+    {
+      "condition": "PSG_VB",
+      "phase": "smoke",
+      "finished": 1792398124.01586
+    },
+    {
+      "condition": "PSI_VA",
+      "phase": "smoke",
+      "finished": 1792398146.5436332
+    },
+    {
+      "condition": "PSQ_VA",
+      "phase": "attack",
+      "finished": 1792398640.2198906
+    }
+  ],
+  "active": [
+    {
+      "pid": 47520,
+      "condition": "PSG_VB",
+      "phase": "attack",
+      "reserved_gib": 8.092200948670506,
+      "started": 1792398124.01586,
+      "adopted": true
+    },
+    {
+      "pid": 47608,
+      "condition": "PSI_VA",
+      "phase": "attack",
+      "reserved_gib": 6.918981673195958,
+      "started": 1792398146.5436332,
+      "adopted": true
+    }
+  ]
+}

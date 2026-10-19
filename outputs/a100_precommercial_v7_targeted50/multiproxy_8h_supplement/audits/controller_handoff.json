@@ -1,0 +1,9 @@
+{
+  "old_controller_pid": 46031,
+  "adopted_attack_pid": 46229,
+  "condition": "PSQ_VA",
+  "at": 1792398084.66751,
+  "primary_pid": 38627,
+  "primary_not_signaled": true,
+  "attack_not_signaled": true
+}
