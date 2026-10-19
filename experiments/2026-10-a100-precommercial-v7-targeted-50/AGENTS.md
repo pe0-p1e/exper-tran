@@ -76,3 +76,7 @@ The user approved the ten-hour research prompt and requested actual execution. R
 ### User-approved twenty-hour extension — 2026-10-18
 
 The user explicitly requested additional research and a total 20-hour reservation. Read `TWENTY_HOUR_RESEARCH.md` and `twenty_hour_plan.yaml`. The original start time and completed artifacts are preserved; rerunning never adds another 20 hours. Keep final targets isolated. Add controlled layer/proxy removal, reference geometry and optimizer interactions, then nested 8-image/direction confirmation and matched singles. Existing scientific constraints remain unchanged.
+
+### Strict family-disjoint correction — 2026-10-19
+
+Read `FAMILY_DISJOINT_RECOVERY.md`. The user requires excluding the entire target family from attack proxies: no Qwen for a Qwen target, no InternVL for an InternVL target, and no Gemma for a Gemma target. Preserve existing valid Gemma31B cross-family results and all historical measurements. Redo Qwen/InternVL using the fixed corrected matrix. No open-ended VQA now. Freeze settings before corrected evaluation and never retune from target outcomes. Default launcher runs the corrected family-disjoint campaign in a distinct output directory.

@@ -12,13 +12,14 @@ export PRIMARY_ML_CKA_STRICT_BF16=1
 export HF_HUB_DISABLE_XET=1 TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export OMP_NUM_THREADS="${OMP_NUM_THREADS:-4}" OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-4}"
-MODE=tenhour
+MODE=family
 for arg in "$@"; do
   case "$arg" in
-    --preflight) MODE=preflight;; --smoke) MODE=smoke;; --pilot|--focus) MODE=focus;; --ten-hour|--twenty-hour) MODE=tenhour;; --legacy-full) MODE=full;; --full|--resume) :;;
+    --preflight) MODE=preflight;; --smoke) MODE=smoke;; --pilot|--focus) MODE=focus;; --family-disjoint) MODE=family;; --ten-hour|--twenty-hour) MODE=tenhour;; --legacy-full) MODE=full;; --full|--resume) :;;
     *) echo "Unknown option: $arg"; exit 2;;
   esac
 done
+if [[ "$MODE" == family ]]; then exec bash "$EXP/run_family_disjoint_recovery.sh"; fi
 if [[ "$MODE" == tenhour ]]; then exec bash "$EXP/run_ten_hour_v7.sh"; fi
 if [[ "$MODE" == focus ]]; then exec bash "$EXP/run_focus_v7.sh"; fi
 mkdir -p "$OUT/logs" "$OUT/audits" "$HF_HOME"

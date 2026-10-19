@@ -41,7 +41,10 @@ def main():
             d=json.loads(p.read_text());states.append((c,d))
     # Reuse frozen image features by content hash, model revision and pooling.
     proxy_names=sorted(set(n for c in lock.get('test_conditions',lock.get('configs',[])) for n in c['models']))
-    all_names=list(TARGETS)+proxy_names
+    analysis_targets=lock.get('targets',TARGETS)
+    condition_models={c.get('condition',c.get('name','')):c['models'] for c in lock.get('configs',[])}
+    condition_models.update(lock.get('condition_models',{}))
+    all_names=list(analysis_targets)+proxy_names
     summaries=[];image_rows=[];variance=[];features={}
     for name in all_names:
         m=VisionProxy(name,role='target_posthoc' if name in TARGETS else 'proxy_posthoc');m.to('cuda');m.prepare_bank()
@@ -63,6 +66,9 @@ def main():
                     zs.append(z)
                 return np.stack(zs)
             for condition,state in states:
+                if lock.get('protocol')=='strict_family_disjoint':
+                    if name in analysis_targets and lock['condition_targets'][condition]!=name:continue
+                    if name not in analysis_targets and name not in condition_models[condition]:continue
                 clean=embed(state['clean_paths']);adv=embed(state['adv_paths'])
                 for iid,c,a in zip(state['image_ids'],clean,adv):features[condition,state['transition_id'],iid,name]=(c,a)
             for condition in lock['allowed_test_conditions']:
@@ -80,14 +86,14 @@ def main():
                     for i,(iid,_) in enumerate(items):image_rows.append(dict(condition=condition,model=name,transition=tid,image_id=iid,delta_pull=float(dp[i]),delta_push=float(dpush[i]),DeltaR=float(dp[i]+dpush[i]),clean_margin=float(clean_margin[i]),adversarial_margin=float(adv_margin[i])))
                     # Joint reference + clean + adversarial set: one fit per plot.
                     # This forward-only protocol has no B->A cohort: do not invent it.
-                    if name in TARGETS and condition==lock['allowed_test_conditions'][0]:
+                    if name in analysis_targets and condition==lock.get('primary_conditions',{}).get(name,lock['allowed_test_conditions'][0]):
                         groups=[unit(refs[source-1]),unit(refs[target-1]),clean,adv]
                         X=np.concatenate(groups);labels=np.repeat(['source refs','target refs','clean','adversarial'],list(map(len,groups)))
                         pca=PCA(n_components=2,random_state=42);xy=pca.fit_transform(X)
                         reduced=PCA(n_components=min(40,len(X)-1,X.shape[1]),random_state=42).fit_transform(X)
                         tsne=TSNE(n_components=2,perplexity=30,random_state=42,init='pca',learning_rate='auto').fit_transform(reduced)
                         for mode,coords in [('pca',xy),('tsne',tsne)]:
-                            dst=OUT/'analysis'/mode/name.replace('/','_')/tid;dst.mkdir(parents=True,exist_ok=True)
+                            dst=A/mode/name.replace('/','_')/tid;dst.mkdir(parents=True,exist_ok=True)
                             writecsv(dst/'coordinates.csv',[dict(group=str(g),x=float(v[0]),y=float(v[1])) for g,v in zip(labels,coords)])
                             fig,ax=plt.subplots(figsize=(6,5))
                             for g in dict.fromkeys(labels):ax.scatter(*coords[labels==g].T,s=13,alpha=.7,label=g)
@@ -101,9 +107,11 @@ def main():
         finally:m.close()
     cross=[]
     for c in lock['allowed_test_conditions']:
-        for target in TARGETS:
+        for target in analysis_targets:
+            if lock.get('protocol')=='strict_family_disjoint' and lock['condition_targets'][c]!=target:continue
             for tid in TIDS:
                 for proxy in proxy_names:
+                    if lock.get('protocol')=='strict_family_disjoint' and proxy not in condition_models[c]:continue
                     ids=sorted(iid for (cond,t,iid,n) in features if cond==c and t==tid and n==target and (c,tid,iid,proxy) in features)
                     if len(ids)!=30:continue
                     for kind,index in [('clean',0),('adversarial',1)]:

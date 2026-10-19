@@ -1,5 +1,10 @@
 # V7 targeted transfer optimization (>=50% each target and each direction)
 
+Latest execution override (2026-10-19): read `FAMILY_DISJOINT_RECOVERY.md`.
+Default `run_all_v7.sh` now reruns Qwen/InternVL with their entire families excluded
+from proxies, preserving valid prior Gemma cross-family results. The current task
+is fixed ten-class recognition, not open-ended VQA.
+
 This branch was opened after the user explicitly raised the requirement from the V6 engineering gate to >=50% target targeted ASR for **every target and every directed class pair**. There is **no claim** that such rates have already been achieved.
 
 The existing V6 BF16 recovery baseline is complete: 65/65 cells, 15/15 all-parameter BF16 checks, three target best pooled ASRs Qwen27B 13.33%, InternVL14B 14.00%, Gemma31B 1.33%. These are low and some pair directions remain zero. V6 records are **historical and immutable**.

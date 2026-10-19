@@ -110,12 +110,17 @@ def main():
     p.add_argument('--config-json',type=Path)
     p.add_argument('--run-label')
     p.add_argument('--limit-per-direction',type=int)
+    p.add_argument('--excluded-proxy-family',help='Fail before loading any target-family proxy')
     args=p.parse_args()
     if any(n in TARGETS for n in args.models):raise RuntimeError('Final target models forbidden in attack process')
+    if args.excluded_proxy_family:
+        from family_protocol import require_excluded_family
+        require_excluded_family(args.models,args.excluded_proxy_family,REGISTRY)
     if args.steps<1 or args.batch_size<1 or args.restarts<1:raise ValueError('Positive budgets required')
     prepare_data()
     config=dict(METHODS[args.method]);config.update(fusion=args.fusion,input_diversity=args.input_diversity,smoothing=args.smoothing)
     if args.config_json:config.update(json.loads(args.config_json.read_text()))
+    if args.excluded_proxy_family:config['excluded_proxy_family']=args.excluded_proxy_family
     if args.limit_per_direction and (args.split=='test' or not 1<=args.limit_per_direction<=10):raise ValueError('Small pilots must use dev/smoke only')
     name=f"{args.method}__{args.fusion}__"+'+'.join(n.replace('/','_').replace(' ','_') for n in args.models)
     if args.input_diversity:name+='__DI'

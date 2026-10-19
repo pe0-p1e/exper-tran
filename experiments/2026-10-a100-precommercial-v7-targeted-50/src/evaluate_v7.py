@@ -52,6 +52,10 @@ def test_evaluate(root, target, lock_override=None):
     if not lock.is_file():raise RuntimeError('Final target evaluation requires immutable method lock')
     decision=json.loads(lock.read_text())
     if root.name not in decision['allowed_test_conditions']:raise RuntimeError('Condition not predeclared in lock')
+    from family_protocol import require_condition_target
+    for state_path in sorted(root.glob('*/batch_*/state.json')):
+        actual=json.loads(state_path.read_text())
+        require_condition_target(root.name,target,actual['models'],decision,REGISTRY)
     from primary_ml_cka.domain.identifiers import MODEL_REVISIONS
     from primary_ml_cka.models.backends.transformers_backend import load_processor
     from primary_ml_cka.models.backends.target_transformers_generation import load_target_for_generation

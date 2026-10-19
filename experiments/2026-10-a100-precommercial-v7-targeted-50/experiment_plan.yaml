@@ -132,3 +132,15 @@ user_approved_extended_research:
   plan: twenty_hour_plan.yaml
   preserve_original_start_and_completed_work: true
   final_target_feedback: forbidden
+
+strict_cross_family_correction:
+  protocol: FAMILY_DISJOINT_RECOVERY.md
+  launcher: run_family_disjoint_recovery.sh
+  target_family_in_proxies: forbidden
+  corrected_targets: [Qwen3.5-27B, InternVL3.5-14B-HF]
+  preserved_target: Gemma 4 31B-it
+  task: fixed_10_class_recognition
+  open_ended_VQA: false
+  predeclared_conditions: 32
+  cells: 160
+  image_evaluations: 4800
