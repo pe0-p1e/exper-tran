@@ -1,0 +1,4 @@
+provider,model,transition,image_id,clean_label,adv_label,clean_correct,target_hit
+codex,gpt-6.1-sol,T03,train/n07753275/n07753275_10472.JPEG,3,3,True,False
+codex,gpt-6.1-sol,T05,train/n03642806/n03642806_10243.JPEG,5,5,True,False
+codex,gpt-6.1-sol,T09,train/n04254680/n04254680_10154.JPEG,9,9,True,False

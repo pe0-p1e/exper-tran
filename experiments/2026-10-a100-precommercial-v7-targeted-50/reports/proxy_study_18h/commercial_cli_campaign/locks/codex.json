@@ -1,0 +1,44 @@
+{
+  "provider": "codex",
+  "spec": {
+    "model": "gpt-6.1-sol",
+    "client_version": "codex-cli 0.163.0"
+  },
+  "images": {
+    "804a6e99d874def8": {
+      "image_sha256": "7e704b1802a7a355987d5381cee74cfd22d937546b780c069d301df77cee6705",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    "6bd417e27010f496": {
+      "image_sha256": "0af2e6bb8b16e94019eb11b0caf95f328c00b8ad514f56121f66d84ea3f84e41",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    "0a504862052c788a": {
+      "image_sha256": "bacdce06285f0eb89e5b9912d6ba51ccef1073435e12f9c21c86adece1c9fcf2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    "4c5b3a312cec8124": {
+      "image_sha256": "03e565e031ef0282deca700d6531f96c7f2322a2da98128d63c13886db7c4efc",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    "5bae203a6c8c7120": {
+      "image_sha256": "07101f8823d8c363ced6c206bb30912dde401366325428f9480f7b863b42ca30",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    },
+    "a64c51cc102f7c75": {
+      "image_sha256": "cb2535f8a68834ac79ed34895cb107e9cd45c7a5d89b304783ae035c365e496d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
+    }
+  },
+  "request_order": [
+    "0a504862052c788a",
+    "4c5b3a312cec8124",
+    "5bae203a6c8c7120",
+    "6bd417e27010f496",
+    "804a6e99d874def8",
+    "a64c51cc102f7c75"
+  ],
+  "protocol": "three_image_blinded_cli_pilot_v1",
+  "selection": "GT-only fixed pilot",
+  "target_feedback_for_tuning": false
+}

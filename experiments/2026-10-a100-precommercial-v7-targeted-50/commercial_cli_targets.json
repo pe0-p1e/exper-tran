@@ -1,0 +1,11 @@
+{
+  "protocol": "three_image_blinded_cli_pilot_v1",
+  "max_images": 3,
+  "requests_per_target": 6,
+  "paid_api_fallback": false,
+  "providers": {
+    "codex": {"model": "gpt-6.1-sol", "client_version": "codex-cli 0.163.0"},
+    "gemini": {"model": null, "client_version": "0.64.0"},
+    "claude": {"model": null, "client_version": "1.4.2"}
+  }
+}

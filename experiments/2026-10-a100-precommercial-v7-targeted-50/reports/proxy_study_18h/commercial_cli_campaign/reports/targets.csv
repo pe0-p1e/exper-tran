@@ -1,0 +1,4 @@
+provider,model,status,completed_requests,planned_requests,paired_images,hits,denominator,ASR,clean_correct,reason,legacy_conditional_TASR
+codex,gpt-6.1-sol,COMPLETE,6,6,3,0,3,0.0,3,,N/A
+gemini,UNCONFIGURED,BLOCKED,0,6,0,,3,,,Exact authenticated model ID is not configured; aliases/default/auto are forbidden,N/A
+claude,UNCONFIGURED,BLOCKED,0,6,0,,3,,,Exact authenticated model ID is not configured; aliases/default/auto are forbidden,N/A

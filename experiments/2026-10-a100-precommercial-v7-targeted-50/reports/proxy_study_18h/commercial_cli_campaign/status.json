@@ -1,0 +1,64 @@
+{
+  "updated": 1792433061.0440378,
+  "providers": {
+    "codex": {
+      "status": "READY",
+      "client": "codex-cli 0.163.0",
+      "requested_model": "gpt-6.1-sol",
+      "serving_snapshot": "not exposed by CLI; do not claim a verified backend snapshot"
+    },
+    "gemini": {
+      "status": "BLOCKED",
+      "reason": "Exact authenticated model ID is not configured; aliases/default/auto are forbidden"
+    },
+    "claude": {
+      "status": "BLOCKED",
+      "reason": "Exact authenticated model ID is not configured; aliases/default/auto are forbidden"
+    }
+  },
+  "summary": [
+    {
+      "provider": "codex",
+      "model": "gpt-6.1-sol",
+      "status": "COMPLETE",
+      "completed_requests": 6,
+      "planned_requests": 6,
+      "paired_images": 3,
+      "hits": 0,
+      "denominator": 3,
+      "ASR": 0.0,
+      "clean_correct": 3,
+      "reason": "",
+      "legacy_conditional_TASR": "N/A"
+    },
+    {
+      "provider": "gemini",
+      "model": "UNCONFIGURED",
+      "status": "BLOCKED",
+      "completed_requests": 0,
+      "planned_requests": 6,
+      "paired_images": 0,
+      "hits": null,
+      "denominator": 3,
+      "ASR": null,
+      "clean_correct": null,
+      "reason": "Exact authenticated model ID is not configured; aliases/default/auto are forbidden",
+      "legacy_conditional_TASR": "N/A"
+    },
+    {
+      "provider": "claude",
+      "model": "UNCONFIGURED",
+      "status": "BLOCKED",
+      "completed_requests": 0,
+      "planned_requests": 6,
+      "paired_images": 0,
+      "hits": null,
+      "denominator": 3,
+      "ASR": null,
+      "clean_correct": null,
+      "reason": "Exact authenticated model ID is not configured; aliases/default/auto are forbidden",
+      "legacy_conditional_TASR": "N/A"
+    }
+  ],
+  "all_complete": false
+}

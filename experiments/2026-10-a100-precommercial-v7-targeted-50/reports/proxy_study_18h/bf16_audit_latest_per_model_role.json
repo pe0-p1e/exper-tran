@@ -1,5 +1,5 @@
 {
-  "total_load_events": 19,
+  "total_load_events": 23,
   "audits": [
     {
       "model_name": "Qwen3.5-2B",
@@ -852,7 +852,7 @@
       "repo_id": "google/gemma-4-E2B-it",
       "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
       "role": "proxy",
-      "audited_utc": "2026-10-19T17:27:18.653851+00:00",
+      "audited_utc": "2026-10-19T17:53:08.043432+00:00",
       "total_parameter_count": 5104297504,
       "floating_parameter_count": 5104297504,
       "parameter_counts_by_dtype": {
@@ -928,14 +928,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 18
+      "load_sequence": 22
     },
     {
       "model_name": "Gemma 4 E4B-it",
       "repo_id": "google/gemma-4-E4B-it",
       "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
       "role": "proxy",
-      "audited_utc": "2026-10-19T17:27:33.028090+00:00",
+      "audited_utc": "2026-10-19T17:53:24.534917+00:00",
       "total_parameter_count": 7941100832,
       "floating_parameter_count": 7941100832,
       "parameter_counts_by_dtype": {
@@ -1011,7 +1011,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 19
+      "load_sequence": 23
     }
   ],
   "any_failed": false
