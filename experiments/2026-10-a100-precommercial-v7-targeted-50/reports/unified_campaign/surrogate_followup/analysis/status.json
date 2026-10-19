@@ -1,0 +1,80 @@
+{
+  "status": "PARTIAL",
+  "embedding_sources": [
+    {
+      "condition": "U00",
+      "model": "CLIP ViT-L/14",
+      "metadata_sha256": "d679c08f1efd95f176e0a9b7c0f58473376c96d1149a46c4c3e9f01b9657dbd3",
+      "npz_sha256": "02e3cafb9b8398434e20897e60309b53bd378296a7692eeb0b110dc7162757d4"
+    },
+    {
+      "condition": "U00",
+      "model": "Gemma 4 E4B-it",
+      "metadata_sha256": "97aa5c3639ffda02e7f620a2930db856b32c7e49af3f03c6f1d22dfc663c58eb",
+      "npz_sha256": "be7a9d9603fbaebc02141270aa69b93127fd2abfefc558b30427e7300ce62d77"
+    },
+    {
+      "condition": "U00",
+      "model": "InternVL3.5-2B-HF",
+      "metadata_sha256": "d319a1de664dfbe15d432d91bc487ae9b83627b9d01dd7a4e0649591e16221ba",
+      "npz_sha256": "b9089a0eff4e6d14eba51fc1d973abd06bc7eee1bffca56e401725686a88d968"
+    },
+    {
+      "condition": "U00",
+      "model": "InternVL3.5-8B-HF",
+      "metadata_sha256": "7b120f5c783056f2c859920509b80ec2ec93ebd125e9e832d279e02f9ed797c5",
+      "npz_sha256": "6e2357c799c355254fd9a4200570489927aca2d71c4c08e00bfd9b1edf9b1e85"
+    },
+    {
+      "condition": "U00",
+      "model": "Qwen3.5-2B",
+      "metadata_sha256": "7083d4b9fe6300241cb337e426b1787c0c1882d82f314728f4cd8d3c0b91cd85",
+      "npz_sha256": "efbaf6e69b7ab5b51fea578b13ae1ec1fe310a45a4dcc9daa14db452094410fd"
+    },
+    {
+      "condition": "U00",
+      "model": "Qwen3.5-9B",
+      "metadata_sha256": "54c8ea31598261fad187845231074f0b87f9b1cbff7c89e20625e8b89a444743",
+      "npz_sha256": "c5010ae90e9392adaff045bff989bcb8addc29c0680d6cf58a16226a6ba4dffc"
+    },
+    {
+      "condition": "U01",
+      "model": "CLIP ViT-L/14",
+      "metadata_sha256": "bba82f0d58beb5d212948646e35d327f5d0a0fa29a42161f14ef838bbbc80e6e",
+      "npz_sha256": "c5dc9deb96755893a1db042e8d7826926a635e6b4499395f83e1a46c9af30013"
+    },
+    {
+      "condition": "U01",
+      "model": "Gemma 4 E4B-it",
+      "metadata_sha256": "efba0541984e630cd3eba9ab9a6ebe95b3fa6221893a87dbbccafa91a1a0d76b",
+      "npz_sha256": "bfb5e29c6e7b5cb018f2b6fed0c319ff3a0ad2149740443826d02a39534f4fc0"
+    },
+    {
+      "condition": "U01",
+      "model": "InternVL3.5-2B-HF",
+      "metadata_sha256": "9045f2a5b6910222a762393f8c62ec90d3e081f52e7d738762c79f858928657e",
+      "npz_sha256": "974ade2fa74cb34d8db3774e3655b1d58ce6e13f3fa1a8d6e54a79b7b7a7ff23"
+    },
+    {
+      "condition": "U01",
+      "model": "InternVL3.5-8B-HF",
+      "metadata_sha256": "4aa907f0dbaa2b5267ee487d665ed1efb15e04eac0e9478836e5851737f97b47",
+      "npz_sha256": "ca344caaf8ee551752b8b4673eb43da2a1b3fbbfe77133c1c3715fb2936301cb"
+    },
+    {
+      "condition": "U01",
+      "model": "Qwen3.5-2B",
+      "metadata_sha256": "edd466c59c34d22a296153a3266e94806aa3b72f13990ecd33dc0ca20801e411",
+      "npz_sha256": "de80551dd704cf2a619dab957db4e225f654c9e4d42cdec09e868f4ada29f4ff"
+    }
+  ],
+  "measurement_rows": 220,
+  "cross_model_rows": 200,
+  "model_inference_calls": 0,
+  "per_direction_N": 2,
+  "per_direction_CKA_RSA": "N/A: N2 is degenerate/undefined; cross-model metrics use all10 aligned images",
+  "tsne": "qualitative; original-dimensional cosine geometry supplies quantitative measurements",
+  "correlations": "exploratory dependent repeated-image observations; no causal or significance claims",
+  "asymmetry": "not estimable: no reverse-direction cohort",
+  "commercial_or_final_target_feedback": false
+}

@@ -1,46 +1,62 @@
 {
-  "at": 1792437402.7171772,
+  "at": 1792450812.6863577,
   "gpu": {
-    "used_gib": 27.82421875,
+    "used_gib": 29.60546875,
     "utilization": 100.0,
     "pids": [
-      84659,
-      90054,
-      93404
+      147154,
+      147199,
+      148697,
+      151597
     ]
   },
   "primary": {
     "stage": "attack",
-    "condition": "CFI_layer_100",
-    "at": 1792435140.4776688
+    "condition": "CFI_soft_references",
+    "at": 1792449614.168128
   },
   "active_gpu_workers": [
     {
-      "pid": 84659,
-      "condition": "P18_M12_Q",
-      "phase": "attack",
-      "models": [
-        "Gemma 4 E2B-it",
-        "Gemma 4 E4B-it"
-      ],
-      "reserve": 17.291452944278717,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/logs/P18_M12_Q_attack.log",
-      "started": 1792432374.509298,
-      "kind": "legacy"
-    },
-    {
-      "pid": 90054,
-      "condition": "P18_M16_G",
+      "kind": "legacy",
+      "condition": "P18_M13_G",
       "phase": "attack",
       "models": [
         "CLIP ViT-L/14",
-        "Qwen3.5-2B",
-        "Qwen3.5-4B"
+        "DINOv2-Large",
+        "Qwen3.5-2B"
       ],
-      "reserve": 16.37402260489762,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/logs/P18_M16_G_attack.log",
-      "started": 1792434089.8903005,
-      "kind": "legacy"
+      "reserve": 8.485912444069982,
+      "pid": 147154,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M13_G_attack_CLIP ViT-L_14.log",
+      "started": 1792449602.3988166
+    },
+    {
+      "kind": "legacy",
+      "condition": "P18_M13_I",
+      "phase": "attack",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "Qwen3.5-2B"
+      ],
+      "reserve": 8.485912444069982,
+      "pid": 148697,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M13_I_attack_CLIP ViT-L_14.log",
+      "started": 1792449915.5423007
+    },
+    {
+      "kind": "legacy",
+      "condition": "P18_M13_Q",
+      "phase": "attack",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "reserve": 8.737566472962499,
+      "pid": 151597,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M13_Q_attack_CLIP ViT-L_14.log",
+      "started": 1792450660.154921
     }
   ],
   "max_gpu_workers": 4,

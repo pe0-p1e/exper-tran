@@ -1,0 +1,38 @@
+{
+  "model": "CLIP ViT-L/14",
+  "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "condition": "U00",
+  "N": 10,
+  "layers": [
+    5,
+    11,
+    17,
+    23
+  ],
+  "npz": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/surrogate_followup/embeddings/U00/CLIP ViT-L_14.npz",
+  "npz_sha256": "02e3cafb9b8398434e20897e60309b53bd378296a7692eeb0b110dc7162757d4",
+  "input_hashes": {
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_000/00_clean.png": "b2a54d85a57d2dae837cb6150741b71d9d892752e849c6ea075e72c848c2670a",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_000/01_clean.png": "65d511e18d960e9650bee8d3518a0e7ec4a33bdcdff5a160d917acd89c63456a",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_000/00_adv.png": "99154168e1b78d2e3e79bcfdb643b3f3c55ceaf3b7bd5df1a48e1af6cb42b7e7",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_000/01_adv.png": "4f57518c0dff219ca34685d1a8eb883793ba8f629425d7cd9b8ca9be5a04c3f6",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/00_clean.png": "04bf03e4f6212d95b54eb52d342d02434187b1abea8dfe277283d877d2850386",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/01_clean.png": "75e87124101e348f6d91ce236c88be26e2776f47ed5b57aa416d004c257af0a3",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/00_adv.png": "ff27693109fcd887d77695451004db0da0d760fee0818d732ed6abf6c07f524e",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/01_adv.png": "2db1a17805a930694348f248f9af214b99459efe6a86c85e365db96580311929",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/00_clean.png": "2052bbb314524bfa83284af5be457f466f2a15d76203a1482a232783ad924559",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/01_clean.png": "5a5b49874dc21936ec028c87bbfcedd6ebce162da1fefca99b7d808eff47a194",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/00_adv.png": "8f89a1c4fbcc8d476b7a699bdf658aaaf473c6fc7541f071d2b1aa83d651c429",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/01_adv.png": "a1fdf427e587711ea89478b2cab8772043d466f63d177baa51056c2ab4fb2ffc",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T07/batch_000/00_clean.png": "33ae9f5e4f885aac0974d5554c10b3e5517577137f4c77e8c383cc7fedf8e8cc",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T07/batch_000/01_clean.png": "4b7deaca0cf9988d32263c2a1bd8d9b17e94890337b2cf1d5d710e9a9ac71be1",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T07/batch_000/00_adv.png": "97c59fff17bf658552c48fa09040753eff741ed1fda52f167d76259f327deba5",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T07/batch_000/01_adv.png": "c93ff1c958f4ff379058ff8fbb709de08735e31bc518ed80e69183318c5b6e1a",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/00_clean.png": "57947cac71764cc603f2304731ba94678851c14c6e9d55567cce1dd00e6a0a41",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/01_clean.png": "6753d1e10ab7b2f66a62f039e5f082d731114713e8a06cf333b569b639b5dd10",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/00_adv.png": "3a806a2eb1817c18c978eecba48b05e1e0e64d8348fe6125fd5959dd93cf13e3",
+    "attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/01_adv.png": "54442f49a5285b9e224bb5d96b905d327ac8b6d7a8b82cd64355965ef903089d"
+  },
+  "posthoc_only": true,
+  "target_feedback_for_selection": false
+}

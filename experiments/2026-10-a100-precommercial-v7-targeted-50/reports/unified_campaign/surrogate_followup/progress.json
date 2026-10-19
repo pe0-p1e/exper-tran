@@ -13,22 +13,24 @@
         "research_dev_offset": 2
       },
       "budget_class": "primary50_steps",
-      "status": "QUEUED",
-      "attack_complete": false,
-      "attack_images": 0,
+      "status": "COMPLETE",
+      "attack_complete": true,
+      "attack_images": 10,
       "validations": {
-        "Qwen3.5-9B": false,
-        "InternVL3.5-8B-HF": false,
-        "Gemma 4 E4B-it": false
+        "Qwen3.5-9B": true,
+        "InternVL3.5-8B-HF": true,
+        "Gemma 4 E4B-it": true
       },
       "embeddings": {
-        "CLIP ViT-L/14": false,
-        "Gemma 4 E4B-it": false,
-        "Qwen3.5-9B": false,
-        "InternVL3.5-2B-HF": false,
-        "Qwen3.5-2B": false,
-        "InternVL3.5-8B-HF": false
-      }
+        "CLIP ViT-L/14": true,
+        "Gemma 4 E4B-it": true,
+        "Qwen3.5-9B": true,
+        "InternVL3.5-2B-HF": true,
+        "Qwen3.5-2B": true,
+        "InternVL3.5-8B-HF": true
+      },
+      "minimum_surrogate_model_direction_ASR": 0.5,
+      "pooled_surrogate_ASR": 0.9666666666666667
     },
     {
       "condition": "U01",
@@ -44,22 +46,24 @@
         "loss": "pull_push"
       },
       "budget_class": "primary50_steps",
-      "status": "QUEUED",
-      "attack_complete": false,
-      "attack_images": 0,
+      "status": "PARTIAL",
+      "attack_complete": true,
+      "attack_images": 10,
       "validations": {
-        "Qwen3.5-9B": false,
-        "InternVL3.5-8B-HF": false,
-        "Gemma 4 E4B-it": false
+        "Qwen3.5-9B": true,
+        "InternVL3.5-8B-HF": true,
+        "Gemma 4 E4B-it": true
       },
       "embeddings": {
-        "CLIP ViT-L/14": false,
-        "Gemma 4 E4B-it": false,
+        "CLIP ViT-L/14": true,
+        "Gemma 4 E4B-it": true,
         "Qwen3.5-9B": false,
-        "InternVL3.5-2B-HF": false,
-        "Qwen3.5-2B": false,
-        "InternVL3.5-8B-HF": false
-      }
+        "InternVL3.5-2B-HF": true,
+        "Qwen3.5-2B": true,
+        "InternVL3.5-8B-HF": true
+      },
+      "minimum_surrogate_model_direction_ASR": 0.5,
+      "pooled_surrogate_ASR": 0.9333333333333333
     },
     {
       "condition": "U02",
