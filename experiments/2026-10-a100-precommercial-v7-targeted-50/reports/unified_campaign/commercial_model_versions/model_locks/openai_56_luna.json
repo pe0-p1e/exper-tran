@@ -1,0 +1,7 @@
+{
+  "id": "openai_56_luna",
+  "provider": "codex",
+  "model": "gpt-5.6-luna",
+  "client_version": "codex-cli 0.163.0",
+  "enabled": true
+}

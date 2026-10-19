@@ -1,0 +1,8 @@
+{
+  "id": "claude_opus_46",
+  "provider": "claude",
+  "model": "claude-opus-4-6-thinking",
+  "effort": "provider_default",
+  "client_version": "1.4.2",
+  "enabled": true
+}

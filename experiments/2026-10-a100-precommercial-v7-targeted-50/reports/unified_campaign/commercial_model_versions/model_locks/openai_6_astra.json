@@ -1,0 +1,7 @@
+{
+  "id": "openai_6_astra",
+  "provider": "codex",
+  "model": "gpt-6-astra",
+  "client_version": "codex-cli 0.163.0",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+matrix_id,provider,model,status,completed_requests,planned_requests,hits,denominator,ASR,observed_hits,observed_pairs,clean_correct,clean_correct_conditional_hits,clean_correct_conditional_denominator,clean_correct_conditional_ASR,invalid_replies,reason,legacy_conditional_TASR
+openai_61_sol,codex,gpt-6.1-sol,BLOCKED,0,300,,150,,0,0,,,,,0,"Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6.1-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6.1-sol']' returned non-zero exit status 1.",N/A
+openai_6_sol,codex,gpt-6-sol,BLOCKED,0,300,,150,,0,0,,,,,0,"Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-sol']' returned non-zero exit status 1.",N/A
+openai_6_astra,codex,gpt-6-astra,QUEUED,0,300,,150,,0,0,,,,,0,,N/A
+openai_6_luna,codex,gpt-6-luna,QUEUED,0,300,,150,,0,0,,,,,0,,N/A
+gemini_38_flash_low,gemini_agy,gemini-3.8-flash-low,QUEUED,0,300,,150,,0,0,,,,,0,,N/A
+gemini_38_flash_high,gemini_agy,gemini-3.8-flash-high,QUEUED,0,300,,150,,0,0,,,,,0,,N/A
+gemini_38_flash_medium,gemini_agy,gemini-3.8-flash-medium,QUEUED,0,300,,150,,0,0,,,,,0,,N/A
+claude_sonnet_46,claude,claude-sonnet-4-6,QUEUED,0,300,,150,,0,0,,,,,0,,N/A
+claude_opus_46,claude,claude-opus-4-6-thinking,QUEUED,0,300,,150,,0,0,,,,,0,,N/A

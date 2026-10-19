@@ -1,0 +1,9 @@
+{
+  "id": "gemini_38_flash_low",
+  "provider": "gemini_agy",
+  "model": "gemini-3.8-flash-low",
+  "effort": "low",
+  "comparison_axis": "reasoning_variant_same_generation",
+  "client_version": "1.4.2",
+  "enabled": true
+}

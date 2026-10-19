@@ -1,0 +1,8 @@
+{
+  "id": "claude_sonnet_46",
+  "provider": "claude",
+  "model": "claude-sonnet-4-6",
+  "effort": "provider_default",
+  "client_version": "1.4.2",
+  "enabled": true
+}
