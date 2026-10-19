@@ -85,3 +85,11 @@ Use COMPLETE/RUNNING/PARTIAL/BLOCKED/QUEUED honestly. Missing ASR remains N/A.
 Only compact reports/measurements/provenance are uploaded; complete PNGs and
 feature caches remain on persistent root disk, checkpoint weights on ephemeral
 cache. This file describes execution, not a claim that the campaign is complete.
+
+The first pool runtime is retained by commit9962af5 and
+`pool_runtime_lock.json`. Controller recovery hardening uses a separate
+`pool_runtime_lock_v2.json`, preserving that original lock: live scientific
+children are adopted after a controller-only restart, reused PIDs are checked,
+and a target needing exclusive GPU access cannot stall smaller shared attacks.
+This changes scheduling/recovery only; loss, checkpoints, cohorts and the
+scientific method locks remain fixed.

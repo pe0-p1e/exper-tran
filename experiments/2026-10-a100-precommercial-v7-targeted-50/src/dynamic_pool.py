@@ -18,6 +18,12 @@ def fits(primary,active,requested,max_workers=4,total_budget=72):
     return 1+len(active)<max_workers and primary+sum(active)+requested<=total_budget
 
 
+def evaluation_can_share(primary,required,total_budget=72):
+    # An evaluation needing exclusive GPU access must not stall all smaller
+    # attacks while the original owner continues its long frozen campaign.
+    return primary+required<=total_budget
+
+
 def weights():
     result={}
     for path in [OUT/'audits/model_dtype_audit.json',ROOT/'audits/model_dtype_audit.json']:
@@ -48,6 +54,18 @@ def alive(pid):
     return path.exists() and path.read_text().split()[2]!='Z'
 
 
+def recover_jobs(saved,tasks):
+    """Adopt orphaned scientific children after a controller-only interruption."""
+    result=[]
+    for job in saved:
+        if not alive(job['pid']):continue
+        cmd=(Path('/proc')/str(job['pid'])/'cmdline').read_text()
+        if not any(s in cmd for s in ['pool_entry.py','run_supplement_attack.py','evaluate_supplement.py']):raise RuntimeError('Stale PID now belongs to another process')
+        if job['condition'] not in tasks:raise RuntimeError('Orphan condition outside frozen pool')
+        result.append({**job,'item':tasks[job['condition']]['item'],'adopted':True})
+    return result
+
+
 def stop_owned(job):
     if not alive(job['pid']):return
     cmd=(Path('/proc')/str(job['pid'])/'cmdline').read_text()
@@ -64,8 +82,10 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--adopt-pid',type=int);p.add_argument('--adopt-condition',default='PSQ_VA');a=p.parse_args()
     lock=(ROOT/'scheduler.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     deadline=json.loads((ROOT/'budget.json').read_text())['deadline'];items=candidates()
-    protocol=ROOT/'pool_runtime_lock.json'
-    settings=dict(max_total_GPU_workers=4,global_memory_budget_gib=72,primary_settings_unchanged=True,method_lock_sha256=sha(ROOT/'method_lock.json'),source_hashes={n:sha(EXP/'src'/n) for n in ['dynamic_pool.py','pool_entry.py']},target_feedback_for_scheduling=False,batch=2)
+    # Preserve the already-running v1 runtime lock. Only controller recovery
+    # changes; scientific loss/runner/cohort and method locks stay unchanged.
+    protocol=ROOT/'pool_runtime_lock_v2.json'
+    settings=dict(runtime_version=2,previous_runtime_lock_sha256=sha(ROOT/'pool_runtime_lock.json') if (ROOT/'pool_runtime_lock.json').exists() else None,max_total_GPU_workers=4,global_memory_budget_gib=72,primary_settings_unchanged=True,method_lock_sha256=sha(ROOT/'method_lock.json'),source_hashes={n:sha(EXP/'src'/n) for n in ['dynamic_pool.py','pool_entry.py']},target_feedback_for_scheduling=False,batch=2)
     if protocol.exists() and json.loads(protocol.read_text())!=settings:raise RuntimeError('Changed runtime pool protocol')
     if not protocol.exists():atomic_json(protocol,settings)
     statepath=ROOT/'pool_state.json';state=json.loads(statepath.read_text()) if statepath.exists() else dict(started=time.time(),conditions={},failures=[],memory_events=[],completed_phases=[])
@@ -76,7 +96,8 @@ def main():
     for item in queue:
         n=item['config']['id'];e=evidence(item,deep=True)
         tasks[n]=dict(item=item,attack_complete=e['attack_complete'],evaluation_complete=e['evaluation_complete'],smoke_complete=False,retry_after=0)
-    if a.adopt_pid and alive(a.adopt_pid):
+    jobs=recover_jobs(state.get('active',[]),tasks)
+    if a.adopt_pid and alive(a.adopt_pid) and all(j['pid']!=a.adopt_pid for j in jobs):
         task=tasks[a.adopt_condition]
         cmd=(Path('/proc')/str(a.adopt_pid)/'cmdline').read_text()
         if 'run_supplement_attack.py' not in cmd or a.adopt_condition not in cmd:raise RuntimeError('Adopted PID does not match expected attack')
@@ -97,7 +118,16 @@ def main():
             if not done:continue
             jobs.remove(j);task=tasks[j['condition']]
             if 'stream' in j:j['stream'].close()
-            success=proc.returncode==0 if proc else evidence(j['item'],deep=True)['attack_complete']
+            if proc:success=proc.returncode==0
+            elif j['phase']=='calibration':
+                a=json.loads(calib_path.read_text()) if calib_path.exists() else {}
+                success=all(a.get(n,{}).get('passed') for n in j['item']['config']['models'])
+            elif j['phase']=='smoke':
+                files=list((OUT/'attacks/smoke').glob(j['condition']+'_smoke__*/T01/batch_*/state.json'))
+                success=sum(len(json.loads(p.read_text())['image_ids']) for p in files)==2
+            else:
+                checked=evidence(j['item'],deep=True)
+                success=checked['evaluation_complete' if j['phase']=='evaluation' else 'attack_complete']
             if success:
                 if j['phase']=='smoke':task['smoke_complete']=True
                 elif j['phase']=='attack':task['attack_complete']=evidence(j['item'],deep=True)['attack_complete']
@@ -123,7 +153,13 @@ def main():
         # Initial full Gemma loading also counts; reserve more than current live tensors.
         primary_reserve=0 if exclusive else max(10.5,gpu['used_gib']-sum(j['reserved_gib'] for j in jobs))
         waiting_eval=[(n,t) for n,t in tasks.items() if t['attack_complete'] and not t['evaluation_complete'] and n not in active_names and t['retry_after']<=now]
+        feasible_eval=[]
+        for n,t in waiting_eval:
+            try:requested=max(t.get('reserve_floor',0),estimate([t['item']['config']['target']],'evaluation',events,calibration))
+            except Exception:continue
+            if evaluation_can_share(primary_reserve,requested):feasible_eval.append((n,t))
         pending=waiting_eval+[(n,t) for n,t in tasks.items() if not t['attack_complete'] and n not in active_names and t['retry_after']<=now]
+        if gpu['worker_count']>=4:pending=[]
         dispatched=False
         for name,task in pending:
             item=task['item'];c=item['config']
@@ -136,7 +172,7 @@ def main():
             except Exception as exc:
                 state['failures'].append(dict(condition=name,error=str(exc),at=now));task['retry_after']=now+3600;continue
             if not fits(primary_reserve,active_reserves,reserve,max_workers=4 if not exclusive else 5):continue
-            if phase not in ('evaluation',) and waiting_eval:continue # drain for already frozen target evaluation
+            if phase not in ('evaluation',) and feasible_eval:continue # drain only when evaluation can fit beside primary
             if deadline-now<900 or phase=='attack' and deadline-now<1800:continue
             cfg=ROOT/'configs'/(name+'.json');atomic_json(cfg,c['options'])
             common=['--models',*c['models'],'--method','A3','--fusion','equal','--seed',42,'--restarts',1,'--batch-size',2,'--config-json',cfg,'--excluded-proxy-family',REGISTRY[c['target']]['family'],'--input-diversity']

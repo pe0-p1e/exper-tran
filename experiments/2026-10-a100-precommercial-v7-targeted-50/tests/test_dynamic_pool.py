@@ -20,3 +20,21 @@ def test_estimate_accounts_for_full_gemma_load_before_vision_only_execution():
     reserve=estimate(names,'attack',events,{})
     assert reserve>48 # CPU offload after loading cannot erase the initial load peak.
     assert estimate([names[1]],'evaluation',events,{})>50
+
+
+def test_orphan_recovery_cannot_adopt_reused_unrelated_pid(tmp_path,monkeypatch):
+    import dynamic_pool
+    import pytest
+    monkeypatch.setattr(dynamic_pool,'alive',lambda pid:True)
+    process=tmp_path/'99';process.mkdir();(process/'cmdline').write_text('unrelated_program')
+    original=dynamic_pool.Path
+    monkeypatch.setattr(dynamic_pool,'Path',lambda p:tmp_path if p=='/proc' else original(p))
+    with pytest.raises(RuntimeError,match='another process'):
+        dynamic_pool.recover_jobs([dict(pid=99,condition='A')],dict(A=dict(item={})))
+
+
+def test_exclusive_target_memory_request_does_not_deadlock_shared_attack_queue():
+    from dynamic_pool import evaluation_can_share
+    assert not evaluation_can_share(10.5,64)
+    assert evaluation_can_share(10.5,60)
+    assert evaluation_can_share(0,64)
