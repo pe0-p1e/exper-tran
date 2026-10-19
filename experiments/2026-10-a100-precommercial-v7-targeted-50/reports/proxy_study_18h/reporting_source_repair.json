@@ -1,0 +1,6 @@
+{
+  "original_sha256": "8001ff69b6d565a77a652eed25058dc8fbec1924c55d5c523feeb7adaa9b0329",
+  "new_sha256": "ac70ad6ba08c3b5e064ff85669ca39caa0c36349bd287e529853cd8d20b9727d",
+  "at": 1792431015.8834465,
+  "reason": "Reporting exporter passed target twice and appended false BLOCKED rows; no attack/model/evaluator/config changed. Original lock hash and live GPU workers preserved."
+}

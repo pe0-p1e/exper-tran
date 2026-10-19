@@ -97,6 +97,15 @@ def lock(rows):
                    method='A3, four depths, centroid margin, patch .35, DI, equal L1',
                    target_feedback_for_selection=False, batch_size=2,
                    design='hypothesis-driven exploratory fixed-cohort comparison; not untouched confirmation')
+    # A documented reporting-only repair must preserve the scientific lock hash
+    # and every other source hash. Only an explicitly recorded exact SHA pair is accepted.
+    repair = ROOT / 'audits/reporting_source_repair.json'
+    if repair.exists():
+        change = json.loads(repair.read_text())
+        key = 'proxy_study_protocol.py'
+        if payload['source_hashes'][key] != change['new_sha256']:
+            raise RuntimeError('Unrecognized protocol source after reporting repair')
+        payload['source_hashes'][key] = change['original_sha256']
     freeze(ROOT / 'method_lock.json', payload)
     return payload
 
@@ -122,7 +131,7 @@ def report(rows, state):
                               negative_gradient_fraction=e['negative_cosine_fraction'],
                               cancellation=e['mean_cancellation'],
                               error=state.get('blocked', {}).get(c['id'], '')))
-            directed.extend(dict(template=r['template'], target=c['target'], **x) for x in e['rows'])
+            directed.extend({**x, 'template': r['template'], 'target': c['target']} for x in e['rows'])
         except Exception as exc:
             table.append(dict(template=r['template'], tier=r['tier'], target=c['target'],
                               proxies=' + '.join(c['models']), K=len(c['models']), status='BLOCKED', error=str(exc)))

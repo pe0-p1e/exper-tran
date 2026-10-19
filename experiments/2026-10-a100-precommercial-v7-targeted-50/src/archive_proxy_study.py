@@ -20,6 +20,8 @@ def archive(push=False):
     for name in ['budget.json','method_lock.json','completion.json']:
         p=ROOT/name
         if p.exists():shutil.copyfile(p,target/name)
+    repair=ROOT/'audits/reporting_source_repair.json'
+    if repair.exists():shutil.copyfile(repair,target/repair.name)
     state=ROOT/'state.json'
     if state.exists():
         d=json.loads(state.read_text());atomic_json(target/'runtime_status.json',

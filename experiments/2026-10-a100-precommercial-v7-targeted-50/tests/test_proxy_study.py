@@ -30,3 +30,19 @@ def test_new_target_evaluation_uses_study_lock_and_frozen_test_pngs():
     assert args[0] == 'evaluation'
     assert '/attacks/test/' in args[args.index('--root')+1]
     assert '/proxy_composition_18h/method_lock.json' in args[args.index('--method-lock')+1]
+
+
+def test_report_preserves_one_row_when_directed_metrics_already_include_target(monkeypatch, tmp_path):
+    import time
+    import proxy_study_protocol as protocol
+    row=plan()[0]
+    result=dict(evaluation_complete=True,attack_complete=True,attack_images=150,images=150,
+                rows=[dict(target=row['item']['config']['target'],transition='T01',hits=20,denominator=30)],
+                attack_seconds=100,peak_reserved_gib=10,mean_gradient_cosine=.2,
+                negative_cosine_fraction=.1,mean_cancellation=.7)
+    monkeypatch.setattr(protocol,'ROOT',tmp_path)
+    monkeypatch.setattr(protocol,'checked',lambda *args,**kwargs:result)
+    table=protocol.report([row],dict(started=time.time(),blocked={}))
+    assert len(table)==1
+    assert table[0]['status']=='COMPLETE'
+    assert (tmp_path/'reports/directed_results.csv').exists()
