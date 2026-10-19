@@ -104,5 +104,111 @@
     "actual_input_size": 224,
     "GPU_smoke_completed": false,
     "elapsed_seconds": 99.68662118911743
+  },
+  {
+    "model": "CLIP ViT-L/14@336",
+    "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+    "status": "CPU_VALIDATED_GPU_PENDING",
+    "BF16_parameters": true,
+    "depth": 24,
+    "layers": [
+      {
+        "layer": 5,
+        "tokens": [
+          1,
+          576,
+          1024
+        ],
+        "valid_tokens": 576,
+        "gradient_l1": 72.88504028320312
+      },
+      {
+        "layer": 11,
+        "tokens": [
+          1,
+          576,
+          1024
+        ],
+        "valid_tokens": 576,
+        "gradient_l1": 271.5602111816406
+      },
+      {
+        "layer": 17,
+        "tokens": [
+          1,
+          576,
+          1024
+        ],
+        "valid_tokens": 576,
+        "gradient_l1": 590.415283203125
+      },
+      {
+        "layer": 23,
+        "tokens": [
+          1,
+          576,
+          1024
+        ],
+        "valid_tokens": 576,
+        "gradient_l1": 489.83453369140625
+      }
+    ],
+    "reference_smoke_images": 2,
+    "actual_input_size": 336,
+    "GPU_smoke_completed": false,
+    "elapsed_seconds": 1800.9836688041687
+  },
+  {
+    "model": "DINOv2-Base",
+    "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "status": "CPU_VALIDATED_GPU_PENDING",
+    "BF16_parameters": true,
+    "depth": 12,
+    "layers": [
+      {
+        "layer": 2,
+        "tokens": [
+          1,
+          324,
+          768
+        ],
+        "valid_tokens": 324,
+        "gradient_l1": 29.009368896484375
+      },
+      {
+        "layer": 5,
+        "tokens": [
+          1,
+          324,
+          768
+        ],
+        "valid_tokens": 324,
+        "gradient_l1": 63.03642272949219
+      },
+      {
+        "layer": 8,
+        "tokens": [
+          1,
+          324,
+          768
+        ],
+        "valid_tokens": 324,
+        "gradient_l1": 239.38792419433594
+      },
+      {
+        "layer": 11,
+        "tokens": [
+          1,
+          324,
+          768
+        ],
+        "valid_tokens": 324,
+        "gradient_l1": 119.5667724609375
+      }
+    ],
+    "reference_smoke_images": 2,
+    "actual_input_size": 256,
+    "GPU_smoke_completed": false,
+    "elapsed_seconds": 165.36743688583374
   }
 ]

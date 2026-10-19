@@ -1,0 +1,14 @@
+{
+  "finished": 1792425270.794411,
+  "complete_unique_conditions": 25,
+  "total_unique_conditions": 47,
+  "remaining_work_is_resumable": true,
+  "failures": [
+    {
+      "condition": "XS_E09",
+      "phase": "calibration",
+      "at": 1792413888.696231,
+      "error": "ack (most recent call last):\n  File \"/home/ubuntu/exper-tran/experiments/2026-10-a100-precommercial-v7-targeted-50/src/pool_entry.py\", line 32, in <module>\n    smoke_supplement_models.main()\n  File \"/home/ubuntu/exper-tran/experiments/2026-10-a100-precommercial-v7-targeted-50/src/smoke_supplement_models.py\", line 54, in main\n    if not audit[name]['passed']:raise RuntimeError(f'Proxy smoke failed: {name}: {audit[name][\"error\"]}')\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Proxy smoke failed: Gemma 4 26B-A4B-it: CUDA out of memory. Tried to allocate 47.75 GiB. GPU 0 has a total capacity of 79.25 GiB of which 64.42 GiB is free. Process 62804 has 9.23 GiB memory in use. Including non-PyTorch memory, this process has 5.60 GiB memory in use. 49.07 GiB allowed; Of the allocated memory 4.78 GiB is allocated by PyTorch, and 322.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"
+    }
+  ]
+}

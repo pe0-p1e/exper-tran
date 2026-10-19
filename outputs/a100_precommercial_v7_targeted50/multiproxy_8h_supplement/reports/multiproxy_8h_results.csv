@@ -4,31 +4,31 @@ E01|PSQ_A,InternVL3.5-2B-HF,1,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s4
 E01|PSQ_A,InternVL3.5-2B-HF,1,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,12,30,0.4,30,12,0.4,30,complete,N/A
 E01|PSQ_A,InternVL3.5-2B-HF,1,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
 E01|PSQ_A,InternVL3.5-2B-HF,1,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,11,30,0.36666666666666664,30,11,0.36666666666666664,30,complete,N/A
-E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
-E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
+E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T01,29,30,0.9666666666666667,30,29,0.9666666666666667,30,complete,N/A
+E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T03,17,30,0.5666666666666667,30,17,0.5666666666666667,30,complete,N/A
+E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,21,30,0.7,30,21,0.7,30,complete,N/A
+E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E02,InternVL3.5-2B-HF + InternVL3.5-4B-HF,2,XS_E02__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,20,30,0.6666666666666666,30,20,0.6666666666666666,30,complete,N/A
+E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T01,29,30,0.9666666666666667,30,29,0.9666666666666667,30,complete,N/A
+E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T03,24,30,0.8,30,24,0.8,30,complete,N/A
+E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,24,30,0.8,30,24,0.8,30,complete,N/A
+E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E03,InternVL3.5-2B-HF + InternVL3.5-4B-HF + InternVL3.5-8B-HF,3,XS_E03__A3__equal__InternVL3.5-2B-HF+InternVL3.5-4B-HF+InternVL3.5-8B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,22,30,0.7333333333333333,30,22,0.7333333333333333,30,complete,N/A
 E04|PSG_A,Qwen3.5-2B,1,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T01,15,30,0.5,30,15,0.5,30,complete,N/A
 E04|PSG_A,Qwen3.5-2B,1,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T03,16,30,0.5333333333333333,30,16,0.5333333333333333,30,complete,N/A
 E04|PSG_A,Qwen3.5-2B,1,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T05,8,30,0.26666666666666666,30,8,0.26666666666666666,26,complete,N/A
 E04|PSG_A,Qwen3.5-2B,1,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T07,30,30,1.0,30,30,1.0,30,complete,N/A
 E04|PSG_A,Qwen3.5-2B,1,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T09,5,30,0.16666666666666666,30,5,0.16666666666666666,26,complete,N/A
-E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T09,0,0,,0,0,,0,pending_or_partial,N/A
-E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T09,0,0,,0,0,,0,pending_or_partial,N/A
+E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T01,21,30,0.7,30,21,0.7,30,complete,N/A
+E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T03,20,30,0.6666666666666666,30,20,0.6666666666666666,30,complete,N/A
+E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T05,13,30,0.43333333333333335,30,13,0.43333333333333335,27,complete,N/A
+E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E05,Qwen3.5-2B + Qwen3.5-4B,2,XS_E05__A3__equal__Qwen3.5-2B+Qwen3.5-4B__DI__s42__i50__r1,Gemma 4 31B-it,T09,10,30,0.3333333333333333,30,10,0.3333333333333333,28,complete,N/A
+E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T01,21,30,0.7,30,21,0.7,30,complete,N/A
+E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T03,23,30,0.7666666666666667,30,23,0.7666666666666667,30,complete,N/A
+E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T05,20,30,0.6666666666666666,30,20,0.6666666666666666,28,complete,N/A
+E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E06,Qwen3.5-2B + Qwen3.5-4B + Qwen3.5-9B,3,XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1,Gemma 4 31B-it,T09,14,30,0.4666666666666667,30,14,0.4666666666666667,29,complete,N/A
 E07|PSI_B,Gemma 4 E2B-it,1,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,21,30,0.7,28,19,0.6785714285714286,30,complete,N/A
 E07|PSI_B,Gemma 4 E2B-it,1,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,20,30,0.6666666666666666,29,20,0.6896551724137931,29,complete,N/A
 E07|PSI_B,Gemma 4 E2B-it,1,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,16,30,0.5333333333333333,27,13,0.48148148148148145,30,complete,N/A
@@ -44,26 +44,26 @@ E09,Gemma 4 E2B-it + Gemma 4 E4B-it + Gemma 4 26B-A4B-it,3,XS_E09__A3__equal__Ge
 E09,Gemma 4 E2B-it + Gemma 4 E4B-it + Gemma 4 26B-A4B-it,3,XS_E09__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it+Gemma_4_26B-A4B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,0,0,,0,0,,0,pending_or_partial,N/A
 E09,Gemma 4 E2B-it + Gemma 4 E4B-it + Gemma 4 26B-A4B-it,3,XS_E09__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it+Gemma_4_26B-A4B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,0,0,,0,0,,0,pending_or_partial,N/A
 E09,Gemma 4 E2B-it + Gemma 4 E4B-it + Gemma 4 26B-A4B-it,3,XS_E09__A3__equal__Gemma_4_E2B-it+Gemma_4_E4B-it+Gemma_4_26B-A4B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,0,0,,0,0,,0,pending_or_partial,N/A
-E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
+E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T01,29,30,0.9666666666666667,30,29,0.9666666666666667,30,complete,N/A
+E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T03,23,30,0.7666666666666667,30,23,0.7666666666666667,30,complete,N/A
+E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T05,22,30,0.7333333333333333,30,22,0.7333333333333333,30,complete,N/A
+E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E10|PSQ_AB,InternVL3.5-2B-HF + Gemma 4 E2B-it,2,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T09,13,30,0.43333333333333335,30,13,0.43333333333333335,30,complete,N/A
 E11|PSQ_VAB,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T01,30,30,1.0,30,30,1.0,30,complete,N/A
 E11|PSQ_VAB,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T03,26,30,0.8666666666666667,30,26,0.8666666666666667,30,complete,N/A
 E11|PSQ_VAB,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T05,25,30,0.8333333333333334,30,25,0.8333333333333334,30,complete,N/A
 E11|PSQ_VAB,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
 E11|PSQ_VAB,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,3,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T09,20,30,0.6666666666666666,30,20,0.6666666666666666,30,complete,N/A
-E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
-E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
+E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T01,30,30,1.0,30,30,1.0,30,complete,N/A
+E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T03,26,30,0.8666666666666667,30,26,0.8666666666666667,30,complete,N/A
+E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T05,27,30,0.9,30,27,0.9,30,complete,N/A
+E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E12,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + SigLIP2-So400m-patch14-384,4,XS_E12__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__DI__s42__i50__r1,Qwen3.5-27B,T09,22,30,0.7333333333333333,30,22,0.7333333333333333,30,complete,N/A
+E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T01,30,30,1.0,30,30,1.0,30,complete,N/A
+E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T03,28,30,0.9333333333333333,30,28,0.9333333333333333,30,complete,N/A
+E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T05,27,30,0.9,30,27,0.9,30,complete,N/A
+E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+E13,InternVL3.5-2B-HF + Gemma 4 E2B-it + CLIP ViT-L/14 + DINOv2-Large,4,XS_E13__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it+CLIP_ViT-L_14+DINOv2-Large__DI__s42__i50__r1,Qwen3.5-27B,T09,23,30,0.7666666666666667,30,23,0.7666666666666667,30,complete,N/A
 PSQ_V,CLIP ViT-L/14,1,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,Qwen3.5-27B,T01,29,30,0.9666666666666667,30,29,0.9666666666666667,30,complete,N/A
 PSQ_V,CLIP ViT-L/14,1,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,Qwen3.5-27B,T03,21,30,0.7,30,21,0.7,30,complete,N/A
 PSQ_V,CLIP ViT-L/14,1,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,Qwen3.5-27B,T05,15,30,0.5,30,15,0.5,30,complete,N/A
@@ -74,16 +74,16 @@ PSQ_B,Gemma 4 E2B-it,1,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1
 PSQ_B,Gemma 4 E2B-it,1,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T05,3,30,0.1,30,3,0.1,30,complete,N/A
 PSQ_B,Gemma 4 E2B-it,1,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T07,28,30,0.9333333333333333,30,28,0.9333333333333333,30,complete,N/A
 PSQ_B,Gemma 4 E2B-it,1,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T09,2,30,0.06666666666666667,30,2,0.06666666666666667,30,complete,N/A
-PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T09,0,0,,0,0,,0,pending_or_partial,N/A
+PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T01,30,30,1.0,30,30,1.0,30,complete,N/A
+PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T03,24,30,0.8,30,24,0.8,30,complete,N/A
+PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T05,22,30,0.7333333333333333,30,22,0.7333333333333333,30,complete,N/A
+PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSQ_VA,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Qwen3.5-27B,T09,20,30,0.6666666666666666,30,20,0.6666666666666666,30,complete,N/A
+PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T01,29,30,0.9666666666666667,30,29,0.9666666666666667,30,complete,N/A
+PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T03,25,30,0.8333333333333334,30,25,0.8333333333333334,30,complete,N/A
+PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T05,20,30,0.6666666666666666,30,20,0.6666666666666666,30,complete,N/A
+PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSQ_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,Qwen3.5-27B,T09,10,30,0.3333333333333333,30,10,0.3333333333333333,30,complete,N/A
 PSI_V,CLIP ViT-L/14,1,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,28,30,0.9333333333333333,28,26,0.9285714285714286,30,complete,N/A
 PSI_V,CLIP ViT-L/14,1,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,24,30,0.8,29,24,0.8275862068965517,29,complete,N/A
 PSI_V,CLIP ViT-L/14,1,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,26,30,0.8666666666666667,27,23,0.8518518518518519,30,complete,N/A
@@ -94,21 +94,21 @@ PSI_A,Qwen3.5-2B,1,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,InternV
 PSI_A,Qwen3.5-2B,1,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,18,30,0.6,27,17,0.6296296296296297,30,complete,N/A
 PSI_A,Qwen3.5-2B,1,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,30,30,1.0,30,30,1.0,30,complete,N/A
 PSI_A,Qwen3.5-2B,1,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,10,30,0.3333333333333333,28,10,0.35714285714285715,30,complete,N/A
-PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,0,0,,0,0,,0,pending_or_partial,N/A
+PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,30,30,1.0,28,28,1.0,30,complete,N/A
+PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,25,30,0.8333333333333334,29,25,0.8620689655172413,28,complete,N/A
+PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,27,30,0.9,27,24,0.8888888888888888,30,complete,N/A
+PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSI_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,20,30,0.6666666666666666,28,19,0.6785714285714286,29,complete,N/A
+PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,29,30,0.9666666666666667,28,27,0.9642857142857143,30,complete,N/A
+PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,26,30,0.8666666666666667,29,26,0.896551724137931,30,complete,N/A
+PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,27,30,0.9,27,24,0.8888888888888888,30,complete,N/A
+PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSI_VB,CLIP ViT-L/14 + Gemma 4 E2B-it,2,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,16,30,0.5333333333333333,28,15,0.5357142857142857,30,complete,N/A
+PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,30,30,1.0,28,28,1.0,30,complete,N/A
+PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,26,30,0.8666666666666667,29,26,0.896551724137931,29,complete,N/A
+PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,23,30,0.7666666666666667,27,20,0.7407407407407407,30,complete,N/A
+PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSI_AB,Qwen3.5-2B + Gemma 4 E2B-it,2,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T09,13,30,0.43333333333333335,28,12,0.42857142857142855,30,complete,N/A
 PSI_VAB,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,3,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T01,30,30,1.0,28,28,1.0,30,complete,N/A
 PSI_VAB,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,3,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T03,27,30,0.9,29,27,0.9310344827586207,29,complete,N/A
 PSI_VAB,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,3,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,InternVL3.5-14B-HF,T05,27,30,0.9,27,24,0.8888888888888888,30,complete,N/A
@@ -124,21 +124,21 @@ PSG_B,InternVL3.5-2B-HF,1,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,
 PSG_B,InternVL3.5-2B-HF,1,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T05,0,0,,0,0,,0,pending_or_partial,N/A
 PSG_B,InternVL3.5-2B-HF,1,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T07,0,0,,0,0,,0,pending_or_partial,N/A
 PSG_B,InternVL3.5-2B-HF,1,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T09,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T09,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T09,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T01,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T03,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T05,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T07,0,0,,0,0,,0,pending_or_partial,N/A
-PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T09,0,0,,0,0,,0,pending_or_partial,N/A
+PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T01,26,30,0.8666666666666667,30,26,0.8666666666666667,30,complete,N/A
+PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T03,23,30,0.7666666666666667,30,23,0.7666666666666667,30,complete,N/A
+PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T05,19,30,0.6333333333333333,30,19,0.6333333333333333,29,complete,N/A
+PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSG_VA,CLIP ViT-L/14 + Qwen3.5-2B,2,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,Gemma 4 31B-it,T09,12,30,0.4,30,12,0.4,25,complete,N/A
+PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T01,26,30,0.8666666666666667,30,26,0.8666666666666667,30,complete,N/A
+PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T03,24,30,0.8,30,24,0.8,30,complete,N/A
+PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T05,20,30,0.6666666666666666,30,20,0.6666666666666666,29,complete,N/A
+PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSG_VB,CLIP ViT-L/14 + InternVL3.5-2B-HF,2,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T09,22,30,0.7333333333333333,30,22,0.7333333333333333,29,complete,N/A
+PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T01,28,30,0.9333333333333333,30,28,0.9333333333333333,30,complete,N/A
+PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T03,24,30,0.8,30,24,0.8,30,complete,N/A
+PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T05,17,30,0.5666666666666667,30,17,0.5666666666666667,28,complete,N/A
+PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T07,30,30,1.0,30,30,1.0,30,complete,N/A
+PSG_AB,Qwen3.5-2B + InternVL3.5-2B-HF,2,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T09,17,30,0.5666666666666667,30,17,0.5666666666666667,28,complete,N/A
 PSG_VAB,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,3,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T01,29,30,0.9666666666666667,30,29,0.9666666666666667,30,complete,N/A
 PSG_VAB,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,3,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T03,27,30,0.9,30,27,0.9,30,complete,N/A
 PSG_VAB,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,3,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,Gemma 4 31B-it,T05,23,30,0.7666666666666667,30,23,0.7666666666666667,30,complete,N/A

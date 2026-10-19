@@ -1,5 +1,6 @@
 {
-  "stage": "PARALLEL_ATTACK",
-  "condition": "PSQ_VA",
-  "at": 1792397617.3602338
+  "stage": "DYNAMIC_POOL",
+  "live_state": "pool_state.json",
+  "detail": "Actual active workers are continuously updated in pool_state.json",
+  "at": 1792398742.1916916
 }

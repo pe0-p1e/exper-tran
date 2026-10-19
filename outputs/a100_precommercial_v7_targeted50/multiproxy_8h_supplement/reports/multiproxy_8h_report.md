@@ -1,42 +1,42 @@
 # Multiple Proxy supplement: live report
 
-Captured UTC: 2026-10-19T08:29:39.266335+00:00.
-Budget remaining: 7.40 hours. GPU owned by existing correction: True.
+Captured UTC: 2026-10-19T15:54:30.792943+00:00.
+Budget remaining: 0.00 hours. GPU owned by existing correction: True.
 
-52 display rows deduplicated to 47 target-specific conditions. Complete: 10. Missing is not zero.
+52 display rows deduplicated to 47 target-specific conditions. Complete: 25. Missing is not zero.
 
 Existing32-condition correction and loss ablations are preserved. No new historical single/layer campaign is launched. Optional extension selection uses only held-out-surrogate development features, never actual target outcomes.
 
 | Aliases | Target | K | Status | Hits/N | ASR |
 |---|---|---|---|---|---|
 | E01|PSQ_A | Qwen3.5-27B | 1 | COMPLETE | 92/150 | 61.3% |
-| E02 | Qwen3.5-27B | 2 | QUEUED | 0/0 | N/A |
-| E03 | Qwen3.5-27B | 3 | QUEUED | 0/0 | N/A |
+| E02 | Qwen3.5-27B | 2 | COMPLETE | 117/150 | 78.0% |
+| E03 | Qwen3.5-27B | 3 | COMPLETE | 129/150 | 86.0% |
 | E04|PSG_A | Gemma 4 31B-it | 1 | COMPLETE | 74/150 | 49.3% |
-| E05 | Gemma 4 31B-it | 2 | QUEUED | 0/0 | N/A |
-| E06 | Gemma 4 31B-it | 3 | QUEUED | 0/0 | N/A |
+| E05 | Gemma 4 31B-it | 2 | COMPLETE | 94/150 | 62.7% |
+| E06 | Gemma 4 31B-it | 3 | COMPLETE | 108/150 | 72.0% |
 | E07|PSI_B | InternVL3.5-14B-HF | 1 | COMPLETE | 93/150 | 62.0% |
 | E08 | InternVL3.5-14B-HF | 2 | QUEUED | 0/0 | N/A |
-| E09 | InternVL3.5-14B-HF | 3 | QUEUED | 0/0 | N/A |
-| E10|PSQ_AB | Qwen3.5-27B | 2 | QUEUED | 0/0 | N/A |
+| E09 | InternVL3.5-14B-HF | 3 | PARTIAL | 0/0 | N/A |
+| E10|PSQ_AB | Qwen3.5-27B | 2 | COMPLETE | 117/150 | 78.0% |
 | E11|PSQ_VAB | Qwen3.5-27B | 3 | COMPLETE | 131/150 | 87.3% |
-| E12 | Qwen3.5-27B | 4 | QUEUED | 0/0 | N/A |
-| E13 | Qwen3.5-27B | 4 | QUEUED | 0/0 | N/A |
+| E12 | Qwen3.5-27B | 4 | COMPLETE | 135/150 | 90.0% |
+| E13 | Qwen3.5-27B | 4 | COMPLETE | 138/150 | 92.0% |
 | PSQ_V | Qwen3.5-27B | 1 | COMPLETE | 106/150 | 70.7% |
 | PSQ_B | Qwen3.5-27B | 1 | COMPLETE | 51/150 | 34.0% |
-| PSQ_VA | Qwen3.5-27B | 2 | PARTIAL | 0/0 | N/A |
-| PSQ_VB | Qwen3.5-27B | 2 | QUEUED | 0/0 | N/A |
+| PSQ_VA | Qwen3.5-27B | 2 | COMPLETE | 126/150 | 84.0% |
+| PSQ_VB | Qwen3.5-27B | 2 | COMPLETE | 114/150 | 76.0% |
 | PSI_V | InternVL3.5-14B-HF | 1 | COMPLETE | 122/150 | 81.3% |
 | PSI_A | InternVL3.5-14B-HF | 1 | COMPLETE | 112/150 | 74.7% |
-| PSI_VA | InternVL3.5-14B-HF | 2 | PARTIAL | 0/0 | N/A |
-| PSI_VB | InternVL3.5-14B-HF | 2 | QUEUED | 0/0 | N/A |
-| PSI_AB | InternVL3.5-14B-HF | 2 | QUEUED | 0/0 | N/A |
+| PSI_VA | InternVL3.5-14B-HF | 2 | COMPLETE | 132/150 | 88.0% |
+| PSI_VB | InternVL3.5-14B-HF | 2 | COMPLETE | 128/150 | 85.3% |
+| PSI_AB | InternVL3.5-14B-HF | 2 | COMPLETE | 122/150 | 81.3% |
 | PSI_VAB | InternVL3.5-14B-HF | 3 | COMPLETE | 136/150 | 90.7% |
 | PSG_V | Gemma 4 31B-it | 1 | QUEUED | 0/0 | N/A |
 | PSG_B | Gemma 4 31B-it | 1 | QUEUED | 0/0 | N/A |
-| PSG_VA | Gemma 4 31B-it | 2 | QUEUED | 0/0 | N/A |
-| PSG_VB | Gemma 4 31B-it | 2 | PARTIAL | 0/0 | N/A |
-| PSG_AB | Gemma 4 31B-it | 2 | QUEUED | 0/0 | N/A |
+| PSG_VA | Gemma 4 31B-it | 2 | COMPLETE | 110/150 | 73.3% |
+| PSG_VB | Gemma 4 31B-it | 2 | COMPLETE | 122/150 | 81.3% |
+| PSG_AB | Gemma 4 31B-it | 2 | COMPLETE | 116/150 | 77.3% |
 | PSG_VAB | Gemma 4 31B-it | 3 | COMPLETE | 130/150 | 86.7% |
 | PSQ_CLIP4 | Qwen3.5-27B | 4 | QUEUED | 0/0 | N/A |
 | PSQ_CLIP4_DB | Qwen3.5-27B | 5 | QUEUED | 0/0 | N/A |

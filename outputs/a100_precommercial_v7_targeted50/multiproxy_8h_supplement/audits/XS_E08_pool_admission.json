@@ -1,0 +1,12 @@
+{
+  "at": 1792413890.7706964,
+  "phase": "smoke",
+  "weight_and_activation_estimate_gib": 16.39145294427872,
+  "primary_reserved_gib": 10.5,
+  "other_reservations_gib": [
+    11.107494986057281
+  ],
+  "total_reserved_gib": 37.998947930336,
+  "parameter_dtype": "bf16",
+  "max_total_workers": 4
+}

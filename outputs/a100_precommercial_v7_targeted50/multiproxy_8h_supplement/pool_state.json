@@ -2,19 +2,82 @@
   "started": 1792398084.9503489,
   "conditions": {
     "PSI_VA": {
-      "attack_complete": false,
-      "evaluation_complete": false
+      "attack_complete": true,
+      "evaluation_complete": true
     },
     "PSG_VB": {
-      "attack_complete": false,
-      "evaluation_complete": false
+      "attack_complete": true,
+      "evaluation_complete": true
     },
     "PSQ_VA": {
       "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "PSG_VA": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "PSQ_VB": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "PSG_AB": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "PSI_VB": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "PSQ_AB": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "PSI_AB": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E05": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E06": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E12": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E13": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E02": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E08": {
+      "attack_complete": false,
+      "evaluation_complete": false
+    },
+    "XS_E03": {
+      "attack_complete": true,
+      "evaluation_complete": true
+    },
+    "XS_E09": {
+      "attack_complete": false,
       "evaluation_complete": false
     }
   },
-  "failures": [],
+  "failures": [
+    {
+      "condition": "XS_E09",
+      "phase": "calibration",
+      "at": 1792413888.696231,
+      "error": "ack (most recent call last):\n  File \"/home/ubuntu/exper-tran/experiments/2026-10-a100-precommercial-v7-targeted-50/src/pool_entry.py\", line 32, in <module>\n    smoke_supplement_models.main()\n  File \"/home/ubuntu/exper-tran/experiments/2026-10-a100-precommercial-v7-targeted-50/src/smoke_supplement_models.py\", line 54, in main\n    if not audit[name]['passed']:raise RuntimeError(f'Proxy smoke failed: {name}: {audit[name][\"error\"]}')\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Proxy smoke failed: Gemma 4 26B-A4B-it: CUDA out of memory. Tried to allocate 47.75 GiB. GPU 0 has a total capacity of 79.25 GiB of which 64.42 GiB is free. Process 62804 has 9.23 GiB memory in use. Including non-PyTorch memory, this process has 5.60 GiB memory in use. 49.07 GiB allowed; Of the allocated memory 4.78 GiB is allocated by PyTorch, and 322.04 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n"
+    }
+  ],
   "memory_events": [],
   "completed_phases": [
     {
@@ -36,24 +99,257 @@
       "condition": "PSQ_VA",
       "phase": "attack",
       "finished": 1792398640.2198906
-    }
-  ],
-  "active": [
-    {
-      "pid": 47520,
-      "condition": "PSG_VB",
-      "phase": "attack",
-      "reserved_gib": 8.092200948670506,
-      "started": 1792398124.01586,
-      "adopted": true
     },
     {
-      "pid": 47608,
+      "condition": "PSG_VB",
+      "phase": "attack",
+      "finished": 1792399233.6956718
+    },
+    {
+      "condition": "PSQ_VA",
+      "phase": "evaluation",
+      "finished": 1792399412.8218584
+    },
+    {
       "condition": "PSI_VA",
       "phase": "attack",
-      "reserved_gib": 6.918981673195958,
-      "started": 1792398146.5436332,
-      "adopted": true
+      "finished": 1792399583.3307767
+    },
+    {
+      "condition": "PSI_VA",
+      "phase": "evaluation",
+      "finished": 1792399673.7899637
+    },
+    {
+      "condition": "PSG_VB",
+      "phase": "evaluation",
+      "finished": 1792399895.0978165
+    },
+    {
+      "condition": "PSG_VA",
+      "phase": "smoke",
+      "finished": 1792399922.7580912
+    },
+    {
+      "condition": "PSQ_VB",
+      "phase": "calibration",
+      "finished": 1792399929.9078088
+    },
+    {
+      "condition": "PSG_AB",
+      "phase": "smoke",
+      "finished": 1792399937.042511
+    },
+    {
+      "condition": "PSQ_VB",
+      "phase": "smoke",
+      "finished": 1792399959.411561
+    },
+    {
+      "condition": "PSI_VB",
+      "phase": "smoke",
+      "finished": 1792399966.5493002
+    },
+    {
+      "condition": "PSG_VA",
+      "phase": "attack",
+      "finished": 1792402347.5218408
+    },
+    {
+      "condition": "PSQ_VB",
+      "phase": "attack",
+      "finished": 1792403952.9985123
+    },
+    {
+      "condition": "PSI_VB",
+      "phase": "attack",
+      "finished": 1792403964.062232
+    },
+    {
+      "condition": "PSG_VA",
+      "phase": "evaluation",
+      "finished": 1792404173.8841379
+    },
+    {
+      "condition": "PSQ_VB",
+      "phase": "evaluation",
+      "finished": 1792404332.5467668
+    },
+    {
+      "condition": "PSQ_AB",
+      "phase": "smoke",
+      "finished": 1792404385.5637643
+    },
+    {
+      "condition": "PSI_AB",
+      "phase": "smoke",
+      "finished": 1792404385.5637643
+    },
+    {
+      "condition": "PSI_VB",
+      "phase": "evaluation",
+      "finished": 1792404420.1274006
+    },
+    {
+      "condition": "PSG_AB",
+      "phase": "attack",
+      "finished": 1792407091.6628258
+    },
+    {
+      "condition": "PSQ_AB",
+      "phase": "attack",
+      "finished": 1792408073.6012816
+    },
+    {
+      "condition": "PSI_AB",
+      "phase": "attack",
+      "finished": 1792408511.5720332
+    },
+    {
+      "condition": "PSQ_AB",
+      "phase": "evaluation",
+      "finished": 1792408664.687257
+    },
+    {
+      "condition": "PSI_AB",
+      "phase": "evaluation",
+      "finished": 1792408739.0110822
+    },
+    {
+      "condition": "PSG_AB",
+      "phase": "evaluation",
+      "finished": 1792408953.820572
+    },
+    {
+      "condition": "XS_E05",
+      "phase": "smoke",
+      "finished": 1792409027.7151058
+    },
+    {
+      "condition": "XS_E06",
+      "phase": "calibration",
+      "finished": 1792409039.9297369
+    },
+    {
+      "condition": "XS_E12",
+      "phase": "calibration",
+      "finished": 1792409059.276964
+    },
+    {
+      "condition": "XS_E06",
+      "phase": "smoke",
+      "finished": 1792409112.2350779
+    },
+    {
+      "condition": "XS_E12",
+      "phase": "smoke",
+      "finished": 1792409119.378294
+    },
+    {
+      "condition": "XS_E05",
+      "phase": "attack",
+      "finished": 1792411571.1643145
+    },
+    {
+      "condition": "XS_E06",
+      "phase": "attack",
+      "finished": 1792412976.9601839
+    },
+    {
+      "condition": "XS_E12",
+      "phase": "attack",
+      "finished": 1792413209.8750699
+    },
+    {
+      "condition": "XS_E06",
+      "phase": "evaluation",
+      "finished": 1792413424.7704399
+    },
+    {
+      "condition": "XS_E12",
+      "phase": "evaluation",
+      "finished": 1792413589.2964141
+    },
+    {
+      "condition": "XS_E05",
+      "phase": "evaluation",
+      "finished": 1792413800.0633469
+    },
+    {
+      "condition": "XS_E13",
+      "phase": "calibration",
+      "finished": 1792413903.1172612
+    },
+    {
+      "condition": "XS_E02",
+      "phase": "calibration",
+      "finished": 1792413932.6528578
+    },
+    {
+      "condition": "XS_E08",
+      "phase": "smoke",
+      "finished": 1792413944.8873377
+    },
+    {
+      "condition": "XS_E13",
+      "phase": "smoke",
+      "finished": 1792413952.0963326
+    },
+    {
+      "condition": "XS_E02",
+      "phase": "smoke",
+      "finished": 1792413969.3880591
+    },
+    {
+      "condition": "XS_E03",
+      "phase": "calibration",
+      "finished": 1792414002.1090822
+    },
+    {
+      "condition": "XS_E03",
+      "phase": "smoke",
+      "finished": 1792414079.6740744
+    },
+    {
+      "condition": "XS_E02",
+      "phase": "attack",
+      "finished": 1792415785.2700772
+    },
+    {
+      "condition": "XS_E03",
+      "phase": "attack",
+      "finished": 1792416684.0112145
+    },
+    {
+      "condition": "XS_E13",
+      "phase": "attack",
+      "finished": 1792418287.8103328
+    },
+    {
+      "condition": "XS_E13",
+      "phase": "evaluation",
+      "finished": 1792418452.2706602
+    },
+    {
+      "condition": "XS_E02",
+      "phase": "evaluation",
+      "finished": 1792418582.4879096
+    },
+    {
+      "condition": "XS_E03",
+      "phase": "evaluation",
+      "finished": 1792418711.5125923
+    },
+    {
+      "condition": "XS_E09",
+      "phase": "calibration",
+      "finished": 1792418805.8410153
+    },
+    {
+      "condition": "XS_E09",
+      "phase": "smoke",
+      "finished": 1792418945.1527581
     }
-  ]
+  ],
+  "active": []
 }

@@ -1,698 +1,3608 @@
 {
   "samples": [
     {
-      "at": 1792398577.360886,
-      "used_gib": 28.703125,
-      "utilization": 100.0,
-      "worker_count": 4,
+      "at": 1792424295.0310926,
+      "used_gib": 16.3037109375,
+      "utilization": 82.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1688,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2870,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.62300600500021
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398584.3377035,
-      "used_gib": 28.703125,
+      "at": 1792424300.1049535,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1688,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398589.4122272,
-      "used_gib": 28.703125,
-      "utilization": 100.0,
-      "worker_count": 4,
+      "at": 1792424305.3139777,
+      "used_gib": 16.3037109375,
+      "utilization": 68.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1688,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398594.4918792,
-      "used_gib": 28.703125,
+      "at": 1792424310.3900657,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1688,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398599.571549,
-      "used_gib": 28.703125,
+      "at": 1792424315.4596512,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1688,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398604.6477134,
-      "used_gib": 28.703125,
+      "at": 1792424320.5319712,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398609.7224023,
-      "used_gib": 28.703125,
+      "at": 1792424325.6085246,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398614.8197896,
-      "used_gib": 28.703125,
+      "at": 1792424330.681042,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398619.901057,
-      "used_gib": 28.703125,
+      "at": 1792424335.751741,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 4,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
+        "condition": "CFQ_seed_44",
+        "attack_images": 2872,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.50185257899284
       },
       "active": [
         {
-          "condition": "PSQ_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398624.9727929,
-      "used_gib": 28.703125,
-      "utilization": 100.0,
-      "worker_count": 4,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
-      },
-      "active": [
-        {
-          "condition": "PSQ_VA",
-          "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398630.0502496,
-      "used_gib": 28.703125,
-      "utilization": 100.0,
-      "worker_count": 4,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
-      },
-      "active": [
-        {
-          "condition": "PSQ_VA",
-          "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398635.1300418,
-      "used_gib": 27.0,
-      "utilization": 100.0,
-      "worker_count": 4,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1690,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.41154449699388
-      },
-      "active": [
-        {
-          "condition": "PSQ_VA",
-          "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398640.2198906,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1692,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
-      },
-      "active": [
-        {
-          "condition": "PSQ_VA",
-          "phase": "attack",
-          "reserved_gib": 8
-        },
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398647.363224,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1692,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
-      },
-      "active": [
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398652.4421108,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1692,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
-      },
-      "active": [
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398657.516217,
-      "used_gib": 21.9296875,
+      "at": 1792424340.8239467,
+      "used_gib": 16.3037109375,
       "utilization": 99.0,
-      "worker_count": 3,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1692,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398662.5873086,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
+      "at": 1792424345.8982787,
+      "used_gib": 16.3037109375,
+      "utilization": 64.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1692,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398667.6692631,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
-      "primary": {
-        "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1692,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
-      },
-      "active": [
-        {
-          "condition": "PSG_VB",
-          "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
-        }
-      ]
-    },
-    {
-      "at": 1792398672.7515044,
-      "used_gib": 21.9296875,
+      "at": 1792424350.971385,
+      "used_gib": 16.3037109375,
       "utilization": 99.0,
-      "worker_count": 3,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1694,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398677.823529,
-      "used_gib": 21.9296875,
+      "at": 1792424356.0512424,
+      "used_gib": 16.3037109375,
+      "utilization": 76.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424361.1219778,
+      "used_gib": 16.3037109375,
       "utilization": 100.0,
-      "worker_count": 3,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1694,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398682.9005015,
-      "used_gib": 21.9296875,
+      "at": 1792424366.1936052,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424371.2668362,
+      "used_gib": 16.3037109375,
       "utilization": 99.0,
-      "worker_count": 3,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1694,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398687.9719698,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
+      "at": 1792424376.3384848,
+      "used_gib": 16.3037109375,
+      "utilization": 97.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1694,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2874,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398693.0495884,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
+      "at": 1792424381.4124498,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1694,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398698.1251855,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
+      "at": 1792424386.4961324,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1694,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 38.1528307510016
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
-        {
-          "condition": "PSI_VA",
-          "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
         }
       ]
     },
     {
-      "at": 1792398703.1981256,
-      "used_gib": 21.9296875,
-      "utilization": 100.0,
-      "worker_count": 3,
+      "at": 1792424391.5684407,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
       "primary": {
         "stage": "attack",
-        "condition": "CFQ_layer_75",
-        "attack_images": 1696,
-        "completed_conditions": 11,
-        "recent_batch_seconds": 37.80324933900556
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
       },
       "active": [
         {
-          "condition": "PSG_VB",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 8.092200948670506
-        },
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424396.6418343,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
         {
-          "condition": "PSI_VA",
+          "condition": "XS_E09",
           "phase": "attack",
-          "reserved_gib": 6.918981673195958
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424401.7140248,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424406.7857854,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424411.8589272,
+      "used_gib": 16.3037109375,
+      "utilization": 79.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424416.9380436,
+      "used_gib": 16.3037109375,
+      "utilization": 84.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2876,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424422.0105546,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424427.0845244,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424436.331921,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424441.4055912,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424446.4772797,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424451.565231,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424456.6377342,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2878,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.40322805500182
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424461.7160974,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424466.7929091,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424471.8644967,
+      "used_gib": 16.3037109375,
+      "utilization": 91.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424476.9352856,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424482.0130634,
+      "used_gib": 16.3037109375,
+      "utilization": 90.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424487.0860782,
+      "used_gib": 16.3037109375,
+      "utilization": 72.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424492.162703,
+      "used_gib": 16.3037109375,
+      "utilization": 76.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424497.236003,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2880,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41765037200821
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424502.3088617,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424507.3937218,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424512.4750247,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424517.5476649,
+      "used_gib": 16.3037109375,
+      "utilization": 75.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424522.6278176,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424527.7034163,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424532.7807827,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424537.8597958,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2882,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424542.9493127,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424548.020975,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424553.2756186,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424558.3619237,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424563.4340556,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424568.5061433,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424573.5918312,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424578.668679,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2884,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424583.7480037,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424588.8228326,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424593.9017525,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424598.9747612,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424604.0573792,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424609.1311076,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424618.1677556,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2886,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424623.2401986,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424628.312719,
+      "used_gib": 16.3037109375,
+      "utilization": 94.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424633.3896213,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424638.4792862,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424643.5610068,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424648.6421993,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424653.7158792,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424658.7908068,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2888,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.53304729600495
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424663.8643053,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424668.9433012,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424674.0182261,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424679.0945249,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424684.3365593,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424689.4074132,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424694.4834821,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424699.5692563,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2890,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424704.645423,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424709.715057,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424714.795478,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424719.8692243,
+      "used_gib": 16.3037109375,
+      "utilization": 79.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424724.941775,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424730.0231204,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424735.0965235,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424740.1686988,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2892,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.46218228999351
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424745.2418714,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424750.315156,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424755.3907654,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424760.4698124,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424765.5417376,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424770.615028,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424775.688703,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424780.7639282,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2894,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.524602058998425
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424785.839503,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424791.0597558,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424800.0107744,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424805.0865312,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424810.1598973,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424815.230223,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424820.2994964,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2896,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424825.378857,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424830.4513152,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424835.5269632,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424840.6022978,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424845.6765573,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424850.7499177,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424855.8267155,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424860.9016333,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2898,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.662659061999875
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424865.9736812,
+      "used_gib": 16.3037109375,
+      "utilization": 96.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424871.0444908,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424876.254397,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424881.32691,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424886.4061463,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424891.4789133,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424896.5491817,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424901.6219137,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2900,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424906.6938565,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424911.7673852,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424916.8508122,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424921.9254594,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424926.997993,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424932.0712035,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424937.1431048,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424942.216391,
+      "used_gib": 16.3037109375,
+      "utilization": 84.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2902,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70708903200284
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424947.2993586,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424952.3708997,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424957.441139,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424962.5130045,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424967.5844243,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424972.660019,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424981.8735075,
+      "used_gib": 16.3037109375,
+      "utilization": 55.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424986.9474862,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2904,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424992.020445,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792424997.0951295,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425002.166262,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425007.2357543,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425012.3159747,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425017.3895404,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425022.4611394,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2906,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.70438492199173
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425027.5340192,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425032.6070285,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425037.684177,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425042.7626922,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425047.832655,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425052.9041746,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425057.9760885,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425063.0485682,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425068.1214483,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2908,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425073.203309,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425078.2775137,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425083.4929497,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425088.5631897,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425093.6330209,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425098.705252,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425103.785015,
+      "used_gib": 16.3037109375,
+      "utilization": 88.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425108.8588274,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2910,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425113.9307406,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425119.004082,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425124.0765712,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425129.1526456,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425134.2338057,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425139.3083355,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425144.3799162,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2912,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.65489767200779
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425149.4497385,
+      "used_gib": 16.3037109375,
+      "utilization": 88.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425154.5244231,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425163.5356762,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425168.615175,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425173.6864965,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425178.758139,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425183.9689634,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425189.0425956,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2914,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.41215228301007
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425194.1186259,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425199.2006028,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425204.2744133,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425209.3479042,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425214.4223022,
+      "used_gib": 16.3037109375,
+      "utilization": 98.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425219.4937701,
+      "used_gib": 16.3037109375,
+      "utilization": 100.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
+        }
+      ]
+    },
+    {
+      "at": 1792425224.5687134,
+      "used_gib": 16.3037109375,
+      "utilization": 99.0,
+      "worker_count": 2,
+      "primary": {
+        "stage": "attack",
+        "condition": "CFQ_seed_44",
+        "attack_images": 2916,
+        "completed_conditions": 19,
+        "recent_batch_seconds": 40.72120151200215
+      },
+      "active": [
+        {
+          "condition": "XS_E09",
+          "phase": "attack",
+          "reserved_gib": 52.66729754805565
         }
       ]
     }
   ],
-  "max_global_used_gib": 28.703125,
+  "max_global_used_gib": 68.8056640625,
   "max_total_GPU_workers": 4,
-  "mean_GPU_utilization": 99.88,
+  "mean_GPU_utilization": 96.6384541062802,
   "original_primary_unchanged": true
 }
