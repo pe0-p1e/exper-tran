@@ -1,0 +1,106 @@
+id,target,slots,transition,hits,denominator,ASR,status,measurement_condition,source
+PSQ_V,Qwen3.5-27B,V,T01,0,0,,pending_or_partial,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_V,Qwen3.5-27B,V,T03,0,0,,pending_or_partial,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_V,Qwen3.5-27B,V,T05,0,0,,pending_or_partial,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_V,Qwen3.5-27B,V,T07,0,0,,pending_or_partial,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_V,Qwen3.5-27B,V,T09,0,0,,pending_or_partial,CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_A,Qwen3.5-27B,A,T01,0,0,,pending_or_partial,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_A,Qwen3.5-27B,A,T03,0,0,,pending_or_partial,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_A,Qwen3.5-27B,A,T05,0,0,,pending_or_partial,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_A,Qwen3.5-27B,A,T07,0,0,,pending_or_partial,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_A,Qwen3.5-27B,A,T09,0,0,,pending_or_partial,CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_B,Qwen3.5-27B,B,T01,0,0,,pending_or_partial,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_B,Qwen3.5-27B,B,T03,0,0,,pending_or_partial,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_B,Qwen3.5-27B,B,T05,0,0,,pending_or_partial,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_B,Qwen3.5-27B,B,T07,0,0,,pending_or_partial,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_B,Qwen3.5-27B,B,T09,0,0,,pending_or_partial,CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_VA,Qwen3.5-27B,V+A,T01,0,0,,pending_or_partial,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSQ_VA,Qwen3.5-27B,V+A,T03,0,0,,pending_or_partial,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSQ_VA,Qwen3.5-27B,V+A,T05,0,0,,pending_or_partial,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSQ_VA,Qwen3.5-27B,V+A,T07,0,0,,pending_or_partial,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSQ_VA,Qwen3.5-27B,V+A,T09,0,0,,pending_or_partial,PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSQ_VB,Qwen3.5-27B,V+B,T01,0,0,,pending_or_partial,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_VB,Qwen3.5-27B,V+B,T03,0,0,,pending_or_partial,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_VB,Qwen3.5-27B,V+B,T05,0,0,,pending_or_partial,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_VB,Qwen3.5-27B,V+B,T07,0,0,,pending_or_partial,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_VB,Qwen3.5-27B,V+B,T09,0,0,,pending_or_partial,PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_AB,Qwen3.5-27B,A+B,T01,0,0,,pending_or_partial,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_AB,Qwen3.5-27B,A+B,T03,0,0,,pending_or_partial,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_AB,Qwen3.5-27B,A+B,T05,0,0,,pending_or_partial,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_AB,Qwen3.5-27B,A+B,T07,0,0,,pending_or_partial,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_AB,Qwen3.5-27B,A+B,T09,0,0,,pending_or_partial,PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSQ_VAB,Qwen3.5-27B,V+A+B,T01,0,0,,pending_or_partial,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_VAB,Qwen3.5-27B,V+A+B,T03,0,0,,pending_or_partial,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_VAB,Qwen3.5-27B,V+A+B,T05,0,0,,pending_or_partial,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_VAB,Qwen3.5-27B,V+A+B,T07,0,0,,pending_or_partial,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSQ_VAB,Qwen3.5-27B,V+A+B,T09,0,0,,pending_or_partial,CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_V,InternVL3.5-14B-HF,V,T01,0,0,,pending_or_partial,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSI_V,InternVL3.5-14B-HF,V,T03,0,0,,pending_or_partial,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSI_V,InternVL3.5-14B-HF,V,T05,0,0,,pending_or_partial,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSI_V,InternVL3.5-14B-HF,V,T07,0,0,,pending_or_partial,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSI_V,InternVL3.5-14B-HF,V,T09,0,0,,pending_or_partial,CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,corrected_family_disjoint
+PSI_A,InternVL3.5-14B-HF,A,T01,0,0,,pending_or_partial,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,corrected_family_disjoint
+PSI_A,InternVL3.5-14B-HF,A,T03,0,0,,pending_or_partial,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,corrected_family_disjoint
+PSI_A,InternVL3.5-14B-HF,A,T05,0,0,,pending_or_partial,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,corrected_family_disjoint
+PSI_A,InternVL3.5-14B-HF,A,T07,0,0,,pending_or_partial,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,corrected_family_disjoint
+PSI_A,InternVL3.5-14B-HF,A,T09,0,0,,pending_or_partial,CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,corrected_family_disjoint
+PSI_B,InternVL3.5-14B-HF,B,T01,0,0,,pending_or_partial,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_B,InternVL3.5-14B-HF,B,T03,0,0,,pending_or_partial,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_B,InternVL3.5-14B-HF,B,T05,0,0,,pending_or_partial,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_B,InternVL3.5-14B-HF,B,T07,0,0,,pending_or_partial,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_B,InternVL3.5-14B-HF,B,T09,0,0,,pending_or_partial,CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_VA,InternVL3.5-14B-HF,V+A,T01,0,0,,pending_or_partial,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSI_VA,InternVL3.5-14B-HF,V+A,T03,0,0,,pending_or_partial,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSI_VA,InternVL3.5-14B-HF,V+A,T05,0,0,,pending_or_partial,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSI_VA,InternVL3.5-14B-HF,V+A,T07,0,0,,pending_or_partial,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSI_VA,InternVL3.5-14B-HF,V+A,T09,0,0,,pending_or_partial,PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSI_VB,InternVL3.5-14B-HF,V+B,T01,0,0,,pending_or_partial,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_VB,InternVL3.5-14B-HF,V+B,T03,0,0,,pending_or_partial,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_VB,InternVL3.5-14B-HF,V+B,T05,0,0,,pending_or_partial,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_VB,InternVL3.5-14B-HF,V+B,T07,0,0,,pending_or_partial,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_VB,InternVL3.5-14B-HF,V+B,T09,0,0,,pending_or_partial,PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_AB,InternVL3.5-14B-HF,A+B,T01,0,0,,pending_or_partial,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_AB,InternVL3.5-14B-HF,A+B,T03,0,0,,pending_or_partial,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_AB,InternVL3.5-14B-HF,A+B,T05,0,0,,pending_or_partial,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_AB,InternVL3.5-14B-HF,A+B,T07,0,0,,pending_or_partial,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_AB,InternVL3.5-14B-HF,A+B,T09,0,0,,pending_or_partial,PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,new_subset_measurement
+PSI_VAB,InternVL3.5-14B-HF,V+A+B,T01,0,0,,pending_or_partial,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_VAB,InternVL3.5-14B-HF,V+A+B,T03,0,0,,pending_or_partial,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_VAB,InternVL3.5-14B-HF,V+A+B,T05,0,0,,pending_or_partial,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_VAB,InternVL3.5-14B-HF,V+A+B,T07,0,0,,pending_or_partial,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSI_VAB,InternVL3.5-14B-HF,V+A+B,T09,0,0,,pending_or_partial,CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,corrected_family_disjoint
+PSG_V,Gemma 4 31B-it,V,T01,0,0,,pending_or_partial,PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,new_subset_measurement
+PSG_V,Gemma 4 31B-it,V,T03,0,0,,pending_or_partial,PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,new_subset_measurement
+PSG_V,Gemma 4 31B-it,V,T05,0,0,,pending_or_partial,PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,new_subset_measurement
+PSG_V,Gemma 4 31B-it,V,T07,0,0,,pending_or_partial,PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,new_subset_measurement
+PSG_V,Gemma 4 31B-it,V,T09,0,0,,pending_or_partial,PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1,new_subset_measurement
+PSG_A,Gemma 4 31B-it,A,T01,15,30,0.5,complete,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_A,Gemma 4 31B-it,A,T03,16,30,0.5333333333333333,complete,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_A,Gemma 4 31B-it,A,T05,8,30,0.26666666666666666,complete,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_A,Gemma 4 31B-it,A,T07,30,30,1.0,complete,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_A,Gemma 4 31B-it,A,T09,5,30,0.16666666666666666,complete,focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_B,Gemma 4 31B-it,B,T01,0,0,,pending_or_partial,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_B,Gemma 4 31B-it,B,T03,0,0,,pending_or_partial,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_B,Gemma 4 31B-it,B,T05,0,0,,pending_or_partial,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_B,Gemma 4 31B-it,B,T07,0,0,,pending_or_partial,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_B,Gemma 4 31B-it,B,T09,0,0,,pending_or_partial,PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_VA,Gemma 4 31B-it,V+A,T01,0,0,,pending_or_partial,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSG_VA,Gemma 4 31B-it,V+A,T03,0,0,,pending_or_partial,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSG_VA,Gemma 4 31B-it,V+A,T05,0,0,,pending_or_partial,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSG_VA,Gemma 4 31B-it,V+A,T07,0,0,,pending_or_partial,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSG_VA,Gemma 4 31B-it,V+A,T09,0,0,,pending_or_partial,PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1,new_subset_measurement
+PSG_VB,Gemma 4 31B-it,V+B,T01,0,0,,pending_or_partial,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_VB,Gemma 4 31B-it,V+B,T03,0,0,,pending_or_partial,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_VB,Gemma 4 31B-it,V+B,T05,0,0,,pending_or_partial,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_VB,Gemma 4 31B-it,V+B,T07,0,0,,pending_or_partial,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_VB,Gemma 4 31B-it,V+B,T09,0,0,,pending_or_partial,PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_AB,Gemma 4 31B-it,A+B,T01,0,0,,pending_or_partial,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_AB,Gemma 4 31B-it,A+B,T03,0,0,,pending_or_partial,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_AB,Gemma 4 31B-it,A+B,T05,0,0,,pending_or_partial,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_AB,Gemma 4 31B-it,A+B,T07,0,0,,pending_or_partial,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_AB,Gemma 4 31B-it,A+B,T09,0,0,,pending_or_partial,PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,new_subset_measurement
+PSG_VAB,Gemma 4 31B-it,V+A+B,T01,29,30,0.9666666666666667,complete,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_VAB,Gemma 4 31B-it,V+A+B,T03,27,30,0.9,complete,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_VAB,Gemma 4 31B-it,V+A+B,T05,23,30,0.7666666666666667,complete,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_VAB,Gemma 4 31B-it,V+A+B,T07,30,30,1.0,complete,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,historical_valid_Gemma_cross_family
+PSG_VAB,Gemma 4 31B-it,V+A+B,T09,21,30,0.7,complete,focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1,historical_valid_Gemma_cross_family

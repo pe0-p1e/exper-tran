@@ -6,6 +6,7 @@ priority_order:
   - held_out_category_generalization
   - commercial_model_evaluation
 current_running_campaign_unchanged: true
+paper_drafting: paused_by_latest_user_correction
 open_ended_VQA_now: false
 scientific_controls:
   open_weight_parameter_dtype: bfloat16

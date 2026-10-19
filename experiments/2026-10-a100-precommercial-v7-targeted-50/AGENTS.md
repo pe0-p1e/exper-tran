@@ -93,3 +93,10 @@ selection ablation, then loss/category generalization, and commercial evaluation
 last. Prepare code now without changing the running campaign's source/config
 fingerprints. Submit this framework to GitHub first, then build the paper skeleton.
 All unmeasured claims/results in the manuscript must be visibly pending.
+
+### User correction: pause paper drafting — 2026-10-19
+
+The latest user message stops paper-framework work. Do not draft or push paper
+files now. Continue experiment planning/code, proxy-selection tables and the
+running corrected campaign. Uncommitted paper drafts were set aside locally
+under outputs/a100_precommercial_v7_targeted50/deferred_paper_scaffold/.

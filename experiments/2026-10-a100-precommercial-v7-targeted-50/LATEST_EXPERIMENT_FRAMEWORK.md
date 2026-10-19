@@ -4,6 +4,9 @@ Authoritative planning update: 2026-10-19. This consolidates the user's latest
 priorities. It does not change the immutable running family-disjoint campaign.
 Machine-readable companion: `latest_experiment_framework.yaml`.
 
+Latest user correction: paper drafting is paused. Work now concerns experimental
+planning/code and proxy-selection tables; the research order below is unchanged.
+
 ## Execution order
 
 1. **Finish and report the current strict cross-family correction.** Qwen27B
