@@ -20,6 +20,9 @@ def archive(push=False):
     for folder,patterns in sources.items():
         for pattern in patterns:
             for p in (ROOT/folder).glob(pattern):
+                rel=p.relative_to(ROOT/folder)
+                if folder=='commercial_model_versions' and rel.parts[0]=='stages' and not (ROOT/folder/'stages'/rel.parts[1]/'cohort_lock.json').exists():
+                    continue  # Preflight previews are not executed experiment stages.
                 dest=target/folder/p.relative_to(ROOT/folder);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,dest)
     # Two representative reference figures; all numerical reference measurements above.
     for kind in ['pca','tsne']:
