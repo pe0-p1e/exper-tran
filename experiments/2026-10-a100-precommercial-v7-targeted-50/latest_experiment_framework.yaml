@@ -1,0 +1,78 @@
+version: v7-latest-framework-2026-10-19
+branch: experiment/a100-precommercial-v7-targeted-50
+priority_order:
+  - family_disjoint_recovery_and_report
+  - proxy_selection_ablation
+  - held_out_category_generalization
+  - commercial_model_evaluation
+current_running_campaign_unchanged: true
+open_ended_VQA_now: false
+scientific_controls:
+  open_weight_parameter_dtype: bfloat16
+  quantization: forbidden
+  target_feedback_for_attack_or_tuning: forbidden
+  references_per_class: 48
+  attack_images_per_direction: 30
+  image_size: 224
+  epsilon: 16/255
+  steps: 50
+  step_size: 1/255
+  momentum: 1
+  random_start: true
+  primary_seed: 42
+  main_layers: [0.25, 0.50, 0.75, 1.00]
+  loss: image_reference_margin
+  patch_weight: 0.35
+  input_diversity: true
+  fusion: equal_per_image_l1_normalized_gradients
+  CLS: 0
+  eligibility: ground_truth_only
+  primary_metric: targeted_hits_over_all_frozen_GT_images
+proxy_selection:
+  stage: prepared_matrix_not_new_results
+  subset_order: [[V], [A], [B], [V, A], [V, B], [A, B], [V, A, B]]
+  target_slots:
+    Qwen3.5-27B:
+      V: CLIP ViT-L/14
+      A: InternVL3.5-2B-HF
+      B: Gemma 4 E2B-it
+    InternVL3.5-14B-HF:
+      V: CLIP ViT-L/14
+      A: Qwen3.5-2B
+      B: Gemma 4 E2B-it
+    Gemma 4 31B-it:
+      V: CLIP ViT-L/14
+      A: Qwen3.5-2B
+      B: InternVL3.5-2B-HF
+  conditions: 21
+  directed_cells: 105
+  image_evaluations: 3150
+  reuse_compatible_existing_measurements: true
+  actual_target_ranking_is_descriptive_only: true
+  selector_training_source: separate_surrogate_dev
+  broader_proxy_swaps: optional_separate_predeclared_extension
+category_generalization:
+  starts_after: proxy_selection_ablation
+  new_categories_disjoint_from_original_ten: true
+  dictionaries: [10, 20, 50]
+  expanded_dictionary_same_images_and_pairs: true
+  new_reference_banks_allowed: true
+  retune_loss_on_new_target_outputs: false
+  claim: reference_conditioned_category_generalization
+commercial:
+  starts_after: held_out_category_generalization
+  initial_total_images: 3
+  initial_conditions: [clean, full_attack]
+  clients: [Codex, Antigravity_Gemini, Antigravity_Claude]
+  later_route: AnyRouter_Claude
+  exact_model_ids: unresolved_until_access_verification
+  fixed_10_class_recognition: true
+  paid_API_requires_endpoint_model_access_spend_settings: true
+  current_inference_calls: 0
+  existing_blinded_pack: outputs/a100_precommercial_v7_targeted50/commercial_pilot3/pilot3_blinded_inputs.zip
+  antigravity_cli_installed: true
+  antigravity_authentication: required
+storage:
+  full_results: persistent_root_disk
+  github: source_compact_reports_measurements_and_selected_examples
+  full_images_weights_embeddings_on_github: false

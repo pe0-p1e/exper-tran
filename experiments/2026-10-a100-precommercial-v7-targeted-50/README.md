@@ -1,5 +1,8 @@
 # V7 targeted transfer optimization (>=50% each target and each direction)
 
+Current research order and paper plan: [LATEST_EXPERIMENT_FRAMEWORK.md](LATEST_EXPERIMENT_FRAMEWORK.md)
+and [latest_experiment_framework.yaml](latest_experiment_framework.yaml).
+
 Latest execution override (2026-10-19): read `FAMILY_DISJOINT_RECOVERY.md`.
 Default `run_all_v7.sh` now reruns Qwen/InternVL with their entire families excluded
 from proxies, preserving valid prior Gemma cross-family results. The current task

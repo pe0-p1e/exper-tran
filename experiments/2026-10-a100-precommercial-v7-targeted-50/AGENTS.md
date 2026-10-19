@@ -84,3 +84,12 @@ Read `FAMILY_DISJOINT_RECOVERY.md`. The user requires excluding the entire targe
 ### Commercial pilot and category-generalization planning — 2026-10-19
 
 The user now authorizes commercial preparation and a THREE-image initial CLI connectivity pilot, overriding the earlier blanket commercial ban only for this separate study. Read `COMMERCIAL_PILOT.md`. This does not add commercial calls to the running open-weight campaign. Actual model identity, authentication, image input and isolated context must be verified; paid API routes additionally require configured endpoint/model/access/spend settings. See `HELD_OUT_CLASS_GENERALIZATION.md` for the new-category generalization proposal; it is planned, not executed, and must not interrupt or change frozen current experiments. No open-ended VQA is launched now.
+
+### Latest ordering and paper preparation — 2026-10-19
+
+Read `LATEST_EXPERIMENT_FRAMEWORK.md` and `latest_experiment_framework.yaml`.
+The user explicitly orders: finish/report corrected experiments, then multi-proxy
+selection ablation, then loss/category generalization, and commercial evaluation
+last. Prepare code now without changing the running campaign's source/config
+fingerprints. Submit this framework to GitHub first, then build the paper skeleton.
+All unmeasured claims/results in the manuscript must be visibly pending.
