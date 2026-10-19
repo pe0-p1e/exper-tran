@@ -1,0 +1,92 @@
+{
+  "images": [
+    {
+      "transition": "T01",
+      "image_id": "train/n01443537/n01443537_296.JPEG",
+      "clean_label": 1,
+      "adv_label": 2,
+      "clean_correct": true,
+      "target_hit": true
+    },
+    {
+      "transition": "T01",
+      "image_id": "train/n01443537/n01443537_318.JPEG",
+      "clean_label": 1,
+      "adv_label": 1,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T03",
+      "image_id": "train/n07753275/n07753275_10472.JPEG",
+      "clean_label": 3,
+      "adv_label": 3,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T03",
+      "image_id": "train/n07753275/n07753275_1138.JPEG",
+      "clean_label": 3,
+      "adv_label": 4,
+      "clean_correct": true,
+      "target_hit": true
+    },
+    {
+      "transition": "T05",
+      "image_id": "train/n03642806/n03642806_10243.JPEG",
+      "clean_label": 5,
+      "adv_label": 5,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T05",
+      "image_id": "train/n03642806/n03642806_10496.JPEG",
+      "clean_label": 5,
+      "adv_label": 5,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T07",
+      "image_id": "train/n09472597/n09472597_10018.JPEG",
+      "clean_label": 7,
+      "adv_label": 8,
+      "clean_correct": true,
+      "target_hit": true
+    },
+    {
+      "transition": "T07",
+      "image_id": "train/n09472597/n09472597_10231.JPEG",
+      "clean_label": 7,
+      "adv_label": 8,
+      "clean_correct": true,
+      "target_hit": true
+    },
+    {
+      "transition": "T09",
+      "image_id": "train/n04254680/n04254680_10154.JPEG",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_correct": true,
+      "target_hit": false
+    },
+    {
+      "transition": "T09",
+      "image_id": "train/n04254680/n04254680_10156.JPEG",
+      "clean_label": 9,
+      "adv_label": 5,
+      "clean_correct": true,
+      "target_hit": false
+    }
+  ],
+  "hits": 4,
+  "denominator": 10,
+  "completed_pairs": 10,
+  "ASR": 0.4,
+  "study": "10-image frozen-method CLI pilot; exploratory small sample",
+  "target_feedback_for_tuning": false,
+  "model": "gpt-6.1-sol",
+  "actual_server_snapshot": "not disclosed"
+}

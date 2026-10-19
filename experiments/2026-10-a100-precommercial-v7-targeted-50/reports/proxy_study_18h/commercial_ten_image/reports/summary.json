@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETE",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "hits": 4,
+  "denominator": 10,
+  "ASR": 0.4,
+  "goal_hits": 6,
+  "goal_met": false,
+  "clean_correct": 10,
+  "clean_correct_conditional_hits": 4,
+  "clean_correct_conditional_denominator": 10,
+  "completed_requests": 20,
+  "planned_requests": 20,
+  "new_requests": 14,
+  "reused_requests": 6,
+  "previously_unobserved_image_hits": 4,
+  "previously_unobserved_image_denominator": 7,
+  "new_request_wall_seconds": 54.460530281066895,
+  "known_request_wall_seconds": 78.56136989593506,
+  "runtime_records_available": 19,
+  "wilson95": [
+    0.16818032970623614,
+    0.6873262302663417
+  ],
+  "target_feedback_for_tuning": false,
+  "small_development_sample": true,
+  "manifest_sha256": "3ef856fd23dfdd911a358997dda5ab6e59089a6bd17e3ec088081da158153cf8"
+}

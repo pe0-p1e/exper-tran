@@ -16,3 +16,4 @@ if [[ "${1:-}" == "--prepare-only" ]]; then exit 0; fi
 "$PY" -u "$SRC/run_codex_cli_pilot.py" --model gpt-6.1-sol --images 10 \
   --pack-dir "$V7_DATA_ROOT/commercial_pilot10" \
   --result-dir "$DEST/codex/gpt-6.1-sol"
+"$PY" "$SRC/report_commercial_ten.py"

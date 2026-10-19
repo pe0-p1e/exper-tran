@@ -1,5 +1,5 @@
 {
-  "total_load_events": 23,
+  "total_load_events": 30,
   "audits": [
     {
       "model_name": "Qwen3.5-2B",
@@ -176,7 +176,7 @@
       "repo_id": "Qwen/Qwen3.5-2B",
       "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
       "role": "proxy",
-      "audited_utc": "2026-10-19T17:25:22.671065+00:00",
+      "audited_utc": "2026-10-19T18:21:46.105835+00:00",
       "total_parameter_count": 2213241664,
       "floating_parameter_count": 2213241664,
       "parameter_counts_by_dtype": {
@@ -247,14 +247,14 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 4426506752,
-        "cuda_reserved_bytes": 4450156544,
-        "cuda_allocated_gib": 4.1225056648254395,
-        "cuda_reserved_gib": 4.14453125
+        "cuda_allocated_bytes": 4444232192,
+        "cuda_reserved_bytes": 4452253696,
+        "cuda_allocated_gib": 4.139013767242432,
+        "cuda_reserved_gib": 4.146484375
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 9
+      "load_sequence": 29
     },
     {
       "model_name": "InternVL3.5-2B-HF",
@@ -346,7 +346,7 @@
       "repo_id": "Qwen/Qwen3.5-4B",
       "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
       "role": "proxy",
-      "audited_utc": "2026-10-19T17:25:29.110805+00:00",
+      "audited_utc": "2026-10-19T18:21:52.508903+00:00",
       "total_parameter_count": 4539265536,
       "floating_parameter_count": 4539265536,
       "parameter_counts_by_dtype": {
@@ -417,14 +417,14 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 9087735296,
-        "cuda_reserved_bytes": 9093251072,
-        "cuda_allocated_gib": 8.463613033294678,
-        "cuda_reserved_gib": 8.46875
+        "cuda_allocated_bytes": 9105460736,
+        "cuda_reserved_bytes": 9116319744,
+        "cuda_allocated_gib": 8.48012113571167,
+        "cuda_reserved_gib": 8.490234375
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 12
+      "load_sequence": 30
     },
     {
       "model_name": "InternVL3.5-2B-HF",
@@ -1012,6 +1012,172 @@
       "all_floating_parameters_bf16": true,
       "status": "pass",
       "load_sequence": 23
+    },
+    {
+      "model_name": "CLIP ViT-L/14",
+      "repo_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "role": "study18_proxy_calibration",
+      "audited_utc": "2026-10-19T18:20:25.201770+00:00",
+      "total_parameter_count": 427616513,
+      "floating_parameter_count": 427616513,
+      "parameter_counts_by_dtype": {
+        "bfloat16": 427616513
+      },
+      "parameter_bytes_by_dtype": {
+        "bfloat16": 855233026
+      },
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "vision_encoder_parameter_counts_by_dtype": {
+        "bfloat16": 303966208
+      },
+      "vision_encoder_parameter_bytes_by_dtype": {
+        "bfloat16": 607932416
+      },
+      "language_backbone_parameter_counts_by_dtype": {
+        "bfloat16": 123060480
+      },
+      "language_backbone_parameter_bytes_by_dtype": {
+        "bfloat16": 246120960
+      },
+      "multimodal_projector_parameter_counts_by_dtype": {},
+      "multimodal_projector_parameter_bytes_by_dtype": {},
+      "other_parameter_counts_by_dtype": {
+        "bfloat16": 589825
+      },
+      "sample_parameter_names_by_dtype": {
+        "bfloat16": [
+          "logit_scale",
+          "text_model.embeddings.token_embedding.weight",
+          "text_model.embeddings.position_embedding.weight",
+          "text_model.encoder.layers.0.self_attn.k_proj.weight",
+          "text_model.encoder.layers.0.self_attn.k_proj.bias",
+          "text_model.encoder.layers.0.self_attn.v_proj.weight",
+          "text_model.encoder.layers.0.self_attn.v_proj.bias",
+          "text_model.encoder.layers.0.self_attn.q_proj.weight",
+          "text_model.encoder.layers.0.self_attn.q_proj.bias",
+          "text_model.encoder.layers.0.self_attn.out_proj.weight",
+          "text_model.encoder.layers.0.self_attn.out_proj.bias",
+          "text_model.encoder.layers.0.layer_norm1.weight",
+          "text_model.encoder.layers.0.layer_norm1.bias",
+          "text_model.encoder.layers.0.mlp.fc1.weight",
+          "text_model.encoder.layers.0.mlp.fc1.bias",
+          "text_model.encoder.layers.0.mlp.fc2.weight",
+          "text_model.encoder.layers.0.mlp.fc2.bias",
+          "text_model.encoder.layers.0.layer_norm2.weight",
+          "text_model.encoder.layers.0.layer_norm2.bias",
+          "text_model.encoder.layers.1.self_attn.k_proj.weight"
+        ]
+      },
+      "vision_depth": 24,
+      "quantization": {
+        "is_loaded_in_4bit": false,
+        "is_loaded_in_8bit": false,
+        "is_quantized": false,
+        "quantization_method": "None",
+        "config_quantization": null,
+        "quantized_modules": []
+      },
+      "device_placement": {
+        "parameter_counts_by_device": {
+          "cuda:0": 427616513
+        },
+        "hf_device_map": null
+      },
+      "cuda_memory": {
+        "cuda_allocated_bytes": 863787520,
+        "cuda_reserved_bytes": 889192448,
+        "cuda_allocated_gib": 0.8044648170471191,
+        "cuda_reserved_gib": 0.828125
+      },
+      "all_floating_parameters_bf16": true,
+      "status": "pass",
+      "load_sequence": 24
+    },
+    {
+      "model_name": "CLIP ViT-L/14",
+      "repo_id": "openai/clip-vit-large-patch14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "role": "proxy",
+      "audited_utc": "2026-10-19T18:21:39.617879+00:00",
+      "total_parameter_count": 427616513,
+      "floating_parameter_count": 427616513,
+      "parameter_counts_by_dtype": {
+        "bfloat16": 427616513
+      },
+      "parameter_bytes_by_dtype": {
+        "bfloat16": 855233026
+      },
+      "parameter_counts_by_device": {
+        "cuda:0": 427616513
+      },
+      "vision_encoder_parameter_counts_by_dtype": {
+        "bfloat16": 303966208
+      },
+      "vision_encoder_parameter_bytes_by_dtype": {
+        "bfloat16": 607932416
+      },
+      "language_backbone_parameter_counts_by_dtype": {
+        "bfloat16": 123060480
+      },
+      "language_backbone_parameter_bytes_by_dtype": {
+        "bfloat16": 246120960
+      },
+      "multimodal_projector_parameter_counts_by_dtype": {},
+      "multimodal_projector_parameter_bytes_by_dtype": {},
+      "other_parameter_counts_by_dtype": {
+        "bfloat16": 589825
+      },
+      "sample_parameter_names_by_dtype": {
+        "bfloat16": [
+          "logit_scale",
+          "text_model.embeddings.token_embedding.weight",
+          "text_model.embeddings.position_embedding.weight",
+          "text_model.encoder.layers.0.self_attn.k_proj.weight",
+          "text_model.encoder.layers.0.self_attn.k_proj.bias",
+          "text_model.encoder.layers.0.self_attn.v_proj.weight",
+          "text_model.encoder.layers.0.self_attn.v_proj.bias",
+          "text_model.encoder.layers.0.self_attn.q_proj.weight",
+          "text_model.encoder.layers.0.self_attn.q_proj.bias",
+          "text_model.encoder.layers.0.self_attn.out_proj.weight",
+          "text_model.encoder.layers.0.self_attn.out_proj.bias",
+          "text_model.encoder.layers.0.layer_norm1.weight",
+          "text_model.encoder.layers.0.layer_norm1.bias",
+          "text_model.encoder.layers.0.mlp.fc1.weight",
+          "text_model.encoder.layers.0.mlp.fc1.bias",
+          "text_model.encoder.layers.0.mlp.fc2.weight",
+          "text_model.encoder.layers.0.mlp.fc2.bias",
+          "text_model.encoder.layers.0.layer_norm2.weight",
+          "text_model.encoder.layers.0.layer_norm2.bias",
+          "text_model.encoder.layers.1.self_attn.k_proj.weight"
+        ]
+      },
+      "vision_depth": 24,
+      "quantization": {
+        "is_loaded_in_4bit": false,
+        "is_loaded_in_8bit": false,
+        "is_quantized": false,
+        "quantization_method": "None",
+        "config_quantization": null,
+        "quantized_modules": []
+      },
+      "device_placement": {
+        "parameter_counts_by_device": {
+          "cuda:0": 427616513
+        },
+        "hf_device_map": null
+      },
+      "cuda_memory": {
+        "cuda_allocated_bytes": 863787520,
+        "cuda_reserved_bytes": 889192448,
+        "cuda_allocated_gib": 0.8044648170471191,
+        "cuda_reserved_gib": 0.828125
+      },
+      "all_floating_parameters_bf16": true,
+      "status": "pass",
+      "load_sequence": 28
     }
   ],
   "any_failed": false

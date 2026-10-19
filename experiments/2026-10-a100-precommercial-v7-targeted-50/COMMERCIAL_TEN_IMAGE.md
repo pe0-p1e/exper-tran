@@ -44,3 +44,24 @@ authentication and actual model IDs are verified.
 Full package: `outputs/a100_precommercial_v7_targeted50/commercial_pilot10/`.
 Logs/results/locks: same V7 root under
 `proxy_composition_18h/commercial_ten_image/` on the persistent root disk.
+
+## Executed result
+
+All20 image requests were verified in distinct sessions, with14 new requests
+and6 reused from the earlier pilot. GPT clean accuracy10/10; targeted hits4/10
+(40%), below the6/10 objective. By direction: T01 1/2, T03 1/2, T05 0/2,
+T07 2/2, T09 0/2. The seven newly observed images contributed4/7 hits;
+this does not replace the full denominator10.
+
+Saved step50, transformed pre-update margins were positive on10/10 images
+for CLIP and InternVL2B, but only2/10 for Qwen2B. All three surrogate losses
+decreased on all10. Across the saved trajectories, negative gradient-pair
+fraction was0.0727 and mean cancellation ratio0.6042. These establish incomplete
+Qwen surrogate feature-margin optimization, not a proven causal explanation
+of the closed-target outcomes. There is no independent final-PNG margin replay
+in this CPU-only diagnosis.
+
+Report generation independently verifies raw structured target answers,
+session uniqueness and PNG identities. One recovered historical observation
+has no recorded start time, so overall request duration has19/20 coverage;
+all14 newly issued request durations are recorded (54.5seconds total).

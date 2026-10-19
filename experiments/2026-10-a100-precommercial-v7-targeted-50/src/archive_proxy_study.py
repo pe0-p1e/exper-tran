@@ -43,6 +43,12 @@ def archive(push=False):
         for p in (ROOT/'commercial_cli_campaign').glob(pattern):
             dest=target/'commercial_cli_campaign'/p.relative_to(ROOT/'commercial_cli_campaign')
             dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,dest)
+    for pattern in ['reports/*.json','reports/*.csv','reports/*.md','method_and_cohort_lock.json',
+                    'codex/*/client_audit.json','codex/*/pilot_summary.json','codex/*/*/result.json',
+                    'codex/*/*/reuse_provenance.json']:
+        for p in (ROOT/'commercial_ten_image').glob(pattern):
+            dest=target/'commercial_ten_image'/p.relative_to(ROOT/'commercial_ten_image')
+            dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,dest)
     if push:
         branch=subprocess.check_output(['git','branch','--show-current'],cwd=repo,text=True).strip()
         if branch!='experiment/a100-precommercial-v7-proxy-study-18h':

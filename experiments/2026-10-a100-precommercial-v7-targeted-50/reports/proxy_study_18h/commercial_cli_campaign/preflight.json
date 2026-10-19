@@ -1,5 +1,5 @@
 {
-  "at": 1792433061.0444882,
+  "at": 1792433808.8786004,
   "providers": {
     "codex": {
       "status": "READY",
@@ -43,5 +43,5 @@
       "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b"
     }
   },
-  "live_inference_attempted": true
+  "live_inference_attempted": false
 }

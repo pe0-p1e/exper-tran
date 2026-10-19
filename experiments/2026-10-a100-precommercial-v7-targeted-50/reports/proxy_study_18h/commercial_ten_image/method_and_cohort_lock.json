@@ -1,0 +1,12 @@
+{
+  "manifest_sha256": "3ef856fd23dfdd911a358997dda5ab6e59089a6bd17e3ec088081da158153cf8",
+  "model": "gpt-6.1-sol",
+  "client": "codex-cli 0.163.0",
+  "reasoning_effort": "low",
+  "selection": "Previously frozen surrogate-development winner; new composition study has not selected a replacement",
+  "new_target_calls_max": 14,
+  "planned_total_requests": 20,
+  "goal_hits": 6,
+  "denominator": 10,
+  "feedback_for_tuning": false
+}

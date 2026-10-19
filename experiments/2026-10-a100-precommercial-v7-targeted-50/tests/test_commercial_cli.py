@@ -111,3 +111,22 @@ def test_ten_pack_rejects_changed_image_and_missing_requests(tmp_path):
     with pytest.raises(ValueError):checked_order(tmp_path,10)
     (tmp_path/'request_order.json').write_text(json.dumps(order[:-1]))
     with pytest.raises(ValueError):checked_order(tmp_path,10)
+
+
+def test_ten_report_recounts_raw_answers_and_rejects_tools(monkeypatch,tmp_path):
+    import report_commercial_ten as report
+    from proxy_study_protocol import sha
+    monkeypatch.setattr(report,'BASE',tmp_path/'pack');monkeypatch.setattr(report,'DEST',tmp_path/'dest')
+    rid='opaque';image=tmp_path/'pack/blinded'/rid/'image.png';image.parent.mkdir(parents=True)
+    image.write_bytes(b'frozen png')
+    request=dict(image_sha256=sha(image),prompt_sha256='prompt')
+    dest=tmp_path/'dest/codex/gpt-6.1-sol'/rid;dest.mkdir(parents=True)
+    identity=dict(request,client='codex-cli 0.163.0',model='gpt-6.1-sol')
+    (dest/'result.json').write_text(json.dumps(dict(identity=identity,raw_output='3',parsed_label=4,finished=1)))
+    events=[dict(type='thread.started',thread_id='fresh'),
+            dict(type='item.completed',item=dict(type='agent_message',text='3')),dict(type='turn.completed')]
+    trace=dest/'stdout.jsonl';trace.write_text('\n'.join(json.dumps(e) for e in events))
+    assert report.verified_record(rid,request)['session_id']=='fresh'
+    events.insert(1,dict(type='item.completed',item=dict(type='command_execution')))
+    trace.write_text('\n'.join(json.dumps(e) for e in events))
+    with pytest.raises(RuntimeError):report.verified_record(rid,request)

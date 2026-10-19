@@ -1,0 +1,25 @@
+{
+  "identity": {
+    "image_sha256": "f244a3f03eb7bed23694a034586783e0015dbbd9defcb960b6353dc72395616a",
+    "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+    "client": "codex-cli 0.163.0",
+    "model": "gpt-6.1-sol"
+  },
+  "request_id": "0decaed283a0b5b1",
+  "started": 1792434036.4299095,
+  "finished": 1792434040.3719177,
+  "raw_output": "0",
+  "parsed_label": 1,
+  "parser_status": "ok",
+  "session_id": "01a15564-df3e-7952-8a32-b3eaa63493dd",
+  "tool_calls": 0,
+  "client_warnings": [
+    {
+      "id": "item_0",
+      "type": "error",
+      "message": "Under-development features enabled: skip_host_skill_discovery. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in /home/ubuntu/.codex/config.toml."
+    }
+  ],
+  "CLI_context_differs_from_direct_API": true,
+  "model_identity_evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed"
+}
