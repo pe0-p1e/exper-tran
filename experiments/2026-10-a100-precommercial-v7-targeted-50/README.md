@@ -1,3 +1,7 @@
+## Latest request — eight-hour Multiple Proxy supplement (2026-10-19)
+
+**Current top priority:** [MULTIPROXY_8H_SUPPLEMENT.md](MULTIPROXY_8H_SUPPLEMENT.md) and [multiproxy_8h_supplement_matrix.csv](multiproxy_8h_supplement_matrix.csv). This supersedes the earlier full Single/Embedding/Multiple/Ablation rerun instruction. Do not start new historical Single Proxy or Embedding Layer work; do not duplicate already-running loss ablations. Finish current strict target-family-disjoint locked jobs without interference, then only supplement missing new-loss Multiple Proxy/21 subset combinations and budgeted 4 CLIP + 2 DINO + cross-family VLM candidates. Inspect actual server GPU tasks and checkpoint states, dynamically manage BF16/VRAM, aim for <=8 hours (report exact incomplete work honestly), then prepare a frozen three-image blinded commercial pilot with verified route/access/budget. Do not change existing code's frozen scientific configs solely to meet time.
+
 # V7 targeted transfer optimization (>=50% each target and each direction)
 
 Current research order and paper plan: [LATEST_EXPERIMENT_FRAMEWORK.md](LATEST_EXPERIMENT_FRAMEWORK.md)
