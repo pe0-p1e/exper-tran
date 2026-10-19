@@ -1,0 +1,862 @@
+[
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "92c8f3019a8225dd",
+    "identity": {
+      "image_sha256": "2ff4732cfcf627470a15822bf3916db07c47457f5a8210c762d64662960b7336",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a15565-6862-7ca1-956a-ba1282db52ad",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "184ec36cfd62458c",
+    "identity": {
+      "image_sha256": "0b52a954d5f7bc9a4e3021c48c710ad631bccc4e7da5657b8fef468e575ee61f",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "3",
+    "parsed_label": 4,
+    "session_id": "01a15564-eead-7722-8a8e-a48070252ee8",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "6e16d4920bb9ac72",
+    "identity": {
+      "image_sha256": "f15fd0e35a9d7e54777725f634a48e20b78e6700862e47efe76f3b36040dc55f",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a15565-48bf-7573-8b30-ba6457bbee8c",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "967498e48594dee1",
+    "identity": {
+      "image_sha256": "cef89d5225fb5f7065b60ee9e50d7566eba91ddbec447aa8ece8ace4efadca9e",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "6",
+    "parsed_label": 7,
+    "session_id": "01a15565-76c7-72f2-a22f-0d9468250554",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "0decaed283a0b5b1",
+    "identity": {
+      "image_sha256": "f244a3f03eb7bed23694a034586783e0015dbbd9defcb960b6353dc72395616a",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a15564-df3e-7952-8a32-b3eaa63493dd",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "522bf93290a8dc24",
+    "identity": {
+      "image_sha256": "83369783a1df00d18f27e612ff12e3e712cf7b4e51a4fd66e465134d5bc756ed",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": "01a15565-0c6f-7972-b677-08c48e6f392a",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "040b978f46a959f7",
+    "identity": {
+      "image_sha256": "b103b0e01e961abbe4b322f979d57c86a84401acf0c7c7fa0787a0b0ef9642c8",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a15564-bd7d-79f2-8b0c-e5add5125d64",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "5bae203a6c8c7120",
+    "identity": {
+      "image_sha256": "07101f8823d8c363ced6c206bb30912dde401366325428f9480f7b863b42ca30",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": null,
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "6bd417e27010f496",
+    "identity": {
+      "image_sha256": "0af2e6bb8b16e94019eb11b0caf95f328c00b8ad514f56121f66d84ea3f84e41",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": null,
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "0ad16492b99c3c94",
+    "identity": {
+      "image_sha256": "3b392fd586b2ed988188c43bfd866f56065d60a5a6958c4881170ccce21bfc63",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a15564-cf71-7c40-82d3-901ca5467d5c",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "61b8e167f98d0ba2",
+    "identity": {
+      "image_sha256": "6d77164db12d1c5ca1c2d857d9902b30917447a36bfdb2f26ebb7385f0fc976b",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "1",
+    "parsed_label": 2,
+    "session_id": "01a15565-3778-7ba1-a06c-6dd22a82f410",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "0a504862052c788a",
+    "identity": {
+      "image_sha256": "bacdce06285f0eb89e5b9912d6ba51ccef1073435e12f9c21c86adece1c9fcf2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": null,
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "57ba4612dedb85d6",
+    "identity": {
+      "image_sha256": "0440ab1a8eb234b644f029c2d62f2c725e1f8874d3f0fbf5507e57973aa4d59d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "6",
+    "parsed_label": 7,
+    "session_id": "01a15565-29b1-76f3-8cbe-5599796ea751",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "804a6e99d874def8",
+    "identity": {
+      "image_sha256": "7e704b1802a7a355987d5381cee74cfd22d937546b780c069d301df77cee6705",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": null,
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "4c5b3a312cec8124",
+    "identity": {
+      "image_sha256": "03e565e031ef0282deca700d6531f96c7f2322a2da98128d63c13886db7c4efc",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": null,
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "a0a516ab93e97194",
+    "identity": {
+      "image_sha256": "f19fa70bdcdd5860f24c61b5a3b00b7a30cbd83947af736579c9a9f2f43aa735",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a15565-846e-75f0-b699-3bdb0584dbd1",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "8e7e6dad38558580",
+    "identity": {
+      "image_sha256": "f26dbe88195fb2fc2e61216f1c65f4bced543bd1be7638f969af94bf2c73af3b",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a15565-57ab-7800-b750-00360d74a527",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "526821dfdeacf786",
+    "identity": {
+      "image_sha256": "6d0a3246cd6596eb0ad1803059e11b14700e762b164e295e16f2aa84eb1d893c",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a15565-199f-7c83-bc39-bc8f58eb79de",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "a64c51cc102f7c75",
+    "identity": {
+      "image_sha256": "cb2535f8a68834ac79ed34895cb107e9cd45c7a5d89b304783ae035c365e496d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": null,
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6.1-sol",
+    "request_id": "436af6e5da8a2b00",
+    "identity": {
+      "image_sha256": "403a5af1e113b675b25b442a1d2e73f7a404ee6d471eaf4bdadbaf92c6d91965",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6.1-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a15564-fcb8-7e53-84ec-43fae3c94589",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": true
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "92c8f3019a8225dd",
+    "identity": {
+      "image_sha256": "2ff4732cfcf627470a15822bf3916db07c47457f5a8210c762d64662960b7336",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a15580-0e69-73c3-ad29-277f77966901",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "184ec36cfd62458c",
+    "identity": {
+      "image_sha256": "0b52a954d5f7bc9a4e3021c48c710ad631bccc4e7da5657b8fef468e575ee61f",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "3",
+    "parsed_label": 4,
+    "session_id": "01a1557f-6efb-7163-8eba-ee391da26779",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "6e16d4920bb9ac72",
+    "identity": {
+      "image_sha256": "f15fd0e35a9d7e54777725f634a48e20b78e6700862e47efe76f3b36040dc55f",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a1557f-e734-7131-b3ba-a807b769466e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "967498e48594dee1",
+    "identity": {
+      "image_sha256": "cef89d5225fb5f7065b60ee9e50d7566eba91ddbec447aa8ece8ace4efadca9e",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "6",
+    "parsed_label": 7,
+    "session_id": "01a15580-1951-7da0-9dbd-477df7e0a694",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "0decaed283a0b5b1",
+    "identity": {
+      "image_sha256": "f244a3f03eb7bed23694a034586783e0015dbbd9defcb960b6353dc72395616a",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a1557f-62df-78d3-a094-6ef0a9a28828",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "522bf93290a8dc24",
+    "identity": {
+      "image_sha256": "83369783a1df00d18f27e612ff12e3e712cf7b4e51a4fd66e465134d5bc756ed",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": "01a1557f-9616-7491-b5b6-7774c1b62ce4",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "040b978f46a959f7",
+    "identity": {
+      "image_sha256": "b103b0e01e961abbe4b322f979d57c86a84401acf0c7c7fa0787a0b0ef9642c8",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1557f-309f-7142-8877-155d595b50a3",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "5bae203a6c8c7120",
+    "identity": {
+      "image_sha256": "07101f8823d8c363ced6c206bb30912dde401366325428f9480f7b863b42ca30",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1557f-c1d1-7da1-b816-62a551935b43",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "6bd417e27010f496",
+    "identity": {
+      "image_sha256": "0af2e6bb8b16e94019eb11b0caf95f328c00b8ad514f56121f66d84ea3f84e41",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": "01a1557f-da34-7ce3-b77e-8edb2f061c8c",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "0ad16492b99c3c94",
+    "identity": {
+      "image_sha256": "3b392fd586b2ed988188c43bfd866f56065d60a5a6958c4881170ccce21bfc63",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "9",
+    "parsed_label": 10,
+    "session_id": "01a1557f-50d9-7532-86ba-2b6f92e7030c",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "61b8e167f98d0ba2",
+    "identity": {
+      "image_sha256": "6d77164db12d1c5ca1c2d857d9902b30917447a36bfdb2f26ebb7385f0fc976b",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "1",
+    "parsed_label": 2,
+    "session_id": "01a1557f-ce5a-7b81-b7f4-abbd6fa57d2e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "0a504862052c788a",
+    "identity": {
+      "image_sha256": "bacdce06285f0eb89e5b9912d6ba51ccef1073435e12f9c21c86adece1c9fcf2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1557f-40cc-7983-b2ca-ecfa72abc871",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "57ba4612dedb85d6",
+    "identity": {
+      "image_sha256": "0440ab1a8eb234b644f029c2d62f2c725e1f8874d3f0fbf5507e57973aa4d59d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "6",
+    "parsed_label": 7,
+    "session_id": "01a1557f-b551-7153-9ee5-33e40818a6c8",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "804a6e99d874def8",
+    "identity": {
+      "image_sha256": "7e704b1802a7a355987d5381cee74cfd22d937546b780c069d301df77cee6705",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": "01a1557f-f563-7d41-9976-174cdfa03495",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "4c5b3a312cec8124",
+    "identity": {
+      "image_sha256": "03e565e031ef0282deca700d6531f96c7f2322a2da98128d63c13886db7c4efc",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1557f-888a-7842-9f9b-ffa3131a681e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "a0a516ab93e97194",
+    "identity": {
+      "image_sha256": "f19fa70bdcdd5860f24c61b5a3b00b7a30cbd83947af736579c9a9f2f43aa735",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a15580-2850-7ee1-aad9-e08665b16d6b",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "8e7e6dad38558580",
+    "identity": {
+      "image_sha256": "f26dbe88195fb2fc2e61216f1c65f4bced543bd1be7638f969af94bf2c73af3b",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "1",
+    "parsed_label": 2,
+    "session_id": "01a15580-01f1-7cb0-a49e-f37584d15e0e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "526821dfdeacf786",
+    "identity": {
+      "image_sha256": "6d0a3246cd6596eb0ad1803059e11b14700e762b164e295e16f2aa84eb1d893c",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a1557f-a1e0-78f0-a4bd-741d9aa403d9",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "a64c51cc102f7c75",
+    "identity": {
+      "image_sha256": "cb2535f8a68834ac79ed34895cb107e9cd45c7a5d89b304783ae035c365e496d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "9",
+    "parsed_label": 10,
+    "session_id": "01a15580-33d7-75f3-b831-1010a785abcc",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-6-sol",
+    "request_id": "436af6e5da8a2b00",
+    "identity": {
+      "image_sha256": "403a5af1e113b675b25b442a1d2e73f7a404ee6d471eaf4bdadbaf92c6d91965",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-sol"
+    },
+    "raw_output": "5",
+    "parsed_label": 6,
+    "session_id": "01a1557f-7b99-7cb2-9425-3fa60413de73",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "request_id": "040b978f46a959f7",
+    "identity": {
+      "image_sha256": "b103b0e01e961abbe4b322f979d57c86a84401acf0c7c7fa0787a0b0ef9642c8",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-5.6-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a15580-41d0-7ad1-a70c-b4a8f5690f9e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "request_id": "0ad16492b99c3c94",
+    "identity": {
+      "image_sha256": "3b392fd586b2ed988188c43bfd866f56065d60a5a6958c4881170ccce21bfc63",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-5.6-sol"
+    },
+    "raw_output": "9",
+    "parsed_label": 10,
+    "session_id": "01a15580-5ef9-7893-8001-135597a24042",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "dev10",
+    "provider": "codex",
+    "model": "gpt-5.6-sol",
+    "request_id": "0a504862052c788a",
+    "identity": {
+      "image_sha256": "bacdce06285f0eb89e5b9912d6ba51ccef1073435e12f9c21c86adece1c9fcf2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-5.6-sol"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a15580-4d16-75e2-945a-041e522c4733",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  }
+]

@@ -1,0 +1,255 @@
+{
+  "status": "COMPLETE_WITH_MISSING_CACHES",
+  "models": 15,
+  "reference_images": 480,
+  "reference_manifest_hashes": [
+    "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78"
+  ],
+  "sources": [
+    {
+      "model": "Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "layers": [
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/737833009b7a0d875c9e2d2fed11c85210b012a30f7d9ba43bce6ba3942cfbcd.npz",
+      "sha256": "60203e2915df01eaf64af2fe3b20e2c8158711c1887aa0f9b9647df5bf5ac026"
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/04f866c12f9052ca90925b86ed18924873cc0bb4af572cced6462b0370182466.npz",
+      "sha256": "0c2335b815226f22c011afc9417c4c8431c485b2fdeb02aeeb64b5232cc43a08"
+    },
+    {
+      "model": "Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "layers": [
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/9a39ae12e57170434c07297694fbdab301f793462dd931dde72a64aea7e0e504.npz",
+      "sha256": "03618364afcd79f9e5fceef180294d9c5b46fe363fd8676a5e2880ba25b4ce8a"
+    },
+    {
+      "model": "Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/ddf1d538e2345e28656da6140c6b8f61da53b854f1c33d3661c2de22bd79a7be.npz",
+      "sha256": "58a620a2c03c7234d9723667bb517202d358061e76af4fc8afd2676ca90bdae9"
+    },
+    {
+      "model": "Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "layers": [
+        6,
+        13,
+        20,
+        26
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/6c2ef440763f9310ae0252cc4777d6aeb1ecd3404b5460d9ad4b952d2568d66a.npz",
+      "sha256": "4f65b28e67c3e3698f1b9b3f1196138708a5550d5b6fb4ae1c6de4d57e62f07d"
+    },
+    {
+      "model": "Qwen3.5-27B",
+      "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+      "layers": [
+        26
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/393d95f23dc02787caae47dc0a57022128a7013d686c9e9d5a065403616fd917.npz",
+      "sha256": "dd148dd11f95a9e2a809ca770aedfbd6c7f291bf0b082c7b308dd40d30d965e7"
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+      "layers": [
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/0b699e3a1fc88f5126a82bd187b1ae2d22ae595bed859820f6a2d4ebe77a686c.npz",
+      "sha256": "9173e7c86464f3765beda0cda4fcceae5bad879478e07427fae3d4211b1456dc"
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/8f96a84b337173454857f0ce73036a4851e50efbd5ee841e838339de605a2d0c.npz",
+      "sha256": "25923e89cf518696ad1f46a94fe3c2b65f03e002ee9e1b905a3c94f988a02971"
+    },
+    {
+      "model": "InternVL3.5-4B-HF",
+      "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+      "layers": [
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/616f52d0e9d50aedb23f2d81bed1aad15ebfb7e860865040292d361ed3ca033e.npz",
+      "sha256": "5d8a2309b4c888656d49e72e3d5b4f61d98d8c79134cecabefee4b08e6776f31"
+    },
+    {
+      "model": "InternVL3.5-4B-HF",
+      "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/fa52b886ee639bda1b783407c0ee80c1a8087d98849d30833610ae4690845daf.npz",
+      "sha256": "81838be584f7f12fd7749f3fc13946db4960546a6736f183322291fdd49ab865"
+    },
+    {
+      "model": "InternVL3.5-8B-HF",
+      "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/4004cc370a031d1b4ee8b742914083330c1f6111659cd306db56558a0285d333.npz",
+      "sha256": "711c1b880bd044a9accfeda8b4e6670571f4e820622d778b1ac5f1f7d6cacdda"
+    },
+    {
+      "model": "InternVL3.5-14B-HF",
+      "revision": "226b96d5912e69159abc0384cefcbd51487fdce0",
+      "layers": [
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/bbd5e71f1fe4894180e72f94b3277b615f450c48fdb74373e634312ce52f7fcc.npz",
+      "sha256": "90605dc280c1314f845791ae27e1866a831f37b89ddf1453c2e89fcd47a380ca"
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+      "layers": [
+        15
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/814dd59a97bd8093d1eed0e76aa03788c740109412d43797d57f6f0db7d9d00a.npz",
+      "sha256": "46123d4f74b06c900a952a28197236467aa5bd332921b8e807e3b554e6d3a664"
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+      "layers": [
+        3,
+        7,
+        11,
+        15
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/02d414aecd27f03d765084c0a402337adb3064a311213438c57925422f5940fb.npz",
+      "sha256": "cab85e1a872e6ad3ca75f4c3b54aa7683a2e06abff8e4a57f4ac0e43646eb257"
+    },
+    {
+      "model": "Gemma 4 E4B-it",
+      "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+      "layers": [
+        3,
+        7,
+        11,
+        15
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/176adcc18823665ccc0330323b8f737fd1f92394cef67f788031cde3199637f7.npz",
+      "sha256": "cab85e1a872e6ad3ca75f4c3b54aa7683a2e06abff8e4a57f4ac0e43646eb257"
+    },
+    {
+      "model": "Gemma 4 26B-A4B-it",
+      "revision": "4d7ae4984b7db7de8f8457170b3f1a419ee76d52",
+      "layers": [
+        6,
+        13,
+        20,
+        26
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/8de2d8699b16e676794dd506e524d911a2312de4ed5eb94c6b8254c6b494cbc8.npz",
+      "sha256": "7e3bddb45d34174dcd844dfd58e4f6697e3552df4c2c4bb0b07d1d4e9d6e7952"
+    },
+    {
+      "model": "Gemma 4 31B-it",
+      "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "layers": [
+        26
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/49b64332a735093ab9ecf9fce5b232666a5667da94a9c85c8b979c37b66a46d6.npz",
+      "sha256": "526f63e17eaa072993d04a68f98b42de6933fc416f2066856483e8bd4e3226a8"
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "layers": [
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/5da2001b20115d8921dcab11bbef67cdcde6f0791c55c5e70ee159430c529673.npz",
+      "sha256": "ec0b57a9fb9ca58dfe49fa7029530ca527b08aa7e8a5d0d71dbc663b9647e0dc"
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/0017aeb6e7f87d4fe7894534c9e76fdf5a9d8c6e97ecc27c3e69f18594b8568f.npz",
+      "sha256": "a475ff33cc9b0bd5f2615736460223612fad9d2f5c66d3fc2cc6720ac198e2e0"
+    },
+    {
+      "model": "SigLIP2-So400m-patch14-384",
+      "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+      "layers": [
+        6,
+        13,
+        20,
+        26
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/93e04732e4178d48a5fe5311d67190d4e97b299b94b657fc0c7111616b45a4c7.npz",
+      "sha256": "37a60709e5146d7b1f7ea4da8a3ba84c05ccf914b0eab726752c2b2c6a37341f"
+    },
+    {
+      "model": "DINOv2-Large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "layers": [
+        5,
+        11,
+        17,
+        23
+      ],
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/cache/reference_features/01cdf42d920c8a653e6ddc958965bb4d9a542e4e314e1e9a730da3013602a2a9.npz",
+      "sha256": "ac26c37bbf0a1154d025c406656dca8e6e14dd41b462e138d02ff7702324fe71"
+    }
+  ],
+  "missing_cached_models": [
+    "CLIP ViT-B/32",
+    "CLIP ViT-B/16",
+    "CLIP ViT-L/14@336",
+    "DINOv2-Base"
+  ],
+  "model_inference_calls": 0,
+  "gpu_model_loads": 0,
+  "joint_fit": "one shared ten-class set per model; no separate class fits",
+  "tsne": "qualitative only; no quantitative distances from2D coordinates",
+  "limitations": "Reference geometry only. Adversarial DeltaR and proxy/target alignment require separate PNG embedding extraction. No reverse-direction asymmetry is inferred."
+}

@@ -1,0 +1,348 @@
+{
+  "conditions": [
+    {
+      "condition": "U00",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U01",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "loss": "pull_push"
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U02",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "research_dev_offset": 2,
+        "patch_weight": 0.0
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U03",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "aggregation": "soft_reference"
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U04",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "loss": "combined",
+        "margin_weight": 0.5
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U05",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "pcgrad",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U06",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "weighted",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "adaptive_temperature": 0.005
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U07",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "eot_samples": 4
+      },
+      "budget_class": "expanded_forward_budget",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U08",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "DINOv2-Large": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U09",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "SigLIP2-So400m-patch14-384": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    },
+    {
+      "condition": "U10",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF",
+        "DINOv2-Large"
+      ],
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "budget_class": "primary50_steps",
+      "status": "QUEUED",
+      "attack_complete": false,
+      "attack_images": 0,
+      "validations": {
+        "Qwen3.5-9B": false,
+        "InternVL3.5-8B-HF": false,
+        "Gemma 4 E4B-it": false
+      },
+      "embeddings": {
+        "CLIP ViT-L/14": false,
+        "DINOv2-Large": false,
+        "Gemma 4 E4B-it": false,
+        "Qwen3.5-9B": false,
+        "InternVL3.5-2B-HF": false,
+        "Qwen3.5-2B": false,
+        "InternVL3.5-8B-HF": false
+      }
+    }
+  ],
+  "failures": [],
+  "final_target_feedback": false,
+  "commercial_feedback": false,
+  "small_sample_per_direction": 2
+}

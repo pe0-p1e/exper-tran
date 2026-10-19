@@ -1,0 +1,276 @@
+{
+  "protocol": "surrogate_followup_v1",
+  "conditions": [
+    {
+      "id": "U00",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U01",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "loss": "pull_push"
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U02",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "research_dev_offset": 2,
+        "patch_weight": 0.0
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U03",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "aggregation": "soft_reference"
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U04",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "loss": "combined",
+        "margin_weight": 0.5
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U05",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "pcgrad",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U06",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "weighted",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "adaptive_temperature": 0.005
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U07",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2,
+        "eot_samples": 4
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "expanded_forward_budget"
+    },
+    {
+      "id": "U08",
+      "models": [
+        "CLIP ViT-L/14",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U09",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    },
+    {
+      "id": "U10",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF",
+        "DINOv2-Large"
+      ],
+      "method": "A3",
+      "fusion": "equal",
+      "options": {
+        "patch_weight": 0.35,
+        "research_dev_offset": 2
+      },
+      "dev_offset": 2,
+      "images_per_direction": 2,
+      "steps": 50,
+      "seed": 42,
+      "restarts": 1,
+      "budget_class": "primary50_steps"
+    }
+  ],
+  "validation_models": [
+    "Qwen3.5-9B",
+    "InternVL3.5-8B-HF",
+    "Gemma 4 E4B-it"
+  ],
+  "dev_ids": {
+    "T01": [
+      "train/n01443537/n01443537_374.JPEG",
+      "train/n01443537/n01443537_425.JPEG"
+    ],
+    "T03": [
+      "train/n07753275/n07753275_11517.JPEG",
+      "train/n07753275/n07753275_11533.JPEG"
+    ],
+    "T05": [
+      "train/n03642806/n03642806_11724.JPEG",
+      "train/n03642806/n03642806_11858.JPEG"
+    ],
+    "T07": [
+      "train/n09472597/n09472597_10298.JPEG",
+      "train/n09472597/n09472597_10474.JPEG"
+    ],
+    "T09": [
+      "train/n04254680/n04254680_102.JPEG",
+      "train/n04254680/n04254680_1051.JPEG"
+    ]
+  },
+  "target_feedback_for_selection": false,
+  "cohort_note": "Disjoint from commercial10/final150; historically seen surrogate development images, not an untouched holdout",
+  "selection": "Minimum held-out-surrogate model-direction ASR, then pooled ASR, then measured compute; no commercial or final-target results",
+  "bf16": true,
+  "epsilon": "16/255",
+  "steps": 50,
+  "spatial_mean": true,
+  "reference_count_per_class": 48,
+  "source_hashes": {
+    "unified_research_worker.py": "61d788d1380e6bfc4ec25f7362cb2ffebe740194847845bc9abf99f98fe36339",
+    "run_v7_attack.py": "517b3f2e7f1dd15ad784956d47d930edd01225e470d7d49bf39154b9b0e03264",
+    "representation_objectives.py": "15739dc6bc568f4f5cac62628aac51333e8f36ce96c014c9815925484ef21c73",
+    "attack_optimizers.py": "745bd7bd5670441ea8e7d46aa09454a737d07a681ef2f609bb0e53428294b899",
+    "vision_features.py": "cf3b9b073cac4f8eaf7a5e4b81e679f58703f5e14885531aaf6dde1035af509b",
+    "evaluate_surrogate_outputs.py": "53a1a06583ba367e653f08c1638dff48b37c67dcab09082f5133afa22bc9003b"
+  }
+}

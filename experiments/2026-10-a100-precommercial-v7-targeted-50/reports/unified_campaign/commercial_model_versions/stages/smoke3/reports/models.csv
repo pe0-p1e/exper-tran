@@ -1,0 +1,8 @@
+matrix_id,provider,model,status,completed_requests,planned_requests,hits,denominator,ASR,clean_correct,clean_correct_conditional_hits,clean_correct_conditional_denominator,clean_correct_conditional_ASR,invalid_replies,reason,legacy_conditional_TASR
+openai_61_sol,codex,gpt-6.1-sol,READY,0,6,,3,,,,,,0,,N/A
+openai_6_sol,codex,gpt-6-sol,READY,0,6,,3,,,,,,0,,N/A
+openai_56_sol,codex,gpt-5.6-sol,READY,0,6,,3,,,,,,0,,N/A
+gemini_version_1,gemini,UNCONFIGURED,BLOCKED,0,6,,3,,,,,,0,Exact authenticated model ID is not configured; aliases/default/auto are forbidden,N/A
+gemini_version_2,gemini,UNCONFIGURED,BLOCKED,0,6,,3,,,,,,0,Exact authenticated model ID is not configured; aliases/default/auto are forbidden,N/A
+claude_version_1,claude,UNCONFIGURED,BLOCKED,0,6,,3,,,,,,0,Exact authenticated model ID is not configured; aliases/default/auto are forbidden,N/A
+claude_version_2,claude,UNCONFIGURED,BLOCKED,0,6,,3,,,,,,0,Exact authenticated model ID is not configured; aliases/default/auto are forbidden,N/A

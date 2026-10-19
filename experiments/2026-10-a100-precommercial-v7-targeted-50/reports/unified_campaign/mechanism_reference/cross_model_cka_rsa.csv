@@ -1,0 +1,106 @@
+left_model,right_model,N,reference_CKA,within_class_residual_CKA,reference_RSA,scope
+Qwen3.5-2B,Qwen3.5-4B,480,0.9231209703258112,0.8822575753244968,0.7814570259176794,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,Qwen3.5-9B,480,0.8194720376838368,0.5327291251305745,0.6913788910036132,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,Qwen3.5-27B,480,0.7970367434172364,0.4816428115891863,0.7030054795997949,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,InternVL3.5-2B-HF,480,0.7909317921175603,0.5471227331760634,0.647734823110107,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,InternVL3.5-4B-HF,480,0.7695304840976712,0.4876301307087888,0.5641129274471922,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,InternVL3.5-8B-HF,480,0.7741189655800551,0.5166303274255761,0.6116921661634981,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,InternVL3.5-14B-HF,480,0.7598214333358372,0.4623793338058285,0.5681659344688954,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,Gemma 4 E2B-it,480,0.7033342512114656,0.4417279726537654,0.4480061966831638,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,Gemma 4 E4B-it,480,0.7033342512114656,0.4417279726537654,0.4480061966831638,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,Gemma 4 26B-A4B-it,480,0.6416974060382031,0.4033231545564294,0.462894701169772,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,Gemma 4 31B-it,480,0.6415069160576833,0.4031749733087427,0.4625738066504895,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,CLIP ViT-L/14,480,0.6924806188837007,0.43074463275999325,0.3669394338774057,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,SigLIP2-So400m-patch14-384,480,0.7922318108172964,0.4634807119884253,0.5666164283753714,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-2B,DINOv2-Large,480,0.7546356250041973,0.41983946834086483,0.4202838338736577,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,Qwen3.5-9B,480,0.8638766129858675,0.6255472792245089,0.7148684934916201,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,Qwen3.5-27B,480,0.8355380424128748,0.5746044106495976,0.6639370136556114,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,InternVL3.5-2B-HF,480,0.8025285504462139,0.6189824523286037,0.5708827594019581,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,InternVL3.5-4B-HF,480,0.79265026293352,0.573591473385193,0.4817052525879666,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,InternVL3.5-8B-HF,480,0.8044344601933238,0.5984629836820212,0.5319563964873598,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,InternVL3.5-14B-HF,480,0.8038407442636288,0.5580999191533694,0.5372000740157156,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,Gemma 4 E2B-it,480,0.7117279412943984,0.5075838982719363,0.3020721838329595,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,Gemma 4 E4B-it,480,0.7117279412943984,0.5075838982719363,0.3020721838329595,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,Gemma 4 26B-A4B-it,480,0.6469554391771924,0.46902650089976083,0.33003027462348583,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,Gemma 4 31B-it,480,0.6467816131984084,0.4688673752472655,0.3299630415327702,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,CLIP ViT-L/14,480,0.7404127298164643,0.49825922945461487,0.4455718433114472,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,SigLIP2-So400m-patch14-384,480,0.8294530512219126,0.5394470996533676,0.5413943947341269,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-4B,DINOv2-Large,480,0.7829653755121723,0.49461815589250513,0.301731847133543,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,Qwen3.5-27B,480,0.92641625874396,0.7816938788265129,0.7916467503336897,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,InternVL3.5-2B-HF,480,0.7893980234663565,0.5974941587513375,0.5781432413454403,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,InternVL3.5-4B-HF,480,0.808093701473927,0.5723331700779166,0.5668138035090683,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,InternVL3.5-8B-HF,480,0.7945535006305239,0.5797996350389347,0.513164805833861,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,InternVL3.5-14B-HF,480,0.8101371104859544,0.572661693881131,0.5261567565460712,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,Gemma 4 E2B-it,480,0.7175833253780174,0.5234142923255617,0.373632916315745,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,Gemma 4 E4B-it,480,0.7175833253780174,0.5234142923255617,0.373632916315745,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,Gemma 4 26B-A4B-it,480,0.6518350573616775,0.5054790615079949,0.3911501534757225,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,Gemma 4 31B-it,480,0.651629641357507,0.5053951242637077,0.3909307969078391,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,CLIP ViT-L/14,480,0.7220510161880974,0.46239195345788486,0.3149364637155069,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,SigLIP2-So400m-patch14-384,480,0.8598234950357351,0.5999077546183308,0.5013929943508936,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-9B,DINOv2-Large,480,0.8071530627160185,0.5046599856972498,0.35400053362962475,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,InternVL3.5-2B-HF,480,0.7813116137489596,0.5853194574353944,0.6160354653753001,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,InternVL3.5-4B-HF,480,0.8033591712895641,0.5735353479461109,0.6100919724902726,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,InternVL3.5-8B-HF,480,0.8026794953293286,0.5865622259347749,0.6149265953406956,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,InternVL3.5-14B-HF,480,0.8043322478602737,0.5826010025101946,0.5733075968546066,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,Gemma 4 E2B-it,480,0.7189689297247513,0.5172914480928349,0.4877569206939703,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,Gemma 4 E4B-it,480,0.7189689297247513,0.5172914480928349,0.4877569206939703,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,Gemma 4 26B-A4B-it,480,0.6518496865248632,0.48120363285298234,0.4604986848008757,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,Gemma 4 31B-it,480,0.6516120674344436,0.48098703938214726,0.4601437419152088,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,CLIP ViT-L/14,480,0.7089269289663679,0.44106412991056615,0.31955473562288483,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,SigLIP2-So400m-patch14-384,480,0.8173091028375278,0.5467444381710623,0.4580734390841253,paired same-image reference geometry; no adversarial features or causal claim
+Qwen3.5-27B,DINOv2-Large,480,0.7934364471926961,0.4866165825096124,0.4713318567731073,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,InternVL3.5-4B-HF,480,0.9189377400084681,0.841328803233844,0.820107599917919,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,InternVL3.5-8B-HF,480,0.9281112049289921,0.8522928808838766,0.8495940408611276,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,InternVL3.5-14B-HF,480,0.9040732432044079,0.8078604194729567,0.7752880100813144,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,Gemma 4 E2B-it,480,0.8065193900840614,0.6740019351421755,0.5962263348390192,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,Gemma 4 E4B-it,480,0.8065193900840614,0.6740019351421755,0.5962263348390192,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,Gemma 4 26B-A4B-it,480,0.7093371466501457,0.6010132519657754,0.5728068336826785,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,Gemma 4 31B-it,480,0.7090961761679418,0.6007362368782783,0.5725432113397417,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,CLIP ViT-L/14,480,0.7309777724762629,0.5465371795336795,0.36314099763865776,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,SigLIP2-So400m-patch14-384,480,0.8145030715974636,0.5792856582158301,0.5833873501220477,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-2B-HF,DINOv2-Large,480,0.8023925875097914,0.5260375364283763,0.573777057012087,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,InternVL3.5-8B-HF,480,0.9346235427249266,0.8690289922198883,0.8015107454333286,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,InternVL3.5-14B-HF,480,0.9428724135713269,0.8605911528041568,0.8348763401837161,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,Gemma 4 E2B-it,480,0.8410250474008482,0.6739944534811408,0.6525707649153721,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,Gemma 4 E4B-it,480,0.8410250474008482,0.6739944534811408,0.6525707649153721,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,Gemma 4 26B-A4B-it,480,0.7493728242118481,0.5797307534838616,0.6164116548290459,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,Gemma 4 31B-it,480,0.7491684955509204,0.5795687400121928,0.6161099760956766,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,CLIP ViT-L/14,480,0.751353658673098,0.5348345539380186,0.3693607472150984,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,SigLIP2-So400m-patch14-384,480,0.8393528019915366,0.5642718554350622,0.5320034082854086,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-4B-HF,DINOv2-Large,480,0.8292758380473618,0.5416402274883895,0.5455965365915059,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,InternVL3.5-14B-HF,480,0.9377828561073651,0.8644122567470347,0.8233592069766326,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,Gemma 4 E2B-it,480,0.819644727078731,0.6854932081547978,0.5884767289002344,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,Gemma 4 E4B-it,480,0.819644727078731,0.6854932081547978,0.5884767289002344,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,Gemma 4 26B-A4B-it,480,0.715561039163534,0.6008637817286371,0.5291144177507252,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,Gemma 4 31B-it,480,0.7153430220490972,0.6007134637923375,0.5287308605511416,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,CLIP ViT-L/14,480,0.759327135771506,0.5623280903934514,0.3680484602708979,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,SigLIP2-So400m-patch14-384,480,0.8269809914102186,0.5847100457738399,0.5499490759709686,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-8B-HF,DINOv2-Large,480,0.8256294827487983,0.5687081267314843,0.5649024050984247,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,Gemma 4 E2B-it,480,0.8301090370442415,0.681826348513139,0.5699407365199739,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,Gemma 4 E4B-it,480,0.8301090370442415,0.681826348513139,0.5699407365199739,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,Gemma 4 26B-A4B-it,480,0.7247414759939121,0.5831453269602656,0.5042766360499906,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,Gemma 4 31B-it,480,0.7245563439149615,0.5830671370100354,0.504022911610231,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,CLIP ViT-L/14,480,0.7476297316235843,0.540449501542191,0.3727124574191043,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,SigLIP2-So400m-patch14-384,480,0.8392163299950267,0.5762940704968954,0.5628534712093535,paired same-image reference geometry; no adversarial features or causal claim
+InternVL3.5-14B-HF,DINOv2-Large,480,0.8258054296939554,0.5599429113006058,0.45515169439981534,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E2B-it,Gemma 4 E4B-it,480,1.0,1.0000000000000002,1.0,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E2B-it,Gemma 4 26B-A4B-it,480,0.8579430393327891,0.7378323932590749,0.8398000530665741,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E2B-it,Gemma 4 31B-it,480,0.8577965339131081,0.7376530278826762,0.8393845226556674,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E2B-it,CLIP ViT-L/14,480,0.7061028770854708,0.47097224036925317,0.38964769000627825,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E2B-it,SigLIP2-So400m-patch14-384,480,0.7777500829077386,0.545615625458906,0.42767923919200934,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E2B-it,DINOv2-Large,480,0.7891877486950881,0.5383634713667417,0.6196574775111147,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E4B-it,Gemma 4 26B-A4B-it,480,0.8579430393327891,0.7378323932590749,0.8398000530665741,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E4B-it,Gemma 4 31B-it,480,0.8577965339131081,0.7376530278826762,0.8393845226556674,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E4B-it,CLIP ViT-L/14,480,0.7061028770854708,0.47097224036925317,0.38964769000627825,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E4B-it,SigLIP2-So400m-patch14-384,480,0.7777500829077386,0.545615625458906,0.42767923919200934,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 E4B-it,DINOv2-Large,480,0.7891877486950881,0.5383634713667417,0.6196574775111147,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 26B-A4B-it,Gemma 4 31B-it,480,0.9999389790507993,0.9998190140599934,0.9999281840544054,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 26B-A4B-it,CLIP ViT-L/14,480,0.6709725398927657,0.4603488235605333,0.4480649462991818,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 26B-A4B-it,SigLIP2-So400m-patch14-384,480,0.7474444659264308,0.5794757186058523,0.502750496199595,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 26B-A4B-it,DINOv2-Large,480,0.724760276592165,0.49662524700961697,0.6078719348726855,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 31B-it,CLIP ViT-L/14,480,0.6707997053754677,0.46027178811270336,0.44837798175767846,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 31B-it,SigLIP2-So400m-patch14-384,480,0.7473303011450084,0.5792641977543406,0.5025575791775344,paired same-image reference geometry; no adversarial features or causal claim
+Gemma 4 31B-it,DINOv2-Large,480,0.724530385991606,0.49644808303913,0.6077475572192756,paired same-image reference geometry; no adversarial features or causal claim
+CLIP ViT-L/14,SigLIP2-So400m-patch14-384,480,0.7933865133375132,0.5747987159419481,0.5035460656126043,paired same-image reference geometry; no adversarial features or causal claim
+CLIP ViT-L/14,DINOv2-Large,480,0.7878106510908757,0.5465929778813985,0.3886631581935748,paired same-image reference geometry; no adversarial features or causal claim
+SigLIP2-So400m-patch14-384,DINOv2-Large,480,0.8878426316696117,0.6001472163434325,0.48863917851077626,paired same-image reference geometry; no adversarial features or causal claim

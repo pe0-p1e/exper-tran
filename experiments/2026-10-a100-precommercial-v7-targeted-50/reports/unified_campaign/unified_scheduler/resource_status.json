@@ -1,0 +1,65 @@
+{
+  "at": 1792435945.2544615,
+  "gpu": {
+    "used_gib": 32.162109375,
+    "utilization": 100.0,
+    "pids": [
+      81412,
+      84659,
+      90054,
+      93404
+    ]
+  },
+  "primary": {
+    "stage": "attack",
+    "condition": "CFI_layer_100",
+    "at": 1792435140.4776688
+  },
+  "active_gpu_workers": [
+    {
+      "pid": 81412,
+      "condition": "XS_E08",
+      "phase": "attack",
+      "models": [
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "reserve": 17.291452944278717,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/logs/XS_E08_attack.log",
+      "started": 1792430824.1164029,
+      "kind": "legacy"
+    },
+    {
+      "pid": 84659,
+      "condition": "P18_M12_Q",
+      "phase": "attack",
+      "models": [
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "reserve": 17.291452944278717,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/logs/P18_M12_Q_attack.log",
+      "started": 1792432374.509298,
+      "kind": "legacy"
+    },
+    {
+      "pid": 90054,
+      "condition": "P18_M16_G",
+      "phase": "attack",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B"
+      ],
+      "reserve": 16.37402260489762,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/logs/P18_M16_G_attack.log",
+      "started": 1792434089.8903005,
+      "kind": "legacy"
+    }
+  ],
+  "max_gpu_workers": 4,
+  "global_reserved_budget_gib": 72,
+  "commercial_pid": 95493,
+  "commercial_status": null,
+  "original_scientific_sources_unchanged": true
+}

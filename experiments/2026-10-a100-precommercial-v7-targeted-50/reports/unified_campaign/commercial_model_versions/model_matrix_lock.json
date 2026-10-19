@@ -1,0 +1,21 @@
+{
+  "config": {
+    "protocol": "frozen_commercial_model_versions_v1",
+    "paid_api_fallback": false,
+    "method_selection": "historical_surrogate_selected_T10_confirm_0",
+    "target_feedback_for_tuning": false,
+    "stage_order": [
+      "smoke3",
+      "dev10",
+      "test150"
+    ],
+    "codex_reasoning_effort": "low"
+  },
+  "adapter_sha256": "fda913e6a708470d5b9f9883b3a0b5f15cf8424904cb04b50e463edfa0feabf8",
+  "codex_adapter_sha256": "1c1d51f4bdb78412091605816339d1d062ef28375d67c9ea0912c4384b6e4054",
+  "shared_invocation_sha256": "6a7edf89c52f68e12189bd8a248317d318d4eef6792701a0015591856d531bf8",
+  "matrix_runner_sha256": "f6d9231b0ee2448d8bf4c1a1a8d391423952dce581ee3c17d00be90782d32e47",
+  "pack_builder_sha256": "2c15ec66c0894fa1c5c1a7bded524c455a9854ba1cffc419a7aa8f8becd6ff80",
+  "no_automatic_retry": true,
+  "model_choice_by_access_not_ASR": true
+}

@@ -1,0 +1,10 @@
+{
+  "client": "Gemini CLI",
+  "version": "0.64.0",
+  "oauth_credentials_saved": true,
+  "model_access_passed": false,
+  "status": "BLOCKED_BY_PROVIDER",
+  "provider_message": "This client is no longer supported for Gemini Code Assist for individuals. To continue using Gemini, please migrate to the Antigravity suite of products: https://antigravity.google",
+  "migration_route": "Antigravity CLI via separate Google OAuth",
+  "credentials_excluded": true
+}
