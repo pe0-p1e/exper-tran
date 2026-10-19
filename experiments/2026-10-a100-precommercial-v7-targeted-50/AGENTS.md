@@ -100,3 +100,15 @@ The latest user message stops paper-framework work. Do not draft or push paper
 files now. Continue experiment planning/code, proxy-selection tables and the
 running corrected campaign. Uncommitted paper drafts were set aside locally
 under outputs/a100_precommercial_v7_targeted50/deferred_paper_scaffold/.
+
+### User-authorized predictive concurrency — 2026-10-19
+
+The user subsequently requested simultaneous GPU jobs and predictive dynamic
+VRAM management. Read `SUPPLEMENT_EXECUTION.md`. The runtime pool may run the
+original correction plus up to three supplementary GPU workers, FOUR in total.
+Admit from measured BF16 parameter/loading/activation reservations, keep a72GiB
+global budget, serialize supplementary audit writers, preserve all original
+scientific files/locks, and yield supplementary workers before the original
+owner's target/analysis phases. Frozen-target evaluation stays post-freeze and
+cannot tune later attacks. Never fill VRAM with unused tensors or exceed the
+worker limit merely to raise a utilization display.

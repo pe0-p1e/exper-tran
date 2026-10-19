@@ -81,11 +81,15 @@ def verify_reused(item):
         if ids!=expected or evaluated!=expected:raise RuntimeError('Incomplete reused cohort/measurements')
 
 
+def selection_lock(plan):
+    return dict(protocol='strict_family_disjoint',configs=[x['config'] for x in plan],allowed_test_conditions=[x['measurement_condition'] for x in plan],condition_targets={x['measurement_condition']:x['config']['target'] for x in plan},condition_models={x['measurement_condition']:x['config']['models'] for x in plan},targets=list(dict.fromkeys(x['config']['target'] for x in plan)),plan=plan,model_revisions=REGISTRY,manifest_hashes={t:sha(OUT/'manifests/test'/f'{t}.jsonl') for t in TIDS},source_hashes={p:sha(EXP/'src'/p) for p in ['run_proxy_selection.py','proxy_selection_tables.py','measure_selection_clean.py','run_v7_attack.py','vision_features.py','representation_objectives.py','family_protocol.py']},target_ranking_descriptive_only=True)
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--prepare-only',action='store_true');args=parser.parse_args()
     if args.prepare_only:prepare();return
     require_recovery_complete();plan=matrix();ROOT.mkdir(parents=True,exist_ok=True)
-    lock=dict(protocol='strict_family_disjoint',configs=[x['config'] for x in plan],allowed_test_conditions=[x['measurement_condition'] for x in plan],condition_targets={x['measurement_condition']:x['config']['target'] for x in plan},condition_models={x['measurement_condition']:x['config']['models'] for x in plan},targets=list(dict.fromkeys(x['config']['target'] for x in plan)),plan=plan,model_revisions=REGISTRY,manifest_hashes={t:sha(OUT/'manifests/test'/f'{t}.jsonl') for t in TIDS},source_hashes={p:sha(EXP/'src'/p) for p in ['run_proxy_selection.py','proxy_selection_tables.py','measure_selection_clean.py','run_v7_attack.py','vision_features.py','representation_objectives.py','family_protocol.py']},target_ranking_descriptive_only=True)
+    lock=selection_lock(plan)
     path=ROOT/'method_lock.json'
     if path.exists() and json.loads(path.read_text())!=lock:raise RuntimeError('Frozen proxy-selection matrix changed')
     if not path.exists():atomic_json(path,lock)
