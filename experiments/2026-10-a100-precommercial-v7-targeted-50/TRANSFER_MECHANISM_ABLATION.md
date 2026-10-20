@@ -152,3 +152,16 @@ Desired outcome: identify reproducible conditions where surrogate optimization
 still succeeds but cross-model transfer weakens, and conditions where restoring
 a component restores transfer. If transfer persists across removals, report that
 the component is unnecessary under these settings rather than forcing collapse.
+
+## Live execution update
+
+User approved parallel SMALL exploratory arms; interpretation remains factor by
+factor. DI dev pilot finished and is paused with no expansion. The new shared
+owner `run_mechanism_pilots.sh` runs only two fixed compositions, ten dev images
+each, eight new attacks: raw-gradient fusion plus75% single,50/75% pair and
+50/75/100% triple. The two existing four-layer DI-on references are reused.
+Seventy-five percent is a historically promising A3 development layer, not a
+universal optimal layer or a choice based on final-target scores. These PP
+checks test that prior observation under the simpler objective. No exhaustive
+layer search, fresh Pull/Push grid, full150-image rerun or commercial call is
+started. Results are exploratory on the already-inspected development images.
