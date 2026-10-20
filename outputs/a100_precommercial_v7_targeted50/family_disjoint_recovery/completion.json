@@ -1,0 +1,9 @@
+{
+  "completed_cells": 160,
+  "expected_cells": 160,
+  "expected_image_evaluations": 4800,
+  "measured_image_evaluations": 4800,
+  "all_complete": true,
+  "all_15_strict_cross_family_primary_cells_at_least_50pct": true,
+  "failed_attempts": 0
+}

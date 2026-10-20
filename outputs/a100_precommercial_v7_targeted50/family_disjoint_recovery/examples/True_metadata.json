@@ -1,0 +1,14 @@
+{
+  "condition": "CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+  "target": "Qwen3.5-27B",
+  "transition": "T01",
+  "image_id": "train/n01443537/n01443537_130.JPEG",
+  "clean_raw": "0",
+  "adv_raw": "1",
+  "clean_label": "1",
+  "adv_label": "2",
+  "clean_parser": "ok",
+  "adv_parser": "ok",
+  "target_hit": "True",
+  "clean_correct": "True"
+}

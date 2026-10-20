@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "method_lock_sha256": "53bf0b9df4c65104b47aff18a8872eb1e79fc0db2d48d6fc44e89ac750af6723",
+  "target_feedback_for_attack": false,
+  "geometry_rows": 40,
+  "cross_model_rows": 60,
+  "asymmetry": "not_estimable_without_reverse_direction_runs",
+  "tsne": "qualitative; distances not quantitative evidence"
+}

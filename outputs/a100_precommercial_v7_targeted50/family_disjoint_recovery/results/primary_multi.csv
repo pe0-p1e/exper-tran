@@ -1,0 +1,11 @@
+condition,id,kind,target,transition,seed,hits,denominator,ASR,CI_low,CI_high,clean_correct,clean_correct_hits,clean_correct_ASR,parser_success,legacy_conditional_TASR,status
+CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,CFQ_main,primary_multi,Qwen3.5-27B,T01,42,30,30,1.0,0.8842966917779725,1.0,30,30,1.0,30,N/A,complete
+CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,CFQ_main,primary_multi,Qwen3.5-27B,T03,42,26,30,0.8666666666666667,0.6927816497238732,0.9624465036616628,30,26,0.8666666666666667,30,N/A,complete
+CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,CFQ_main,primary_multi,Qwen3.5-27B,T05,42,25,30,0.8333333333333334,0.6527883011658562,0.9435783035316984,30,25,0.8333333333333334,30,N/A,complete
+CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,CFQ_main,primary_multi,Qwen3.5-27B,T07,42,30,30,1.0,0.8842966917779725,1.0,30,30,1.0,30,N/A,complete
+CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1,CFQ_main,primary_multi,Qwen3.5-27B,T09,42,20,30,0.6666666666666666,0.4718799552101195,0.8271257784739607,30,20,0.6666666666666666,30,N/A,complete
+CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,CFI_main,primary_multi,InternVL3.5-14B-HF,T01,42,30,30,1.0,0.8842966917779725,1.0,28,28,1.0,30,N/A,complete
+CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,CFI_main,primary_multi,InternVL3.5-14B-HF,T03,42,27,30,0.9,0.7347115495257919,0.9788828629702774,29,27,0.9310344827586207,29,N/A,complete
+CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,CFI_main,primary_multi,InternVL3.5-14B-HF,T05,42,27,30,0.9,0.7347115495257919,0.9788828629702774,27,24,0.8888888888888888,30,N/A,complete
+CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,CFI_main,primary_multi,InternVL3.5-14B-HF,T07,42,30,30,1.0,0.8842966917779725,1.0,30,30,1.0,30,N/A,complete
+CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1,CFI_main,primary_multi,InternVL3.5-14B-HF,T09,42,22,30,0.7333333333333333,0.5411063486052258,0.8772051901276348,28,21,0.75,30,N/A,complete

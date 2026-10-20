@@ -1,0 +1,9 @@
+{
+  "all_loaded_models_bf16": true,
+  "all_attacks_validated": true,
+  "family_disjoint": true,
+  "reference_and_attack_disjoint": true,
+  "target_feedback_for_correction": false,
+  "historical_target_results_previously_observed": true,
+  "algorithm_selected_before_corrected_target_evaluation": true
+}
