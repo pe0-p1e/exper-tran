@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "at": 1792522165.0224879,
+  "controller": {
+    "identity": {
+      "pid": 374459,
+      "start": "19194429",
+      "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py ",
+      "state": "R"
+    },
+    "restart": 1
+  },
+  "original_deadline_preserved": true,
+  "no_duplicate_active_job_ids": true,
+  "completed_jobs": 5,
+  "resume_receipts_checked": true
+}

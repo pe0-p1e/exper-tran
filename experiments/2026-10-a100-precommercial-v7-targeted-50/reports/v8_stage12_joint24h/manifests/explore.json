@@ -1,0 +1,307 @@
+{
+  "images": [
+    {
+      "image_id": "train/n01443537/n01443537_801.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n01443537/n01443537_801.png",
+      "image_sha256": "307a7aec9fcd862f2a074c600b6a259f00d7f43820463cdf77efb09548e32584",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537",
+      "human_label": 1
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9483.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n01443537/n01443537_9483.png",
+      "image_sha256": "96117fdf66e46af7dded344fd69ad84a917b3bf7a6649c4868a742670b51a73c",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537",
+      "human_label": 1
+    },
+    {
+      "image_id": "train/n01443537/n01443537_1062.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n01443537/n01443537_1062.png",
+      "image_sha256": "a1f813b8794bf0eb0efd597ffc571844bc07db0fafcd88ac5c823db0c897105c",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537",
+      "human_label": 1
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9438.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n01443537/n01443537_9438.png",
+      "image_sha256": "fdbbab7620e957ec37a05376c8621446b195892ae0c7104aadeeae1c7abe27af",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537",
+      "human_label": 1
+    },
+    {
+      "image_id": "train/n01443537/n01443537_522.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n01443537/n01443537_522.png",
+      "image_sha256": "ea9d44494d7d1f55916b047e6e15844a9b9fd1a69ea8b4332d37f7a18d2432b4",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537",
+      "human_label": 1
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8614.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n01443537/n01443537_8614.png",
+      "image_sha256": "a70e6309be3d68032e0e21147922a6cf21e51368aaf20aaf6774d71cd60a13a3",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537",
+      "human_label": 1
+    },
+    {
+      "image_id": "train/n07753275/n07753275_16890.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n07753275/n07753275_16890.png",
+      "image_sha256": "abc04e273329bdf753b657da604f84c63b27f74b2641273077431f02ed22b532",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275",
+      "human_label": 3
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17714.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n07753275/n07753275_17714.png",
+      "image_sha256": "d29142b3eee15e875ec8e5a53839f3859d1bb661414bc8a380f4a0596f102549",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275",
+      "human_label": 3
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17633.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n07753275/n07753275_17633.png",
+      "image_sha256": "7352dd8369ba4bcdd16642c813b4ec1cff7e90dbfcad7b71a4064161d3a2e0c2",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275",
+      "human_label": 3
+    },
+    {
+      "image_id": "train/n07753275/n07753275_15687.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n07753275/n07753275_15687.png",
+      "image_sha256": "d960a21f4322b81bc7624188f96c01e6f34f19720c8630c26f32b9d0930d6e38",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275",
+      "human_label": 3
+    },
+    {
+      "image_id": "train/n07753275/n07753275_16738.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n07753275/n07753275_16738.png",
+      "image_sha256": "ae9017a1d0ee99592162b5e02956734276f9adfb8780fdda6a8eea6bb4c1102d",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275",
+      "human_label": 3
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17884.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n07753275/n07753275_17884.png",
+      "image_sha256": "b5ca956aafacb34e22bb21a2019b70fb8777601644ca3d9187cb4f9f82a7ef94",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275",
+      "human_label": 3
+    },
+    {
+      "image_id": "train/n03642806/n03642806_16052.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n03642806/n03642806_16052.png",
+      "image_sha256": "15a7b73f594daaf4c2f149b1aef6c163d232082fb0782da6648fccac66331d4c",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806",
+      "human_label": 5
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15444.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n03642806/n03642806_15444.png",
+      "image_sha256": "0b7939813c3093b20e7ccd8fe22c023223ebff156571ae9f23175ea992e4cb4f",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806",
+      "human_label": 5
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13580.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n03642806/n03642806_13580.png",
+      "image_sha256": "b0d7b50cceda3c046ca7de20395edf5024cbcb695f944f7b78078d47d894162d",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806",
+      "human_label": 5
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15476.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n03642806/n03642806_15476.png",
+      "image_sha256": "620b7cc922904bc83c720e764aef11d8ff5842e5d8d97e6c21a183913bdf73ab",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806",
+      "human_label": 5
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13875.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n03642806/n03642806_13875.png",
+      "image_sha256": "6e8c8292a9bd93bd29041139975522790aa236c4718cc7c68f43cf0c1e853229",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806",
+      "human_label": 5
+    },
+    {
+      "image_id": "train/n03642806/n03642806_12620.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n03642806/n03642806_12620.png",
+      "image_sha256": "680bb4e094be9aaef33c858a03cd561dbf38326954bf4ff9bc71d9a3b3fa7a11",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806",
+      "human_label": 5
+    },
+    {
+      "image_id": "train/n09472597/n09472597_12484.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n09472597/n09472597_12484.png",
+      "image_sha256": "60efd2416f4e98daf13ea02037d2a501cc8ae351a211ea6ca81f95b30c2cca4f",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597",
+      "human_label": 7
+    },
+    {
+      "image_id": "train/n09472597/n09472597_12263.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n09472597/n09472597_12263.png",
+      "image_sha256": "0d18f3583447a9f5e45f2e52b267dc929261498a2670d53c6f29c1984caa1349",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597",
+      "human_label": 7
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13102.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n09472597/n09472597_13102.png",
+      "image_sha256": "3007f3037ea9739d8c499b451c059dc785d6d09e4453c865f7c5f1454b6eb4b7",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597",
+      "human_label": 7
+    },
+    {
+      "image_id": "train/n09472597/n09472597_12346.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n09472597/n09472597_12346.png",
+      "image_sha256": "e6b86a57f35f93e3ace539cc782f8828f9b12764c229bab0cb99f14b17a75628",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597",
+      "human_label": 7
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13690.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n09472597/n09472597_13690.png",
+      "image_sha256": "b06f45c9b4671cb2f2d94ccdbb93437ef942e8ad9a67d26079c267c1b1dbeaaa",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597",
+      "human_label": 7
+    },
+    {
+      "image_id": "train/n09472597/n09472597_15102.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n09472597/n09472597_15102.png",
+      "image_sha256": "8246c0a889a7ef29e4de62946c3d4a983ca1e4584cbd239933b069369ed7093e",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597",
+      "human_label": 7
+    },
+    {
+      "image_id": "train/n04254680/n04254680_158.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n04254680/n04254680_158.png",
+      "image_sha256": "866a84bc7e47030d024719348c59e634ff499b630cb122a074064175301b915c",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680",
+      "human_label": 9
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1631.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n04254680/n04254680_1631.png",
+      "image_sha256": "3217aefb497ca4385d0e5b20b55f6a3c4b628277c81bb4c0bd6aa37a61c31d0e",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680",
+      "human_label": 9
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1417.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n04254680/n04254680_1417.png",
+      "image_sha256": "5a6b2b31f07678ebe850f20d52ef8d770ae1dafba43f359eb18f39467d949981",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680",
+      "human_label": 9
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1511.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n04254680/n04254680_1511.png",
+      "image_sha256": "2d5efaebb48ca137d4c93ff709762b5290b19bb495b3832197ed64219dee1fd5",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680",
+      "human_label": 9
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1546.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n04254680/n04254680_1546.png",
+      "image_sha256": "be2c8313c19c1c5607ca552731ef259ec921333bf20128f88be0963fe77a6479",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680",
+      "human_label": 9
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1564.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/canonical_images/n04254680/n04254680_1564.png",
+      "image_sha256": "621857d51116f221998d8b136407b4a4c399a5aa9260b0c4ebbfe5672eb71eed",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680",
+      "human_label": 9
+    }
+  ],
+  "seed": 42,
+  "historical": false,
+  "used_for_selection": true
+}

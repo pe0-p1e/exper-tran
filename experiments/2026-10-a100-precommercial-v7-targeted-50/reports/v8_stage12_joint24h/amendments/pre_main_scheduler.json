@@ -1,0 +1,39 @@
+{
+  "state": "STOPPING",
+  "phase": "SMOKE",
+  "active": [
+    {
+      "id": "V8_d5a70b473957ebdd65_attack",
+      "mode": "attack",
+      "condition": "V8_d5a70b473957ebdd65",
+      "reservation": 12.293119551613927,
+      "process_identity": {
+        "pid": 373467,
+        "start": "19155578",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_d5a70b473957ebdd65_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_d5a70b473957ebdd65_attack_0.log",
+      "started": 1792521695.1508765
+    }
+  ],
+  "completed": [
+    "V8_80c6197fbd3a72ecc8_calibrate",
+    "V8_5a4b985e1650a97306_calibrate",
+    "V8_d5a70b473957ebdd65_calibrate",
+    "V8_80c6197fbd3a72ecc8_attack",
+    "V8_5a4b985e1650a97306_attack"
+  ],
+  "failures": [],
+  "attempts": {},
+  "retry_after": {},
+  "blocked": [],
+  "admitted": [
+    "V8_80c6197fbd3a72ecc8",
+    "V8_5a4b985e1650a97306",
+    "V8_d5a70b473957ebdd65"
+  ],
+  "worker_limit": 1,
+  "microbatch": 1
+}

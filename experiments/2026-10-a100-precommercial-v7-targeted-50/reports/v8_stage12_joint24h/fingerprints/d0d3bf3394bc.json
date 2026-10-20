@@ -1,0 +1,87 @@
+{
+  "model": "InternVL3.5-2B-HF",
+  "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+  "llm_family": "internvl",
+  "vision_weight_sha256": "c98f21310c43fe8325ba5b5195e2d01abb0e26d0a582eefad0aa2d4f0f95c774",
+  "vision_config": {
+    "transformers_version": "5.14.1",
+    "architectures": [
+      "InternVisionModel"
+    ],
+    "output_hidden_states": false,
+    "return_dict": true,
+    "dtype": "bfloat16",
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "problem_type": null,
+    "hidden_size": 1024,
+    "num_hidden_layers": 24,
+    "num_attention_heads": 16,
+    "attention_bias": true,
+    "use_qk_norm": false,
+    "intermediate_size": 4096,
+    "hidden_act": "gelu",
+    "hidden_dropout_prob": 0.0,
+    "attention_dropout": 0.0,
+    "projection_dropout": 0.0,
+    "initializer_range": 1e-10,
+    "norm_type": "layer_norm",
+    "layer_norm_eps": 1e-06,
+    "image_size": [
+      448,
+      448
+    ],
+    "patch_size": [
+      14,
+      14
+    ],
+    "num_channels": 3,
+    "use_mask_token": false,
+    "use_absolute_position_embeddings": true,
+    "layer_scale_init_value": 0.1,
+    "use_mean_pooling": true,
+    "_name_or_path": "",
+    "dropout": 0.0,
+    "initializer_factor": 0.1,
+    "model_type": "internvl_vision",
+    "output_attentions": false
+  },
+  "depth": 24,
+  "native_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "dtype": "bfloat16",
+  "training_objective": "unknown unless checkpoint documentation verified",
+  "pooling": "existing spatial-token masked mean L2; CLS/padding excluded by adapter"
+}

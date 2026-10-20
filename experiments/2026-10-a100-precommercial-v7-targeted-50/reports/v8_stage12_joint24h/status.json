@@ -1,0 +1,44 @@
+{
+  "at": 1792522144.1582158,
+  "state": "RUNNING",
+  "stage": "SMOKE",
+  "active": [
+    {
+      "id": "V8_edea636bdfd4da635a_attack",
+      "mode": "attack",
+      "condition": "V8_edea636bdfd4da635a",
+      "reservation": 12.293119551613927,
+      "process_identity": {
+        "pid": 374542,
+        "start": "19199873",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_edea636bdfd4da635a_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_edea636bdfd4da635a_attack_0.log",
+      "started": 1792522138.103318,
+      "position_signature": "052d97bf42d2c0fe75ed6df0d429fb35389545c9393ea01ded6281777b92dcdf",
+      "last_progress": 1792522141.1060972
+    }
+  ],
+  "failures": [],
+  "gpu": {
+    "total": 80.0,
+    "used": 1.2900390625,
+    "free": 77.9619140625,
+    "utilization": 13.0,
+    "processes": [
+      {
+        "pid": 374542,
+        "gib": 1.283203125
+      }
+    ],
+    "host_available": 112.4335708618164
+  },
+  "remaining_hours": 23.827471352881854,
+  "conditions_admitted": 3,
+  "completed_jobs": 5,
+  "max_workers": 1,
+  "method_frozen": false,
+  "stage2": {}
+}

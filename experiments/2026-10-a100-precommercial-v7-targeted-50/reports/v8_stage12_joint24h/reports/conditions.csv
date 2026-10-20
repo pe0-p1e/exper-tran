@@ -1,0 +1,7 @@
+id,label,family,split,validator,models,status,attack_images,N,hits,ASR,minimum_direction_hits,attack_seconds,backwards,peak_reserved_gib
+V8_5a4b985e1650a97306,smoke,internvl,smoke,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",PARTIAL,2,2,,,,,,
+V8_6f423f3afdd01c368a,smoke,qwen,smoke,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",QUEUED,0,2,,,,,,
+V8_80c6197fbd3a72ecc8,smoke,qwen,smoke,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",PARTIAL,2,2,,,,,,
+V8_cebdcfdb69d1f98d66,smoke,internvl,smoke,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",QUEUED,0,2,,,,,,
+V8_d5a70b473957ebdd65,smoke,gemma4,smoke,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23]}",QUEUED,0,2,,,,,,
+V8_edea636bdfd4da635a,smoke,gemma4,smoke,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23]}",QUEUED,0,2,,,,,,

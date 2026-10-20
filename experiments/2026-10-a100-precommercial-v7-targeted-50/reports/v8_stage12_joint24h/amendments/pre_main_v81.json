@@ -1,0 +1,7 @@
+{
+  "at": 1792521846.2375743,
+  "previous_lock": "362d716b2ff9795d9a7b09fcef61bf8ff39515ec16df34f9c5d53b9729469292",
+  "new_lock": "2a9e846c69efb0b4083b286bc7d39be3776579f3a8549b82dca87adc2e158ee8",
+  "reason": "Before any50-step candidate: record model order, add read-only diagnostics and image hashes, complete native smoke and stale-worker handling. Preserve original deadline and prior smoke receipts.",
+  "tests": "14 passed"
+}

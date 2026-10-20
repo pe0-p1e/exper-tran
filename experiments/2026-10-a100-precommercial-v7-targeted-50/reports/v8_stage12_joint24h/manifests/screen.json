@@ -1,0 +1,117 @@
+{
+  "images": [
+    {
+      "class_name": "goldfish",
+      "human_label": 1,
+      "image_id": "train/n01443537/n01443537_374.JPEG",
+      "relative_path": "transition_candidates/T01/0058_n01443537_374.png",
+      "synset": "n01443537",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T01/0058_n01443537_374.png",
+      "transition": "T01",
+      "source": 1,
+      "target": 2
+    },
+    {
+      "class_name": "goldfish",
+      "human_label": 1,
+      "image_id": "train/n01443537/n01443537_425.JPEG",
+      "relative_path": "transition_candidates/T01/0052_n01443537_425.png",
+      "synset": "n01443537",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T01/0052_n01443537_425.png",
+      "transition": "T01",
+      "source": 1,
+      "target": 2
+    },
+    {
+      "class_name": "pineapple",
+      "human_label": 3,
+      "image_id": "train/n07753275/n07753275_11517.JPEG",
+      "relative_path": "transition_candidates/T03/0009_n07753275_11517.png",
+      "synset": "n07753275",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T03/0009_n07753275_11517.png",
+      "transition": "T03",
+      "source": 3,
+      "target": 4
+    },
+    {
+      "class_name": "pineapple",
+      "human_label": 3,
+      "image_id": "train/n07753275/n07753275_11533.JPEG",
+      "relative_path": "transition_candidates/T03/0039_n07753275_11533.png",
+      "synset": "n07753275",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T03/0039_n07753275_11533.png",
+      "transition": "T03",
+      "source": 3,
+      "target": 4
+    },
+    {
+      "class_name": "laptop",
+      "human_label": 5,
+      "image_id": "train/n03642806/n03642806_11724.JPEG",
+      "relative_path": "transition_candidates/T05/0054_n03642806_11724.png",
+      "synset": "n03642806",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T05/0054_n03642806_11724.png",
+      "transition": "T05",
+      "source": 5,
+      "target": 6
+    },
+    {
+      "class_name": "laptop",
+      "human_label": 5,
+      "image_id": "train/n03642806/n03642806_11858.JPEG",
+      "relative_path": "transition_candidates/T05/0047_n03642806_11858.png",
+      "synset": "n03642806",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T05/0047_n03642806_11858.png",
+      "transition": "T05",
+      "source": 5,
+      "target": 6
+    },
+    {
+      "class_name": "volcano",
+      "human_label": 7,
+      "image_id": "train/n09472597/n09472597_10298.JPEG",
+      "relative_path": "transition_candidates/T07/0018_n09472597_10298.png",
+      "synset": "n09472597",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T07/0018_n09472597_10298.png",
+      "transition": "T07",
+      "source": 7,
+      "target": 8
+    },
+    {
+      "class_name": "volcano",
+      "human_label": 7,
+      "image_id": "train/n09472597/n09472597_10474.JPEG",
+      "relative_path": "transition_candidates/T07/0002_n09472597_10474.png",
+      "synset": "n09472597",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T07/0002_n09472597_10474.png",
+      "transition": "T07",
+      "source": 7,
+      "target": 8
+    },
+    {
+      "class_name": "soccer ball",
+      "human_label": 9,
+      "image_id": "train/n04254680/n04254680_102.JPEG",
+      "relative_path": "transition_candidates/T09/0020_n04254680_102.png",
+      "synset": "n04254680",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T09/0020_n04254680_102.png",
+      "transition": "T09",
+      "source": 9,
+      "target": 10
+    },
+    {
+      "class_name": "soccer ball",
+      "human_label": 9,
+      "image_id": "train/n04254680/n04254680_1051.JPEG",
+      "relative_path": "transition_candidates/T09/0015_n04254680_1051.png",
+      "synset": "n04254680",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T09/0015_n04254680_1051.png",
+      "transition": "T09",
+      "source": 9,
+      "target": 10
+    }
+  ],
+  "seed": 42,
+  "historical": true,
+  "used_for_selection": true
+}

@@ -1,0 +1,6 @@
+{
+  "at": 1792522063.1170769,
+  "previous_lock": "2a9e846c69efb0b4083b286bc7d39be3776579f3a8549b82dca87adc2e158ee8",
+  "new_lock": "19a68c7fe9cc785f9eaa059d278edbf941cbcc0145dea7937f7deb1aaa75f891",
+  "reason": "Verified child exec identity before durable lease; regression test15 passed. No50-step result existed. Preserve deadline, datasets, existing calibration and smoke receipts."
+}

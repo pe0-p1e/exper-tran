@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "measurements": [
+    {
+      "model": "CLIP ViT-L/14",
+      "batch": 1,
+      "allocated_gib": 5.693058013916016,
+      "reserved_gib": 5.705078125
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "batch": 2,
+      "allocated_gib": 5.867395401000977,
+      "reserved_gib": 5.888671875
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "batch": 1,
+      "allocated_gib": 5.218399524688721,
+      "reserved_gib": 5.259765625
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "batch": 2,
+      "allocated_gib": 5.71458101272583,
+      "reserved_gib": 5.75
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "batch": 1,
+      "allocated_gib": 3.4495863914489746,
+      "reserved_gib": 3.4765625
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "batch": 2,
+      "allocated_gib": 3.465127468109131,
+      "reserved_gib": 3.49609375
+    }
+  ],
+  "seconds": 4.297755002975464
+}

@@ -1,0 +1,25 @@
+{
+  "branch": "experiment/a100-precommercial-v8-joint-selection-24h",
+  "commit": "7ad8c207db8b28e6b412f89d727b97ac4820717b",
+  "working_tree": "",
+  "worktrees": "/home/ubuntu/exper-tran           96a6d4fb [experiment/a100-precommercial-v7-targeted-50]\n/home/ubuntu/exper-tran-proxy18h  86e9440d [experiment/a100-precommercial-v7-proxy-study-18h]\n/home/ubuntu/exper-tran-v8        7ad8c207 [experiment/a100-precommercial-v8-joint-selection-24h]",
+  "at": 1792522065.2032478,
+  "hostname": "zfy-transferability",
+  "python": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
+  "gpu": {
+    "total": 80.0,
+    "used": 0.0,
+    "free": 79.251953125,
+    "utilization": 0.0,
+    "processes": [],
+    "host_available": 114.08127975463867
+  },
+  "disk_free_gib": 43.22343063354492,
+  "permanent_output": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h",
+  "root_device": 64769,
+  "output_device": 64769,
+  "CLI": "reuse existing tested subscription chain; no login/connectivity requests during preflight",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "CLI_catalog_image_low": true
+}
