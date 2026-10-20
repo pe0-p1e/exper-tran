@@ -1,0 +1,8 @@
+factor,before,after,N,delta_ASR,CI_low,CI_high,wins,losses,caveat
+layer_identity_noDI,old_deep_noDI,single75_noDI,10,0.1,0.0,0.3,1,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts
+DI_deep,old_deep_noDI,deep_DI,10,0.3,0.0,0.6,3,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts
+DI_75,single75_noDI,single75_DI,10,0.2,0.0,0.5,2,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts
+DI_four,four_noDI,four_DI,10,0.4,0.1,0.7,4,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts
+aggregation_with_DI,single75_DI,four_DI,10,0.3,0.0,0.6,3,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts
+coefficient,four_DI,four_DI_balanced,10,0.2,0.0,0.5,2,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts
+whole_pipeline,old_deep_noDI,four_DI_balanced,10,0.8,0.5,1.0,8,0,Exploratory inspected dev10; intervals do not establish equivalence; multiple contrasts

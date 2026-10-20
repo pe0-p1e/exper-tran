@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    {
+      "label": "old_deep_noDI",
+      "complete": true
+    },
+    {
+      "label": "single75_noDI",
+      "complete": true
+    },
+    {
+      "label": "deep_DI",
+      "complete": true
+    },
+    {
+      "label": "single75_DI",
+      "complete": true
+    },
+    {
+      "label": "four_noDI",
+      "complete": true
+    },
+    {
+      "label": "four_DI",
+      "complete": true
+    },
+    {
+      "label": "four_DI_balanced",
+      "complete": true
+    }
+  ],
+  "complete": true,
+  "no_final_target_inference": true,
+  "validation_model": "Qwen3.5-9B",
+  "same_V6_E11_proxy_order": [
+    "InternVL3.5-2B-HF",
+    "Gemma 4 E2B-it",
+    "CLIP ViT-L/14"
+  ]
+}

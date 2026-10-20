@@ -1,0 +1,100 @@
+{
+  "at": 1792512911.9542367,
+  "conditions": [
+    {
+      "label": "old_deep_noDI",
+      "condition": "PP4_f403fab541207a27",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 1,
+      "denominator": 10,
+      "layers": "[1.0]",
+      "DI": false,
+      "pull": 0.75,
+      "attack_seconds": 332.46104691998335
+    },
+    {
+      "label": "single75_noDI",
+      "condition": "PP4_0b26b75bbdb15ca9",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 2,
+      "denominator": 10,
+      "layers": "[0.75]",
+      "DI": false,
+      "pull": 0.75,
+      "attack_seconds": 303.07193804203416
+    },
+    {
+      "label": "deep_DI",
+      "condition": "PP4_ea05b2605e0f2078",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 4,
+      "denominator": 10,
+      "layers": "[1.0]",
+      "DI": true,
+      "pull": 0.75,
+      "attack_seconds": 331.8341656179982
+    },
+    {
+      "label": "single75_DI",
+      "condition": "PP4_a2085fe1931f3b40",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 4,
+      "denominator": 10,
+      "layers": "[0.75]",
+      "DI": true,
+      "pull": 0.75,
+      "attack_seconds": 305.02915350699914
+    },
+    {
+      "label": "four_noDI",
+      "condition": "PP4_9cff7409218ebcd7",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 3,
+      "denominator": 10,
+      "layers": "[0.25, 0.5, 0.75, 1.0]",
+      "DI": false,
+      "pull": 0.75,
+      "attack_seconds": 248.68940166200628
+    },
+    {
+      "label": "four_DI",
+      "condition": "PP4_7336da1e5e6435fc",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 7,
+      "denominator": 10,
+      "layers": "[0.25, 0.5, 0.75, 1.0]",
+      "DI": true,
+      "pull": 0.75,
+      "attack_seconds": 261.2227043749881
+    },
+    {
+      "label": "four_DI_balanced",
+      "condition": "PP4_d6c4bc12e496edbe",
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 10,
+      "hits": 9,
+      "denominator": 10,
+      "layers": "[0.25, 0.5, 0.75, 1.0]",
+      "DI": true,
+      "pull": 0.5,
+      "attack_seconds": 256.49838451697724
+    }
+  ],
+  "active": [],
+  "failures": [],
+  "full_matrix": false,
+  "final_target_access": false
+}

@@ -1,0 +1,28 @@
+{
+  "at": 1792512908.7571785,
+  "gpu": {
+    "used_gib": 18.1513671875,
+    "utilization": 44.0,
+    "pids": [
+      367841
+    ]
+  },
+  "active": [
+    {
+      "kind": "pp4",
+      "condition": "PP4_d6c4bc12e496edbe",
+      "phase": "validate",
+      "models": [
+        "Qwen3.5-9B"
+      ],
+      "reserve": 21.02714392542839,
+      "pid": 367841,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/v6_v7_multi_bridge/logs/PP4_d6c4bc12e496edbe_validate_Qwen3.5-9B.log",
+      "started": 1792512896.3132746
+    }
+  ],
+  "max_gpu_workers": 4,
+  "reserved_limit_gib": 72,
+  "commercial_workers": 0,
+  "previous_pending_paused": true
+}
