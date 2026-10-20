@@ -1,0 +1,31 @@
+{
+  "identity": "5e2bd3965489e66a4b6a6528dfff3289ac4b3408948041a59396ac37b85c1a3b",
+  "target": "Qwen3.5-27B",
+  "images": [
+    {
+      "image_id": "train/n07753275/n07753275_12732.JPEG",
+      "clean_raw": "2",
+      "adv_raw": "3",
+      "clean_label": 3,
+      "adv_label": 4,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n07753275/n07753275_13111.JPEG",
+      "clean_raw": "2",
+      "adv_raw": "3",
+      "clean_label": 3,
+      "adv_label": 4,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1/T03/batch_016/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "b9dfa507263a13c7842c05ae009b2c484d9f7a8b12e9257aa1521f1ad0bdacec"
+}

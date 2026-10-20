@@ -1,0 +1,31 @@
+{
+  "identity": "20d4964040afef45636ee2d8ded7b6952dd292f6aa6d37ee5bcda6045ef0c4f3",
+  "target": "InternVL3.5-14B-HF",
+  "images": [
+    {
+      "image_id": "train/n07753275/n07753275_1221.JPEG",
+      "clean_raw": "2",
+      "adv_raw": "3",
+      "clean_label": 3,
+      "adv_label": 4,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1230.JPEG",
+      "clean_raw": "2",
+      "adv_raw": "3",
+      "clean_label": 3,
+      "adv_label": 4,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1/T03/batch_012/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "3f358ef17257ca36483462b9909f1bcceaeb883235a42c7eb69986c1d30ada24"
+}

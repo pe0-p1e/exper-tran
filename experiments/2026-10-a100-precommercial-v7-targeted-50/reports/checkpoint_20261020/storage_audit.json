@@ -1,0 +1,14 @@
+{
+  "at": "20261020T040217Z",
+  "output_root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50",
+  "resolved_root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50",
+  "root_device": 64769,
+  "root_mount": "/dev/vda1 /",
+  "local_inventory": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/snapshots/20261020T040217Z/local_result_inventory.csv",
+  "ephemeral_output_references": [],
+  "files": 57957,
+  "bytes": 4067643344,
+  "symlinks": 0,
+  "model_caches_excluded": true,
+  "live_campaign_snapshot": true
+}

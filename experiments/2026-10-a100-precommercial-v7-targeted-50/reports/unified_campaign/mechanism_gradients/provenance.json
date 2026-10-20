@@ -1,5 +1,5 @@
 {
-  "conditions_with_saved_traces": 28,
+  "conditions_with_saved_traces": 55,
   "model_inference_calls": 0,
   "complete_and_partial_separated": true,
   "first_step": "Same adversarial initialization and shared DI view within each ensemble; not the unperturbed clean image",

@@ -1,0 +1,31 @@
+{
+  "identity": "0d95769943e2760d4a255c74bfcb379a896278f8d63bf04bf2c8972e40c269d1",
+  "target": "Qwen3.5-27B",
+  "images": [
+    {
+      "image_id": "train/n03642806/n03642806_11819.JPEG",
+      "clean_raw": "4",
+      "adv_raw": "5",
+      "clean_label": 5,
+      "adv_label": 6,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n03642806/n03642806_11826.JPEG",
+      "clean_raw": "4",
+      "adv_raw": "5",
+      "clean_label": 5,
+      "adv_label": 6,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/P18_M16_Q__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+InternVL3.5-4B-HF__DI__s42__i50__r1/T05/batch_010/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "2d7d995a3223292580e8b9624d6ab3ff6a15e44f6287fd437ae29a1a9eb01ffb"
+}

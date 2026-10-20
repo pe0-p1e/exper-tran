@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "spec": {
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "family": "qwen",
+    "expected_vision_depth": 24
+  },
+  "measurements": [
+    {
+      "batch": 1,
+      "seconds": 0.7415518259949749,
+      "peak_reserved_gib": 4.31640625,
+      "peak_allocated_gib": 4.299916744232178,
+      "gradient_l1": [
+        239.5514373779297
+      ]
+    },
+    {
+      "batch": 2,
+      "seconds": 0.17617336301191244,
+      "peak_reserved_gib": 4.474609375,
+      "peak_allocated_gib": 4.451932430267334,
+      "gradient_l1": [
+        206.7178192138672,
+        391.8465881347656
+      ]
+    }
+  ],
+  "layers": [
+    5,
+    11,
+    17,
+    23
+  ],
+  "elapsed_seconds": 2.8855035305023193
+}

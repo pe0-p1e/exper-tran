@@ -1,0 +1,31 @@
+{
+  "identity": "6635f15a890a3b3c30253afc2de8f692b791b0de28c919b17035a97a662e2c18",
+  "target": "Qwen3.5-27B",
+  "images": [
+    {
+      "image_id": "train/n04254680/n04254680_10045.JPEG",
+      "clean_raw": "8",
+      "adv_raw": "8",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n04254680/n04254680_10049.JPEG",
+      "clean_raw": "8",
+      "adv_raw": "8",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1/T09/batch_002/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "3f358ef17257ca36483462b9909f1bcceaeb883235a42c7eb69986c1d30ada24"
+}

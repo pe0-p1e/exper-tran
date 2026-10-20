@@ -1,0 +1,21 @@
+{
+  "identity": "e7f73334921ac385eaef4e184d4748280ff74739691364c39222f13bdd1d2053",
+  "validator": "InternVL3.5-4B-HF",
+  "role": "held_out_surrogate",
+  "target_model": false,
+  "images": [
+    {
+      "image_id": "train/n09472597/n09472597_10738.JPEG",
+      "representation_hit": true,
+      "target_margin": 0.004262685775756836,
+      "delta_R": 0.056801557540893555
+    },
+    {
+      "image_id": "train/n09472597/n09472597_110.JPEG",
+      "representation_hit": true,
+      "target_margin": 0.007298886775970459,
+      "delta_R": 0.05052840709686279
+    }
+  ],
+  "source_state": "attacks/dev/A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__s42__i50__r1/T07/batch_006/state.json"
+}

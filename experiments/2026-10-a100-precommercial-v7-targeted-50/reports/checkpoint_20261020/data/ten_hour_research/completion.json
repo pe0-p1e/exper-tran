@@ -1,0 +1,13 @@
+{
+  "finished": 1792357927.1233582,
+  "budget": {
+    "started": 1792342741.2735343,
+    "deadline": 1792414741.2735343,
+    "hours": 20.0
+  },
+  "completed_research_conditions": 97,
+  "failed_attempts": 0,
+  "complete_target_cells": 45,
+  "expected_target_cells": 45,
+  "all_complete": true
+}

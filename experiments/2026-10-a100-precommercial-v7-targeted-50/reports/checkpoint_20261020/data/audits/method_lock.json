@@ -1,0 +1,442 @@
+{
+  "selection": "held_out_surrogate_representation_metrics",
+  "validators": [
+    "Qwen3.5-4B",
+    "InternVL3.5-4B-HF"
+  ],
+  "dev_manifest_hashes": {
+    "T01": "e02defdfca16ded0626bb52d0f271ffb17609eb4e79c786bd3a93fe359442b63",
+    "T03": "bde16233b0c0d3ef13129748e2313d3e4b0ef7c4735805df62d0c93ffd0f1ae3",
+    "T05": "3797651932d2411dc32e65b631698cfa52e8c38866c99fd96b6af6e5077aebc5",
+    "T07": "f87e0fc2c397f60137602c1dd26ee60f28d16e6fd0430c12d389de4d6898b38c",
+    "T09": "c8237eebcb571a37a71f35b6acc2346b74e54932fa08c8637136942a81fec61c"
+  },
+  "selected": {
+    "models": [
+      "CLIP ViT-L/14",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "method": "A3",
+    "di": true
+  },
+  "scores": {
+    "A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.26,
+      -0.0026806312799453735
+    ],
+    "A1__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.13,
+      -0.005424696207046509
+    ],
+    "A2__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.18,
+      -0.0050595134496688845
+    ],
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.5,
+      0.89,
+      0.003425475358963013
+    ],
+    "A4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.15,
+      -0.00414689838886261
+    ],
+    "A5__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.4,
+      0.86,
+      0.0030319148302078245
+    ],
+    "L0L1__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.32,
+      -0.002593837380409241
+    ],
+    "PATCH_ONLY__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.14,
+      -0.003103070855140686
+    ],
+    "LAYER25__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.01,
+      -0.00697843074798584
+    ],
+    "LAYER50__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.1,
+      0.74,
+      0.0005635321140289307
+    ],
+    "LAYER75__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.53,
+      -0.0012066131830215454
+    ],
+    "TWO_LAYER__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.2,
+      0.76,
+      0.0010029453039169312
+    ],
+    "A3__equal__CLIP_ViT-L_14__s42__i50__r1": [
+      0.0,
+      0.12,
+      -0.0048230081796646115
+    ],
+    "A3__equal__SigLIP2-So400m-patch14-384__s42__i50__r1": [
+      0.0,
+      0.17,
+      -0.004572806358337403
+    ],
+    "A3__equal__DINOv2-Large__s42__i50__r1": [
+      0.0,
+      0.04,
+      -0.005214468836784363
+    ],
+    "A3__equal__Qwen3.5-2B__s42__i50__r1": [
+      0.0,
+      0.56,
+      -0.005525839328765869
+    ],
+    "A3__equal__InternVL3.5-2B-HF__s42__i50__r1": [
+      0.0,
+      0.22,
+      -0.0009441769123077392
+    ],
+    "A3__equal__Gemma_4_E2B-it__s42__i50__r1": [
+      0.0,
+      0.01,
+      -0.00824334442615509
+    ],
+    "A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.3,
+      0.8,
+      0.001161842942237854
+    ],
+    "A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__s42__i50__r1": [
+      0.0,
+      0.37,
+      -0.0019019103050231933
+    ],
+    "A3__weighted__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.5,
+      0.88,
+      0.0033692103624343873
+    ],
+    "A3__pcgrad__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.5,
+      0.89,
+      0.003225190043449402
+    ],
+    "A3__weighted_pcgrad__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.5,
+      0.89,
+      0.0034584289789199828
+    ],
+    "A3__consensus__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1": [
+      0.5,
+      0.89,
+      0.0034401309490203857
+    ],
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1": [
+      0.8,
+      0.93,
+      0.00821737289428711
+    ],
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__TI__s42__i50__r1": [
+      0.5,
+      0.84,
+      0.003989798426628113
+    ],
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r3": [
+      0.5,
+      0.9,
+      0.0033710724115371704
+    ]
+  },
+  "allowed_test_conditions": [
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s43__i50__r1",
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s44__i50__r1",
+    "A3__equal__CLIP_ViT-L_14__s42__i50__r1",
+    "A3__equal__InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__equal__Qwen3.5-2B__s42__i50__r1",
+    "A0__equal__CLIP_ViT-L_14__s42__i50__r1",
+    "A0__equal__InternVL3.5-2B-HF__s42__i50__r1",
+    "A0__equal__Qwen3.5-2B__s42__i50__r1",
+    "A3__equal__CLIP_ViT-L_14__s42__i50__r3",
+    "A3__equal__Qwen3.5-2B__s42__i50__r3",
+    "A3__equal__InternVL3.5-2B-HF__s42__i50__r3",
+    "A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A1__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A2__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A5__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "L0L1__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "PATCH_ONLY__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "LAYER25__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "LAYER50__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "LAYER75__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "TWO_LAYER__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384__s42__i50__r1",
+    "A3__weighted__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__pcgrad__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__weighted_pcgrad__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__consensus__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+    "A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__TI__s42__i50__r1"
+  ],
+  "test_conditions": [
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "di": true
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "di": true,
+      "seed": 43
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "di": true,
+      "seed": 44
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14"
+      ],
+      "method": "A3"
+    },
+    {
+      "models": [
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3"
+    },
+    {
+      "models": [
+        "Qwen3.5-2B"
+      ],
+      "method": "A3"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14"
+      ],
+      "method": "A0"
+    },
+    {
+      "models": [
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A0"
+    },
+    {
+      "models": [
+        "Qwen3.5-2B"
+      ],
+      "method": "A0"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14"
+      ],
+      "method": "A3",
+      "restarts": 3
+    },
+    {
+      "models": [
+        "Qwen3.5-2B"
+      ],
+      "method": "A3",
+      "restarts": 3
+    },
+    {
+      "models": [
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "restarts": 3
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A0"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A1"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A2"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A4"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A5"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "L0L1"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "PATCH_ONLY"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "LAYER25"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "LAYER50"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "LAYER75"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "TWO_LAYER"
+    },
+    {
+      "models": [
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "SigLIP2-So400m-patch14-384"
+      ],
+      "method": "A3"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "weighted"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "pcgrad"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "weighted_pcgrad"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "fusion": "consensus"
+    },
+    {
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "method": "A3",
+      "ti": true
+    }
+  ],
+  "targets": [
+    "Qwen3.5-27B",
+    "InternVL3.5-14B-HF",
+    "Gemma 4 31B-it"
+  ],
+  "source_commit": "a38cfcab03c40a6374a4c405d7c514dce652b89b"
+}

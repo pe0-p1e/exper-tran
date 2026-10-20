@@ -1,0 +1,12 @@
+{
+  "previous_controller": 47383,
+  "scientific_child_pids": [
+    46229,
+    47520,
+    47608
+  ],
+  "scientific_children_not_signaled": true,
+  "primary_pid": 38627,
+  "primary_not_signaled": true,
+  "at": 1792398570.6941993
+}

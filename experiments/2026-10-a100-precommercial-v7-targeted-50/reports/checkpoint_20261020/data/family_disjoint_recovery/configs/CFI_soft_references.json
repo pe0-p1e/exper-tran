@@ -1,0 +1,5 @@
+{
+  "patch_weight": 0.35,
+  "aggregation": "soft_reference",
+  "reference_temperature": 0.05
+}

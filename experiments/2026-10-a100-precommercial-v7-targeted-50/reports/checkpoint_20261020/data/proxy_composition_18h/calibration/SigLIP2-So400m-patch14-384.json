@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "spec": {
+    "repo_id": "google/siglip2-so400m-patch14-384",
+    "revision": "e8e487298228002f3d8a82e0cd5c8ea9c567f57f",
+    "family": "siglip2",
+    "expected_vision_depth": 27
+  },
+  "measurements": [
+    {
+      "batch": 1,
+      "seconds": 0.6792866530013271,
+      "peak_reserved_gib": 2.5859375,
+      "peak_allocated_gib": 2.5737199783325195,
+      "gradient_l1": [
+        32.695743560791016
+      ]
+    },
+    {
+      "batch": 2,
+      "seconds": 0.33584408700698987,
+      "peak_reserved_gib": 3.03515625,
+      "peak_allocated_gib": 3.005692958831787,
+      "gradient_l1": [
+        31.747764587402344,
+        40.20088195800781
+      ]
+    }
+  ],
+  "layers": [
+    6,
+    13,
+    20,
+    26
+  ],
+  "elapsed_seconds": 8.697556972503662
+}

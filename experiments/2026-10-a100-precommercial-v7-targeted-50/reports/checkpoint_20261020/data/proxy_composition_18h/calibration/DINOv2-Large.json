@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "spec": {
+    "repo_id": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "family": "dinov2",
+    "expected_vision_depth": 24
+  },
+  "measurements": [
+    {
+      "batch": 1,
+      "seconds": 0.7959868979960447,
+      "peak_reserved_gib": 0.763671875,
+      "peak_allocated_gib": 0.7500715255737305,
+      "gradient_l1": [
+        51.324737548828125
+      ]
+    },
+    {
+      "batch": 2,
+      "seconds": 0.18598935099726077,
+      "peak_reserved_gib": 0.923828125,
+      "peak_allocated_gib": 0.9078168869018555,
+      "gradient_l1": [
+        52.07387924194336,
+        39.88764953613281
+      ]
+    }
+  ],
+  "layers": [
+    5,
+    11,
+    17,
+    23
+  ],
+  "elapsed_seconds": 2.6311497688293457
+}

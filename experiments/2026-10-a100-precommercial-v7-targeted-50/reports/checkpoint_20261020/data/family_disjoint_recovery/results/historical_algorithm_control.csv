@@ -1,0 +1,11 @@
+condition,id,kind,target,transition,seed,hits,denominator,ASR,CI_low,CI_high,clean_correct,clean_correct_hits,clean_correct_ASR,parser_success,legacy_conditional_TASR,status
+CFQ_original_pullpush__A0__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__s42__i50__r1,CFQ_original_pullpush,historical_algorithm_control,Qwen3.5-27B,T01,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFQ_original_pullpush__A0__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__s42__i50__r1,CFQ_original_pullpush,historical_algorithm_control,Qwen3.5-27B,T03,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFQ_original_pullpush__A0__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__s42__i50__r1,CFQ_original_pullpush,historical_algorithm_control,Qwen3.5-27B,T05,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFQ_original_pullpush__A0__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__s42__i50__r1,CFQ_original_pullpush,historical_algorithm_control,Qwen3.5-27B,T07,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFQ_original_pullpush__A0__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__s42__i50__r1,CFQ_original_pullpush,historical_algorithm_control,Qwen3.5-27B,T09,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFI_original_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__s42__i50__r1,CFI_original_pullpush,historical_algorithm_control,InternVL3.5-14B-HF,T01,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFI_original_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__s42__i50__r1,CFI_original_pullpush,historical_algorithm_control,InternVL3.5-14B-HF,T03,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFI_original_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__s42__i50__r1,CFI_original_pullpush,historical_algorithm_control,InternVL3.5-14B-HF,T05,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFI_original_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__s42__i50__r1,CFI_original_pullpush,historical_algorithm_control,InternVL3.5-14B-HF,T07,42,0,0,,,,0,0,,0,N/A,missing_or_partial
+CFI_original_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__s42__i50__r1,CFI_original_pullpush,historical_algorithm_control,InternVL3.5-14B-HF,T09,42,0,0,,,,0,0,,0,N/A,missing_or_partial

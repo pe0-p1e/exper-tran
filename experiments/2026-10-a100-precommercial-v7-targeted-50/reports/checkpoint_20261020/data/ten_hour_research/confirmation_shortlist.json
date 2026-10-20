@@ -1,0 +1,40 @@
+[
+  {
+    "id": "T10_M04",
+    "models": [
+      "CLIP ViT-L/14",
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "method": "A3",
+    "options": {
+      "patch_weight": 0.35
+    },
+    "family": "combination"
+  },
+  {
+    "id": "T10_C00",
+    "models": [
+      "Qwen3.5-2B",
+      "InternVL3.5-2B-HF"
+    ],
+    "method": "A3",
+    "options": {
+      "patch_weight": 0.35
+    },
+    "family": "composition"
+  },
+  {
+    "id": "T10_C05",
+    "models": [
+      "CLIP ViT-L/14",
+      "DINOv2-Large",
+      "InternVL3.5-4B-HF"
+    ],
+    "method": "A3",
+    "options": {
+      "patch_weight": 0.35
+    },
+    "family": "composition"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "identity": "c9e50012cffacd19c6df6fbbcef9fd6f52f3cf2b590d666faba155f47602fcb1",
+  "target": "Gemma 4 31B-it",
+  "images": [
+    {
+      "image_id": "train/n04254680/n04254680_1277.JPEG",
+      "clean_raw": "8",
+      "adv_raw": "8",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1279.JPEG",
+      "clean_raw": "8",
+      "adv_raw": "8",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/XS_E06__A3__equal__Qwen3.5-2B+Qwen3.5-4B+Qwen3.5-9B__DI__s42__i50__r1/T09/batch_024/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "3d5504416c0ca8234e79c8cf9c578a2a2b75349f60b53194e3855910c983f6bb"
+}

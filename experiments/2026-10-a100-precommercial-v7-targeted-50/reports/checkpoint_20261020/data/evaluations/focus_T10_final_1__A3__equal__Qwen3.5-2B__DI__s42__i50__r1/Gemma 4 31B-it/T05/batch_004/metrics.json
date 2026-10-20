@@ -1,0 +1,31 @@
+{
+  "identity": "d855cc30d665e3829c26e0d41dc6f8c1afb95fad8b25a5bd7b3675047c27509e",
+  "target": "Gemma 4 31B-it",
+  "images": [
+    {
+      "image_id": "train/n03642806/n03642806_11602.JPEG",
+      "clean_raw": "4",
+      "adv_raw": "5",
+      "clean_label": 5,
+      "adv_label": 6,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n03642806/n03642806_11650.JPEG",
+      "clean_raw": "4",
+      "adv_raw": "4",
+      "clean_label": 5,
+      "adv_label": 5,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1/T05/batch_004/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "b9dfa507263a13c7842c05ae009b2c484d9f7a8b12e9257aa1521f1ad0bdacec"
+}

@@ -1,2 +1,9 @@
 target,baseline,comparison,N,ASR_difference,CI_low,CI_high,paired_gains,paired_losses,discordant_binomial_p,multiple_comparisons
-Qwen3.5-27B,M15,M27,150,-0.02,-0.04666666666666667,0.006666666666666666,1,4,0.375,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M07,M16,150,-0.04,-0.08016666666666661,0.0,2,8,0.109375,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M07,M17,150,-0.08666666666666667,-0.13333333333333333,-0.04666666666666667,0,13,0.000244140625,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M08,M09,150,-0.02666666666666667,-0.06666666666666668,0.013333333333333332,3,7,0.34375,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M08,M10,150,-0.05333333333333334,-0.1,-0.0066666666666666706,3,11,0.057373046875,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M13,M14,150,0.013333333333333334,-0.02,0.04666666666666667,4,2,0.6875,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M13,M15,150,0.013333333333333334,-0.019999999999999997,0.04666666666666667,4,2,0.6875,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M14,M15,150,0.0,-0.02,0.02,1,1,1.0,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M15,M27,150,-0.02,-0.05333333333333333,0.006666666666666666,1,4,0.375,exploratory unadjusted; no significance-based selection

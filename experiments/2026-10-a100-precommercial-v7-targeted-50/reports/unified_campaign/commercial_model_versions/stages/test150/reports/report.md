@@ -7,10 +7,10 @@ CLI routes and prompts are logged; different clients are not claimed to have ide
 
 | Model | Route | Status | Requests | Target hits / N | ASR |
 |---|---|---|---|---|---|
-| gpt-6.1-sol | codex | RUNNING | 120/300 | N/A/150 | N/A |
-| gpt-6-sol | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-6.1-sol | codex | COMPLETE | 300/300 | 90/150 | 0.6 |
+| gpt-6-sol | codex | COMPLETE | 300/300 | 117/150 | 0.78 |
 | gpt-5.6-sol | codex | QUEUED | 0/300 | N/A/150 | N/A |
-| gpt-6-astra | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-6-astra | codex | RUNNING | 50/300 | N/A/150 | N/A |
 | gpt-6-luna | codex | QUEUED | 0/300 | N/A/150 | N/A |
 | gpt-5.6-terra | codex | QUEUED | 0/300 | N/A/150 | N/A |
 | gpt-5.6-luna | codex | QUEUED | 0/300 | N/A/150 | N/A |

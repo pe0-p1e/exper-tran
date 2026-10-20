@@ -1,49 +1,30 @@
 {
-  "at": 1792463582.849814,
+  "at": 1792468820.6369195,
   "gpu": {
-    "used_gib": 43.73828125,
-    "utilization": 100.0,
+    "used_gib": 61.0302734375,
+    "utilization": 99.0,
     "pids": [
-      158348,
-      163364,
-      163441
+      256000,
+      308586
     ]
   },
   "primary": {
     "stage": "attack",
-    "condition": "CFI_seed_43",
-    "at": 1792462086.7163134
+    "condition": "CFI_seed_44",
+    "at": 1792466419.612103
   },
   "active_gpu_workers": [
     {
       "kind": "legacy",
-      "condition": "P18_M18_I",
-      "phase": "attack",
+      "condition": "P18_M16_Q",
+      "phase": "evaluation",
       "models": [
-        "Qwen3.5-2B",
-        "Qwen3.5-4B",
-        "Gemma 4 E2B-it",
-        "Gemma 4 E4B-it"
+        "Qwen3.5-27B"
       ],
-      "reserve": 29.254744172096252,
-      "pid": 158348,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M18_I_attack_Qwen3.5-2B.log",
-      "started": 1792460475.4218056
-    },
-    {
-      "kind": "legacy",
-      "condition": "P18_M18_Q",
-      "phase": "attack",
-      "models": [
-        "InternVL3.5-2B-HF",
-        "InternVL3.5-4B-HF",
-        "Gemma 4 E2B-it",
-        "Gemma 4 E4B-it"
-      ],
-      "reserve": 29.866305351257324,
-      "pid": 163441,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M18_Q_attack_InternVL3.5-2B-HF.log",
-      "started": 1792462148.2107987
+      "reserve": 54.455877751111984,
+      "pid": 308586,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M16_Q_evaluation_Qwen3.5-27B.log",
+      "started": 1792468710.4861832
     }
   ],
   "max_gpu_workers": 4,

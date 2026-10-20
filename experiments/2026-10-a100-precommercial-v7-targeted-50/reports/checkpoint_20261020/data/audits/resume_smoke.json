@@ -1,0 +1,7 @@
+{
+  "pass_": true,
+  "artifacts": {
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/smoke/A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i2__r1/T01/batch_000/01_adv.png": "44dac18c09e880003dcc417cab587589fd9af57955fa33f59e4e2c7961151a62",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/smoke/A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i2__r1/T01/batch_000/00_adv.png": "7879ee2cbabc7f2f0cbdf3855a2812391126b1f0a69cd77d3298d55661c5b5a6"
+  }
+}

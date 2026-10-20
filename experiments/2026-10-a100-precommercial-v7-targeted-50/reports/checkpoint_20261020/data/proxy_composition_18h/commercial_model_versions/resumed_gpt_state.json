@@ -1,0 +1,21 @@
+{
+  "pid": 163966,
+  "started": 1792462381.2166643,
+  "status": "RUNNING",
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6-sol",
+    "gpt-6-astra",
+    "gpt-6-luna"
+  ],
+  "concurrent_requests": 1,
+  "min_interval_seconds": 10,
+  "stop_on_any_failure": true,
+  "model_switch_after_limit": false,
+  "automatic_retry": false,
+  "completed": {
+    "gpt-6.1-sol": 300,
+    "gpt-6-sol": 300,
+    "gpt-6-astra": 53
+  }
+}

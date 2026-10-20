@@ -1,0 +1,31 @@
+{
+  "identity": "6365c678ce740fa5f0a1b03a91d3a39c6819c7ac2f73b7c0e7db58f0dcd98937",
+  "target": "Qwen3.5-27B",
+  "images": [
+    {
+      "image_id": "train/n04254680/n04254680_1255.JPEG",
+      "clean_raw": "8",
+      "adv_raw": "9",
+      "clean_label": 9,
+      "adv_label": 10,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n04254680/n04254680_12573.JPEG",
+      "clean_raw": "8",
+      "adv_raw": "8",
+      "clean_label": 9,
+      "adv_label": 9,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_022/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "3f358ef17257ca36483462b9909f1bcceaeb883235a42c7eb69986c1d30ada24"
+}

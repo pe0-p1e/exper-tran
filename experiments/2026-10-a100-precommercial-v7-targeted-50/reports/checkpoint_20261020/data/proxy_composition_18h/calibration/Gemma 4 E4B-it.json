@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "spec": {
+    "repo_id": "google/gemma-4-E4B-it",
+    "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+    "family": "gemma4",
+    "expected_vision_depth": 16
+  },
+  "measurements": [
+    {
+      "batch": 1,
+      "seconds": 0.3185714589926647,
+      "peak_reserved_gib": 14.86328125,
+      "peak_allocated_gib": 3.4358267784118652,
+      "gradient_l1": [
+        2.5526185035705566
+      ]
+    },
+    {
+      "batch": 2,
+      "seconds": 0.7114744580030674,
+      "peak_reserved_gib": 3.4765625,
+      "peak_allocated_gib": 3.4513678550720215,
+      "gradient_l1": [
+        2.5526628494262695,
+        1.9563069343566895
+      ]
+    }
+  ],
+  "layers": [
+    3,
+    7,
+    11,
+    15
+  ],
+  "elapsed_seconds": 31.828946590423584
+}

@@ -1,0 +1,2259 @@
+{
+  "results": [
+    {
+      "config": {
+        "id": "P00",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "options": {},
+        "family": "loss",
+        "reused_existing_result": true
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_P00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 0.0
+    },
+    {
+      "config": {
+        "id": "P01",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "options": {
+          "feature_transform": "center"
+        },
+        "family": "loss",
+        "reused_existing_result": true
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_P01__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8
+      ],
+      "seconds": 0.0
+    },
+    {
+      "config": {
+        "id": "P02",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "options": {
+          "feature_transform": "standardize"
+        },
+        "family": "loss",
+        "reused_existing_result": true
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_P02__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.8333333333333334
+      ],
+      "seconds": 0.0
+    },
+    {
+      "config": {
+        "id": "P03",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "options": {
+          "temperature": 0.005,
+          "margin": 0.005,
+          "negative_mode": "hardest"
+        },
+        "family": "loss",
+        "reused_existing_result": true
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_P03__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8
+      ],
+      "seconds": 0.0
+    },
+    {
+      "config": {
+        "id": "T10_L00",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A0",
+        "options": {},
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L00__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.4
+      ],
+      "seconds": 106.20740604400635
+    },
+    {
+      "config": {
+        "id": "T10_L01",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A1",
+        "options": {},
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L01__A1__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.43333333333333335
+      ],
+      "seconds": 107.211021900177
+    },
+    {
+      "config": {
+        "id": "T10_L02",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A2",
+        "options": {},
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L02__A2__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.4666666666666667
+      ],
+      "seconds": 52.83533549308777
+    },
+    {
+      "config": {
+        "id": "T10_L03",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {},
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L03__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 110.2801342010498
+    },
+    {
+      "config": {
+        "id": "T10_L04",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A4",
+        "options": {},
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L04__A4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.5
+      ],
+      "seconds": 111.92597699165344
+    },
+    {
+      "config": {
+        "id": "T10_L05",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "projector_weight": 0.35
+        },
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L05__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8666666666666667
+      ],
+      "seconds": 138.68481040000916
+    },
+    {
+      "config": {
+        "id": "T10_L06",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "feature_transform": "center"
+        },
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L06__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8
+      ],
+      "seconds": 115.15065598487854
+    },
+    {
+      "config": {
+        "id": "T10_L07",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "temperature": 0.005,
+          "margin": 0.005,
+          "negative_mode": "hardest"
+        },
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_L07__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 113.90891432762146
+    },
+    {
+      "config": {
+        "id": "T10_M00",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "loss": "combined",
+          "margin_weight": 0.25
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 114.43873715400696
+    },
+    {
+      "config": {
+        "id": "T10_M01",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "loss": "combined",
+          "margin_weight": 0.5
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M01__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 114.00902771949768
+    },
+    {
+      "config": {
+        "id": "T10_M02",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "loss": "combined",
+          "margin_weight": 0.75
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M02__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8666666666666667
+      ],
+      "seconds": 109.4732141494751
+    },
+    {
+      "config": {
+        "id": "T10_M03",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.1
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M03__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 75.95115351676941
+    },
+    {
+      "config": {
+        "id": "T10_M04",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M04__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9666666666666667
+      ],
+      "seconds": 127.39071679115295
+    },
+    {
+      "config": {
+        "id": "T10_M05",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "projector_weight": 0.25
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M05__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8666666666666667
+      ],
+      "seconds": 158.06467938423157
+    },
+    {
+      "config": {
+        "id": "T10_M06",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "projector_weight": 0.75
+        },
+        "family": "combination"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_M06__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.6
+      ],
+      "seconds": 145.7326807975769
+    },
+    {
+      "config": {
+        "id": "T10_C00",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C00__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9666666666666667
+      ],
+      "seconds": 106.83090567588806
+    },
+    {
+      "config": {
+        "id": "T10_C01",
+        "models": [
+          "CLIP ViT-L/14",
+          "InternVL3.5-2B-HF",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C01__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 204.04065585136414
+    },
+    {
+      "config": {
+        "id": "T10_C02",
+        "models": [
+          "SigLIP2-So400m-patch14-384",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C02__A3__equal__SigLIP2-So400m-patch14-384+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 135.80370569229126
+    },
+    {
+      "config": {
+        "id": "T10_C03",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-4B",
+          "InternVL3.5-4B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C03__A3__equal__CLIP_ViT-L_14+Qwen3.5-4B+InternVL3.5-4B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 167.93827962875366
+    },
+    {
+      "config": {
+        "id": "T10_C04",
+        "models": [
+          "CLIP ViT-L/14",
+          "SigLIP2-So400m-patch14-384",
+          "InternVL3.5-2B-HF",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C04__A3__equal__CLIP_ViT-L_14+SigLIP2-So400m-patch14-384+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 254.66396689414978
+    },
+    {
+      "config": {
+        "id": "T10_C05",
+        "models": [
+          "CLIP ViT-L/14",
+          "DINOv2-Large",
+          "InternVL3.5-4B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C05__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-4B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9666666666666667
+      ],
+      "seconds": 114.06504559516907
+    },
+    {
+      "config": {
+        "id": "T10_C06",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "Gemma 4 26B-A4B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C06__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_26B-A4B-it__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.7333333333333333
+      ],
+      "seconds": 376.8888087272644
+    },
+    {
+      "config": {
+        "id": "T10_C07",
+        "models": [
+          "SigLIP2-So400m-patch14-384",
+          "InternVL3.5-4B-HF",
+          "Gemma 4 26B-A4B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_C07__A3__equal__SigLIP2-So400m-patch14-384+InternVL3.5-4B-HF+Gemma_4_26B-A4B-it__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 374.4130835533142
+    },
+    {
+      "config": {
+        "id": "T10_single_2eca981e",
+        "models": [
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_single_2eca981e__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.6
+      ],
+      "seconds": 77.29138851165771
+    },
+    {
+      "config": {
+        "id": "T10_single_d0d3bf33",
+        "models": [
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "composition"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_single_d0d3bf33__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.6333333333333333
+      ],
+      "seconds": 68.11413168907166
+    },
+    {
+      "config": {
+        "id": "T10_O00",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "equal",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O00__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 97.33777832984924
+    },
+    {
+      "config": {
+        "id": "T10_O01",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "adaptive_temperature": 0.005
+        },
+        "fusion": "weighted",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O01__A3__weighted__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 119.39010953903198
+    },
+    {
+      "config": {
+        "id": "T10_O02",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "pcgrad",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O02__A3__pcgrad__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 97.33045625686646
+    },
+    {
+      "config": {
+        "id": "T10_O03",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "adaptive_temperature": 0.005
+        },
+        "fusion": "weighted_pcgrad",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O03__A3__weighted_pcgrad__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 119.348477602005
+    },
+    {
+      "config": {
+        "id": "T10_O04",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "nesterov": true
+        },
+        "fusion": "equal",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O04__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.8
+      ],
+      "seconds": 93.29105186462402
+    },
+    {
+      "config": {
+        "id": "T10_O05",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "variance_samples": 2
+        },
+        "fusion": "equal",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O05__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.6333333333333333
+      ],
+      "seconds": 182.10133576393127
+    },
+    {
+      "config": {
+        "id": "T10_O06",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "frequency_rho": 0.15,
+          "eot_samples": 2
+        },
+        "fusion": "equal",
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O06__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 148.12368750572205
+    },
+    {
+      "config": {
+        "id": "T10_O_noDI",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": false,
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O_noDI__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+      "score": [
+        0.0,
+        0.4
+      ],
+      "seconds": 92.52596855163574
+    },
+    {
+      "config": {
+        "id": "T10_O_TI",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "ti": true,
+        "family": "optimizer"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_O_TI__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__TI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.7333333333333333
+      ],
+      "seconds": 98.9455726146698
+    },
+    {
+      "config": {
+        "id": "T20_layer_single_0",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_single_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.0
+      ],
+      "seconds": 96.84489679336548
+    },
+    {
+      "config": {
+        "id": "T20_layer_single_1",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.5
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_single_1__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.5666666666666667
+      ],
+      "seconds": 101.0040807723999
+    },
+    {
+      "config": {
+        "id": "T20_layer_single_2",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.75
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_single_2__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 112.02993774414062
+    },
+    {
+      "config": {
+        "id": "T20_layer_single_3",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            1.0
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_single_3__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.43333333333333335
+      ],
+      "seconds": 111.03403997421265
+    },
+    {
+      "config": {
+        "id": "T20_layer_without_0",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.5,
+            0.75,
+            1.0
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_without_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 155.62824892997742
+    },
+    {
+      "config": {
+        "id": "T20_layer_without_1",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            0.75,
+            1.0
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_without_1__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.8666666666666667
+      ],
+      "seconds": 150.81054091453552
+    },
+    {
+      "config": {
+        "id": "T20_layer_without_2",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            0.5,
+            1.0
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_without_2__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.6666666666666666
+      ],
+      "seconds": 151.17039227485657
+    },
+    {
+      "config": {
+        "id": "T20_layer_without_3",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            0.5,
+            0.75
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_without_3__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 149.60185432434082
+    },
+    {
+      "config": {
+        "id": "T20_layer_late_pair",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.75,
+            1.0
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_late_pair__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.8333333333333334
+      ],
+      "seconds": 155.18321132659912
+    },
+    {
+      "config": {
+        "id": "T20_layer_middle_pair",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.5,
+            0.75
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_middle_pair__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 148.3200581073761
+    },
+    {
+      "config": {
+        "id": "T20_layer_spread_pair",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            1.0
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_spread_pair__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.3333333333333333
+      ],
+      "seconds": 151.03511548042297
+    },
+    {
+      "config": {
+        "id": "T20_layer_early_weight",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "layer_weights": [
+            4,
+            3,
+            2,
+            1
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_early_weight__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 124.54093384742737
+    },
+    {
+      "config": {
+        "id": "T20_layer_late_weight",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "layer_weights": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_late_weight__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 114.9650387763977
+    },
+    {
+      "config": {
+        "id": "T20_layer_middle_weight",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "layers": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "layer_weights": [
+            1,
+            3,
+            3,
+            1
+          ]
+        },
+        "family": "layer_mechanism"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_layer_middle_weight__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 125.12917900085449
+    },
+    {
+      "config": {
+        "id": "T20_reference_0",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.005
+        },
+        "family": "reference_geometry"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_reference_0__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8333333333333334
+      ],
+      "seconds": 95.0710198879242
+    },
+    {
+      "config": {
+        "id": "T20_reference_1",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.02
+        },
+        "family": "reference_geometry"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_reference_1__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 94.59200072288513
+    },
+    {
+      "config": {
+        "id": "T20_reference_2",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05
+        },
+        "family": "reference_geometry"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_reference_2__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9666666666666667
+      ],
+      "seconds": 95.03942966461182
+    },
+    {
+      "config": {
+        "id": "T20_reference_3",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.1
+        },
+        "family": "reference_geometry"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_reference_3__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8666666666666667
+      ],
+      "seconds": 92.92356443405151
+    },
+    {
+      "config": {
+        "id": "T20_interaction_0",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "equal",
+        "di": false,
+        "ti": false,
+        "family": "interaction"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_interaction_0__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+      "score": [
+        0.0,
+        0.36666666666666664
+      ],
+      "seconds": 94.88052749633789
+    },
+    {
+      "config": {
+        "id": "T20_interaction_1",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "pcgrad",
+        "di": false,
+        "ti": false,
+        "family": "interaction"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_interaction_1__A3__pcgrad__Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1",
+      "score": [
+        0.0,
+        0.3
+      ],
+      "seconds": 95.88695049285889
+    },
+    {
+      "config": {
+        "id": "T20_interaction_2",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "equal",
+        "di": true,
+        "ti": false,
+        "family": "interaction"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_interaction_2__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 94.6334433555603
+    },
+    {
+      "config": {
+        "id": "T20_interaction_3",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "pcgrad",
+        "di": true,
+        "ti": false,
+        "family": "interaction"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_interaction_3__A3__pcgrad__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 97.13779377937317
+    },
+    {
+      "config": {
+        "id": "T20_interaction_4",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "equal",
+        "di": true,
+        "ti": true,
+        "family": "interaction"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_interaction_4__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__TI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.7666666666666667
+      ],
+      "seconds": 99.84487700462341
+    },
+    {
+      "config": {
+        "id": "T20_interaction_5",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "fusion": "pcgrad",
+        "di": true,
+        "ti": true,
+        "family": "interaction"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_interaction_5__A3__pcgrad__Qwen3.5-2B+InternVL3.5-2B-HF__DI__TI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.7666666666666667
+      ],
+      "seconds": 97.11379313468933
+    },
+    {
+      "config": {
+        "id": "T10_R00",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.005,
+          "margin": 0.0,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R00__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 98.23937892913818
+    },
+    {
+      "config": {
+        "id": "T10_R01",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.005,
+          "margin": 0.0,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R01__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 93.98054099082947
+    },
+    {
+      "config": {
+        "id": "T10_R02",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.005,
+          "margin": 0.02,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R02__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 95.88511157035828
+    },
+    {
+      "config": {
+        "id": "T10_R03",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.005,
+          "margin": 0.02,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R03__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 95.87403798103333
+    },
+    {
+      "config": {
+        "id": "T10_R04",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.005,
+          "margin": 0.05,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R04__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 96.02322554588318
+    },
+    {
+      "config": {
+        "id": "T10_R05",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.005,
+          "margin": 0.05,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R05__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 99.99755644798279
+    },
+    {
+      "config": {
+        "id": "T10_R06",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.02,
+          "margin": 0.0,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R06__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 94.778489112854
+    },
+    {
+      "config": {
+        "id": "T10_R07",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.02,
+          "margin": 0.0,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R07__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 97.13102436065674
+    },
+    {
+      "config": {
+        "id": "T10_R08",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.02,
+          "margin": 0.02,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R08__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 97.28784012794495
+    },
+    {
+      "config": {
+        "id": "T10_R09",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.02,
+          "margin": 0.02,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R09__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 93.98150730133057
+    },
+    {
+      "config": {
+        "id": "T10_R10",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.02,
+          "margin": 0.05,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R10__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 94.9820339679718
+    },
+    {
+      "config": {
+        "id": "T10_R11",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.02,
+          "margin": 0.05,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R11__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.8666666666666667
+      ],
+      "seconds": 91.92803621292114
+    },
+    {
+      "config": {
+        "id": "T10_R12",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.05,
+          "margin": 0.0,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R12__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 93.68495917320251
+    },
+    {
+      "config": {
+        "id": "T10_R13",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.05,
+          "margin": 0.0,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R13__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 96.3920636177063
+    },
+    {
+      "config": {
+        "id": "T10_R14",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.05,
+          "margin": 0.02,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R14__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 94.47337126731873
+    },
+    {
+      "config": {
+        "id": "T10_R15",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.05,
+          "margin": 0.02,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R15__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 95.42465877532959
+    },
+    {
+      "config": {
+        "id": "T10_R16",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.05,
+          "margin": 0.05,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R16__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 94.22611451148987
+    },
+    {
+      "config": {
+        "id": "T10_R17",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.05,
+          "margin": 0.05,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R17__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 95.07577562332153
+    },
+    {
+      "config": {
+        "id": "T10_R18",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.1,
+          "margin": 0.0,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R18__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 92.01902723312378
+    },
+    {
+      "config": {
+        "id": "T10_R19",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.1,
+          "margin": 0.0,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R19__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 93.32639122009277
+    },
+    {
+      "config": {
+        "id": "T10_R20",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.1,
+          "margin": 0.02,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R20__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9
+      ],
+      "seconds": 93.22656273841858
+    },
+    {
+      "config": {
+        "id": "T10_R21",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.1,
+          "margin": 0.02,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R21__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 93.67689990997314
+    },
+    {
+      "config": {
+        "id": "T10_R22",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.1,
+          "margin": 0.05,
+          "negative_mode": "hardest"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R22__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.8666666666666667
+      ],
+      "seconds": 97.73907613754272
+    },
+    {
+      "config": {
+        "id": "T10_R23",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05,
+          "temperature": 0.1,
+          "margin": 0.05,
+          "negative_mode": "logsumexp"
+        },
+        "fusion": "equal",
+        "family": "loss"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_R23__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9333333333333333
+      ],
+      "seconds": 95.48312473297119
+    },
+    {
+      "config": {
+        "models": [
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05
+        },
+        "family": "proxy_complementarity",
+        "id": "T20_component_0"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_component_0__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.6
+      ],
+      "seconds": 71.61262702941895
+    },
+    {
+      "config": {
+        "models": [
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05
+        },
+        "family": "proxy_complementarity",
+        "id": "T20_component_1"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_component_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.7
+      ],
+      "seconds": 62.337477922439575
+    },
+    {
+      "config": {
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "fusion": "equal",
+        "options": {
+          "patch_weight": 0.35,
+          "aggregation": "soft_reference",
+          "reference_temperature": 0.05
+        },
+        "family": "proxy_complementarity",
+        "id": "T20_complementarity_anchor"
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_complementarity_anchor__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.5,
+        0.9666666666666667
+      ],
+      "seconds": 93.72949051856995
+    },
+    {
+      "config": {
+        "id": "T10_confirm_0",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "confirmation",
+        "n_per_direction": 8
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_confirm_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.75,
+        0.9666666666666667
+      ],
+      "seconds": 330.62166833877563
+    },
+    {
+      "config": {
+        "id": "T10_confirm_1",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "confirmation",
+        "n_per_direction": 8
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_confirm_1__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.625,
+        0.9166666666666666
+      ],
+      "seconds": 253.0531120300293
+    },
+    {
+      "config": {
+        "id": "T10_confirm_2",
+        "models": [
+          "CLIP ViT-L/14",
+          "DINOv2-Large",
+          "InternVL3.5-4B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "confirmation",
+        "n_per_direction": 8
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_confirm_2__A3__equal__CLIP_ViT-L_14+DINOv2-Large+InternVL3.5-4B-HF__DI__s42__i50__r1",
+      "score": [
+        0.75,
+        0.9416666666666667
+      ],
+      "seconds": 293.79609537124634
+    },
+    {
+      "config": {
+        "id": "T10_seed_43",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "seed_confirmation",
+        "n_per_direction": 8,
+        "seed": 43
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_seed_43__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s43__i50__r1",
+      "score": [
+        0.625,
+        0.95
+      ],
+      "seconds": 363.08565616607666
+    },
+    {
+      "config": {
+        "id": "T10_seed_44",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "seed_confirmation",
+        "n_per_direction": 8,
+        "seed": 44
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T10_seed_44__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s44__i50__r1",
+      "score": [
+        0.875,
+        0.9666666666666667
+      ],
+      "seconds": 363.66072726249695
+    },
+    {
+      "config": {
+        "id": "T20_matched_single_0",
+        "models": [
+          "CLIP ViT-L/14"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "matched_single_confirmation",
+        "n_per_direction": 8,
+        "fusion": "equal",
+        "seed": 42
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_matched_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "score": [
+        0.125,
+        0.6083333333333333
+      ],
+      "seconds": 127.87104344367981
+    },
+    {
+      "config": {
+        "id": "T20_matched_single_1",
+        "models": [
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "matched_single_confirmation",
+        "n_per_direction": 8,
+        "fusion": "equal",
+        "seed": 42
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_matched_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "score": [
+        0.125,
+        0.6583333333333333
+      ],
+      "seconds": 166.59063243865967
+    },
+    {
+      "config": {
+        "id": "T20_matched_single_2",
+        "models": [
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "family": "matched_single_confirmation",
+        "n_per_direction": 8,
+        "fusion": "equal",
+        "seed": 42
+      },
+      "root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/focus_T20_matched_single_2__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "score": [
+        0.0,
+        0.7083333333333334
+      ],
+      "seconds": 135.8138780593872
+    }
+  ],
+  "failures": [],
+  "skipped": []
+}

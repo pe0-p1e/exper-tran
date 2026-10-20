@@ -1,0 +1,21 @@
+{
+  "identity": "029a867fb845dc1e9ffbdb5e93524e30c1f42d2b06e1f1db1e02e6a4c9f1ef21",
+  "validator": "InternVL3.5-4B-HF",
+  "role": "held_out_surrogate",
+  "target_model": false,
+  "images": [
+    {
+      "image_id": "train/n04254680/n04254680_1323.JPEG",
+      "representation_hit": false,
+      "target_margin": -0.0025131702423095703,
+      "delta_R": 0.008762896060943604
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1333.JPEG",
+      "representation_hit": false,
+      "target_margin": -0.0008963346481323242,
+      "delta_R": 0.008401632308959961
+    }
+  ],
+  "source_state": "attacks/dev/A3__equal__DINOv2-Large__s42__i50__r1/T09/batch_008/state.json"
+}

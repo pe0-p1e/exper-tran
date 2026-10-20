@@ -1,0 +1,97 @@
+{
+  "native_resolution": true,
+  "objective": "A3 four-layer margin",
+  "max_reserved_gib": 75,
+  "results": [
+    {
+      "model": "CLIP ViT-L/14",
+      "trials": [
+        {
+          "batch": 2,
+          "seconds": 0.33402570900011597,
+          "peak_reserved_gib": 1.1796875,
+          "safe": true
+        },
+        {
+          "batch": 8,
+          "seconds": 0.08228066099991338,
+          "peak_reserved_gib": 2.236328125,
+          "safe": true
+        },
+        {
+          "batch": 16,
+          "seconds": 0.1231285429998934,
+          "peak_reserved_gib": 2.279296875,
+          "safe": true
+        },
+        {
+          "batch": 30,
+          "seconds": 0.25607711100019515,
+          "peak_reserved_gib": 2.326171875,
+          "safe": true
+        }
+      ],
+      "largest_safe_batch": 30
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "trials": [
+        {
+          "batch": 2,
+          "seconds": 0.15224725200005196,
+          "peak_reserved_gib": 4.474609375,
+          "safe": true
+        },
+        {
+          "batch": 8,
+          "seconds": 0.160895698999866,
+          "peak_reserved_gib": 5.41015625,
+          "safe": true
+        },
+        {
+          "batch": 16,
+          "seconds": 0.27628868499982673,
+          "peak_reserved_gib": 5.4296875,
+          "safe": true
+        },
+        {
+          "batch": 30,
+          "seconds": 0.5414170379999632,
+          "peak_reserved_gib": 5.48828125,
+          "safe": true
+        }
+      ],
+      "largest_safe_batch": 30
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "trials": [
+        {
+          "batch": 2,
+          "seconds": 0.08898144500017224,
+          "peak_reserved_gib": 5.41796875,
+          "safe": true
+        },
+        {
+          "batch": 8,
+          "seconds": 0.14539224800000738,
+          "peak_reserved_gib": 8.4375,
+          "safe": true
+        },
+        {
+          "batch": 16,
+          "seconds": 0.2978743690000556,
+          "peak_reserved_gib": 8.5546875,
+          "safe": true
+        },
+        {
+          "batch": 30,
+          "seconds": 0.5317311080000309,
+          "peak_reserved_gib": 8.693359375,
+          "safe": true
+        }
+      ],
+      "largest_safe_batch": 30
+    }
+  ]
+}

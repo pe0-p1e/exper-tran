@@ -1,0 +1,508 @@
+{
+  "status": "predeclared_not_a_new_measurement",
+  "rows": [
+    {
+      "config": {
+        "id": "PSQ_V",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "CLIP ViT-L/14"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V",
+      "measurement_condition": "CFQ_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSQ_A",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "A",
+      "measurement_condition": "CFQ_single_1__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSQ_B",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "B",
+      "measurement_condition": "CFQ_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSQ_VA",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "CLIP ViT-L/14",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+A",
+      "measurement_condition": "PSQ_VA__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSQ_VB",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "CLIP ViT-L/14",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+B",
+      "measurement_condition": "PSQ_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSQ_AB",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "InternVL3.5-2B-HF",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "A+B",
+      "measurement_condition": "PSQ_AB__A3__equal__InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSQ_VAB",
+        "target": "Qwen3.5-27B",
+        "models": [
+          "CLIP ViT-L/14",
+          "InternVL3.5-2B-HF",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+A+B",
+      "measurement_condition": "CFQ_main__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_V",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "CLIP ViT-L/14"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V",
+      "measurement_condition": "CFI_single_0__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_A",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "A",
+      "measurement_condition": "CFI_single_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_B",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "B",
+      "measurement_condition": "CFI_single_2__A3__equal__Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_VA",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+A",
+      "measurement_condition": "PSI_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_VB",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "CLIP ViT-L/14",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+B",
+      "measurement_condition": "PSI_VB__A3__equal__CLIP_ViT-L_14+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_AB",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "Qwen3.5-2B",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "A+B",
+      "measurement_condition": "PSI_AB__A3__equal__Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSI_VAB",
+        "target": "InternVL3.5-14B-HF",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "Gemma 4 E2B-it"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+A+B",
+      "measurement_condition": "CFI_main__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1",
+      "source": "corrected_family_disjoint",
+      "source_csv": "family_disjoint_recovery/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_V",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "CLIP ViT-L/14"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V",
+      "measurement_condition": "PSG_V__A3__equal__CLIP_ViT-L_14__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_A",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "A",
+      "measurement_condition": "focus_T10_final_1__A3__equal__Qwen3.5-2B__DI__s42__i50__r1",
+      "source": "historical_valid_Gemma_cross_family",
+      "source_csv": "ten_hour_research/final_target_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_B",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "B",
+      "measurement_condition": "PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_VA",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+A",
+      "measurement_condition": "PSG_VA__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_VB",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "CLIP ViT-L/14",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+B",
+      "measurement_condition": "PSG_VB__A3__equal__CLIP_ViT-L_14+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_AB",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "A+B",
+      "measurement_condition": "PSG_AB__A3__equal__Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "source": "new_subset_measurement",
+      "source_csv": "proxy_selection/results/target_direction_results.csv"
+    },
+    {
+      "config": {
+        "id": "PSG_VAB",
+        "target": "Gemma 4 31B-it",
+        "models": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "method": "A3",
+        "options": {
+          "patch_weight": 0.35
+        },
+        "di": true,
+        "fusion": "equal",
+        "steps": 50,
+        "seed": 42,
+        "restarts": 1,
+        "kind": "proxy_selection"
+      },
+      "slots": "V+A+B",
+      "measurement_condition": "focus_T10_final_0__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1",
+      "source": "historical_valid_Gemma_cross_family",
+      "source_csv": "ten_hour_research/final_target_results.csv"
+    }
+  ],
+  "conditions": 21,
+  "cells": 105,
+  "image_evaluations": 3150,
+  "loss_fixed": true,
+  "target_ranking_descriptive_only": true
+}

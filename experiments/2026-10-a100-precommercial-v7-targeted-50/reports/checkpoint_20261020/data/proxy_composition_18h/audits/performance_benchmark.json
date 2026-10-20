@@ -1,0 +1,7927 @@
+{
+  "samples": [
+    {
+      "at": 1792434494.850412,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434499.9350433,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434505.0229235,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434510.1103587,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434515.1920238,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434520.4195242,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434525.5008075,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434530.5864124,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434535.6744564,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434540.763362,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434552.1016586,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434557.1916132,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434562.2789118,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434567.3648453,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434572.447177,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434577.5271661,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434582.6099246,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434587.6957197,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434592.7782397,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434597.8627985,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434602.9476497,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434608.1707835,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434613.2707832,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434618.3758492,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434623.4804213,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434628.5770907,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434633.6643167,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434638.7453055,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434643.8463182,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434648.9277353,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434654.0307558,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434659.132874,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434664.217581,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434669.3088198,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434674.3918757,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434679.4748237,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434684.5588305,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434689.6464663,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434694.7331295,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434699.8206005,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434704.903263,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434710.1168458,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434715.200401,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434720.2875314,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434725.367571,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434736.677418,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434741.758979,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434746.8409615,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434751.9251692,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434757.00812,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434762.091101,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434767.1734238,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434772.2605655,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434777.343204,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434782.4269533,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434787.5122306,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434792.593743,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434797.8107476,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434802.8904276,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434807.9753017,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434813.0606894,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434818.15123,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434823.2363548,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434828.319828,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434833.4060063,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434838.4901342,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434843.5719461,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434848.6759658,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434853.7585776,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434858.8430364,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434863.9320638,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434869.0198762,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434874.1067936,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434879.192468,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434884.2734334,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434889.3641284,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434894.4501803,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434899.5409062,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434904.6330922,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434909.7222927,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434921.2189877,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434926.3053293,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434931.390904,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434936.4767258,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434941.5607164,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434946.647476,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434951.7539833,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434956.8385265,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434961.9397259,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434967.042014,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434972.123293,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434977.357742,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434982.4394355,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434987.5212007,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434992.60584,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792434997.6971364,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435002.7958484,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435007.88265,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435012.9709163,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435018.0543625,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435023.1365454,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435028.2212706,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435033.306947,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435038.3911197,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435043.483858,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435048.5735502,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435053.6641338,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435058.7551682,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435063.8639026,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435068.9484499,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435074.0336092,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435079.130164,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435084.2182608,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435089.3094833,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435094.3956537,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435105.9183025,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435111.0033224,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435116.083658,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435121.1681151,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435126.2547257,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435131.33953,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435136.4244883,
+      "used_gib": 28.244140625,
+      "utilization": 100.0,
+      "pids": [
+        80779,
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_75",
+        "at": 1792430720.2073917
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435141.5190134,
+      "used_gib": 23.1328125,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435146.6299903,
+      "used_gib": 23.541015625,
+      "utilization": 99.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435151.7085443,
+      "used_gib": 27.779296875,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435156.7946615,
+      "used_gib": 33.1484375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435161.8794339,
+      "used_gib": 33.216796875,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435166.9631107,
+      "used_gib": 33.216796875,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435172.178731,
+      "used_gib": 33.216796875,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435177.2672377,
+      "used_gib": 27.876953125,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435182.3513277,
+      "used_gib": 32.142578125,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435187.4404159,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435192.5216012,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435197.6101587,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435202.6946015,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435207.7811508,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435212.8617873,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435217.9491808,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435223.0282493,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435228.1144183,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435233.2054946,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435238.284788,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435243.3706234,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435248.4517953,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435253.539792,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435258.6260188,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435263.7070582,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435268.7868304,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435273.8735309,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435278.9568527,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435290.454087,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435295.5334606,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435300.617616,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435305.838746,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435310.9229734,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435316.0058646,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435321.087823,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435326.1772344,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435331.2600446,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435336.3425357,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435341.4290996,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435346.5195637,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435351.6010497,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435356.6848762,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435361.7747416,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435366.8568666,
+      "used_gib": 32.162109375,
+      "utilization": 99.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435371.939314,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435377.029783,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435382.1177769,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435387.2011414,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435392.2958071,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435397.3784056,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435402.4636111,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435407.5487256,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435412.6342661,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435417.7212944,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435422.805051,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435427.887639,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435432.976939,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435438.065022,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435443.1472223,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435448.2319148,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435453.4520116,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435458.534335,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435463.62305,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435475.4100678,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435480.504316,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435485.5952125,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435490.682234,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435495.7663538,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435500.8503373,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435505.9413395,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435511.0299292,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435516.11379,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435521.195077,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435526.278671,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435531.3704126,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435536.4539013,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435541.5384274,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435546.6320786,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435551.7184618,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435556.8024733,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435561.8901978,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435566.9756067,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435572.0646532,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435577.1536107,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435582.3891706,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435587.4723504,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435592.555619,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435597.645506,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435602.7320778,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435607.8179786,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435612.9035733,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435617.986888,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435623.070769,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435628.1577442,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435633.244708,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435638.3331494,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435643.4171047,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435648.4999077,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435659.99247,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435665.0740163,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435670.155078,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435675.2372756,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435680.3170946,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435685.5351958,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435690.6240115,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435695.7094595,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435700.7956734,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435705.8798585,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435710.9736779,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435716.0570862,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435721.1478024,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435726.237413,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435731.321827,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435736.4033372,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435741.4865694,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435746.5699732,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435751.6544359,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    },
+    {
+      "at": 1792435756.74217,
+      "used_gib": 32.162109375,
+      "utilization": 100.0,
+      "pids": [
+        81412,
+        84659,
+        90054,
+        93404
+      ],
+      "primary": {
+        "stage": "attack",
+        "condition": "CFI_layer_100",
+        "at": 1792435140.4776688
+      },
+      "active": [
+        {
+          "condition": "XS_E08",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M12_Q",
+          "phase": "attack",
+          "reserved_gib": 17.291452944278717
+        },
+        {
+          "condition": "P18_M16_G",
+          "phase": "attack",
+          "reserved_gib": 16.37402260489762
+        }
+      ]
+    }
+  ],
+  "max_global_used_gib": 42.15234375,
+  "max_total_gpu_workers": 4,
+  "strict_bf16": true,
+  "primary_source_unchanged": true
+}

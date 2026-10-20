@@ -1,0 +1,6 @@
+{
+  "patch_weight": 0.35,
+  "research_dev_offset": 2,
+  "loss": "combined",
+  "margin_weight": 0.5
+}

@@ -1,0 +1,18 @@
+{
+  "config": {
+    "id": "T20_matched_single_2",
+    "models": [
+      "InternVL3.5-2B-HF"
+    ],
+    "method": "A3",
+    "options": {
+      "patch_weight": 0.35
+    },
+    "family": "matched_single_confirmation",
+    "n_per_direction": 8,
+    "fusion": "equal",
+    "seed": 42
+  },
+  "started": 1792354820.8293438,
+  "remaining_hours": 16.644567830695046
+}

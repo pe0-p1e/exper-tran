@@ -78,7 +78,7 @@
         "patch_weight": 0.0
       },
       "budget_class": "primary50_steps",
-      "status": "PARTIAL",
+      "status": "COMPLETE",
       "attack_complete": true,
       "attack_images": 10,
       "validations": {
@@ -89,7 +89,7 @@
       "embeddings": {
         "CLIP ViT-L/14": true,
         "Gemma 4 E4B-it": true,
-        "Qwen3.5-9B": false,
+        "Qwen3.5-9B": true,
         "InternVL3.5-2B-HF": true,
         "Qwen3.5-2B": true,
         "InternVL3.5-8B-HF": true
@@ -111,12 +111,12 @@
         "aggregation": "soft_reference"
       },
       "budget_class": "primary50_steps",
-      "status": "QUEUED",
-      "attack_complete": false,
-      "attack_images": 0,
+      "status": "PARTIAL",
+      "attack_complete": true,
+      "attack_images": 10,
       "validations": {
-        "Qwen3.5-9B": false,
-        "InternVL3.5-8B-HF": false,
+        "Qwen3.5-9B": true,
+        "InternVL3.5-8B-HF": true,
         "Gemma 4 E4B-it": false
       },
       "embeddings": {

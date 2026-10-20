@@ -102,10 +102,16 @@
       "model": "Qwen3.5-2B",
       "metadata_sha256": "1c991c9eef45a33221fb3b61549c290bd4645f3df0b3a8ec8dcb38981dd8b4b4",
       "npz_sha256": "a4739c38677cf3b08d12fe1e5d2695156f27289fcc202424b3d7d35bcca5185f"
+    },
+    {
+      "condition": "U02",
+      "model": "Qwen3.5-9B",
+      "metadata_sha256": "f66c91f1692037f45992a04f61fe0efde524bac279058cae09d661a30f93b94a",
+      "npz_sha256": "604e386064f0a98ad3c587e9b37cfff63425a6a31671df3115c39e5d0338d0d0"
     }
   ],
-  "measurement_rows": 340,
-  "cross_model_rows": 320,
+  "measurement_rows": 360,
+  "cross_model_rows": 360,
   "model_inference_calls": 0,
   "per_direction_N": 2,
   "per_direction_CKA_RSA": "N/A: N2 is degenerate/undefined; cross-model metrics use all10 aligned images",

@@ -1,0 +1,21 @@
+{
+  "identity": "48d5438e86a6ad822b9839f8b72b9255a10c9adbb7b181f70e5516d05e0d1a73",
+  "validator": "Qwen3.5-4B",
+  "role": "held_out_surrogate",
+  "target_model": false,
+  "images": [
+    {
+      "image_id": "train/n09472597/n09472597_10738.JPEG",
+      "representation_hit": false,
+      "target_margin": -4.9948692321777344e-05,
+      "delta_R": 4.51207160949707e-05
+    },
+    {
+      "image_id": "train/n09472597/n09472597_110.JPEG",
+      "representation_hit": false,
+      "target_margin": -3.0100345611572266e-05,
+      "delta_R": 7.730722427368164e-05
+    }
+  ],
+  "source_state": "attacks/dev/A3__equal__Gemma_4_E2B-it__s42__i50__r1/T07/batch_006/state.json"
+}

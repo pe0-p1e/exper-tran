@@ -1,0 +1,20 @@
+{
+  "at": 1792431058.1879888,
+  "gpu": {
+    "used_gib": 41.66015625,
+    "utilization": 100.0,
+    "pids": [
+      80672,
+      80779,
+      80885,
+      81412
+    ]
+  },
+  "primary": {
+    "stage": "attack",
+    "condition": "CFI_layer_75",
+    "at": 1792430720.2073917
+  },
+  "completed": 23,
+  "original_outputs_unchanged": true
+}

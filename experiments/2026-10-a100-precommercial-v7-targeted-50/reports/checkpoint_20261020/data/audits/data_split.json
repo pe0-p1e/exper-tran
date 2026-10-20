@@ -1,0 +1,7 @@
+{
+  "test_count": 150,
+  "dev_count": 50,
+  "reference_count": 480,
+  "overlap": false,
+  "selection": "GT only; SHA256 deterministic; no model predictions"
+}

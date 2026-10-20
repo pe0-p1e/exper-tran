@@ -1,0 +1,69 @@
+{
+  "identity": "5a4b0a1237c4e7e33bf5f11db7e8bdaae60b07c8a5c05b955ff9497611e60868",
+  "validator": "Qwen3.5-4B",
+  "role": "held_out_surrogate",
+  "target_model": false,
+  "images": [
+    {
+      "image_id": "train/n04254680/n04254680_10154.JPEG",
+      "representation_hit": false,
+      "target_margin": -2.586841583251953e-05,
+      "delta_R": 2.6166439056396484e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_10156.JPEG",
+      "representation_hit": false,
+      "target_margin": -2.47955322265625e-05,
+      "delta_R": 1.3828277587890625e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_102.JPEG",
+      "representation_hit": false,
+      "target_margin": -1.806020736694336e-05,
+      "delta_R": 2.0503997802734375e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1051.JPEG",
+      "representation_hit": true,
+      "target_margin": 2.4437904357910156e-06,
+      "delta_R": 3.927946090698242e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1071.JPEG",
+      "representation_hit": false,
+      "target_margin": -2.1219253540039062e-05,
+      "delta_R": 2.3066997528076172e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1101.JPEG",
+      "representation_hit": false,
+      "target_margin": -3.612041473388672e-05,
+      "delta_R": 3.910064697265625e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1150.JPEG",
+      "representation_hit": false,
+      "target_margin": -3.7729740142822266e-05,
+      "delta_R": 1.0788440704345703e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1190.JPEG",
+      "representation_hit": false,
+      "target_margin": -1.424551010131836e-05,
+      "delta_R": 3.49879264831543e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1323.JPEG",
+      "representation_hit": false,
+      "target_margin": -7.152557373046875e-06,
+      "delta_R": 3.2782554626464844e-05
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1333.JPEG",
+      "representation_hit": false,
+      "target_margin": -1.7583370208740234e-05,
+      "delta_R": 2.3424625396728516e-05
+    }
+  ],
+  "source_state": "attacks/dev/L0L1__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1/T09/batch_000/state.json"
+}

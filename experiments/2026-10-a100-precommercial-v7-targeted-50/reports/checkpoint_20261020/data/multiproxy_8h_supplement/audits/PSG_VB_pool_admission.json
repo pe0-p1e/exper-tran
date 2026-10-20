@@ -1,0 +1,10 @@
+{
+  "at": 1792399673.7899637,
+  "phase": "evaluation",
+  "weight_and_activation_estimate_gib": 60.85066289305687,
+  "primary_reserved_gib": 10.5,
+  "other_reservations_gib": [],
+  "total_reserved_gib": 71.35066289305686,
+  "parameter_dtype": "bf16",
+  "max_total_workers": 4
+}

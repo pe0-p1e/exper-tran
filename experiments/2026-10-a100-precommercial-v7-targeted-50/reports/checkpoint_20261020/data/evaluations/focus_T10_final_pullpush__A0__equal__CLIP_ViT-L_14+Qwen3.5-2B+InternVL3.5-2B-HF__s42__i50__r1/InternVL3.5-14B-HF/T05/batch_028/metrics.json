@@ -1,0 +1,31 @@
+{
+  "identity": "e05e3275df1ae26e1dfe32b4b0bb61024b174c48c7e7b7fa377f64397db59c61",
+  "target": "InternVL3.5-14B-HF",
+  "images": [
+    {
+      "image_id": "train/n03642806/n03642806_12481.JPEG",
+      "clean_raw": "4.",
+      "adv_raw": "4",
+      "clean_label": null,
+      "adv_label": 5,
+      "clean_parser": "invalid",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": false
+    },
+    {
+      "image_id": "train/n03642806/n03642806_12501.JPEG",
+      "clean_raw": "4",
+      "adv_raw": "4",
+      "clean_label": 5,
+      "adv_label": 5,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": false,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/focus_T10_final_pullpush__A0__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__s42__i50__r1/T05/batch_028/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "b9dfa507263a13c7842c05ae009b2c484d9f7a8b12e9257aa1521f1ad0bdacec"
+}
