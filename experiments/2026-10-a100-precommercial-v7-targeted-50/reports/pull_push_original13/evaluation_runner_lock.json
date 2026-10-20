@@ -1,0 +1,11 @@
+{
+  "source_hashes": {
+    "/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/pp4_original13_evaluator.py": "90986ce277b7ef028147a255d6bfb3ec41465859333be1a879da967720935bca",
+    "/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/evaluate_v7.py": "8de9e3fea1a60b0edd12873f724ad88c91ef0ec1c5a234066ee4ee4738cf2401",
+    "/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v6/config/runner_template.yaml": "92c9cca26b5f501cef6bb85a401cd0a8b820cce51cbedc47986125a082220826"
+  },
+  "dtype": "bf16",
+  "inference_batch": "historical clean/adv pair of2",
+  "reuse": "model weights only; no prediction cache",
+  "commercial_testing": false
+}

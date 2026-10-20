@@ -1,0 +1,8 @@
+{
+  "target": "Qwen3.5-27B",
+  "seconds": 589.7088687419891,
+  "conditions": 7,
+  "target_loads": 1,
+  "inference_batch": 2,
+  "evaluation_runner_lock_sha256": "fab830680f5b09f401cdc31db674551d58b9c449e038f155ec948d9d7926ae5e"
+}

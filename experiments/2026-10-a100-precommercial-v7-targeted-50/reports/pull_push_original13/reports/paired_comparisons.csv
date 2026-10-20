@@ -1,0 +1,26 @@
+ensemble,target,baseline,N,paired_wins,paired_losses,delta_ASR,image_bootstrap_low,image_bootstrap_high,interpretation
+E01,Qwen3.5-27B,A3_margin_patch_DI,150,10,6,0.02666666666666667,-0.02666666666666667,0.08,Method-level contrast; not a weight-only ablation
+E01,Qwen3.5-27B,V6_deep_PP_noDI,150,96,0,0.64,0.56,0.7133333333333334,Method-level contrast; not a weight-only ablation
+E02,Qwen3.5-27B,A3_margin_patch_DI,150,11,5,0.04,-0.013333333333333334,0.09333333333333334,Method-level contrast; not a weight-only ablation
+E02,Qwen3.5-27B,V6_deep_PP_noDI,150,121,0,0.8066666666666666,0.74,0.8666666666666667,Method-level contrast; not a weight-only ablation
+E03,Qwen3.5-27B,A3_margin_patch_DI,150,7,4,0.02,-0.02,0.06666666666666667,Method-level contrast; not a weight-only ablation
+E03,Qwen3.5-27B,V6_deep_PP_noDI,150,127,0,0.8466666666666667,0.7866666666666666,0.9,Method-level contrast; not a weight-only ablation
+E04,Gemma 4 31B-it,A3_margin_patch_DI,150,8,8,0.0,-0.04666666666666667,0.05333333333333334,Method-level contrast; not a weight-only ablation
+E04,Gemma 4 31B-it,V6_deep_PP_noDI,150,74,0,0.49333333333333335,0.41333333333333333,0.5733333333333334,Method-level contrast; not a weight-only ablation
+E05,Gemma 4 31B-it,A3_margin_patch_DI,150,7,20,-0.08666666666666667,-0.15333333333333332,-0.02,Method-level contrast; not a weight-only ablation
+E05,Gemma 4 31B-it,V6_deep_PP_noDI,150,80,0,0.5333333333333333,0.4533333333333333,0.6133333333333333,Method-level contrast; not a weight-only ablation
+E06,Gemma 4 31B-it,A3_margin_patch_DI,150,9,16,-0.04666666666666667,-0.10666666666666667,0.02,Method-level contrast; not a weight-only ablation
+E06,Gemma 4 31B-it,V6_deep_PP_noDI,150,99,0,0.66,0.5866666666666667,0.7333333333333333,Method-level contrast; not a weight-only ablation
+E07,InternVL3.5-14B-HF,A3_margin_patch_DI,150,9,16,-0.04666666666666667,-0.10666666666666667,0.02,Method-level contrast; not a weight-only ablation
+E07,InternVL3.5-14B-HF,V6_deep_PP_noDI,150,78,0,0.52,0.44,0.6066666666666667,Method-level contrast; not a weight-only ablation
+E08,InternVL3.5-14B-HF,A3_margin_patch_DI,150,10,13,-0.02,-0.08016666666666661,0.04,Method-level contrast; not a weight-only ablation
+E08,InternVL3.5-14B-HF,V6_deep_PP_noDI,150,77,0,0.5133333333333333,0.43333333333333335,0.5933333333333334,Method-level contrast; not a weight-only ablation
+E09,InternVL3.5-14B-HF,V6_deep_PP_noDI,150,72,1,0.47333333333333333,0.3933333333333333,0.5533333333333333,Method-level contrast; not a weight-only ablation
+E10,Qwen3.5-27B,A3_margin_patch_DI,150,5,6,-0.006666666666666667,-0.04666666666666667,0.04,Method-level contrast; not a weight-only ablation
+E10,Qwen3.5-27B,V6_deep_PP_noDI,150,112,0,0.7466666666666667,0.6733333333333333,0.82,Method-level contrast; not a weight-only ablation
+E11,Qwen3.5-27B,A3_margin_patch_DI,150,4,6,-0.013333333333333334,-0.05333333333333334,0.02666666666666667,Method-level contrast; not a weight-only ablation
+E11,Qwen3.5-27B,V6_deep_PP_noDI,150,119,0,0.7933333333333333,0.7266666666666667,0.8533333333333334,Method-level contrast; not a weight-only ablation
+E12,Qwen3.5-27B,A3_margin_patch_DI,150,4,7,-0.02,-0.06666666666666667,0.02,Method-level contrast; not a weight-only ablation
+E12,Qwen3.5-27B,V6_deep_PP_noDI,150,112,0,0.7466666666666667,0.6733333333333333,0.8133333333333334,Method-level contrast; not a weight-only ablation
+E13,Qwen3.5-27B,A3_margin_patch_DI,150,3,6,-0.02,-0.06,0.02,Method-level contrast; not a weight-only ablation
+E13,Qwen3.5-27B,V6_deep_PP_noDI,150,127,0,0.8466666666666667,0.7866666666666666,0.9,Method-level contrast; not a weight-only ablation

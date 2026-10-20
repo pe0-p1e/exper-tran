@@ -1,0 +1,18 @@
+{
+  "loss": "pull_push",
+  "layers": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "patch_weight": 0.0,
+  "aggregation": "centroid",
+  "pull_weight": 0.5,
+  "push_weight": 0.5,
+  "projector_weight": 0.0,
+  "pp4_objective_sha256": "8dae1f8fd3fcdfc649abe5158a85743153156ef342741d4a304b3a9cf96d0fbe",
+  "pp4_worker_sha256": "060e59d6dea62bdc30769950b083baf61610d45d19ed8a1cd38ea7b68c192356",
+  "excluded_proxy_family": "gemma4",
+  "pp4_full_worker_sha256": "df8f69d37a8ea6c2977e20c84956c8fb5a930e11b7da660270d11d30d83f30fb"
+}

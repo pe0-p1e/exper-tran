@@ -1,0 +1,30 @@
+{
+  "at": 1792507015.0029366,
+  "gpu": {
+    "used_gib": 59.5947265625,
+    "utilization": 95.0,
+    "pids": [
+      360233
+    ]
+  },
+  "active": [
+    {
+      "mode": "evaluation",
+      "key": "Gemma 4 31B-it",
+      "models": [
+        "Gemma 4 31B-it"
+      ],
+      "condition_id": null,
+      "pid": 360233,
+      "reserve": 61.75066289305687,
+      "initial_reserve": 61.75066289305687,
+      "host_reserve": 62.25066289305687,
+      "initial_host_reserve": 62.25066289305687,
+      "started": 1792506722.3488882,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13/logs/evaluation_Gemma 4 31B-it.log"
+    }
+  ],
+  "max_workers": 4,
+  "predictive_gpu_cap_gib": 72,
+  "predictive_host_cap_gib": 96
+}
