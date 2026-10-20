@@ -1,0 +1,12 @@
+{
+  "at": 1792522670.832361,
+  "prior_lock": "5cf167c3af6525eeff11759bafadfd331e781343c4df1a0dcb78341bbd1a7c3e",
+  "new_lock": "36bc17509058432691fc4a546ac8a6601ac6524e69831681e32574674e729ae0",
+  "reason": "Reset resumed controller RUNNING display rather than retaining STOPPING. Controlled owner restart adopts existing GPU workers; no scientific computation changes.",
+  "prior_controller": {
+    "pid": 375686,
+    "start": "19250124",
+    "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py ",
+    "state": "R"
+  }
+}

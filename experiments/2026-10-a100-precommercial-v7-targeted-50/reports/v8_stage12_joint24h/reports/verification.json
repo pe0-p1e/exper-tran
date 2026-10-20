@@ -1,0 +1,19 @@
+{
+  "at": 1792522697.6368246,
+  "unit_integration_tests": 20,
+  "result": "PASS",
+  "log_sha256": "41e796bfd1d2549ef583ef5a1be4a2eb30aa8dccb0a8dda3971877bcd7a300fa",
+  "commercial_calls_in_tests": 0,
+  "coverage": [
+    "family exclusion",
+    "pure PP gradient invariance",
+    "atomic receipts/corruption",
+    "process identity race",
+    "SIGTERM/SIGKILL",
+    "simulated OOM/backoff",
+    "code error blocking",
+    "CLI50 mocked idempotency/isolation/parser",
+    "Stage2 automatic child identity",
+    "paired interaction/clean baseline/cohort checks"
+  ]
+}

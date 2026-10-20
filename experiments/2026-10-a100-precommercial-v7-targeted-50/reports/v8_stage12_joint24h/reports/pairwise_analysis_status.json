@@ -1,0 +1,8 @@
+{
+  "complete_pairs": 0,
+  "pending": [],
+  "expected_exhaustive_pairs_per_validator": 15,
+  "formula": "I=T(pair)-T(left)-T(right)+T(clean)",
+  "uncertainty": "4000 paired image bootstrap resamples stratified by direction; exploratory, post-selection, small N; not equivalence/causal proof",
+  "selection_feedback": false
+}

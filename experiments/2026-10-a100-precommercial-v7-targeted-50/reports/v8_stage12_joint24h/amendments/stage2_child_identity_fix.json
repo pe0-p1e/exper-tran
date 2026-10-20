@@ -1,0 +1,8 @@
+{
+  "at": 1792522635.9084673,
+  "prior_lock": "6905e16b304b5fff2063634e9432b7a4f4088f1359f56d01ab38733bc345cc29",
+  "new_lock": "5cf167c3af6525eeff11759bafadfd331e781343c4df1a0dcb78341bbd1a7c3e",
+  "reason": "Correct Stage2 CLI child executable identity from worker.py to stage2_cli.py; regression-tested both automatic call limits. No attack/evaluation science, cohort, model, RNG or deadline changes.",
+  "tests": "20 passed; no real commercial calls",
+  "existing_frozen_attacks_preserved": true
+}

@@ -1,0 +1,10 @@
+{
+  "at": 1792522336.167714,
+  "prior_lock": "19a68c7fe9cc785f9eaa059d278edbf941cbcc0145dea7937f7deb1aaa75f891",
+  "new_lock": "a3b6e74d2a7e8a80248dfb1e23df1a03f77d7296b79da906f975660aeddc40d4",
+  "reason": "Use authoritative unwrapped BF16 auditor, avoiding inherited historical output redirect. Move own audit tail to V8 and restore old prefix. Distinguish intentional STOPPED workers from code failures.",
+  "recovered_load_events": 42,
+  "all_events_pass": true,
+  "historical_prefix_restored_sha256": "0b41453a8237081574c840cd10be65e8c2aff27d3a6a3c96f4a1a5761b7c82d3",
+  "tests": "15passed"
+}
