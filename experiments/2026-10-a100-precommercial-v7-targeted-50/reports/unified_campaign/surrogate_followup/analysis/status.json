@@ -66,10 +66,34 @@
       "model": "Qwen3.5-2B",
       "metadata_sha256": "edd466c59c34d22a296153a3266e94806aa3b72f13990ecd33dc0ca20801e411",
       "npz_sha256": "de80551dd704cf2a619dab957db4e225f654c9e4d42cdec09e868f4ada29f4ff"
+    },
+    {
+      "condition": "U01",
+      "model": "Qwen3.5-9B",
+      "metadata_sha256": "ba4ebd9ce05de3e8f57ecbc5bfdc082a7438dd5ab55ca320a1855400e5745f53",
+      "npz_sha256": "4605b8270c3d95b9df8bf0c69c2e3256f8e983498370a455496272d00d5e50d7"
+    },
+    {
+      "condition": "U02",
+      "model": "CLIP ViT-L/14",
+      "metadata_sha256": "c3ef737503ab7c68e314c598a2c0639f222f091ee716a92369fa31f23b8e1057",
+      "npz_sha256": "84da4551be69f34dbcb1544d669fb753509bed471f7cda13a9f7c20027f32169"
+    },
+    {
+      "condition": "U02",
+      "model": "Gemma 4 E4B-it",
+      "metadata_sha256": "aea816d8fb17280a2ab507f1046785d7ab21dcab6da430717f0b0cc188c4d04c",
+      "npz_sha256": "756dc54dfdb5d4d039c08ad928bb27f04c8e957db43e5e72c31f347176e83149"
+    },
+    {
+      "condition": "U02",
+      "model": "InternVL3.5-2B-HF",
+      "metadata_sha256": "70a07496b4fb5687e9c633e19484ca7c6a6d7ae1536b868d8cf88fa8163f9cf6",
+      "npz_sha256": "d537fb00dcc4e9499570cce3c2096858a8981c73f9d261f0ae0818bc7d50f435"
     }
   ],
-  "measurement_rows": 220,
-  "cross_model_rows": 200,
+  "measurement_rows": 300,
+  "cross_model_rows": 264,
   "model_inference_calls": 0,
   "per_direction_N": 2,
   "per_direction_CKA_RSA": "N/A: N2 is degenerate/undefined; cross-model metrics use all10 aligned images",

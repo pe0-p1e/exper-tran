@@ -1,6 +1,6 @@
 {
   "stage": "test150",
-  "updated": 1792450876.2068996,
+  "updated": 1792461720.8705008,
   "models": [
     {
       "matrix_id": "openai_61_sol",
@@ -40,6 +40,26 @@
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
       "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-sol']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    {
+      "matrix_id": "openai_56_sol",
+      "provider": "codex",
+      "model": "gpt-5.6-sol",
+      "status": "BLOCKED",
+      "completed_requests": 0,
+      "planned_requests": 300,
+      "hits": null,
+      "denominator": 150,
+      "ASR": null,
+      "observed_hits": 0,
+      "observed_pairs": 0,
+      "clean_correct": null,
+      "clean_correct_conditional_hits": null,
+      "clean_correct_conditional_denominator": null,
+      "clean_correct_conditional_ASR": null,
+      "invalid_replies": 0,
+      "reason": "Ten-image interface incomplete; no ASR selection",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -83,6 +103,46 @@
       "legacy_conditional_TASR": "N/A"
     },
     {
+      "matrix_id": "openai_56_terra",
+      "provider": "codex",
+      "model": "gpt-5.6-terra",
+      "status": "BLOCKED",
+      "completed_requests": 0,
+      "planned_requests": 300,
+      "hits": null,
+      "denominator": 150,
+      "ASR": null,
+      "observed_hits": 0,
+      "observed_pairs": 0,
+      "clean_correct": null,
+      "clean_correct_conditional_hits": null,
+      "clean_correct_conditional_denominator": null,
+      "clean_correct_conditional_ASR": null,
+      "invalid_replies": 0,
+      "reason": "Ten-image interface incomplete; no ASR selection",
+      "legacy_conditional_TASR": "N/A"
+    },
+    {
+      "matrix_id": "openai_56_luna",
+      "provider": "codex",
+      "model": "gpt-5.6-luna",
+      "status": "BLOCKED",
+      "completed_requests": 0,
+      "planned_requests": 300,
+      "hits": null,
+      "denominator": 150,
+      "ASR": null,
+      "observed_hits": 0,
+      "observed_pairs": 0,
+      "clean_correct": null,
+      "clean_correct_conditional_hits": null,
+      "clean_correct_conditional_denominator": null,
+      "clean_correct_conditional_ASR": null,
+      "invalid_replies": 0,
+      "reason": "Ten-image interface incomplete; no ASR selection",
+      "legacy_conditional_TASR": "N/A"
+    },
+    {
       "matrix_id": "gemini_38_flash_low",
       "provider": "gemini_agy",
       "model": "gemini-3.8-flash-low",
@@ -99,7 +159,7 @@
       "clean_correct_conditional_denominator": 150,
       "clean_correct_conditional_ASR": 0.6933333333333334,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -119,7 +179,7 @@
       "clean_correct_conditional_denominator": 150,
       "clean_correct_conditional_ASR": 0.68,
       "invalid_replies": 4,
-      "reason": "",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -139,7 +199,7 @@
       "clean_correct_conditional_denominator": 150,
       "clean_correct_conditional_ASR": 0.68,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -159,7 +219,7 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Client returned nonzero; inspect local trace",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -179,7 +239,7 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Client returned nonzero; inspect local trace",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     }
   ],

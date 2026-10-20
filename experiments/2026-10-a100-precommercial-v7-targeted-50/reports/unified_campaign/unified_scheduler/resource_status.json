@@ -1,67 +1,57 @@
 {
-  "at": 1792450812.6863577,
+  "at": 1792461714.9170785,
   "gpu": {
-    "used_gib": 29.60546875,
+    "used_gib": 35.849609375,
     "utilization": 100.0,
     "pids": [
-      147154,
-      147199,
-      148697,
-      151597
+      156626,
+      157231,
+      158348
     ]
   },
   "primary": {
     "stage": "attack",
-    "condition": "CFI_soft_references",
-    "at": 1792449614.168128
+    "condition": "CFI_no_DI",
+    "at": 1792458114.1866853
   },
   "active_gpu_workers": [
     {
       "kind": "legacy",
-      "condition": "P18_M13_G",
+      "condition": "P18_M15_I",
       "phase": "attack",
       "models": [
         "CLIP ViT-L/14",
         "DINOv2-Large",
-        "Qwen3.5-2B"
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
       ],
-      "reserve": 8.485912444069982,
-      "pid": 147154,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M13_G_attack_CLIP ViT-L_14.log",
-      "started": 1792449602.3988166
+      "reserve": 16.56989681906998,
+      "pid": 156626,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M15_I_attack_CLIP ViT-L_14.log",
+      "started": 1792457078.1058378
     },
     {
       "kind": "legacy",
-      "condition": "P18_M13_I",
+      "condition": "P18_M18_I",
       "phase": "attack",
       "models": [
-        "CLIP ViT-L/14",
-        "DINOv2-Large",
-        "Qwen3.5-2B"
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
       ],
-      "reserve": 8.485912444069982,
-      "pid": 148697,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M13_I_attack_CLIP ViT-L_14.log",
-      "started": 1792449915.5423007
-    },
-    {
-      "kind": "legacy",
-      "condition": "P18_M13_Q",
-      "phase": "attack",
-      "models": [
-        "CLIP ViT-L/14",
-        "DINOv2-Large",
-        "InternVL3.5-2B-HF"
-      ],
-      "reserve": 8.737566472962499,
-      "pid": 151597,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M13_Q_attack_CLIP ViT-L_14.log",
-      "started": 1792450660.154921
+      "reserve": 29.254744172096252,
+      "pid": 158348,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M18_I_attack_Qwen3.5-2B.log",
+      "started": 1792460475.4218056
     }
   ],
   "max_gpu_workers": 4,
   "global_reserved_budget_gib": 72,
   "commercial_pid": 95493,
-  "commercial_status": null,
+  "commercial_status": {
+    "at": 1792450883.125687,
+    "returncode": 2
+  },
   "original_scientific_sources_unchanged": true
 }

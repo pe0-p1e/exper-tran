@@ -1,0 +1,1066 @@
+{
+  "generated_utc": "2026-10-20T02:02:56Z",
+  "campaign": "commercial CLI frozen-method evaluation; same clean/adversarial PNG manifest; no target feedback used to select attacks",
+  "current_access": {
+    "gemini_agy": {
+      "completed": true,
+      "ten_finished": null,
+      "models": {
+        "gemini_38_flash_low:dev10": {
+          "status": "BLOCKED",
+          "reason": "Antigravity login/catalog unavailable",
+          "finished": 1792461708.5228877
+        },
+        "gemini_38_flash_high:dev10": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461709.5951598
+        },
+        "gemini_38_flash_medium:dev10": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461709.5951643
+        },
+        "gemini_38_flash_low:test150": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461709.5957015
+        },
+        "gemini_38_flash_high:test150": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461709.5957355
+        },
+        "gemini_38_flash_medium:test150": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461709.5957365
+        }
+      }
+    },
+    "claude": {
+      "completed": true,
+      "ten_finished": null,
+      "models": {
+        "claude_sonnet_46:dev10": {
+          "status": "BLOCKED",
+          "reason": "Antigravity login/catalog unavailable",
+          "finished": 1792461708.9840434
+        },
+        "claude_opus_46:dev10": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461710.1987045
+        },
+        "claude_sonnet_46:test150": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461710.1991873
+        },
+        "claude_opus_46:test150": {
+          "status": "BLOCKED",
+          "reason": "Provider account eligibility blocked; no model request issued",
+          "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+          "finished": 1792461710.1991894
+        }
+      }
+    },
+    "codex": {
+      "completed": true,
+      "ten_finished": 1792461708.9644854,
+      "models": {
+        "openai_61_sol:dev10": {
+          "status": "COMPLETE",
+          "finished": 1792461707.5800393,
+          "completed_requests": 20
+        },
+        "openai_6_sol:dev10": {
+          "status": "COMPLETE",
+          "finished": 1792461707.8147504,
+          "completed_requests": 20
+        },
+        "openai_56_sol:dev10": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-sol', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-sol']' returned non-zero exit status 1.",
+          "finished": 1792461708.0519109
+        },
+        "openai_6_astra:dev10": {
+          "status": "COMPLETE",
+          "finished": 1792461708.2903037,
+          "completed_requests": 20
+        },
+        "openai_6_luna:dev10": {
+          "status": "COMPLETE",
+          "finished": 1792461708.5150678,
+          "completed_requests": 20
+        },
+        "openai_56_terra:dev10": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-terra', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-terra']' returned non-zero exit status 1.",
+          "finished": 1792461708.7533367
+        },
+        "openai_56_luna:dev10": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-luna', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-luna']' returned non-zero exit status 1.",
+          "finished": 1792461708.964051
+        },
+        "openai_61_sol:test150": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6.1-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6.1-sol']' returned non-zero exit status 1.",
+          "finished": 1792461709.2401648
+        },
+        "openai_6_sol:test150": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-sol']' returned non-zero exit status 1.",
+          "finished": 1792461709.5097044
+        },
+        "openai_56_sol:test150": {
+          "status": "BLOCKED",
+          "reason": "Ten-image interface incomplete; no ASR selection"
+        },
+        "openai_6_astra:test150": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-astra', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-astra']' returned non-zero exit status 1.",
+          "finished": 1792461709.8250637
+        },
+        "openai_6_luna:test150": {
+          "status": "BLOCKED",
+          "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-luna', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-luna']' returned non-zero exit status 1.",
+          "finished": 1792461710.1000044
+        },
+        "openai_56_terra:test150": {
+          "status": "BLOCKED",
+          "reason": "Ten-image interface incomplete; no ASR selection"
+        },
+        "openai_56_luna:test150": {
+          "status": "BLOCKED",
+          "reason": "Ten-image interface incomplete; no ASR selection"
+        }
+      }
+    }
+  },
+  "dev10_models": {
+    "gpt-6.1-sol": {
+      "matrix_id": "openai_61_sol",
+      "provider": "codex",
+      "model": "gpt-6.1-sol",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "4",
+      "denominator": "10",
+      "ASR": "0.4",
+      "observed_hits": "4",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "4",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.4",
+      "invalid_replies": "0",
+      "reason": "",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-6-sol": {
+      "matrix_id": "openai_6_sol",
+      "provider": "codex",
+      "model": "gpt-6-sol",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "8",
+      "denominator": "10",
+      "ASR": "0.8",
+      "observed_hits": "8",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "8",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.8",
+      "invalid_replies": "0",
+      "reason": "",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-5.6-sol": {
+      "matrix_id": "openai_56_sol",
+      "provider": "codex",
+      "model": "gpt-5.6-sol",
+      "status": "BLOCKED",
+      "completed_requests": "6",
+      "planned_requests": "20",
+      "hits": "",
+      "denominator": "10",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "1",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-sol', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-sol']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-6-astra": {
+      "matrix_id": "openai_6_astra",
+      "provider": "codex",
+      "model": "gpt-6-astra",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "5",
+      "denominator": "10",
+      "ASR": "0.5",
+      "observed_hits": "5",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "5",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.5",
+      "invalid_replies": "0",
+      "reason": "",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-6-luna": {
+      "matrix_id": "openai_6_luna",
+      "provider": "codex",
+      "model": "gpt-6-luna",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "6",
+      "denominator": "10",
+      "ASR": "0.6",
+      "observed_hits": "6",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "6",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.6",
+      "invalid_replies": "0",
+      "reason": "",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-5.6-terra": {
+      "matrix_id": "openai_56_terra",
+      "provider": "codex",
+      "model": "gpt-5.6-terra",
+      "status": "BLOCKED",
+      "completed_requests": "12",
+      "planned_requests": "20",
+      "hits": "",
+      "denominator": "10",
+      "ASR": "",
+      "observed_hits": "2",
+      "observed_pairs": "4",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-terra', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-terra']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-5.6-luna": {
+      "matrix_id": "openai_56_luna",
+      "provider": "codex",
+      "model": "gpt-5.6-luna",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "20",
+      "hits": "",
+      "denominator": "10",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-luna', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-luna']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gemini-3.8-flash-low": {
+      "matrix_id": "gemini_38_flash_low",
+      "provider": "gemini_agy",
+      "model": "gemini-3.8-flash-low",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "5",
+      "denominator": "10",
+      "ASR": "0.5",
+      "observed_hits": "5",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "5",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.5",
+      "invalid_replies": "0",
+      "reason": "Antigravity login/catalog unavailable",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gemini-3.8-flash-high": {
+      "matrix_id": "gemini_38_flash_high",
+      "provider": "gemini_agy",
+      "model": "gemini-3.8-flash-high",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "4",
+      "denominator": "10",
+      "ASR": "0.4",
+      "observed_hits": "4",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "4",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.4",
+      "invalid_replies": "0",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gemini-3.8-flash-medium": {
+      "matrix_id": "gemini_38_flash_medium",
+      "provider": "gemini_agy",
+      "model": "gemini-3.8-flash-medium",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "4",
+      "denominator": "10",
+      "ASR": "0.4",
+      "observed_hits": "4",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "4",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.4",
+      "invalid_replies": "0",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "claude-sonnet-4-6": {
+      "matrix_id": "claude_sonnet_46",
+      "provider": "claude",
+      "model": "claude-sonnet-4-6",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "8",
+      "denominator": "10",
+      "ASR": "0.8",
+      "observed_hits": "8",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "8",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.8",
+      "invalid_replies": "0",
+      "reason": "Antigravity login/catalog unavailable",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "claude-opus-4-6-thinking": {
+      "matrix_id": "claude_opus_46",
+      "provider": "claude",
+      "model": "claude-opus-4-6-thinking",
+      "status": "COMPLETE",
+      "completed_requests": "20",
+      "planned_requests": "20",
+      "hits": "6",
+      "denominator": "10",
+      "ASR": "0.6",
+      "observed_hits": "6",
+      "observed_pairs": "10",
+      "clean_correct": "10",
+      "clean_correct_conditional_hits": "6",
+      "clean_correct_conditional_denominator": "10",
+      "clean_correct_conditional_ASR": "0.6",
+      "invalid_replies": "1",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    }
+  },
+  "test150_models": {
+    "gpt-6.1-sol": {
+      "matrix_id": "openai_61_sol",
+      "provider": "codex",
+      "model": "gpt-6.1-sol",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6.1-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6.1-sol']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-6-sol": {
+      "matrix_id": "openai_6_sol",
+      "provider": "codex",
+      "model": "gpt-6-sol",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-sol']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-5.6-sol": {
+      "matrix_id": "openai_56_sol",
+      "provider": "codex",
+      "model": "gpt-5.6-sol",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Ten-image interface incomplete; no ASR selection",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-6-astra": {
+      "matrix_id": "openai_6_astra",
+      "provider": "codex",
+      "model": "gpt-6-astra",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-astra', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-astra']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-6-luna": {
+      "matrix_id": "openai_6_luna",
+      "provider": "codex",
+      "model": "gpt-6-luna",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-luna', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-luna']' returned non-zero exit status 1.",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-5.6-terra": {
+      "matrix_id": "openai_56_terra",
+      "provider": "codex",
+      "model": "gpt-5.6-terra",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Ten-image interface incomplete; no ASR selection",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gpt-5.6-luna": {
+      "matrix_id": "openai_56_luna",
+      "provider": "codex",
+      "model": "gpt-5.6-luna",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Ten-image interface incomplete; no ASR selection",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gemini-3.8-flash-low": {
+      "matrix_id": "gemini_38_flash_low",
+      "provider": "gemini_agy",
+      "model": "gemini-3.8-flash-low",
+      "status": "COMPLETE",
+      "completed_requests": "300",
+      "planned_requests": "300",
+      "hits": "104",
+      "denominator": "150",
+      "ASR": "0.6933333333333334",
+      "observed_hits": "104",
+      "observed_pairs": "150",
+      "clean_correct": "150",
+      "clean_correct_conditional_hits": "104",
+      "clean_correct_conditional_denominator": "150",
+      "clean_correct_conditional_ASR": "0.6933333333333334",
+      "invalid_replies": "0",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gemini-3.8-flash-high": {
+      "matrix_id": "gemini_38_flash_high",
+      "provider": "gemini_agy",
+      "model": "gemini-3.8-flash-high",
+      "status": "COMPLETE",
+      "completed_requests": "300",
+      "planned_requests": "300",
+      "hits": "102",
+      "denominator": "150",
+      "ASR": "0.68",
+      "observed_hits": "102",
+      "observed_pairs": "150",
+      "clean_correct": "150",
+      "clean_correct_conditional_hits": "102",
+      "clean_correct_conditional_denominator": "150",
+      "clean_correct_conditional_ASR": "0.68",
+      "invalid_replies": "4",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "gemini-3.8-flash-medium": {
+      "matrix_id": "gemini_38_flash_medium",
+      "provider": "gemini_agy",
+      "model": "gemini-3.8-flash-medium",
+      "status": "COMPLETE",
+      "completed_requests": "300",
+      "planned_requests": "300",
+      "hits": "102",
+      "denominator": "150",
+      "ASR": "0.68",
+      "observed_hits": "102",
+      "observed_pairs": "150",
+      "clean_correct": "150",
+      "clean_correct_conditional_hits": "102",
+      "clean_correct_conditional_denominator": "150",
+      "clean_correct_conditional_ASR": "0.68",
+      "invalid_replies": "0",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "claude-sonnet-4-6": {
+      "matrix_id": "claude_sonnet_46",
+      "provider": "claude",
+      "model": "claude-sonnet-4-6",
+      "status": "BLOCKED",
+      "completed_requests": "102",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "13",
+      "observed_pairs": "15",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    },
+    "claude-opus-4-6-thinking": {
+      "matrix_id": "claude_opus_46",
+      "provider": "claude",
+      "model": "claude-opus-4-6-thinking",
+      "status": "BLOCKED",
+      "completed_requests": "0",
+      "planned_requests": "300",
+      "hits": "",
+      "denominator": "150",
+      "ASR": "",
+      "observed_hits": "0",
+      "observed_pairs": "0",
+      "clean_correct": "",
+      "clean_correct_conditional_hits": "",
+      "clean_correct_conditional_denominator": "",
+      "clean_correct_conditional_ASR": "",
+      "invalid_replies": "0",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "legacy_conditional_TASR": "N/A"
+    }
+  },
+  "test150_directions": [
+    {
+      "matrix_id": "openai_61_sol",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_61_sol",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_61_sol",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_61_sol",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_61_sol",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_sol",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_sol",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_sol",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_sol",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_sol",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_sol",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_sol",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_sol",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_sol",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_sol",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_astra",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_astra",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_astra",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_astra",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_astra",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_luna",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_luna",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_luna",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_luna",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_6_luna",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_terra",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_terra",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_terra",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_terra",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_terra",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_luna",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_luna",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_luna",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_luna",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "openai_56_luna",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "gemini_38_flash_low",
+      "transition": "T01",
+      "hits": "21",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_low",
+      "transition": "T03",
+      "hits": "20",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_low",
+      "transition": "T05",
+      "hits": "20",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_low",
+      "transition": "T07",
+      "hits": "30",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_low",
+      "transition": "T09",
+      "hits": "13",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_high",
+      "transition": "T01",
+      "hits": "21",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_high",
+      "transition": "T03",
+      "hits": "21",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_high",
+      "transition": "T05",
+      "hits": "18",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_high",
+      "transition": "T07",
+      "hits": "30",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_high",
+      "transition": "T09",
+      "hits": "12",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_medium",
+      "transition": "T01",
+      "hits": "21",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_medium",
+      "transition": "T03",
+      "hits": "20",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_medium",
+      "transition": "T05",
+      "hits": "19",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_medium",
+      "transition": "T07",
+      "hits": "30",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "gemini_38_flash_medium",
+      "transition": "T09",
+      "hits": "12",
+      "denominator": "30",
+      "completed_pairs": "30"
+    },
+    {
+      "matrix_id": "claude_sonnet_46",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "2"
+    },
+    {
+      "matrix_id": "claude_sonnet_46",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "1"
+    },
+    {
+      "matrix_id": "claude_sonnet_46",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "3"
+    },
+    {
+      "matrix_id": "claude_sonnet_46",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "6"
+    },
+    {
+      "matrix_id": "claude_sonnet_46",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "3"
+    },
+    {
+      "matrix_id": "claude_opus_46",
+      "transition": "T01",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "claude_opus_46",
+      "transition": "T03",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "claude_opus_46",
+      "transition": "T05",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "claude_opus_46",
+      "transition": "T07",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    },
+    {
+      "matrix_id": "claude_opus_46",
+      "transition": "T09",
+      "hits": "",
+      "denominator": "30",
+      "completed_pairs": "0"
+    }
+  ],
+  "interpretation": {
+    "gpt": "4 models completed same 10-image dev cohort; test150 was attempted only for those models, but Codex returned a subscription usage-limit error on the first request. No automatic retry was made. Other GPT models lacked complete dev10 eligibility.",
+    "antigravity": "Current agy models preflight returned PERMISSION_DENIED (403): service disabled for account eligibility. The provider lane issued no model inference requests in this run. Earlier valid Gemini/Claude records are retained and independently aggregated from their frozen-image trace artifacts.",
+    "claude_partial": "Claude Sonnet has 15 complete clean/adversarial pairs among 150 (102/300 requests); this is partial and no 150-image ASR is reported. Opus has no test150 complete pairs."
+  },
+  "caveats": [
+    "Gemini 150-image records predate this parallel-lane launch and were reused after request identity, image/prompt hashes, client trace, parser, and fresh-session checks.",
+    "The current Antigravity account-level 403 blocks new Gemini and Claude calls; it does not invalidate previously completed records.",
+    "10-image results are a smoke check and are too small for strong population claims.",
+    "Closed model backend snapshots and weight precision are not exposed by the CLI; only exact requested model IDs and client route are recorded."
+  ]
+}

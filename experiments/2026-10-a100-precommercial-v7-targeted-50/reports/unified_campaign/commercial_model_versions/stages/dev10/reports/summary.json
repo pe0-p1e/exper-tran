@@ -1,6 +1,6 @@
 {
   "stage": "dev10",
-  "updated": 1792437542.4423378,
+  "updated": 1792461720.6293592,
   "models": [
     {
       "matrix_id": "openai_61_sol",
@@ -159,7 +159,7 @@
       "clean_correct_conditional_denominator": 10,
       "clean_correct_conditional_ASR": 0.5,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Antigravity login/catalog unavailable",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -179,7 +179,7 @@
       "clean_correct_conditional_denominator": 10,
       "clean_correct_conditional_ASR": 0.4,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -199,7 +199,7 @@
       "clean_correct_conditional_denominator": 10,
       "clean_correct_conditional_ASR": 0.4,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -219,7 +219,7 @@
       "clean_correct_conditional_denominator": 10,
       "clean_correct_conditional_ASR": 0.8,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Antigravity login/catalog unavailable",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -239,7 +239,7 @@
       "clean_correct_conditional_denominator": 10,
       "clean_correct_conditional_ASR": 0.6,
       "invalid_replies": 1,
-      "reason": "",
+      "reason": "Provider account eligibility blocked; no model request issued",
       "legacy_conditional_TASR": "N/A"
     }
   ],

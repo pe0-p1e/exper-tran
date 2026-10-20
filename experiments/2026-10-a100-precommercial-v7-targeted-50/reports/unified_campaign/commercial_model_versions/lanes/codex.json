@@ -1,0 +1,83 @@
+{
+  "provider": "codex",
+  "pid": 160441,
+  "models": {
+    "openai_61_sol:dev10": {
+      "status": "COMPLETE",
+      "finished": 1792461707.5800393,
+      "completed_requests": 20
+    },
+    "openai_6_sol:dev10": {
+      "status": "COMPLETE",
+      "finished": 1792461707.8147504,
+      "completed_requests": 20
+    },
+    "openai_56_sol:dev10": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-sol', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-sol']' returned non-zero exit status 1.",
+      "finished": 1792461708.0519109
+    },
+    "openai_6_astra:dev10": {
+      "status": "COMPLETE",
+      "finished": 1792461708.2903037,
+      "completed_requests": 20
+    },
+    "openai_6_luna:dev10": {
+      "status": "COMPLETE",
+      "finished": 1792461708.5150678,
+      "completed_requests": 20
+    },
+    "openai_56_terra:dev10": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-terra', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-terra']' returned non-zero exit status 1.",
+      "finished": 1792461708.7533367
+    },
+    "openai_56_luna:dev10": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-luna', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-luna']' returned non-zero exit status 1.",
+      "finished": 1792461708.964051
+    },
+    "openai_61_sol:test150": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6.1-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6.1-sol']' returned non-zero exit status 1.",
+      "finished": 1792461709.2401648
+    },
+    "openai_6_sol:test150": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-sol']' returned non-zero exit status 1.",
+      "finished": 1792461709.5097044
+    },
+    "openai_56_sol:test150": {
+      "status": "BLOCKED",
+      "reason": "Ten-image interface incomplete; no ASR selection"
+    },
+    "openai_6_astra:test150": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-astra', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-astra']' returned non-zero exit status 1.",
+      "finished": 1792461709.8250637
+    },
+    "openai_6_luna:test150": {
+      "status": "BLOCKED",
+      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-luna', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-luna']' returned non-zero exit status 1.",
+      "finished": 1792461710.1000044
+    },
+    "openai_56_terra:test150": {
+      "status": "BLOCKED",
+      "reason": "Ten-image interface incomplete; no ASR selection"
+    },
+    "openai_56_luna:test150": {
+      "status": "BLOCKED",
+      "reason": "Ten-image interface incomplete; no ASR selection"
+    }
+  },
+  "started": 1792461707.3340497,
+  "completed": true,
+  "ten_finished": 1792461708.9644854,
+  "full_eligible": [
+    "openai_61_sol",
+    "openai_6_astra",
+    "openai_6_luna",
+    "openai_6_sol"
+  ],
+  "finished": 1792461710.1017802
+}

@@ -1,0 +1,13 @@
+{
+  "at": 1792461707.18188,
+  "pid": 160410,
+  "reason": "User prioritizes Gemini/Claude; replace serial commercial coordinators with independent account lanes",
+  "changed_model_image_prompt_effort": false,
+  "model_source_lock_preserved": true,
+  "max_simultaneous_provider_lanes": 3,
+  "gpu_controller_unchanged": true,
+  "sources": {
+    "commercial_provider_lane.py": "bd61762d312cad596642cab767c7b023403a77db1226a39a19025f1281025c23",
+    "commercial_parallel_campaign.py": "0431c936562b84dc4381da95900c20d97542bd1af94f7e9b17c26be57e03840e"
+  }
+}

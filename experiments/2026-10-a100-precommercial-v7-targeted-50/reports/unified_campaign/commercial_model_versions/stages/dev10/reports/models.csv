@@ -6,8 +6,8 @@ openai_6_astra,codex,gpt-6-astra,COMPLETE,20,20,5,10,0.5,5,10,10,5,10,0.5,0,,N/A
 openai_6_luna,codex,gpt-6-luna,COMPLETE,20,20,6,10,0.6,6,10,10,6,10,0.6,0,,N/A
 openai_56_terra,codex,gpt-5.6-terra,BLOCKED,12,20,,10,,2,4,,,,,0,"Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-terra', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-terra']' returned non-zero exit status 1.",N/A
 openai_56_luna,codex,gpt-5.6-luna,BLOCKED,0,20,,10,,0,0,,,,,0,"Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-5.6-luna', '--images', '10', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_pilot10', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/dev10/commercial_cli/codex/gpt-5.6-luna']' returned non-zero exit status 1.",N/A
-gemini_38_flash_low,gemini_agy,gemini-3.8-flash-low,COMPLETE,20,20,5,10,0.5,5,10,10,5,10,0.5,0,,N/A
-gemini_38_flash_high,gemini_agy,gemini-3.8-flash-high,COMPLETE,20,20,4,10,0.4,4,10,10,4,10,0.4,0,,N/A
-gemini_38_flash_medium,gemini_agy,gemini-3.8-flash-medium,COMPLETE,20,20,4,10,0.4,4,10,10,4,10,0.4,0,,N/A
-claude_sonnet_46,claude,claude-sonnet-4-6,COMPLETE,20,20,8,10,0.8,8,10,10,8,10,0.8,0,,N/A
-claude_opus_46,claude,claude-opus-4-6-thinking,COMPLETE,20,20,6,10,0.6,6,10,10,6,10,0.6,1,,N/A
+gemini_38_flash_low,gemini_agy,gemini-3.8-flash-low,COMPLETE,20,20,5,10,0.5,5,10,10,5,10,0.5,0,Antigravity login/catalog unavailable,N/A
+gemini_38_flash_high,gemini_agy,gemini-3.8-flash-high,COMPLETE,20,20,4,10,0.4,4,10,10,4,10,0.4,0,Provider account eligibility blocked; no model request issued,N/A
+gemini_38_flash_medium,gemini_agy,gemini-3.8-flash-medium,COMPLETE,20,20,4,10,0.4,4,10,10,4,10,0.4,0,Provider account eligibility blocked; no model request issued,N/A
+claude_sonnet_46,claude,claude-sonnet-4-6,COMPLETE,20,20,8,10,0.8,8,10,10,8,10,0.8,0,Antigravity login/catalog unavailable,N/A
+claude_opus_46,claude,claude-opus-4-6-thinking,COMPLETE,20,20,6,10,0.6,6,10,10,6,10,0.6,1,Provider account eligibility blocked; no model request issued,N/A

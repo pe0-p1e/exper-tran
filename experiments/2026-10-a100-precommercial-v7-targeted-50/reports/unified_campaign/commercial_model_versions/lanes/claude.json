@@ -1,0 +1,32 @@
+{
+  "provider": "claude",
+  "pid": 160443,
+  "models": {
+    "claude_sonnet_46:dev10": {
+      "status": "BLOCKED",
+      "reason": "Antigravity login/catalog unavailable",
+      "finished": 1792461708.9840434
+    },
+    "claude_opus_46:dev10": {
+      "status": "BLOCKED",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+      "finished": 1792461710.1987045
+    },
+    "claude_sonnet_46:test150": {
+      "status": "BLOCKED",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+      "finished": 1792461710.1991873
+    },
+    "claude_opus_46:test150": {
+      "status": "BLOCKED",
+      "reason": "Provider account eligibility blocked; no model request issued",
+      "provider_error": "Fetching available models...\nError: Eligibility check failed: PERMISSION_DENIED (code 403): This service has been disabled in this account for violation of Terms of Service. Please submit an appeal to continue using this product.\n\nSubmit Appeal:\nhttps://forms.gle/hGzM9MEUv2azZsrb9",
+      "finished": 1792461710.1991894
+    }
+  },
+  "started": 1792461707.3708303,
+  "completed": true,
+  "finished": 1792461710.1991913
+}
