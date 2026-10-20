@@ -16,7 +16,9 @@ def archive(push=False):
             'model_matrix_lock.json','model_locks/*.json','parallel_orchestration_addendum.json','lanes/*.json',
             'reports/*.json','reports/*.md','stages/*/reports/*.json','stages/*/reports/*.csv','stages/*/reports/*.md','stages/*/cohort_lock.json'],
         'mechanism_reference':['*.csv','*.json','*.md'],
-        'surrogate_followup':['method_lock.json','progress.json','analysis/*.csv','analysis/status.json','embeddings/*/*.json'],
+        'mechanism_gradients':['*.csv','*.json'],
+        'surrogate_followup':['method_lock.json','progress.json','analysis/*.csv','analysis/status.json',
+            'analysis/spearman.png','analysis/joint/*/*/*_coordinates.csv','analysis/joint/*/*/fit.json','embeddings/*/*.json'],
         'unified_scheduler':['adoption.json','completion.json','resource_status.json']}
     for folder,patterns in sources.items():
         for pattern in patterns:
