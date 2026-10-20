@@ -13,7 +13,8 @@ def archive(push=False):
     repo=EXP.parents[1];target=EXP/'reports/unified_campaign';target.mkdir(parents=True,exist_ok=True)
     sources={
         'commercial_model_versions':['access/*.json','ten_to_full_gate.json','campaign_completion.json','full_interface_verified_models.json',
-            'model_matrix_lock.json','model_locks/*.json','stages/*/reports/*.json','stages/*/reports/*.csv','stages/*/reports/*.md','stages/*/cohort_lock.json'],
+            'model_matrix_lock.json','model_locks/*.json','parallel_orchestration_addendum.json','lanes/*.json',
+            'reports/*.json','reports/*.md','stages/*/reports/*.json','stages/*/reports/*.csv','stages/*/reports/*.md','stages/*/cohort_lock.json'],
         'mechanism_reference':['*.csv','*.json','*.md'],
         'surrogate_followup':['method_lock.json','progress.json','analysis/*.csv','analysis/status.json','embeddings/*/*.json'],
         'unified_scheduler':['adoption.json','completion.json','resource_status.json']}
