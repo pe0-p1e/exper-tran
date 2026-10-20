@@ -1,0 +1,18 @@
+# Closest literature and honest implementation distinctions
+
+| Work | Relevant component | Current V8 relationship |
+|---|---|---|
+|[ILA,ICCV2019](https://arxiv.org/abs/1907.10823)|Baseline displacement projection and source disturbance-based layer heuristic|Background only; V8 does not reproduce displacement optimization|
+|[FDA+ms,ICLR2020](https://kevinjliang.github.io/files/Feature_Distribution_Attack.pdf)|Increase target feature-class probability, decrease source probability|Related pull/push idea; learned probabilities differ from cosine prototypes|
+|[FDA(N),NeurIPS2020](https://proceedings.neurips.cc/paper/2020/file/eefc7bfe8fd6e2c8c01aa6ca7b1aab1a-Paper.pdf)|Conditional greedy layer subsets, multi-layer distribution attack|Selection adaptation only; no auxiliary class heads or xent; supplementC leaves multi-model combination to future work|
+|[FIA,ICCV2021](https://openaccess.thecvf.com/content/ICCV2021/html/Wang_Feature_Importance-Aware_Transferable_Adversarial_Attacks_ICCV_2021_paper.html)|Input-mask aggregated feature importance|No logit-derived feature weighting in V8|
+|[Gao,TMM2022](https://doi.org/10.1109/TMM.2021.3079723)|Push/Pull attentive features and class-centroid triplet loss|Close objective prior; exact full-paper comparison remains pending|
+|[AdaEA,ICCV2023](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_An_Adaptive_Model_Ensemble_Adversarial_Attack_for_Boosting_Adversarial_Transferability_ICCV_2023_paper.html)|Adaptive model contribution and update synchronization|Diagnostic inspiration; primary V8 equal fusion unchanged|
+|[FiT,ICCV2023](https://openaccess.thecvf.com/content/ICCV2023/html/Maho_How_to_Choose_your_Best_Allies_for_a_Transferable_Attack_ICCV_2023_paper.html)|Surrogate selection with target-query assistance|Not reproduced; final-target query selection is forbidden; full text must be checked before exact claims|
+|[FOA,NeurIPS2025](https://papers.neurips.cc/paper_files/paper/2025/hash/540a3bf4863672cdaebfed69fa2ce335-Abstract-Conference.html)|Visual cosine/global and clustered OT/local alignment, dynamic ensemble|Directly relevant prior; V8 has no OT,patch objective or adaptive weighting|
+|[FTM,CVPR2025](https://arxiv.org/html/2411.15553v2)|Multilayer feature perturbations, copied/heterogeneous ensembles, logit objective|Joint model/layer-related prior; V8 directly optimizes visual prototypes|
+|[MFAA,TIFS2025](https://ieeexplore.ieee.org/document/10833658/)|Multilayer attention/importance, ensemble experiments|Public ens flag counts input masks, not model count; exact ensemble configuration remains pending|
+|[Yao,ICML2025](https://proceedings.mlr.press/v267/yao25f.html)|Transferability error, prediction diversity and complexity bounds|Motivation, not an automatic theorem for our cosine loss/CKA/gradient metrics|
+|[SEA,arXiv2505.12644](https://arxiv.org/abs/2505.12644)|Distinguishes within-iteration versus cross-iteration diversity under fixed per-step model count|Optional future adaptation; current V8 uses all selected proxies each step, no round-robin labeled SEA|
+
+No claim of first multi-model/multi-layer attack or proven universal representation. Research question: does native model–layer useful complementarity explain conditional transfer gains under measured cost? Same-language-family names may hide near-identical vision towers. Actual weight fingerprint, directed gains and matched attacks are needed; lowCKA alone is not useful novelty.
