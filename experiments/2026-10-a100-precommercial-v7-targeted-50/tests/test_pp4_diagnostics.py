@@ -45,3 +45,17 @@ def test_bounded_plan_has_no_targets_and_no_full_matrix():
     assert all(not(set(r['condition']['models'])&set(VALIDATORS)) for r in rows)
     assert all(r['condition']['split']=='dev' for r in rows)
     assert all(r['condition']['steps']==50 for r in rows)
+
+
+def test_composition_ratio_pairs_preserve_every_other_setting():
+    from pp4_composition_plan import plan,COMBINATIONS,VALIDATORS
+    rows=plan()['ladder']
+    assert len(rows)==26 and len(COMBINATIONS)==13
+    assert len({r['condition']['id'] for r in rows})==26
+    for group,models in COMBINATIONS:
+        pair=[r['condition'] for r in rows if r['group']==group]
+        assert {c['options']['pull_weight'] for c in pair}=={.5,.75}
+        assert all(c['models']==models and not(set(models)&set(VALIDATORS)) for c in pair)
+        a,b=[{k:v for k,v in c['options'].items() if k not in ['pull_weight','push_weight']} for c in pair]
+        assert a==b
+        assert all(c['options']['patch_weight']==0 and c['di'] and c['steps']==50 for c in pair)

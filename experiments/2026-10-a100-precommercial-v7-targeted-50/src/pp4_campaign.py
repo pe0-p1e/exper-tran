@@ -14,6 +14,8 @@ import numpy as np
 import run_proxy_study as previous
 from pp4_protocol import ROOT,PREVIOUS,OUT,EXP,VALIDATORS,plan,freeze,attack_status,validation_path,sha,atomic_json,development_ids,fingerprint
 
+WORKER_SCRIPT=EXP/'src/pp4_worker.py'
+
 
 def reuse_controls(p):
     from unified_research_plan import conditions,condition_name,status
@@ -116,7 +118,8 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--preflight',action='store_true');parser.add_argument('--takeover',action='store_true');args=parser.parse_args()
     p=freeze();reuse_controls(p)
     if args.preflight:
-        print('PASS: 2 combinations;14 unique conditions;2 reused controls;4 additional weight conditions;no target/commercial calls')
+        unique={r['condition']['id'] for r in p['ladder']+p['weights']}
+        print(f'PASS: {len(unique)} unique development conditions; no target/commercial calls')
         report(p,{});return
     old_state_path=PREVIOUS/'unified_scheduler/state.json'
     if args.takeover:
@@ -205,7 +208,7 @@ def main():
             mem={line.split(':')[0]:int(line.split()[1]) for line in Path('/proc/meminfo').read_text().splitlines() if ':' in line and len(line.split())>1 and line.split()[1].isdigit()}
             if mem['MemAvailable']/2**20<12:continue
             log=ROOT/'logs'/(c['id']+'_'+phase+'_'+models[0].replace('/','_')+'.log');log.parent.mkdir(parents=True,exist_ok=True)
-            stream=log.open('a');cmd=[sys.executable,str(EXP/'src/pp4_worker.py'),phase,'--condition',c['id']]
+            stream=log.open('a');cmd=[sys.executable,str(WORKER_SCRIPT),phase,'--condition',c['id']]
             if phase=='validate':cmd+=['--model',models[0]]
             env={**os.environ,'SUPPLEMENT_MEMORY_CAP_GIB':str(reserve-.4)}
             proc=subprocess.Popen(cmd,stdout=stream,stderr=subprocess.STDOUT,env=env,start_new_session=True)

@@ -5,11 +5,13 @@ import json
 import shutil
 import subprocess
 import time
-from pp4_protocol import ROOT,PREVIOUS,EXP,atomic_json
+from pp4_protocol import ROOT,PREVIOUS,EXP,OUT,atomic_json
+
+DEST_FOLDER='pull_push_diagnostics'
 
 
 def publish():
-    repo=EXP.parents[1];dest=EXP/'reports/pull_push_diagnostics';dest.mkdir(parents=True,exist_ok=True)
+    repo=EXP.parents[1];dest=EXP/'reports'/DEST_FOLDER;dest.mkdir(parents=True,exist_ok=True)
     patterns=['protocol_lock.json','progress.json','completion.json','commercial_approval.json',
               'resource_status.json','configs/*.json','reuse/*.json','validation/*/*.json','reports/*.csv','reports/*.md']
     for pattern in patterns:
@@ -29,7 +31,10 @@ def publish():
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--watch',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--watch',action='store_true')
+    parser.add_argument('--composition',action='store_true');args=parser.parse_args()
+    if args.composition:
+        ROOT=OUT/'pull_push_composition_ablation';DEST_FOLDER='pull_push_composition_ablation'
     if args.watch:
         while not (ROOT/'completion.json').exists():time.sleep(30)
     publish()
