@@ -38,7 +38,7 @@ class CoreTests(unittest.TestCase):
   self.assertEqual(R.failure_kind('shape mismatch',1),'code')
  def test_process_starttime_SIGTERM_SIGKILL(self):
   for sig in [signal.SIGTERM,signal.SIGKILL]:
-   p=subprocess.Popen(['sleep','10']);old=C.proc_identity(p.pid);self.assertTrue(C.same_process(old));p.send_signal(sig);p.wait();self.assertFalse(C.same_process(old))
+   p=subprocess.Popen(['sleep','10']);old=C.await_identity(p.pid,'sleep');self.assertTrue(C.same_process(old));p.send_signal(sig);p.wait();self.assertFalse(C.same_process(old))
  def test_lock_and_restart(self):
   import fcntl
   with tempfile.TemporaryDirectory() as d:

@@ -13,7 +13,7 @@ class RecoveryTests(unittest.TestCase):
    self.assertEqual(s['worker_limit'],3);self.assertEqual(s['microbatch'],1);self.assertEqual(s['attempts']['fake'],1);self.assertEqual(len(s['active']),0);self.assertFalse(s['blocked'])
  def test_bug_is_blocked_not_retried(self):
   with tempfile.TemporaryDirectory() as td:
-   root=Path(td);log=root/'worker.log';log.write_text('shape mismatch')
+   root=Path(td);log=root/'worker.log';log.write_text('Traceback: shape mismatch')
    j=dict(id='bad',mode='attack',condition='bad',reservation=20,process_identity=dict(pid=99999999,start='0',command='fake'),attempt=0,log=str(log))
    s=dict(active=[j],completed=[],failures=[],attempts={},blocked=[],retry_after={},worker_limit=2)
    with patch.object(S,'ROOT',root),patch.object(S,'complete',return_value=False):S.reconcile(s)
@@ -52,6 +52,16 @@ class RecoveryTests(unittest.TestCase):
 if __name__=='__main__':unittest.main()
 
 class IdentityRaceTests(unittest.TestCase):
+ def test_stage2_identity_matches_actual_cli_child(self):
+  from types import SimpleNamespace
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);(root/'logs').mkdir();pack=root/'pack'
+   fake=SimpleNamespace(pid=123,poll=lambda:0,returncode=0)
+   identity=dict(pid=123,start='1',command='python stage2_cli.py',state='R')
+   with patch.object(S,'ROOT',root),patch.object(S,'STOP',False),patch.object(S,'state_write'),patch.object(CLI,'prepare_packs',return_value=[pack]),patch.object(CLI,'summarize',return_value=True),patch.object(S.subprocess,'Popen',return_value=fake),patch.object(S,'await_identity',return_value=identity) as check:
+    self.assertTrue(S.run_stage2({},C.time.time()+10000))
+    self.assertEqual(check.call_count,2)
+    for call in check.call_args_list:self.assertEqual(call.args,(123,str(S.HERE/'stage2_cli.py')))
  def test_waits_for_child_exec_identity(self):
   identities=[dict(pid=1,state='R',command='',start='1'),dict(pid=1,state='R',command='python worker.py --job x',start='1')]
   with patch.object(C,'proc_identity',side_effect=identities):

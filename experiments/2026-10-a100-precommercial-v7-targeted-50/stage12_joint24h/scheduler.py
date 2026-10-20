@@ -81,7 +81,7 @@ def run_stage2(s,deadline):
    log=ROOT/'logs'/f'stage2_{pack.name}_{limit}.log'
    with log.open('a') as f:
     p=subprocess.Popen([sys.executable,str(HERE/'stage2_cli.py'),'--pack',str(pack),'--limit',str(limit)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
-   atomic(ROOT/'stage2/active.json',dict(process_identity=await_identity(p.pid,str(HERE/'worker.py')),method=pack.name,limit=limit,started=time.time()))
+   atomic(ROOT/'stage2/active.json',dict(process_identity=await_identity(p.pid,str(HERE/'stage2_cli.py')),method=pack.name,limit=limit,started=time.time()))
    while p.poll() is None:
     if time.time()>=deadline-3600 or STOP:
      p.terminate()
@@ -102,6 +102,7 @@ def main():
  signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGINT,stop)
  window=read(ROOT/'window.json');deadline=window['deadline']
  s=read(ROOT/'scheduler.json',dict(state='RUNNING',phase='CALIBRATION',active=[],completed=[],failures=[],attempts={},retry_after={},blocked=[],admitted=[],worker_limit=1,microbatch=1))
+ s['state']='RUNNING'
  # An interrupted Stage2 worker must be joined before another CLI process can start.
  old=read(ROOT/'stage2/active.json')
  if old and same_process(old['process_identity']):

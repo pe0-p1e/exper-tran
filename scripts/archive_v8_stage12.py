@@ -11,6 +11,8 @@ PATTERNS=['study_lock.json','window.json','method_lock.json','status.json','mani
  'amendments/*.json','preflight/environment.json','preflight/controller_restart_test_*.json','reports/*.csv','reports/*.md','reports/*.png',
  'reports/*.json','stage2/summary.json','stage2/blocker.json','stage2/pack_lock.json']
 def publish():
+ from analyze_v8_pairwise import generate
+ generate(ROOT)
  DEST.mkdir(parents=True,exist_ok=True)
  for pattern in PATTERNS:
   for path in ROOT.glob(pattern):
