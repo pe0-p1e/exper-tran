@@ -1,62 +1,36 @@
 {
-  "at": 1792488451.3306293,
+  "at": 1792489550.0091987,
   "gpu": {
-    "used_gib": 16.271484375,
-    "utilization": 77.0,
+    "used_gib": 15.1396484375,
+    "utilization": 0.0,
     "pids": [
-      337277,
-      337390,
-      337412
+      340603
     ]
   },
   "active": [
     {
       "kind": "pp4",
-      "condition": "PP4_908a8a6786334985",
-      "phase": "attack",
-      "models": [
-        "Qwen3.5-2B"
-      ],
-      "reserve": 7.122483849525452,
-      "pid": 337277,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation/logs/PP4_908a8a6786334985_attack_Qwen3.5-2B.log",
-      "started": 1792488398.470203
-    },
-    {
-      "kind": "pp4",
-      "condition": "PP4_6760d3b41884e1c1",
+      "condition": "PP4_83bc8a0f2f3939a8",
       "phase": "validate",
       "models": [
         "InternVL3.5-8B-HF"
       ],
       "reserve": 19.385231018066406,
-      "pid": 337390,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation/logs/PP4_6760d3b41884e1c1_validate_InternVL3.5-8B-HF.log",
-      "started": 1792488438.0749986
+      "pid": 340603,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation/logs/PP4_83bc8a0f2f3939a8_validate_InternVL3.5-8B-HF.log",
+      "started": 1792489543.462486
     },
     {
       "kind": "pp4",
-      "condition": "PP4_7b884e287747c033",
+      "condition": "PP4_c4b700742d76bfcf",
       "phase": "validate",
       "models": [
-        "InternVL3.5-8B-HF"
+        "Gemma 4 E4B-it"
       ],
-      "reserve": 19.385231018066406,
-      "pid": 337412,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation/logs/PP4_7b884e287747c033_validate_InternVL3.5-8B-HF.log",
-      "started": 1792488444.84467
-    },
-    {
-      "kind": "pp4",
-      "condition": "PP4_9953d4919ef17703",
-      "phase": "validate",
-      "models": [
-        "Qwen3.5-9B"
-      ],
-      "reserve": 21.02714392542839,
-      "pid": 337420,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation/logs/PP4_9953d4919ef17703_validate_Qwen3.5-9B.log",
-      "started": 1792488448.0433874
+      "reserve": 18.291452944278717,
+      "pid": 340613,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation/logs/PP4_c4b700742d76bfcf_validate_Gemma 4 E4B-it.log",
+      "started": 1792489546.6477377
     }
   ],
   "max_gpu_workers": 4,
