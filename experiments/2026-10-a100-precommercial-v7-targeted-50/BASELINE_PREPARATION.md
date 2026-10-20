@@ -1,6 +1,10 @@
 # Representation-attack baselines
 
-Prepared on 2026-10-20. Existing original13 full test work keeps GPU priority.
+Prepared on 2026-10-20. Execution order is superseded by the user override in
+[TRANSFER_MECHANISM_ABLATION.md](TRANSFER_MECHANISM_ABLATION.md): DI, gradient
+normalization, principled layer selection, then Pull/Push; study proxy
+complementarity subsequently. The24-row matrix below remains a prepared
+optimizer baseline inventory, not the active mechanism-study queue.
 Preparation does not launch a new full matrix or a commercial request.
 
 ## Comparisons already in progress

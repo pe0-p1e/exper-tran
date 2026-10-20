@@ -14,33 +14,87 @@ averaging, momentum1,50 steps, alpha1/255, eps16/255, seed42, one random start,
 loss or target feedback. Reference and GT-selected attack cohorts remain fixed
 and disjoint. Evaluation follows freezing and hashing all PNGs.
 
-## Primary controlled comparisons
+## Ordered user override —2026-10-20
 
-| ID | Change from reference | Question | Important control |
-|---|---|---|---|
-| M0 | None | Reference transfer level | Same images/seeds/reference bank |
-| M1 | Deepest layer only | Does aggregation across depths matter? | Keep DI and same proxies |
-| M2 | DI off | Does input transformation prevent surrogate overfitting? | Keep all four layers |
-| M3 | Deepest only AND DI off | Are depth aggregation and DI complementary? | Complete2x2 with M0/M1/M2 |
-| M4 | Pull only, weights1/0 | Is explicit source repulsion needed? | Same four layers and DI |
-| M5 | Push only, weights0/1 | Does source removal suffice for targeted movement? | Track off-target changes too |
-| M6 | Each ensemble member alone | Does combining proxies add transferable directions? | All members, not weakest single |
-| M7 | Leave one proxy out | Which member contributes and which is redundant? | Same remaining model order |
-| M8 | Remove per-proxy L1 normalization | Does gradient scale dominance matter? | Record effective contribution sizes |
-| M9 | Momentum0 | Does accumulating directions matter? | Needs isolated runner; original runner hardcodes1 |
-| C0 | Clean images | Natural target-label hit rate | Not assumed zero |
-| C1 | Fixed random perturbation within same bound | Does semantic optimization exceed random perturbation? | Fixed seed, no success selection |
+Investigate ONE mechanism at a time, in this order. The earlier proposal to start
+with deepest-layer controls or a broad factorial grid is superseded. Keep the
+frozen reference method as the common anchor. Later removals do not silently
+accumulate: each comparison changes only its declared factor. If a leaner method
+is later adopted, record a new version and retain bridges to the original anchor.
 
-M8 is a scale-dominance intervention, not a pure proxy-identity comparison.
-Momentum/sign updates can confound gradient scale and accumulation, so inspect
-update directions and step trajectories. Do not silently call the unchanged
-momentum1 runner a momentum0 implementation.
+### 1. Input diversity
 
-Stage1 prioritizes M0-M7 and C0/C1. M8/M9 follow only if gradient diagnostics
-justify them. No TI or patch component is added to the main method in this study.
-Restore an ablated component using the same seed/image/proxy order; compare the
-restored result to the locked reference to test reproducibility. This supports
-dependence under this protocol, not a universal necessity claim.
+Compare reference DI-on versus DI-off with identical .5/.5 loss, four layers,
+proxies, cohort, seed and budget. Reuse existing matching DI-on artifacts.
+Previously completed .75/.25 DI diagnostics are background evidence, not an exact
+replacement for the .5/.5 comparison. Track surrogate optimization versus target
+movement to distinguish overfitting from simply poorer optimization. Do not tune
+DI probability or add TI in this removal study.
+
+### 2. Per-proxy gradient normalization
+
+Keep the same reference DI setting and all other conditions. Compare equal mean
+of individually L1-normalized pixel gradients versus equal mean of raw pixel
+gradients; both retain momentum1 and sign projection. Record each proxy's raw
+L1 norm, norm ratio, contribution dominance, fused direction, gradient cosine
+and cancellation. A raw mean has equal numerical coefficients but not equal
+influence. Use at least a multi-proxy condition; a single-proxy scalar change
+alone is not a valid test of cross-proxy balancing.
+
+### 3. Which layer, how many layers, and why?
+
+First recover the previous single-layer sweep and its provenance. The comparator
+is the previously identified best eligible single layer, NOT automatically the
+deepest layer. Existing A3 single-layer and leave-one-layer-out results are
+historical evidence; their loss differs from pure Pull/Push, so their scores
+cannot be relabeled as current-method results. A single layer identified from
+final-target scores is descriptive only: choose any deployable rule using
+held-out surrogate development evidence, then freeze it before confirmation.
+
+Separate layer identity from count. Inspect existing 1/25/50/75/100% taps and
+actual block IDs. Compare the eligible dev-selected best single, a small
+predeclared two-layer set, three layers and the existing four; at fixed count,
+compare alternative layer identities rather than always taking a deeper prefix.
+Use leave-one-layer-out measurements to test marginal contribution. Avoid an
+exhaustive powerset. Every fixed proxy keeps its own actual layer mapping.
+
+Explain selection using per-layer semantic class margins/dispersion, gradient
+strength and alignment/conflict across layers, and cross-layer CKA/RSA on shared
+images. Four evenly spaced taps are an engineering starting point, not a proven
+optimum. Low redundancy is useful only if retained layers supply effective
+semantic optimization. This study should allow the conclusion that fewer layers
+suffice; no assumption that deeper or more layers must be better.
+
+### 4. Pull/Push balance
+
+Reuse the completed five-ratio .0/.25/.5/.75/1 grid and the completed13-composition
+.5-versus.75 dev comparison after exact provenance checks. Only fill missing
+matched controls; do not rerun the grid automatically. Interpret .5/.5 as equal
+coefficients for attraction and repulsion, not proof of equal gradient influence
+or a universal optimum. Report source and target gradient norms separately and
+use a few matched contrasts to assess the role of each term.
+
+### Proxy composition — a subsequent hypothesis study
+
+Working hypothesis: individually effective proxies with less redundant
+representation geometry may be more complementary. This is NOT a requirement
+to maximize orthogonality. CKA/RSA compare relational geometry; raw embeddings
+from different dimensional spaces have no directly meaningful shared dot-product
+angle. Distinguish low representation similarity, pixel-gradient orthogonality,
+and negative gradient conflict. Negative alignment may cancel useful updates.
+
+Hold loss, selected layers, normalization, DI, model count and image IDs fixed;
+compare more/less redundant compositions with similar standalone effectiveness
+and account for compute. Use matched member singles and leave-one-proxy-out
+results. Selection uses surrogate-only validation; actual target outcomes are
+post-freeze explanatory observations. Investigate this after the ordered
+component studies instead of launching another broad ensemble search now.
+
+Clean and fixed bounded random-noise controls remain descriptive anchors.
+Restore removed components with identical seed/image/model order when checking
+reproducibility. No new momentum, TI, patch or commercial campaign is included
+in this ordered scope. These interventions establish protocol-specific
+dependence, not universal necessity or a guarantee that transfer disappears.
 
 ## Separate optimization failure from transfer failure
 
