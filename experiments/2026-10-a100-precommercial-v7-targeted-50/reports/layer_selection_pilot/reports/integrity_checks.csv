@@ -1,0 +1,11 @@
+label,PNG_hashes_pass,cohort_pass,bounds_and_settings_pass
+single37p5,True,True,True
+single62p5,True,True,True
+single87p5,True,True,True
+single75,True,True,True
+two62p5_87p5,True,True,True
+four_uniform,True,True,True
+Intern_single,True,True,True
+Gemma_single,True,True,True
+CLIP_single,True,True,True
+Intern_Gemma_pair,True,True,True

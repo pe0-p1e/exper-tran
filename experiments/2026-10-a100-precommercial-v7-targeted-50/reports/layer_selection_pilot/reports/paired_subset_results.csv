@@ -1,0 +1,8 @@
+before,after,wins,losses,N
+single75,single87p5,0,0,10
+single62p5,two62p5_87p5,2,0,10
+single87p5,two62p5_87p5,0,0,10
+single75,four_uniform,2,0,10
+Intern_single,Intern_Gemma_pair,0,0,10
+Intern_Gemma_pair,four_uniform,2,0,10
+CLIP_single,four_uniform,2,0,10

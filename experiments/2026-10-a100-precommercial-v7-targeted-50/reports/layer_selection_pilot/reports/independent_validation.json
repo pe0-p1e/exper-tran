@@ -1,0 +1,59 @@
+{
+  "conditions": 10,
+  "model_image_observations": 100,
+  "unique_images": 10,
+  "audit_loads": 26,
+  "BF16_all_pass": true,
+  "final_targets_used": false,
+  "paired": [
+    {
+      "before": "single75",
+      "after": "single87p5",
+      "wins": 0,
+      "losses": 0,
+      "N": 10
+    },
+    {
+      "before": "single62p5",
+      "after": "two62p5_87p5",
+      "wins": 2,
+      "losses": 0,
+      "N": 10
+    },
+    {
+      "before": "single87p5",
+      "after": "two62p5_87p5",
+      "wins": 0,
+      "losses": 0,
+      "N": 10
+    },
+    {
+      "before": "single75",
+      "after": "four_uniform",
+      "wins": 2,
+      "losses": 0,
+      "N": 10
+    },
+    {
+      "before": "Intern_single",
+      "after": "Intern_Gemma_pair",
+      "wins": 0,
+      "losses": 0,
+      "N": 10
+    },
+    {
+      "before": "Intern_Gemma_pair",
+      "after": "four_uniform",
+      "wins": 2,
+      "losses": 0,
+      "N": 10
+    },
+    {
+      "before": "CLIP_single",
+      "after": "four_uniform",
+      "wins": 2,
+      "losses": 0,
+      "N": 10
+    }
+  ]
+}
