@@ -1,9 +1,26 @@
 target,baseline,comparison,N,ASR_difference,CI_low,CI_high,paired_gains,paired_losses,discordant_binomial_p,multiple_comparisons
-InternVL3.5-14B-HF,M07,M16,150,-0.04,-0.08016666666666661,0.0,2,8,0.109375,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M07,M16,150,-0.12666666666666668,-0.18666666666666668,-0.06666666666666668,3,22,0.00015652179718017578,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M07,M16,150,-0.04,-0.08,0.0,2,8,0.109375,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M07,M16,150,0.02,-0.02,0.06000000000000001,7,4,0.548828125,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M07,M17,150,-0.02,-0.06,0.02,4,7,0.548828125,exploratory unadjusted; no significance-based selection
 InternVL3.5-14B-HF,M07,M17,150,-0.08666666666666667,-0.13333333333333333,-0.04666666666666667,0,13,0.000244140625,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M07,M17,150,-0.18,-0.24,-0.12666666666666665,0,27,1.4901161193847656e-08,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M08,M09,150,0.02666666666666667,-0.02,0.07333333333333333,9,5,0.4239501953125,exploratory unadjusted; no significance-based selection
 InternVL3.5-14B-HF,M08,M09,150,-0.02666666666666667,-0.06666666666666668,0.013333333333333332,3,7,0.34375,exploratory unadjusted; no significance-based selection
-InternVL3.5-14B-HF,M08,M10,150,-0.05333333333333334,-0.1,-0.0066666666666666706,3,11,0.057373046875,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M08,M09,150,0.02,-0.026666666666666665,0.06666666666666668,8,5,0.5810546875,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M08,M10,150,0.04666666666666667,-0.006666666666666666,0.1,12,5,0.143463134765625,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M08,M10,150,-0.05333333333333334,-0.1,-0.006666666666666666,3,11,0.057373046875,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M08,M10,150,-0.03333333333333333,-0.08666666666666667,0.013333333333333336,6,11,0.332305908203125,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M13,M14,150,0.05333333333333334,0.006666666666666666,0.1,11,3,0.057373046875,exploratory unadjusted; no significance-based selection
 InternVL3.5-14B-HF,M13,M14,150,0.013333333333333334,-0.02,0.04666666666666667,4,2,0.6875,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M13,M14,150,-0.06,-0.1,-0.02,1,10,0.01171875,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M13,M15,150,0.07333333333333333,0.03333333333333333,0.12,12,1,0.00341796875,exploratory unadjusted; no significance-based selection
 InternVL3.5-14B-HF,M13,M15,150,0.013333333333333334,-0.019999999999999997,0.04666666666666667,4,2,0.6875,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M13,M15,150,-0.006666666666666667,-0.03333333333333334,0.02,2,3,1.0,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M14,M15,150,0.02,-0.013333333333333332,0.05333333333333333,5,2,0.453125,exploratory unadjusted; no significance-based selection
 InternVL3.5-14B-HF,M14,M15,150,0.0,-0.02,0.02,1,1,1.0,exploratory unadjusted; no significance-based selection
-Qwen3.5-27B,M15,M27,150,-0.02,-0.05333333333333333,0.006666666666666666,1,4,0.375,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M14,M15,150,0.05333333333333334,0.02,0.09333333333333334,8,0,0.0078125,exploratory unadjusted; no significance-based selection
+Gemma 4 31B-it,M15,M18,150,-0.07333333333333333,-0.11333333333333333,-0.03333333333333334,0,11,0.0009765625,exploratory unadjusted; no significance-based selection
+InternVL3.5-14B-HF,M15,M18,150,-0.08666666666666667,-0.12666666666666665,-0.04666666666666667,0,13,0.000244140625,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M15,M18,150,-0.12666666666666668,-0.18,-0.07999999999999999,1,20,2.09808349609375e-05,exploratory unadjusted; no significance-based selection
+Qwen3.5-27B,M15,M27,150,-0.02,-0.04666666666666667,0.006666666666666666,1,4,0.375,exploratory unadjusted; no significance-based selection

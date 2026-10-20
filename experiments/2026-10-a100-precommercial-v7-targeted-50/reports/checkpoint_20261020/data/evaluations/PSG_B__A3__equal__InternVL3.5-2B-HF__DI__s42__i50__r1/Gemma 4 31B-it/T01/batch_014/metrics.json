@@ -1,0 +1,31 @@
+{
+  "identity": "bfb6017b61e02bec97d3e547171a3bf6073f158cfbaf0191c73b65c59d12ca99",
+  "target": "Gemma 4 31B-it",
+  "images": [
+    {
+      "image_id": "train/n01443537/n01443537_5154.JPEG",
+      "clean_raw": "0",
+      "adv_raw": "1",
+      "clean_label": 1,
+      "adv_label": 2,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    },
+    {
+      "image_id": "train/n01443537/n01443537_5215.JPEG",
+      "clean_raw": "0",
+      "adv_raw": "1",
+      "clean_label": 1,
+      "adv_label": 2,
+      "clean_parser": "ok",
+      "adv_parser": "ok",
+      "target_hit": true,
+      "clean_correct": true
+    }
+  ],
+  "source_state": "attacks/test/PSG_B__A3__equal__InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_014/state.json",
+  "cohort": "test",
+  "method_lock_sha256": "492cb1561db3a83f01b8ad4af7a0fd74dc7c5815bb95ae1eb2e8f6d819682ec5"
+}

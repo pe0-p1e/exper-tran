@@ -1,30 +1,77 @@
 {
-  "at": 1792468820.6369195,
+  "at": 1792481900.087463,
   "gpu": {
-    "used_gib": 61.0302734375,
-    "utilization": 99.0,
+    "used_gib": 30.7890625,
+    "utilization": 100.0,
     "pids": [
-      256000,
-      308586
+      329572,
+      330050,
+      331529
     ]
   },
   "primary": {
-    "stage": "attack",
-    "condition": "CFI_seed_44",
-    "at": 1792466419.612103
+    "stage": "complete",
+    "condition": null,
+    "at": 1792471769.2414277
   },
   "active_gpu_workers": [
     {
       "kind": "legacy",
-      "condition": "P18_M16_Q",
-      "phase": "evaluation",
+      "condition": "P18_M28_I",
+      "phase": "attack",
       "models": [
-        "Qwen3.5-27B"
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
       ],
-      "reserve": 54.455877751111984,
-      "pid": 308586,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M16_Q_evaluation_Qwen3.5-27B.log",
-      "started": 1792468710.4861832
+      "reserve": 17.88937971368432,
+      "pid": 329572,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M28_I_attack_DINOv2-Large.log",
+      "started": 1792477418.6012323
+    },
+    {
+      "kind": "legacy",
+      "condition": "P18_M28_Q",
+      "phase": "attack",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384",
+        "InternVL3.5-2B-HF",
+        "Gemma 4 E2B-it"
+      ],
+      "reserve": 18.141033742576838,
+      "pid": 330050,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M28_Q_attack_DINOv2-Large.log",
+      "started": 1792478552.876999
+    },
+    {
+      "kind": "legacy",
+      "condition": "P18_M25_Q",
+      "phase": "attack",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "reserve": 10.057049367576838,
+      "pid": 331529,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M25_Q_attack_SigLIP2-So400m-patch14-384.log",
+      "started": 1792480941.7869117
+    },
+    {
+      "kind": "legacy",
+      "condition": "P18_M26_G",
+      "phase": "smoke",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "reserve": 10.057049367576838,
+      "pid": 331885,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M26_G_smoke_SigLIP2-So400m-patch14-384.log",
+      "started": 1792481877.4712214
     }
   ],
   "max_gpu_workers": 4,

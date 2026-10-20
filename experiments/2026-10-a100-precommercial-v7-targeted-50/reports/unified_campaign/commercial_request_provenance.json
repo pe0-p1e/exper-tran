@@ -23663,6 +23663,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "32009e7f1e4f665dff6d",
+    "identity": {
+      "image_sha256": "f902b7e8d659f4151de90ac1f4dd7c199872d99d3171f056e1899e6e1b3b5f51",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577a-d034-7030-8ad3-cac2174e2073",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "2adea8c4005db49e9359",
     "identity": {
       "image_sha256": "c49470587eb90fa7089e41f74be974a15333a301e09396ec05d2afb2e6776acd",
@@ -23763,6 +23783,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "3a4c0ff80e63496a751a",
+    "identity": {
+      "image_sha256": "6d213195214361b6f5ca6b8d47558e6a4c0c4dcf87f0dad997d1b3050b796c96",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a1577b-93ad-7613-b768-34ad5b5e21f6",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "069a7c13483368321e76",
     "identity": {
       "image_sha256": "1fc06bc194e44989e8d1f617de1ee9b7ab543f1825a43db97d1917a0c02a3d0d",
@@ -23783,6 +23823,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "3c1fd0d7068451db4bf9",
+    "identity": {
+      "image_sha256": "8b9868eb9801cf9872534735201e085599543303777d29b8fee7f1f6d663c6c3",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1577b-e1b0-7221-89f0-fb0553612f81",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "17980180adadfcc32ebc",
     "identity": {
       "image_sha256": "5d8b57e7994ff4beccff35f3054e9c6ebd6f3087e16a5fc376792b30cfd1506f",
@@ -23793,6 +23853,26 @@
     "raw_output": "8",
     "parsed_label": 9,
     "session_id": "01a15774-6a1c-71b0-b658-d4dc342eee2b",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "4ad84ebf01a3b4af0452",
+    "identity": {
+      "image_sha256": "55bdf39c1be0130805361275d275856540eb32b0a5a17744a8032aa218c70dd2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577e-931d-7a33-a281-7dc03d7c9e1b",
     "execution_settings": {
       "effort": "low"
     },
@@ -23843,6 +23923,86 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "313e56f85815016afbb7",
+    "identity": {
+      "image_sha256": "38364b1c4d797f7baf2ad4db88cd3b198e15f7c43cacbd15bf26e196d57288b0",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a1577a-5605-7951-9c07-35c24336d1d9",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "2e1a11041b847b32cebd",
+    "identity": {
+      "image_sha256": "26e33bbabdef985e51e957ffda369f1243a3b2605a10702bc7bd04024bfce168",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "1",
+    "parsed_label": 2,
+    "session_id": "01a15779-6ba1-7870-a050-78c7228aea20",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "43b4a91f8857f09420f8",
+    "identity": {
+      "image_sha256": "0bea100c710b0a583163f2aabe1591dfc6dcf1d4a3bc6fd5a79e5d2666c67ba6",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "6",
+    "parsed_label": 7,
+    "session_id": "01a1577c-a6a0-74f2-aadb-c30b060c4e3e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "48585216f19727f514cf",
+    "identity": {
+      "image_sha256": "7b6e46ea663eaf7247a3a3fab9efdf1ff0c9cdd19b5e4cf69dd1333af868f781",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1577d-f6dc-7762-962c-d9c4cc8f580d",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "2b49a358a9efb0cc1e39",
     "identity": {
       "image_sha256": "6d57ed71f900b7a13f3200155e50dfde5344e7ae655bda84d2b8d1a675210d64",
@@ -23873,6 +24033,26 @@
     "raw_output": "2",
     "parsed_label": 3,
     "session_id": "01a15774-f671-7c42-a6cc-2819c2fbe767",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "46d8203440ffa4add4bf",
+    "identity": {
+      "image_sha256": "83fd62f083bb66eb155a6ebd771c5de4e8dbfab74aeb46e4b1bdef2f919a31a8",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "5",
+    "parsed_label": 6,
+    "session_id": "01a1577d-801c-70f2-9e66-2750955d8cb9",
     "execution_settings": {
       "effort": "low"
     },
@@ -23923,6 +24103,66 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "30dedfc285ac9e87c5b6",
+    "identity": {
+      "image_sha256": "9eb45bc0e05391aebecb141a75346156a4add90c946a1326c816ceca2535f579",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a1577a-07e3-7b71-9f80-7d8667131de8",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "4ac0754689218c492d16",
+    "identity": {
+      "image_sha256": "fc7b2110c07329b4471c67b16be21773c85cf7c4a8b65f14146ca2508b58aae4",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a1577e-6c20-74c3-a7ed-4d09d3846231",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "404f3d13915e5573c84b",
+    "identity": {
+      "image_sha256": "3af8ab846ebf320c8737587689422f4f20bf79d3b18f61567a60e273cd129b91",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577c-5879-79d3-af87-4a1c26624dd9",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "2ab49b2c04dbd57b26e4",
     "identity": {
       "image_sha256": "757721f46363e0ad92511895ae2e7caed5d2e4ab07abbab878dc2bccd0bf668c",
@@ -23933,6 +24173,26 @@
     "raw_output": "8",
     "parsed_label": 9,
     "session_id": "01a15778-5505-7aa0-be98-12c1e7a73e7e",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "3f1e246cf16d53eb9709",
+    "identity": {
+      "image_sha256": "e5400ac54cbbbccd805fec7b289e9eda68477ce94039259994f37308caf5efa2",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "1",
+    "parsed_label": 2,
+    "session_id": "01a1577c-0a63-78a3-b689-a3166f4e7a06",
     "execution_settings": {
       "effort": "low"
     },
@@ -23973,6 +24233,66 @@
     "raw_output": "7",
     "parsed_label": 8,
     "session_id": "01a15776-096d-7dd1-b2ba-9884e56abdc8",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "2fa24d5c04aa65b1b2cb",
+    "identity": {
+      "image_sha256": "d78f9af8949cbf411ffc0b9a339bad7ec8357ab03d0cf03248f60f9fec6c85fd",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a15779-e0d2-78b2-b521-ba6be42b2122",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "45bf62ac4075b7e9ef8e",
+    "identity": {
+      "image_sha256": "52053b9a8762147a3ff3959a609dc4bbe6f48999c1a3b2c4b3808d5410c22db6",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577d-5910-7801-9d5c-7249ae952d28",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "3945f0040a55d7cb1563",
+    "identity": {
+      "image_sha256": "372ad4d22f5c5b3ed0ebfb07d0b2b49a02a03f67e7547abe2c82542f0a5e0bc0",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a1577b-6c8a-7fd2-9818-4244082e9383",
     "execution_settings": {
       "effort": "low"
     },
@@ -24063,6 +24383,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "3a609ed00beb8d49cea9",
+    "identity": {
+      "image_sha256": "625df719a8eba623fa58afb284c7b8a808bdee16dcdfc1b294ebfdb964d117bc",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577b-bab0-7fb2-bdc7-e0bf86ac06e9",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "08dac81943672464433b",
     "identity": {
       "image_sha256": "8e300ee71d8911ba0e9f53ab32b27d721e90dc46e64a392c0cb7a73ec0047840",
@@ -24073,6 +24413,46 @@
     "raw_output": "5",
     "parsed_label": 6,
     "session_id": "01a15772-42b4-7f83-9ec0-2f887bd7df65",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "4a90f539f4916d86a416",
+    "identity": {
+      "image_sha256": "5c6401b391a619d8e1210a0352378073fc47db2073ecccb94ff4f3260d2bf20e",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "6",
+    "parsed_label": 7,
+    "session_id": "01a1577e-4514-7003-84d7-36aff6e83917",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "360d6e46dee17d2ca1ed",
+    "identity": {
+      "image_sha256": "0954827b085ed476cabeae4fc88736acf980c3b9bba5173147df8007069f5e08",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577b-4580-7710-b100-b3153582ab6f",
     "execution_settings": {
       "effort": "low"
     },
@@ -24123,6 +24503,66 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "35485903c1eb37f644fc",
+    "identity": {
+      "image_sha256": "c4773af11a5bfd5a1969f3883c90ade43a4b2e3a8a33679ead6deee12bdb5d3a",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "5",
+    "parsed_label": 6,
+    "session_id": "01a1577a-f744-7ad2-b350-717fa1458105",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "314d52389bfce83dd12a",
+    "identity": {
+      "image_sha256": "7574eadb941abc85261a065925c2c60ec1ee55a8346059a10eee31a7681b50f0",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1577a-826f-7061-846b-fe15442ca695",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "30f3c947d397223e33d5",
+    "identity": {
+      "image_sha256": "4a21a896dd9fa4d6fafe9a575777930306b5e27947becb3a4be0d8eab7536bf1",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "0",
+    "parsed_label": 1,
+    "session_id": "01a1577a-2ef1-7870-9d16-7474ef7d89a4",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "29c0a6ab4655283d9d5c",
     "identity": {
       "image_sha256": "4b45b0fc4dad980880647a3c30b28cc2a5d5fe28f422157805f9847a4bce6f66",
@@ -24133,6 +24573,46 @@
     "raw_output": "6",
     "parsed_label": 7,
     "session_id": "01a15777-dfcc-7383-b8f2-07922e6f3b8a",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "47c4d70a294ab702430f",
+    "identity": {
+      "image_sha256": "edae151300ccbb2b14d9097291f8789b2f86a74cd34f16e7ffeeb1e5fe79f464",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577d-cfd0-7080-8668-111ff6c11268",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "3ff45dd082e2c3497694",
+    "identity": {
+      "image_sha256": "9458bb6cad1e97176e0dee48509a18709b3688dfd642bdd2b8fcdc8204a7ec07",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1577c-316b-7d12-98e8-53d044953f99",
     "execution_settings": {
       "effort": "low"
     },
@@ -24323,6 +24803,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "4708fc6378967f3af074",
+    "identity": {
+      "image_sha256": "259eb779de5e860bdeb91a82d3a9189e694d7e2330adaafb24b65eb9a70227fe",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1577d-a723-7542-bc85-fd157d3c7cf8",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "144fe4528e13235663f0",
     "identity": {
       "image_sha256": "740dcb89db46530416d57b4f7c6eb2b93dd22069f8e0dfb5a5501e55f4901036",
@@ -24343,6 +24843,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "48d8a10675ed2aecdf8f",
+    "identity": {
+      "image_sha256": "b118b222b9181651dedb7ff1d36b551445334103bc06eb77b5fe97811d00aa9f",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "1",
+    "parsed_label": 2,
+    "session_id": "01a1577e-1de1-7c62-8a9e-2832ce88c789",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "24a01b8802a4458e9db0",
     "identity": {
       "image_sha256": "71a353ec9c1d91746869017ea2102bc850aca4765565ee8b788cd04332138d47",
@@ -24353,6 +24873,46 @@
     "raw_output": "7",
     "parsed_label": 8,
     "session_id": "01a15776-5792-72c1-a107-10134ea6f131",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "4577f08d47aa2abf66b2",
+    "identity": {
+      "image_sha256": "d5f317182a22833255e88a5c39469a5e8cfa080aba2de8aecacce321f4733162",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a1577d-31ea-7bd3-a10c-e719d9b4b97c",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "356f947593557e7a6b8a",
+    "identity": {
+      "image_sha256": "508302895b0a6bfcdc933932f41bf22386ab8fa48e7ad17cae4a4b120602ddaf",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "4",
+    "parsed_label": 5,
+    "session_id": "01a1577b-1e61-7983-891f-8807e28cf460",
     "execution_settings": {
       "effort": "low"
     },
@@ -24393,6 +24953,26 @@
     "raw_output": "1",
     "parsed_label": 2,
     "session_id": "01a15776-3080-7e82-b4f3-99f74a7a6aca",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "2f8a032e362cec569959",
+    "identity": {
+      "image_sha256": "8afc93bfde87dd7abcd6ad3df30d12a56ed2fc7cfa45eb78ed2a7d98fc7ce10d",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a15779-92ad-7e03-9f97-8bd50d687a70",
     "execution_settings": {
       "effort": "low"
     },
@@ -24483,6 +25063,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "3177da0f7ae040582eb2",
+    "identity": {
+      "image_sha256": "5633878eed5cc05ee3d3e02b1a73a046cf5476b46ea7a00effc215f57ccffdd7",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "2",
+    "parsed_label": 3,
+    "session_id": "01a1577a-a934-7c12-ba01-e22e4d0369fa",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "25229e0cfc7d0b47e16d",
     "identity": {
       "image_sha256": "32db9fbc94e3809770c73b4c12e64a578e09663e9ddf646da1443853c5e4a16c",
@@ -24493,6 +25093,26 @@
     "raw_output": "7",
     "parsed_label": 8,
     "session_id": "01a15776-7ea9-7353-aee5-86b24a6802c7",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "4126c509c83cc50bcbd3",
+    "identity": {
+      "image_sha256": "5810a780ec330103afc5addada07c13f558dab36ee043a7b9ed23495f2039ff9",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "7",
+    "parsed_label": 8,
+    "session_id": "01a1577c-7f9f-7752-9827-cf349d195688",
     "execution_settings": {
       "effort": "low"
     },
@@ -24683,6 +25303,26 @@
     "stage": "test150",
     "provider": "codex",
     "model": "gpt-6-astra",
+    "request_id": "2f8f810f1fd9c5d9dc7b",
+    "identity": {
+      "image_sha256": "aa654e4beddf8395b3ebeb19decfe709e752f31fceb2e332195c6247bfd2f512",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "8",
+    "parsed_label": 9,
+    "session_id": "01a15779-b9c2-72d3-964e-6da00631171d",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
     "request_id": "2b6ecb595f2e4a6ab40a",
     "identity": {
       "image_sha256": "e8f1019ce9461dc13db0dbc8008cbf49bf0e441135a2ccdc75ddf10cfab5f3f4",
@@ -24693,6 +25333,26 @@
     "raw_output": "2",
     "parsed_label": 3,
     "session_id": "01a15778-cb05-78e0-a94f-7dea439193e5",
+    "execution_settings": {
+      "effort": "low"
+    },
+    "evidence": "explicit --model accepted; image modality in local catalog; server snapshot undisclosed",
+    "reused": false
+  },
+  {
+    "stage": "test150",
+    "provider": "codex",
+    "model": "gpt-6-astra",
+    "request_id": "445733d7dff9b0042c77",
+    "identity": {
+      "image_sha256": "9b0e41b673be282c0ddb14536b9dedf4d54d6e272564225b882395c316eb6b6e",
+      "prompt_sha256": "643b3598952e04c0ffdb6ef3dbb36d2ae0b3a7c14fdbeeda7d80d37bca6c071b",
+      "client": "codex-cli 0.163.0",
+      "model": "gpt-6-astra"
+    },
+    "raw_output": "5",
+    "parsed_label": 6,
+    "session_id": "01a1577d-0b1d-7751-8f00-635bfc2c0a9e",
     "execution_settings": {
       "effort": "low"
     },

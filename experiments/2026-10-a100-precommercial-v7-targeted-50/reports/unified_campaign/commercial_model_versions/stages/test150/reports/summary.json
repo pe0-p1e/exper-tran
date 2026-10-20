@@ -1,6 +1,6 @@
 {
   "stage": "test150",
-  "updated": 1792468907.3832374,
+  "updated": 1792469287.4428577,
   "models": [
     {
       "matrix_id": "openai_61_sol",
@@ -66,20 +66,20 @@
       "matrix_id": "openai_6_astra",
       "provider": "codex",
       "model": "gpt-6-astra",
-      "status": "RUNNING",
-      "completed_requests": 50,
+      "status": "BLOCKED",
+      "completed_requests": 86,
       "planned_requests": 300,
       "hits": null,
       "denominator": 150,
       "ASR": null,
-      "observed_hits": 0,
-      "observed_pairs": 2,
+      "observed_hits": 6,
+      "observed_pairs": 10,
       "clean_correct": null,
       "clean_correct_conditional_hits": null,
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "",
+      "reason": "Request failed; entire account queue stopped; inspect retained trace",
       "legacy_conditional_TASR": "N/A"
     },
     {

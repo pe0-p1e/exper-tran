@@ -1,7 +1,7 @@
 {
   "pid": 163966,
   "started": 1792462381.2166643,
-  "status": "RUNNING",
+  "status": "BLOCKED",
   "models": [
     "gpt-6.1-sol",
     "gpt-6-sol",
@@ -16,6 +16,10 @@
   "completed": {
     "gpt-6.1-sol": 300,
     "gpt-6-sol": 300,
-    "gpt-6-astra": 53
-  }
+    "gpt-6-astra": 86
+  },
+  "model": "gpt-6-astra",
+  "request_id": "4b37ccf0cdbfc8e213d5",
+  "reason": "Request failed; entire account queue stopped; inspect retained trace",
+  "finished": 1792469287.0360038
 }

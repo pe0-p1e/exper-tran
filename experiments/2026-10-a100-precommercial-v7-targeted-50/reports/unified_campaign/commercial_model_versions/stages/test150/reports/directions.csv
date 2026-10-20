@@ -14,11 +14,11 @@ openai_56_sol,T03,,30,0
 openai_56_sol,T05,,30,0
 openai_56_sol,T07,,30,0
 openai_56_sol,T09,,30,0
-openai_6_astra,T01,,30,0
+openai_6_astra,T01,,30,2
 openai_6_astra,T03,,30,1
-openai_6_astra,T05,,30,0
-openai_6_astra,T07,,30,0
-openai_6_astra,T09,,30,1
+openai_6_astra,T05,,30,2
+openai_6_astra,T07,,30,2
+openai_6_astra,T09,,30,3
 openai_6_luna,T01,,30,0
 openai_6_luna,T03,,30,0
 openai_6_luna,T05,,30,0

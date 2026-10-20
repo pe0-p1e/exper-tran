@@ -2,7 +2,7 @@
 
 Task: fixed ten-class targeted image recognition. No open-ended VQA.
 
-Completed cells: 40/160. Image evaluations: 1200/4800. Recorded failed attempts: 0.
+Completed cells: 160/160. Image evaluations: 4800/4800. Recorded failed attempts: 0.
 
 Qwen27B excludes every Qwen proxy; InternVL14B excludes every InternVL proxy. Gemma31B prior cross-family primary results are preserved. Old Qwen/InternVL measurements are family-overlap experiments, not valid strict-cross-family replacements.
 
@@ -33,3 +33,5 @@ All 15 strict-cross-family primary cells >=15/30: True.
 All matched singles, five individual layer depths, component ablations and primary seeds43/44 are reported in results/*.csv. No favorable seed replaces seed42. Original Pull/Push uses deepest layer without DI and is an historical algorithm control, not a single-component ablation. The no-patch and no-DI conditions provide matched component controls.
 
 Undefined conditional TASR is N/A. Missing results are not zero. Geometry is restricted to the two corrected primary ensembles. No reverse-direction cohort is present, so directional asymmetry is not estimated.
+
+Actual campaign wall seconds: 87596.5.
