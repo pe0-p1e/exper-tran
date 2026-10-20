@@ -1,0 +1,27 @@
+{
+  "states": [
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_ccb26f651a2c1317__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1/T01/batch_000/state.json",
+      "sha256": "d913bf4c997ad9e88e5736ad6b8e8b62d299adf06fa329b0de6410dd5023c566"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_ccb26f651a2c1317__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1/T03/batch_000/state.json",
+      "sha256": "7b3199b4d212134e999ac67f41f813e1293aa2a4bf928dd2dcbd128dda0630c6"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_ccb26f651a2c1317__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1/T05/batch_000/state.json",
+      "sha256": "ffd0a5ace1de45907605d9a629167220b86623bf44629e3cccb3fff1626b1a61"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_ccb26f651a2c1317__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1/T07/batch_000/state.json",
+      "sha256": "f1790052c74d842475e21682fdc43efbe2e485ce947300be4c4022b3da5aa306"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_ccb26f651a2c1317__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+Gemma_4_E2B-it__DI__s42__i50__r1/T09/batch_000/state.json",
+      "sha256": "e21f0d272a34a737d879ba1a0825e4b7803965b0311b0482d7d0b728998eea52"
+    }
+  ],
+  "N": 10,
+  "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_composition_ablation",
+  "new_attack_generated": false
+}
