@@ -1,0 +1,51 @@
+setting,original_V6,recovery_V6,V7_A3,current_V7_PP,investigation,status
+阶段边界,原始V6含layer sweep,BF16恢复V6,历史V7 A3,当前V7 PP,必须分开比较,已确认
+样本筛选,clean-valid筛选,GT固定队列,复用恢复队列,复用恢复队列,原始V6与后续不可直接做因果对比,已确认
+正式测试图片,各条件筛选30张,5方向各30张,同恢复版150张,同恢复版150张,15份manifest和630图文件哈希核验,已核验一致
+探索开发图片,非同一开发方案,正式测试队列,独立dev队列,历史dev每方向positions2:4共10图,开发模型30次观测不是30独立图,已确认
+类别与方向,10类5方向,相同,相同,相同,T01/T03/T05/T07/T09,已核验
+参考数量与身份,48每类,48每类,同恢复版480张,同恢复版480张,参考清单与图文件一致,已核验一致
+代理组成,layer表为单代理,13原始组合,多种原表及扩展组合,原表13或探索A/B,匹配原表与探索池不能混为同一对照,需桥接
+目标模型,layer表含4B/8B/E4B,27B/14B/31B,27B/14B/31B,正式27B/14B/31B;dev9B/8B/E4B,模型规模和测试目标改变是混杂,已确认
+同家族排除,含同家族及跨家族,原表各行排除目标家族,早期部分行不合格后纠正,原13严格排除;dev仅checkpoint heldout,不复用早期不合格高分,已确认
+模型revision,固定15模型,相同固定15模型,共享15加扩展,共享15加扩展,15原始模型spec完全相同,已核验一致
+权重精度,配置BF16;完整历史审计另核,全参数BF16无量化,全参数BF16无量化,全参数BF16无量化,恢复版198次audit无失败,已核验恢复版
+视觉层深度,实测depth映射,最深实际block,按实际depth四层,按实际depth四层或子集,27层模型不可硬编码24层,已确认
+layer使用方式,1/25/50/75/100%逐层独立,最深单层,25/50/75/100%联合,同四层或单/双/三层,旧单层选择不是多层联合,关键待桥接
+层权重,单层,单层,默认均匀;部分实验另有权重,当前均匀,不合并特殊加权实验,已确认
+视觉提取位置,vision_encoder block,同视觉block,同block多tap,同block多tap,3模型2层同输入表征完全一致,局部GPU核验
+token处理,空间token排CLS与padding,相同,相同,相同,Qwen reshape;Intern去CLS;Gemma有效位置mask,代码与局部GPU核验
+池化,masked mean后L2,相同,相同,相同,未发现新增不同池化,局部GPU核验
+预处理,原共享helper,原共享helper,同helper,同helper,相同权重和输入比较;非历史二进制回放,局部GPU核验
+规范画布,224x224,224x224,224x224,224x224,不同模型内部native resize仍存在,已确认
+参考中心公式,逐图单位化再mean再单位化,相同,centroid或单独标记distribution,当前centroid相同,3模型旧缓存与新缓存方向检查,局部缓存核验
+参考缓存,旧单层缓存,deep缓存,多层与patch bank新cache,复用新多层bank,Qwen/Intern数值有细微差异;Gemma完全一致,缓存替换攻击未验证
+Pull/Push系数,0.75/0.25,0.75/0.25,margin取代主损失,0.5/0.5,已有5比例及13组合2比例开发实验,小样本已测
+主目标类别范围,源与目标余弦,源与目标余弦,10类竞争margin,源与目标余弦,current分类margin只是诊断不进loss,已确认
+Local patch项,无,无,权重0.35,无,原表A3与PP差1.4pp不是等效证明,已完成方法对比
+参考patch聚类,无,无,K8及特定变体,缓存仍可生成但loss权重0,计算开销不是当前目标函数组成,已确认
+CLS语言损失,0,0,0,0,原V6已跳过语言优化forward,代码确认
+CKA训练损失,源与目标CKA权重均0,无,无,无,lambda_cka变量名不代表实际使用CKA,代码确认
+融合方法,单代理或原始多代理,等权独立每图L1归一化,默认同融合及独立标记变体,当前同融合,恢复版早已使用;不是V7新增,已确认
+梯度归一化,单代理除mean(abs),多代理各除sum(abs),同多代理规则,同多代理;新raw控制单独标记,单代理mean/sum仅常数倍且不触发clamp时更新方向等价,公式与小实验
+loss batch reduction,mean,mean,sum求导再每图归一化,同V7,固定batch标量被每图L1消除;raw控制另论,公式核对
+DI,无,无,每步resize-pad,每步resize-pad,0.8到1缩放加随机补零;不是仅缩放,小实验已测
+TI与其他搜索技巧,主方法无,主方法无,可选实验独立标记,当前主方法无,不得把可选算法全算进主结果,已确认
+扰动约束,Linf16/255,相同,相同,相同,PNG序列化后重新核验,已核验
+优化步数,50,50,主表50;扩展预算单独标记,50,不混100/200步和多restart,已核验
+步长与动量,1/255和1,相同,主方法相同,相同,不是V7新增,已确认
+随机初始化,启用;原single seed42加batch_index,seed42生成整队列noise,同队列方式另设DI RNG,同V7,原V6 batch分组会改变初始化,需桥接原始V6
+随机种子与restart,42主seed和1次,42和1次,42主表;其他种子分开,42和1次,DI有独立按batch起点随机流,已确认
+batch与microbatch,校准;常用8,校准batch;参考分组4,攻击常用2;参考逐图,同V7,理论目标不变但BF16/kernel数值可能变化,部分数值核验
+checkpoint和offload,按模型内存处理,BF16驻留与顺序offload,多层checkpoint及offload,同V7,不是预期科学变更;局部梯度差异很小,局部GPU核验
+canonical读取量化,ensure_canvas后8bit round,相同,相同,相同,630输入文件已比对,已核验
+PNG保存,共享save/reload检查,相同,相同,相同,adv不同属预期;clean身份固定,已核验
+target使用边界,冻结后评估,相同,相同,相同,实际target不参与attack或选择,代码及状态核验
+目标prompt和parser,原十类严格parser,同十类prompt/parser,同代码prompt/parser,同正式评估路径,1950匹配clean原始输出与标签需核对,已核验匹配
+目标推理batch,旧流程按cell,恢复评估clean+adv batch2,正式同batch2;dev缓存后adv可batch1,正式固定batch2,开发缓存链与正式评估分开披露,代码核对
+主指标,proxy-success条件TASR,全部30图target ASR,全部30图target ASR,全部30图target ASR,原V6与V7数字不可直接相减,已确认
+零分母与parser失败,TASR可N/A,ASR全部样本;失败不命中,相同,相同,CSV空与JSON null等义不能计为mismatch,已核验
+软件环境,完整历史版本未回放,固定版本记录不全,当前torch2.6+transformers5.14.1,同当前环境,当前source parity不排除历史环境差异,未完整核验
+resume与cache身份,旧标记或元数据,recovery独立状态,更多source/config/hash锁,当前同严格锁,属于可复现性变化非直接优化贡献,代码核对
+速度与调度,旧cell调度,BF16分组与offload,动态并发与cache,动态并发与cache,固定预算时不能当ASR提升原因;数值需单查,已确认
+统计样本单位,多为每方向30图,每方向30图,正式30图或dev10,正式30图或dev10,多验证模型不增加独立图片数,已确认

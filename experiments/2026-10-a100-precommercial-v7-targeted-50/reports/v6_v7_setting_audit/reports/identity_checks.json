@@ -1,0 +1,107 @@
+{
+  "test_T01": {
+    "V6_sha256": "e6f83cae3588ae90f0ef555ee2b8abe9cdcd5c647d0ca7276d809b8c20c728d2",
+    "V7_sha256": "e6f83cae3588ae90f0ef555ee2b8abe9cdcd5c647d0ca7276d809b8c20c728d2",
+    "identical": true
+  },
+  "test_T03": {
+    "V6_sha256": "c4835746e38de85160cd7330f5af7e2db5294c9b20464653147149b20cbd6b65",
+    "V7_sha256": "c4835746e38de85160cd7330f5af7e2db5294c9b20464653147149b20cbd6b65",
+    "identical": true
+  },
+  "test_T05": {
+    "V6_sha256": "fe3d0cad89660c7842156cd16162a3154cb0b3c05100a892ee4433207a2fe56c",
+    "V7_sha256": "fe3d0cad89660c7842156cd16162a3154cb0b3c05100a892ee4433207a2fe56c",
+    "identical": true
+  },
+  "test_T07": {
+    "V6_sha256": "cdb48f1c51df6f463fe2730b82850fbd5500f8e15754ee856790bfbcd598a4f7",
+    "V7_sha256": "cdb48f1c51df6f463fe2730b82850fbd5500f8e15754ee856790bfbcd598a4f7",
+    "identical": true
+  },
+  "test_T09": {
+    "V6_sha256": "e4753c28b39117d7862719eb70c9e12700707a9848ac8965763865cf5d6c9af3",
+    "V7_sha256": "e4753c28b39117d7862719eb70c9e12700707a9848ac8965763865cf5d6c9af3",
+    "identical": true
+  },
+  "reference_1": {
+    "V6_sha256": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "V7_sha256": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "identical": true
+  },
+  "reference_2": {
+    "V6_sha256": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "V7_sha256": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "identical": true
+  },
+  "reference_3": {
+    "V6_sha256": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "V7_sha256": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "identical": true
+  },
+  "reference_4": {
+    "V6_sha256": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "V7_sha256": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "identical": true
+  },
+  "reference_5": {
+    "V6_sha256": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "V7_sha256": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "identical": true
+  },
+  "reference_6": {
+    "V6_sha256": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "V7_sha256": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "identical": true
+  },
+  "reference_7": {
+    "V6_sha256": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "V7_sha256": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "identical": true
+  },
+  "reference_8": {
+    "V6_sha256": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "V7_sha256": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "identical": true
+  },
+  "reference_9": {
+    "V6_sha256": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "V7_sha256": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "identical": true
+  },
+  "reference_10": {
+    "V6_sha256": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "V7_sha256": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "identical": true
+  },
+  "canonical_images": {
+    "checked": 630,
+    "different_ids": []
+  },
+  "model_revisions": {
+    "checked": 15,
+    "changed": []
+  },
+  "clean_target_predictions": {
+    "new_rows": 1950,
+    "matched": 1950,
+    "label_mismatches": 0,
+    "raw_response_mismatches": 0,
+    "missing_labels": 24,
+    "note": "Clean labels only; changed adversarial predictions are expected and not compared for equality"
+  },
+  "recovery_BF16": {
+    "load_events": 198,
+    "failed": 0,
+    "floating_parameter_dtypes": [
+      "bfloat16"
+    ]
+  },
+  "current_environment": {
+    "python": "3.11.16",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.14.1",
+    "numpy": "1.26.4",
+    "historical_environment_full_replay": "NOT_ESTABLISHED; current same-source parity is not historical binary replay"
+  }
+}

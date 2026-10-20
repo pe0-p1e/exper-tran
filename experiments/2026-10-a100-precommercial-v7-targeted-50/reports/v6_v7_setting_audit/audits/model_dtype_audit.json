@@ -1,0 +1,255 @@
+[
+  {
+    "model_name": "Qwen3.5-2B",
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "role": "V6_V7_parity_proxy",
+    "audited_utc": "2026-10-20T15:56:44.145087+00:00",
+    "total_parameter_count": 2213241664,
+    "floating_parameter_count": 2213241664,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2213241664
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4426483328
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2213241664
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 306242560
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 612485120
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 1881825088
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 3763650176
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 25174016
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 50348032
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.visual.patch_embed.proj.weight",
+        "model.visual.patch_embed.proj.bias",
+        "model.visual.pos_embed.weight",
+        "model.visual.blocks.0.norm1.weight",
+        "model.visual.blocks.0.norm1.bias",
+        "model.visual.blocks.0.norm2.weight",
+        "model.visual.blocks.0.norm2.bias",
+        "model.visual.blocks.0.attn.qkv.weight",
+        "model.visual.blocks.0.attn.qkv.bias",
+        "model.visual.blocks.0.attn.proj.weight",
+        "model.visual.blocks.0.attn.proj.bias",
+        "model.visual.blocks.0.mlp.linear_fc1.weight",
+        "model.visual.blocks.0.mlp.linear_fc1.bias",
+        "model.visual.blocks.0.mlp.linear_fc2.weight",
+        "model.visual.blocks.0.mlp.linear_fc2.bias",
+        "model.visual.blocks.1.norm1.weight",
+        "model.visual.blocks.1.norm1.bias",
+        "model.visual.blocks.1.norm2.weight",
+        "model.visual.blocks.1.norm2.bias",
+        "model.visual.blocks.1.attn.qkv.weight"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2213241664
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4426506752,
+      "cuda_reserved_bytes": 4450156544,
+      "cuda_allocated_gib": 4.1225056648254395,
+      "cuda_reserved_gib": 4.14453125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 1
+  },
+  {
+    "model_name": "InternVL3.5-2B-HF",
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "role": "V6_V7_parity_proxy",
+    "audited_utc": "2026-10-20T15:56:50.111287+00:00",
+    "total_parameter_count": 2348347392,
+    "floating_parameter_count": 2348347392,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 2348347392
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 4696694784
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 2348347392
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 304012288
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 608024576
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 2031739904
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 4063479808
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {
+      "bfloat16": 12595200
+    },
+    "multimodal_projector_parameter_bytes_by_dtype": {
+      "bfloat16": 25190400
+    },
+    "other_parameter_counts_by_dtype": {},
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.embeddings.cls_token",
+        "model.vision_tower.embeddings.position_embeddings",
+        "model.vision_tower.embeddings.patch_embeddings.projection.weight",
+        "model.vision_tower.embeddings.patch_embeddings.projection.bias",
+        "model.vision_tower.encoder.layer.0.lambda_1",
+        "model.vision_tower.encoder.layer.0.lambda_2",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.q_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.k_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.weight",
+        "model.vision_tower.encoder.layer.0.attention.v_proj.bias",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.weight",
+        "model.vision_tower.encoder.layer.0.attention.projection_layer.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc1.bias",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.weight",
+        "model.vision_tower.encoder.layer.0.mlp.fc2.bias",
+        "model.vision_tower.encoder.layer.0.layernorm_before.weight",
+        "model.vision_tower.encoder.layer.0.layernorm_before.bias"
+      ]
+    },
+    "vision_depth": 24,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 2348347392
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 4715765248,
+      "cuda_reserved_bytes": 5035261952,
+      "cuda_allocated_gib": 4.3918986320495605,
+      "cuda_reserved_gib": 4.689453125
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 2
+  },
+  {
+    "model_name": "Gemma 4 E2B-it",
+    "repo_id": "google/gemma-4-E2B-it",
+    "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+    "role": "V6_V7_parity_proxy",
+    "audited_utc": "2026-10-20T15:57:00.101132+00:00",
+    "total_parameter_count": 5104297504,
+    "floating_parameter_count": 5104297504,
+    "parameter_counts_by_dtype": {
+      "bfloat16": 5104297504
+    },
+    "parameter_bytes_by_dtype": {
+      "bfloat16": 10208595008
+    },
+    "parameter_counts_by_device": {
+      "cuda:0": 5104297504
+    },
+    "vision_encoder_parameter_counts_by_dtype": {
+      "bfloat16": 168544256
+    },
+    "vision_encoder_parameter_bytes_by_dtype": {
+      "bfloat16": 337088512
+    },
+    "language_backbone_parameter_counts_by_dtype": {
+      "bfloat16": 4628569344
+    },
+    "language_backbone_parameter_bytes_by_dtype": {
+      "bfloat16": 9257138688
+    },
+    "multimodal_projector_parameter_counts_by_dtype": {},
+    "multimodal_projector_parameter_bytes_by_dtype": {},
+    "other_parameter_counts_by_dtype": {
+      "bfloat16": 307183904
+    },
+    "sample_parameter_names_by_dtype": {
+      "bfloat16": [
+        "model.vision_tower.patch_embedder.position_embedding_table",
+        "model.vision_tower.patch_embedder.input_proj.weight",
+        "model.vision_tower.encoder.layers.0.self_attn.q_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.self_attn.k_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.self_attn.v_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.self_attn.o_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.self_attn.q_norm.weight",
+        "model.vision_tower.encoder.layers.0.self_attn.k_norm.weight",
+        "model.vision_tower.encoder.layers.0.mlp.gate_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.mlp.up_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.mlp.down_proj.linear.weight",
+        "model.vision_tower.encoder.layers.0.input_layernorm.weight",
+        "model.vision_tower.encoder.layers.0.post_attention_layernorm.weight",
+        "model.vision_tower.encoder.layers.0.pre_feedforward_layernorm.weight",
+        "model.vision_tower.encoder.layers.0.post_feedforward_layernorm.weight",
+        "model.vision_tower.encoder.layers.1.self_attn.q_proj.linear.weight",
+        "model.vision_tower.encoder.layers.1.self_attn.k_proj.linear.weight",
+        "model.vision_tower.encoder.layers.1.self_attn.v_proj.linear.weight",
+        "model.vision_tower.encoder.layers.1.self_attn.o_proj.linear.weight",
+        "model.vision_tower.encoder.layers.1.self_attn.q_norm.weight"
+      ]
+    },
+    "vision_depth": 16,
+    "quantization": {
+      "is_loaded_in_4bit": false,
+      "is_loaded_in_8bit": false,
+      "is_quantized": false,
+      "quantization_method": "None",
+      "config_quantization": null,
+      "quantized_modules": []
+    },
+    "device_placement": {
+      "parameter_counts_by_device": {
+        "cuda:0": 5104297504
+      },
+      "hf_device_map": null
+    },
+    "cuda_memory": {
+      "cuda_allocated_bytes": 10228170752,
+      "cuda_reserved_bytes": 10290724864,
+      "cuda_allocated_gib": 9.525726318359375,
+      "cuda_reserved_gib": 9.583984375
+    },
+    "all_floating_parameters_bf16": true,
+    "status": "pass",
+    "load_sequence": 3
+  }
+]

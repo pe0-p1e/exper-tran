@@ -145,7 +145,7 @@ def main():
     for j in adopted:
         if j['pid'] in seen or not previous.alive(j['pid']):continue
         cmd=(Path('/proc')/str(j['pid'])/'cmdline').read_text()
-        if not any(n in cmd for n in ['proxy_study_worker.py','unified_research_worker.py','pp4_worker.py']):raise RuntimeError('Foreign adopted child')
+        if not any(n in cmd for n in ['proxy_study_worker.py','unified_research_worker.py','pp4_worker.py',WORKER_SCRIPT.name]):raise RuntimeError('Foreign adopted child')
         jobs.append(j);seen.add(j['pid'])
     conditions={r['condition']['id']:r['condition'] for r in p['ladder']+p['weights']}
     # First resolve pure four-layer PP versus margin on both compositions.

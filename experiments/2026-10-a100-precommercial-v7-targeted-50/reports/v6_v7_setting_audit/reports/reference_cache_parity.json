@@ -1,0 +1,35 @@
+[
+  {
+    "model": "Qwen3.5-2B",
+    "layer": 23,
+    "historical_cache": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/cache/reference_embeddings/46b3b7ff42638948f48abd4437da63a98de46ddaf3c1214d636810d3a7515883.npz",
+    "present": true,
+    "N_reference_vectors": 480,
+    "cosine_min": 0.9999971389770508,
+    "max_abs_difference": 0.002171754837036133,
+    "old_cache_sha256": "26bc1a1ed0bab6041b1edd272b4bf6ec3a24cb2e72edd1077432756649edf50c",
+    "note": "Historical stored feature vectors versus current cached bank, all480 references"
+  },
+  {
+    "model": "InternVL3.5-2B-HF",
+    "layer": 23,
+    "historical_cache": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/cache/reference_embeddings/2147fac5d89c51844de34b4fe92cf9f3b081996c59ee5824fc5fa93718512d59.npz",
+    "present": true,
+    "N_reference_vectors": 480,
+    "cosine_min": 0.9999858736991882,
+    "max_abs_difference": 0.0020975470542907715,
+    "old_cache_sha256": "2ede12234be45d7907fd1349f2bf79664a4568e48cd445a9fb49a9fb63ddc837",
+    "note": "Historical stored feature vectors versus current cached bank, all480 references"
+  },
+  {
+    "model": "Gemma 4 E2B-it",
+    "layer": 15,
+    "historical_cache": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/cache/reference_embeddings/c4e4389da8d5692788d3ac271b02b538092494ccf7807558d1660f9f169f8e1e.npz",
+    "present": true,
+    "N_reference_vectors": 480,
+    "cosine_min": 0.9999995231628418,
+    "max_abs_difference": 0.0,
+    "old_cache_sha256": "064d1b2231ab8b0df35725a941c7d1f60cf4b6d706ece223c8cf07d3d6c1a1eb",
+    "note": "Historical stored feature vectors versus current cached bank, all480 references"
+  }
+]

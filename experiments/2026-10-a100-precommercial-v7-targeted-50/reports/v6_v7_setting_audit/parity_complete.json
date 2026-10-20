@@ -1,0 +1,8 @@
+{
+  "status": "MEASURED",
+  "seconds": 27.4571852684021,
+  "settings_source_sha256": "6f422eaddec35c37818e6fab65d69251e54e83d8669f86e3380d05b734cf016f",
+  "rows": 6,
+  "target_models_loaded": 0,
+  "caveat": "Current software path parity plus historical cached values; not proof that every historical runtime dependency is identical"
+}

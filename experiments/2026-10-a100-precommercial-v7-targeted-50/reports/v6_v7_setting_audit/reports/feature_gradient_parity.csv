@@ -1,0 +1,7 @@
+model,layer,N_images,embedding_max_abs_difference,embedding_cosine_mean,gradient_cosine_min,gradient_cosine_mean,gradient_norm_ratio,sign_agreement,note
+Qwen3.5-2B,17,2,0.0,1.0,0.9999430775642395,0.9999715089797974,1.0003492832183838,0.9981265664100647,Current checkout of original V6 API versus V7 path; both losses .75/.25; not a historical binary/environment replay
+Qwen3.5-2B,23,2,0.0,1.0,0.9999998807907104,1.0,1.0,1.0,Current checkout of original V6 API versus V7 path; both losses .75/.25; not a historical binary/environment replay
+InternVL3.5-2B-HF,17,2,0.0,1.0,0.9999685287475586,0.9999717473983765,1.0015912055969238,0.9969506859779358,Current checkout of original V6 API versus V7 path; both losses .75/.25; not a historical binary/environment replay
+InternVL3.5-2B-HF,23,2,0.0,1.0,0.9999104142189026,0.9999316334724426,1.000913143157959,0.996209979057312,Current checkout of original V6 API versus V7 path; both losses .75/.25; not a historical binary/environment replay
+Gemma 4 E2B-it,11,2,0.0,1.0,0.9999786615371704,0.9999793767929077,1.0002367496490479,0.9977744817733765,Current checkout of original V6 API versus V7 path; both losses .75/.25; not a historical binary/environment replay
+Gemma 4 E2B-it,15,2,0.0,1.0000001192092896,0.999955952167511,0.9999626874923706,1.0005111694335938,0.9966450929641724,Current checkout of original V6 API versus V7 path; both losses .75/.25; not a historical binary/environment replay
