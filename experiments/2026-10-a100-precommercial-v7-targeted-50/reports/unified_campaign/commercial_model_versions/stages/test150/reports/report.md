@@ -7,15 +7,15 @@ CLI routes and prompts are logged; different clients are not claimed to have ide
 
 | Model | Route | Status | Requests | Target hits / N | ASR |
 |---|---|---|---|---|---|
-| gpt-6.1-sol | codex | BLOCKED | 0/300 | N/A/150 | N/A |
-| gpt-6-sol | codex | BLOCKED | 0/300 | N/A/150 | N/A |
-| gpt-5.6-sol | codex | BLOCKED | 0/300 | N/A/150 | N/A |
-| gpt-6-astra | codex | BLOCKED | 0/300 | N/A/150 | N/A |
-| gpt-6-luna | codex | BLOCKED | 0/300 | N/A/150 | N/A |
-| gpt-5.6-terra | codex | BLOCKED | 0/300 | N/A/150 | N/A |
-| gpt-5.6-luna | codex | BLOCKED | 0/300 | N/A/150 | N/A |
+| gpt-6.1-sol | codex | RUNNING | 120/300 | N/A/150 | N/A |
+| gpt-6-sol | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-5.6-sol | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-6-astra | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-6-luna | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-5.6-terra | codex | QUEUED | 0/300 | N/A/150 | N/A |
+| gpt-5.6-luna | codex | QUEUED | 0/300 | N/A/150 | N/A |
 | gemini-3.8-flash-low | gemini_agy | COMPLETE | 300/300 | 104/150 | 0.6933333333333334 |
 | gemini-3.8-flash-high | gemini_agy | COMPLETE | 300/300 | 102/150 | 0.68 |
 | gemini-3.8-flash-medium | gemini_agy | COMPLETE | 300/300 | 102/150 | 0.68 |
-| claude-sonnet-4-6 | claude | BLOCKED | 102/300 | N/A/150 | N/A |
-| claude-opus-4-6-thinking | claude | BLOCKED | 0/300 | N/A/150 | N/A |
+| claude-sonnet-4-6 | claude | QUEUED | 102/300 | N/A/150 | N/A |
+| claude-opus-4-6-thinking | claude | QUEUED | 0/300 | N/A/150 | N/A |

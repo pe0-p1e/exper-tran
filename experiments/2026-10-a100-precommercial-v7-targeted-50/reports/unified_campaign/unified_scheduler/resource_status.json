@@ -1,35 +1,20 @@
 {
-  "at": 1792461714.9170785,
+  "at": 1792463582.849814,
   "gpu": {
-    "used_gib": 35.849609375,
+    "used_gib": 43.73828125,
     "utilization": 100.0,
     "pids": [
-      156626,
-      157231,
-      158348
+      158348,
+      163364,
+      163441
     ]
   },
   "primary": {
     "stage": "attack",
-    "condition": "CFI_no_DI",
-    "at": 1792458114.1866853
+    "condition": "CFI_seed_43",
+    "at": 1792462086.7163134
   },
   "active_gpu_workers": [
-    {
-      "kind": "legacy",
-      "condition": "P18_M15_I",
-      "phase": "attack",
-      "models": [
-        "CLIP ViT-L/14",
-        "DINOv2-Large",
-        "Qwen3.5-2B",
-        "Gemma 4 E2B-it"
-      ],
-      "reserve": 16.56989681906998,
-      "pid": 156626,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M15_I_attack_CLIP ViT-L_14.log",
-      "started": 1792457078.1058378
-    },
     {
       "kind": "legacy",
       "condition": "P18_M18_I",
@@ -44,6 +29,21 @@
       "pid": 158348,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M18_I_attack_Qwen3.5-2B.log",
       "started": 1792460475.4218056
+    },
+    {
+      "kind": "legacy",
+      "condition": "P18_M18_Q",
+      "phase": "attack",
+      "models": [
+        "InternVL3.5-2B-HF",
+        "InternVL3.5-4B-HF",
+        "Gemma 4 E2B-it",
+        "Gemma 4 E4B-it"
+      ],
+      "reserve": 29.866305351257324,
+      "pid": 163441,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M18_Q_attack_InternVL3.5-2B-HF.log",
+      "started": 1792462148.2107987
     }
   ],
   "max_gpu_workers": 4,

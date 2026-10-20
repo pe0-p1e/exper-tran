@@ -1,32 +1,32 @@
 {
   "stage": "test150",
-  "updated": 1792461720.8705008,
+  "updated": 1792463575.2274399,
   "models": [
     {
       "matrix_id": "openai_61_sol",
       "provider": "codex",
       "model": "gpt-6.1-sol",
-      "status": "BLOCKED",
-      "completed_requests": 0,
+      "status": "RUNNING",
+      "completed_requests": 120,
       "planned_requests": 300,
       "hits": null,
       "denominator": 150,
       "ASR": null,
-      "observed_hits": 0,
-      "observed_pairs": 0,
+      "observed_hits": 15,
+      "observed_pairs": 21,
       "clean_correct": null,
       "clean_correct_conditional_hits": null,
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6.1-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6.1-sol']' returned non-zero exit status 1.",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "openai_6_sol",
       "provider": "codex",
       "model": "gpt-6-sol",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -39,14 +39,14 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-sol', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-sol']' returned non-zero exit status 1.",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "openai_56_sol",
       "provider": "codex",
       "model": "gpt-5.6-sol",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -59,14 +59,14 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Ten-image interface incomplete; no ASR selection",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "openai_6_astra",
       "provider": "codex",
       "model": "gpt-6-astra",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -79,14 +79,14 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-astra', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-astra']' returned non-zero exit status 1.",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "openai_6_luna",
       "provider": "codex",
       "model": "gpt-6-luna",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -99,14 +99,14 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Command '['/home/ubuntu/exper-tran/.venv-a100/bin/python', '/home/ubuntu/exper-tran-proxy18h/experiments/2026-10-a100-precommercial-v7-targeted-50/src/run_codex_cli_pilot.py', '--model', 'gpt-6-luna', '--images', '150', '--pack-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/commercial_test150', '--result-dir', '/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/commercial_model_versions/stages/test150/commercial_cli/codex/gpt-6-luna']' returned non-zero exit status 1.",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "openai_56_terra",
       "provider": "codex",
       "model": "gpt-5.6-terra",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -119,14 +119,14 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Ten-image interface incomplete; no ASR selection",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "openai_56_luna",
       "provider": "codex",
       "model": "gpt-5.6-luna",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -139,7 +139,7 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Ten-image interface incomplete; no ASR selection",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -159,7 +159,7 @@
       "clean_correct_conditional_denominator": 150,
       "clean_correct_conditional_ASR": 0.6933333333333334,
       "invalid_replies": 0,
-      "reason": "Provider account eligibility blocked; no model request issued",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -179,7 +179,7 @@
       "clean_correct_conditional_denominator": 150,
       "clean_correct_conditional_ASR": 0.68,
       "invalid_replies": 4,
-      "reason": "Provider account eligibility blocked; no model request issued",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
@@ -199,14 +199,14 @@
       "clean_correct_conditional_denominator": 150,
       "clean_correct_conditional_ASR": 0.68,
       "invalid_replies": 0,
-      "reason": "Provider account eligibility blocked; no model request issued",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "claude_sonnet_46",
       "provider": "claude",
       "model": "claude-sonnet-4-6",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 102,
       "planned_requests": 300,
       "hits": null,
@@ -219,14 +219,14 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Provider account eligibility blocked; no model request issued",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     },
     {
       "matrix_id": "claude_opus_46",
       "provider": "claude",
       "model": "claude-opus-4-6-thinking",
-      "status": "BLOCKED",
+      "status": "QUEUED",
       "completed_requests": 0,
       "planned_requests": 300,
       "hits": null,
@@ -239,7 +239,7 @@
       "clean_correct_conditional_denominator": null,
       "clean_correct_conditional_ASR": null,
       "invalid_replies": 0,
-      "reason": "Provider account eligibility blocked; no model request issued",
+      "reason": "",
       "legacy_conditional_TASR": "N/A"
     }
   ],

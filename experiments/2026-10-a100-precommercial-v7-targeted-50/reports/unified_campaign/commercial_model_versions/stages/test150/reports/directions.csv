@@ -1,9 +1,9 @@
 matrix_id,transition,hits,denominator,completed_pairs
-openai_61_sol,T01,,30,0
-openai_61_sol,T03,,30,0
-openai_61_sol,T05,,30,0
-openai_61_sol,T07,,30,0
-openai_61_sol,T09,,30,0
+openai_61_sol,T01,,30,2
+openai_61_sol,T03,,30,1
+openai_61_sol,T05,,30,5
+openai_61_sol,T07,,30,8
+openai_61_sol,T09,,30,5
 openai_6_sol,T01,,30,0
 openai_6_sol,T03,,30,0
 openai_6_sol,T05,,30,0

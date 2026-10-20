@@ -1,0 +1,12 @@
+{
+  "signature": "adb87d62eee956318cb1e032c74c98f7e70efa6bb92e0dc3d4f1ff9b5bc481e3",
+  "one_fit_per_method": true,
+  "groups": [
+    48,
+    48,
+    2,
+    2
+  ],
+  "seed": 42,
+  "reverse_direction_absent": true
+}

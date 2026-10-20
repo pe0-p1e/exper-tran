@@ -90,10 +90,22 @@
       "model": "InternVL3.5-2B-HF",
       "metadata_sha256": "70a07496b4fb5687e9c633e19484ca7c6a6d7ae1536b868d8cf88fa8163f9cf6",
       "npz_sha256": "d537fb00dcc4e9499570cce3c2096858a8981c73f9d261f0ae0818bc7d50f435"
+    },
+    {
+      "condition": "U02",
+      "model": "InternVL3.5-8B-HF",
+      "metadata_sha256": "ecc7f5d7dbdfedc231760a2ddc6147a8e12d9b862dd4a2fc01921c5d6788f5c7",
+      "npz_sha256": "4533b590d0f1662d2f1583b68eee979e099e00d48f9bc0a47257d38183c00234"
+    },
+    {
+      "condition": "U02",
+      "model": "Qwen3.5-2B",
+      "metadata_sha256": "1c991c9eef45a33221fb3b61549c290bd4645f3df0b3a8ec8dcb38981dd8b4b4",
+      "npz_sha256": "a4739c38677cf3b08d12fe1e5d2695156f27289fcc202424b3d7d35bcca5185f"
     }
   ],
-  "measurement_rows": 300,
-  "cross_model_rows": 264,
+  "measurement_rows": 340,
+  "cross_model_rows": 320,
   "model_inference_calls": 0,
   "per_direction_N": 2,
   "per_direction_CKA_RSA": "N/A: N2 is degenerate/undefined; cross-model metrics use all10 aligned images",
