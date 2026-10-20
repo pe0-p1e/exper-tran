@@ -1,5 +1,5 @@
 {
-  "at": 1792483320.544823,
+  "at": 1792484491.9119499,
   "conditions": [
     {
       "group": "A",
@@ -12,14 +12,14 @@
       "layers": "[1.0]",
       "DI": false,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 2,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.06666666666666667,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 128.9513003230095
     },
     {
       "group": "A",
@@ -32,14 +32,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": false,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 19,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.6333333333333333,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 137.60506123298546
     },
     {
       "group": "A",
@@ -52,14 +52,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 24,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.8,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 165.89699101401493
     },
     {
       "group": "A",
@@ -112,14 +112,14 @@
       "layers": "[1.0]",
       "DI": false,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 15,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.5,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 269.19214743498014
     },
     {
       "group": "B",
@@ -132,14 +132,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": false,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 20,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.6666666666666666,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 289.99827936300426
     },
     {
       "group": "B",
@@ -152,14 +152,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 24,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.8,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 298.59440212798654
     },
     {
       "group": "B",
@@ -172,14 +172,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 24,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.8,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 272.3809908980329
     },
     {
       "group": "B",
@@ -192,14 +192,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.35,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 28,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.9333333333333333,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 297.85191720101284
     },
     {
       "group": "A",
@@ -212,14 +212,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 18,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.6,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 175.769282002002
     },
     {
       "group": "A",
@@ -232,14 +232,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 24,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.8,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 165.89699101401493
     },
     {
       "group": "A",
@@ -252,14 +252,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 29,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.9666666666666667,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 83.23860662500374
     },
     {
       "group": "A",
@@ -272,14 +272,14 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 8,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.26666666666666666,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 76.51358929602429
     },
     {
       "group": "A",
@@ -292,76 +292,18 @@
       "layers": "[0.25, 0.5, 0.75, 1.0]",
       "DI": true,
       "patch_weight": 0.0,
-      "status": "QUEUED",
-      "unique_attack_images": 0,
-      "validated_model_images": 0,
-      "hits": null,
+      "status": "COMPLETE",
+      "unique_attack_images": 10,
+      "validated_model_images": 30,
+      "hits": 4,
       "denominator": 30,
-      "ASR": null,
+      "ASR": 0.13333333333333333,
       "reused": false,
-      "attack_seconds": 0.0
+      "attack_seconds": 72.13055153397727
     }
   ],
   "failures": [],
-  "active": [
-    {
-      "kind": "previous",
-      "condition": "P18_M28_Q",
-      "phase": "attack",
-      "models": [
-        "DINOv2-Large",
-        "SigLIP2-So400m-patch14-384",
-        "InternVL3.5-2B-HF",
-        "Gemma 4 E2B-it"
-      ],
-      "reserve": 18.141033742576838,
-      "pid": 330050,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M28_Q_attack_DINOv2-Large.log",
-      "started": 1792478552.876999
-    },
-    {
-      "kind": "previous",
-      "condition": "P18_M26_G",
-      "phase": "attack",
-      "models": [
-        "SigLIP2-So400m-patch14-384",
-        "DINOv2-Large",
-        "InternVL3.5-2B-HF"
-      ],
-      "reserve": 10.057049367576838,
-      "pid": 331942,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M26_G_attack_SigLIP2-So400m-patch14-384.log",
-      "started": 1792481958.5624638
-    },
-    {
-      "kind": "pp4",
-      "condition": "PP4_15b42a468d1b0d62",
-      "phase": "attack",
-      "models": [
-        "CLIP ViT-L/14",
-        "Qwen3.5-2B",
-        "InternVL3.5-2B-HF"
-      ],
-      "reserve": 12.293119551613927,
-      "pid": 333311,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_four_layer/logs/PP4_15b42a468d1b0d62_attack_CLIP ViT-L_14.log",
-      "started": 1792483284.1968045
-    },
-    {
-      "kind": "pp4",
-      "condition": "PP4_b698fb13336026a8",
-      "phase": "attack",
-      "models": [
-        "CLIP ViT-L/14",
-        "Qwen3.5-2B",
-        "Gemma 4 E2B-it"
-      ],
-      "reserve": 16.002966048195958,
-      "pid": 333338,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_four_layer/logs/PP4_b698fb13336026a8_attack_CLIP ViT-L_14.log",
-      "started": 1792483290.9236338
-    }
-  ],
+  "active": [],
   "commercial_testing": "AWAITING_USER_CONFIRMATION",
   "full_matrix_expansion": false
 }
