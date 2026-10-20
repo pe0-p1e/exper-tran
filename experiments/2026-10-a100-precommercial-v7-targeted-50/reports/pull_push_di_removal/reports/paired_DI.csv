@@ -1,0 +1,3 @@
+group,DI_on_hits,DI_off_hits,N_unique_images,N_model_image_pairs,off_minus_on,image_cluster_CI_low,image_cluster_CI_high,removal_wins,removal_losses
+A,29,16,10,30,-0.4333333333333333,-0.6333333333333333,-0.26666666666666666,0,13
+B,28,21,10,30,-0.2333333333333333,-0.4,-0.06666666666666667,0,7

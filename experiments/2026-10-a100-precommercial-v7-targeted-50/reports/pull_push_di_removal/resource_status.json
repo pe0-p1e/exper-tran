@@ -1,0 +1,26 @@
+{
+  "at": 1792510289.8190312,
+  "gpu": {
+    "used_gib": 0.0,
+    "utilization": 0.0,
+    "pids": []
+  },
+  "active": [
+    {
+      "kind": "pp4",
+      "condition": "PP4_80472e1d1eab3a71",
+      "phase": "validate",
+      "models": [
+        "Gemma 4 E4B-it"
+      ],
+      "reserve": 18.291452944278717,
+      "pid": 362416,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_di_removal/logs/PP4_80472e1d1eab3a71_validate_Gemma 4 E4B-it.log",
+      "started": 1792510286.7524369
+    }
+  ],
+  "max_gpu_workers": 4,
+  "reserved_limit_gib": 72,
+  "commercial_workers": 0,
+  "previous_pending_paused": true
+}

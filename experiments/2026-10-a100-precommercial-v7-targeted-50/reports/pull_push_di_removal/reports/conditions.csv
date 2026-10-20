@@ -1,0 +1,5 @@
+group,condition,DI,status,attack_images,observed,hits,denominator,unique_images,reused,attack_seconds
+A,PP4_a67072ce6f897ad4,True,COMPLETE,10,30,29,30,10,True,0.0
+A,PP4_c7f91ccd258f8ec5,False,COMPLETE,10,30,16,30,10,False,75.07180543197319
+B,PP4_ccb26f651a2c1317,True,COMPLETE,10,30,28,30,10,True,0.0
+B,PP4_80472e1d1eab3a71,False,COMPLETE,10,30,21,30,10,False,164.00676923798164

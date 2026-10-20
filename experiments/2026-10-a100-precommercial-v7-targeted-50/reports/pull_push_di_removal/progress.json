@@ -1,0 +1,61 @@
+{
+  "at": 1792510305.1579568,
+  "conditions": [
+    {
+      "group": "A",
+      "condition": "PP4_a67072ce6f897ad4",
+      "DI": true,
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 30,
+      "hits": 29,
+      "denominator": 30,
+      "unique_images": 10,
+      "reused": true,
+      "attack_seconds": 0.0
+    },
+    {
+      "group": "A",
+      "condition": "PP4_c7f91ccd258f8ec5",
+      "DI": false,
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 30,
+      "hits": 16,
+      "denominator": 30,
+      "unique_images": 10,
+      "reused": false,
+      "attack_seconds": 75.07180543197319
+    },
+    {
+      "group": "B",
+      "condition": "PP4_ccb26f651a2c1317",
+      "DI": true,
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 30,
+      "hits": 28,
+      "denominator": 30,
+      "unique_images": 10,
+      "reused": true,
+      "attack_seconds": 0.0
+    },
+    {
+      "group": "B",
+      "condition": "PP4_80472e1d1eab3a71",
+      "DI": false,
+      "status": "COMPLETE",
+      "attack_images": 10,
+      "observed": 30,
+      "hits": 21,
+      "denominator": 30,
+      "unique_images": 10,
+      "reused": false,
+      "attack_seconds": 164.00676923798164
+    }
+  ],
+  "failures": [],
+  "active": [],
+  "full_matrix": false,
+  "commercial_testing": false
+}
