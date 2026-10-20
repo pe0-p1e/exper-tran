@@ -1,0 +1,76 @@
+{
+  "at": 1792483320.592949,
+  "gpu": {
+    "used_gib": 40.9296875,
+    "utilization": 100.0,
+    "pids": [
+      330050,
+      331942,
+      333311,
+      333338
+    ]
+  },
+  "active": [
+    {
+      "kind": "previous",
+      "condition": "P18_M28_Q",
+      "phase": "attack",
+      "models": [
+        "DINOv2-Large",
+        "SigLIP2-So400m-patch14-384",
+        "InternVL3.5-2B-HF",
+        "Gemma 4 E2B-it"
+      ],
+      "reserve": 18.141033742576838,
+      "pid": 330050,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M28_Q_attack_DINOv2-Large.log",
+      "started": 1792478552.876999
+    },
+    {
+      "kind": "previous",
+      "condition": "P18_M26_G",
+      "phase": "attack",
+      "models": [
+        "SigLIP2-So400m-patch14-384",
+        "DINOv2-Large",
+        "InternVL3.5-2B-HF"
+      ],
+      "reserve": 10.057049367576838,
+      "pid": 331942,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/unified_scheduler/legacy_P18_M26_G_attack_SigLIP2-So400m-patch14-384.log",
+      "started": 1792481958.5624638
+    },
+    {
+      "kind": "pp4",
+      "condition": "PP4_15b42a468d1b0d62",
+      "phase": "attack",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "reserve": 12.293119551613927,
+      "pid": 333311,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_four_layer/logs/PP4_15b42a468d1b0d62_attack_CLIP ViT-L_14.log",
+      "started": 1792483284.1968045
+    },
+    {
+      "kind": "pp4",
+      "condition": "PP4_b698fb13336026a8",
+      "phase": "attack",
+      "models": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "reserve": 16.002966048195958,
+      "pid": 333338,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_four_layer/logs/PP4_b698fb13336026a8_attack_CLIP ViT-L_14.log",
+      "started": 1792483290.9236338
+    }
+  ],
+  "max_gpu_workers": 4,
+  "reserved_limit_gib": 72,
+  "commercial_workers": 0,
+  "previous_pending_paused": true
+}

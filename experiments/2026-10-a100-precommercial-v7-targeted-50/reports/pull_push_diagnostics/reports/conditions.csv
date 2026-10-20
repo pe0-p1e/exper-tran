@@ -1,0 +1,16 @@
+group,label,condition,models,loss,pull,push,layers,DI,patch_weight,status,unique_attack_images,validated_model_images,hits,denominator,ASR,reused,attack_seconds
+A,deep_PP_noDI,PP4_c00ac471b30df478,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.75,0.25,[1.0],False,0.0,QUEUED,0,0,,30,,False,0.0
+A,four_PP_noDI,PP4_b3fa542b54246984,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",False,0.0,QUEUED,0,0,,30,,False,0.0
+A,four_PP_DI,PP4_15b42a468d1b0d62,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+A,four_margin_DI,PP4_6f7c54bec64962a5,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,margin,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.0,COMPLETE,10,30,27,30,0.9,True,0.0
+A,four_margin_patch_DI,PP4_6f0f1dcfa263a5c2,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,margin,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.35,COMPLETE,10,30,29,30,0.9666666666666667,True,0.0
+B,deep_PP_noDI,PP4_5facf536f746f6d7,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,pull_push,0.75,0.25,[1.0],False,0.0,QUEUED,0,0,,30,,False,0.0
+B,four_PP_noDI,PP4_30790b2a641695b7,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,pull_push,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",False,0.0,QUEUED,0,0,,30,,False,0.0
+B,four_PP_DI,PP4_b698fb13336026a8,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,pull_push,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+B,four_margin_DI,PP4_31dd56c2b04a519a,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,margin,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+B,four_margin_patch_DI,PP4_b788f5551f3799a6,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,margin,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.35,QUEUED,0,0,,30,,False,0.0
+A,weight_1.00,PP4_5eca5c2fa0b3db3a,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,1.0,0.0,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+A,weight_0.75,PP4_15b42a468d1b0d62,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.75,0.25,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+A,weight_0.50,PP4_a67072ce6f897ad4,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.5,0.5,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+A,weight_0.25,PP4_21f63bbd453a29d3,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.25,0.75,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0
+A,weight_0.00,PP4_032c57c3a72b0ae1,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,pull_push,0.0,1.0,"[0.25, 0.5, 0.75, 1.0]",True,0.0,QUEUED,0,0,,30,,False,0.0

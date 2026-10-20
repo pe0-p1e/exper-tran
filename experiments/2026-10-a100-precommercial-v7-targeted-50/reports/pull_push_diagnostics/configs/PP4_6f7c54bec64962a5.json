@@ -1,0 +1,17 @@
+{
+  "loss": "margin",
+  "layers": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "patch_weight": 0.0,
+  "aggregation": "centroid",
+  "pull_weight": 0.75,
+  "push_weight": 0.25,
+  "projector_weight": 0.0,
+  "pp4_dev_offset": 2,
+  "pp4_objective_sha256": "8dae1f8fd3fcdfc649abe5158a85743153156ef342741d4a304b3a9cf96d0fbe",
+  "pp4_worker_sha256": "060e59d6dea62bdc30769950b083baf61610d45d19ed8a1cd38ea7b68c192356"
+}

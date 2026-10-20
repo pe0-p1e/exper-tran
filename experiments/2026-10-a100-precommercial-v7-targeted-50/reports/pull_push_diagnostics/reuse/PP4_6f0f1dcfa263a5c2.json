@@ -1,0 +1,49 @@
+{
+  "source_condition": "U00",
+  "states": [
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_000/state.json",
+      "sha256": "7168a57a69c78d95a374dffbffc2e18da7adc4990259f7dee9a251497c0bc042"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/state.json",
+      "sha256": "3dd067a33924da730af6893fd714d72382354c1f316742c6e7d60d06b001a669"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/state.json",
+      "sha256": "5854170044b279f69cdd2ae7591f5920fdf364acced1ceb20b263be9ad199749"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T07/batch_000/state.json",
+      "sha256": "fa83e800b82d7a21108da8ebb768d24e239d22bcc41ff80383b5b447be78f955"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/U00__A3__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/state.json",
+      "sha256": "fa7249b9b65f2e1ef68c1aa02a6252fd1decafd7f4c9e87ff568b435ac7645a4"
+    }
+  ],
+  "N": 10,
+  "shared_cohort": {
+    "T01": [
+      "train/n01443537/n01443537_374.JPEG",
+      "train/n01443537/n01443537_425.JPEG"
+    ],
+    "T03": [
+      "train/n07753275/n07753275_11517.JPEG",
+      "train/n07753275/n07753275_11533.JPEG"
+    ],
+    "T05": [
+      "train/n03642806/n03642806_11724.JPEG",
+      "train/n03642806/n03642806_11858.JPEG"
+    ],
+    "T07": [
+      "train/n09472597/n09472597_10298.JPEG",
+      "train/n09472597/n09472597_10474.JPEG"
+    ],
+    "T09": [
+      "train/n04254680/n04254680_102.JPEG",
+      "train/n04254680/n04254680_1051.JPEG"
+    ]
+  },
+  "new_attack_generated": false
+}
