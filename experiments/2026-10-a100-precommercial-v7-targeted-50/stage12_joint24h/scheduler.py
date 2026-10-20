@@ -39,13 +39,14 @@ def reconcile(s):
   if complete(j):s['completed'].append(j['id']);continue
   text=Path(j['log']).read_text(errors='replace')[-5000:] if Path(j['log']).exists() else ''
   exit=read(ROOT/'attempts'/j['id']/str(j['attempt'])/'exit.json',{})
-  kind=exit.get('kind') or failure_kind(text,0)
+  if exit.get('status')=='STOPPED':continue
+  kind=exit.get('kind') or (failure_kind(text,0) if exit or 'Traceback' in text else 'resource_or_interrupt')
   s['failures'].append(dict(job=j['id'],kind=kind,at=time.time(),log=j['log'],error=text[-1500:]))
   attempts=s['attempts'].get(j['id'],0)+1;s['attempts'][j['id']]=attempts
   if kind=='code' or attempts>=3:s['blocked'].append(j['id'])
   else:
    s['retry_after'][j['id']]=time.time()+min(300,10*2**attempts)+random.uniform(0,3)
-   if kind=='oom':s['worker_limit']=max(1,s['worker_limit']-1);s['microbatch']=1
+   if kind in ['oom','resource_or_interrupt']:s['worker_limit']=max(1,s['worker_limit']-1);s['microbatch']=1
  s['active']=active
 
 def launch(s,c,mode):

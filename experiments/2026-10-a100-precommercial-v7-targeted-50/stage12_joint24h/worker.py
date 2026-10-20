@@ -21,7 +21,12 @@ def main():
   install();memory_cap()
   import torch
   import strict_model_audit,vision_features
-  original=strict_model_audit.audit_loaded_model
+  # Load the authoritative auditor unwrapped: supplement.install redirects its
+  # wrapper to the historical supplementary output root.
+  import importlib.util
+  audit_spec=importlib.util.spec_from_file_location('v8_parameter_audit',EXP.parent/'2026-10-a100-precommercial-v6/src/strict_model_audit.py')
+  audit_module=importlib.util.module_from_spec(audit_spec);audit_spec.loader.exec_module(audit_module)
+  original=audit_module.audit_loaded_model
   def audit(model,**kw):
    with (ROOT/'audit_writer.lock').open('a') as h:
     fcntl.flock(h,fcntl.LOCK_EX);kw['output_dir']=ROOT;return original(model,**kw)
