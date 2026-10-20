@@ -1,0 +1,27 @@
+{
+  "N": 10,
+  "states": [
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_15b42a468d1b0d62__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T01/batch_000/state.json",
+      "sha256": "88cbe11440c0cd951905dbc6587a902e23e827cfdfd694936204616cb3c3d229"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_15b42a468d1b0d62__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T03/batch_000/state.json",
+      "sha256": "0874a21b7d4a47a8dfe503876227b93c1bfc051e4c4b5624259c55facab641a0"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_15b42a468d1b0d62__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T05/batch_000/state.json",
+      "sha256": "32e71c946e6d06216e241f3fb6569e2103fee7b03c57e0f12a062b2d9d911dfb"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_15b42a468d1b0d62__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T07/batch_000/state.json",
+      "sha256": "912b77873ca836c2f878b6fd842d369b69cab56171cf3266af6685bf5593f11b"
+    },
+    {
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/attacks/dev/PP4_15b42a468d1b0d62__PP4__equal__CLIP_ViT-L_14+Qwen3.5-2B+InternVL3.5-2B-HF__DI__s42__i50__r1/T09/batch_000/state.json",
+      "sha256": "f30815b8a2652980ef6f9ce039906ff858c4b5da0a99070b17040ea60c5237e4"
+    }
+  ],
+  "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_four_layer",
+  "new_attack_generated": false
+}

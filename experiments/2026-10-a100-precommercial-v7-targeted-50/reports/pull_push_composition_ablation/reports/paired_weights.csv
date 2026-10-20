@@ -1,0 +1,2 @@
+composition,N_unique_images,model_image_pairs,hits_050,hits_075,paired_wins,paired_losses,delta_ASR,image_cluster_bootstrap_low,image_cluster_bootstrap_high
+CLIP_Qwen_InternVL,10,30,29,24,5,0,0.16666666666666666,0.0,0.33333333333333337

@@ -1,0 +1,391 @@
+composition,pull,validator,transition,hits,denominator,observed
+S_CLIP,0.5,Qwen3.5-9B,T01,1,2,2
+S_CLIP,0.5,Qwen3.5-9B,T03,2,2,2
+S_CLIP,0.5,Qwen3.5-9B,T05,0,2,2
+S_CLIP,0.5,Qwen3.5-9B,T07,2,2,2
+S_CLIP,0.5,Qwen3.5-9B,T09,2,2,2
+S_CLIP,0.5,InternVL3.5-8B-HF,T01,,2,0
+S_CLIP,0.5,InternVL3.5-8B-HF,T03,,2,0
+S_CLIP,0.5,InternVL3.5-8B-HF,T05,,2,0
+S_CLIP,0.5,InternVL3.5-8B-HF,T07,,2,0
+S_CLIP,0.5,InternVL3.5-8B-HF,T09,,2,0
+S_CLIP,0.5,Gemma 4 E4B-it,T01,,2,0
+S_CLIP,0.5,Gemma 4 E4B-it,T03,,2,0
+S_CLIP,0.5,Gemma 4 E4B-it,T05,,2,0
+S_CLIP,0.5,Gemma 4 E4B-it,T07,,2,0
+S_CLIP,0.5,Gemma 4 E4B-it,T09,,2,0
+S_CLIP,0.75,Qwen3.5-9B,T01,1,2,2
+S_CLIP,0.75,Qwen3.5-9B,T03,1,2,2
+S_CLIP,0.75,Qwen3.5-9B,T05,1,2,2
+S_CLIP,0.75,Qwen3.5-9B,T07,2,2,2
+S_CLIP,0.75,Qwen3.5-9B,T09,0,2,2
+S_CLIP,0.75,InternVL3.5-8B-HF,T01,,2,0
+S_CLIP,0.75,InternVL3.5-8B-HF,T03,,2,0
+S_CLIP,0.75,InternVL3.5-8B-HF,T05,,2,0
+S_CLIP,0.75,InternVL3.5-8B-HF,T07,,2,0
+S_CLIP,0.75,InternVL3.5-8B-HF,T09,,2,0
+S_CLIP,0.75,Gemma 4 E4B-it,T01,,2,0
+S_CLIP,0.75,Gemma 4 E4B-it,T03,,2,0
+S_CLIP,0.75,Gemma 4 E4B-it,T05,,2,0
+S_CLIP,0.75,Gemma 4 E4B-it,T07,,2,0
+S_CLIP,0.75,Gemma 4 E4B-it,T09,,2,0
+S_Qwen,0.5,Qwen3.5-9B,T01,,2,0
+S_Qwen,0.5,Qwen3.5-9B,T03,,2,0
+S_Qwen,0.5,Qwen3.5-9B,T05,,2,0
+S_Qwen,0.5,Qwen3.5-9B,T07,,2,0
+S_Qwen,0.5,Qwen3.5-9B,T09,,2,0
+S_Qwen,0.5,InternVL3.5-8B-HF,T01,,2,0
+S_Qwen,0.5,InternVL3.5-8B-HF,T03,,2,0
+S_Qwen,0.5,InternVL3.5-8B-HF,T05,,2,0
+S_Qwen,0.5,InternVL3.5-8B-HF,T07,,2,0
+S_Qwen,0.5,InternVL3.5-8B-HF,T09,,2,0
+S_Qwen,0.5,Gemma 4 E4B-it,T01,,2,0
+S_Qwen,0.5,Gemma 4 E4B-it,T03,,2,0
+S_Qwen,0.5,Gemma 4 E4B-it,T05,,2,0
+S_Qwen,0.5,Gemma 4 E4B-it,T07,,2,0
+S_Qwen,0.5,Gemma 4 E4B-it,T09,,2,0
+S_Qwen,0.75,Qwen3.5-9B,T01,,2,0
+S_Qwen,0.75,Qwen3.5-9B,T03,,2,0
+S_Qwen,0.75,Qwen3.5-9B,T05,,2,0
+S_Qwen,0.75,Qwen3.5-9B,T07,,2,0
+S_Qwen,0.75,Qwen3.5-9B,T09,,2,0
+S_Qwen,0.75,InternVL3.5-8B-HF,T01,,2,0
+S_Qwen,0.75,InternVL3.5-8B-HF,T03,,2,0
+S_Qwen,0.75,InternVL3.5-8B-HF,T05,,2,0
+S_Qwen,0.75,InternVL3.5-8B-HF,T07,,2,0
+S_Qwen,0.75,InternVL3.5-8B-HF,T09,,2,0
+S_Qwen,0.75,Gemma 4 E4B-it,T01,,2,0
+S_Qwen,0.75,Gemma 4 E4B-it,T03,,2,0
+S_Qwen,0.75,Gemma 4 E4B-it,T05,,2,0
+S_Qwen,0.75,Gemma 4 E4B-it,T07,,2,0
+S_Qwen,0.75,Gemma 4 E4B-it,T09,,2,0
+S_InternVL,0.5,Qwen3.5-9B,T01,,2,0
+S_InternVL,0.5,Qwen3.5-9B,T03,,2,0
+S_InternVL,0.5,Qwen3.5-9B,T05,,2,0
+S_InternVL,0.5,Qwen3.5-9B,T07,,2,0
+S_InternVL,0.5,Qwen3.5-9B,T09,,2,0
+S_InternVL,0.5,InternVL3.5-8B-HF,T01,,2,0
+S_InternVL,0.5,InternVL3.5-8B-HF,T03,,2,0
+S_InternVL,0.5,InternVL3.5-8B-HF,T05,,2,0
+S_InternVL,0.5,InternVL3.5-8B-HF,T07,,2,0
+S_InternVL,0.5,InternVL3.5-8B-HF,T09,,2,0
+S_InternVL,0.5,Gemma 4 E4B-it,T01,,2,0
+S_InternVL,0.5,Gemma 4 E4B-it,T03,,2,0
+S_InternVL,0.5,Gemma 4 E4B-it,T05,,2,0
+S_InternVL,0.5,Gemma 4 E4B-it,T07,,2,0
+S_InternVL,0.5,Gemma 4 E4B-it,T09,,2,0
+S_InternVL,0.75,Qwen3.5-9B,T01,,2,0
+S_InternVL,0.75,Qwen3.5-9B,T03,,2,0
+S_InternVL,0.75,Qwen3.5-9B,T05,,2,0
+S_InternVL,0.75,Qwen3.5-9B,T07,,2,0
+S_InternVL,0.75,Qwen3.5-9B,T09,,2,0
+S_InternVL,0.75,InternVL3.5-8B-HF,T01,,2,0
+S_InternVL,0.75,InternVL3.5-8B-HF,T03,,2,0
+S_InternVL,0.75,InternVL3.5-8B-HF,T05,,2,0
+S_InternVL,0.75,InternVL3.5-8B-HF,T07,,2,0
+S_InternVL,0.75,InternVL3.5-8B-HF,T09,,2,0
+S_InternVL,0.75,Gemma 4 E4B-it,T01,,2,0
+S_InternVL,0.75,Gemma 4 E4B-it,T03,,2,0
+S_InternVL,0.75,Gemma 4 E4B-it,T05,,2,0
+S_InternVL,0.75,Gemma 4 E4B-it,T07,,2,0
+S_InternVL,0.75,Gemma 4 E4B-it,T09,,2,0
+S_Gemma,0.5,Qwen3.5-9B,T01,,2,0
+S_Gemma,0.5,Qwen3.5-9B,T03,,2,0
+S_Gemma,0.5,Qwen3.5-9B,T05,,2,0
+S_Gemma,0.5,Qwen3.5-9B,T07,,2,0
+S_Gemma,0.5,Qwen3.5-9B,T09,,2,0
+S_Gemma,0.5,InternVL3.5-8B-HF,T01,,2,0
+S_Gemma,0.5,InternVL3.5-8B-HF,T03,,2,0
+S_Gemma,0.5,InternVL3.5-8B-HF,T05,,2,0
+S_Gemma,0.5,InternVL3.5-8B-HF,T07,,2,0
+S_Gemma,0.5,InternVL3.5-8B-HF,T09,,2,0
+S_Gemma,0.5,Gemma 4 E4B-it,T01,,2,0
+S_Gemma,0.5,Gemma 4 E4B-it,T03,,2,0
+S_Gemma,0.5,Gemma 4 E4B-it,T05,,2,0
+S_Gemma,0.5,Gemma 4 E4B-it,T07,,2,0
+S_Gemma,0.5,Gemma 4 E4B-it,T09,,2,0
+S_Gemma,0.75,Qwen3.5-9B,T01,,2,0
+S_Gemma,0.75,Qwen3.5-9B,T03,,2,0
+S_Gemma,0.75,Qwen3.5-9B,T05,,2,0
+S_Gemma,0.75,Qwen3.5-9B,T07,,2,0
+S_Gemma,0.75,Qwen3.5-9B,T09,,2,0
+S_Gemma,0.75,InternVL3.5-8B-HF,T01,,2,0
+S_Gemma,0.75,InternVL3.5-8B-HF,T03,,2,0
+S_Gemma,0.75,InternVL3.5-8B-HF,T05,,2,0
+S_Gemma,0.75,InternVL3.5-8B-HF,T07,,2,0
+S_Gemma,0.75,InternVL3.5-8B-HF,T09,,2,0
+S_Gemma,0.75,Gemma 4 E4B-it,T01,,2,0
+S_Gemma,0.75,Gemma 4 E4B-it,T03,,2,0
+S_Gemma,0.75,Gemma 4 E4B-it,T05,,2,0
+S_Gemma,0.75,Gemma 4 E4B-it,T07,,2,0
+S_Gemma,0.75,Gemma 4 E4B-it,T09,,2,0
+S_DINO,0.5,Qwen3.5-9B,T01,,2,0
+S_DINO,0.5,Qwen3.5-9B,T03,,2,0
+S_DINO,0.5,Qwen3.5-9B,T05,,2,0
+S_DINO,0.5,Qwen3.5-9B,T07,,2,0
+S_DINO,0.5,Qwen3.5-9B,T09,,2,0
+S_DINO,0.5,InternVL3.5-8B-HF,T01,,2,0
+S_DINO,0.5,InternVL3.5-8B-HF,T03,,2,0
+S_DINO,0.5,InternVL3.5-8B-HF,T05,,2,0
+S_DINO,0.5,InternVL3.5-8B-HF,T07,,2,0
+S_DINO,0.5,InternVL3.5-8B-HF,T09,,2,0
+S_DINO,0.5,Gemma 4 E4B-it,T01,,2,0
+S_DINO,0.5,Gemma 4 E4B-it,T03,,2,0
+S_DINO,0.5,Gemma 4 E4B-it,T05,,2,0
+S_DINO,0.5,Gemma 4 E4B-it,T07,,2,0
+S_DINO,0.5,Gemma 4 E4B-it,T09,,2,0
+S_DINO,0.75,Qwen3.5-9B,T01,,2,0
+S_DINO,0.75,Qwen3.5-9B,T03,,2,0
+S_DINO,0.75,Qwen3.5-9B,T05,,2,0
+S_DINO,0.75,Qwen3.5-9B,T07,,2,0
+S_DINO,0.75,Qwen3.5-9B,T09,,2,0
+S_DINO,0.75,InternVL3.5-8B-HF,T01,,2,0
+S_DINO,0.75,InternVL3.5-8B-HF,T03,,2,0
+S_DINO,0.75,InternVL3.5-8B-HF,T05,,2,0
+S_DINO,0.75,InternVL3.5-8B-HF,T07,,2,0
+S_DINO,0.75,InternVL3.5-8B-HF,T09,,2,0
+S_DINO,0.75,Gemma 4 E4B-it,T01,,2,0
+S_DINO,0.75,Gemma 4 E4B-it,T03,,2,0
+S_DINO,0.75,Gemma 4 E4B-it,T05,,2,0
+S_DINO,0.75,Gemma 4 E4B-it,T07,,2,0
+S_DINO,0.75,Gemma 4 E4B-it,T09,,2,0
+Qwen_InternVL,0.5,Qwen3.5-9B,T01,,2,0
+Qwen_InternVL,0.5,Qwen3.5-9B,T03,,2,0
+Qwen_InternVL,0.5,Qwen3.5-9B,T05,,2,0
+Qwen_InternVL,0.5,Qwen3.5-9B,T07,,2,0
+Qwen_InternVL,0.5,Qwen3.5-9B,T09,,2,0
+Qwen_InternVL,0.5,InternVL3.5-8B-HF,T01,,2,0
+Qwen_InternVL,0.5,InternVL3.5-8B-HF,T03,,2,0
+Qwen_InternVL,0.5,InternVL3.5-8B-HF,T05,,2,0
+Qwen_InternVL,0.5,InternVL3.5-8B-HF,T07,,2,0
+Qwen_InternVL,0.5,InternVL3.5-8B-HF,T09,,2,0
+Qwen_InternVL,0.5,Gemma 4 E4B-it,T01,,2,0
+Qwen_InternVL,0.5,Gemma 4 E4B-it,T03,,2,0
+Qwen_InternVL,0.5,Gemma 4 E4B-it,T05,,2,0
+Qwen_InternVL,0.5,Gemma 4 E4B-it,T07,,2,0
+Qwen_InternVL,0.5,Gemma 4 E4B-it,T09,,2,0
+Qwen_InternVL,0.75,Qwen3.5-9B,T01,,2,0
+Qwen_InternVL,0.75,Qwen3.5-9B,T03,,2,0
+Qwen_InternVL,0.75,Qwen3.5-9B,T05,,2,0
+Qwen_InternVL,0.75,Qwen3.5-9B,T07,,2,0
+Qwen_InternVL,0.75,Qwen3.5-9B,T09,,2,0
+Qwen_InternVL,0.75,InternVL3.5-8B-HF,T01,,2,0
+Qwen_InternVL,0.75,InternVL3.5-8B-HF,T03,,2,0
+Qwen_InternVL,0.75,InternVL3.5-8B-HF,T05,,2,0
+Qwen_InternVL,0.75,InternVL3.5-8B-HF,T07,,2,0
+Qwen_InternVL,0.75,InternVL3.5-8B-HF,T09,,2,0
+Qwen_InternVL,0.75,Gemma 4 E4B-it,T01,,2,0
+Qwen_InternVL,0.75,Gemma 4 E4B-it,T03,,2,0
+Qwen_InternVL,0.75,Gemma 4 E4B-it,T05,,2,0
+Qwen_InternVL,0.75,Gemma 4 E4B-it,T07,,2,0
+Qwen_InternVL,0.75,Gemma 4 E4B-it,T09,,2,0
+CLIP_Qwen_InternVL,0.5,Qwen3.5-9B,T01,2,2,2
+CLIP_Qwen_InternVL,0.5,Qwen3.5-9B,T03,2,2,2
+CLIP_Qwen_InternVL,0.5,Qwen3.5-9B,T05,2,2,2
+CLIP_Qwen_InternVL,0.5,Qwen3.5-9B,T07,2,2,2
+CLIP_Qwen_InternVL,0.5,Qwen3.5-9B,T09,2,2,2
+CLIP_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T01,2,2,2
+CLIP_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T03,2,2,2
+CLIP_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T05,2,2,2
+CLIP_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T07,2,2,2
+CLIP_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T09,2,2,2
+CLIP_Qwen_InternVL,0.5,Gemma 4 E4B-it,T01,1,2,2
+CLIP_Qwen_InternVL,0.5,Gemma 4 E4B-it,T03,2,2,2
+CLIP_Qwen_InternVL,0.5,Gemma 4 E4B-it,T05,2,2,2
+CLIP_Qwen_InternVL,0.5,Gemma 4 E4B-it,T07,2,2,2
+CLIP_Qwen_InternVL,0.5,Gemma 4 E4B-it,T09,2,2,2
+CLIP_Qwen_InternVL,0.75,Qwen3.5-9B,T01,2,2,2
+CLIP_Qwen_InternVL,0.75,Qwen3.5-9B,T03,2,2,2
+CLIP_Qwen_InternVL,0.75,Qwen3.5-9B,T05,1,2,2
+CLIP_Qwen_InternVL,0.75,Qwen3.5-9B,T07,2,2,2
+CLIP_Qwen_InternVL,0.75,Qwen3.5-9B,T09,2,2,2
+CLIP_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T01,2,2,2
+CLIP_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T03,2,2,2
+CLIP_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T05,2,2,2
+CLIP_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T07,2,2,2
+CLIP_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T09,1,2,2
+CLIP_Qwen_InternVL,0.75,Gemma 4 E4B-it,T01,1,2,2
+CLIP_Qwen_InternVL,0.75,Gemma 4 E4B-it,T03,2,2,2
+CLIP_Qwen_InternVL,0.75,Gemma 4 E4B-it,T05,0,2,2
+CLIP_Qwen_InternVL,0.75,Gemma 4 E4B-it,T07,2,2,2
+CLIP_Qwen_InternVL,0.75,Gemma 4 E4B-it,T09,1,2,2
+CLIP_Qwen_Gemma,0.5,Qwen3.5-9B,T01,,2,0
+CLIP_Qwen_Gemma,0.5,Qwen3.5-9B,T03,,2,0
+CLIP_Qwen_Gemma,0.5,Qwen3.5-9B,T05,,2,0
+CLIP_Qwen_Gemma,0.5,Qwen3.5-9B,T07,,2,0
+CLIP_Qwen_Gemma,0.5,Qwen3.5-9B,T09,,2,0
+CLIP_Qwen_Gemma,0.5,InternVL3.5-8B-HF,T01,,2,0
+CLIP_Qwen_Gemma,0.5,InternVL3.5-8B-HF,T03,,2,0
+CLIP_Qwen_Gemma,0.5,InternVL3.5-8B-HF,T05,,2,0
+CLIP_Qwen_Gemma,0.5,InternVL3.5-8B-HF,T07,,2,0
+CLIP_Qwen_Gemma,0.5,InternVL3.5-8B-HF,T09,,2,0
+CLIP_Qwen_Gemma,0.5,Gemma 4 E4B-it,T01,,2,0
+CLIP_Qwen_Gemma,0.5,Gemma 4 E4B-it,T03,,2,0
+CLIP_Qwen_Gemma,0.5,Gemma 4 E4B-it,T05,,2,0
+CLIP_Qwen_Gemma,0.5,Gemma 4 E4B-it,T07,,2,0
+CLIP_Qwen_Gemma,0.5,Gemma 4 E4B-it,T09,,2,0
+CLIP_Qwen_Gemma,0.75,Qwen3.5-9B,T01,1,2,2
+CLIP_Qwen_Gemma,0.75,Qwen3.5-9B,T03,2,2,2
+CLIP_Qwen_Gemma,0.75,Qwen3.5-9B,T05,1,2,2
+CLIP_Qwen_Gemma,0.75,Qwen3.5-9B,T07,2,2,2
+CLIP_Qwen_Gemma,0.75,Qwen3.5-9B,T09,2,2,2
+CLIP_Qwen_Gemma,0.75,InternVL3.5-8B-HF,T01,1,2,2
+CLIP_Qwen_Gemma,0.75,InternVL3.5-8B-HF,T03,2,2,2
+CLIP_Qwen_Gemma,0.75,InternVL3.5-8B-HF,T05,1,2,2
+CLIP_Qwen_Gemma,0.75,InternVL3.5-8B-HF,T07,2,2,2
+CLIP_Qwen_Gemma,0.75,InternVL3.5-8B-HF,T09,1,2,2
+CLIP_Qwen_Gemma,0.75,Gemma 4 E4B-it,T01,2,2,2
+CLIP_Qwen_Gemma,0.75,Gemma 4 E4B-it,T03,2,2,2
+CLIP_Qwen_Gemma,0.75,Gemma 4 E4B-it,T05,1,2,2
+CLIP_Qwen_Gemma,0.75,Gemma 4 E4B-it,T07,2,2,2
+CLIP_Qwen_Gemma,0.75,Gemma 4 E4B-it,T09,2,2,2
+CLIP_InternVL_Gemma,0.5,Qwen3.5-9B,T01,,2,0
+CLIP_InternVL_Gemma,0.5,Qwen3.5-9B,T03,,2,0
+CLIP_InternVL_Gemma,0.5,Qwen3.5-9B,T05,,2,0
+CLIP_InternVL_Gemma,0.5,Qwen3.5-9B,T07,,2,0
+CLIP_InternVL_Gemma,0.5,Qwen3.5-9B,T09,,2,0
+CLIP_InternVL_Gemma,0.5,InternVL3.5-8B-HF,T01,,2,0
+CLIP_InternVL_Gemma,0.5,InternVL3.5-8B-HF,T03,,2,0
+CLIP_InternVL_Gemma,0.5,InternVL3.5-8B-HF,T05,,2,0
+CLIP_InternVL_Gemma,0.5,InternVL3.5-8B-HF,T07,,2,0
+CLIP_InternVL_Gemma,0.5,InternVL3.5-8B-HF,T09,,2,0
+CLIP_InternVL_Gemma,0.5,Gemma 4 E4B-it,T01,,2,0
+CLIP_InternVL_Gemma,0.5,Gemma 4 E4B-it,T03,,2,0
+CLIP_InternVL_Gemma,0.5,Gemma 4 E4B-it,T05,,2,0
+CLIP_InternVL_Gemma,0.5,Gemma 4 E4B-it,T07,,2,0
+CLIP_InternVL_Gemma,0.5,Gemma 4 E4B-it,T09,,2,0
+CLIP_InternVL_Gemma,0.75,Qwen3.5-9B,T01,,2,0
+CLIP_InternVL_Gemma,0.75,Qwen3.5-9B,T03,,2,0
+CLIP_InternVL_Gemma,0.75,Qwen3.5-9B,T05,,2,0
+CLIP_InternVL_Gemma,0.75,Qwen3.5-9B,T07,,2,0
+CLIP_InternVL_Gemma,0.75,Qwen3.5-9B,T09,,2,0
+CLIP_InternVL_Gemma,0.75,InternVL3.5-8B-HF,T01,,2,0
+CLIP_InternVL_Gemma,0.75,InternVL3.5-8B-HF,T03,,2,0
+CLIP_InternVL_Gemma,0.75,InternVL3.5-8B-HF,T05,,2,0
+CLIP_InternVL_Gemma,0.75,InternVL3.5-8B-HF,T07,,2,0
+CLIP_InternVL_Gemma,0.75,InternVL3.5-8B-HF,T09,,2,0
+CLIP_InternVL_Gemma,0.75,Gemma 4 E4B-it,T01,,2,0
+CLIP_InternVL_Gemma,0.75,Gemma 4 E4B-it,T03,,2,0
+CLIP_InternVL_Gemma,0.75,Gemma 4 E4B-it,T05,,2,0
+CLIP_InternVL_Gemma,0.75,Gemma 4 E4B-it,T07,,2,0
+CLIP_InternVL_Gemma,0.75,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_Qwen,0.5,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_Qwen,0.5,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_Qwen,0.5,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_Qwen,0.5,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_Qwen,0.5,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_Qwen,0.5,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_Qwen,0.5,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_Qwen,0.5,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_Qwen,0.5,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_Qwen,0.5,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_Qwen,0.5,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_Qwen,0.5,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_Qwen,0.5,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_Qwen,0.5,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_Qwen,0.5,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_Qwen,0.75,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_Qwen,0.75,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_Qwen,0.75,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_Qwen,0.75,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_Qwen,0.75,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_Qwen,0.75,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_Qwen,0.75,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_Qwen,0.75,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_Qwen,0.75,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_Qwen,0.75,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_Qwen,0.75,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_Qwen,0.75,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_Qwen,0.75,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_Qwen,0.75,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_Qwen,0.75,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_InternVL,0.5,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_InternVL,0.5,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_InternVL,0.5,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_InternVL,0.5,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_InternVL,0.5,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_InternVL,0.5,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_InternVL,0.5,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_InternVL,0.5,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_InternVL,0.5,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_InternVL,0.5,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_InternVL,0.5,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_InternVL,0.5,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_InternVL,0.5,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_InternVL,0.5,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_InternVL,0.5,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_InternVL,0.75,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_InternVL,0.75,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_InternVL,0.75,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_InternVL,0.75,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_InternVL,0.75,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_InternVL,0.75,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_InternVL,0.75,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_InternVL,0.75,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_InternVL,0.75,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_InternVL,0.75,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_InternVL,0.75,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_InternVL,0.75,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_InternVL,0.75,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_InternVL,0.75,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_InternVL,0.75,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_Gemma,0.5,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_Gemma,0.5,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_Gemma,0.5,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_Gemma,0.5,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_Gemma,0.5,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_Gemma,0.5,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_Gemma,0.5,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_Gemma,0.5,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_Gemma,0.5,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_Gemma,0.5,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_Gemma,0.5,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_Gemma,0.5,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_Gemma,0.5,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_Gemma,0.5,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_Gemma,0.5,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_Gemma,0.75,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_Gemma,0.75,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_Gemma,0.75,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_Gemma,0.75,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_Gemma,0.75,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_Gemma,0.75,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_Gemma,0.75,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_Gemma,0.75,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_Gemma,0.75,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_Gemma,0.75,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_Gemma,0.75,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_Gemma,0.75,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_Gemma,0.75,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_Gemma,0.75,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_Gemma,0.75,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_Qwen_InternVL,0.5,Gemma 4 E4B-it,T09,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Qwen3.5-9B,T01,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Qwen3.5-9B,T03,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Qwen3.5-9B,T05,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Qwen3.5-9B,T07,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Qwen3.5-9B,T09,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T01,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T03,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T05,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T07,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,InternVL3.5-8B-HF,T09,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Gemma 4 E4B-it,T01,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Gemma 4 E4B-it,T03,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Gemma 4 E4B-it,T05,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Gemma 4 E4B-it,T07,,2,0
+CLIP_DINO_Qwen_InternVL,0.75,Gemma 4 E4B-it,T09,,2,0
