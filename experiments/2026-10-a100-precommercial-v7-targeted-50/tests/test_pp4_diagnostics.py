@@ -59,3 +59,16 @@ def test_composition_ratio_pairs_preserve_every_other_setting():
         a,b=[{k:v for k,v in c['options'].items() if k not in ['pull_weight','push_weight']} for c in pair]
         assert a==b
         assert all(c['options']['patch_weight']==0 and c['di'] and c['steps']==50 for c in pair)
+
+
+def test_original13_fixed_test_plan_and_family_exclusion():
+    from pp4_original13_protocol import plan,registry
+    rows=plan();reg=registry()
+    assert len(rows)==13 and {r['id'] for r in rows}=={f'E{i:02}' for i in range(1,14)}
+    for r in rows:
+        c=r['condition']
+        assert c['split']=='test' and c['steps']==50 and c['seed']==42 and c['di']
+        assert c['options']['pull_weight']==c['options']['push_weight']==.5
+        assert c['options']['layers']==[.25,.5,.75,1.] and c['options']['patch_weight']==0
+        assert 'pp4_dev_offset' not in c['options']
+        assert all(reg[n]['family']!=reg[r['target']]['family'] for n in c['models'])

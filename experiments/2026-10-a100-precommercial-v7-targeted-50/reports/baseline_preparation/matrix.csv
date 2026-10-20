@@ -1,0 +1,25 @@
+id,label,evaluation_target_family_excluded,models,layers,DI,TI,N_dev,status
+RBASE_3fe51159745d1406,R_MI_deep,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,[1.0],False,False,10,PREPARED_NOT_RUN
+RBASE_c303ab28e0ffbef6,R_MI_four,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",False,False,10,PREPARED_NOT_RUN
+RBASE_c9b08a026160927d,R_DI_MI_four,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_49559b16539dff98,R_TI_MI_four,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",False,True,10,PREPARED_NOT_RUN
+RBASE_d4a880edbec2a1e0,R_DI_TI_MI_four,Qwen3.5-27B,CLIP ViT-L/14 + InternVL3.5-2B-HF + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",True,True,10,PREPARED_NOT_RUN
+RBASE_42925bc862552d2f,matched_single,Qwen3.5-27B,CLIP ViT-L/14,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_7a7de5e98a8be569,matched_single,Qwen3.5-27B,InternVL3.5-2B-HF,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_a012050beebdd660,matched_single,Qwen3.5-27B,Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_699211ad253a0bf5,R_MI_deep,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,[1.0],False,False,10,PREPARED_NOT_RUN
+RBASE_0e5674d292f3f409,R_MI_four,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",False,False,10,PREPARED_NOT_RUN
+RBASE_3a1abaf357a6c663,R_DI_MI_four,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_b550238519fe0694,R_TI_MI_four,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",False,True,10,PREPARED_NOT_RUN
+RBASE_50201530036849f6,R_DI_TI_MI_four,InternVL3.5-14B-HF,CLIP ViT-L/14 + Qwen3.5-2B + Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",True,True,10,PREPARED_NOT_RUN
+RBASE_4546be6725d6d6ce,matched_single,InternVL3.5-14B-HF,CLIP ViT-L/14,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_2fca5563693f4d9f,matched_single,InternVL3.5-14B-HF,Qwen3.5-2B,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_94848c934f630eb2,matched_single,InternVL3.5-14B-HF,Gemma 4 E2B-it,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_64b7e82192f723ce,R_MI_deep,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,[1.0],False,False,10,PREPARED_NOT_RUN
+RBASE_28ef9b7ac23dba27,R_MI_four,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,"[0.25, 0.5, 0.75, 1.0]",False,False,10,PREPARED_NOT_RUN
+RBASE_15335f2b0680c7f0,R_DI_MI_four,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_4cf53c2e76eaeba5,R_TI_MI_four,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,"[0.25, 0.5, 0.75, 1.0]",False,True,10,PREPARED_NOT_RUN
+RBASE_faad1fbcd208eefa,R_DI_TI_MI_four,Gemma 4 31B-it,CLIP ViT-L/14 + Qwen3.5-2B + InternVL3.5-2B-HF,"[0.25, 0.5, 0.75, 1.0]",True,True,10,PREPARED_NOT_RUN
+RBASE_105b53a300d37119,matched_single,Gemma 4 31B-it,CLIP ViT-L/14,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_14efc07d5dce8566,matched_single,Gemma 4 31B-it,Qwen3.5-2B,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN
+RBASE_a9ce2376c0cd06e8,matched_single,Gemma 4 31B-it,InternVL3.5-2B-HF,"[0.25, 0.5, 0.75, 1.0]",True,False,10,PREPARED_NOT_RUN

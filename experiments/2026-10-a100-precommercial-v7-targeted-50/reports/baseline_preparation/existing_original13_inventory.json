@@ -1,0 +1,145 @@
+[
+  {
+    "ensemble": "E01",
+    "target": "Qwen3.5-27B",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E02",
+    "target": "Qwen3.5-27B",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E03",
+    "target": "Qwen3.5-27B",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E04",
+    "target": "Gemma 4 31B-it",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E05",
+    "target": "Gemma 4 31B-it",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E06",
+    "target": "Gemma 4 31B-it",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E07",
+    "target": "InternVL3.5-14B-HF",
+    "attack_images": 150,
+    "evaluated_images": 150,
+    "baseline_new_PP": true,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E08",
+    "target": "InternVL3.5-14B-HF",
+    "attack_images": 150,
+    "evaluated_images": 150,
+    "baseline_new_PP": true,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E09",
+    "target": "InternVL3.5-14B-HF",
+    "attack_images": 150,
+    "evaluated_images": 150,
+    "baseline_new_PP": true,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E10",
+    "target": "Qwen3.5-27B",
+    "attack_images": 100,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E11",
+    "target": "Qwen3.5-27B",
+    "attack_images": 88,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E12",
+    "target": "Qwen3.5-27B",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  },
+  {
+    "ensemble": "E13",
+    "target": "Qwen3.5-27B",
+    "attack_images": 150,
+    "evaluated_images": 0,
+    "baseline_new_PP": false,
+    "source": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/pull_push_original13",
+    "reuse": "NO_NEW_RUN",
+    "historical_A3": "method-level baseline; not coefficient-only ablation",
+    "historical_V6": "historical baseline; layers, DI and coefficients differ"
+  }
+]

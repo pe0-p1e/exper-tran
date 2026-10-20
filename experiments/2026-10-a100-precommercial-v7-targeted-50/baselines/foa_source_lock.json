@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/jiaxiaojunQAQ/FOA-Attack",
+  "commit": "6aa9ad463a1e812b7f77ff2e5c4b1712e7c78c4b",
+  "files": {
+    "FOAttack.py": {
+      "sha256": "9c30bbfcac9564b7ecd44b46e0ff3fb4d3ad86a7177d7e76658ff462fa22969c",
+      "bytes": 37152
+    },
+    "generate_adversarial_samples_foa_attack.py": {
+      "sha256": "80ffe84b27454922e65c9cff243cc16c703f17fe4f958b2cc2a97ada8b4313fb",
+      "bytes": 17308
+    },
+    "README.md": {
+      "sha256": "5fc17f506db2e21c79601d06f71a6bc5f9bc9b668e9edfd0a0de66b6e790e9f9",
+      "bytes": 1477
+    }
+  },
+  "status": "SOURCE_REVIEW_ONLY_NOT_IMPLEMENTED_OR_RUN",
+  "upstream_code_executed": false
+}
