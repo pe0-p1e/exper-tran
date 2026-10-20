@@ -10,10 +10,10 @@ Exploratory only:10 previously inspected development images per condition, evalu
 | A | middle_pair | COMPLETE | 29/30 |
 | A | late_triple | COMPLETE | 28/30 |
 | B | reference | COMPLETE | 28/30 |
-| B | raw_gradient_mean | PARTIAL | N/A/30 |
-| B | single_75 | PARTIAL | N/A/30 |
-| B | middle_pair | PARTIAL | N/A/30 |
-| B | late_triple | QUEUED | N/A/30 |
+| B | raw_gradient_mean | COMPLETE | 24/30 |
+| B | single_75 | COMPLETE | 23/30 |
+| B | middle_pair | COMPLETE | 18/30 |
+| B | late_triple | COMPLETE | 29/30 |
 
 ## Existing DI removal results
 
@@ -35,6 +35,6 @@ For proxy complementarity use matched member singles from that same composition 
 
 ## Validation scope
 
-CPU checks cover 38 attack batches, 76 clean/adv image pairs, 18 native validation files and 36 strict-BF16 load records available at this snapshot. Bytewise pixel bounds, PNG hashes, cohort uniqueness,50-step settings, no target access and native hit numerators were checked. Missing rows remain missing.
+CPU checks cover 50 attack batches, 100 clean/adv image pairs, 30 native validation files and 48 strict-BF16 load records available at this snapshot. Bytewise pixel bounds, PNG hashes, cohort uniqueness,50-step settings, no target access and native hit numerators were checked. Missing rows remain missing.
 Optimization CSV endpoints use different DI views and different layer-specific objectives; do not interpret their raw loss differences as comparable fixed-view progress.
 Raw L1 share is a magnitude diagnostic, not signed causal attribution. Source condition identities and per-image observations remain in the companion reports.
