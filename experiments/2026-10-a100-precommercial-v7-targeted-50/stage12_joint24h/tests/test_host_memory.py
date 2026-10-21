@@ -1,10 +1,19 @@
-import sys,unittest
+import sys,unittest,tempfile
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import resources as R
 
 class HostMemoryTests(unittest.TestCase):
+ def test_clip_only_uses_measured_model_specific_loader_budget(self):
+  import common as C
+  with tempfile.TemporaryDirectory() as d,patch.object(R,'ROOT',Path(d)):
+   root=Path(d)
+   C.atomic(root/'calibration/x.json',dict(status='PASS',measurements=[dict(model=R.V,batch=1,reserved_gib=1.04),dict(model=R.V,batch=2,reserved_gib=1.2)]))
+   C.atomic(root/'jobs/x_calibrate.json',dict(condition=dict(parameter_dtype='bfloat16',CLS=0,layers={R.V:[5,11,17,23]})))
+   profile=R.resident_profile(dict(layers={R.V:[11,14]}))
+   self.assertAlmostEqual(profile['steady_GiB'],2.56);self.assertAlmostEqual(profile['load_cap_GiB'],2.56)
+   self.assertIsNone(R.resident_profile(dict(layers={R.V:[1,2,3,4,5]})))
  def test_spare_host_ram_favors_vision_only_gpu(self):
   self.assertFalse(R.prefer_full_gpu(dict(host_total=118,host_available=106),20))
   self.assertTrue(R.prefer_full_gpu(dict(host_total=118,host_available=35),20))

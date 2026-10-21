@@ -89,6 +89,22 @@ def failure_kind(text,returncode):
 
 
 def resident_profile(c):
+ # CLIP-only jobs must not inherit a three-model pool's loader/activation reserve.
+ # The isolated first-model batch1/2 measurements include the exact four taps,
+ # full CLIP loader and references; other measured pool contamination only raises
+ # this number, so use a verified complete batch pair and retain explicit margin.
+ if list(c['layers'])==[V] and len(c['layers'][V])<=4:
+  profiles=[]
+  for p in (ROOT/'calibration').glob('*.json'):
+   d=read(p);job=read(ROOT/'jobs'/(p.stem+'_calibrate.json'))
+   if d.get('status')!='PASS' or not job:continue
+   bench=job['condition']
+   if bench.get('parameter_dtype')!='bfloat16' or bench.get('CLS')!=0 or V not in bench['layers'] or len(bench['layers'][V])<len(c['layers'][V]):continue
+   ms=[m for m in d.get('measurements',[]) if m['model']==V]
+   if {m['batch'] for m in ms}!={1,2}:continue
+   peak=max(m['reserved_gib'] for m in ms)
+   profiles.append(dict(steady_GiB=peak*1.3+1.,load_cap_GiB=peak*1.3+1.,evidence=str(p),scope='CLIP-only full loader plus measured batch1/2; <=4 taps; exact pinned study registry'))
+  if profiles:return min(profiles,key=lambda d:d['steady_GiB'])
  # Use real resident batch1/2 measurements only for covered model sets and <=4 taps/model.
  candidates=[]
  for p in (ROOT/'calibration_resident_v2').glob('*.json'):

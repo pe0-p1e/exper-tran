@@ -22,7 +22,7 @@ def install(proxy):
 
 def parameter_gib(module):return sum(p.numel()*p.element_size() for p in module.parameters())/2**30
 
-def may_reside(weight_gib,reservation_gib,free_gib,headroom_gib=8):
+def may_reside(weight_gib,reservation_gib,free_gib,headroom_gib=8,activation_margin_gib=3):
     # Reference banks and activations remain inside the admitted reservation, not an arbitrary2GiB weight cap.
-    budget=max(0,reservation_gib-3)
+    budget=max(0,reservation_gib-activation_margin_gib)
     return weight_gib<=budget and free_gib>=weight_gib+headroom_gib

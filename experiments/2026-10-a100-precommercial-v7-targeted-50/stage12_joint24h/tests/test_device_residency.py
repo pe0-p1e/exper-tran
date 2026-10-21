@@ -34,6 +34,7 @@ class ResidencyTests(unittest.TestCase):
   self.assertEqual(ids,[id(p) for p in m.model.parameters()]);self.assertTrue(torch.equal(a,b))
  def test_resident_budget_and_real_free_guard(self):
   self.assertTrue(D.may_reside(3,8,20));self.assertFalse(D.may_reside(6,8,20));self.assertFalse(D.may_reside(3,8,10))
+  self.assertTrue(D.may_reside(.57,2.56,20,activation_margin_gib=1))
  def test_eight_worker_limit_and_headroom(self):
   active=[dict(reservation=4,process_identity=dict(pid=i)) for i in range(7)]
   t=dict(total=80,used=28,free=52,processes=[dict(pid=i,gib=4) for i in range(7)],host_available=40)

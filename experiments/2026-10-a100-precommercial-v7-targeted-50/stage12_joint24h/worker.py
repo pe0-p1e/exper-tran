@@ -116,7 +116,7 @@ def load_models(c):
  import torch
  free,total_gpu=torch.cuda.mem_get_info()
  reservation=float(os.environ.get('V8_RESERVED_GIB','16'))
- resident=full_gpu or may_reside(total,reservation,free/2**30,max(8,total_gpu/2**30*.1))
+ resident=full_gpu or may_reside(total,reservation,free/2**30,max(8,total_gpu/2**30*.1),activation_margin_gib=1 if list(c['layers'])==[V] else 3)
  atomic(ROOT/'residency_plans'/(c['id']+'.json'),dict(strategy='visual_resident_v2',models=list(c['layers']),visual_parameter_GiB=total,
    reservation_GiB=reservation,resident=resident,free_GiB=free/2**30,language_parameters='BF16_GPU_unused_no_forward' if full_gpu else 'BF16_CPU_unused_no_forward',steps_unchanged=True))
  for m in result:
