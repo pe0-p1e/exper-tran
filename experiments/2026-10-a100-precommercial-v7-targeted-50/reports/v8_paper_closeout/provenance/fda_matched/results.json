@@ -1,5 +1,5 @@
 {
-  "complete": false,
+  "complete": true,
   "rows": [
     {
       "family": "qwen",
@@ -82,7 +82,7 @@
     {
       "family": "qwen",
       "method": "FDA4",
-      "complete": false,
+      "complete": true,
       "condition": "V8_d557e51f8b16ab33e3",
       "layers": {
         "CLIP ViT-L/14": [
@@ -107,7 +107,7 @@
       "proxy_count": 3,
       "taps_per_proxy": 4,
       "N": 30,
-      "hits": null
+      "hits": 28
     },
     {
       "family": "internvl",
@@ -190,7 +190,7 @@
     {
       "family": "internvl",
       "method": "FDA4",
-      "complete": false,
+      "complete": true,
       "condition": "V8_c58b005e8469a8b51d",
       "layers": {
         "CLIP ViT-L/14": [
@@ -215,7 +215,7 @@
       "proxy_count": 3,
       "taps_per_proxy": 4,
       "N": 30,
-      "hits": null
+      "hits": 26
     },
     {
       "family": "gemma4",
@@ -298,7 +298,7 @@
     {
       "family": "gemma4",
       "method": "FDA4",
-      "complete": false,
+      "complete": true,
       "condition": "V8_28e9f84feb52a78bb0",
       "layers": {
         "CLIP ViT-L/14": [
@@ -323,7 +323,7 @@
       "proxy_count": 3,
       "taps_per_proxy": 4,
       "N": 30,
-      "hits": null
+      "hits": 28
     }
   ],
   "paired": [
@@ -336,6 +336,14 @@
       "net": 1
     },
     {
+      "family": "qwen",
+      "baseline": "uniform4",
+      "selected": "FDA4",
+      "gained": 1,
+      "lost": 1,
+      "net": 0
+    },
+    {
       "family": "internvl",
       "baseline": "uniform2",
       "selected": "FDA2",
@@ -344,12 +352,28 @@
       "net": 1
     },
     {
+      "family": "internvl",
+      "baseline": "uniform4",
+      "selected": "FDA4",
+      "gained": 1,
+      "lost": 1,
+      "net": 0
+    },
+    {
       "family": "gemma4",
       "baseline": "uniform2",
       "selected": "FDA2",
       "gained": 2,
       "lost": 0,
       "net": 2
+    },
+    {
+      "family": "gemma4",
+      "baseline": "uniform4",
+      "selected": "FDA4",
+      "gained": 1,
+      "lost": 0,
+      "net": 1
     }
   ],
   "search_traces": {
@@ -918,6 +942,6 @@
       ]
     }
   },
-  "pending": 3,
+  "pending": 0,
   "selection_uses_screen_only": true
 }

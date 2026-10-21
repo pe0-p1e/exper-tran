@@ -1,0 +1,17 @@
+{
+  "latest": {
+    "utc": "2026-10-21T16:43:23Z",
+    "workers": 4,
+    "full_gpu_workers": 2,
+    "GPU_used_GiB": 45.05078125,
+    "GPU_utilization": 100.0,
+    "host_available_GiB": 81.79973983764648,
+    "reserved_host_caps_GiB": 56.891910552978516,
+    "attack_images_last5min": 42,
+    "attack_images_per_minute_5min": 8.4,
+    "open_target_images_last5min": 30,
+    "actual_GPT_requests_last5min": 0
+  },
+  "interpretation": "Descriptive rolling5min; includes mixed conditions/evaluation phases; not a matched causal speedup benchmark",
+  "GPU_admission": false
+}

@@ -1,0 +1,8 @@
+{
+  "at": 1792600755.2006629,
+  "reason": "Release loader peaks only after real execution; enforce steady physical caps; use spare VRAM for BF16 weights",
+  "max_workers": 8,
+  "precision_unchanged": true,
+  "algorithm_unchanged": true,
+  "controller_only_reload": true
+}

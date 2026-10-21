@@ -1,0 +1,232 @@
+{
+  "at": 1792600894.9299314,
+  "telemetry": {
+    "total": 80.0,
+    "used": 44.775390625,
+    "free": 34.4775390625,
+    "utilization": 100.0,
+    "processes": [
+      {
+        "pid": 524749,
+        "gib": 2.91796875
+      },
+      {
+        "pid": 526782,
+        "gib": 2.8984375
+      },
+      {
+        "pid": 528650,
+        "gib": 18.45703125
+      },
+      {
+        "pid": 530555,
+        "gib": 5.22265625
+      },
+      {
+        "pid": 531407,
+        "gib": 15.2578125
+      }
+    ],
+    "host_available": 62.22596740722656,
+    "host_total": 118.00906753540039,
+    "host_cgroup": {
+      "path": "/sys/fs/cgroup/v8-joint-selection",
+      "current_gib": 100.70873641967773,
+      "peak_gib": 100.71070098876953,
+      "max_gib": 106.00906753540039,
+      "events": {
+        "low": 0,
+        "high": 1203276,
+        "max": 35,
+        "oom": 1,
+        "oom_kill": 2,
+        "oom_group_kill": 1
+      }
+    }
+  },
+  "active": [
+    {
+      "id": "V8_8477a2708cc58a413e_attack",
+      "mode": "attack",
+      "condition": "V8_8477a2708cc58a413e",
+      "reservation": 5.141015625,
+      "host_reservation_gib": 16.95719051361084,
+      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-524749-27002134",
+      "placement": "visual_gpu",
+      "process_identity": {
+        "pid": 524749,
+        "start": "27002134",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_8477a2708cc58a413e_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_8477a2708cc58a413e_attack_0.log",
+      "started": 1792600160.7128906,
+      "host_memory": {
+        "path": "/sys/fs/cgroup/v8-joint-selection/worker-524749-27002134",
+        "current_gib": 11.208538055419922,
+        "peak_gib": 11.246471405029297,
+        "max_gib": 16.95718765258789,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "position_signature": "8143dd64ee9f63ba18c71dc2a9aaa2e87e61822306de1dd4d606107998144bf2",
+      "last_progress": 1792600866.0387378,
+      "host_load_reservation_gib": 21.89728775024414,
+      "steady_host_highwater_gib": 11.165836334228516,
+      "host_phase": "steady_physical_cap"
+    },
+    {
+      "id": "V8_d0e925a56b787f27ee_attack",
+      "mode": "attack",
+      "condition": "V8_d0e925a56b787f27ee",
+      "reservation": 5.141015625,
+      "host_reservation_gib": 17.083662033081055,
+      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-526782-27017522",
+      "placement": "visual_gpu",
+      "process_identity": {
+        "pid": 526782,
+        "start": "27017522",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_d0e925a56b787f27ee_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_d0e925a56b787f27ee_attack_0.log",
+      "started": 1792600314.590945,
+      "host_memory": {
+        "path": "/sys/fs/cgroup/v8-joint-selection/worker-526782-27017522",
+        "current_gib": 11.292266845703125,
+        "peak_gib": 11.302059173583984,
+        "max_gib": 17.083660125732422,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "position_signature": "fdc279a9ca62ab084d1e4f48485468dfbc59834c67e9d9556e00ad978aa5e098",
+      "last_progress": 1792600866.03881,
+      "host_load_reservation_gib": 21.89728775024414,
+      "steady_host_highwater_gib": 11.267009735107422,
+      "host_phase": "steady_physical_cap"
+    },
+    {
+      "id": "V8_6da5c08fc6e2af1306_attack",
+      "mode": "attack",
+      "condition": "V8_6da5c08fc6e2af1306",
+      "reservation": 23.666060944460334,
+      "host_reservation_gib": 8.0,
+      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-528650-27032731",
+      "placement": "full_gpu",
+      "process_identity": {
+        "pid": 528650,
+        "start": "27032731",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_6da5c08fc6e2af1306_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_6da5c08fc6e2af1306_attack_0.log",
+      "started": 1792600466.6871872,
+      "host_memory": {
+        "path": "/sys/fs/cgroup/v8-joint-selection/worker-528650-27032731",
+        "current_gib": 2.417308807373047,
+        "peak_gib": 12.182090759277344,
+        "max_gib": 8.0,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "position_signature": "5832be79be27d9fbf010e082c224ec31b801fdc14e514fe56f6ed1dec26cc3a6",
+      "last_progress": 1792600866.0388753,
+      "host_load_reservation_gib": 34.78393478393554,
+      "steady_host_highwater_gib": 1.66986083984375,
+      "host_phase": "steady_physical_cap"
+    },
+    {
+      "id": "V8_e1966d0e4bf38cae47_attack",
+      "mode": "attack",
+      "condition": "V8_e1966d0e4bf38cae47",
+      "reservation": 7.5201171875,
+      "host_reservation_gib": 23.934720039367676,
+      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-530555-27064818",
+      "placement": "visual_gpu",
+      "process_identity": {
+        "pid": 530555,
+        "start": "27064818",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_e1966d0e4bf38cae47_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_e1966d0e4bf38cae47_attack_0.log",
+      "started": 1792600787.5563378,
+      "host_memory": {
+        "path": "/sys/fs/cgroup/v8-joint-selection/worker-530555-27064818",
+        "current_gib": 18.29443359375,
+        "peak_gib": 18.295120239257812,
+        "max_gib": 23.93471908569336,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "host_load_reservation_gib": 34.78393478393554,
+      "position_signature": "dfeab3ccc86ca014a8c2f1c878571c0e4fbbfb1b582bd7e5276e38f1c70127a3",
+      "last_progress": 1792600866.0389397,
+      "steady_host_highwater_gib": 16.74777603149414,
+      "host_phase": "steady_physical_cap"
+    },
+    {
+      "id": "V8_50f1aee18c73dd73d0_attack",
+      "mode": "attack",
+      "condition": "V8_50f1aee18c73dd73d0",
+      "reservation": 23.666060944460334,
+      "host_reservation_gib": 18.31049298048019,
+      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-531407-27072035",
+      "placement": "full_gpu",
+      "process_identity": {
+        "pid": 531407,
+        "start": "27072035",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_50f1aee18c73dd73d0_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_50f1aee18c73dd73d0_attack_0.log",
+      "started": 1792600859.7205899,
+      "host_memory": {
+        "path": "/sys/fs/cgroup/v8-joint-selection/worker-531407-27072035",
+        "current_gib": 0.4812355041503906,
+        "peak_gib": 0.4812355041503906,
+        "max_gib": 18.310489654541016,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      },
+      "host_load_reservation_gib": 18.31049298048019,
+      "position_signature": "052d97bf42d2c0fe75ed6df0d429fb35389545c9393ea01ded6281777b92dcdf",
+      "last_progress": 1792600866.0390012
+    }
+  ]
+}
