@@ -345,6 +345,63 @@
         ],
         "source_prior": 26.206050822720854,
         "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 2,
+        "retained_beam": [
+          "V8_b995b713d868291b86",
+          "V8_20544de296e6a60852"
+        ],
+        "selection": "actual held-out dev conditional gain and compute Pareto, parents retained; no union of singleton hits"
+      },
+      {
+        "size": 4,
+        "round": 3,
+        "parent": "V8_b995b713d868291b86",
+        "condition": "V8_e4d755260a585ffcf4",
+        "added": [
+          "InternVL3.5-2B-HF",
+          20
+        ],
+        "source_prior": 76.63570158301314,
+        "shortlist_only": true
+      },
+      {
+        "size": 4,
+        "round": 3,
+        "parent": "V8_b995b713d868291b86",
+        "condition": "V8_5d6a57c82a08c05c11",
+        "added": [
+          "Qwen3.5-2B",
+          14
+        ],
+        "source_prior": 23.190532027724352,
+        "shortlist_only": true
+      },
+      {
+        "size": 4,
+        "round": 3,
+        "parent": "V8_20544de296e6a60852",
+        "condition": "V8_e4d755260a585ffcf4",
+        "added": [
+          "CLIP ViT-L/14",
+          11
+        ],
+        "source_prior": 27.394000150581245,
+        "shortlist_only": true
+      },
+      {
+        "size": 4,
+        "round": 3,
+        "parent": "V8_20544de296e6a60852",
+        "condition": "V8_fb91ac4aa4268a0074",
+        "added": [
+          "Qwen3.5-2B",
+          14
+        ],
+        "source_prior": 23.499614256178806,
+        "shortlist_only": true
       }
     ]
   },
