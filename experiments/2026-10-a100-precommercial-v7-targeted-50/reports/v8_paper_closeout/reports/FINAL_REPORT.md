@@ -1,6 +1,6 @@
 # Final experiment closeout
 
-Updated UTC: 2026-10-21 16:59:22
+Updated UTC: 2026-10-21 17:14:39
 
 GPT50 is USED FOR SELECTION by explicit user instruction. Final150 is separate; final outcomes cannot change frozen settings.
 Models: GPT-6.1 Sol, GPT-6 Sol, GPT-5.6 Sol, all low; no Astra, no paid API fallback.
@@ -12,6 +12,7 @@ Pure PP, BF16 unquantized,50steps,16/255,DI,equal per-image L1-normalized proxy 
 |---|---|---|---|---|---|---|
 
 ## commercial50: PARTIAL
+- gpt-6.1-sol / selected4: 36 hits, 50/50 completed; ASR=0.72
 - gpt-6.1-sol / selected_prior: 35 hits, 50/50 completed; ASR=0.7
 - gpt-6.1-sol / uniform4: 35 hits, 50/50 completed; ASR=0.7
 
