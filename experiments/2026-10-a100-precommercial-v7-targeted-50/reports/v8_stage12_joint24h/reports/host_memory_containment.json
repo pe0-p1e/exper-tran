@@ -44,5 +44,29 @@
   "parent_cap_GiB": 106.00906753540039,
   "weight_placement": "New calibrated attack jobs prefer full BF16 GPU placement when jointly admitted; otherwise vision GPU plus CPU-language reservation",
   "no_language_forward": true,
-  "science_unchanged": true
+  "science_unchanged": true,
+  "first_full_gpu_actual_audit": [
+    {
+      "model": "CLIP ViT-L/14",
+      "all_BF16": true,
+      "devices": {
+        "cuda:0": 427616513
+      }
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "all_BF16": true,
+      "devices": {
+        "cuda:0": 2348347392
+      }
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "all_BF16": true,
+      "devices": {
+        "cuda:0": 5104297504
+      }
+    }
+  ],
+  "verified_at": 1792585920.1423068
 }

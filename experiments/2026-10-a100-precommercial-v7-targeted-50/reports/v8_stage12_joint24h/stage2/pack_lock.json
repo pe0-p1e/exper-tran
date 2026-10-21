@@ -1,0 +1,10 @@
+{
+  "method_lock_sha256": "795a87ad589009a7326c9ada18dccb7251a40bf1b536c0a92d4403ba68e772ee",
+  "packs": {
+    "selected": "e0079132266d27753c4d61f165babcf24a446c515bb05412bf27ebff45f64448",
+    "uniform": "e0079132266d27753c4d61f165babcf24a446c515bb05412bf27ebff45f64448"
+  },
+  "prospective_unique_requests": 100,
+  "quota_bound_seconds_at180": 27000,
+  "feedback_for_selection": false
+}

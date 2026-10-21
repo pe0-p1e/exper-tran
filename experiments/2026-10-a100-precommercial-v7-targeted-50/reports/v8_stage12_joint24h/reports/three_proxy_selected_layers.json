@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "pending": 7,
+  "pending": 6,
   "rows": [
     {
       "family": "qwen",
@@ -215,9 +215,135 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 3,
+      "complete": true,
+      "hits": 9,
+      "N": 10,
+      "paired_vs_uniform": {
+        "gained": 1,
+        "lost": 0,
+        "net": 1
+      },
+      "compute": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        "seconds": 347.0983726978302,
+        "backwards": 1500,
+        "peak": 4.693359375
+      }
+    },
+    {
+      "family": "qwen",
+      "split": "explore",
+      "strategy": "uniform4",
+      "condition": "V8_a70831c15da07ad465",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          3,
+          7,
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 4,
+      "complete": true,
+      "hits": 28,
+      "N": 30,
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 28,
+        "N": 30,
+        "minimum": 5,
+        "directions": [
+          6,
+          6,
+          5,
+          6,
+          5
+        ],
+        "seconds": 750.487024307251,
+        "backwards": 4500,
+        "peak": 8.7578125
+      }
+    },
+    {
+      "family": "qwen",
+      "split": "explore",
+      "strategy": "geometry_selected2",
+      "condition": "V8_85e4d627fa8e8a9a57",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
       "complete": false,
       "hits": null,
-      "N": 10,
+      "N": 30,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "qwen",
+      "split": "explore",
+      "strategy": "independent_top3",
+      "condition": "V8_4afc7e51152fdd7e5d",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 30,
       "paired_vs_uniform": null,
       "compute": null
     },
@@ -293,11 +419,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 2,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 10,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 10,
+        "N": 10,
+        "minimum": 2,
+        "directions": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 578.7847971916199,
+        "backwards": 1500,
+        "peak": 4.712890625
+      }
     },
     {
       "family": "internvl",
@@ -320,11 +464,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 2,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 10,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 10,
+        "N": 10,
+        "minimum": 2,
+        "directions": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 569.8948085308075,
+        "backwards": 1500,
+        "peak": 4.712890625
+      }
     },
     {
       "family": "internvl",
