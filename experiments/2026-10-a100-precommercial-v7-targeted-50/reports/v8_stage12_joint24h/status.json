@@ -1,25 +1,8 @@
 {
-  "at": 1792579452.359023,
+  "at": 1792580311.4534361,
   "state": "RUNNING",
   "stage": "INTEGRATED_EXPLORE30",
   "active": [
-    {
-      "id": "V8_6e4287edc5c0fb69c2_attack",
-      "mode": "attack",
-      "condition": "V8_6e4287edc5c0fb69c2",
-      "reservation": 8.27197265625,
-      "process_identity": {
-        "pid": 418944,
-        "start": "24276992",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_6e4287edc5c0fb69c2_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_6e4287edc5c0fb69c2_attack_0.log",
-      "started": 1792572909.2952905,
-      "position_signature": "4bd8777436ad2548a96bb1cb0d04b024ed985d2db6afd464fe49bcd793092da5",
-      "last_progress": 1792579446.3057075
-    },
     {
       "id": "V8_c2efb191dbc9b217f3_attack",
       "mode": "attack",
@@ -34,8 +17,8 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_c2efb191dbc9b217f3_attack_0.log",
       "started": 1792574461.573984,
-      "position_signature": "2032c8be1de46fbe5ef109f790e5cca2d159eeb69a47046abba771815171e4bb",
-      "last_progress": 1792579437.3587437
+      "position_signature": "fbd06961115fbf804c60da2714c3807ded5c7cc427803e2e1ae24d6069991aeb",
+      "last_progress": 1792580305.3836906
     },
     {
       "id": "V8_b94156be424da0db4a_attack",
@@ -51,25 +34,8 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_b94156be424da0db4a_attack_0.log",
       "started": 1792575037.525712,
-      "position_signature": "1e051c12c215bef64ff7aa1e43631f21530571f515752993119d0dd294f4b3a5",
-      "last_progress": 1792579437.3588252
-    },
-    {
-      "id": "V8_eeb5adf3a83c2233ff_attack",
-      "mode": "attack",
-      "condition": "V8_eeb5adf3a83c2233ff",
-      "reservation": 12.293119551613927,
-      "process_identity": {
-        "pid": 421932,
-        "start": "24555293",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_eeb5adf3a83c2233ff_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_eeb5adf3a83c2233ff_attack_0.log",
-      "started": 1792575692.2991154,
-      "position_signature": "a23a8ecbfc2785ab969c6655682ae8885dec5430c3bdd444ee3855d916640398",
-      "last_progress": 1792579446.3059368
+      "position_signature": "695e1fd3c9f721bd2dba4b450cbd2ab6cbc85e60e1e7f8c07d8e133e0545b732",
+      "last_progress": 1792580295.7637386
     },
     {
       "id": "V8_18240e92934412108d_attack",
@@ -85,8 +51,8 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_18240e92934412108d_attack_0.log",
       "started": 1792577286.5529115,
-      "position_signature": "cb9e299a0b91efde0d3ad1b47f717934eff92609dfd799ff98aecbe22e109ec6",
-      "last_progress": 1792579437.3589733
+      "position_signature": "fc54b97f2d4b8e773002ffaeceb61a6ae843cac5861f2ee16cf04f471febdcd8",
+      "last_progress": 1792580305.3839383
     },
     {
       "id": "V8_d97625173c876ae1e9_attack",
@@ -102,47 +68,77 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_d97625173c876ae1e9_attack_0.log",
       "started": 1792578982.9669223,
-      "position_signature": "809949740a50bf2e5d08a502f8fab55b17ddaf5f23e53f42c1a7b4e0609f5ff0",
-      "last_progress": 1792579437.359041
+      "position_signature": "6557bf4885bab8f16027674c119ec09b8c5028876a5ea591370920322042c156",
+      "last_progress": 1792580305.3840237
+    },
+    {
+      "id": "V8_4a88e8befc644cf33e_attack",
+      "mode": "attack",
+      "condition": "V8_4a88e8befc644cf33e",
+      "reservation": 8.1125,
+      "process_identity": {
+        "pid": 423920,
+        "start": "24956777",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_4a88e8befc644cf33e_attack --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_4a88e8befc644cf33e_attack_0.log",
+      "started": 1792579707.1401305,
+      "position_signature": "6bd983e342c16d0740a7d4a085c8d60fef898b70b67dd1bf1dd67bf473be2e27",
+      "last_progress": 1792580295.763971
+    },
+    {
+      "id": "V8_3d73cae5c130e7958b_evaluate",
+      "mode": "evaluate",
+      "condition": "V8_3d73cae5c130e7958b",
+      "reservation": 21.02714392542839,
+      "process_identity": {
+        "pid": 424214,
+        "start": "25014426",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py evaluate --job V8_3d73cae5c130e7958b_evaluate --attempt 0 ",
+        "state": "R"
+      },
+      "attempt": 0,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_3d73cae5c130e7958b_evaluate_0.log",
+      "started": 1792580283.637262,
+      "position_signature": "052d97bf42d2c0fe75ed6df0d429fb35389545c9393ea01ded6281777b92dcdf",
+      "last_progress": 1792580286.641508
     }
   ],
   "failures": [],
   "gpu": {
     "total": 80.0,
-    "used": 25.3056640625,
-    "free": 53.947265625,
+    "used": 20.455078125,
+    "free": 58.7978515625,
     "utilization": 100.0,
     "processes": [
       {
-        "pid": 418944,
-        "gib": 5.419921875
-      },
-      {
         "pid": 420187,
-        "gib": 5.462890625
+        "gib": 4.865234375
       },
       {
         "pid": 421477,
-        "gib": 5.421875
-      },
-      {
-        "pid": 421932,
-        "gib": 2.197265625
+        "gib": 5.419921875
       },
       {
         "pid": 422869,
-        "gib": 4.796875
+        "gib": 5.48046875
       },
       {
         "pid": 423437,
-        "gib": 2.119140625
+        "gib": 3.994140625
+      },
+      {
+        "pid": 423920,
+        "gib": 0.693359375
       }
     ],
-    "host_available": 23.791648864746094
+    "host_available": 43.20035171508789
   },
-  "remaining_hours": 7.908526684244474,
-  "conditions_admitted": 177,
-  "completed_jobs": 350,
+  "remaining_hours": 7.669889347288343,
+  "conditions_admitted": 181,
+  "completed_jobs": 360,
   "max_workers": 6,
   "method_frozen": false,
   "stage2": {},
