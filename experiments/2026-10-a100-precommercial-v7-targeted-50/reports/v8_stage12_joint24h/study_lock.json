@@ -129,7 +129,7 @@
   "sources": {
     "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/combo_selection.py": "cf652fc6aea37a66f6ecf048700b8c1e35c58b13c40eea46f7d50665091b1642",
     "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/watchdog.py": "8c61e0aac3a932528a012b18381a60b6f8360704e495ba2e957e18f3a4898c45",
-    "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py": "beec98800514aa762fbff0614fc70724dc15c600d0fb95dafaab51cc1162579b",
+    "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py": "d5465cc8d11cd77b9392ac8b4202b248a128adae508008ad7190f7e436ace90a",
     "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/cli.py": "01f2e356379490d13c88c80f4bac9bc0c8f3f5bbe7d808b04c2e064cee214a37",
     "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/reports.py": "5cee4cc10d622b0057212549a56010415eb4df389aaf651afa1f76b57b8e9ed7",
     "experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/ila_selection.py": "077f65d75a01d630de4d5ccaa75870acf352f0c445d6f9e508a30d9a9efd4692",
