@@ -1,0 +1,13 @@
+{
+  "at": 1792559864.732518,
+  "prior_lock": "36bc17509058432691fc4a546ac8a6601ac6524e69831681e32574674e729ae0",
+  "new_lock": "9118850fea3bdca9607465256573a7663e4ae57198701bb4eda5c67490ed2018",
+  "reason": "Explicit user override: Stage1 constructs ILA/FDA/geometry integrated selection; reuse completed/in-flight artifacts; no full component ablation until Stage3. Primary PP attack science unchanged. Add separately identified source-only ILA diagnostic and bound joint pilot search.",
+  "tests": "30 passed; fake CLI only, no new commercial calls",
+  "original_window": {
+    "start": 1792521523.0550873,
+    "deadline": 1792607923.0550873,
+    "hours": 24.0
+  },
+  "existing_attacks_preserved": true
+}
