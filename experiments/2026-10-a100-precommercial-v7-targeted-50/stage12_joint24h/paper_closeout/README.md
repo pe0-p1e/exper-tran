@@ -102,3 +102,19 @@ rerun or relabeled. Publication failures retain local output and explicit error.
 Final report contains completed/partial cells and all compared candidates; it must
 not call150 complete if responses are missing. Selection cost, per-image measured
 walltime and compute counters require concurrency-aware interpretation.
+
+## Latest user override: run until completion, no automatic deadline
+
+The user revoked the tomorrow cutoff. `run_policy.json: run_until_complete=true`
+now disables every scheduler, supervisor, commercial and analysis deadline guard.
+The original time windows remain historical estimates; status reports
+`automatic_deadline=false`, `remaining_hours=null`. Do not substitute another
+hidden deadline. Complete the frozen scope and archive automatically; explicit
+user stop and genuine reported failures still take effect.
+
+```bash
+bash experiments/2026-10-a100-precommercial-v7-targeted-50/run_paper_closeout.sh --resume --until-complete
+```
+
+This resumes the same receipts, request IDs and single admission owner. Changing
+this execution policy does not change scientific settings or add experiments.

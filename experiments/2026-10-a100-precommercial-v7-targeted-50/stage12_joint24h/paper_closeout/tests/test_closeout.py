@@ -7,6 +7,11 @@ import common as C
 from paper_closeout import plan as P,commercial as M,measure as V
 
 class CloseoutTests(unittest.TestCase):
+ def test_until_complete_ignores_expired_deadline(self):
+  with patch.object(C,'read',return_value={'run_until_complete':True}):
+   self.assertFalse(C.deadline_reached(0,3600));self.assertFalse(C.timebox_enabled())
+ def test_timeboxed_mode_still_stops(self):
+  with patch.object(C,'read',return_value={}):self.assertTrue(C.deadline_reached(0,3600))
  def test_zero_size_smoke_direction_is_na(self):
   from paper_closeout.analysis import rate
   self.assertIsNone(rate(0,0,0));self.assertIsNone(rate(2,30,3));self.assertEqual(rate(2,30,30),2/30)

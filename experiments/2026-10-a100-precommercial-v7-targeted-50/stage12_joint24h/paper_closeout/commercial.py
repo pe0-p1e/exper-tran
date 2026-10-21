@@ -105,7 +105,7 @@ def driver(deadline):
     verify_models();(OUT/'commercial_driver.lock').parent.mkdir(parents=True,exist_ok=True)
     with (OUT/'commercial_driver.lock').open('a') as owner:
         fcntl.flock(owner,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        while time.time()<deadline-3600 and not stop:
+        while not C.deadline_reached(deadline,3600) and not stop:
             C.check_lock();pending=[]
             from paper_closeout.plan import prepare_ratios
             for c in prepare_ratios()['qwen']:
@@ -125,7 +125,7 @@ def driver(deadline):
                         p=pack('commercial150',method,v['condition'],model)
                         if p:pending.append(('commercial150',p,model))
             for study,path,model in pending:
-                if stop or time.time()>=deadline-3600:break
+                if stop or C.deadline_reached(deadline,3600):break
                 N=len(C.read(path/'private/manifest.json')['cases']);root=OUT/study;order=C.read(path/'request_order.json')
                 if all((root/'responses'/model/rid/'result.json').exists() for rid in order):continue
                 # Fair bounded chunks; no unverified account/model fallback on failure.
@@ -138,7 +138,7 @@ def driver(deadline):
                     child=subprocess.Popen([sys.executable,__file__,'--run-pack',str(path),'--model',model,'--limit',str(limit)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
                 C.atomic(OUT/'commercial_active.json',dict(identity=C.await_identity(child.pid,__file__),study=study,method=path.name,model=model))
                 while child.poll() is None:
-                    if stop or time.time()>=deadline-3600:child.terminate();child.wait(timeout=30);break
+                    if stop or C.deadline_reached(deadline,3600):child.terminate();child.wait(timeout=30);break
                     C.atomic(OUT/'commercial_heartbeat.json',dict(at=time.time(),model=model,method=path.name,limit=limit));time.sleep(3)
                 if child.returncode:
                     C.atomic(root/'blocked'/key,dict(log=str(log),reason='Inspect retained incomplete trace; no duplicate scored request',exit=child.returncode))

@@ -82,6 +82,12 @@ def source_hashes():
 def effective_deadline():
  extension=read(ROOT/'closeout_window.json')
  return extension['deadline'] if extension else read(ROOT/'window.json',{}).get('deadline',time.time())
+
+def timebox_enabled():
+ return not read(ROOT/'run_policy.json',{}).get('run_until_complete',False)
+
+def deadline_reached(deadline,reserve_seconds=0):
+ return timebox_enabled() and time.time()>=deadline-reserve_seconds
 def check_lock():
  lock=read(ROOT/'study_lock.json')
  if not lock:raise RuntimeError('Missing study lock')

@@ -23,7 +23,8 @@ def amendments():
     C.check_lock()
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('mode',choices=['start','status','report']);p.add_argument('--deadline-hours',type=float,default=24);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=['start','status','report']);p.add_argument('--deadline-hours',type=float,default=24);p.add_argument('--until-complete',action='store_true');a=p.parse_args()
+    if a.until_complete:C.atomic(C.ROOT/'run_policy.json',dict(run_until_complete=True,requested_by='User: do not stop at estimated deadline',at=time.time()))
     if a.mode=='status':print(C.json.dumps(C.read(OUT/'status.json',{'state':'NOT_ACTIVATED'}),indent=2));return
     if a.mode=='report':
         from paper_closeout.analysis import calculate,publish

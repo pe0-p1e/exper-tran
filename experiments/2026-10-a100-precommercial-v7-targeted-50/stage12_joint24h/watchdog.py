@@ -34,7 +34,7 @@ def main():
      atomic(ROOT/'supervisor_heartbeat.json',dict(at=time.time(),controller=proc_identity(p.pid),restart=restart));time.sleep(10)
     if p.returncode in [0,2,75]:return p.returncode
     atomic(ROOT/'supervisor_restart.json',dict(at=time.time(),exit=p.returncode,restart=restart))
-    if time.time()>effective_deadline()-3600:break
+    if deadline_reached(effective_deadline(),3600):break
     time.sleep(min(60,5*2**restart))
    return 2
 if __name__=='__main__':sys.exit(main())

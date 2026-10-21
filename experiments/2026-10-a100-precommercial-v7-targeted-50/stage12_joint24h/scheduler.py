@@ -55,7 +55,7 @@ def state_write(s):
  except Exception:t={}
  deadline=effective_deadline()
  status=dict(at=time.time(),state=s.get('state','RUNNING'),stage=s.get('phase'),active=s.get('active',[]),failures=s.get('failures',[]),
-  gpu=t,remaining_hours=max(0,deadline-time.time())/3600,conditions_admitted=len(s.get('admitted',[])),completed_jobs=len(s.get('completed',[])),
+  gpu=t,remaining_hours=max(0,deadline-time.time())/3600 if timebox_enabled() else None,automatic_deadline=timebox_enabled(),conditions_admitted=len(s.get('admitted',[])),completed_jobs=len(s.get('completed',[])),
   max_workers=s.get('worker_limit',1),method_frozen=(ROOT/'method_lock.json').exists(),stage2=read(ROOT/'stage2/summary.json',{}))
  from stage1_methods.early_confirm import summarize as early_summary
  status['confirmation30']=early_summary()
@@ -139,13 +139,13 @@ def run_stage2(s,deadline,count=50):
  # Known complete CLI chain is reused; failures stop without account/model rotation.
  for limit in [20,2*count]:
   for pack in packs:
-   if time.time()>=deadline-3600 or STOP:return False
+   if deadline_reached(deadline,3600) or STOP:return False
    log=ROOT/'logs'/f'stage2_{count}_{pack.name}_{limit}.log'
    with log.open('a') as f:
     p=subprocess.Popen([sys.executable,str(HERE/'stage2_cli.py'),'--pack',str(pack),'--limit',str(limit)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
    atomic(ROOT/'stage2/active.json',dict(process_identity=await_identity(p.pid,str(HERE/'stage2_cli.py')),method=pack.name,limit=limit,started=time.time()))
    while p.poll() is None:
-    if time.time()>=deadline-3600 or STOP:
+    if deadline_reached(deadline,3600) or STOP:
      p.terminate()
      try:p.wait(timeout=30)
      except subprocess.TimeoutExpired:os.killpg(p.pid,signal.SIGTERM);p.wait(timeout=30)
@@ -199,7 +199,7 @@ def main():
    s['state']='STOPPING'
    for j in s['active']:own_signal(j,signal.SIGTERM)
    state_write(s);return 75
-  if time.time()>deadline-3600:
+  if deadline_reached(deadline,3600):
    stop_stage2()
    from paper_closeout.runtime import stop as stop_closeout
    stop_closeout()
@@ -250,7 +250,7 @@ def main():
      s['state']='COMPLETE' if commercial=='COMPLETE' and s.get('FDA_commercial')=='COMPLETE' and paper_ready and not s['blocked'] else 'PARTIAL_OR_BLOCKED';state_write(s);break
     phase='STAGE2_AND_STAGE1_RESEARCH'
     state_write(s)
-   if time.time()>deadline-6*3600 and not (ROOT/'method_lock.json').exists():
+   if deadline_reached(deadline,6*3600) and not (ROOT/'method_lock.json').exists():
     if s['active']:
      # Finish in-flight microbatches; no new low-priority search admitted.
      for j in s['active']:own_signal(j,signal.SIGTERM)

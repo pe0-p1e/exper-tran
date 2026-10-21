@@ -185,17 +185,17 @@ def main(deadline):
     while True:
         try:
             calculate();projections()
-            if time.time()-last_publish>900 or stop or time.time()>=deadline-3600:
+            if time.time()-last_publish>900 or stop or C.deadline_reached(deadline,3600):
                 publish();last_publish=time.time()
             C.atomic(OUT/'analysis_heartbeat.json',dict(at=time.time(),last_publish=last_publish))
         except Exception as e:
             import traceback
             C.atomic(OUT/'analysis_error.json',dict(at=time.time(),error=str(e),traceback=traceback.format_exc()))
         finished=C.read(C.ROOT/'scheduler.json',{}).get('state')=='COMPLETE'
-        if stop or finished or time.time()>=deadline-1800:
+        if stop or finished or C.deadline_reached(deadline,1800):
             # A stop signal can precede the final atomic worker receipts. Drain only
             # verified own leases, then recalculate/export those last measurements.
-            until=min(deadline,time.time()+600)
+            until=min(deadline,time.time()+600) if C.timebox_enabled() else time.time()+600
             while time.time()<until:
                 own=C.read(C.ROOT/'scheduler.json',{}).get('active',[])
                 if not any(C.same_process(j['process_identity']) for j in own):break
