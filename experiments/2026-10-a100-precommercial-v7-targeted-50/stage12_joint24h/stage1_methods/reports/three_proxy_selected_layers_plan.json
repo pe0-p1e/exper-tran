@@ -1,0 +1,206 @@
+{
+  "status": "ACTIVATED",
+  "screen_conditions": 12,
+  "development_validators": {
+    "qwen": "Qwen3.5-9B",
+    "internvl": "InternVL3.5-8B-HF",
+    "gemma4": "Gemma 4 E4B-it"
+  },
+  "primary_method_changed": false,
+  "unit_integration_tests_passed": 39,
+  "selections": {
+    "qwen": {
+      "independent_top2": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          11,
+          15
+        ]
+      },
+      "geometry_selected2": {
+        "CLIP ViT-L/14": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          15
+        ]
+      },
+      "independent_top3": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          11,
+          15
+        ]
+      },
+      "geometry_selected3": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          3,
+          15
+        ]
+      }
+    },
+    "internvl": {
+      "independent_top2": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          11,
+          15
+        ]
+      },
+      "geometry_selected2": {
+        "CLIP ViT-L/14": [
+          11,
+          17
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          15
+        ]
+      },
+      "independent_top3": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          11,
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          11,
+          15
+        ]
+      },
+      "geometry_selected3": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          11,
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          3,
+          15
+        ]
+      }
+    },
+    "gemma4": {
+      "independent_top2": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          23
+        ]
+      },
+      "geometry_selected2": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14
+        ]
+      },
+      "independent_top3": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          23
+        ]
+      },
+      "geometry_selected3": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          5,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          17
+        ]
+      }
+    }
+  },
+  "new_results_available": false
+}
