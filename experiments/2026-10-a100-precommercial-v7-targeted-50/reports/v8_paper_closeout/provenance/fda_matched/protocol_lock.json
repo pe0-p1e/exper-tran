@@ -1,0 +1,183 @@
+{
+  "version": "FDA_matched_v1",
+  "families": {
+    "qwen": {
+      "order": [
+        "CLIP ViT-L/14",
+        "InternVL3.5-2B-HF",
+        "Gemma 4 E2B-it"
+      ],
+      "FDA2": {
+        "CLIP ViT-L/14": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          2,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          9,
+          15
+        ]
+      },
+      "uniform4": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          3,
+          7,
+          11,
+          15
+        ]
+      },
+      "uniform2": {
+        "CLIP ViT-L/14": [
+          11,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          7,
+          15
+        ]
+      }
+    },
+    "internvl": {
+      "order": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "Gemma 4 E2B-it"
+      ],
+      "FDA2": {
+        "CLIP ViT-L/14": [
+          5,
+          11
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          3,
+          15
+        ]
+      },
+      "uniform4": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          3,
+          7,
+          11,
+          15
+        ]
+      },
+      "uniform2": {
+        "CLIP ViT-L/14": [
+          11,
+          23
+        ],
+        "Qwen3.5-2B": [
+          11,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          7,
+          15
+        ]
+      }
+    },
+    "gemma4": {
+      "order": [
+        "CLIP ViT-L/14",
+        "Qwen3.5-2B",
+        "InternVL3.5-2B-HF"
+      ],
+      "FDA2": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          23
+        ]
+      },
+      "uniform4": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ]
+      },
+      "uniform2": {
+        "CLIP ViT-L/14": [
+          11,
+          23
+        ],
+        "Qwen3.5-2B": [
+          11,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          23
+        ]
+      }
+    }
+  },
+  "screen_sha256": "eaf079132179d0b88337795aa4c1505b94f8bb3a9dd37e7c48092fa30b9364c3",
+  "explore_sha256": "ce8fbfeca14338449067e41d97d15803c9477f4935d0b1d540f4104512d1080a",
+  "rule": "Same six native depth candidates and development10 S.rank as prior FDA; sequential conditional growth to4 for EVERY fixed proxy",
+  "score_role": "development validators only; no large/commercial feedback",
+  "primary_contrasts": [
+    "FDA2 vs uniform2",
+    "FDA4 vs uniform4"
+  ],
+  "secondary": "FDA2 vs uniform4 is layer-count/cost comparison, not equal-count selection evidence",
+  "N": 30,
+  "max_new_screen_conditions": 48,
+  "final150_sealed": true,
+  "commercial_locks_unchanged": true
+}

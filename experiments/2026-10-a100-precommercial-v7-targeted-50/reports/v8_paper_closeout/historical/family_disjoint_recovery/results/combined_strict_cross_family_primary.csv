@@ -1,0 +1,16 @@
+target,transition,hits,denominator,ASR,source,status
+Qwen3.5-27B,T01,30,30,1.0,corrected_family_disjoint,complete
+Qwen3.5-27B,T03,26,30,0.8666666666666667,corrected_family_disjoint,complete
+Qwen3.5-27B,T05,25,30,0.8333333333333334,corrected_family_disjoint,complete
+Qwen3.5-27B,T07,30,30,1.0,corrected_family_disjoint,complete
+Qwen3.5-27B,T09,20,30,0.6666666666666666,corrected_family_disjoint,complete
+InternVL3.5-14B-HF,T01,30,30,1.0,corrected_family_disjoint,complete
+InternVL3.5-14B-HF,T03,27,30,0.9,corrected_family_disjoint,complete
+InternVL3.5-14B-HF,T05,27,30,0.9,corrected_family_disjoint,complete
+InternVL3.5-14B-HF,T07,30,30,1.0,corrected_family_disjoint,complete
+InternVL3.5-14B-HF,T09,22,30,0.7333333333333333,corrected_family_disjoint,complete
+Gemma 4 31B-it,T01,29,30,0.9666666666666667,preserved_previous_Gemma_cross_family,complete
+Gemma 4 31B-it,T03,27,30,0.9,preserved_previous_Gemma_cross_family,complete
+Gemma 4 31B-it,T05,23,30,0.7666666666666667,preserved_previous_Gemma_cross_family,complete
+Gemma 4 31B-it,T07,30,30,1.0,preserved_previous_Gemma_cross_family,complete
+Gemma 4 31B-it,T09,21,30,0.7,preserved_previous_Gemma_cross_family,complete

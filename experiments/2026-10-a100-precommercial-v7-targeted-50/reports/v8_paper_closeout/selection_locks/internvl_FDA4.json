@@ -1,0 +1,247 @@
+{
+  "layers": {
+    "CLIP ViT-L/14": [
+      5,
+      11,
+      17,
+      23
+    ],
+    "Qwen3.5-2B": [
+      5,
+      14,
+      17,
+      23
+    ],
+    "Gemma 4 E2B-it": [
+      3,
+      7,
+      11,
+      15
+    ]
+  },
+  "order": [
+    "CLIP ViT-L/14",
+    "Qwen3.5-2B",
+    "Gemma 4 E2B-it"
+  ],
+  "rule": "conditional FDA development10",
+  "feedback": "screen10 only",
+  "evidence": {
+    "CLIP ViT-L/14": {
+      "singletons": [
+        "V8_4ae6a4cb5c928182b8",
+        "V8_0939dcfb2f9aa9ccda",
+        "V8_db6d28b21c0e55add1",
+        "V8_5456717b4654bbae97",
+        "V8_6de42e15212ae74ed3",
+        "V8_248d0ab1abdf8628ad"
+      ],
+      "conditional_trace": [
+        {
+          "parent": "V8_4ae6a4cb5c928182b8",
+          "candidate": "V8_cd606cfa508376641b",
+          "size": 2
+        },
+        {
+          "parent": "V8_4ae6a4cb5c928182b8",
+          "candidate": "V8_5fc4210deb0d7fecca",
+          "size": 2
+        },
+        {
+          "parent": "V8_4ae6a4cb5c928182b8",
+          "candidate": "V8_2a0a27e18a9871cd5d",
+          "size": 2
+        },
+        {
+          "parent": "V8_4ae6a4cb5c928182b8",
+          "candidate": "V8_c02b460b8ee7166eb6",
+          "size": 2
+        },
+        {
+          "parent": "V8_4ae6a4cb5c928182b8",
+          "candidate": "V8_4c15fa768ee5b57290",
+          "size": 2
+        },
+        {
+          "parent": "V8_5fc4210deb0d7fecca",
+          "candidate": "V8_082494d27a4f73f62f",
+          "size": 3
+        },
+        {
+          "parent": "V8_5fc4210deb0d7fecca",
+          "candidate": "V8_094e38aa5acfe5abb6",
+          "size": 3
+        },
+        {
+          "parent": "V8_5fc4210deb0d7fecca",
+          "candidate": "V8_fb965b51b31b734b63",
+          "size": 3
+        },
+        {
+          "parent": "V8_5fc4210deb0d7fecca",
+          "candidate": "V8_16a56f6c29cea66f5b",
+          "size": 3
+        },
+        {
+          "parent": "V8_fb965b51b31b734b63",
+          "candidate": "V8_042e69afe9bd8baf1e",
+          "size": 4
+        },
+        {
+          "parent": "V8_fb965b51b31b734b63",
+          "candidate": "V8_21abb06814e4e2d4b5",
+          "size": 4
+        },
+        {
+          "parent": "V8_fb965b51b31b734b63",
+          "candidate": "V8_f5db5919ea403f8e4e",
+          "size": 4
+        }
+      ]
+    },
+    "Qwen3.5-2B": {
+      "singletons": [
+        "V8_17a6425e9f26e6c2bf",
+        "V8_a51bfbbaaa279d9f3e",
+        "V8_2d9b7b2eac3755140a",
+        "V8_f44ebc208227bc86a7",
+        "V8_6f067853aa4e589832",
+        "V8_07b85a88af68ebb92e"
+      ],
+      "conditional_trace": [
+        {
+          "parent": "V8_17a6425e9f26e6c2bf",
+          "candidate": "V8_e9f29b333cfb8650f5",
+          "size": 2
+        },
+        {
+          "parent": "V8_17a6425e9f26e6c2bf",
+          "candidate": "V8_8eee1f1d5b7a0fa0d0",
+          "size": 2
+        },
+        {
+          "parent": "V8_17a6425e9f26e6c2bf",
+          "candidate": "V8_479e43bc114c853c83",
+          "size": 2
+        },
+        {
+          "parent": "V8_17a6425e9f26e6c2bf",
+          "candidate": "V8_bb0c06f741551a8dd0",
+          "size": 2
+        },
+        {
+          "parent": "V8_17a6425e9f26e6c2bf",
+          "candidate": "V8_38f339b5ac05a92953",
+          "size": 2
+        },
+        {
+          "parent": "V8_bb0c06f741551a8dd0",
+          "candidate": "V8_cf8009baad61268030",
+          "size": 3
+        },
+        {
+          "parent": "V8_bb0c06f741551a8dd0",
+          "candidate": "V8_090e761a4dab0b6457",
+          "size": 3
+        },
+        {
+          "parent": "V8_bb0c06f741551a8dd0",
+          "candidate": "V8_e0e0042bdb5f23d23f",
+          "size": 3
+        },
+        {
+          "parent": "V8_bb0c06f741551a8dd0",
+          "candidate": "V8_4e016aaca567a3d5f0",
+          "size": 3
+        },
+        {
+          "parent": "V8_4e016aaca567a3d5f0",
+          "candidate": "V8_3a6db0e021497554fe",
+          "size": 4
+        },
+        {
+          "parent": "V8_4e016aaca567a3d5f0",
+          "candidate": "V8_4ff20378a34595b5ee",
+          "size": 4
+        },
+        {
+          "parent": "V8_4e016aaca567a3d5f0",
+          "candidate": "V8_2f76271b91e422652f",
+          "size": 4
+        }
+      ]
+    },
+    "Gemma 4 E2B-it": {
+      "singletons": [
+        "V8_e9c219441eee407b57",
+        "V8_a59ca13fdaf669df3a",
+        "V8_b4408e1c7c2ac607ed",
+        "V8_283a3aa8bb72fc7edb",
+        "V8_6bec9ce8a55f483da4",
+        "V8_437102129b1b8e00de"
+      ],
+      "conditional_trace": [
+        {
+          "parent": "V8_e9c219441eee407b57",
+          "candidate": "V8_eed37a474d362871b6",
+          "size": 2
+        },
+        {
+          "parent": "V8_e9c219441eee407b57",
+          "candidate": "V8_f5a21a68080d5d4d1b",
+          "size": 2
+        },
+        {
+          "parent": "V8_e9c219441eee407b57",
+          "candidate": "V8_542469e9b47afa8538",
+          "size": 2
+        },
+        {
+          "parent": "V8_e9c219441eee407b57",
+          "candidate": "V8_40d5c6978a4e488c41",
+          "size": 2
+        },
+        {
+          "parent": "V8_e9c219441eee407b57",
+          "candidate": "V8_6d11e85cf3cc209250",
+          "size": 2
+        },
+        {
+          "parent": "V8_f5a21a68080d5d4d1b",
+          "candidate": "V8_ce4c261031dcf270dd",
+          "size": 3
+        },
+        {
+          "parent": "V8_f5a21a68080d5d4d1b",
+          "candidate": "V8_455577dfb6a3b39c67",
+          "size": 3
+        },
+        {
+          "parent": "V8_f5a21a68080d5d4d1b",
+          "candidate": "V8_3e901143410d402b45",
+          "size": 3
+        },
+        {
+          "parent": "V8_f5a21a68080d5d4d1b",
+          "candidate": "V8_446b3e488f3618b111",
+          "size": 3
+        },
+        {
+          "parent": "V8_446b3e488f3618b111",
+          "candidate": "V8_27acb9575fc1c6fd7f",
+          "size": 4
+        },
+        {
+          "parent": "V8_446b3e488f3618b111",
+          "candidate": "V8_746f6fb28619ec6e43",
+          "size": 4
+        },
+        {
+          "parent": "V8_446b3e488f3618b111",
+          "candidate": "V8_5761d496aa7abb3900",
+          "size": 4
+        }
+      ]
+    }
+  }
+}

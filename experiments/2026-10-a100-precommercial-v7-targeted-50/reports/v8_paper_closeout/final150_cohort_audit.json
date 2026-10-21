@@ -1,0 +1,6 @@
+{
+  "N": 150,
+  "manifest_sha256": "608f0e2c6ae1767a63623f8cca2f6eddecfa3e0b6791f538c731b85bf3ae5f49",
+  "reference_attack_disjoint": true,
+  "ID_and_decoded_pixel_disjoint": true
+}

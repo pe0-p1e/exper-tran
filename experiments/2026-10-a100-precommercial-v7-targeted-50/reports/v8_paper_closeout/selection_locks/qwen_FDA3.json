@@ -1,0 +1,244 @@
+{
+  "layers": {
+    "CLIP ViT-L/14": [
+      5,
+      11,
+      17
+    ],
+    "InternVL3.5-2B-HF": [
+      2,
+      5,
+      17
+    ],
+    "Gemma 4 E2B-it": [
+      1,
+      9,
+      15
+    ]
+  },
+  "order": [
+    "CLIP ViT-L/14",
+    "InternVL3.5-2B-HF",
+    "Gemma 4 E2B-it"
+  ],
+  "rule": "conditional FDA development10",
+  "feedback": "screen10 only",
+  "evidence": {
+    "CLIP ViT-L/14": {
+      "singletons": [
+        "V8_3c54f30622a2b53f45",
+        "V8_93925c6a3b3334d309",
+        "V8_73e295f9cfe3223fc8",
+        "V8_7f2b10255e53f65a8d",
+        "V8_7dd86b9bcaa989fbbb",
+        "V8_e791b40f7408ce4eee"
+      ],
+      "conditional_trace": [
+        {
+          "parent": "V8_3c54f30622a2b53f45",
+          "candidate": "V8_4cd9221b41c9592db5",
+          "size": 2
+        },
+        {
+          "parent": "V8_3c54f30622a2b53f45",
+          "candidate": "V8_2f597bd21b645fcfc2",
+          "size": 2
+        },
+        {
+          "parent": "V8_3c54f30622a2b53f45",
+          "candidate": "V8_4b95d6b7d08d952b3f",
+          "size": 2
+        },
+        {
+          "parent": "V8_3c54f30622a2b53f45",
+          "candidate": "V8_89af9b34d50ad7e2cb",
+          "size": 2
+        },
+        {
+          "parent": "V8_3c54f30622a2b53f45",
+          "candidate": "V8_1cf5fd9b1660d0c0b1",
+          "size": 2
+        },
+        {
+          "parent": "V8_89af9b34d50ad7e2cb",
+          "candidate": "V8_658aa949ea99f50136",
+          "size": 3
+        },
+        {
+          "parent": "V8_89af9b34d50ad7e2cb",
+          "candidate": "V8_08a4a16f6b6ba0ef06",
+          "size": 3
+        },
+        {
+          "parent": "V8_89af9b34d50ad7e2cb",
+          "candidate": "V8_81bd2599cb15c73c1c",
+          "size": 3
+        },
+        {
+          "parent": "V8_89af9b34d50ad7e2cb",
+          "candidate": "V8_1bdc2eb66a9806a704",
+          "size": 3
+        },
+        {
+          "parent": "V8_08a4a16f6b6ba0ef06",
+          "candidate": "V8_7da514fc474eb15fba",
+          "size": 4
+        },
+        {
+          "parent": "V8_08a4a16f6b6ba0ef06",
+          "candidate": "V8_0f7a85a9e8c1ce8fc4",
+          "size": 4
+        },
+        {
+          "parent": "V8_08a4a16f6b6ba0ef06",
+          "candidate": "V8_0d546e0f7ef31399e1",
+          "size": 4
+        }
+      ]
+    },
+    "InternVL3.5-2B-HF": {
+      "singletons": [
+        "V8_ac2f5e6d6b36b91bd1",
+        "V8_8839310b50097037b7",
+        "V8_18d2e9cd7ef43f0fb6",
+        "V8_3f006cf12afd28d989",
+        "V8_02505f8235f1e1f18d",
+        "V8_1709449c91153ca7e8"
+      ],
+      "conditional_trace": [
+        {
+          "parent": "V8_ac2f5e6d6b36b91bd1",
+          "candidate": "V8_9aab29f2ac441c6b9d",
+          "size": 2
+        },
+        {
+          "parent": "V8_ac2f5e6d6b36b91bd1",
+          "candidate": "V8_179fa3a388aa413384",
+          "size": 2
+        },
+        {
+          "parent": "V8_ac2f5e6d6b36b91bd1",
+          "candidate": "V8_c635f117bd6a894b54",
+          "size": 2
+        },
+        {
+          "parent": "V8_ac2f5e6d6b36b91bd1",
+          "candidate": "V8_64a89cc85beb4b58b7",
+          "size": 2
+        },
+        {
+          "parent": "V8_ac2f5e6d6b36b91bd1",
+          "candidate": "V8_d97625173c876ae1e9",
+          "size": 2
+        },
+        {
+          "parent": "V8_9aab29f2ac441c6b9d",
+          "candidate": "V8_55b4eeeb028d6e08ed",
+          "size": 3
+        },
+        {
+          "parent": "V8_9aab29f2ac441c6b9d",
+          "candidate": "V8_1bf5c11df779996f56",
+          "size": 3
+        },
+        {
+          "parent": "V8_9aab29f2ac441c6b9d",
+          "candidate": "V8_9541bcabe5afd59e3c",
+          "size": 3
+        },
+        {
+          "parent": "V8_9aab29f2ac441c6b9d",
+          "candidate": "V8_d33605f7c9cb85af8b",
+          "size": 3
+        },
+        {
+          "parent": "V8_55b4eeeb028d6e08ed",
+          "candidate": "V8_068cbb3985b51b9896",
+          "size": 4
+        },
+        {
+          "parent": "V8_55b4eeeb028d6e08ed",
+          "candidate": "V8_25fef2f25d9efddb16",
+          "size": 4
+        },
+        {
+          "parent": "V8_55b4eeeb028d6e08ed",
+          "candidate": "V8_69749a52186f776698",
+          "size": 4
+        }
+      ]
+    },
+    "Gemma 4 E2B-it": {
+      "singletons": [
+        "V8_d6be9a6f70bed97dc9",
+        "V8_5943f85f6e7798ecb2",
+        "V8_3513b09642328cd05b",
+        "V8_d2f53b30022a4d922e",
+        "V8_0ebf4ea46aca0565f9",
+        "V8_d155c2c9ed33e38839"
+      ],
+      "conditional_trace": [
+        {
+          "parent": "V8_d6be9a6f70bed97dc9",
+          "candidate": "V8_070251e314fdb5d09c",
+          "size": 2
+        },
+        {
+          "parent": "V8_d6be9a6f70bed97dc9",
+          "candidate": "V8_4c3cd5fde7c1bfb051",
+          "size": 2
+        },
+        {
+          "parent": "V8_d6be9a6f70bed97dc9",
+          "candidate": "V8_6770d2277e54ce056c",
+          "size": 2
+        },
+        {
+          "parent": "V8_d6be9a6f70bed97dc9",
+          "candidate": "V8_3d73cae5c130e7958b",
+          "size": 2
+        },
+        {
+          "parent": "V8_d6be9a6f70bed97dc9",
+          "candidate": "V8_358c5209f80c69ee4e",
+          "size": 2
+        },
+        {
+          "parent": "V8_3d73cae5c130e7958b",
+          "candidate": "V8_1280f5f4743ef160d8",
+          "size": 3
+        },
+        {
+          "parent": "V8_3d73cae5c130e7958b",
+          "candidate": "V8_fc7866edd9ef0266d8",
+          "size": 3
+        },
+        {
+          "parent": "V8_3d73cae5c130e7958b",
+          "candidate": "V8_366b2679996d301383",
+          "size": 3
+        },
+        {
+          "parent": "V8_3d73cae5c130e7958b",
+          "candidate": "V8_e377ea336634306cce",
+          "size": 3
+        },
+        {
+          "parent": "V8_1280f5f4743ef160d8",
+          "candidate": "V8_8798c6d8164d9e652d",
+          "size": 4
+        },
+        {
+          "parent": "V8_1280f5f4743ef160d8",
+          "candidate": "V8_0dc35403c2ea3a9099",
+          "size": 4
+        },
+        {
+          "parent": "V8_1280f5f4743ef160d8",
+          "candidate": "V8_4c61e6a9f2632097ab",
+          "size": 4
+        }
+      ]
+    }
+  }
+}

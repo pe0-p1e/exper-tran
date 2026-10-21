@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "class_name": "goldfish",
+      "human_label": 1,
+      "image_id": "train/n01443537/n01443537_374.JPEG",
+      "relative_path": "transition_candidates/T01/0058_n01443537_374.png",
+      "synset": "n01443537",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T01/0058_n01443537_374.png",
+      "transition": "T01",
+      "source": 1,
+      "target": 2
+    },
+    {
+      "class_name": "goldfish",
+      "human_label": 1,
+      "image_id": "train/n01443537/n01443537_425.JPEG",
+      "relative_path": "transition_candidates/T01/0052_n01443537_425.png",
+      "synset": "n01443537",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/canonical_images/transition_candidates/T01/0052_n01443537_425.png",
+      "transition": "T01",
+      "source": 1,
+      "target": 2
+    }
+  ],
+  "seed": 42,
+  "historical": true,
+  "used_for_selection": true,
+  "smoke_only": true
+}

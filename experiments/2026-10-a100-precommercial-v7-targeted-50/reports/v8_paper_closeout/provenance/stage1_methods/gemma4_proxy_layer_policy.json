@@ -1,0 +1,24 @@
+{
+  "protocol": "f69eeddf1d0663ccda24f5cc5b3bfa6cc031202781d43273e47aeb57b839bf1d",
+  "layers": {
+    "CLIP ViT-L/14": [
+      11,
+      14
+    ],
+    "Qwen3.5-2B": [
+      14,
+      17
+    ],
+    "InternVL3.5-2B-HF": [
+      14,
+      23
+    ]
+  },
+  "evidence": [
+    "V8_41e23a6ad77fa3a7b6",
+    "V8_d7ec94b6a5ede9f875",
+    "V8_04f6b5b8db7ca8e4ff",
+    "V8_04f6b5b8db7ca8e4ff"
+  ],
+  "role": "fixed_layer_proxy_control_only"
+}

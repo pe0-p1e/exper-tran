@@ -1,0 +1,24 @@
+{
+  "protocol": "f69eeddf1d0663ccda24f5cc5b3bfa6cc031202781d43273e47aeb57b839bf1d",
+  "layers": {
+    "CLIP ViT-L/14": [
+      5,
+      11
+    ],
+    "Qwen3.5-2B": [
+      14,
+      17
+    ],
+    "Gemma 4 E2B-it": [
+      3,
+      15
+    ]
+  },
+  "evidence": [
+    "V8_5fc4210deb0d7fecca",
+    "V8_bb0c06f741551a8dd0",
+    "V8_f5a21a68080d5d4d1b",
+    "V8_bb0c06f741551a8dd0"
+  ],
+  "role": "fixed_layer_proxy_control_only"
+}

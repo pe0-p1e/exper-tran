@@ -1,0 +1,55 @@
+{
+  "layers": {
+    "CLIP ViT-L/14": [
+      5,
+      11,
+      14,
+      17
+    ],
+    "Qwen3.5-2B": [
+      5,
+      11,
+      14,
+      17
+    ],
+    "InternVL3.5-2B-HF": [
+      11,
+      14,
+      17,
+      23
+    ]
+  },
+  "order": [
+    "CLIP ViT-L/14",
+    "Qwen3.5-2B",
+    "InternVL3.5-2B-HF"
+  ],
+  "rule": "independent singleton top4",
+  "feedback": "screen10 only",
+  "evidence": {
+    "CLIP ViT-L/14": [
+      "V8_b43431841f59386c16",
+      "V8_ddea8960176f67e3ff",
+      "V8_0eb7b757c126d81f4f",
+      "V8_bcef28a7f136121557",
+      "V8_f0f50e1714fa170f60",
+      "V8_56c40a9e19f3a4d6cd"
+    ],
+    "Qwen3.5-2B": [
+      "V8_640a81c63a37b76999",
+      "V8_1ee322e4adca053349",
+      "V8_484c16c77e90f74ad1",
+      "V8_302a17fbd47b49ea35",
+      "V8_f3640e836ce49d72e7",
+      "V8_2b8ec6d0de5b758c8f"
+    ],
+    "InternVL3.5-2B-HF": [
+      "V8_1302a3c70a920d9a9c",
+      "V8_f997cc66be08730b6a",
+      "V8_baa1ecb11d5255cf5d",
+      "V8_f98b60a89bfb698bf2",
+      "V8_8eab3014ea2a43dc6c",
+      "V8_0101de398e9f6f36dc"
+    ]
+  }
+}

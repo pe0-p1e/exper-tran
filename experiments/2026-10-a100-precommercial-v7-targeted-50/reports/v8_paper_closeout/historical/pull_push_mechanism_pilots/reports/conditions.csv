@@ -1,0 +1,11 @@
+group,label,condition,status,attack_images,observed,hits,denominator,unique_images,reused,attack_seconds
+A,reference,PP4_a67072ce6f897ad4,COMPLETE,10,30,29,30,10,True,0.0
+A,raw_gradient_mean,PP4RAW_ec71929cd4dc8cc0,COMPLETE,10,30,28,30,10,False,114.40100107400212
+A,single_75,PP4_07ea2cf80df22b86,COMPLETE,10,30,26,30,10,False,94.36550051497761
+A,middle_pair,PP4_04ec37bad5192651,COMPLETE,10,30,29,30,10,False,102.45689284999389
+A,late_triple,PP4_9909fb7eb33e9bbc,COMPLETE,10,30,28,30,10,False,102.87858841396519
+B,reference,PP4_ccb26f651a2c1317,COMPLETE,10,30,28,30,10,True,0.0
+B,raw_gradient_mean,PP4RAW_8c409bfe9dfe8c35,COMPLETE,10,30,24,30,10,False,294.053499311005
+B,single_75,PP4_d9677c28d3c6c1a9,COMPLETE,10,30,23,30,10,False,261.2109721820452
+B,middle_pair,PP4_0818b0c9d9e0e76a,COMPLETE,10,30,18,30,10,False,255.94726988801267
+B,late_triple,PP4_4ec1eea987c5e91d,COMPLETE,10,30,29,30,10,False,230.4812731880229

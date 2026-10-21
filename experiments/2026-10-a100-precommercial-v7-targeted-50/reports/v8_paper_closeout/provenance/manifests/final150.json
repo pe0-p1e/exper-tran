@@ -1,0 +1,1437 @@
+{
+  "images": [
+    {
+      "image_id": "train/n01443537/n01443537_1087.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_1087.png",
+      "image_sha256": "73f0e2c343b4f750b41aaba48e32980680d1e363d452c21ca1f51a4c30aead93",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_1251.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_1251.png",
+      "image_sha256": "56671854de9a94ce826f99f843bee902ab8eac64a23399e01c6629eb45dea4ee",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7775.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7775.png",
+      "image_sha256": "bdeaf6d8ada92a6644c620775cd29ae8e441b2149f7b53058514b1d1966cec36",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8407.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_8407.png",
+      "image_sha256": "fd1178fda2e4f0de55db9e87886c1ad54ea6db2240da5da6c87929202ebe8672",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7947.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7947.png",
+      "image_sha256": "5e85d577c55f5f104b485b0886fcf103fd07ddf4a576e5beb69af7d8cd66c5e9",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_515.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_515.png",
+      "image_sha256": "f2d1e4765721ac176811e410fb51cd2b3fc91cdd431489b2d85aef72c49dbb0f",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_888.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_888.png",
+      "image_sha256": "6145b2ccec522525f8b40bba8d942c53c003958fafcb2795ea517b958f7dde56",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9161.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_9161.png",
+      "image_sha256": "91f8000dad690fb85892b0a72d151bd8222135f9a8a3b0a6b6e89ffba97d7ac0",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8127.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_8127.png",
+      "image_sha256": "4d683e67414d47d7aee4c3859a45e2b211c6d4d034250c6799ac0c688a434052",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8437.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_8437.png",
+      "image_sha256": "c8d239df0d040b69c32c20a31b43b7f1a66f477d1362ad123efca0f011cb19bb",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7428.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7428.png",
+      "image_sha256": "69762b2b5e52b59f069c2afdaa112fac2357f0d60f2d4065044c7fa5c71b5190",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7476.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7476.png",
+      "image_sha256": "27a7927a5e4ab5c13b24f2e0dc3cdaf5d0691871def5bc651738bc8ff599184a",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9292.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_9292.png",
+      "image_sha256": "85903174626bff42f43fd1a653c318e74700860b615aed063fc693ba78186dc7",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_1160.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_1160.png",
+      "image_sha256": "46c33d2d46a4fa54d9e322a633ac0e2cd254a31e613b0dc4b8b6faab4387a49d",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9558.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_9558.png",
+      "image_sha256": "4086afaea346e22394a2987b2b4fb8f2970df7421163c0fa28d25dada6617f7b",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7852.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7852.png",
+      "image_sha256": "a3d31aa4069f23d69953d2b22a88aeefcb1fbe6f897b9135800d08d4944b1202",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_725.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_725.png",
+      "image_sha256": "34b12e797a5d3abead3c916756196dffe622cf027b8db10cf46971ec73a94122",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_1066.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_1066.png",
+      "image_sha256": "b10d6ef4378cad4ff244c222d7a5ca518c98489a0abd5aeffe83e719196ff3ab",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8198.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_8198.png",
+      "image_sha256": "6f88313b35b6f80003f60fd90b6bd6aa7f9a51f5fba60bbbac85d1af8f0f72c2",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_894.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_894.png",
+      "image_sha256": "047c4e2ebe115b6416363682b7c358eb9f20e12a960341148bce682655e9e0d5",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7260.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7260.png",
+      "image_sha256": "f3d7851b3528ded27d26960c01019d0376a47f786715801ad278b883d8a368a6",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9204.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_9204.png",
+      "image_sha256": "4d34a312b36308ddd40b83d30a82b19f238e0e3fe820ef371fdb93c0fdf70d86",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_605.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_605.png",
+      "image_sha256": "5f284e55c6d4c526f0540790bbdc149549977d33f83c51fe461135a3f64e3171",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8662.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_8662.png",
+      "image_sha256": "4a419036be98cbd505d9e808edb219e42e38ab003da1f113bd7d39157c3585ba",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_930.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_930.png",
+      "image_sha256": "cd718e14719aea0a3bb2d23d2c61dc106ffc5df3a9bdcb1019078c5d7a425d3e",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_8475.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_8475.png",
+      "image_sha256": "d1af0a70245ed8e26cc6d1bb769816c771b0dd86f83e1001119da3b937ea9ba8",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_1130.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_1130.png",
+      "image_sha256": "a79749d7135601596ef00609e3046bc3ced5e00034229c7997a328ae7a8d1854",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_9597.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_9597.png",
+      "image_sha256": "ddbc5737e20daccb9a4f0ee773719434363f98a29c7f929f64a81848a5af398b",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_755.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_755.png",
+      "image_sha256": "d6a4549411bbea5a1f1f4ba3f2c922fecaac45c19532d6ae4f2b49f3b0c205b2",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n01443537/n01443537_7582.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n01443537/n01443537_7582.png",
+      "image_sha256": "564d2d1adc7804a0de5e2834b7acaff9f8a0df90e247d1f6a62be8a2b38cf189",
+      "transition": "T01",
+      "source": 1,
+      "target": 2,
+      "synset": "n01443537"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_18090.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_18090.png",
+      "image_sha256": "e1393cb8fdf9499750b5c15b2a54b98dee80eaf74a3c8e6d005bb70628799b43",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_14561.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_14561.png",
+      "image_sha256": "549a9f85cde60495f50234ef30998c28ac3ee051b026a2909acea1e39ae47183",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_18013.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_18013.png",
+      "image_sha256": "ac7de9e3d86330a30a5c90548702e2d186284b3bd5e06d59e324c359c8d4d6d6",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17086.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17086.png",
+      "image_sha256": "8a1ee6162ac0340e4331706abbae27347045eac750d5b146242cfa926d1a7e9a",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17969.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17969.png",
+      "image_sha256": "ad70fc646e4d7d3c36ee59094577e2ca3e47da7f1b49e5e707ba7e8d81efa896",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17829.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17829.png",
+      "image_sha256": "78d26db25a644c1e98432539ba675a8f49bcdeacf1ee3f4559ec75f513841774",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1491.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1491.png",
+      "image_sha256": "3a239ef6c5b9f5c6a6a6eeed31317649f6bb9aff13b6c5c9caa9e686d86de368",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17587.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17587.png",
+      "image_sha256": "22abadfc23ff7db537dff67443cc2684987839c616b1cb5a4562d832e9a5d6ed",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1559.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1559.png",
+      "image_sha256": "3b2441c51956bba9b290bea8a2f965c6ffe5a7dfb36e8459cd0140b54235aa92",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_15275.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_15275.png",
+      "image_sha256": "cbd9ecfd8b2bd713bb6ad1b092712d704baa40df24e74533656ee959e0dfac7e",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1602.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1602.png",
+      "image_sha256": "ade3f105eda0666e2cb9f084edd412dbbc50d6bd94d68d2c80bc37c06a938ed8",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1563.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1563.png",
+      "image_sha256": "141fdd231b599d14df970cad672aab387c881f838e7bba460b956c66b08e9b9d",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17746.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17746.png",
+      "image_sha256": "2b94dbb2652eeff5946e47e57d95aa1f363e206323c4d4ab64506b4448049c51",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1733.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1733.png",
+      "image_sha256": "3c04b35428678fa7f1dad9831465b8dfc14c0dd8dc451dc594b48d183a82b5f2",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_16900.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_16900.png",
+      "image_sha256": "571c88c79b7a49272d94b7079a41020a4e92e65873358732e5054f0c9c7db82b",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_14903.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_14903.png",
+      "image_sha256": "a96c28495bb455d09eb14271e895b7112bb4f04c7c1cd832b6745d1b65d8fa6e",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17614.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17614.png",
+      "image_sha256": "75d17484190db66b0801789fe75088e1950d7f08bcef915f2be4f1f7ac27e5c9",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_15570.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_15570.png",
+      "image_sha256": "be91e34b780cbc4257b26c642e7266eb60b49bc62f72857ed110200cd4f01884",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1720.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1720.png",
+      "image_sha256": "f0147e72bc63ac2f08f15b022ac48d75c59ccd28a5874e068ebec7be1010b8d8",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17300.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17300.png",
+      "image_sha256": "5a7f523087a47eab681e3d91f2a9e60b83090b054f4111aa1bbbcfe57c3b25ce",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_1557.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_1557.png",
+      "image_sha256": "3ff9125d4a64c25fbadd801975e7a1345c0220b6ae31c1626f2e6d0c44047c66",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_14639.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_14639.png",
+      "image_sha256": "4093d4fda1282d19e5ab0920d5c7223f588038a7b1df6cbb8a311e3b126d7636",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_15022.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_15022.png",
+      "image_sha256": "459afcaba5b4df48011e10f7fc76e8e1a187a7b250c04567c95f78851c0008f8",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17359.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17359.png",
+      "image_sha256": "5187a77dafb646467d9e4989dd095f7b66931e1751dd4656c2def646995c8ffa",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_18154.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_18154.png",
+      "image_sha256": "d8f164833aed8974cd9197d209465801c0c9c6b719ec320aa330adbfc29e2cf4",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_16105.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_16105.png",
+      "image_sha256": "36df8d51371bd867c0ef0f28aaaf1fac6c7ee52de85fd118ade68678e9571cd9",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17680.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17680.png",
+      "image_sha256": "15fcc1eb517d8de32f27c0b9f2313ebeff4b252c434105b4c6a00f8536a68c9b",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_14514.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_14514.png",
+      "image_sha256": "cf696bcc1204a4c311474369f9dff7ac2ee03d1185b7e65497625c24fceb0834",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_17015.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_17015.png",
+      "image_sha256": "9b205f1313ccfb4b9dcfbf95c230b55018986a36710b17c6f609b6e3085f086d",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n07753275/n07753275_16561.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n07753275/n07753275_16561.png",
+      "image_sha256": "905f3c220897fa28d45af6f165121d4eecfee080946e258ab4b501e2116f31b2",
+      "transition": "T03",
+      "source": 3,
+      "target": 4,
+      "synset": "n07753275"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_1395.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_1395.png",
+      "image_sha256": "d05e4f6861f7791f02cb111eec50f3af4bb33d3f3492defa77818cb78657875d",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13651.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_13651.png",
+      "image_sha256": "94fb41ae418f6e101ba86e565e26f9a235479d27061051fa52162367412f582d",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_1302.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_1302.png",
+      "image_sha256": "f578090f4fe2dfaa4202f25eebee28ea8728e5a334d9e7443dec53ac840b951b",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_16010.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_16010.png",
+      "image_sha256": "964bdcfcb6621c45d3a7e91490be45b14bfa4c6f91e731b2390b511787f68f36",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_14787.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_14787.png",
+      "image_sha256": "d3f1af180ec705a624a87623d673d685ff095cd46d9a1102ef3fcc78f560243a",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_1542.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_1542.png",
+      "image_sha256": "731fe451e79977f7ae8ce4ac821095eb89ce7c95659b384909c0366fcd3b04ad",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15628.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15628.png",
+      "image_sha256": "cdc1ec6feda694f808e3f0429983b4f66d4e466ad960390d58f9845f91aeb602",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15644.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15644.png",
+      "image_sha256": "255cccb6af7a2e78c2020e2599a2b3db13d7562a51209c5eb82c68ff19fa70ba",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15714.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15714.png",
+      "image_sha256": "7c21d425af06b6c2846244e9bbc351b1748df5dbb9294a0152e850ac9fe4f7ea",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15137.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15137.png",
+      "image_sha256": "8bbc5ac51de2e8df56c7dddb0fae52232aa34dc0a80d48c4ed65818ac16bbd23",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15106.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15106.png",
+      "image_sha256": "3045fc183ba6ccdf9e4d3d852816f1dc8bb88f6fc6c0940d1d41ffaeb2cec7fb",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15796.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15796.png",
+      "image_sha256": "9a781a9c9e9922f7e2fa8cc95844580e815cb678cb1fc91f04920fc9df4698a2",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15453.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15453.png",
+      "image_sha256": "9d0606e86ad2f6eac0e9a659c86aeb23f0c2727c328f515ca755d73887384c03",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15958.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15958.png",
+      "image_sha256": "bb728713b0eeee85ed45740afec430f1ab71690a52771916595fdd51d4a43889",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13641.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_13641.png",
+      "image_sha256": "e6a93bd9ba4da466d7dbe880a672c610e846748ab2656f161d1c617fcfffee7b",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13583.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_13583.png",
+      "image_sha256": "d342a7d22690c20daffe6e0ec88f7f285404fbd8ae21202001e97b6d42f259ff",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_1487.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_1487.png",
+      "image_sha256": "fc4e91a0dfa8ae2b968d1fac61e0aeb60ce8397917c25b9c625fa5a52494e5e9",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_1558.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_1558.png",
+      "image_sha256": "2c6907af4316a2e3afe1790a87def07f95beab4644e7387a453d22a8a5c2c056",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_12840.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_12840.png",
+      "image_sha256": "99a5e9bfdeb92d207e9237ac89cc1867df8150746b3226f0b319af6ab4abc5ce",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_12672.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_12672.png",
+      "image_sha256": "fce511eedc787904a01bc4a9d51e870889c065ad076e773d5d6144c10a1d45f9",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_12826.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_12826.png",
+      "image_sha256": "015e4728bfbc23229542960af8151b1030669bfff8c647a93aaf451dcb399b15",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_14521.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_14521.png",
+      "image_sha256": "862ad72dec98d8352f3e032ddc03cfa0f3bf8d624e691d6680a32d526886361e",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_12758.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_12758.png",
+      "image_sha256": "a6e07a12cdd6fb8cb6663620e41336164685458a3317c7286a5fc81b2b68f59f",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_1406.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_1406.png",
+      "image_sha256": "6724c1add37e15e3169e4673c436198c5890f5444dabe91b6dd0af4292b8f733",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_16055.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_16055.png",
+      "image_sha256": "8dd2106025cf16310ad7e8027eb5b01f1ad93bbd2183623ac14223bdda47cb76",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13352.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_13352.png",
+      "image_sha256": "e47b148a7823ecb174cc4d102ab6979705ea74014f9f07953311e370ef046a59",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_14231.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_14231.png",
+      "image_sha256": "9a96f17147bbe52ddd53f7f1662226e55cc8cc8a2f1a07c240d4e47087eb1c82",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13428.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_13428.png",
+      "image_sha256": "335a51e82f7ea23e3c2678ded8148638cc86f1f19b8aece54d190a51cb17a43b",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_15855.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_15855.png",
+      "image_sha256": "d966f48fa51a04c077ca72c7e9ff62c4302b35d29703f9da094b02b409490119",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n03642806/n03642806_13006.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n03642806/n03642806_13006.png",
+      "image_sha256": "ce835df2b4e0280c05532fb6a1b1277dccd43c5c8e0f762b84a8e6c9722a9653",
+      "transition": "T05",
+      "source": 5,
+      "target": 6,
+      "synset": "n03642806"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1695.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1695.png",
+      "image_sha256": "e8b18048ac8cc275bf4d9cb6ace1dd5ba5a6ba35f9099ecf0c7ee95a415ccb74",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_14996.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_14996.png",
+      "image_sha256": "1d330f7463ba56647259d277fdd669fc1ab0ae00aa8e75d14fd1512564b4faeb",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1267.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1267.png",
+      "image_sha256": "737ff72262423a96cd81e67b095f7a1cbd32a75b6cd3b292d9b4134902349e10",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13807.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_13807.png",
+      "image_sha256": "a7bfcee1808d7e806e8b9863437699404eadccdd38408511028515e68afa364b",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_15134.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_15134.png",
+      "image_sha256": "6024a1a2104a54db03be40f8ade77a49d5e9fc6f5ac00e11d06ae47064d1d59b",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_12820.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_12820.png",
+      "image_sha256": "63c4a72e9519970d7d345723f74866cf6ce21259cae566cae00933f4ac158746",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_16554.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_16554.png",
+      "image_sha256": "b3f377e9e8f2249b75b3199d3aad3e74af8c7bd7a2034108202baa0f5d97f26d",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_14417.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_14417.png",
+      "image_sha256": "aee8e53a2e1b224587674503bc7b9dd677f8b7347d7479a7536762b305094c69",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13584.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_13584.png",
+      "image_sha256": "20dbb19276b0989bca380a8b193f23c2176daa548ae49d0e207b80bbb0111042",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1376.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1376.png",
+      "image_sha256": "f82d0298585a5be46bdd36fbcc0501b1465ee49c2754aa4ddafbb72687af3c49",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1515.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1515.png",
+      "image_sha256": "23e5a52b0c9f4f295bb9883088bbddab1d25a3bb042bf394f443955af5fd3b0c",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1684.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1684.png",
+      "image_sha256": "6303d24a02705c884e1e3f284a6b37f267c0ff5eeda9eb98455b917ef669b14d",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_16556.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_16556.png",
+      "image_sha256": "130738eca1cae9b6e966081af98fabe9e2a664971005d7eb613489f5cffd0e8c",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1272.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1272.png",
+      "image_sha256": "5c04ac3c57c8c43ec1fd9c25903c57064c9acb03594a7cfff14db40af63e759a",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13933.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_13933.png",
+      "image_sha256": "358a47b7f0b945c1968646a08472bcc8adf04495cdc5fd1cba03da5e7fd8a6b5",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_12196.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_12196.png",
+      "image_sha256": "e08675ac567428b5f442105d6b3e9c97545c352774af49d30fc27a3f799b204f",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_14461.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_14461.png",
+      "image_sha256": "983f0817fd0f56c0f159776a389ec6e7ac6d83abe50ecf12d4349c6bb65f352e",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_11762.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_11762.png",
+      "image_sha256": "d58146f262083792bbdccc6a028e6ab6ca277f0f8a36593b8315733d32426fab",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_16868.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_16868.png",
+      "image_sha256": "9f12073944fd5be21e50cdf64ee91db8182d4fd1ed8e5a664e59a006adf513c7",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13112.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_13112.png",
+      "image_sha256": "cff35e0a936b0580935d015654541b584b16d439db788bf9f2d22b81bca8354d",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_15266.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_15266.png",
+      "image_sha256": "61b5b8463739e3a712aa43ee4d885633a3c197555377e0e526e9208f8b3eb8e9",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_14878.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_14878.png",
+      "image_sha256": "0e1b935c2b7d129ca531f76aa04d41159a03fc08348dfafd1dd97f5b356522cb",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_14293.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_14293.png",
+      "image_sha256": "038dc1893d3851f33d45ac0d62a403ec1be01041ea1ae2d2e745f1d9e65ece03",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1552.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1552.png",
+      "image_sha256": "e7e65c15f8896b1082f811cabc6367c2f082cba4b74f3fb1cf6d98f3b584ad43",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13070.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_13070.png",
+      "image_sha256": "ac71d5291f128940acd628a0294ffd63954794b3fe0776d9f10f33c4a389b31d",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_16243.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_16243.png",
+      "image_sha256": "200979504f32c7072fe0830b9afaa0d1fee7052a215210423ccf588539140e7d",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_13069.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_13069.png",
+      "image_sha256": "71f395de5561a84a24e7c82e0b61bb8fc788c01409ab33910652d91ce3449682",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1410.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1410.png",
+      "image_sha256": "e9ac0b4e6381c4f8b773e7680f1fafccde0b6b4f0771610e69e8f95c9e7e0a78",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_1402.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_1402.png",
+      "image_sha256": "d0b5806d58b50f0be07d453e0eb0965d20518305df442d9a0baadd6ad1be476d",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n09472597/n09472597_12764.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n09472597/n09472597_12764.png",
+      "image_sha256": "881a00aa57ed391f0b97977873f3151f363c643e6aa00bbed3ae4e4c9cc2a85a",
+      "transition": "T07",
+      "source": 7,
+      "target": 8,
+      "synset": "n09472597"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1442.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1442.png",
+      "image_sha256": "fac008b6b1c893612d3c53e827adaea49924893ac473b5013d6778fa446c2432",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1603.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1603.png",
+      "image_sha256": "33dde554a548b17e1f87b8a8613abfa8fa1081583a72718cc9adc6d99dfb985d",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1399.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1399.png",
+      "image_sha256": "2282e6e8020bcff72189ec37e32d899ab58866cfdb190c5dfb927c125d09c8c3",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1402.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1402.png",
+      "image_sha256": "a764d7bfd2cb2e6cf2237f40d060a9019d0e2e365011cb79ab1a434ef714d12f",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1740.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1740.png",
+      "image_sha256": "6e1da0fc5daa37efb6727f30b4a317ee8066f90fca7ca46e9cb7a87860a36932",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1361.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1361.png",
+      "image_sha256": "d0a2c1e6ca77e5ac8295af2bd66992274da57b0d8738fde3f30dea714860c39d",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_2299.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_2299.png",
+      "image_sha256": "c3777634cc9ba1c0e6c3c963437a2dca416b112282f469e0547eee290f8eb487",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1616.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1616.png",
+      "image_sha256": "e7f96956609efae03d8e7816e9c4765d5fce9db6b1d580fe77f9a9efdc461b83",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1476.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1476.png",
+      "image_sha256": "bb319c5726595228b49c0a5224b95bc1f44964a399b5878e24864f85f573a99d",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1701.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1701.png",
+      "image_sha256": "f837efb9de50ac3b8a15c76e0805f27a79e7175cd5a468cc4f0ab1e82491b88d",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1366.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1366.png",
+      "image_sha256": "5b64eaeb5301db0f3229cde0e3613231cb1fd5cf3bb5ab5fb6a3a1e4f08cfd48",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_2487.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_2487.png",
+      "image_sha256": "248ed08f61c201b4f5aa566ba7d141cbf3c9aa9a8981ba9bd4107256e4631cc8",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1676.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1676.png",
+      "image_sha256": "577385fd0447f6c894198cc1fe48ad17076cb78f6de13ad86d0019311f550880",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1605.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1605.png",
+      "image_sha256": "cd2ae94df413697a30dd2a91e6226be3cf1e5a33311f122b427eba74666ee2ed",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1432.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1432.png",
+      "image_sha256": "24c855f3c91624f21cfda4a91b8f6c4cdb90870e572e1f2bf9fc4012d140b7db",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1643.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1643.png",
+      "image_sha256": "cb30948a0fa0a00d8d96a15b7a159c117d7853fe9a64a0426a46d8d4eba688b5",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1377.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1377.png",
+      "image_sha256": "d643942c19199f6deed32fae032334c171ddf99044feb58cfaaa1378512d698d",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_151.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_151.png",
+      "image_sha256": "14340aa11f35f1f9097317e27debab13361ab6c632ed0319f08845ee036764b2",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1398.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1398.png",
+      "image_sha256": "2339d2c780084671511788758f556bb493fa9da2ab38c5b9a72e6f682903d258",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1434.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1434.png",
+      "image_sha256": "e2ae42cb1baca07ee1e6353dec0530daae6de9ba9d7b03c7d8c6f49238349e12",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1672.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1672.png",
+      "image_sha256": "e406c742fc0c479d6cac2e7db8281579811b6d96684aeef99d941cd2eb17b957",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_2075.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_2075.png",
+      "image_sha256": "2c2c01c98d5a7b0683204934710f8169aa54a8fbdca4d68bb94430efc5f09dd9",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1401.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1401.png",
+      "image_sha256": "4e09c430bf0736b889b27b65ff0c52a3cf070f6a9449b422e2c689bca7a34077",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_2601.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_2601.png",
+      "image_sha256": "13e476454701edf4f8b21eb492d16fecab99c512756f51b039fbdf0b7b747e79",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1884.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1884.png",
+      "image_sha256": "d5e2221d4ca53ed606570cf69e70bf2fcad1dd45b6618061a54699ed43df12a0",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1684.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1684.png",
+      "image_sha256": "709834e401ad482e13a8210971ad7513ad0773f9f678b0e1f98edc869f570b5c",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_234.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_234.png",
+      "image_sha256": "bcde4b9e85417c6d3f7ebf1361cbfa435c168be127d624f1c39515d93992a095",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_2585.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_2585.png",
+      "image_sha256": "1bff526abb51384aef2b3911f5a9795b842e8aef4fe6312aab51b6e886b89876",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_153.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_153.png",
+      "image_sha256": "efa130e1205f31eddf0c553a9c9a658c9e59211adeb9f0d0eab11b35af65761f",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    },
+    {
+      "image_id": "train/n04254680/n04254680_1908.JPEG",
+      "path": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/canonical_final150/n04254680/n04254680_1908.png",
+      "image_sha256": "5fa57e744b6e913535b54f5f2e095130fb8379d7beb4e081ed3376ff0b73a10d",
+      "transition": "T09",
+      "source": 9,
+      "target": 10,
+      "synset": "n04254680"
+    }
+  ],
+  "seed": 42,
+  "N": 150,
+  "selection": "GT only deterministic hash ordering",
+  "used_for_selection": false,
+  "ID_and_decoded_pixel_disjoint": true,
+  "excluded_manifest_hashes": {
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_07.jsonl": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_04.jsonl": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_02.jsonl": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_08.jsonl": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_05.jsonl": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_01.jsonl": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_10.jsonl": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_06.jsonl": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_09.jsonl": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/class_references/class_references_03.jsonl": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/dev/T05.jsonl": "3797651932d2411dc32e65b631698cfa52e8c38866c99fd96b6af6e5077aebc5",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/dev/T03.jsonl": "bde16233b0c0d3ef13129748e2313d3e4b0ef7c4735805df62d0c93ffd0f1ae3",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/dev/T09.jsonl": "c8237eebcb571a37a71f35b6acc2346b74e54932fa08c8637136942a81fec61c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/dev/T01.jsonl": "e02defdfca16ded0626bb52d0f271ffb17609eb4e79c786bd3a93fe359442b63",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/dev/T07.jsonl": "f87e0fc2c397f60137602c1dd26ee60f28d16e6fd0430c12d389de4d6898b38c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/test/T05.jsonl": "fe3d0cad89660c7842156cd16162a3154cb0b3c05100a892ee4433207a2fe56c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/test/T03.jsonl": "c4835746e38de85160cd7330f5af7e2db5294c9b20464653147149b20cbd6b65",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/test/T09.jsonl": "e4753c28b39117d7862719eb70c9e12700707a9848ac8965763865cf5d6c9af3",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/test/T01.jsonl": "e6f83cae3588ae90f0ef555ee2b8abe9cdcd5c647d0ca7276d809b8c20c728d2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v7_targeted50/manifests/test/T07.jsonl": "cdb48f1c51df6f463fe2730b82850fbd5500f8e15754ee856790bfbcd598a4f7",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_07.jsonl": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_04.jsonl": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_02.jsonl": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_08.jsonl": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_05.jsonl": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_01.jsonl": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_10.jsonl": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_06.jsonl": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_09.jsonl": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/class_references_03.jsonl": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T05/source_references.jsonl": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T05/target_references.jsonl": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T05/candidates.jsonl": "4f5216a3d44a04255b2a3f4331ea3c33e9ac08a53527fcf69f7a28e8493fd850",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T09/source_references.jsonl": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T09/target_references.jsonl": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T09/candidates.jsonl": "b6aadd707907221e2001cd34121243bcc63b5dfc611901f556245cbeca6a45a7",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T08/source_references.jsonl": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T08/target_references.jsonl": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T08/candidates.jsonl": "d309d45fa1f7d45ffece5a7dfc3a5409408a7f11bcb5a456c7d2d8c63bde0831",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T03/source_references.jsonl": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T03/target_references.jsonl": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T03/candidates.jsonl": "3601504efef927d6fb796e4916a5ba270ed78e0df3b68ddd50ea9d881c779909",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T06/source_references.jsonl": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T06/target_references.jsonl": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T06/candidates.jsonl": "6bee086b2b4893e422f5d1b85a9a2efffe6634696f0c7c32d40e26c0486f17f2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T07/source_references.jsonl": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T07/target_references.jsonl": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T07/candidates.jsonl": "3551380dcb40aaa5420337fdf984e6f0b862cb9d3f0706b8898190b58647ef46",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T01/source_references.jsonl": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T01/target_references.jsonl": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T01/candidates.jsonl": "32448b74474ff5d682b211fec85bb9ca8b7a057824a71aa5f4c95aeb291c602f",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T10/source_references.jsonl": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T10/target_references.jsonl": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T10/candidates.jsonl": "784765160ecad1fd0f3974d9419cd36c0170ce5322ecab81ec101376b32cd2e8",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T02/source_references.jsonl": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T02/target_references.jsonl": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T02/candidates.jsonl": "5c376fd9360693018e405709f609a2d618c4ab7e2aef3a12bcf108854f7c0977",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T04/source_references.jsonl": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T04/target_references.jsonl": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6/evaluation/manifests/transitions/T04/candidates.jsonl": "c13549ec932e815836bcfa4c0cb31f3c4214e4994782a92c220e7aeebd4aa44f",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/attack_cohorts/T05.jsonl": "fe3d0cad89660c7842156cd16162a3154cb0b3c05100a892ee4433207a2fe56c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/attack_cohorts/T03.jsonl": "c4835746e38de85160cd7330f5af7e2db5294c9b20464653147149b20cbd6b65",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/attack_cohorts/T09.jsonl": "e4753c28b39117d7862719eb70c9e12700707a9848ac8965763865cf5d6c9af3",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/attack_cohorts/T01.jsonl": "e6f83cae3588ae90f0ef555ee2b8abe9cdcd5c647d0ca7276d809b8c20c728d2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/attack_cohorts/T07.jsonl": "cdb48f1c51df6f463fe2730b82850fbd5500f8e15754ee856790bfbcd598a4f7",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_07.jsonl": "bae8a4a072f42162e34a7f265074937c9f8f3460e7b9a5716b5048050b1fb772",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_04.jsonl": "25e372fc15acf126bf3f8f8f6b85e2458de4a586f7a6346e3b22374b7bd348e2",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_02.jsonl": "1f748492edcd33f4a479589ac44a8f4ff6a17bde7ad6711a71f26c4eb9c61b79",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_08.jsonl": "509b0f434a226ba3b89d0526bcbae9209d0910eaa3ba65a3cd883e4901cceecb",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_05.jsonl": "a87c4c312c80fe3d32921a8a3d431d2dcc10067635e87e5223cc505e97b6089d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_01.jsonl": "3902545b3a238c3a6c0f41a0b053a9121ba052c2f669f4ba43a771b2258728fa",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_10.jsonl": "2c53b07023be75447de22f5f2056df97e1ac41c1321f1d289391dac7ec183c78",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_06.jsonl": "ed13bef569aaea3b068fbb43dc92861a91e688ffee7c66b091c8ed1d0fbbaad0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_09.jsonl": "4052fee70a6da25c68aeff2cfad29158807f9dde61f6ccb73883b3d601da097c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v6_multi_repr_recovery/manifests/class_references/class_references_03.jsonl": "129c29063476995f16c828679975f95f058b32097de9ab30c8abb47ee20236d1"
+  },
+  "untracked_external_cohorts_audit_exhaustive": false
+}

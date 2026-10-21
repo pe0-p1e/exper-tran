@@ -1,0 +1,55 @@
+{
+  "layers": {
+    "CLIP ViT-L/14": [
+      11,
+      14,
+      17,
+      23
+    ],
+    "Qwen3.5-2B": [
+      11,
+      14,
+      17,
+      23
+    ],
+    "Gemma 4 E2B-it": [
+      1,
+      3,
+      11,
+      15
+    ]
+  },
+  "order": [
+    "CLIP ViT-L/14",
+    "Qwen3.5-2B",
+    "Gemma 4 E2B-it"
+  ],
+  "rule": "independent singleton top4",
+  "feedback": "screen10 only",
+  "evidence": {
+    "CLIP ViT-L/14": [
+      "V8_4ae6a4cb5c928182b8",
+      "V8_0939dcfb2f9aa9ccda",
+      "V8_db6d28b21c0e55add1",
+      "V8_5456717b4654bbae97",
+      "V8_6de42e15212ae74ed3",
+      "V8_248d0ab1abdf8628ad"
+    ],
+    "Qwen3.5-2B": [
+      "V8_17a6425e9f26e6c2bf",
+      "V8_a51bfbbaaa279d9f3e",
+      "V8_2d9b7b2eac3755140a",
+      "V8_f44ebc208227bc86a7",
+      "V8_6f067853aa4e589832",
+      "V8_07b85a88af68ebb92e"
+    ],
+    "Gemma 4 E2B-it": [
+      "V8_e9c219441eee407b57",
+      "V8_a59ca13fdaf669df3a",
+      "V8_b4408e1c7c2ac607ed",
+      "V8_283a3aa8bb72fc7edb",
+      "V8_6bec9ce8a55f483da4",
+      "V8_437102129b1b8e00de"
+    ]
+  }
+}
