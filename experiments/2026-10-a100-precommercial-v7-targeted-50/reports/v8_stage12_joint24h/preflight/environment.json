@@ -1,20 +1,29 @@
 {
   "branch": "experiment/a100-precommercial-v8-joint-selection-24h",
-  "commit": "7679cd6474c53e44eda20969f890fa1b6f02c091",
-  "working_tree": "M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/README.md\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/geometry.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/protocol.yaml\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/resources.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/selection.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/combo_selection.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/ila_selection.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/tests/test_integrated_selection.py",
-  "worktrees": "/home/ubuntu/exper-tran           96a6d4fb [experiment/a100-precommercial-v7-targeted-50]\n/home/ubuntu/exper-tran-proxy18h  86e9440d [experiment/a100-precommercial-v7-proxy-study-18h]\n/home/ubuntu/exper-tran-v8        7679cd64 [experiment/a100-precommercial-v8-joint-selection-24h]",
-  "at": 1792559983.4463375,
+  "commit": "b093e5d83cedafa313e1c41d67e87927d4031696",
+  "working_tree": "M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/resources.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage1_methods/README.md\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage1_methods/protocol.yaml\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage1_methods/stage2_driver.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage1_methods/tests/test_planner.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage2_cli.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage1_methods/early_confirm.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/stage1_methods/tests/test_early_confirm.py",
+  "worktrees": "/home/ubuntu/exper-tran           96a6d4fb [experiment/a100-precommercial-v7-targeted-50]\n/home/ubuntu/exper-tran-proxy18h  86e9440d [experiment/a100-precommercial-v7-proxy-study-18h]\n/home/ubuntu/exper-tran-v8        b093e5d8 [experiment/a100-precommercial-v8-joint-selection-24h]",
+  "at": 1792569935.3663964,
   "hostname": "zfy-transferability",
   "python": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
   "gpu": {
     "total": 80.0,
-    "used": 0.0,
-    "free": 79.251953125,
-    "utilization": 0.0,
-    "processes": [],
-    "host_available": 113.9578628540039
+    "used": 10.8720703125,
+    "free": 68.380859375,
+    "utilization": 98.0,
+    "processes": [
+      {
+        "pid": 416683,
+        "gib": 5.439453125
+      },
+      {
+        "pid": 416694,
+        "gib": 5.421875
+      }
+    ],
+    "host_available": 95.49639129638672
   },
-  "disk_free_gib": 42.8664436340332,
+  "disk_free_gib": 42.50292205810547,
   "permanent_output": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h",
   "root_device": 64769,
   "output_device": 64769,

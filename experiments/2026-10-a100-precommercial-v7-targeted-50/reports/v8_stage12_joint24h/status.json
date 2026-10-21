@@ -1,65 +1,50 @@
 {
-  "at": 1792569485.4034169,
+  "at": 1792570420.7402575,
   "state": "RUNNING",
   "stage": "INTEGRATED_METHOD_PILOT",
   "active": [
-    {
-      "id": "V8_20544de296e6a60852_attack",
-      "mode": "attack",
-      "condition": "V8_20544de296e6a60852",
-      "reservation": 8.1125,
-      "process_identity": {
-        "pid": 416683,
-        "start": "23897043",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_20544de296e6a60852_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_20544de296e6a60852_attack_0.log",
-      "started": 1792569109.8028123,
-      "position_signature": "f02d8aa39fad5d31fdb2f1ff3fc1c966d460e2dfce528e25d4d77bf498027ef3",
-      "last_progress": 1792569473.2505617
-    },
     {
       "id": "V8_b995b713d868291b86_attack",
       "mode": "attack",
       "condition": "V8_b995b713d868291b86",
       "reservation": 8.27197265625,
       "process_identity": {
-        "pid": 416694,
-        "start": "23897057",
+        "pid": 417460,
+        "start": "23983248",
         "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_b995b713d868291b86_attack --attempt 0 ",
         "state": "R"
       },
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_b995b713d868291b86_attack_0.log",
-      "started": 1792569109.941756,
-      "position_signature": "3e50c0d4e1418e6b51dc93ca043a826b834a7ddc039990409e01509d3b1f0153",
-      "last_progress": 1792569473.2506447
+      "started": 1792569971.854125,
+      "position_signature": "e0d050b0a71d5d175a0cfe0e0f94ae67d6eeb79fc93c241245d76159cd788bba",
+      "last_progress": 1792570408.850821
     }
   ],
   "failures": [],
   "gpu": {
     "total": 80.0,
-    "used": 10.3623046875,
-    "free": 68.890625,
-    "utilization": 99.0,
+    "used": 5.4267578125,
+    "free": 73.8251953125,
+    "utilization": 6.0,
     "processes": [
       {
-        "pid": 416683,
-        "gib": 4.931640625
-      },
-      {
-        "pid": 416694,
+        "pid": 417460,
         "gib": 5.419921875
       }
     ],
-    "host_available": 93.7852668762207
+    "host_available": 102.73908996582031
   },
-  "remaining_hours": 10.677125463750627,
+  "remaining_hours": 10.417309674421945,
   "conditions_admitted": 150,
-  "completed_jobs": 305,
+  "completed_jobs": 307,
   "max_workers": 6,
   "method_frozen": false,
-  "stage2": {}
+  "stage2": {},
+  "confirmation30": {
+    "complete_conditions": 0,
+    "rows": [],
+    "scope": "nested30_of_frozen50_confirmation_not_development30",
+    "commercial": {}
+  }
 }
