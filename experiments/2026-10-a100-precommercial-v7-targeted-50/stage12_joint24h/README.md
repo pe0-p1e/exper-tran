@@ -100,3 +100,48 @@ The SAME owner queues post-PNG-freeze selected/Uniform paired evaluation on Qwen
 The prior controller stopped at270 admitted attack conditions, leaving4 unattempted bounded joint proposals. This is a scope-limit stop, not a model/OOM failure. User-authorized `execution_limits.json` raises the bounded admission allowance to290 (hard accepted ceiling300), preserving the supplemental96-new-condition cap and original absolute deadline. The stopped scheduler and the exact requeued IDs are retained in lock amendments.92 CPU/unit tests passed before resumption (45 core,47 supplemental). Resume the same master launcher; no separate GPU owner or manual stage launch is needed. Failure/deadline still produces honest partial results.
 
 Latest user priority: directly load BF16 large targets using the existing generation loader; do not add CPU language offload. Any ready frozen large-target evaluation has strict admission priority over further attacks/search. Owned lower-priority workers finish/checkpoint their current image and yield, preserving completed PNGs. Large target order is InternVL14B,Qwen27B,Gemma31B for an early large-model result; each retains its measured/predicted GPU/RAM headroom and strict parameter audit. When no frozen large-target job is ready, selected-image generation/research resumes automatically. Blocked evaluations remain explicitly failed and do not starve unrelated work forever. This is an execution-only priority change; target feedback still cannot select the methods.
+
+## FDA follow-up and matched layer-count controls (2026-10-21)
+
+`stage1_methods/fda_confirmation.py` freezes the previously selected FDA-inspired
+2-layer/proxy subset on development10 before follow-up explore30/confirm50.
+This combines proxy-subset selection with layer selection: its score versus the
+three-proxy Uniform4 baseline does NOT isolate layer-selection effectiveness.
+`fda_commercial.py` runs the already tested subscription CLI on frozen Uniform,
+selected and FDA methods, with hash/model/prompt-matched clean/Uniform reuse.
+Commercial outputs never retune these locks. Earlier Uniform results on the same
+confirmation50 were observed; the follow-up is not a new untouched test.
+
+The user requested proper matched controls. `stage1_methods/fda_matched.py` fixes
+exactly the same three eligible proxy identities and order for each validator:
+
+| Method | Native layers per proxy | Validation images/family |
+|---|---|---:|
+| Uniform2 | 50%,100%, using native ceil(depth*f)-1 | 30 |
+| FDA2 | Already frozen conditional selections | 30 |
+| Uniform4 | 25%,50%,75%,100% | 30 |
+| FDA4 | Conditional development10 selection grown to four for EVERY proxy | 30 |
+
+Primary comparisons are FDA2 vs Uniform2 and FDA4 vs Uniform4. FDA2 vs Uniform4
+is a separate layer-count/cost comparison. Layer losses are averaged within each
+proxy; proxy gradients remain independently normalized and equally fused.
+All other scientific settings, cohort IDs, reference banks, family exclusion,
+model revisions and precision are fixed. Actual native layer IDs are exported.
+
+FDA4 continues the original greedy rule and the same six depth-distributed
+candidate layers. At each step it generates joint-loss attacks for all remaining
+additions on development10, ranks with the original development score, and freezes
+the resulting four-layer set before explore30. No final large-target or GPT
+feedback is read. This is FDA-inspired selection, not a faithful auxiliary-
+classifier FDA reproduction. Existing matching searches/controls are reused.
+At most48 additional screen conditions and six new explore30 conditions are
+allowed; the original96-condition literature-study lock is unchanged. The user-
+authorized total admission ceiling is now360, with an unchanged original24h
+deadline. If time expires, unfinished cells remain resumable PARTIAL, never zero.
+
+These jobs use the existing admission owner and measured RAM/VRAM bounds (up to8
+workers), alongside the previously frozen FDA and commercial follow-up. Persistent
+results: `outputs/a100_precommercial_v8_joint_selection24h/fda_matched/`, including
+`protocol_lock.json`, per-family `*_FDA4_selection.json`, `results.json`, paired
+success gains/losses, and `new_search_conditions.json`. No new commercial method
+is silently substituted for the already frozen commercial packet.

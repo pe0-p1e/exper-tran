@@ -2,7 +2,7 @@
 from common import *
 import argparse,subprocess,signal,traceback,random
 from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_gpu_reservation,prefer_full_gpu
-from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2
+from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2,fda_cli_progress
 STOP=False
 
 def prioritize_large(pending,blocked=()):
@@ -113,7 +113,7 @@ def launch(s,c,mode):
  if not admit(telemetry(),s['active'],reservation,s['worker_limit'],startup_extra,host_reservation):return False
  if mode=='attack' and c['id'] not in s['admitted']:
   cap=read(ROOT/'execution_limits.json',{}).get('max_attack_conditions',270)
-  if type(cap)!=int or not 270<=cap<=300:raise RuntimeError('Invalid authorized bounded condition limit')
+  if type(cap)!=int or not 270<=cap<=360:raise RuntimeError('Invalid authorized bounded condition limit')
   if len(s['admitted'])>=cap:
    s['blocked'].append(jid);s.setdefault('blocked_reasons',{})[jid]=dict(kind='condition_limit',limit=cap);return False
   s['admitted'].append(c['id'])
@@ -225,6 +225,9 @@ def main():
    if (ROOT/'selected_followup/method_lock.json').exists():
     from stage1_methods.selected_confirmation import large_pending
     large_jobs=large_pending()
+    from stage1_methods.fda_confirmation import large_pending as fda_large_pending
+    large_jobs+=fda_large_pending()
+    s['FDA_commercial']=fda_cli_progress(deadline)
     paper_background+=large_jobs
     paper_ready=paper_ready and not large_jobs
    background+=paper_background
@@ -235,8 +238,8 @@ def main():
    s['parallel_queues']=dict(primary_stage=phase,original_pairs_completed=sum(eval_done(c) for c in legacy),original_pairs_total=len(legacy),remaining_background=len(background))
    if phase=='STAGE1_COMPLETE':
     commercial=stage2_progress(deadline);s['commercial_state']=commercial
-    if commercial!='RUNNING' and not pending and not s['active']:
-     s['state']='COMPLETE' if commercial=='COMPLETE' and paper_ready and not s['blocked'] else 'PARTIAL_OR_BLOCKED';state_write(s);break
+    if commercial!='RUNNING' and s.get('FDA_commercial')!='RUNNING' and not pending and not s['active']:
+     s['state']='COMPLETE' if commercial=='COMPLETE' and s.get('FDA_commercial')=='COMPLETE' and paper_ready and not s['blocked'] else 'PARTIAL_OR_BLOCKED';state_write(s);break
     phase='STAGE2_AND_STAGE1_RESEARCH'
     state_write(s)
    if time.time()>deadline-6*3600 and not (ROOT/'method_lock.json').exists():
@@ -258,7 +261,7 @@ def main():
    launch(s,c,mode)
   # A dead code branch stays explicit; independent pending conditions are attempted first.
   available=[(c,m) for c,m in pending if c['id']+'_'+m not in s['blocked']]
-  if not available and not s['active'] and s.get('commercial_state')=='RUNNING':
+  if not available and not s['active'] and (s.get('commercial_state')=='RUNNING' or s.get('FDA_commercial')=='RUNNING'):
    time.sleep(3);continue
   if not available and not s['active']:
    s['state']='BLOCKED_REQUIRES_INTERVENTION';state_write(s);break

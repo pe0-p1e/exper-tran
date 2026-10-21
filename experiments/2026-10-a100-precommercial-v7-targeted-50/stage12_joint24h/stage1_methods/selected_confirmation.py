@@ -36,7 +36,11 @@ def validate(c,mode):
     lock=C.read(OUT/'method_lock.json')
     if not lock or mode not in C.LARGE_EVAL_MODES or c['split']!='confirm':raise RuntimeError('Large evaluation requires frozen confirmation method')
     if lock['cohort_sha256']!=C.sha(C.ROOT/'manifests/confirm.json'):raise RuntimeError('Frozen cohort changed')
-    if c['id'] not in {v[k]['id'] for v in lock['families'].values() for k in ['selected','uniform']}:raise RuntimeError('Unfrozen large-target method')
+    allowed=c['id'] in {v[k]['id'] for v in lock['families'].values() for k in ['selected','uniform']}
+    if not allowed:
+        from stage1_methods.fda_confirmation import contains
+        allowed=contains(c)
+    if not allowed:raise RuntimeError('Unfrozen large-target method')
     C.legal(c['layers'],C.LARGE_EVAL_MODES[mode])
     if not C.attack_done(c):raise RuntimeError('Large target accessed before PNG freeze')
 

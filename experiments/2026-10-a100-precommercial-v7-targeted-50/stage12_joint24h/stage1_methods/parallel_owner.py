@@ -23,13 +23,17 @@ def research_pending(phase):
         four_conditions,four_ready=fixed_four_plan()
         from stage1_methods.balanced_layers import plan as three_proxy_plan
         from stage1_methods.selected_confirmation import plan as selected_plan,report as selected_report
+        from stage1_methods.fda_confirmation import plan as fda_confirmation_plan
         g=J.source_geometry()
         balanced_conditions,balanced_ready=three_proxy_plan(g)
         status,conditions=P.plan_next(g)
         selected_conditions,selected_ready=selected_plan()
+        fda_conditions,fda_ready=fda_confirmation_plan()
+        from stage1_methods.fda_matched import plan as matched_plan
+        matched_conditions,matched_ready=matched_plan()
         selected_report()
         P.report()
-        return list({c['id']:c for c in selected_conditions+balanced_conditions+four_conditions+conditions}.values()),status=='READY' and four_ready and balanced_ready and selected_ready
+        return list({c['id']:c for c in selected_conditions+fda_conditions+matched_conditions+balanced_conditions+four_conditions+conditions}.values()),status=='READY' and four_ready and balanced_ready and selected_ready and fda_ready and matched_ready
     except Exception as e:
         # Supplemental research failure cannot stop frozen primary confirmation/CLI.
         import traceback
@@ -59,3 +63,20 @@ def stage2_progress(deadline):
 def stop_stage2():
     old=C.read(C.ROOT/'stage2/parallel_driver.json')
     if old and C.same_process(old['identity']):os.kill(old['identity']['pid'],signal.SIGTERM)
+    extra=C.read(C.ROOT/'fda_selected_commercial/driver.json')
+    if extra and C.same_process(extra['identity']):os.kill(extra['identity']['pid'],signal.SIGTERM)
+
+def fda_cli_progress(deadline):
+    verify_extension()
+    from stage1_methods.fda_commercial import OUT,prepare
+    prepare();old=C.read(OUT/'driver.json')
+    if old:
+        if C.same_process(old['identity']):return 'RUNNING'
+        result=C.read(OUT/'driver_result.json')
+        return result['status'] if result else 'BLOCKED_DRIVER_EXIT'
+    log=OUT/'driver.log';log.parent.mkdir(parents=True,exist_ok=True)
+    with log.open('a') as stream:
+        p=subprocess.Popen([sys.executable,str(HERE/'fda_commercial.py'),'--deadline',str(deadline)],stdout=stream,stderr=subprocess.STDOUT,
+            env={**os.environ,'CUDA_VISIBLE_DEVICES':''},start_new_session=True)
+    C.atomic(OUT/'driver.json',dict(identity=C.await_identity(p.pid,str(HERE/'fda_commercial.py')),CPU_only=True,started=time.time()))
+    return 'RUNNING'
