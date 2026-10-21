@@ -215,39 +215,39 @@
       "method": "FDA",
       "model": "gpt-6-sol",
       "N": 150,
-      "completed_pairs": 114,
-      "hits": 95,
+      "completed_pairs": 140,
+      "hits": 115,
       "ASR": null,
       "directions": [
         {
           "transition": "T01",
-          "hits": 22,
+          "hits": 27,
           "N": 30,
-          "observed": 23
+          "observed": 28
         },
         {
           "transition": "T03",
-          "hits": 20,
+          "hits": 24,
           "N": 30,
-          "observed": 23
+          "observed": 28
         },
         {
           "transition": "T05",
-          "hits": 18,
+          "hits": 21,
           "N": 30,
-          "observed": 23
+          "observed": 28
         },
         {
           "transition": "T07",
-          "hits": 23,
+          "hits": 28,
           "N": 30,
-          "observed": 23
+          "observed": 28
         },
         {
           "transition": "T09",
-          "hits": 12,
+          "hits": 15,
           "N": 30,
-          "observed": 22
+          "observed": 28
         }
       ],
       "images": [
@@ -1846,6 +1846,370 @@
             "adversarial": "r_01c2d9af1a74c12408b01c7a"
           },
           "seconds": 2.7808191776275635
+        },
+        {
+          "image_id": "train/n04254680/n04254680_2601.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a3e48db3e6bc985bd4935cb3",
+            "adversarial": "r_4de0ac3105fa0c969df5b773"
+          },
+          "seconds": 4.971068382263184
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9161.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_c625159ea85b4c903c26210b",
+            "adversarial": "r_352f4b658ae2aa42184fc4ef"
+          },
+          "seconds": 2.6494741439819336
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17614.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a5feabb7015c6ca73f51af54",
+            "adversarial": "r_045a1e458b1299d7aafa6d84"
+          },
+          "seconds": 4.400812387466431
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13641.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a2b73ff42fa0ce83ea3a87a4",
+            "adversarial": "r_ba0d2bf41a01a2bd498c7f5e"
+          },
+          "seconds": 3.2595033645629883
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13069.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_3485a0c396d0a94955c60870",
+            "adversarial": "r_b5cce403dac6dea09ddb0f51"
+          },
+          "seconds": 3.8199501037597656
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1740.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6f6fe586807e2194f776f3f9",
+            "adversarial": "r_fa083466e04240235d3e4750"
+          },
+          "seconds": 3.512125253677368
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7260.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_0969f9c00cf70b797320aa0c",
+            "adversarial": "r_dae9bb3d7a4d0505e5381141"
+          },
+          "seconds": 2.940962791442871
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1733.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bb08545115a8a40bd3c41fb1",
+            "adversarial": "r_0e0309e14b4c27876ca52c19"
+          },
+          "seconds": 3.4050674438476562
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1542.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_f4dca735e2fbd4353bfd4aa5",
+            "adversarial": "r_6c0b28e38065e6a743fd6830"
+          },
+          "seconds": 6.101656913757324
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16243.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_67db7c89eab0bc5198d42264",
+            "adversarial": "r_f18ed851d85303e146bd5fba"
+          },
+          "seconds": 3.249788761138916
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1603.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_b06ab01b192a486c8ca61cad",
+            "adversarial": "r_f35ccc7db6bfa642107818b3"
+          },
+          "seconds": 3.8594627380371094
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1160.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_93cb636e823aabc30a135dd7",
+            "adversarial": "r_d176041de71fb7beb4ecf584"
+          },
+          "seconds": 3.243718147277832
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1559.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a3b4c41bbab7ecab586fc4cd",
+            "adversarial": "r_e4663f5ff1980a8e1829f119"
+          },
+          "seconds": 3.090805768966675
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12826.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_33cac166f94deaaeeea90c0f",
+            "adversarial": "r_876e2298467c52175cb2126f"
+          },
+          "seconds": 2.9329795837402344
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1695.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_0da4996e8afd6883e5236306",
+            "adversarial": "r_79c4460a5cc7e01440114bef"
+          },
+          "seconds": 4.070773124694824
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1402.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_b1896b35b919ad2ff4bb322f",
+            "adversarial": "r_c9916efdc386f6f6890ba74f"
+          },
+          "seconds": 4.530498266220093
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1251.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_dd903ec2c6d4cb46bd3795f8",
+            "adversarial": "r_506ba050f430f3e1ce629068"
+          },
+          "seconds": 2.964259147644043
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17587.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_657b9287d8147de8bb2aef00",
+            "adversarial": "r_ad1dd9e547702026d6366c5d"
+          },
+          "seconds": 4.594304323196411
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13428.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_35fda35a6383a02961c795ec",
+            "adversarial": "r_1eb5983cc86bc223acd5ebe8"
+          },
+          "seconds": 3.1793391704559326
+        },
+        {
+          "image_id": "train/n09472597/n09472597_15134.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6af8c27264a2cb40f2456227",
+            "adversarial": "r_73cbc80e848d48f6fb2b00d0"
+          },
+          "seconds": 3.0585029125213623
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1476.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a99bc3e480b22d4d5579fa36",
+            "adversarial": "r_e1ad9b9d4cad3d14d4e7f4cf"
+          },
+          "seconds": 4.054576873779297
+        },
+        {
+          "image_id": "train/n01443537/n01443537_515.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_5f57d2e5a4013b0fcd48ecb3",
+            "adversarial": "r_9df8d68df1582355432111a1"
+          },
+          "seconds": 3.4204063415527344
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15022.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_48ba049fa540932dce795447",
+            "adversarial": "r_abe7bd42f077996fcba97f13"
+          },
+          "seconds": 2.9868104457855225
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13583.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_2258faf192613fa2c5624774",
+            "adversarial": "r_2f8c9c35050cf62c32ee3eba"
+          },
+          "seconds": 2.702842950820923
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12820.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_51d8b0bc1824f5647f76fcb6",
+            "adversarial": "r_4d9a740ded0c1838d93e5f94"
+          },
+          "seconds": 3.2472407817840576
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1432.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_9ca986b6a2d19130ced0b93c",
+            "adversarial": "r_f0b47053860ca9571425d07c"
+          },
+          "seconds": 4.252945184707642
         }
       ]
     },
@@ -1853,39 +2217,39 @@
       "method": "selected",
       "model": "gpt-6-sol",
       "N": 150,
-      "completed_pairs": 120,
-      "hits": 104,
+      "completed_pairs": 140,
+      "hits": 122,
       "ASR": null,
       "directions": [
         {
           "transition": "T01",
-          "hits": 23,
+          "hits": 27,
           "N": 30,
-          "observed": 24
+          "observed": 28
         },
         {
           "transition": "T03",
-          "hits": 22,
+          "hits": 25,
           "N": 30,
-          "observed": 24
+          "observed": 28
         },
         {
           "transition": "T05",
-          "hits": 20,
+          "hits": 24,
           "N": 30,
-          "observed": 24
+          "observed": 28
         },
         {
           "transition": "T07",
-          "hits": 24,
+          "hits": 28,
           "N": 30,
-          "observed": 24
+          "observed": 28
         },
         {
           "transition": "T09",
-          "hits": 15,
+          "hits": 18,
           "N": 30,
-          "observed": 24
+          "observed": 28
         }
       ],
       "images": [
@@ -3568,6 +3932,286 @@
             "adversarial": "r_62084e0194bc01af31552925"
           },
           "seconds": 2.975721597671509
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7260.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_0969f9c00cf70b797320aa0c",
+            "adversarial": "r_0f1046107dac982c8ad37974"
+          },
+          "seconds": 4.518267631530762
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1733.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bb08545115a8a40bd3c41fb1",
+            "adversarial": "r_74a59e31f91f9e720dda50a5"
+          },
+          "seconds": 3.0732595920562744
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1542.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_f4dca735e2fbd4353bfd4aa5",
+            "adversarial": "r_76a4017bda069eaf36ca8fc6"
+          },
+          "seconds": 2.8201794624328613
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16243.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_67db7c89eab0bc5198d42264",
+            "adversarial": "r_0ba6498d0ebb8323ae5cecf0"
+          },
+          "seconds": 4.0767998695373535
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1603.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_b06ab01b192a486c8ca61cad",
+            "adversarial": "r_c13e5a21865b6957336dc24d"
+          },
+          "seconds": 4.4931793212890625
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1160.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_93cb636e823aabc30a135dd7",
+            "adversarial": "r_40b08ed0bb7a2724d33c01bb"
+          },
+          "seconds": 3.073847770690918
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1559.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a3b4c41bbab7ecab586fc4cd",
+            "adversarial": "r_adfe0d6c81a52f6074e343be"
+          },
+          "seconds": 2.6860249042510986
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12826.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_33cac166f94deaaeeea90c0f",
+            "adversarial": "r_45fb5b9faac800cdf7748196"
+          },
+          "seconds": 3.0237209796905518
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1695.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_0da4996e8afd6883e5236306",
+            "adversarial": "r_738b4a0f0a0518bb252294e0"
+          },
+          "seconds": 3.604207992553711
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1402.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_b1896b35b919ad2ff4bb322f",
+            "adversarial": "r_be5fe8da1238bbb9046fbb23"
+          },
+          "seconds": 3.324963331222534
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1251.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_dd903ec2c6d4cb46bd3795f8",
+            "adversarial": "r_fca5488b54ba7c9732db3a28"
+          },
+          "seconds": 4.475907802581787
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17587.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_657b9287d8147de8bb2aef00",
+            "adversarial": "r_231e3ef2bdbe2a81c5011ac3"
+          },
+          "seconds": 3.654303789138794
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13428.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_35fda35a6383a02961c795ec",
+            "adversarial": "r_39e808a00c6d4f3e3db2843c"
+          },
+          "seconds": 3.309844732284546
+        },
+        {
+          "image_id": "train/n09472597/n09472597_15134.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6af8c27264a2cb40f2456227",
+            "adversarial": "r_eb387b19cdd14cf78bbb093d"
+          },
+          "seconds": 4.535057544708252
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1476.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a99bc3e480b22d4d5579fa36",
+            "adversarial": "r_653989f1478026228827ce5c"
+          },
+          "seconds": 2.733241081237793
+        },
+        {
+          "image_id": "train/n01443537/n01443537_515.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_5f57d2e5a4013b0fcd48ecb3",
+            "adversarial": "r_d679903e2c0fb1d7275c5163"
+          },
+          "seconds": 3.6106607913970947
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15022.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_48ba049fa540932dce795447",
+            "adversarial": "r_78256b91aa286bbd54792b47"
+          },
+          "seconds": 10.806857824325562
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13583.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_2258faf192613fa2c5624774",
+            "adversarial": "r_d4a2efd95c989946c6775839"
+          },
+          "seconds": 3.0307564735412598
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12820.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_51d8b0bc1824f5647f76fcb6",
+            "adversarial": "r_715d7cf9e3227ddce9f3eba3"
+          },
+          "seconds": 3.8365752696990967
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1432.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_9ca986b6a2d19130ced0b93c",
+            "adversarial": "r_9bd765f06af2f9d355d3fa8f"
+          },
+          "seconds": 2.703122615814209
         }
       ]
     },
@@ -3575,39 +4219,39 @@
       "method": "uniform",
       "model": "gpt-6-sol",
       "N": 150,
-      "completed_pairs": 120,
-      "hits": 102,
+      "completed_pairs": 145,
+      "hits": 123,
       "ASR": null,
       "directions": [
         {
           "transition": "T01",
-          "hits": 22,
+          "hits": 27,
           "N": 30,
-          "observed": 24
+          "observed": 29
         },
         {
           "transition": "T03",
-          "hits": 21,
+          "hits": 25,
           "N": 30,
-          "observed": 24
+          "observed": 29
         },
         {
           "transition": "T05",
-          "hits": 21,
+          "hits": 24,
           "N": 30,
-          "observed": 24
+          "observed": 29
         },
         {
           "transition": "T07",
-          "hits": 24,
+          "hits": 29,
           "N": 30,
-          "observed": 24
+          "observed": 29
         },
         {
           "transition": "T09",
-          "hits": 14,
+          "hits": 18,
           "N": 30,
-          "observed": 24
+          "observed": 29
         }
       ],
       "images": [
@@ -5290,6 +5934,356 @@
             "adversarial": "r_ce6185a25bba80d275f15932"
           },
           "seconds": 3.8417768478393555
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7260.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_0969f9c00cf70b797320aa0c",
+            "adversarial": "r_8ea9775616c1f1a575a62d2d"
+          },
+          "seconds": 3.843127489089966
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1733.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bb08545115a8a40bd3c41fb1",
+            "adversarial": "r_2e3af377b22da8998228554f"
+          },
+          "seconds": 3.003061294555664
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1542.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_f4dca735e2fbd4353bfd4aa5",
+            "adversarial": "r_74eab042f9761caaf469d83e"
+          },
+          "seconds": 5.3487772941589355
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16243.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_67db7c89eab0bc5198d42264",
+            "adversarial": "r_8911d30bf61c62ad17bca869"
+          },
+          "seconds": 3.153280019760132
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1603.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_b06ab01b192a486c8ca61cad",
+            "adversarial": "r_e8e060a9c6bd01c7a1ba4a81"
+          },
+          "seconds": 3.7776498794555664
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1160.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_93cb636e823aabc30a135dd7",
+            "adversarial": "r_27b538d038606978cb45083e"
+          },
+          "seconds": 3.1535136699676514
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1559.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a3b4c41bbab7ecab586fc4cd",
+            "adversarial": "r_cd5695932d7c9c7c377c6b88"
+          },
+          "seconds": 2.675575017929077
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12826.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_33cac166f94deaaeeea90c0f",
+            "adversarial": "r_d6c72b970806d5f2f4830683"
+          },
+          "seconds": 2.8563385009765625
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1695.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_0da4996e8afd6883e5236306",
+            "adversarial": "r_c326a72fb6c9f6df9a1c6c03"
+          },
+          "seconds": 2.796764850616455
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1402.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_b1896b35b919ad2ff4bb322f",
+            "adversarial": "r_ac5bf9631240d7e5bc1fd044"
+          },
+          "seconds": 3.991746664047241
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1251.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_dd903ec2c6d4cb46bd3795f8",
+            "adversarial": "r_eac25f77e4c551816a7696f5"
+          },
+          "seconds": 6.37598180770874
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17587.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_657b9287d8147de8bb2aef00",
+            "adversarial": "r_28aae745ab8601d120ee7ebf"
+          },
+          "seconds": 2.7203011512756348
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13428.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_35fda35a6383a02961c795ec",
+            "adversarial": "r_3cea06a1976fdbcb08f90117"
+          },
+          "seconds": 3.0347068309783936
+        },
+        {
+          "image_id": "train/n09472597/n09472597_15134.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6af8c27264a2cb40f2456227",
+            "adversarial": "r_88ef37e566e365310f681ebc"
+          },
+          "seconds": 3.074530601501465
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1476.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a99bc3e480b22d4d5579fa36",
+            "adversarial": "r_6e8aa8d9c0b2a1618dba391e"
+          },
+          "seconds": 4.925665855407715
+        },
+        {
+          "image_id": "train/n01443537/n01443537_515.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_5f57d2e5a4013b0fcd48ecb3",
+            "adversarial": "r_81153978674c96d6417c49b6"
+          },
+          "seconds": 2.976107597351074
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15022.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_48ba049fa540932dce795447",
+            "adversarial": "r_bce1220ed0304262f1510238"
+          },
+          "seconds": 2.543630838394165
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13583.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_2258faf192613fa2c5624774",
+            "adversarial": "r_b3bb464661a95693e622fffe"
+          },
+          "seconds": 2.8274548053741455
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12820.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_51d8b0bc1824f5647f76fcb6",
+            "adversarial": "r_e4f8ff6af91a7c424cbe2455"
+          },
+          "seconds": 3.6730306148529053
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1432.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_9ca986b6a2d19130ced0b93c",
+            "adversarial": "r_dca31351b017a32dd6b3b5c8"
+          },
+          "seconds": 3.4357388019561768
+        },
+        {
+          "image_id": "train/n01443537/n01443537_8127.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_ec37cf37cd6c2f0d93c708c7",
+            "adversarial": "r_2bbf69305a88d1a67d07631d"
+          },
+          "seconds": 3.8327112197875977
+        },
+        {
+          "image_id": "train/n07753275/n07753275_14514.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_594b5ab76949165e181d4e89",
+            "adversarial": "r_766324f79413f479c3972070"
+          },
+          "seconds": 2.8701186180114746
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13352.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_06d1c1a46301f23deada14ac",
+            "adversarial": "r_077abaa6634ed57a577f5a7e"
+          },
+          "seconds": 3.0240933895111084
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13112.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_a76fe86fffa9cd80fcf4ebb0",
+            "adversarial": "r_99dab6c8b719a9572f8cdecd"
+          },
+          "seconds": 2.766749143600464
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1908.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_36c8a605fd3996f7185b5020",
+            "adversarial": "r_809ef055ff2bb1ef85090f96"
+          },
+          "seconds": 2.7101540565490723
         }
       ]
     },
@@ -5297,39 +6291,39 @@
       "method": "FDA",
       "model": "gpt-6.1-sol",
       "N": 150,
-      "completed_pairs": 120,
-      "hits": 84,
-      "ASR": null,
+      "completed_pairs": 150,
+      "hits": 106,
+      "ASR": 0.7066666666666667,
       "directions": [
         {
           "transition": "T01",
-          "hits": 17,
+          "hits": 23,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T03",
-          "hits": 18,
+          "hits": 22,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T05",
-          "hits": 17,
+          "hits": 19,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T07",
-          "hits": 21,
+          "hits": 27,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T09",
-          "hits": 11,
+          "hits": 15,
           "N": 30,
-          "observed": 24
+          "observed": 30
         }
       ],
       "images": [
@@ -7012,6 +8006,426 @@
             "adversarial": "r_66e4c9973e89f709c85886c9"
           },
           "seconds": 3.322899103164673
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7260.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_8a3fe1b158fde50e05595ef7",
+            "adversarial": "r_84daa38f19f3c45fd80f5906"
+          },
+          "seconds": 3.490891695022583
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1733.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 3,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_92ade78afaab2035f898e8af",
+            "adversarial": "r_2ac95e4305ffb8e7b6938ae6"
+          },
+          "seconds": 3.1549384593963623
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1542.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_aa78fcbf27cf57a6489c9ba7",
+            "adversarial": "r_986c1bb46c1a4f2b5d09ca20"
+          },
+          "seconds": 3.1087210178375244
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16243.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_4fed5b85926436c465ea85b5",
+            "adversarial": "r_81083316c70f52e82c00c1fc"
+          },
+          "seconds": 3.4375710487365723
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1603.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_624fd690ecfe814e6890c381",
+            "adversarial": "r_5163177838efc927628e0aa7"
+          },
+          "seconds": 15.709361791610718
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1160.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e06165cac9fdcd110b4c6e6c",
+            "adversarial": "r_3c00a52c670f4536fd053186"
+          },
+          "seconds": 8.372941732406616
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1559.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bf66ea5d6c2a53044265ea1d",
+            "adversarial": "r_7c1518d6a5e27ba4601fcd90"
+          },
+          "seconds": 3.146663188934326
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12826.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_ae07ec9756ed354daef38e28",
+            "adversarial": "r_2c2b09883373b5977adf6fd7"
+          },
+          "seconds": 6.4983229637146
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1695.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_9eb425d4ed6f817aea7731fb",
+            "adversarial": "r_e63333e569048138f7fcb460"
+          },
+          "seconds": 4.212061882019043
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1402.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_4b48398e3c4900cacf30f676",
+            "adversarial": "r_f5a248f8485407250691dab0"
+          },
+          "seconds": 2.9801199436187744
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1251.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_069d50e8d6ac1ffbf3b4be96",
+            "adversarial": "r_06de736bfeb951621f1d5f2d"
+          },
+          "seconds": 3.9516446590423584
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17587.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_69a91a5f4891727f08bc5d19",
+            "adversarial": "r_a39a5c34a90ddde5de89c3f9"
+          },
+          "seconds": 4.357659816741943
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13428.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_2286ab12239b4876d32c02c2",
+            "adversarial": "r_141b3751bdcc93f19755ce38"
+          },
+          "seconds": 4.368518114089966
+        },
+        {
+          "image_id": "train/n09472597/n09472597_15134.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_fa7d223f00ed95b844a6acb8",
+            "adversarial": "r_7896ef0bf4e02bfa5ac5b19d"
+          },
+          "seconds": 3.7098472118377686
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1476.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_409699f850b2c300220f01c4",
+            "adversarial": "r_8e1242061942038bcb11275e"
+          },
+          "seconds": 4.216689348220825
+        },
+        {
+          "image_id": "train/n01443537/n01443537_515.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e38c1abca4a6d5d918f03a40",
+            "adversarial": "r_e93e23fae3129548409d02f1"
+          },
+          "seconds": 3.915499687194824
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15022.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e97f28975a10711125d54f4b",
+            "adversarial": "r_51e2529cd488fa13d98f7b4e"
+          },
+          "seconds": 5.344139575958252
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13583.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_764c6961a044b68269412e46",
+            "adversarial": "r_a31159aaba14038f790a9175"
+          },
+          "seconds": 3.2955102920532227
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12820.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_3281b8dd72020b0d9d293488",
+            "adversarial": "r_dca217b9f27cc97c516cdaac"
+          },
+          "seconds": 3.3864047527313232
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1432.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_8574cd2fe928ddc8b4806630",
+            "adversarial": "r_71845c7a56dbc5da0115edbd"
+          },
+          "seconds": 4.372128248214722
+        },
+        {
+          "image_id": "train/n01443537/n01443537_8127.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6e841a90b00c3b76478aaa86",
+            "adversarial": "r_50709ede380ad2d3e5365ca3"
+          },
+          "seconds": 2.8874056339263916
+        },
+        {
+          "image_id": "train/n07753275/n07753275_14514.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_be8cb13ed1a2886326c8ef86",
+            "adversarial": "r_400523748a7ade9488d9d2ac"
+          },
+          "seconds": 4.087507963180542
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13352.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_08a29bbfb7bd7c39b529b490",
+            "adversarial": "r_5cd7d3fbfe12712363525002"
+          },
+          "seconds": 4.277757167816162
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13112.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6e91c9405456767762aec22f",
+            "adversarial": "r_35a06ce061efcc944e745e06"
+          },
+          "seconds": 4.616346120834351
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1908.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_c7beaf49b57b7ff2ffa4a0bd",
+            "adversarial": "r_0eb2eaab1dda932244d0943d"
+          },
+          "seconds": 4.181688070297241
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9558.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e22ffd75a1ac1385fd9bff6b",
+            "adversarial": "r_217220365208326b90e07bc1"
+          },
+          "seconds": 3.1869797706604004
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1602.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e5149abeccffe5ce05c5ee15",
+            "adversarial": "r_c259fa07af7e9c10a8f25280"
+          },
+          "seconds": 3.6848902702331543
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15453.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_78b485efe2fc8ff765e4190c",
+            "adversarial": "r_3231e2bf601342a1188264d5"
+          },
+          "seconds": 5.050247430801392
+        },
+        {
+          "image_id": "train/n09472597/n09472597_14293.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_08112e3c4a04ba6a3479f4c3",
+            "adversarial": "r_0d8eda381882d45c03e2beef"
+          },
+          "seconds": 3.3396079540252686
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1366.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bf0aec5332f7a2f62a763e79",
+            "adversarial": "r_22739b9dc3d0608ec931519b"
+          },
+          "seconds": 3.8626668453216553
         }
       ]
     },
@@ -7019,39 +8433,39 @@
       "method": "selected",
       "model": "gpt-6.1-sol",
       "N": 150,
-      "completed_pairs": 120,
-      "hits": 86,
-      "ASR": null,
+      "completed_pairs": 150,
+      "hits": 109,
+      "ASR": 0.7266666666666667,
       "directions": [
         {
           "transition": "T01",
-          "hits": 18,
+          "hits": 24,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T03",
-          "hits": 21,
+          "hits": 25,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T05",
-          "hits": 18,
+          "hits": 21,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T07",
-          "hits": 22,
+          "hits": 28,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T09",
-          "hits": 7,
+          "hits": 11,
           "N": 30,
-          "observed": 24
+          "observed": 30
         }
       ],
       "images": [
@@ -8734,6 +10148,426 @@
             "adversarial": "r_9e174284c2eecd9331095da6"
           },
           "seconds": 5.87858510017395
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7260.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_8a3fe1b158fde50e05595ef7",
+            "adversarial": "r_867e42abd2220c37f3bcc4a3"
+          },
+          "seconds": 3.5098326206207275
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1733.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 3,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_92ade78afaab2035f898e8af",
+            "adversarial": "r_7d1af9c6605cc4dc94e877b1"
+          },
+          "seconds": 6.663820266723633
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1542.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_aa78fcbf27cf57a6489c9ba7",
+            "adversarial": "r_0d355ff0d71d99bacc98d58f"
+          },
+          "seconds": 3.410630941390991
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16243.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_4fed5b85926436c465ea85b5",
+            "adversarial": "r_5a9623aa084f2f4e0a45abc8"
+          },
+          "seconds": 2.9860923290252686
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1603.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_624fd690ecfe814e6890c381",
+            "adversarial": "r_e96ab2137fdc5cb304199fa3"
+          },
+          "seconds": 6.947066307067871
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1160.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e06165cac9fdcd110b4c6e6c",
+            "adversarial": "r_e31b646bffa7aaa56cf9d8fc"
+          },
+          "seconds": 4.829949140548706
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1559.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bf66ea5d6c2a53044265ea1d",
+            "adversarial": "r_a52045fd53672c47618cf8ac"
+          },
+          "seconds": 3.0881292819976807
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12826.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_ae07ec9756ed354daef38e28",
+            "adversarial": "r_e7f10e5c7c9a8098c7e3f361"
+          },
+          "seconds": 4.344699144363403
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1695.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_9eb425d4ed6f817aea7731fb",
+            "adversarial": "r_854ab18d9a990c29833168c4"
+          },
+          "seconds": 4.725152015686035
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1402.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_4b48398e3c4900cacf30f676",
+            "adversarial": "r_47820e710daec8be0e380f30"
+          },
+          "seconds": 3.122864007949829
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1251.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_069d50e8d6ac1ffbf3b4be96",
+            "adversarial": "r_06ff09aaaea8ee422cba617e"
+          },
+          "seconds": 3.168882131576538
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17587.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_69a91a5f4891727f08bc5d19",
+            "adversarial": "r_214be304263f53e545118b7b"
+          },
+          "seconds": 3.127471446990967
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13428.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_2286ab12239b4876d32c02c2",
+            "adversarial": "r_dfa17afd2fce44f32bffe40b"
+          },
+          "seconds": 4.562495231628418
+        },
+        {
+          "image_id": "train/n09472597/n09472597_15134.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_fa7d223f00ed95b844a6acb8",
+            "adversarial": "r_c2cc7cc0ddba69fc9827a769"
+          },
+          "seconds": 3.4041590690612793
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1476.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_409699f850b2c300220f01c4",
+            "adversarial": "r_87b88e5ba2db0d1dec1041c9"
+          },
+          "seconds": 4.079781532287598
+        },
+        {
+          "image_id": "train/n01443537/n01443537_515.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e38c1abca4a6d5d918f03a40",
+            "adversarial": "r_95d04d2c8f1816f9cb11068f"
+          },
+          "seconds": 5.366357326507568
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15022.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e97f28975a10711125d54f4b",
+            "adversarial": "r_dddb90ef4e4b5ecfde0d1db5"
+          },
+          "seconds": 5.181673288345337
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13583.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_764c6961a044b68269412e46",
+            "adversarial": "r_b96e9bdf1885d58846b6b691"
+          },
+          "seconds": 5.182635307312012
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12820.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_3281b8dd72020b0d9d293488",
+            "adversarial": "r_e7f251131bd5340a756a64e1"
+          },
+          "seconds": 7.79358434677124
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1432.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_8574cd2fe928ddc8b4806630",
+            "adversarial": "r_0c0b3cbb18f0094dbec136d9"
+          },
+          "seconds": 4.783397197723389
+        },
+        {
+          "image_id": "train/n01443537/n01443537_8127.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6e841a90b00c3b76478aaa86",
+            "adversarial": "r_315f19110ac492560fb46430"
+          },
+          "seconds": 3.3169000148773193
+        },
+        {
+          "image_id": "train/n07753275/n07753275_14514.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_be8cb13ed1a2886326c8ef86",
+            "adversarial": "r_d293ef83bc6c95fd96d2db8f"
+          },
+          "seconds": 4.9554502964019775
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13352.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_08a29bbfb7bd7c39b529b490",
+            "adversarial": "r_a0ad07f3e7092d4d3ddce43d"
+          },
+          "seconds": 4.375489950180054
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13112.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6e91c9405456767762aec22f",
+            "adversarial": "r_d961466e50f26d51d308f61c"
+          },
+          "seconds": 3.1589419841766357
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1908.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_c7beaf49b57b7ff2ffa4a0bd",
+            "adversarial": "r_3ca1280e097d4eff2ecd982d"
+          },
+          "seconds": 8.005273342132568
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9558.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e22ffd75a1ac1385fd9bff6b",
+            "adversarial": "r_223165048cf49c8982acf1c1"
+          },
+          "seconds": 3.2820260524749756
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1602.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e5149abeccffe5ce05c5ee15",
+            "adversarial": "r_cc865e2d364c9c90f9d75f1e"
+          },
+          "seconds": 2.88071346282959
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15453.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_78b485efe2fc8ff765e4190c",
+            "adversarial": "r_1752ab71c1339d07c7f17c6c"
+          },
+          "seconds": 3.8534679412841797
+        },
+        {
+          "image_id": "train/n09472597/n09472597_14293.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_08112e3c4a04ba6a3479f4c3",
+            "adversarial": "r_17b4c6db2af0abffd8543404"
+          },
+          "seconds": 3.6618359088897705
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1366.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bf0aec5332f7a2f62a763e79",
+            "adversarial": "r_fb160f477130691f183c5b81"
+          },
+          "seconds": 4.283896207809448
         }
       ]
     },
@@ -8741,39 +10575,39 @@
       "method": "uniform",
       "model": "gpt-6.1-sol",
       "N": 150,
-      "completed_pairs": 120,
-      "hits": 83,
-      "ASR": null,
+      "completed_pairs": 150,
+      "hits": 105,
+      "ASR": 0.7,
       "directions": [
         {
           "transition": "T01",
-          "hits": 17,
+          "hits": 23,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T03",
-          "hits": 18,
+          "hits": 22,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T05",
-          "hits": 17,
+          "hits": 20,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T07",
-          "hits": 22,
+          "hits": 27,
           "N": 30,
-          "observed": 24
+          "observed": 30
         },
         {
           "transition": "T09",
-          "hits": 9,
+          "hits": 13,
           "N": 30,
-          "observed": 24
+          "observed": 30
         }
       ],
       "images": [
@@ -10456,6 +12290,426 @@
             "adversarial": "r_fd078214fb36f239fff4f792"
           },
           "seconds": 3.6273069381713867
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7260.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_8a3fe1b158fde50e05595ef7",
+            "adversarial": "r_7f6d2fc9948f521a3b86bc3e"
+          },
+          "seconds": 3.6596810817718506
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1733.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 3,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_92ade78afaab2035f898e8af",
+            "adversarial": "r_ec1973402a554780f58804bc"
+          },
+          "seconds": 4.978505611419678
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1542.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_aa78fcbf27cf57a6489c9ba7",
+            "adversarial": "r_c6383de7eefb1a53685eddd1"
+          },
+          "seconds": 3.3902854919433594
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16243.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_4fed5b85926436c465ea85b5",
+            "adversarial": "r_caaf4aeaa8052778acd76319"
+          },
+          "seconds": 3.271087646484375
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1603.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_624fd690ecfe814e6890c381",
+            "adversarial": "r_9938fd58b31ef6d98f1d5092"
+          },
+          "seconds": 8.59327220916748
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1160.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e06165cac9fdcd110b4c6e6c",
+            "adversarial": "r_89ab875e178e40b6d10cfb3a"
+          },
+          "seconds": 3.245415687561035
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1559.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bf66ea5d6c2a53044265ea1d",
+            "adversarial": "r_d1ee55055de5fe134def31a6"
+          },
+          "seconds": 2.9219908714294434
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12826.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_ae07ec9756ed354daef38e28",
+            "adversarial": "r_7c263150ca15c744f52a305a"
+          },
+          "seconds": 4.64991307258606
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1695.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_9eb425d4ed6f817aea7731fb",
+            "adversarial": "r_f629d2e0bc4c00d6dcbe2841"
+          },
+          "seconds": 7.230565309524536
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1402.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 9,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_4b48398e3c4900cacf30f676",
+            "adversarial": "r_6ddbdc14536ad7f2513a1f64"
+          },
+          "seconds": 3.379070997238159
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1251.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_069d50e8d6ac1ffbf3b4be96",
+            "adversarial": "r_aee298a10c8b7b2b5ab02dc0"
+          },
+          "seconds": 3.8765132427215576
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17587.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_69a91a5f4891727f08bc5d19",
+            "adversarial": "r_2b3d3d61f0ceeded59c4e193"
+          },
+          "seconds": 3.1655149459838867
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13428.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_2286ab12239b4876d32c02c2",
+            "adversarial": "r_1c8c70f0697900bac08be8e6"
+          },
+          "seconds": 5.335165500640869
+        },
+        {
+          "image_id": "train/n09472597/n09472597_15134.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_fa7d223f00ed95b844a6acb8",
+            "adversarial": "r_af23014b3681f291a1e06077"
+          },
+          "seconds": 4.107769012451172
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1476.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_409699f850b2c300220f01c4",
+            "adversarial": "r_efbd3893942fb5a65057b205"
+          },
+          "seconds": 4.0138208866119385
+        },
+        {
+          "image_id": "train/n01443537/n01443537_515.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e38c1abca4a6d5d918f03a40",
+            "adversarial": "r_74bd09499930a421f7233778"
+          },
+          "seconds": 3.173769474029541
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15022.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e97f28975a10711125d54f4b",
+            "adversarial": "r_781e429c02f72d9000cf2da4"
+          },
+          "seconds": 4.78155255317688
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13583.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 6,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_764c6961a044b68269412e46",
+            "adversarial": "r_e16fbaaf740eb8f87b1d7db3"
+          },
+          "seconds": 4.50087571144104
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12820.JPEG",
+          "transition": "T07",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_3281b8dd72020b0d9d293488",
+            "adversarial": "r_f20ebc6255e534d26dff2058"
+          },
+          "seconds": 4.737337827682495
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1432.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_8574cd2fe928ddc8b4806630",
+            "adversarial": "r_ef2fad4c8eacc2b63587de0a"
+          },
+          "seconds": 5.3787360191345215
+        },
+        {
+          "image_id": "train/n01443537/n01443537_8127.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6e841a90b00c3b76478aaa86",
+            "adversarial": "r_4145130fca95aef054c5a083"
+          },
+          "seconds": 2.9042930603027344
+        },
+        {
+          "image_id": "train/n07753275/n07753275_14514.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_be8cb13ed1a2886326c8ef86",
+            "adversarial": "r_44759abc0cab27effc5a5355"
+          },
+          "seconds": 4.606086254119873
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13352.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_08a29bbfb7bd7c39b529b490",
+            "adversarial": "r_bede7ada21c3c383da154768"
+          },
+          "seconds": 3.840176582336426
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13112.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_6e91c9405456767762aec22f",
+            "adversarial": "r_c93b9b082ff18644f3590e3d"
+          },
+          "seconds": 3.7130250930786133
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1908.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_c7beaf49b57b7ff2ffa4a0bd",
+            "adversarial": "r_bbe0c820251537b165174efb"
+          },
+          "seconds": 3.8121490478515625
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9558.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 1,
+          "adv_label": 2,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e22ffd75a1ac1385fd9bff6b",
+            "adversarial": "r_c7d82d88d6f5d2470ee9c86d"
+          },
+          "seconds": 3.557762384414673
+        },
+        {
+          "image_id": "train/n07753275/n07753275_1602.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_e5149abeccffe5ce05c5ee15",
+            "adversarial": "r_572eac31d9111a0f7b223037"
+          },
+          "seconds": 3.5245914459228516
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15453.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "clean_label": 5,
+          "adv_label": 5,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_78b485efe2fc8ff765e4190c",
+            "adversarial": "r_fbdd9a44fa7a38931b99d0cf"
+          },
+          "seconds": 6.089508533477783
+        },
+        {
+          "image_id": "train/n09472597/n09472597_14293.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 7,
+          "adv_label": 8,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_08112e3c4a04ba6a3479f4c3",
+            "adversarial": "r_ff4aab66d4497b31f1ba7829"
+          },
+          "seconds": 5.466675281524658
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1366.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 9,
+          "adv_label": 10,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bf0aec5332f7a2f62a763e79",
+            "adversarial": "r_485291d037ef33a8e75ff061"
+          },
+          "seconds": 4.158638954162598
         }
       ]
     }
