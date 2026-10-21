@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "pending": 12,
+  "pending": 8,
   "rows": [
     {
       "family": "qwen",
@@ -74,11 +74,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 2,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 7,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 1,
+        "net": -1
+      },
+      "compute": {
+        "hits": 7,
+        "N": 10,
+        "minimum": 0,
+        "directions": [
+          1,
+          2,
+          0,
+          2,
+          2
+        ],
+        "seconds": 199.37409853935242,
+        "backwards": 1500,
+        "peak": 8.716796875
+      }
     },
     {
       "family": "qwen",
@@ -101,11 +119,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 2,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 8,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 8,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "seconds": 288.9158709049225,
+        "backwards": 1500,
+        "peak": 4.673828125
+      }
     },
     {
       "family": "qwen",
@@ -131,11 +167,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 3,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 9,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 1,
+        "lost": 0,
+        "net": 1
+      },
+      "compute": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        "seconds": 282.7604715824127,
+        "backwards": 1500,
+        "peak": 4.693359375
+      }
     },
     {
       "family": "qwen",
@@ -404,11 +458,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 2,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 9,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 255.42466139793396,
+        "backwards": 1500,
+        "peak": 2.388671875
+      }
     },
     {
       "family": "gemma4",

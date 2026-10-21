@@ -1,0 +1,175 @@
+{
+  "at": 1792584718.650104,
+  "max_workers": 8,
+  "tests_passed": 78,
+  "real_resident_calibrations": [
+    {
+      "condition": "V8_6f423f3afdd01c368a",
+      "status": "PASS",
+      "measurements": [
+        {
+          "model": "CLIP ViT-L/14",
+          "batch": 1,
+          "allocated_gib": 1.6533899307250977,
+          "reserved_gib": 1.662109375
+        },
+        {
+          "model": "CLIP ViT-L/14",
+          "batch": 2,
+          "allocated_gib": 1.8277273178100586,
+          "reserved_gib": 1.84375
+        },
+        {
+          "model": "InternVL3.5-2B-HF",
+          "batch": 1,
+          "allocated_gib": 1.9752330780029297,
+          "reserved_gib": 1.998046875
+        },
+        {
+          "model": "InternVL3.5-2B-HF",
+          "batch": 2,
+          "allocated_gib": 2.471414566040039,
+          "reserved_gib": 2.48828125
+        },
+        {
+          "model": "Gemma 4 E2B-it",
+          "batch": 1,
+          "allocated_gib": 4.580572128295898,
+          "reserved_gib": 4.611328125
+        },
+        {
+          "model": "Gemma 4 E2B-it",
+          "batch": 2,
+          "allocated_gib": 4.596113204956055,
+          "reserved_gib": 4.630859375
+        }
+      ],
+      "seconds": 2.2161993980407715
+    },
+    {
+      "condition": "V8_cebdcfdb69d1f98d66",
+      "status": "PASS",
+      "measurements": [
+        {
+          "model": "CLIP ViT-L/14",
+          "batch": 1,
+          "allocated_gib": 1.704434871673584,
+          "reserved_gib": 1.720703125
+        },
+        {
+          "model": "CLIP ViT-L/14",
+          "batch": 2,
+          "allocated_gib": 1.878772258758545,
+          "reserved_gib": 1.90234375
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "batch": 1,
+          "allocated_gib": 1.6830320358276367,
+          "reserved_gib": 1.6953125
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "batch": 2,
+          "allocated_gib": 1.835047721862793,
+          "reserved_gib": 1.853515625
+        },
+        {
+          "model": "Gemma 4 E2B-it",
+          "batch": 1,
+          "allocated_gib": 4.631617069244385,
+          "reserved_gib": 4.66796875
+        },
+        {
+          "model": "Gemma 4 E2B-it",
+          "batch": 2,
+          "allocated_gib": 4.647158145904541,
+          "reserved_gib": 4.66796875
+        }
+      ],
+      "seconds": 2.0785157680511475
+    },
+    {
+      "condition": "V8_edea636bdfd4da635a",
+      "status": "PASS",
+      "measurements": [
+        {
+          "model": "CLIP ViT-L/14",
+          "batch": 1,
+          "allocated_gib": 1.9605660438537598,
+          "reserved_gib": 1.974609375
+        },
+        {
+          "model": "CLIP ViT-L/14",
+          "batch": 2,
+          "allocated_gib": 2.1349034309387207,
+          "reserved_gib": 2.158203125
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "batch": 1,
+          "allocated_gib": 1.9391632080078125,
+          "reserved_gib": 1.951171875
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "batch": 2,
+          "allocated_gib": 2.0911788940429688,
+          "reserved_gib": 2.107421875
+        },
+        {
+          "model": "InternVL3.5-2B-HF",
+          "batch": 1,
+          "allocated_gib": 2.282409191131592,
+          "reserved_gib": 2.3125
+        },
+        {
+          "model": "InternVL3.5-2B-HF",
+          "batch": 2,
+          "allocated_gib": 2.778590679168701,
+          "reserved_gib": 2.80078125
+        }
+      ],
+      "seconds": 1.3221545219421387
+    }
+  ],
+  "new_placement_audit_events": 34,
+  "all_new_placement_events_BF16": true,
+  "matched_condition_observed_timings": [
+    {
+      "condition": "V8_4a88e8befc644cf33e",
+      "samples": {
+        "legacy": 26,
+        "visual_resident_v2": 4
+      },
+      "median_seconds": {
+        "legacy": 169.32357144355774,
+        "visual_resident_v2": 3.340759038925171
+      }
+    },
+    {
+      "condition": "V8_c2efb191dbc9b217f3",
+      "samples": {
+        "visual_resident_v2": 7,
+        "legacy": 23
+      },
+      "median_seconds": {
+        "visual_resident_v2": 27.436238765716553,
+        "legacy": 421.91352367401123
+      }
+    }
+  ],
+  "caveat": "Different images and concurrent workload; observed timings are not a controlled speedup benchmark.",
+  "science_unchanged": [
+    "checkpoint_revisions",
+    "BF16_parameters",
+    "loss",
+    "layers",
+    "images",
+    "RNG",
+    "50_steps",
+    "gradient_fusion",
+    "epsilon"
+  ],
+  "actual_scheduler": "INTEGRATED_CONFIRM50"
+}
