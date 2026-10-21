@@ -1,0 +1,45 @@
+{
+  "at": 1792587814.5797343,
+  "profiles": [
+    {
+      "condition": "V8_890f30c247aa2e9441",
+      "profile": {
+        "steady_GiB": 2.558984375,
+        "load_cap_GiB": 2.558984375,
+        "evidence": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/calibration/V8_d5a70b473957ebdd65.json",
+        "scope": "CLIP-only full loader plus measured batch1/2; <=4 taps; exact pinned study registry"
+      }
+    },
+    {
+      "condition": "V8_41e23a6ad77fa3a7b6",
+      "profile": {
+        "steady_GiB": 2.558984375,
+        "load_cap_GiB": 2.558984375,
+        "evidence": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/calibration/V8_d5a70b473957ebdd65.json",
+        "scope": "CLIP-only full loader plus measured batch1/2; <=4 taps; exact pinned study registry"
+      }
+    },
+    {
+      "condition": "V8_653b980c76a82501bd",
+      "profile": {
+        "steady_GiB": 2.558984375,
+        "load_cap_GiB": 2.558984375,
+        "evidence": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/calibration/V8_d5a70b473957ebdd65.json",
+        "scope": "CLIP-only full loader plus measured batch1/2; <=4 taps; exact pinned study registry"
+      }
+    },
+    {
+      "condition": "V8_7f786588919ed93ebb",
+      "profile": {
+        "steady_GiB": 2.558984375,
+        "load_cap_GiB": 2.558984375,
+        "evidence": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/calibration/V8_d5a70b473957ebdd65.json",
+        "scope": "CLIP-only full loader plus measured batch1/2; <=4 taps; exact pinned study registry"
+      }
+    }
+  ],
+  "tests": 45,
+  "max_workers": 8,
+  "actual_batch1_batch2_evidence": true,
+  "existing_workers_untouched": true
+}

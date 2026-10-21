@@ -893,11 +893,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 3,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 9,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 281.82250022888184,
+        "backwards": 1500,
+        "peak": 2.390625
+      }
     },
     {
       "family": "gemma4",
@@ -923,9 +941,135 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 3,
+      "complete": true,
+      "hits": 10,
+      "N": 10,
+      "paired_vs_uniform": {
+        "gained": 1,
+        "lost": 0,
+        "net": 1
+      },
+      "compute": {
+        "hits": 10,
+        "N": 10,
+        "minimum": 2,
+        "directions": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 277.9859547615051,
+        "backwards": 1500,
+        "peak": 2.388671875
+      }
+    },
+    {
+      "family": "gemma4",
+      "split": "explore",
+      "strategy": "uniform4",
+      "condition": "V8_c2efb191dbc9b217f3",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 4,
+      "complete": true,
+      "hits": 27,
+      "N": 30,
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 27,
+        "N": 30,
+        "minimum": 5,
+        "directions": [
+          5,
+          6,
+          5,
+          6,
+          5
+        ],
+        "seconds": 9705.057188510895,
+        "backwards": 4500,
+        "peak": 4.98046875
+      }
+    },
+    {
+      "family": "gemma4",
+      "split": "explore",
+      "strategy": "independent_top2",
+      "condition": "V8_c7ed4d9c9a6e0fb868",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
       "complete": false,
       "hits": null,
-      "N": 10,
+      "N": 30,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "gemma4",
+      "split": "explore",
+      "strategy": "geometry_selected3",
+      "condition": "V8_f399c792931e869c8c",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          5,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          17
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 30,
       "paired_vs_uniform": null,
       "compute": null
     }

@@ -1,6 +1,6 @@
 {
-  "complete": false,
-  "pending": 1,
+  "complete": true,
+  "pending": 0,
   "rows": [
     {
       "family": "qwen",
@@ -702,15 +702,25 @@
       "proxy_count": 3,
       "taps_per_proxy": 4,
       "total_taps": 12,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 26,
       "N": 30,
-      "ASR": null,
-      "directions": null,
-      "paired": null,
-      "seconds": null,
-      "backwards": null,
-      "peak_GiB": null
+      "ASR": 0.8666666666666667,
+      "directions": [
+        5,
+        6,
+        4,
+        6,
+        5
+      ],
+      "paired": {
+        "gained": 1,
+        "lost": 2,
+        "net": -1
+      },
+      "seconds": 3329.2084078788757,
+      "backwards": 4500,
+      "peak_GiB": 4.955078125
     }
   ],
   "scope": "fixed_proxy_identity_and_four_taps_per_model_only_positions_change",
