@@ -1,20 +1,10 @@
 {
-  "complete_pairs": 38,
+  "complete_pairs": 40,
   "pending": [
     {
       "condition": "V8_31c6700857f49011c9",
       "status": "PENDING_OR_INVALID",
       "reason": "[Errno 2] No such file or directory: '/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/validation/V8_31c6700857f49011c9.json'"
-    },
-    {
-      "condition": "V8_324fa30bdd7f37fc27",
-      "status": "PENDING_OR_INVALID",
-      "reason": "[Errno 2] No such file or directory: '/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/validation/V8_324fa30bdd7f37fc27.json'"
-    },
-    {
-      "condition": "V8_52ad0d57cf9c3cf71d",
-      "status": "PENDING_OR_INVALID",
-      "reason": "[Errno 2] No such file or directory: '/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/validation/V8_52ad0d57cf9c3cf71d.json'"
     },
     {
       "condition": "V8_8ff268f62cfbafd334",
