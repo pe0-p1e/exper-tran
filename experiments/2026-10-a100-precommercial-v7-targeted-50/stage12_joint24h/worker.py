@@ -143,6 +143,7 @@ def tensor(r):
 
 def attack(c,position,calibrate=False):
  import torch,gc
+ import numpy as np
  import torch.nn.functional as F
  from pp4_objective import objective
  from attack_optimizers import differentiable_resize_pad,normalize_pixel_gradients
@@ -151,7 +152,7 @@ def attack(c,position,calibrate=False):
  if c['split']=='confirm':
   from stage1_methods.early_confirm import ordered_cases
   rr=ordered_cases(rr)
- config=dict(loss='pull_push',patch_weight=0,projector_weight=0,pull_weight=.5,push_weight=.5)
+ config=dict(loss='pull_push',patch_weight=0,projector_weight=0,pull_weight=c['pull'],push_weight=c['push'])
  began=time.time();nforward=0;nback=0
  try:
   if calibrate:
@@ -206,13 +207,15 @@ def attack(c,position,calibrate=False):
     traces.append(dict(step=step+1,losses=losses,pairs=pair,directed_gains=directed,cancellation=float(fused.norm()/ng.flatten(2).norm(dim=2).mean().clamp_min(1e-12))))
     mom+=fused;adv=torch.maximum(torch.minimum(adv-mom.sign()/255,clean+16/255),clean-16/255).clamp(0,1).detach().requires_grad_(True)
     position['step']=step+1
-   semantic=[]
+   semantic=[];embedding_values={}
    with torch.no_grad():
     for m in models:
      if not m._v8resident:m.to('cuda')
      cf=m.features(clean);af=m.features(adv)
      for l in m.layers:
       z0,z1=cf[l][0].float(),af[l][0].float();refs=F.normalize(m.bank[l][0].float(),dim=-1)
+      prefix=digest(m.name)[:12]+'_l'+str(l)
+      embedding_values[prefix+'_clean']=z0.cpu().numpy()[0];embedding_values[prefix+'_adv']=z1.cpu().numpy()[0]
       centers=F.normalize(refs.mean(1),dim=-1);source,target=r['source']-1,r['target']-1
       pull=float((z1-z0)@centers[target]);push=float((z0-z1)@centers[source])
       semantic.append(dict(model=m.name,layer=l,delta_pull=pull,delta_push=push,DeltaR=pull+push,
@@ -224,10 +227,12 @@ def attack(c,position,calibrate=False):
    for name,x in [('clean',clean[0]),('adv',adv[0])]:
     p=dest/(name+'.tmp.png');save_png_tensor(x,p);os.replace(p,dest/(name+'.png'))
    bound=assert_png_linf(dest/'clean.png',dest/'adv.png')
+   from paper_closeout.measure import array_save
+   array_save(dest/'features.npz',**embedding_values)
    atomic(dest/'state.json',dict(status='COMPLETE',execution_strategy='visual_resident_v2',science=digest(scientific(c)),condition=c['id'],image_id=r['image_id'],transition=r['transition'],source=r['source'],target=r['target'],
     models=list(c['layers']),layers=c['layers'],steps=c['steps'],seed=42,target_access=False,linf_png=bound,
     clean=str(dest/'clean.png'),adv=str(dest/'adv.png'),png_hashes={str(dest/(x+'.png')):sha(dest/(x+'.png')) for x in ['clean','adv']},
-    semantic=semantic,visual_forward_counts=[dict(model=m.name,calls=m.forward_calls-before) for m,before in zip(models,counts_before)],seconds=time.time()-t0,peak_reserved_gib=torch.cuda.max_memory_reserved()/2**30,trace=traces,model_backward_calls=c['steps']*len(models)))
+    embedding_npz=str(dest/'features.npz'),embedding_sha256=sha(dest/'features.npz'),semantic=semantic,visual_forward_counts=[dict(model=m.name,calls=m.forward_calls-before) for m,before in zip(models,counts_before)],seconds=time.time()-t0,peak_reserved_gib=torch.cuda.max_memory_reserved()/2**30,trace=traces,model_backward_calls=c['steps']*len(models)))
    print('frozen',c['id'],ix+1,'/',len(rr),flush=True)
   if attack_done(c):atomic(ROOT/'attack_complete'/(c['id']+'.json'),dict(status='COMPLETE',loading_seconds=loading_seconds,seconds=time.time()-began,backwards=nback,forward_counts=[dict(model=m.name,visual_forwards=m.forward_calls,offload_seconds=m.offload_seconds) for m in models]))
  finally:
@@ -287,6 +292,9 @@ def evaluate(c,position,limit=None,large_mode=None):
     clean_label=clean['label'],clean_raw=clean['raw'],adv_label=adv.parsed_label,adv_raw=adv.raw_output,parser_status=adv.parser_status,
     target_hit=adv.parsed_label==r['target'],clean_correct=clean['label']==r['source'],off_target=adv.parsed_label not in [None,r['source'],r['target']])
    atomic(dest,value)
+  if (ROOT/'paper_closeout/activation.json').exists():
+   from paper_closeout.measure import per_image
+   per_image(model,processor,name,c,r,receipt)
   result.append(value)
  N=len(evaluation_cases);complete=len(result)==N
  atomic(result_path,dict(complete=complete,science=digest(scientific(c)),condition=c['id'],model=name,revision=s['revision'],images=result,N=N,completed=len(result),hits=sum(r['target_hit'] for r in result),ASR=sum(r['target_hit'] for r in result)/N if complete else None,role='FROZEN_LARGE_TARGET_CONFIRMATION' if large_mode else 'CONFIRMATION' if c['split']=='confirm' else 'USED_FOR_SELECTION',final_target_access=bool(large_mode),seconds=time.time()-began,peak_reserved_gib=torch.cuda.max_memory_reserved()/2**30))

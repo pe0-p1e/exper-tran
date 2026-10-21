@@ -5,7 +5,8 @@ import argparse,subprocess,signal
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--deadline-hours',type=float,default=24);ap.add_argument('--smoke-only',action='store_true');ap.add_argument('--stage2-only',action='store_true');a=ap.parse_args()
  from preflight import lock
- lock()
+ if (ROOT/'study_lock.json').exists():check_lock()
+ else:lock()
  with (ROOT/'supervisor.lock').open('a') as owner:
   try:fcntl.flock(owner,fcntl.LOCK_EX|fcntl.LOCK_NB)
   except BlockingIOError:raise SystemExit('V8 supervisor already running')
@@ -33,7 +34,7 @@ def main():
      atomic(ROOT/'supervisor_heartbeat.json',dict(at=time.time(),controller=proc_identity(p.pid),restart=restart));time.sleep(10)
     if p.returncode in [0,2,75]:return p.returncode
     atomic(ROOT/'supervisor_restart.json',dict(at=time.time(),exit=p.returncode,restart=restart))
-    if time.time()>read(ROOT/'window.json')['deadline']-3600:break
+    if time.time()>effective_deadline()-3600:break
     time.sleep(min(60,5*2**restart))
    return 2
 if __name__=='__main__':sys.exit(main())

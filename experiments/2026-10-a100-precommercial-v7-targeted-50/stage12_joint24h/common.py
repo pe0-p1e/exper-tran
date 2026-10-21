@@ -75,8 +75,13 @@ def same_process(old):
  cur=proc_identity(old['pid']);return bool(cur and cur['state']!='Z' and cur['start']==old['start'] and cur['command']==old['command'])
 def source_hashes():
  files=list(HERE.glob('*.py'))+[HERE/'protocol.yaml']
+ files+=list((HERE/'paper_closeout').glob('*.py'))
  files += [EXP/'src'/n for n in ['vision_features.py','pp4_objective.py','representation_objectives.py','attack_optimizers.py','supplement_registry.py','run_codex_cli_pilot.py','family_protocol.py']]
  return {str(p.relative_to(REPO)):sha(p) for p in files}
+
+def effective_deadline():
+ extension=read(ROOT/'closeout_window.json')
+ return extension['deadline'] if extension else read(ROOT/'window.json',{}).get('deadline',time.time())
 def check_lock():
  lock=read(ROOT/'study_lock.json')
  if not lock:raise RuntimeError('Missing study lock')

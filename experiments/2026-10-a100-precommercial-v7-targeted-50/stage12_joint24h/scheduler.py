@@ -53,7 +53,7 @@ def state_write(s):
  atomic(ROOT/'scheduler.json',s)
  try:t=telemetry()
  except Exception:t={}
- deadline=read(ROOT/'window.json',{}).get('deadline',time.time())
+ deadline=effective_deadline()
  status=dict(at=time.time(),state=s.get('state','RUNNING'),stage=s.get('phase'),active=s.get('active',[]),failures=s.get('failures',[]),
   gpu=t,remaining_hours=max(0,deadline-time.time())/3600,conditions_admitted=len(s.get('admitted',[])),completed_jobs=len(s.get('completed',[])),
   max_workers=s.get('worker_limit',1),method_frozen=(ROOT/'method_lock.json').exists(),stage2=read(ROOT/'stage2/summary.json',{}))
@@ -113,7 +113,7 @@ def launch(s,c,mode):
  if not admit(telemetry(),s['active'],reservation,s['worker_limit'],startup_extra,host_reservation):return False
  if mode=='attack' and c['id'] not in s['admitted']:
   cap=read(ROOT/'execution_limits.json',{}).get('max_attack_conditions',270)
-  if type(cap)!=int or not 270<=cap<=360:raise RuntimeError('Invalid authorized bounded condition limit')
+  if type(cap)!=int or not 270<=cap<=420:raise RuntimeError('Invalid authorized bounded condition limit')
   if len(s['admitted'])>=cap:
    s['blocked'].append(jid);s.setdefault('blocked_reasons',{})[jid]=dict(kind='condition_limit',limit=cap);return False
   s['admitted'].append(c['id'])
@@ -162,7 +162,7 @@ def main():
   global STOP
   STOP=True
  signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGINT,stop)
- window=read(ROOT/'window.json');deadline=window['deadline']
+ window=read(ROOT/'window.json');deadline=effective_deadline()
  s=read(ROOT/'scheduler.json',dict(state='RUNNING',phase='CALIBRATION',active=[],completed=[],failures=[],attempts={},retry_after={},blocked=[],admitted=[],worker_limit=1,microbatch=1))
  s['state']='RUNNING'
  # An interrupted Stage2 worker must be joined before another CLI process can start.
@@ -194,11 +194,15 @@ def main():
      atomic(ROOT/'attempts'/j['id']/str(j['attempt'])/'exit.json',dict(status='FAILED',kind='timeout',reason='stale heartbeat or stalled progress'))
   if STOP:
    stop_stage2()
+   from paper_closeout.runtime import stop as stop_closeout
+   stop_closeout()
    s['state']='STOPPING'
    for j in s['active']:own_signal(j,signal.SIGTERM)
    state_write(s);return 75
   if time.time()>deadline-3600:
    stop_stage2()
+   from paper_closeout.runtime import stop as stop_closeout
+   stop_closeout()
    for j in s['active']:own_signal(j,signal.SIGTERM)
    s['state']='PARTIAL_DEADLINE';state_write(s);break
   calibrations=[c for c in smokes if not (ROOT/'calibration_resident_v2'/(c['id']+'.json')).exists()]
@@ -221,6 +225,10 @@ def main():
    background=[(c,'evaluate' if attack_done(c) else 'attack') for c in legacy if not eval_done(c)]
    if (ROOT/'method_lock.json').exists():s['commercial_state']=stage2_progress(deadline)
    paper,paper_ready=research_pending(phase)
+   from paper_closeout.runtime import pending as closeout_pending
+   closeout_conditions,closeout_large,closeout_ready=closeout_pending(deadline)
+   paper+=closeout_conditions
+   paper_ready=paper_ready and closeout_ready
    paper_background=[(c,'evaluate' if attack_done(c) else 'attack') for c in paper if not eval_done(c)]
    if (ROOT/'selected_followup/method_lock.json').exists():
     from stage1_methods.selected_confirmation import large_pending
@@ -228,7 +236,7 @@ def main():
     from stage1_methods.fda_confirmation import large_pending as fda_large_pending
     large_jobs+=fda_large_pending()
     s['FDA_commercial']=fda_cli_progress(deadline)
-    paper_background+=large_jobs
+    paper_background+=large_jobs+closeout_large
     paper_ready=paper_ready and not large_jobs
    background+=paper_background
    s['paper_research']=dict(pending=len(paper_background),complete=paper_ready,blocked=read(ROOT/'stage1_methods/blocked.json'))
@@ -261,7 +269,7 @@ def main():
    launch(s,c,mode)
   # A dead code branch stays explicit; independent pending conditions are attempted first.
   available=[(c,m) for c,m in pending if c['id']+'_'+m not in s['blocked']]
-  if not available and not s['active'] and (s.get('commercial_state')=='RUNNING' or s.get('FDA_commercial')=='RUNNING'):
+  if not available and not s['active'] and (s.get('commercial_state')=='RUNNING' or s.get('FDA_commercial')=='RUNNING' or not closeout_ready):
    time.sleep(3);continue
   if not available and not s['active']:
    s['state']='BLOCKED_REQUIRES_INTERVENTION';state_write(s);break

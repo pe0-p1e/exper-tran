@@ -33,6 +33,11 @@ def prepare():
     C.freeze(path,locked);return locked
 
 def validate(c,mode):
+    from paper_closeout.plan import validate_large
+    if mode in C.LARGE_EVAL_MODES and validate_large(c,mode):
+        C.legal(c['layers'],C.LARGE_EVAL_MODES[mode])
+        if not C.attack_done(c):raise RuntimeError('Large target before PNG freeze')
+        return
     lock=C.read(OUT/'method_lock.json')
     if not lock or mode not in C.LARGE_EVAL_MODES or c['split']!='confirm':raise RuntimeError('Large evaluation requires frozen confirmation method')
     if lock['cohort_sha256']!=C.sha(C.ROOT/'manifests/confirm.json'):raise RuntimeError('Frozen cohort changed')
@@ -47,7 +52,7 @@ def validate(c,mode):
 def large_path(c,mode):return C.ROOT/'large_validation'/C.LARGE_EVAL_MODES[mode]/(c['id']+'.json')
 def large_done(c,mode):
     d=C.read(large_path(c,mode))
-    return bool(d and d.get('complete') and d.get('N')==50 and d.get('model')==C.LARGE_EVAL_MODES[mode] and d.get('science')==C.digest(C.scientific(c)))
+    return bool(d and d.get('complete') and d.get('N')==len(C.cohort(c['split'])['images']) and d.get('model')==C.LARGE_EVAL_MODES[mode] and d.get('science')==C.digest(C.scientific(c)))
 
 def plan():
     lock=prepare();pending=[]
