@@ -1,0 +1,80 @@
+version: proxy_followup_v1
+mode: prepare_until_layer_freeze
+purpose: proxy_selection_with_frozen_layers
+layer_strategy: FDA_inspired_conditional_joint_utility
+primary_attack:
+  pull: 0.5
+  push: 0.5
+  classification_weight: 0
+  steps: 50
+  epsilon: 0.06274509803921569
+  alpha: 0.00392156862745098
+  momentum: 1
+  seed: 42
+  DI: true
+  parameter_dtype: bfloat16
+  quantized: false
+  fusion: equal_per_image_L1_proxy_gradient_mean
+  layer_reduction: mean_before_proxy_normalization
+stages:
+  - require_frozen_per_model_native_layer_policy
+  - reuse_or_generate_matched_development_attacks
+  - source_effectiveness_and_compatibility_measurements
+  - bounded_conditional_proxy_selection
+  - freeze_primary_and_matched_control
+  - freeze_confirmation_PNGs
+  - large_target_postfreeze_evaluation
+  - report
+large_targets:
+  qwen: Qwen3.5-27B
+  internvl: InternVL3.5-14B-HF
+  gemma4: Gemma 4 31B-it
+development_validators_only:
+  qwen: Qwen3.5-9B
+  internvl: InternVL3.5-8B-HF
+  gemma4: Gemma 4 E4B-it
+small_model_ASR_is_main_evidence: false
+large_target_feedback_for_selection: false
+historical_large_target_exposure: true
+cohorts:
+  screening: existing_screen10_used_for_development
+  selection: existing_explore30_disclose_prior_development_reuse
+  large_pilot: frozen_confirm50_first_two_per_direction
+  large_confirmation: frozen_confirm50_all_ten_per_direction
+  final150: sealed_for_stage3
+max_frozen_methods_for_large_targets: 2
+large_evaluation_unique_cases:
+  pilot: 3_targets_x_10_images_x_2_methods
+  confirmation: 3_targets_x_50_images_x_2_methods
+  pilot_reused_in_confirmation: true
+  clean_reuse: only_if_exact_model_revision_image_prompt_parser_match
+selection:
+  primary: conditional_strength_compatibility_compute
+  matched_control: fixed_uniform_proxy_set_with_identical_frozen_layers
+  core_subsets_per_family: 7
+  max_proxy_checkpoints_primary: 3
+  max_new_static_conditions_per_family: 4
+  cross_proxy_gradient_measurement: gradient_of_mean_layer_losses_before_L1
+  pair_similarity: aligned_reference_layer_Gram_average_CKA
+  source_effectiveness: same_state_cross_objective_projected_one_step_gain
+  compatibility: common_descent_fraction_and_negative_dot_fraction
+  source_statistics_are_prescreen_only: true
+  decision_evidence: held_out_development_actual_joint_attacks
+  uncertainty: paired_unique_image_resampling_not_independent_model_image_rows
+literature_adaptations:
+  FiT: development_only_empirical_source_selection_no_final_target_queries
+  AdaEA: source_contribution_diagnostics_no_primary_adaptive_fusion
+  CWA: compatibility_diagnostics_not_flatness_or_CWA_optimizer_reproduction
+  Yao_ICML2025: strength_diversity_complexity_background_not_CKA_optimality_theorem
+  SEA: optional_future_temporal_prototype_adapter_not_current_static_selector
+resources:
+  existing_single_admission_owner: true
+  maximum_workers: 6
+  minimum_headroom_GiB: 8
+  minimum_headroom_fraction: 0.1
+  aggregate_reserved_cap_GiB: 72
+  group_large_evaluation_by_checkpoint: true
+  drain_owned_attack_workers_before_large_target_load: true
+  no_quantization_or_size_fallback: true
+full_component_ablation_stage: 3
+commercial_calls_in_this_followup: false
