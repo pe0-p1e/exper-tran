@@ -1,0 +1,21 @@
+{
+  "at": 1792560475.3686616,
+  "unit_integration_tests": 33,
+  "status": "PASS",
+  "commercial_calls_in_tests": 0,
+  "real_ILA_two_image_smokes_passed": 4,
+  "source_geometry_probe": {
+    "at": 1792560457.615434,
+    "status": "PASS",
+    "verification_only": true,
+    "models": [
+      "CLIP ViT-L/14",
+      "InternVL3.5-2B-HF"
+    ],
+    "units": 15,
+    "pairs": 105,
+    "seconds": 3.1977245807647705,
+    "no_model_inference": true,
+    "no_target_outputs_used": true
+  }
+}

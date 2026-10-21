@@ -1,0 +1,7 @@
+{
+  "at": 1792559983.0743172,
+  "prior_lock": "9118850fea3bdca9607465256573a7663e4ae57198701bb4eda5c67490ed2018",
+  "new_lock": "5ef6c36dcdb8420d499c27551a9f6779a15e83ed01e88d013c599080f288c618",
+  "reason": "Separate two-image ILA smoke gate before native-tap diagnostics; passing30 tests; latest user method-first scope, full ablation Stage3. No primary attack changes or deadline reset.",
+  "tests": "30 passed"
+}

@@ -1,0 +1,28 @@
+{
+  "model": "InternVL3.5-2B-HF",
+  "revision": {
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "diagnostic": {
+    "version": 1,
+    "refinement_steps": 10,
+    "alpha": 0.00392156862745098,
+    "epsilon": 0.06274509803921569,
+    "initialization": "clean",
+    "DI": false,
+    "momentum": false,
+    "feature": "flattened raw valid spatial tokens, CLS/padding excluded",
+    "loss": "negative dot with frozen baseline feature displacement",
+    "baseline": "existing single-proxy four-layer 50-step Pure PP PNG",
+    "source_only": true,
+    "denominator_floor": 1e-08,
+    "peak_rule": "deepest attack tap with a strict interior local maximum at its own native block; mean paired ratio",
+    "fallback": "NO_PEAK; no silent argmax replacement"
+  },
+  "cohort_sha256": "eaf079132179d0b88337795aa4c1505b94f8bb3a9dd37e7c48092fa30b9364c3",
+  "baseline_science": "b5db61a3fbb40386d413d0db77f7b3cee557ed7cdce6f1eb9b944c6a8012d3c0",
+  "smoke_only": false
+}

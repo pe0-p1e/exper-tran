@@ -1,0 +1,5 @@
+model,smoke_pass,formal_complete,native_tap_images_completed,latest_peak,peak_status,selection_uses_validator_outputs,extra_projection_backward_calls,projection_seconds
+CLIP ViT-L/14,True,True,240,21,PASS,False,2400,159.90255665779114
+InternVL3.5-2B-HF,True,True,240,20,PASS,False,2400,154.2690155506134
+Gemma 4 E2B-it,True,False,101,,PENDING,False,1010,192.76747798919678
+Qwen3.5-2B,True,False,119,,PENDING,False,1190,185.32155466079712

@@ -1,29 +1,20 @@
 {
   "branch": "experiment/a100-precommercial-v8-joint-selection-24h",
-  "commit": "8806017bd4a6751523c45b2917f7fa693bf6e6d8",
-  "working_tree": "",
-  "worktrees": "/home/ubuntu/exper-tran           96a6d4fb [experiment/a100-precommercial-v7-targeted-50]\n/home/ubuntu/exper-tran-proxy18h  86e9440d [experiment/a100-precommercial-v7-proxy-study-18h]\n/home/ubuntu/exper-tran-v8        8806017b [experiment/a100-precommercial-v8-joint-selection-24h]",
-  "at": 1792559166.9132705,
+  "commit": "7679cd6474c53e44eda20969f890fa1b6f02c091",
+  "working_tree": "M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/README.md\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/geometry.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/protocol.yaml\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/resources.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/scheduler.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/selection.py\n M experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/combo_selection.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/ila_selection.py\n?? experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/tests/test_integrated_selection.py",
+  "worktrees": "/home/ubuntu/exper-tran           96a6d4fb [experiment/a100-precommercial-v7-targeted-50]\n/home/ubuntu/exper-tran-proxy18h  86e9440d [experiment/a100-precommercial-v7-proxy-study-18h]\n/home/ubuntu/exper-tran-v8        7679cd64 [experiment/a100-precommercial-v8-joint-selection-24h]",
+  "at": 1792559983.4463375,
   "hostname": "zfy-transferability",
   "python": "3.11.16 (main, Sep 24 2026, 17:56:40) [Clang 22.1.3 ]",
   "gpu": {
     "total": 80.0,
-    "used": 6.1259765625,
-    "free": 73.126953125,
-    "utilization": 78.0,
-    "processes": [
-      {
-        "pid": 405797,
-        "gib": 0.83203125
-      },
-      {
-        "pid": 406314,
-        "gib": 5.419921875
-      }
-    ],
-    "host_available": 91.58501434326172
+    "used": 0.0,
+    "free": 79.251953125,
+    "utilization": 0.0,
+    "processes": [],
+    "host_available": 113.9578628540039
   },
-  "disk_free_gib": 42.87246322631836,
+  "disk_free_gib": 42.8664436340332,
   "permanent_output": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h",
   "root_device": 64769,
   "output_device": 64769,

@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "diagnostic": "47668002deda2990ff2ed6906a5c50792404c4321a94dc0cffa3bdb9d298ae92",
+  "N": 2,
+  "taps": [
+    0,
+    15
+  ],
+  "artifacts": {
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/ila/d6e18f35d4f34baed7/smoke/c75cdb0aec1101b606/0/adv.png": "9d616bd77b158c03f2319d7b6cf035f1e31564f7b73f0303c8f5b5e3021dad5f",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/ila/d6e18f35d4f34baed7/smoke/c75cdb0aec1101b606/15/adv.png": "b5745f2b57958089ac47e9d64e0909fae10b21e0fee56bf5826add7ace2ea2d5",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/ila/d6e18f35d4f34baed7/smoke/3d2812b5292cc3de07/0/adv.png": "744e5698148354743f5298927a96bf1c2d4e15b095b6b30cf69c584cb8b318e6",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/ila/d6e18f35d4f34baed7/smoke/3d2812b5292cc3de07/15/adv.png": "7426063cca34c210e1f00611acf2ba0d44be584b46becb46d215aaed186530ad"
+  },
+  "formal_results": false
+}
