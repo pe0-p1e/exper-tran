@@ -1,0 +1,38 @@
+{
+  "version": "8.1",
+  "model_order": [
+    "CLIP ViT-L/14",
+    "Gemma 4 E2B-it",
+    "Qwen3.5-2B"
+  ],
+  "family": "internvl",
+  "validator": "InternVL3.5-8B-HF",
+  "layers": {
+    "CLIP ViT-L/14": [
+      11
+    ],
+    "Gemma 4 E2B-it": [
+      15
+    ],
+    "Qwen3.5-2B": [
+      14
+    ]
+  },
+  "split": "screen",
+  "steps": 50,
+  "seed": 42,
+  "epsilon": 0.06274509803921569,
+  "alpha": 0.00392156862745098,
+  "momentum": 1.0,
+  "pull": 0.5,
+  "push": 0.5,
+  "DI": true,
+  "CLS": 0,
+  "patch": 0,
+  "parameter_dtype": "bfloat16",
+  "fusion": "equal_per_image_L1_proxy_gradient_mean",
+  "layer_reduction": "mean_before_proxy_normalization",
+  "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+  "id": "V8_428af3b1df2768be38",
+  "label": "integrated_FDA_joint_3"
+}
