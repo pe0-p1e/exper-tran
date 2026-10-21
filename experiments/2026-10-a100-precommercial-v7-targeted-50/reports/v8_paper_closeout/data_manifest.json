@@ -102,13 +102,13 @@
     },
     {
       "file": "numerical_receipts/part_0020.jsonl.gz",
-      "sha256": "61de9a5a137a0d912e2b19d6976c5a24fe407f68426fcd9946cacad1d629bb92",
+      "sha256": "21f52fedce5e966ae69c7f0124804946fdee188e536e4363739f606a1f9a6dc4",
       "records": 200
     },
     {
       "file": "numerical_receipts/part_0021.jsonl.gz",
-      "sha256": "e7afe2897517091fa2cb9bd30430cf11d9cbdbcd623c9725e64126b3b472eacc",
-      "records": 20
+      "sha256": "778f09bfed6a7834e4b542b297c2d39fc4bc922e4bd4954c65e1d0f11e21021d",
+      "records": 80
     }
   ],
   "all_available_attack_receipts": true,
