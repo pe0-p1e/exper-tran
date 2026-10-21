@@ -1,4 +1,13 @@
 condition,proxy,layer,target,N,CKA,RSA,sample_ids
+V8_4cea03db6ece4e7760,CLIP ViT-L/14,11,Gemma 4 E4B-it,480,0.7749412725387922,0.6792526509003407,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,CLIP ViT-L/14,14,Gemma 4 E4B-it,480,0.8630559303774635,0.7691310969819725,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,CLIP ViT-L/14,17,Gemma 4 E4B-it,480,0.8400826868641355,0.7116298898684359,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,Qwen3.5-2B,2,Gemma 4 E4B-it,480,0.2030734264477906,0.19412518155534086,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,Qwen3.5-2B,14,Gemma 4 E4B-it,480,0.37817648355558003,0.3923322427279563,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,Qwen3.5-2B,17,Gemma 4 E4B-it,480,0.5773331034404084,0.534557369936773,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,InternVL3.5-2B-HF,11,Gemma 4 E4B-it,480,0.6918395924144984,0.6206433135407393,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,InternVL3.5-2B-HF,14,Gemma 4 E4B-it,480,0.8128567747125429,0.6936511243628191,same ordered10classes x48reference IDs
+V8_4cea03db6ece4e7760,InternVL3.5-2B-HF,23,Gemma 4 E4B-it,480,0.8066580724235621,0.5969061208179081,same ordered10classes x48reference IDs
 V8_28e9f84feb52a78bb0,CLIP ViT-L/14,2,Gemma 4 E4B-it,480,0.4025570071637688,0.36677092554461144,same ordered10classes x48reference IDs
 V8_28e9f84feb52a78bb0,CLIP ViT-L/14,11,Gemma 4 E4B-it,480,0.7749412725387922,0.6792526509003407,same ordered10classes x48reference IDs
 V8_28e9f84feb52a78bb0,CLIP ViT-L/14,14,Gemma 4 E4B-it,480,0.8630559303774635,0.7691310969819725,same ordered10classes x48reference IDs
