@@ -79,6 +79,63 @@
         ],
         "source_prior": 8.894827404485351,
         "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "retained_beam": [
+          "V8_86e4b3b0e1d12be6c0",
+          "V8_3c54f30622a2b53f45"
+        ],
+        "selection": "actual held-out dev conditional gain and compute Pareto, parents retained; no union of singleton hits"
+      },
+      {
+        "size": 4,
+        "round": 2,
+        "parent": "V8_86e4b3b0e1d12be6c0",
+        "condition": "V8_7f5aa6de2c8463105d",
+        "added": [
+          "InternVL3.5-2B-HF",
+          14
+        ],
+        "source_prior": 102.61491807670554,
+        "shortlist_only": true
+      },
+      {
+        "size": 4,
+        "round": 2,
+        "parent": "V8_86e4b3b0e1d12be6c0",
+        "condition": "V8_6d8a06f6dc10f50cb4",
+        "added": [
+          "Gemma 4 E2B-it",
+          15
+        ],
+        "source_prior": 9.321194705360886,
+        "shortlist_only": true
+      },
+      {
+        "size": 2,
+        "round": 2,
+        "parent": "V8_3c54f30622a2b53f45",
+        "condition": "V8_a85360b524dc58ea31",
+        "added": [
+          "CLIP ViT-L/14",
+          21
+        ],
+        "source_prior": 56.55666263214343,
+        "shortlist_only": true
+      },
+      {
+        "size": 2,
+        "round": 2,
+        "parent": "V8_3c54f30622a2b53f45",
+        "condition": "V8_a8c091f1e3b726bc52",
+        "added": [
+          "InternVL3.5-2B-HF",
+          14
+        ],
+        "source_prior": 31.41498789333723,
+        "shortlist_only": true
       }
     ],
     "internvl": [
@@ -146,6 +203,15 @@
         ],
         "source_prior": 31.363174549061288,
         "shortlist_only": true
+      },
+      {
+        "size": 2,
+        "round": 1,
+        "retained_beam": [
+          "V8_0d00433d84e97401d8",
+          "V8_17a6425e9f26e6c2bf"
+        ],
+        "selection": "actual held-out dev conditional gain and compute Pareto, parents retained; no union of singleton hits"
       }
     ],
     "gemma4": [
