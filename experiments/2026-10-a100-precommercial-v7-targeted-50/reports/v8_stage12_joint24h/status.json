@@ -1,64 +1,64 @@
 {
-  "at": 1792568613.7622027,
+  "at": 1792569485.4034169,
   "state": "RUNNING",
   "stage": "INTEGRATED_METHOD_PILOT",
   "active": [
     {
-      "id": "V8_d14fbc42efc6654b0f_attack",
+      "id": "V8_20544de296e6a60852_attack",
       "mode": "attack",
-      "condition": "V8_d14fbc42efc6654b0f",
-      "reservation": 11.49662172794342,
+      "condition": "V8_20544de296e6a60852",
+      "reservation": 8.1125,
       "process_identity": {
-        "pid": 414515,
-        "start": "23559849",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_d14fbc42efc6654b0f_attack --attempt 0 ",
+        "pid": 416683,
+        "start": "23897043",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_20544de296e6a60852_attack --attempt 0 ",
         "state": "R"
       },
       "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_d14fbc42efc6654b0f_attack_0.log",
-      "started": 1792565737.864661,
-      "position_signature": "f4202715ee3ccf5a9fc774b563ac7d79d5d058bcbb76c414f8d9227f9a28a132",
-      "last_progress": 1792568606.8299587
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_20544de296e6a60852_attack_0.log",
+      "started": 1792569109.8028123,
+      "position_signature": "f02d8aa39fad5d31fdb2f1ff3fc1c966d460e2dfce528e25d4d77bf498027ef3",
+      "last_progress": 1792569473.2505617
     },
     {
-      "id": "V8_b51b11b92c54c41687_attack",
+      "id": "V8_b995b713d868291b86_attack",
       "mode": "attack",
-      "condition": "V8_b51b11b92c54c41687",
-      "reservation": 12.293119551613927,
+      "condition": "V8_b995b713d868291b86",
+      "reservation": 8.27197265625,
       "process_identity": {
-        "pid": 414808,
-        "start": "23612498",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_b51b11b92c54c41687_attack --attempt 0 ",
+        "pid": 416694,
+        "start": "23897057",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_b995b713d868291b86_attack --attempt 0 ",
         "state": "R"
       },
       "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_b51b11b92c54c41687_attack_0.log",
-      "started": 1792566264.3551345,
-      "position_signature": "0fa9b1b708b2b371d219da3182fd62454dfc0bc0a5dd98a093317ccb10460bed",
-      "last_progress": 1792568611.7261066
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_b995b713d868291b86_attack_0.log",
+      "started": 1792569109.941756,
+      "position_signature": "3e50c0d4e1418e6b51dc93ca043a826b834a7ddc039990409e01509d3b1f0153",
+      "last_progress": 1792569473.2506447
     }
   ],
   "failures": [],
   "gpu": {
     "total": 80.0,
-    "used": 3.6611328125,
-    "free": 75.591796875,
-    "utilization": 64.0,
+    "used": 10.3623046875,
+    "free": 68.890625,
+    "utilization": 99.0,
     "processes": [
       {
-        "pid": 414515,
-        "gib": 2.12109375
+        "pid": 416683,
+        "gib": 4.931640625
       },
       {
-        "pid": 414808,
-        "gib": 0.638671875
+        "pid": 416694,
+        "gib": 5.419921875
       }
     ],
-    "host_available": 74.7713623046875
+    "host_available": 93.7852668762207
   },
-  "remaining_hours": 10.919248023231825,
-  "conditions_admitted": 148,
-  "completed_jobs": 301,
+  "remaining_hours": 10.677125463750627,
+  "conditions_admitted": 150,
+  "completed_jobs": 305,
   "max_workers": 6,
   "method_frozen": false,
   "stage2": {}
