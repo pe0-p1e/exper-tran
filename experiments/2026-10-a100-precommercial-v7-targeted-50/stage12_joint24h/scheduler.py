@@ -2,6 +2,7 @@
 from common import *
 import argparse,subprocess,signal,traceback,random
 from resources import telemetry,estimate,admit,failure_kind
+from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2
 STOP=False
 
 def fair_pending(primary,background,active,legacy_ids):
@@ -148,10 +149,12 @@ def main():
      own_signal(j,signal.SIGKILL)
      atomic(ROOT/'attempts'/j['id']/str(j['attempt'])/'exit.json',dict(status='FAILED',kind='timeout',reason='stale heartbeat or stalled progress'))
   if STOP:
+   stop_stage2()
    s['state']='STOPPING'
    for j in s['active']:own_signal(j,signal.SIGTERM)
    state_write(s);return 75
   if time.time()>deadline-3600:
+   stop_stage2()
    for j in s['active']:own_signal(j,signal.SIGTERM)
    s['state']='PARTIAL_DEADLINE';state_write(s);break
   calibrations=[c for c in smokes if not (ROOT/'calibration'/(c['id']+'.json')).exists()]
@@ -169,14 +172,20 @@ def main():
     mode='ila_smoke' if phase=='ILA_DIAGNOSTIC_SMOKE' else 'ila' if phase=='ILA_SOURCE_DIAGNOSTIC' else 'evaluate' if attack_done(c) else 'attack';pending.append((c,mode))
    legacy=original_pair_controls();legacy_ids={c['id'] for c in legacy}
    background=[(c,'evaluate' if attack_done(c) else 'attack') for c in legacy if not eval_done(c)]
+   paper,paper_ready=research_pending(phase)
+   paper_background=[(c,'evaluate' if attack_done(c) else 'attack') for c in paper if not eval_done(c)]
+   background+=paper_background
+   s['paper_research']=dict(pending=len(paper_background),complete=paper_ready,blocked=read(ROOT/'stage1_methods/blocked.json'))
    # Prioritize evaluation to release adaptive search prerequisites.
    pending.sort(key=lambda x:x[1]!='evaluate');background.sort(key=lambda x:x[1]!='evaluate')
-   pending=fair_pending(pending,background,s['active'],legacy_ids)
+   pending=fair_pending(pending,background,s['active'],legacy_ids|{c['id'] for c in paper})
    s['parallel_queues']=dict(primary_stage=phase,original_pairs_completed=sum(eval_done(c) for c in legacy),original_pairs_total=len(legacy),remaining_background=len(background))
-   if phase=='STAGE1_COMPLETE' and background:phase='PARALLEL_PAIR_COMPLETION'
    if phase=='STAGE1_COMPLETE':
-    if s['active']:time.sleep(3);continue
-    ok=run_stage2(s,deadline);s['state']='COMPLETE' if ok and not s['blocked'] else 'PARTIAL_OR_BLOCKED';state_write(s);break
+    commercial=stage2_progress(deadline);s['commercial_state']=commercial
+    if commercial!='RUNNING' and not pending and not s['active']:
+     s['state']='COMPLETE' if commercial=='COMPLETE' and paper_ready and not s['blocked'] else 'PARTIAL_OR_BLOCKED';state_write(s);break
+    phase='STAGE2_AND_STAGE1_RESEARCH'
+    state_write(s)
    if time.time()>deadline-6*3600 and not (ROOT/'method_lock.json').exists():
     if s['active']:
      # Finish in-flight microbatches; no new low-priority search admitted.
@@ -189,6 +198,8 @@ def main():
    launch(s,c,mode)
   # A dead code branch stays explicit; independent pending conditions are attempted first.
   available=[(c,m) for c,m in pending if c['id']+'_'+m not in s['blocked']]
+  if not available and not s['active'] and s.get('commercial_state')=='RUNNING':
+   time.sleep(3);continue
   if not available and not s['active']:
    s['state']='BLOCKED_REQUIRES_INTERVENTION';state_write(s);break
   if time.time()-last_report>60:

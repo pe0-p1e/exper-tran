@@ -208,15 +208,12 @@ def report():
     C.atomic(OUT/'results.json',dict(rows=rows,paired=paired,missing_are_zero=False,full_ablation_stage=3))
     return dict(conditions=len(rows),complete=sum(x['status']=='COMPLETE' for x in rows),status=C.read(OUT/'status.json',{}))
 def integration_text(source):
-    before=" if allc:return 'INTEGRATED_METHOD_PILOT',list({c['id']:c for c in allc}.values())\n"
-    after=before+" from stage1_methods.planner import plan_next as literature_plan, nominees as literature_nominees\n literature_phase,literature_tasks=literature_plan(g)\n if literature_phase!='READY':return literature_phase,literature_tasks\n"
-    frontier="frontier=pareto_beam(screen[fam],2)"
-    if source.count(before)!=1 or source.count(frontier)!=1:raise RuntimeError('Owner source changed; inspect integration rather than blind patch')
-    return source.replace(before,after).replace(frontier,"frontier=pareto_beam(screen[fam]+literature_nominees(fam),2)")
+    from stage1_methods.activate_parallel import patch_source
+    return patch_source(source)
 def prepare():
     import difflib
-    source=(C.HERE/'combo_selection.py').read_text();patched=integration_text(source);compile(patched,'prepared_owner','exec')
-    patch=''.join(difflib.unified_diff(source.splitlines(True),patched.splitlines(True),fromfile='a/'+str((C.HERE/'combo_selection.py').relative_to(C.REPO)),tofile='b/'+str((C.HERE/'combo_selection.py').relative_to(C.REPO))))
+    source=(C.HERE/'scheduler.py').read_text();patched=integration_text(source);compile(patched,'prepared_owner','exec')
+    patch=''.join(difflib.unified_diff(source.splitlines(True),patched.splitlines(True),fromfile='a/'+str((C.HERE/'scheduler.py').relative_to(C.REPO)),tofile='b/'+str((C.HERE/'scheduler.py').relative_to(C.REPO))))
     OUT.mkdir(parents=True,exist_ok=True);(OUT/'owner_integration.patch').write_text(patch)
     C.atomic(OUT/'preparation.json',dict(status='PREPARED_NOT_ACTIVATED',protocol=C.sha(POLICY),
        active_source_unchanged=True,patch=str(OUT/'owner_integration.patch'),

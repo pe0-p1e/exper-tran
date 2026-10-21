@@ -44,13 +44,17 @@ class MethodTests(unittest.TestCase):
   with patch.object(P,'condition',side_effect=lambda f,us,l:dict(id=str(us),layers={n:[x for nn,x in us if nn==n] for n,_ in us})),patch.object(P,'register',side_effect=reg):
    pending,_,_=P.fda_model('qwen',P.C.V)
   self.assertEqual(len(pending),6)
- def test_owner_patch_blocks_freeze_and_includes_nominees(self):
-  source=(P.C.HERE/'combo_selection.py').read_text();new=P.integration_text(source)
-  self.assertLess(new.index('literature_plan(g)'),new.index("freeze(ROOT/'method_lock.json'"))
-  self.assertIn('screen[fam]+literature_nominees(fam)',new)
+ def test_owner_patch_allows_primary_confirmation_and_parallel_research(self):
+  source=(P.C.HERE/'scheduler.py').read_text();new=P.integration_text(source)
+  self.assertIn('paper,paper_ready=research_pending(phase)',new)
+  self.assertIn('commercial=stage2_progress(deadline)',new)
+  self.assertNotIn('literature_plan(g)',new)
   compile(new,'prepared_owner','exec')
  def test_owner_patch_fails_closed_if_api_changed(self):
   with self.assertRaises(RuntimeError):P.integration_text('unexpected source')
+ def test_owner_patch_is_idempotent(self):
+  source=(P.C.HERE/'scheduler.py').read_text();new=P.integration_text(source)
+  self.assertEqual(P.integration_text(new),new)
  def test_report_never_counts_partial_as_complete(self):
   with tempfile.TemporaryDirectory() as d,patch.object(P,'OUT',Path(d)):
    P.C.atomic(Path(d)/'registry.json',{'x':dict(condition=dict(id='x',family='qwen',layers={P.C.V:[0]}),methods=['test'])})
@@ -58,10 +62,10 @@ class MethodTests(unittest.TestCase):
    self.assertEqual(r['complete'],0)
    self.assertIsNone(P.C.read(Path(d)/'results.json')['rows'][0]['score'])
  def test_preparation_does_not_mutate_active_owner(self):
-  before=P.C.sha(P.C.HERE/'combo_selection.py')
+  before=P.C.sha(P.C.HERE/'scheduler.py')
   with tempfile.TemporaryDirectory() as d,patch.object(P,'OUT',Path(d)):
    r=P.prepare();self.assertEqual(r['status'],'PREPARED_NOT_ACTIVATED')
-  self.assertEqual(before,P.C.sha(P.C.HERE/'combo_selection.py'))
+  self.assertEqual(before,P.C.sha(P.C.HERE/'scheduler.py'))
 if __name__=='__main__':unittest.main()
 
 class IntegrationTests(unittest.TestCase):
@@ -115,3 +119,39 @@ class IntegrationTests(unittest.TestCase):
    reg=P.C.read(out/'registry.json');methods={m for e in reg.values() for m in e['methods']}
    self.assertTrue({'FDA_conditional_2','FDA_conditional_4','proxy_fixed_layers','PRAF_and_independent','weak_pair_control','joint_greedy_beam'}<=methods)
    self.assertFalse((root/'method_lock.json').exists())
+
+class ParallelTests(unittest.TestCase):
+ def test_research_not_started_during_original_pilot(self):
+  from stage1_methods import parallel_owner as A
+  with tempfile.TemporaryDirectory() as d,patch.object(A.C,'ROOT',Path(d)):
+   with patch.object(A.P,'plan_next',side_effect=AssertionError('must not plan yet')):
+    self.assertEqual(A.research_pending('INTEGRATED_METHOD_PILOT'),([],False))
+ def test_ambiguous_commercial_driver_exit_does_not_retry(self):
+  from stage1_methods import parallel_owner as A
+  with tempfile.TemporaryDirectory() as d,patch.object(A.C,'ROOT',Path(d)):
+   A.C.atomic(Path(d)/'stage2/parallel_driver.json',dict(identity={'pid':0}))
+   with patch.object(A.C,'same_process',return_value=False),patch.object(A.subprocess,'Popen',side_effect=AssertionError('no retry')):
+    self.assertEqual(A.stage2_progress(0),'BLOCKED')
+ def test_controller_restart_adopts_commercial_child(self):
+  from stage1_methods import parallel_owner as A
+  with tempfile.TemporaryDirectory() as d,patch.object(A.C,'ROOT',Path(d)):
+   A.C.atomic(Path(d)/'stage2/parallel_driver.json',dict(identity={'pid':0}))
+   with patch.object(A.C,'same_process',return_value=True),patch.object(A.subprocess,'Popen',side_effect=AssertionError('no duplicate')):
+    self.assertEqual(A.stage2_progress(0),'RUNNING')
+ def test_research_failure_is_quarantined(self):
+  from stage1_methods import parallel_owner as A
+  with tempfile.TemporaryDirectory() as d,patch.object(A.C,'ROOT',Path(d)),patch.object(A.P,'OUT',Path(d)/'stage1_methods'):
+   with patch.object(P.J,'source_geometry',side_effect=RuntimeError('test resource/cache error')):
+    self.assertEqual(A.research_pending('INTEGRATED_EXPLORE30'),([],False))
+   self.assertTrue(A.C.read(Path(d)/'stage1_methods/blocked.json')['primary_unaffected'])
+
+class DriverIsolationTests(unittest.TestCase):
+ def test_fake_commercial_driver_does_not_overwrite_GPU_owner_state(self):
+  from stage1_methods import stage2_driver as D
+  with tempfile.TemporaryDirectory() as d,patch.object(D.C,'ROOT',Path(d)),patch.object(D.C,'check_lock',return_value={}):
+   root=Path(d);D.C.atomic(root/'scheduler.json',dict(owner='GPU',phase='paper'))
+   def fake(s,deadline):D.S.state_write(dict(phase='STAGE2',active=[]));return True
+   with patch.object(D.sys,'argv',['driver','--deadline','9999999999']),patch.object(D.S,'run_stage2',side_effect=fake),patch.object(D.S,'state_write'),patch.object(D.signal,'signal'):
+    self.assertEqual(D.main(),0)
+   self.assertEqual(D.C.read(root/'scheduler.json'),dict(owner='GPU',phase='paper'))
+   self.assertEqual(D.C.read(root/'stage2/parallel_driver_result.json')['status'],'COMPLETE')

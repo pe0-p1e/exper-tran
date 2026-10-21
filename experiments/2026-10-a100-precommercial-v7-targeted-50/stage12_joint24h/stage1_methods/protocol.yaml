@@ -1,5 +1,5 @@
 version: stage1_literature_methods_v1
-mode: prepared_not_activated
+mode: activated_parallel_after_primary_layer_search
 primary_objective: frozen_1_to_1_pure_pull_push
 selection_data: screen10_then_explore30_no_confirmation_feedback
 final_targets_for_selection: false
@@ -40,4 +40,6 @@ owner:
   new_scheduler: false
   max_workers: 6
   activate_only_with_tested_source_lock_amendment: true
-  no_stage2_before_required_methods_complete: true
+  no_stage2_before_required_methods_complete: false
+  primary_confirmation_and_commercial_do_not_wait_for_supplement: true
+  supplement_cannot_rewrite_frozen_primary: true
