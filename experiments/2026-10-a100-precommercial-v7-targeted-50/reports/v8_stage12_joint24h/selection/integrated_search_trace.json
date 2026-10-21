@@ -402,6 +402,15 @@
         ],
         "source_prior": 23.499614256178806,
         "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 3,
+        "retained_beam": [
+          "V8_b995b713d868291b86",
+          "V8_20544de296e6a60852"
+        ],
+        "selection": "actual held-out dev conditional gain and compute Pareto, parents retained; no union of singleton hits"
       }
     ]
   },
