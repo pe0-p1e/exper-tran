@@ -22,11 +22,14 @@ def research_pending(phase):
         from stage1_methods.fixed_four import plan as fixed_four_plan
         four_conditions,four_ready=fixed_four_plan()
         from stage1_methods.balanced_layers import plan as three_proxy_plan
+        from stage1_methods.selected_confirmation import plan as selected_plan,report as selected_report
         g=J.source_geometry()
         balanced_conditions,balanced_ready=three_proxy_plan(g)
         status,conditions=P.plan_next(g)
+        selected_conditions,selected_ready=selected_plan()
+        selected_report()
         P.report()
-        return list({c['id']:c for c in balanced_conditions+four_conditions+conditions}.values()),status=='READY' and four_ready and balanced_ready
+        return list({c['id']:c for c in selected_conditions+balanced_conditions+four_conditions+conditions}.values()),status=='READY' and four_ready and balanced_ready and selected_ready
     except Exception as e:
         # Supplemental research failure cannot stop frozen primary confirmation/CLI.
         import traceback

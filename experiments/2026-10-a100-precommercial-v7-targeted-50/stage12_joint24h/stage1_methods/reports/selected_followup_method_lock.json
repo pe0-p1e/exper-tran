@@ -1,0 +1,303 @@
+{
+  "version": "selected_followup_v1",
+  "families": {
+    "qwen": {
+      "selected": {
+        "version": "8.1",
+        "model_order": [
+          "CLIP ViT-L/14",
+          "InternVL3.5-2B-HF",
+          "Gemma 4 E2B-it"
+        ],
+        "family": "qwen",
+        "validator": "Qwen3.5-9B",
+        "layers": {
+          "CLIP ViT-L/14": [
+            11,
+            14,
+            17
+          ],
+          "InternVL3.5-2B-HF": [
+            14,
+            17,
+            23
+          ],
+          "Gemma 4 E2B-it": [
+            1,
+            11,
+            15
+          ]
+        },
+        "split": "confirm",
+        "steps": 50,
+        "seed": 42,
+        "epsilon": 0.06274509803921569,
+        "alpha": 0.00392156862745098,
+        "momentum": 1.0,
+        "pull": 0.5,
+        "push": 0.5,
+        "DI": true,
+        "CLS": 0,
+        "patch": 0,
+        "parameter_dtype": "bfloat16",
+        "fusion": "equal_per_image_L1_proxy_gradient_mean",
+        "layer_reduction": "mean_before_proxy_normalization",
+        "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+        "id": "V8_a01e6084f00a9ced18",
+        "label": "selected_followup50"
+      },
+      "uniform": {
+        "version": "8.1",
+        "model_order": [
+          "CLIP ViT-L/14",
+          "InternVL3.5-2B-HF",
+          "Gemma 4 E2B-it"
+        ],
+        "family": "qwen",
+        "validator": "Qwen3.5-9B",
+        "layers": {
+          "CLIP ViT-L/14": [
+            5,
+            11,
+            17,
+            23
+          ],
+          "InternVL3.5-2B-HF": [
+            5,
+            11,
+            17,
+            23
+          ],
+          "Gemma 4 E2B-it": [
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        "split": "confirm",
+        "steps": 50,
+        "seed": 42,
+        "epsilon": 0.06274509803921569,
+        "alpha": 0.00392156862745098,
+        "momentum": 1.0,
+        "pull": 0.5,
+        "push": 0.5,
+        "DI": true,
+        "CLS": 0,
+        "patch": 0,
+        "parameter_dtype": "bfloat16",
+        "fusion": "equal_per_image_L1_proxy_gradient_mean",
+        "layer_reduction": "mean_before_proxy_normalization",
+        "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+        "id": "V8_42ca03dbca8663268e",
+        "label": "uniform"
+      },
+      "development_condition": "V8_4afc7e51152fdd7e5d",
+      "development_hits": 28,
+      "development_N": 30,
+      "evaluation_sha256": "94ed9c32252a5787abc6ec88489da9f3cbec0ea28aa93df9b0d2c3182367766a"
+    },
+    "internvl": {
+      "selected": {
+        "version": "8.1",
+        "model_order": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "Gemma 4 E2B-it"
+        ],
+        "family": "internvl",
+        "validator": "InternVL3.5-8B-HF",
+        "layers": {
+          "CLIP ViT-L/14": [
+            11,
+            14,
+            17
+          ],
+          "Qwen3.5-2B": [
+            11,
+            14,
+            17
+          ],
+          "Gemma 4 E2B-it": [
+            1,
+            11,
+            15
+          ]
+        },
+        "split": "confirm",
+        "steps": 50,
+        "seed": 42,
+        "epsilon": 0.06274509803921569,
+        "alpha": 0.00392156862745098,
+        "momentum": 1.0,
+        "pull": 0.5,
+        "push": 0.5,
+        "DI": true,
+        "CLS": 0,
+        "patch": 0,
+        "parameter_dtype": "bfloat16",
+        "fusion": "equal_per_image_L1_proxy_gradient_mean",
+        "layer_reduction": "mean_before_proxy_normalization",
+        "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+        "id": "V8_06f180598f1edc508a",
+        "label": "selected_followup50"
+      },
+      "uniform": {
+        "version": "8.1",
+        "model_order": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "Gemma 4 E2B-it"
+        ],
+        "family": "internvl",
+        "validator": "InternVL3.5-8B-HF",
+        "layers": {
+          "CLIP ViT-L/14": [
+            5,
+            11,
+            17,
+            23
+          ],
+          "Qwen3.5-2B": [
+            5,
+            11,
+            17,
+            23
+          ],
+          "Gemma 4 E2B-it": [
+            3,
+            7,
+            11,
+            15
+          ]
+        },
+        "split": "confirm",
+        "steps": 50,
+        "seed": 42,
+        "epsilon": 0.06274509803921569,
+        "alpha": 0.00392156862745098,
+        "momentum": 1.0,
+        "pull": 0.5,
+        "push": 0.5,
+        "DI": true,
+        "CLS": 0,
+        "patch": 0,
+        "parameter_dtype": "bfloat16",
+        "fusion": "equal_per_image_L1_proxy_gradient_mean",
+        "layer_reduction": "mean_before_proxy_normalization",
+        "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+        "id": "V8_e2a6cdc023f8a7224c",
+        "label": "uniform"
+      },
+      "development_condition": "V8_a18ff03631bd437363",
+      "development_hits": 29,
+      "development_N": 30,
+      "evaluation_sha256": "6b32ccdafd7e3ea5281dc3598a67f3bcbd21ba73996f207ebd13d61a059d686d"
+    },
+    "gemma4": {
+      "selected": {
+        "version": "8.1",
+        "model_order": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "family": "gemma4",
+        "validator": "Gemma 4 E4B-it",
+        "layers": {
+          "CLIP ViT-L/14": [
+            11,
+            14
+          ],
+          "Qwen3.5-2B": [
+            11,
+            17
+          ],
+          "InternVL3.5-2B-HF": [
+            14,
+            23
+          ]
+        },
+        "split": "confirm",
+        "steps": 50,
+        "seed": 42,
+        "epsilon": 0.06274509803921569,
+        "alpha": 0.00392156862745098,
+        "momentum": 1.0,
+        "pull": 0.5,
+        "push": 0.5,
+        "DI": true,
+        "CLS": 0,
+        "patch": 0,
+        "parameter_dtype": "bfloat16",
+        "fusion": "equal_per_image_L1_proxy_gradient_mean",
+        "layer_reduction": "mean_before_proxy_normalization",
+        "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+        "id": "V8_dc7cdaf8293ce30718",
+        "label": "selected_followup50"
+      },
+      "uniform": {
+        "version": "8.1",
+        "model_order": [
+          "CLIP ViT-L/14",
+          "Qwen3.5-2B",
+          "InternVL3.5-2B-HF"
+        ],
+        "family": "gemma4",
+        "validator": "Gemma 4 E4B-it",
+        "layers": {
+          "CLIP ViT-L/14": [
+            5,
+            11,
+            17,
+            23
+          ],
+          "Qwen3.5-2B": [
+            5,
+            11,
+            17,
+            23
+          ],
+          "InternVL3.5-2B-HF": [
+            5,
+            11,
+            17,
+            23
+          ]
+        },
+        "split": "confirm",
+        "steps": 50,
+        "seed": 42,
+        "epsilon": 0.06274509803921569,
+        "alpha": 0.00392156862745098,
+        "momentum": 1.0,
+        "pull": 0.5,
+        "push": 0.5,
+        "DI": true,
+        "CLS": 0,
+        "patch": 0,
+        "parameter_dtype": "bfloat16",
+        "fusion": "equal_per_image_L1_proxy_gradient_mean",
+        "layer_reduction": "mean_before_proxy_normalization",
+        "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+        "id": "V8_70d0a64f5ccad08e83",
+        "label": "uniform"
+      },
+      "development_condition": "V8_c7ed4d9c9a6e0fb868",
+      "development_hits": 28,
+      "development_N": 30,
+      "evaluation_sha256": "491ee3a85f43ce56d2be1339f3457decf572911da86c55b3915e2dec8de85b14"
+    }
+  },
+  "cohort_sha256": "0bd56026d80f7c6926409d31cd70078c15310b357b65e32d88a84be61473fc68",
+  "selection_rule": "development30_hits_then_fewer_native_taps_then_stable_condition_id",
+  "original_method_lock_sha256": "795a87ad589009a7326c9ada18dccb7251a40bf1b536c0a92d4403ba68e772ee",
+  "registry_sha256": "fde996cedf64bdce996a0e5968bdad3950ecc1c4bc7837af4f748c301b821616",
+  "selected_before_additional_confirmation": true,
+  "selection_feedback": "development30_only",
+  "cohort_disclosure": "Same confirmation50, original Uniform already evaluated; not a new untouched dataset",
+  "final150_sealed": true,
+  "original_commercial_unchanged": true,
+  "no_additional_commercial_calls": true
+}

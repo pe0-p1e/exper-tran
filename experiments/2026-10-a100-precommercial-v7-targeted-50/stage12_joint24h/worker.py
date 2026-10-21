@@ -5,7 +5,7 @@ STOP=False
 
 def main():
  global STOP
- ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','evaluate30','calibrate','calibrate_resident','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','evaluate30','calibrate','calibrate_resident','ila','ila_smoke']+list(LARGE_EVAL_MODES));ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
  check_lock();job=read(ROOT/'jobs'/(a.job+'.json'));c=job['condition'];legal(c['layers'],c['validator'])
  os.environ['V8_JOB_ID']=a.job;os.environ['V8_ATTEMPT']=a.attempt
  dest=ROOT/'attempts'/a.job/a.attempt;dest.mkdir(parents=True,exist_ok=True)
@@ -39,6 +39,9 @@ def main():
   if a.mode in ['ila','ila_smoke']:
    from ila_selection import run
    run(c,position,lambda:STOP,smoke_only=a.mode=='ila_smoke')
+  elif a.mode in LARGE_EVAL_MODES:
+   from stage1_methods.selected_confirmation import validate
+   validate(c,a.mode);evaluate(c,position,large_mode=a.mode)
   elif a.mode in ['evaluate','evaluate30']:evaluate(c,position,limit=30 if a.mode=='evaluate30' else None)
   else:attack(c,position,calibrate='resident_v2' if a.mode=='calibrate_resident' else a.mode=='calibrate')
   atomic(dest/'exit.json',dict(status='STOPPED' if STOP else 'COMPLETE',at=time.time()))
@@ -230,7 +233,7 @@ def attack(c,position,calibrate=False):
  finally:
   for m in models:m.close()
 
-def evaluate(c,position,limit=None):
+def evaluate(c,position,limit=None,large_mode=None):
  import torch,yaml
  from primary_ml_cka.models.backends.transformers_backend import load_processor
  from primary_ml_cka.models.backends.target_transformers_generation import load_target_for_generation
@@ -242,7 +245,9 @@ def evaluate(c,position,limit=None):
  from v7_common import V6
  from common import REG
  from common import legal
- legal(c['layers'],c['validator'])
+ name=LARGE_EVAL_MODES[large_mode] if large_mode else c['validator']
+ legal(c['layers'],name)
+ began=time.time();torch.cuda.reset_peak_memory_stats()
  if limit==30:
   from stage1_methods.early_confirm import frozen,cases,path as early_path
   if not frozen(c,30):raise RuntimeError('Early evaluation requires frozen method and all30 valid PNGs')
@@ -250,21 +255,24 @@ def evaluate(c,position,limit=None):
  else:
   if not attack_done(c):raise RuntimeError('Evaluation before complete freeze')
   evaluation_cases=cohort(c['split'])['images'];result_path=eval_path(c)
+ if large_mode:
+  from stage1_methods.selected_confirmation import large_path
+  result_path=large_path(c,large_mode)
  from common import rows as unused
  # Canonical prompt and parser exactly reused from the existing evaluator.
  import importlib.util
  spec=importlib.util.spec_from_file_location('v5_prompt_common',EXP.parent/'2026-09-a100-final-v5/src/common.py')
  module=importlib.util.module_from_spec(spec);sys.modules[spec.name]=module;spec.loader.exec_module(module)
  prompt=module.classification_prompt(yaml.safe_load((V6/'config/runner_template.yaml').read_text()))
- name=c['validator'];s=REG[name];MODEL_REVISIONS[s['repo_id']]=s['revision']
+ s=REG[name];MODEL_REVISIONS[s['repo_id']]=s['revision']
  with (ROOT/'model_initialization.lock').open('a') as h:
   fcntl.flock(h,fcntl.LOCK_EX);snapshot=local_snapshot(Path(os.environ['HF_HOME']),s['repo_id'],s['revision']);processor=load_processor(snapshot)
   model=load_target_for_generation(snapshot,torch.device('cuda'),precision='bf16')
-  audit_loaded_model(model,model_name=name,revision=s['revision'],role='v8_held_out_dev_validator',repo_id=s['repo_id'],output_dir=ROOT)
+  audit_loaded_model(model,model_name=name,revision=s['revision'],role='v8_frozen_large_target' if large_mode else 'v8_held_out_dev_validator',repo_id=s['repo_id'],output_dir=ROOT)
  gen=TransformersTargetGenerator(model,processor);result=[]
  for ix,r in enumerate(evaluation_cases):
   if STOP:break
-  position.update(image=ix,phase='validation');receipt=read(image_receipt(c,r['image_id']));dest=ROOT/'validation_images'/c['id']/(digest(r['image_id'])[:18]+'.json')
+  position.update(image=ix,phase='validation');receipt=read(image_receipt(c,r['image_id']));dest=(ROOT/'large_validation_images'/name if large_mode else ROOT/'validation_images')/c['id']/(digest(r['image_id'])[:18]+'.json')
   if dest.exists():
    value=read(dest)
    if value['signature']!=digest([s,prompt,receipt['png_hashes']]):raise RuntimeError('Changed evaluation signature')
@@ -281,6 +289,6 @@ def evaluate(c,position,limit=None):
    atomic(dest,value)
   result.append(value)
  N=len(evaluation_cases);complete=len(result)==N
- atomic(result_path,dict(complete=complete,science=digest(scientific(c)),condition=c['id'],model=name,images=result,N=N,completed=len(result),hits=sum(r['target_hit'] for r in result),ASR=sum(r['target_hit'] for r in result)/N if complete else None,role='CONFIRMATION' if c['split']=='confirm' else 'USED_FOR_SELECTION',final_target_access=False))
+ atomic(result_path,dict(complete=complete,science=digest(scientific(c)),condition=c['id'],model=name,revision=s['revision'],images=result,N=N,completed=len(result),hits=sum(r['target_hit'] for r in result),ASR=sum(r['target_hit'] for r in result)/N if complete else None,role='FROZEN_LARGE_TARGET_CONFIRMATION' if large_mode else 'CONFIRMATION' if c['split']=='confirm' else 'USED_FOR_SELECTION',final_target_access=bool(large_mode),seconds=time.time()-began,peak_reserved_gib=torch.cuda.max_memory_reserved()/2**30))
  del gen,model,processor;torch.cuda.empty_cache()
 if __name__=='__main__':main()

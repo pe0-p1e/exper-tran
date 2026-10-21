@@ -26,6 +26,9 @@ def save_job(c,mode):
 
 def complete(j):
  c=read(ROOT/'jobs'/(j['id']+'.json'))['condition']
+ if j['mode'] in LARGE_EVAL_MODES:
+  from stage1_methods.selected_confirmation import large_done
+  return large_done(c,j['mode'])
  if j['mode']=='calibrate_resident':return (ROOT/'calibration_resident_v2'/(c['id']+'.json')).exists()
  if j['mode']=='evaluate30':
   from stage1_methods.early_confirm import done
@@ -63,7 +66,7 @@ def reconcile(s):
    from host_memory import snapshot
    h=snapshot(j['host_cgroup']);j['host_memory']=h
    c=read(ROOT/'jobs'/(j['id']+'.json'))['condition']
-   names=[c['validator']] if j['mode'] in ['evaluate','evaluate30'] else sorted(c['layers'])
+   names=[LARGE_EVAL_MODES.get(j['mode'],c['validator'])] if j['mode'] in ['evaluate','evaluate30'] or j['mode'] in LARGE_EVAL_MODES else sorted(c['layers'])
    peaks=read(ROOT/'host_memory_peaks.json',{});key=digest([j['mode'],sorted(names)])
    peaks[key]=max(peaks.get(key,0),h['peak_gib']);atomic(ROOT/'host_memory_peaks.json',peaks)
   if j.get('placement')=='full_gpu':
@@ -101,7 +104,10 @@ def launch(s,c,mode):
  # Recheck actual free memory immediately before admission.
  if not admit(telemetry(),s['active'],reservation,s['worker_limit'],startup_extra,host_reservation):return False
  if mode=='attack' and c['id'] not in s['admitted']:
-  if len(s['admitted'])>=270:s['blocked'].append(jid);return False
+  cap=read(ROOT/'execution_limits.json',{}).get('max_attack_conditions',270)
+  if type(cap)!=int or not 270<=cap<=300:raise RuntimeError('Invalid authorized bounded condition limit')
+  if len(s['admitted'])>=cap:
+   s['blocked'].append(jid);s.setdefault('blocked_reasons',{})[jid]=dict(kind='condition_limit',limit=cap);return False
   s['admitted'].append(c['id'])
  attempt=s['attempts'].get(jid,0);log=ROOT/'logs'/(jid+f'_{attempt}.log');log.parent.mkdir(parents=True,exist_ok=True)
  cmd=[sys.executable,str(HERE/'worker.py'),mode,'--job',jid,'--attempt',str(attempt)]
@@ -208,6 +214,11 @@ def main():
    if (ROOT/'method_lock.json').exists():s['commercial_state']=stage2_progress(deadline)
    paper,paper_ready=research_pending(phase)
    paper_background=[(c,'evaluate' if attack_done(c) else 'attack') for c in paper if not eval_done(c)]
+   if (ROOT/'selected_followup/method_lock.json').exists():
+    from stage1_methods.selected_confirmation import large_pending
+    large_jobs=large_pending()
+    paper_background+=large_jobs
+    paper_ready=paper_ready and not large_jobs
    background+=paper_background
    s['paper_research']=dict(pending=len(paper_background),complete=paper_ready,blocked=read(ROOT/'stage1_methods/blocked.json'))
    # Prioritize evaluation to release adaptive search prerequisites.

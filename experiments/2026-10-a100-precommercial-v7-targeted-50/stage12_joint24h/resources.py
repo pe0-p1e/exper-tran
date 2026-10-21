@@ -16,18 +16,28 @@ def telemetry():
 
 def host_estimate(c,mode):
  # Parameter bytes are actual audited full BF16 checkpoints, including unused CPU language weights.
- names=[c['validator']] if mode in ['evaluate','evaluate30'] else list(c['layers'])
+ names=[LARGE_EVAL_MODES.get(mode,c['validator'])] if mode in ['evaluate','evaluate30'] or mode in LARGE_EVAL_MODES else list(c['layers'])
  audit=read(ROOT/'audits/model_dtype_audit.json',[]);weights={}
  for a in audit:
   if a.get('all_floating_parameters_bf16') and a.get('revision')==REG.get(a['model_name'],{}).get('revision'):
    weights[a['model_name']]=sum(a['parameter_bytes_by_dtype'].values())/2**30
  missing=set(names)-weights.keys()
- if missing:raise RuntimeError('Host RAM calibration missing audited model bytes: '+str(sorted(missing)))
+ for name in missing:
+  if mode not in LARGE_EVAL_MODES:raise RuntimeError('Host RAM calibration missing audited model bytes: '+name)
+  weights[name]=checkpoint_gib(name)
  # Full-parameter loader/offload peak + framework/cache allowance. Never shrink parameters to fit.
  baseline=sum(weights[n] for n in names)*1.15+3
  history=read(ROOT/'host_memory_peaks.json',{})
  observed=history.get(digest([mode,sorted(names)]),0)
  return max(6.,baseline,observed*1.15+1)
+
+def checkpoint_gib(name):
+ s=REG[name];p=MAIN/'.hf-cache/hub'/('models--'+s['repo_id'].replace('/','--'))/'snapshots'/s['revision']/'model.safetensors.index.json'
+ d=read(p)
+ if not d:raise RuntimeError('Missing pinned checkpoint index: '+name)
+ m=d['metadata'];size=max(m.get('total_size',0),m.get('total_parameters',0)*2)
+ if size<=0:raise RuntimeError('Missing checkpoint size evidence: '+name)
+ return size/2**30
 
 def full_gpu_reservation(c,base):
  audit=read(ROOT/'audits/model_dtype_audit.json',[]);weights={}
@@ -50,6 +60,7 @@ def host_admit(t,active,request):
  return caps+request<=t['host_total']-reserve and t['host_available']>=request+growth+reserve
 
 def estimate(c,mode):
+ if mode in LARGE_EVAL_MODES:return checkpoint_gib(LARGE_EVAL_MODES[mode])*1.1+4
  if mode in ['ila','ila_smoke']:return 20.0
  if mode=='attack':
   measured_profile=resident_profile(c)

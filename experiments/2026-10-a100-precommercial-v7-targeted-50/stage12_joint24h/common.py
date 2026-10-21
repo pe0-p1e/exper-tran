@@ -13,6 +13,7 @@ import proxy_study_protocol
 from supplement_registry import registry
 REG=registry()
 VALIDATORS={'qwen':'Qwen3.5-9B','internvl':'InternVL3.5-8B-HF','gemma4':'Gemma 4 E4B-it'}
+LARGE_EVAL_MODES={'evaluate_large_qwen':'Qwen3.5-27B','evaluate_large_internvl':'InternVL3.5-14B-HF','evaluate_large_gemma4':'Gemma 4 31B-it'}
 V='CLIP ViT-L/14';D='DINOv2-Large';Q='Qwen3.5-2B';I='InternVL3.5-2B-HF';G='Gemma 4 E2B-it'
 POOLS={'qwen':[V,I,G,D],'internvl':[V,Q,G,D],'gemma4':[V,Q,I,D]}
 TIDS=['T01','T03','T05','T07','T09']
