@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "pending": 4,
+  "pending": 3,
   "rows": [
     {
       "family": "qwen",
@@ -222,15 +222,25 @@
       "proxy_count": 3,
       "taps_per_proxy": 4,
       "total_taps": 12,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 26,
       "N": 30,
-      "ASR": null,
-      "directions": null,
-      "paired": null,
-      "seconds": null,
-      "backwards": null,
-      "peak_GiB": null
+      "ASR": 0.8666666666666667,
+      "directions": [
+        6,
+        5,
+        4,
+        6,
+        5
+      ],
+      "paired": {
+        "gained": 1,
+        "lost": 3,
+        "net": -2
+      },
+      "seconds": 603.017245054245,
+      "backwards": 4500,
+      "peak_GiB": 8.7578125
     },
     {
       "family": "internvl",
