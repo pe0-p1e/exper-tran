@@ -13,6 +13,7 @@ def telemetry():
  return dict(total=total/1024,used=used/1024,free=free/1024,utilization=util,processes=processes,host_available=mem['MemAvailable']/2**20)
 
 def estimate(c,mode):
+ if mode in ['ila','ila_smoke']:return 20.0
  import run_proxy_study as previous
  names=[c['validator']] if mode=='evaluate' else list(c['layers'])
  try:pred=previous.reservation(names,'evaluation' if mode=='evaluate' else 'attack',previous.weight_events())
@@ -30,7 +31,7 @@ def estimate(c,mode):
  return max(pred,measured*1.15+1.5)
 
 def admit(t,active,request,limit):
- if len(active)>=min(4,limit):return False
+ if len(active)>=min(6,limit):return False
  headroom=max(8,t['total']*.1)
  own={j['process_identity']['pid'] for j in active}
  measured_own=sum(p['gib'] for p in t['processes'] if p['pid'] in own)

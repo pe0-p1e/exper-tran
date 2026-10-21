@@ -30,6 +30,25 @@ def layer_conditions(fam):
  # Actual native blocks of each backbone, not a forced common layer identity.
  return [make(fam,{n:[l]},label='layer_single') for n in POOLS[fam][:3] for l in native(n,[.125,.25,.5,.625,.75,1.])]
 def plan_next(state):
+ # User 2026-10-21: method construction now, full component ablation in Stage3.
+ from combo_selection import plan_next as integrated
+ return integrated(state)
+
+def original_pair_controls():
+ # Finish the previously authorized 45 real pair controls alongside method pilots.
+ allc=[]
+ for fam in VALIDATORS:
+  lc=layer_conditions(fam)
+  if not all(eval_done(c) for c in lc):continue
+  pool=[]
+  from geometry import complement
+  for n in POOLS[fam][:3]:
+   singles=[c for c in lc if n in c['layers']];best=atoms(top(singles)[0])[0][1]
+   pool.extend([(n,best),(n,complement(n,best,[atoms(c)[0][1] for c in singles]))])
+  allc.extend(from_atoms(fam,p,'joint_pair') for p in itertools.combinations(pool,2))
+ return allc
+
+def plan_deferred_full_ablation(state):
  """Return stages in order. Reconstruct the same adaptive queue from immutable dev scores."""
  for phase in ['proxy','layers','pairs','joint3','joint4','layer_controls','explore','confirm']:
   allc=[];family_meta={}

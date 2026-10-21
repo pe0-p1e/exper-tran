@@ -2,9 +2,9 @@
 
 | Work | Relevant component | Current V8 relationship |
 |---|---|---|
-|[ILA,ICCV2019](https://arxiv.org/abs/1907.10823)|Baseline displacement projection and source disturbance-based layer heuristic|Background only; V8 does not reproduce displacement optimization|
+|[ILA,ICCV2019](https://arxiv.org/abs/1907.10823)|Baseline displacement projection and source disturbance-based layer heuristic|Implemented as separate source-only raw spatial-token projection/propagation diagnostic, all88 native taps of4 source backbones; frozen PP baseline,10 extra steps, explicit latest-interior-peak rule/NO_PEAK; adaptation, not faithful CNN benchmark reproduction|
 |[FDA+ms,ICLR2020](https://kevinjliang.github.io/files/Feature_Distribution_Attack.pdf)|Increase target feature-class probability, decrease source probability|Related pull/push idea; learned probabilities differ from cosine prototypes|
-|[FDA(N),NeurIPS2020](https://proceedings.neurips.cc/paper/2020/file/eefc7bfe8fd6e2c8c01aa6ca7b1aab1a-Paper.pdf)|Conditional greedy layer subsets, multi-layer distribution attack|Selection adaptation only; no auxiliary class heads or xent; supplementC leaves multi-model combination to future work|
+|[FDA(N),NeurIPS2020](https://proceedings.neurips.cc/paper/2020/file/eefc7bfe8fd6e2c8c01aa6ca7b1aab1a-Paper.pdf)|Conditional greedy layer subsets, multi-layer distribution attack|Bounded conditional real joint PP evaluation following source ILA/gradient/CKA screening; two Pareto beam states. No auxiliary heads/xent; full component ablations deferred to Stage3 by latest user instruction|
 |[FIA,ICCV2021](https://openaccess.thecvf.com/content/ICCV2021/html/Wang_Feature_Importance-Aware_Transferable_Adversarial_Attacks_ICCV_2021_paper.html)|Input-mask aggregated feature importance|No logit-derived feature weighting in V8|
 |[Gao,TMM2022](https://doi.org/10.1109/TMM.2021.3079723)|Push/Pull attentive features and class-centroid triplet loss|Close objective prior; exact full-paper comparison remains pending|
 |[AdaEA,ICCV2023](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_An_Adaptive_Model_Ensemble_Adversarial_Attack_for_Boosting_Adversarial_Transferability_ICCV_2023_paper.html)|Adaptive model contribution and update synchronization|Diagnostic inspiration; primary V8 equal fusion unchanged|

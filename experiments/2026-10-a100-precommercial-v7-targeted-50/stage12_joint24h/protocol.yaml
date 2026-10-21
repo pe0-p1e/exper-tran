@@ -3,7 +3,7 @@ study: stage12_joint24h
 steps: 50
 pull: 0.5
 push: 0.5
-max_workers: 4
+max_workers: 6
 max_candidates: 270
 beam_width: 2
 candidate_depths: [0.125, 0.25, 0.5, 0.625, 0.75, 1.0]
@@ -20,3 +20,11 @@ reserve_stage2_hours: 5
 reserve_report_hours: 1
 retries: 3
 paid_api_fallback: false
+# User override 2026-10-21: construct the integrated method first; full ablation Stage3.
+stage1_execution: integrated_method_pilot
+full_component_ablation_stage: 3
+ila_diagnostic_refinement_steps: 10
+ila_diagnostic_native_taps: all
+integrated_max_units: 4
+integrated_source_shortlist_per_parent: 2
+integrated_beam_width: 2

@@ -9,10 +9,13 @@ DEST=EXP/'reports/v8_stage12_joint24h'
 LOCK=MAIN/'outputs/a100_precommercial_v7_targeted50/proxy_composition_18h/publication.lock'
 PATTERNS=['study_lock.json','window.json','method_lock.json','status.json','manifests/*.json','conditions/*.json','calibration/*.json','fingerprints/*.json',
  'amendments/*.json','preflight/environment.json','preflight/controller_restart_test_*.json','reports/*.csv','reports/*.md','reports/*.png',
- 'reports/*.json','stage2/summary.json','stage2/blocker.json','stage2/pack_lock.json']
+ 'reports/*.json','ila/*/protocol.json','ila/*/selection.json','ila/*/complete.json','ila/*/smoke/smoke_pass.json',
+ 'selection_geometry/*.json','selection/*.json','stage2/summary.json','stage2/blocker.json','stage2/pack_lock.json']
 def publish():
  from analyze_v8_pairwise import generate
  generate(ROOT)
+ from analyze_v8_integrated import generate as integrated_report
+ integrated_report(ROOT)
  DEST.mkdir(parents=True,exist_ok=True)
  for pattern in PATTERNS:
   for path in ROOT.glob(pattern):

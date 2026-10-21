@@ -4,6 +4,17 @@ import argparse,subprocess,signal,traceback,random
 from resources import telemetry,estimate,admit,failure_kind
 STOP=False
 
+def fair_pending(primary,background,active,legacy_ids):
+ # Fair queue lanes, single admission owner; no second scheduler or forced parallelism.
+ queues=[list(primary),list(background)];counts=[sum(j['condition'] not in legacy_ids for j in active),sum(j['condition'] in legacy_ids for j in active)]
+ lane=0 if counts[0]<=counts[1] else 1;out=[];seen=set()
+ while queues[0] or queues[1]:
+  if not queues[lane]:lane=1-lane
+  c,mode=queues[lane].pop(0);key=(c['id'],mode)
+  if key not in seen:out.append((c,mode));seen.add(key)
+  lane=1-lane
+ return out
+
 def save_job(c,mode):
  legal(c['layers'],c['validator']);cid=c['id'];condition_path=ROOT/'conditions'/(cid+'.json')
  existing=read(condition_path)
@@ -14,6 +25,12 @@ def save_job(c,mode):
 
 def complete(j):
  c=read(ROOT/'jobs'/(j['id']+'.json'))['condition']
+ if j['mode']=='ila':
+  from ila_selection import done
+  return done(c)
+ if j['mode']=='ila_smoke':
+  from ila_selection import smoke_done
+  return smoke_done(c)
  return (ROOT/'calibration'/(c['id']+'.json')).exists() if j['mode']=='calibrate' else attack_done(c) if j['mode']=='attack' else eval_done(c)
 
 def state_write(s):
@@ -113,7 +130,7 @@ def main():
   from reports import generate
   generate();return 0 if ok else 2
  active_processes=[];last_report=0
- from selection import plan_next,uniform
+ from selection import plan_next,uniform,original_pair_controls
  smokes=[make(fam,uniform(POOLS[fam][:3]),split='smoke',label='smoke',smoke=True) for fam in VALIDATORS]
  while True:
   reconcile(s)
@@ -146,12 +163,17 @@ def main():
    if s['active']:time.sleep(3);continue
    s['state']='SMOKE_PASS';s['phase']='SMOKE';state_write(s);return 0
   else:
-   s['worker_limit']=min(4,max(s['worker_limit'],1+len(s['completed'])//3)) if not any(x['kind']=='oom' for x in s['failures']) else s['worker_limit']
+   s['worker_limit']=min(6,max(s['worker_limit'],1+len(s['completed'])//3)) if not any(x['kind']=='oom' for x in s['failures']) else s['worker_limit']
    phase,conditions=plan_next(s);pending=[]
    for c in conditions:
-    mode='evaluate' if attack_done(c) else 'attack';pending.append((c,mode))
+    mode='ila_smoke' if phase=='ILA_DIAGNOSTIC_SMOKE' else 'ila' if phase=='ILA_SOURCE_DIAGNOSTIC' else 'evaluate' if attack_done(c) else 'attack';pending.append((c,mode))
+   legacy=original_pair_controls();legacy_ids={c['id'] for c in legacy}
+   background=[(c,'evaluate' if attack_done(c) else 'attack') for c in legacy if not eval_done(c)]
    # Prioritize evaluation to release adaptive search prerequisites.
-   pending.sort(key=lambda x:x[1]!='evaluate')
+   pending.sort(key=lambda x:x[1]!='evaluate');background.sort(key=lambda x:x[1]!='evaluate')
+   pending=fair_pending(pending,background,s['active'],legacy_ids)
+   s['parallel_queues']=dict(primary_stage=phase,original_pairs_completed=sum(eval_done(c) for c in legacy),original_pairs_total=len(legacy),remaining_background=len(background))
+   if phase=='STAGE1_COMPLETE' and background:phase='PARALLEL_PAIR_COMPLETION'
    if phase=='STAGE1_COMPLETE':
     if s['active']:time.sleep(3);continue
     ok=run_stage2(s,deadline);s['state']='COMPLETE' if ok and not s['blocked'] else 'PARTIAL_OR_BLOCKED';state_write(s);break

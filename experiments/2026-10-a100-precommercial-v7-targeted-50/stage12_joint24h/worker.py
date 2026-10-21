@@ -5,7 +5,7 @@ STOP=False
 
 def main():
  global STOP
- ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','calibrate']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','calibrate','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
  check_lock();job=read(ROOT/'jobs'/(a.job+'.json'));c=job['condition'];legal(c['layers'],c['validator'])
  dest=ROOT/'attempts'/a.job/a.attempt;dest.mkdir(parents=True,exist_ok=True)
  def sig(*_):
@@ -31,7 +31,10 @@ def main():
    with (ROOT/'audit_writer.lock').open('a') as h:
     fcntl.flock(h,fcntl.LOCK_EX);kw['output_dir']=ROOT;return original(model,**kw)
   strict_model_audit.audit_loaded_model=audit;vision_features.audit_loaded_model=audit
-  if a.mode=='evaluate':evaluate(c,position)
+  if a.mode in ['ila','ila_smoke']:
+   from ila_selection import run
+   run(c,position,lambda:STOP,smoke_only=a.mode=='ila_smoke')
+  elif a.mode=='evaluate':evaluate(c,position)
   else:attack(c,position,calibrate=a.mode=='calibrate')
   atomic(dest/'exit.json',dict(status='STOPPED' if STOP else 'COMPLETE',at=time.time()))
  except BaseException as e:
@@ -67,7 +70,7 @@ def bank(m):
   with np.load(old/'reference_features.npz') as d:m.bank={l:(torch.from_numpy(d[f'z_{l}']).cuda(),None) for l in layers}
   return
  refs=[DATA/'manifests/class_references'/f'class_references_{i:02d}.jsonl' for i in range(1,11)]
- all_layers=native(m.name,[.125,.25,.5,.625,.75,1.]);key=digest([REG[m.name],all_layers,[sha(p) for p in refs],'v8_pooled_refs'])
+ all_layers=sorted(set(native(m.name,[.125,.25,.5,.625,.75,1.])+list(layers)));key=digest([REG[m.name],all_layers,[sha(p) for p in refs],'v8_pooled_refs'])
  path=ROOT/'cache/refs'/(key+'.npz');path.parent.mkdir(parents=True,exist_ok=True)
  with (path.with_suffix('.lock')).open('a') as h:
   fcntl.flock(h,fcntl.LOCK_EX)

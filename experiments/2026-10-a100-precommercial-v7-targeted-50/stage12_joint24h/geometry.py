@@ -12,7 +12,8 @@ def reference(n,l):
   if d.get('model')==n and d.get('revision')==REG[n]['revision']:
    path=p.with_suffix('.npz')
    if sha(path)!=d['sha256']:raise RuntimeError('Reference checksum mismatch')
-   with np.load(path) as z:return z[f'z_{l}'].reshape(-1,z[f'z_{l}'].shape[-1]).astype('float64')
+   with np.load(path) as z:
+    if f'z_{l}' in z:return z[f'z_{l}'].reshape(-1,z[f'z_{l}'].shape[-1]).astype('float64')
  raise RuntimeError('Missing aligned references '+n)
 def cka(x,y):
  if len(x)!=len(y):raise ValueError('Unaligned sample count')
