@@ -1,0 +1,48 @@
+{
+  "at": 1792585679.3471258,
+  "unit_tests": 43,
+  "physical_cap_test": {
+    "path": "/sys/fs/cgroup/v8-joint-selection/worker-433515-25548280",
+    "current_gib": 0.0,
+    "peak_gib": 0.0625,
+    "max_gib": 0.0625,
+    "events": {
+      "low": 0,
+      "high": 364,
+      "max": 35,
+      "oom": 1,
+      "oom_kill": 2,
+      "oom_group_kill": 1
+    }
+  },
+  "test_result": "128MiB allocation in64MiB job cgroup killed ONLY test child; parent alive",
+  "verified_global_oom_times": [
+    "12:14",
+    "12:15",
+    "12:19"
+  ],
+  "upper_worker_count": 8,
+  "dynamic_per_job_RAM_VRAM": true,
+  "existing_workers_attached": [
+    {
+      "job": "V8_e2a6cdc023f8a7224c_attack",
+      "cap_GiB": 20.155341148376465,
+      "group": "/sys/fs/cgroup/v8-joint-selection/worker-430679-25450787"
+    },
+    {
+      "job": "V8_70d0a64f5ccad08e83_attack",
+      "cap_GiB": 13.934494972229002,
+      "group": "/sys/fs/cgroup/v8-joint-selection/worker-430690-25450798"
+    },
+    {
+      "job": "V8_42ca03dbca8663268e_attack",
+      "cap_GiB": 20.84185619354248,
+      "group": "/sys/fs/cgroup/v8-joint-selection/worker-433092-25511587"
+    }
+  ],
+  "existing_migration_caveat": "Pre-existing memory remains charged to original cgroup; RSS growth reservations also protect legacy workers. New workers attach before loading models.",
+  "parent_cap_GiB": 106.00906753540039,
+  "weight_placement": "New calibrated attack jobs prefer full BF16 GPU placement when jointly admitted; otherwise vision GPU plus CPU-language reservation",
+  "no_language_forward": true,
+  "science_unchanged": true
+}

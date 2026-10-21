@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "pending": 8,
+  "pending": 7,
   "rows": [
     {
       "family": "qwen",
@@ -503,11 +503,29 @@
       },
       "proxy_count": 3,
       "layers_per_proxy": 2,
-      "complete": false,
-      "hits": null,
+      "complete": true,
+      "hits": 9,
       "N": 10,
-      "paired_vs_uniform": null,
-      "compute": null
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 287.39617371559143,
+        "backwards": 1500,
+        "peak": 2.369140625
+      }
     },
     {
       "family": "gemma4",

@@ -1,25 +1,8 @@
 {
-  "at": 1792584871.218877,
+  "at": 1792585338.4408486,
   "state": "RUNNING",
   "stage": "INTEGRATED_CONFIRM50",
   "active": [
-    {
-      "id": "V8_42ca03dbca8663268e_attack",
-      "mode": "attack",
-      "condition": "V8_42ca03dbca8663268e",
-      "reservation": 7.5201171875,
-      "process_identity": {
-        "pid": 430670,
-        "start": "25450777",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_42ca03dbca8663268e_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_42ca03dbca8663268e_attack_0.log",
-      "started": 1792584647.1464288,
-      "position_signature": "41422c672d3f9c775473171c3f2a8db30b6f746d134d019bb8f00ccbe60db0b4",
-      "last_progress": 1792584857.1698666
-    },
     {
       "id": "V8_e2a6cdc023f8a7224c_attack",
       "mode": "attack",
@@ -34,8 +17,8 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_e2a6cdc023f8a7224c_attack_0.log",
       "started": 1792584647.246766,
-      "position_signature": "41422c672d3f9c775473171c3f2a8db30b6f746d134d019bb8f00ccbe60db0b4",
-      "last_progress": 1792584857.1706383
+      "position_signature": "4ab3c4078c45ae02fd06b0b080c459bb993baa74282a7a985b00592793c6f928",
+      "last_progress": 1792585316.5020454
     },
     {
       "id": "V8_70d0a64f5ccad08e83_attack",
@@ -51,25 +34,8 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_70d0a64f5ccad08e83_attack_0.log",
       "started": 1792584647.355624,
-      "position_signature": "f8da27d959d0c3f7833f9c84b5d6539dd6209e7ce92efb32c3855af4e1cb362e",
-      "last_progress": 1792584857.1711633
-    },
-    {
-      "id": "V8_e52d828a315f13ac2b_attack",
-      "mode": "attack",
-      "condition": "V8_e52d828a315f13ac2b",
-      "reservation": 7.5201171875,
-      "process_identity": {
-        "pid": 430702,
-        "start": "25450810",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_e52d828a315f13ac2b_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_e52d828a315f13ac2b_attack_0.log",
-      "started": 1792584647.4689672,
-      "position_signature": "3994be8a58e518eb45cebc9a73b3067e12094135cc34aae849f191f269100a40",
-      "last_progress": 1792584857.171849
+      "position_signature": "e417239f90762c004e50d7812f6f455aa73b7138e2aff0c4a751a724b6e59484",
+      "last_progress": 1792585316.502155
     },
     {
       "id": "V8_387aca15fae19c9b05_attack",
@@ -85,8 +51,8 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_387aca15fae19c9b05_attack_0.log",
       "started": 1792584647.576544,
-      "position_signature": "28f99ad132107b453b6ffb4bdadbed3ead27dc1a6ffa9f6bb890d146030f1040",
-      "last_progress": 1792584857.172515
+      "position_signature": "172c669b9e5458d5c1726a32182c9ef59a56c68b3d194d77d5634f5d17cb5ef1",
+      "last_progress": 1792585316.5022526
     },
     {
       "id": "V8_de1caf622cdeea722d_attack",
@@ -102,50 +68,79 @@
       "attempt": 0,
       "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_de1caf622cdeea722d_attack_0.log",
       "started": 1792584687.6276834,
-      "position_signature": "1274426f263fa9d2719258214390b78d0f5c2fdd8edcf91b12574c89857ccf89",
-      "last_progress": 1792584857.172818
+      "position_signature": "7528c475ad1258e0681755d508fdd39c58a017aa65e3b43f9702830a6e2cfe7f",
+      "last_progress": 1792585316.502349
     },
     {
-      "id": "V8_ea1a8e7794e68f3b48_attack",
+      "id": "V8_42ca03dbca8663268e_attack",
       "mode": "attack",
-      "condition": "V8_ea1a8e7794e68f3b48",
-      "reservation": 7.568359375,
+      "condition": "V8_42ca03dbca8663268e",
+      "reservation": 7.5201171875,
       "process_identity": {
-        "pid": 431552,
-        "start": "25459144",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_ea1a8e7794e68f3b48_attack --attempt 0 ",
+        "pid": 433092,
+        "start": "25511587",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_42ca03dbca8663268e_attack --attempt 2 ",
+        "state": "R"
+      },
+      "attempt": 2,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_42ca03dbca8663268e_attack_2.log",
+      "started": 1792585255.245664,
+      "position_signature": "35d22e51dbd076d4badfe9db22e509cf76497f10a4f8fbed0a78914f37fbb87d",
+      "last_progress": 1792585316.5024707
+    },
+    {
+      "id": "V8_8bf3eee60cdd018b1b_evaluate",
+      "mode": "evaluate",
+      "condition": "V8_8bf3eee60cdd018b1b",
+      "reservation": 18.291452944278717,
+      "process_identity": {
+        "pid": 433141,
+        "start": "25514997",
+        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py evaluate --job V8_8bf3eee60cdd018b1b_evaluate --attempt 0 ",
         "state": "R"
       },
       "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_ea1a8e7794e68f3b48_attack_0.log",
-      "started": 1792584730.8123944,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_8bf3eee60cdd018b1b_evaluate_0.log",
+      "started": 1792585289.3459876,
       "position_signature": "052d97bf42d2c0fe75ed6df0d429fb35389545c9393ea01ded6281777b92dcdf",
-      "last_progress": 1792584733.9795964
-    },
-    {
-      "id": "V8_383882a24fb242d08e_attack",
-      "mode": "attack",
-      "condition": "V8_383882a24fb242d08e",
-      "reservation": 7.568359375,
-      "process_identity": {
-        "pid": 431561,
-        "start": "25459155",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_383882a24fb242d08e_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_383882a24fb242d08e_attack_0.log",
-      "started": 1792584730.919446,
-      "position_signature": "052d97bf42d2c0fe75ed6df0d429fb35389545c9393ea01ded6281777b92dcdf",
-      "last_progress": 1792584733.97966
+      "last_progress": 1792585292.3505979
     }
   ],
-  "failures": [],
+  "failures": [
+    {
+      "job": "V8_e52d828a315f13ac2b_attack",
+      "kind": "resource_or_interrupt",
+      "at": 1792584874.228194,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_e52d828a315f13ac2b_attack_0.log",
+      "error": "[transformers] The tied weights mapping and config for this model specifies to tie model.language_model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.\n\nLoading weights:   0%|          | 0/1951 [00:00<?, ?it/s]\nLoading weights:   6%|\u258c         | 115/1951 [00:00<00:01, 1137.80it/s]\nLoading weights:  15%|\u2588\u258c        | 301/1951 [00:00<00:01, 1553.52it/s]\nLoading weights:  26%|\u2588\u2588\u258c       | 510/1951 [00:00<00:00, 1794.42it/s]\nLoading weights:  35%|\u2588\u2588\u2588\u258c      | 690/1951 [00:00<00:00, 1408.13it/s]\nLoading weights:  43%|\u2588\u2588\u2588\u2588\u258e     | 841/1951 [00:01<00:02, 383.73it/s] \nLoading weights:  48%|\u2588\u2588\u2588\u2588\u258a     | 945/1951 [00:01<00:02, 451.64it/s]\nLoading weights:  54%|\u2588\u2588\u2588\u2588\u2588\u258e    | 1048/1951 [00:01<00:01, 482.44it/s]\nLoading weights:  58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 1137/1951 [00:01<00:01, 470.63it/s]\nLoading weights:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 1212/1951 [00:02<00:01, 479.16it/s]\nLoading weights:  66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 1279/1951 [00:02<00:01, 506.17it/s]\nLoading weights:  72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 1404/1951 [00:02<00:00, 649.44it/s]\nLoading weights:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 1555/1951 [00:02<00:00, 835.27it/s]\nLoading weights:  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1660/1951 [00:02<00:00, 869.00it/s]\nLoading weights:  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1877/1951 [00:02<00:00, 1190.23it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1951/1951 [00:02<00:00, 737.82it/s] \nfrozen V8_e52d828a315f13ac2b 1 / 10\nfrozen V8_e52d828a315f13ac2b 2 / 10\n"
+    },
+    {
+      "job": "V8_42ca03dbca8663268e_attack",
+      "kind": "resource_or_interrupt",
+      "at": 1792584961.1577542,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_42ca03dbca8663268e_attack_0.log",
+      "error": "t/s]\nLoading weights:  21%|\u2588\u2588        | 159/753 [00:00<00:01, 576.53it/s]\nLoading weights:  30%|\u2588\u2588\u2588       | 226/753 [00:00<00:00, 605.21it/s]\nLoading weights:  39%|\u2588\u2588\u2588\u258a      | 291/753 [00:00<00:00, 615.10it/s]\nLoading weights:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 503/753 [00:00<00:00, 1116.75it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 753/753 [00:00<00:00, 1062.55it/s]\n[transformers] The tied weights mapping and config for this model specifies to tie model.language_model.embed_tokens.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.\n\nLoading weights:   0%|          | 0/1951 [00:00<?, ?it/s]\nLoading weights:  19%|\u2588\u2589        | 378/1951 [00:00<00:00, 3774.22it/s]\nLoading weights:  39%|\u2588\u2588\u2588\u258a      | 756/1951 [00:01<00:01, 623.27it/s] \nLoading weights:  48%|\u2588\u2588\u2588\u2588\u258a     | 935/1951 [00:01<00:01, 713.45it/s]\nLoading weights:  56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 1084/1951 [00:01<00:01, 724.39it/s]\nLoading weights:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 1204/1951 [00:01<00:01, 673.52it/s]\nLoading weights:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 1301/1951 [00:01<00:00, 672.38it/s]\nLoading weights:  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1635/1951 [00:01<00:00, 1125.00it/s]\nLoading weights:  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1831/1951 [00:01<00:00, 1285.02it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1951/1951 [00:02<00:00, 955.91it/s] \nfrozen V8_42ca03dbca8663268e 1 / 50\nfrozen V8_42ca03dbca8663268e 2 / 50\nfrozen V8_42ca03dbca8663268e 3 / 50\nfrozen V8_42ca03dbca8663268e 4 / 50\n"
+    },
+    {
+      "job": "V8_42ca03dbca8663268e_attack",
+      "kind": "resource_or_interrupt",
+      "at": 1792585158.0931897,
+      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_42ca03dbca8663268e_attack_1.log",
+      "error": "951 [00:08<00:06, 114.45it/s]\nLoading weights:  60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 1176/1951 [00:08<00:06, 111.49it/s]\nLoading weights:  61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 1188/1951 [00:08<00:07, 107.56it/s]\nLoading weights:  61%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 1199/1951 [00:08<00:07, 104.75it/s]\nLoading weights:  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 1211/1951 [00:08<00:07, 105.36it/s]\nLoading weights:  63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 1225/1951 [00:08<00:06, 106.03it/s]\nLoading weights:  63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 1238/1951 [00:09<00:06, 111.53it/s]\nLoading weights:  64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 1252/1951 [00:09<00:06, 111.86it/s]\nLoading weights:  65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 1266/1951 [00:09<00:06, 111.19it/s]\nLoading weights:  66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 1280/1951 [00:09<00:06, 108.66it/s]\nLoading weights:  66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 1292/1951 [00:09<00:05, 109.90it/s]\nLoading weights:  69%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 1337/1951 [00:09<00:03, 195.42it/s]\nLoading weights:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 1382/1951 [00:09<00:02, 263.25it/s]\nLoading weights:  73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 1425/1951 [00:09<00:01, 308.05it/s]\nLoading weights:  77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 1497/1951 [00:09<00:01, 421.31it/s]\nLoading weights:  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 1599/1951 [00:10<00:00, 592.47it/s]\nLoading weights:  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1668/1951 [00:10<00:00, 613.74it/s]\nLoading weights:  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 1736/1951 [00:10<00:00, 628.30it/s]\nLoading weights:  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1800/1951 [00:10<00:00, 609.32it/s]\nLoading weights:  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1862/1951 [00:10<00:00, 544.22it/s]\nLoading weights:  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1919/1951 [00:10<00:00, 527.84it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1951/1951 [00:10<00:00, 181.31it/s]\n"
+    },
+    {
+      "job": "HOST_MEMORY_ADMISSION",
+      "kind": "oom",
+      "at": 1792585188.1151161,
+      "error": "Kernel global_oom confirmed at12:19 UTC, PID432652; cap at6 to prevent host RAM overcommit. Scientific settings unchanged.",
+      "evidence": "journalctl -k"
+    }
+  ],
   "gpu": {
     "total": 80.0,
-    "used": 34.5517578125,
-    "free": 44.701171875,
-    "utilization": 100.0,
+    "used": 23.833984375,
+    "free": 55.4189453125,
+    "utilization": 99.0,
     "processes": [
       {
         "pid": 430690,
@@ -153,11 +148,7 @@
       },
       {
         "pid": 430679,
-        "gib": 5.26171875
-      },
-      {
-        "pid": 430670,
-        "gib": 5.22265625
+        "gib": 5.263671875
       },
       {
         "pid": 430712,
@@ -165,23 +156,19 @@
       },
       {
         "pid": 431138,
-        "gib": 5.201171875
+        "gib": 5.22265625
       },
       {
-        "pid": 431561,
-        "gib": 10.099609375
-      },
-      {
-        "pid": 431552,
-        "gib": 0.595703125
+        "pid": 433092,
+        "gib": 5.18359375
       }
     ],
-    "host_available": 13.67568588256836
+    "host_available": 35.8458137512207
   },
-  "remaining_hours": 6.403287835650974,
+  "remaining_hours": 6.273503954543008,
   "conditions_admitted": 214,
-  "completed_jobs": 414,
-  "max_workers": 8,
+  "completed_jobs": 415,
+  "max_workers": 6,
   "method_frozen": true,
   "stage2": {},
   "confirmation30": {
