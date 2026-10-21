@@ -6,11 +6,11 @@ matched completed singleton/pair results are reused with their actual identities
 from common import *
 import numpy as np
 
-POLICY=dict(version='integrated_selection_v1',shortlist_structure='one resident-model tap and one new-model unit when available',max_units=4,beam_width=2,shortlist_per_parent=2,
- source_pool='ILA latest-peak plus best two positive one-step PP gains/model; max3/model',
+POLICY=dict(version='integrated_selection_v2_optional_ILA',shortlist_structure='one resident-model tap and one new-model unit when available',max_units=4,beam_width=2,shortlist_per_parent=2,
+ source_pool='ILA optional peak, best two source gains and strongest evaluated singleton/model; at most4/model',
  shortlist='positive source gain * (1+CKA novelty) * (1+gradient residual novelty) * (1-negative-dot fraction) / predicted marginal seconds',
  no_peak='explicit source-gain fallback, never claim an ILA peak',
- search='FDA-inspired actual conditional attacks on bounded source shortlist; two Pareto beam states',
+ search='FDA-inspired actual conditional attacks from measured strongest singleton and measured strongest pair; retain parents in cost Pareto beam; ILA not mandatory',
  final_tolerance_pp=5,ablation_stage=3,final_target_feedback=False)
 
 def reuse_make(fam,layers,label,split='screen'):
@@ -67,10 +67,13 @@ def source_geometry():
 
 def eligible_pool(fam,g):
  from ila_selection import selected
+ from selection import layer_conditions,top,atoms
  pool=[]
  for n in POOLS[fam][:3]:
   own=[u for u in g['units'] if u['model']==n];quality=sorted(own,key=lambda u:(u['quality'],-u['seconds'],u['layer']),reverse=True)
+  measured=top([c for c in layer_conditions(fam) if n in c['layers']])
   peak=selected(n)['latest_peak'];ls=([peak] if peak is not None else [])+[u['layer'] for u in quality[:2]]
+  if measured:ls.append(atoms(measured[0])[0][1])
   pool.extend((n,l) for l in dict.fromkeys(ls))
  legal({n:sorted(l for nn,l in pool if nn==n) for n in sorted({n for n,_ in pool})},VALIDATORS[fam])
  return pool
@@ -117,31 +120,41 @@ def pareto_beam(candidates,k=2):
 
 def method_screen(fam,g):
  from ila_selection import selected
- from selection import atoms,score,top,uniform
+ from selection import atoms,score,top,uniform,layer_conditions,original_pair_controls
  pool=eligible_pool(fam,g)
- seeds=[u for u in pool if selected(u[0])['latest_peak']==u[1]]
- if not seeds:seeds=pool
- seed_unit=max(seeds,key=lambda u:(prior(g,u,[]),u))
  def condition(units,label):
   ls={}
   for n,l in sorted(set(units)):ls.setdefault(n,[]).append(l)
   return reuse_make(fam,ls,label)
- seed_c=condition([seed_unit],'integrated_ILA_seed');allc=[seed_c];trace=[dict(size=1,condition=seed_c['id'],units=[list(seed_unit)],selection='source-only ILA seed',no_peak=not any(selected(n)['latest_peak'] is not None for n in POOLS[fam][:3]))]
+ measured=top(layer_conditions(fam))
+ if measured:seed_c=measured[0]
+ else:
+  seeds=[u for u in pool if selected(u[0])['latest_peak']==u[1]] or pool
+  seed_c=condition([max(seeds,key=lambda u:(prior(g,u,[]),u))],'integrated_source_seed_fallback')
+ allc=[seed_c];trace=[dict(size=1,condition=seed_c['id'],units=[list(u) for u in atoms(seed_c)],selection='measured held-out development singleton; ILA optional',policy_version=POLICY['version'])]
  if not eval_done(seed_c):return [seed_c],allc,trace
- beam=[seed_c]
- for size in range(2,POLICY['max_units']+1):
+ pairs=[c for c in original_pair_controls() if c['family']==fam and set(atoms(c))<=set(pool)]
+ pair_seed=top(pairs)
+ beam=[seed_c]+pair_seed
+ for c in pair_seed:
+  allc.append(c);trace.append(dict(size=2,condition=c['id'],selection='measured real joint pair development seed; not singleton success union'))
+ for round_index in range(1,POLICY['max_units']):
   proposed={}
   for base in beam:
-   current=atoms(base);options=shortlist(g,pool,current)
+   current=atoms(base)
+   if len(current)>=POLICY['max_units']:continue
+   options=shortlist(g,pool,current)
    for u in options:
-    c=condition(current+[u],f'integrated_FDA_joint_{size}')
+    c=condition(current+[u],f'integrated_FDA_joint_{len(current)+1}')
     proposed[c['id']]=c
-    trace.append(dict(size=size,parent=base['id'],condition=c['id'],added=list(u),source_prior=prior(g,u,current),shortlist_only=True))
+    trace.append(dict(size=len(current)+1,round=round_index,parent=base['id'],condition=c['id'],added=list(u),source_prior=prior(g,u,current),shortlist_only=True))
   items=list(proposed.values());allc+=items
   missing=[c for c in items if not eval_done(c)]
   if missing:return missing,allc,trace
-  beam=pareto_beam(items,2)
-  trace.append(dict(size=size,retained_beam=[c['id'] for c in beam],selection='actual held-out dev conditional gain and compute Pareto; no union of singleton hits'))
+  updated=pareto_beam(beam+items,2)
+  trace.append(dict(size=max(len(atoms(c)) for c in updated),round=round_index,retained_beam=[c['id'] for c in updated],selection='actual held-out dev conditional gain and compute Pareto, parents retained; no union of singleton hits'))
+  stable={c['id'] for c in updated}=={c['id'] for c in beam};beam=updated
+  if stable:break
  return [],allc,trace
 
 def plan_next(state):
