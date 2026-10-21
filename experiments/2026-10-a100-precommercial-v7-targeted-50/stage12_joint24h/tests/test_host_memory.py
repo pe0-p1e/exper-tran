@@ -5,6 +5,26 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import resources as R
 
 class HostMemoryTests(unittest.TestCase):
+ def test_steady_cap_waits_for_actual_model_execution(self):
+  with tempfile.TemporaryDirectory() as d:
+   p=Path(d);(p/'memory.stat').write_text('anon 10737418240\nfile 21474836480\nkernel 0\n')
+   job=dict(host_cgroup=d,host_reservation_gib=30)
+   self.assertIsNone(R.steady_host_cap(job,dict(phase='starting')))
+   cap,high=R.steady_host_cap(job,dict(step=1))
+   self.assertEqual(high,10);self.assertEqual(cap,15.5)
+   self.assertEqual(R.steady_host_cap(job,dict(phase='validation'))[0],15.5)
+ def test_steady_cap_preserves_highwater_and_load_limit(self):
+  with tempfile.TemporaryDirectory() as d:
+   (Path(d)/'memory.stat').write_text('anon 1073741824\nkernel 0\n')
+   cap,high=R.steady_host_cap(dict(host_cgroup=d,host_reservation_gib=30,host_load_reservation_gib=30,steady_host_highwater_gib=12),dict(step=50))
+   self.assertEqual(cap,18);self.assertEqual(high,12)
+ def test_logical_pressure_can_use_spare_vram(self):
+  self.assertTrue(R.prefer_full_gpu(dict(host_total=118,host_available=74),22,[dict(host_reservation_gib=70)]))
+ def test_full_gpu_load_host_bound_is_max_not_sum(self):
+  values=[dict(model_name=n,revision='r',all_floating_parameters_bf16=True,parameter_bytes_by_dtype={'bfloat16':v*2**30}) for n,v in [('a',4),('b',10)]]
+  def read(p,default=None):return values if 'audit' in str(p) else {}
+  with patch.object(R,'read',side_effect=read),patch.object(R,'REG',{'a':{'revision':'r'},'b':{'revision':'r'}}):
+   self.assertEqual(R.full_gpu_host_estimate(dict(layers={'a':[1],'b':[1]})),19)
  def test_clip_only_uses_measured_model_specific_loader_budget(self):
   import common as C
   with tempfile.TemporaryDirectory() as d,patch.object(R,'ROOT',Path(d)):

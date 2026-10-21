@@ -1,7 +1,7 @@
 """One admission owner, existing GPU lock/predictions, restartable job leases."""
 from common import *
 import argparse,subprocess,signal,traceback,random
-from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_gpu_reservation,prefer_full_gpu
+from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_gpu_reservation,prefer_full_gpu,full_gpu_host_estimate,steady_host_cap
 from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2,fda_cli_progress
 STOP=False
 
@@ -77,9 +77,20 @@ def reconcile(s):
    names=[LARGE_EVAL_MODES.get(j['mode'],c['validator'])] if j['mode'] in ['evaluate','evaluate30'] or j['mode'] in LARGE_EVAL_MODES else sorted(c['layers'])
    peaks=read(ROOT/'host_memory_peaks.json',{});key=digest([j['mode'],sorted(names)])
    peaks[key]=max(peaks.get(key,0),h['peak_gib']);atomic(ROOT/'host_memory_peaks.json',peaks)
-  if j.get('placement')=='full_gpu':
-   plan=read(ROOT/'attempts'/j['id']/str(j['attempt'])/'placement_ready.json')
-   if plan:j['host_reservation_gib']=max(6.,j.get('host_memory',{}).get('current_gib',0)*1.2+1)
+   if j.get('placement')=='full_gpu':
+    key=digest([j['mode'],sorted(c['layers']),'full_gpu']);peaks[key]=max(peaks.get(key,0),h['peak_gib']);atomic(ROOT/'host_memory_peaks.json',peaks)
+  if same_process(j['process_identity']) and j.get('host_cgroup'):
+   beat=read(ROOT/'attempts'/j['id']/str(j['attempt'])/'heartbeat.json',{})
+   j.setdefault('host_load_reservation_gib',j['host_reservation_gib'])
+   phase=steady_host_cap(j,beat.get('position',{}))
+   if phase:
+    cap,high=phase;j['steady_host_highwater_gib']=high
+    if abs(cap-j['host_reservation_gib'])>.5:
+     proc=j['process_identity']
+     result=subprocess.run(['sudo','-n','/usr/bin/python3',str(HERE/'host_memory.py'),'--attach',str(proc['pid']),'--start',proc['start'],'--cap-gib',str(cap)],capture_output=True,text=True)
+     if result.returncode==0:
+      j['host_memory']=json.loads(result.stdout);j['host_reservation_gib']=cap;j['host_phase']='steady_physical_cap'
+     else:j['host_cap_update_error']=result.stderr[-500:]
   if same_process(j['process_identity']):active.append(j);continue
   if complete(j):s['completed'].append(j['id']);continue
   text=Path(j['log']).read_text(errors='replace')[-5000:] if Path(j['log']).exists() else ''
@@ -104,8 +115,9 @@ def launch(s,c,mode):
  placement='visual_gpu'
  full_reservation=full_gpu_reservation(c,reservation) if profile else None
  # Favor more vision jobs via explicit CPU language offload when host RAM allows.
- if full_reservation and prefer_full_gpu(t,host_reservation) and admit(t,s['active'],full_reservation,s['worker_limit'],0,host_reservation):
-  reservation=full_reservation;placement='full_gpu'
+ full_host=full_gpu_host_estimate(c) if full_reservation else None
+ if full_reservation and prefer_full_gpu(t,host_reservation,s['active']) and admit(t,s['active'],full_reservation,s['worker_limit'],0,full_host):
+  reservation=full_reservation;host_reservation=full_host;placement='full_gpu'
  worker_cap=max(reservation-.2,profile['load_cap_GiB']) if profile else reservation-.2
  startup_extra=max(0,worker_cap-reservation)
  if not admit(t,s['active'],reservation,s['worker_limit'],startup_extra,host_reservation):return False

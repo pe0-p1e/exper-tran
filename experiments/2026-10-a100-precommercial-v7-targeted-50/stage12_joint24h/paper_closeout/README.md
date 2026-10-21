@@ -118,3 +118,23 @@ bash experiments/2026-10-a100-precommercial-v7-targeted-50/run_paper_closeout.sh
 
 This resumes the same receipts, request IDs and single admission owner. Changing
 this execution policy does not change scientific settings or add experiments.
+
+## Phase-aware physical host limits
+
+Loading reservations are no longer held for an entire worker lifetime. After a
+real gradient step or the evaluator's post-load validation heartbeat, the owner
+reads cgroup anonymous/kernel memory and retains its observed high-water value.
+It lowers the actual verified worker cgroup limit to at least8GiB or
+1.25×that nonreclaimable high-water+3GiB, never above the original load limit.
+Only successful privileged cap updates reduce admission accounting. File cache
+is reclaimable; virtual address space is never used as a RAM limit.
+
+Full-GPU BF16 proxy placement can also be chosen under logical host reservation
+pressure, even when system MemAvailable is still high. Its host loading bound
+uses the largest sequentially initialized model×1.4+5GiB and measured dedicated
+full-GPU loading peaks, rather than summing CPU language weights that are not
+retained there. CPU allocator pages are released after each fully moved model.
+Full BF16 weights, references, per-image RNG and attack math are unchanged.
+The controller adopts live workers on update; physical headroom,72GiB total
+GPU reservations and maximum8 workers remain enforced. Higher concurrency is not
+a claim of proportional speedup; compare actual image completions and runtime.

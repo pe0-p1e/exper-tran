@@ -114,6 +114,9 @@ def load_models(c):
    m.to('cuda');model_fingerprint(m);bank(m)
    if not full_gpu:m.to('cpu')
    result.append(m);gc.collect();torch.cuda.empty_cache()
+   if full_gpu:
+    import ctypes
+    ctypes.CDLL(None).malloc_trim(0)
  from device_residency import parameter_gib,may_reside
  total=sum(parameter_gib(m._v8_visual) for m in result)
  import torch

@@ -48,10 +48,37 @@ def full_gpu_reservation(c,base):
  # Deliberately overestimate by adding all full weights to the vision-calibrated reservation.
  return base+sum(weights[n] for n in c['layers'])*1.1
 
-def prefer_full_gpu(t,host_request):
+def full_gpu_host_estimate(c):
+ # Complete models are initialized sequentially and moved fully to GPU; unlike
+ # visual-only placement, unused CPU language weights do not accumulate.
+ weights={}
+ for a in read(ROOT/'audits/model_dtype_audit.json',[]):
+  if a.get('all_floating_parameters_bf16') and a.get('revision')==REG.get(a['model_name'],{}).get('revision'):
+   weights[a['model_name']]=sum(a['parameter_bytes_by_dtype'].values())/2**30
+ if any(n not in weights for n in c['layers']):return host_estimate(c,'attack')
+ observed=read(ROOT/'host_memory_peaks.json',{}).get(digest(['attack',sorted(c['layers']),'full_gpu']),0)
+ return max(8.,max(weights[n] for n in c['layers'])*1.4+5,observed*1.15+1)
+
+def steady_host_cap(j,position):
+ # Apply only after a real gradient or fully loaded target-validation phase.
+ ready=position.get('step',0)>0 or position.get('phase')=='validation'
+ if not ready:return None
+ path=Path(j['host_cgroup'])/'memory.stat'
+ if not path.exists():return None
+ stat={k:int(v)/2**30 for k,v in (line.split() for line in path.read_text().splitlines())}
+ # Anonymous/kernel memory is nonreclaimable. File cache can be reclaimed by
+ # cgroup memory.max. Leave25% plus3GiB for CPU temporaries and final unload.
+ used=stat.get('anon',0)+stat.get('kernel',0)+stat.get('unevictable',0)
+ high=max(j.get('steady_host_highwater_gib',0),used)
+ load=j.get('host_load_reservation_gib',j['host_reservation_gib'])
+ return min(load,max(8.,high*1.25+3)),high
+
+def prefer_full_gpu(t,host_request,active=None):
  # CPU offload is the default while RAM is plentiful: unused LM weights must
  # not consume scarce GPU admission slots ahead of runnable vision work.
- return t['host_available'] < 2*host_request+max(12,t['host_total']*.1)
+ reserve=max(12,t['host_total']*.1)
+ logical_pressure=active is not None and sum(j.get('host_reservation_gib',0) for j in active)+host_request>.8*(t['host_total']-reserve)
+ return logical_pressure or t['host_available'] < 2*host_request+reserve
 
 def host_admit(t,active,request):
  reserve=max(12,t['host_total']*.1)
