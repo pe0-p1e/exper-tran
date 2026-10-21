@@ -1,5 +1,5 @@
 {
-  "load_events": 383,
+  "load_events": 392,
   "all_pass": true,
   "latest": [
     {
@@ -7,7 +7,7 @@
       "repo_id": "openai/clip-vit-large-patch14",
       "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T05:42:33.488382+00:00",
+      "audited_utc": "2026-10-21T05:54:44.601061+00:00",
       "total_parameter_count": 427616513,
       "floating_parameter_count": 427616513,
       "parameter_counts_by_dtype": {
@@ -83,14 +83,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 383
+      "load_sequence": 391
     },
     {
       "model_name": "InternVL3.5-2B-HF",
       "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
       "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T05:34:25.842639+00:00",
+      "audited_utc": "2026-10-21T05:54:48.924311+00:00",
       "total_parameter_count": 2348347392,
       "floating_parameter_count": 2348347392,
       "parameter_counts_by_dtype": {
@@ -168,7 +168,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 381
+      "load_sequence": 392
     },
     {
       "model_name": "Gemma 4 E2B-it",
@@ -428,7 +428,7 @@
       "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
       "revision": "741a7d03020411e666c6109218ab71e08151ef86",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T04:56:04.499980+00:00",
+      "audited_utc": "2026-10-21T05:43:31.664157+00:00",
       "total_parameter_count": 8528318464,
       "floating_parameter_count": 8528318464,
       "parameter_counts_by_dtype": {
@@ -506,14 +506,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 343
+      "load_sequence": 384
     },
     {
       "model_name": "Gemma 4 E4B-it",
       "repo_id": "google/gemma-4-E4B-it",
       "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T05:42:18.551207+00:00",
+      "audited_utc": "2026-10-21T05:54:29.286031+00:00",
       "total_parameter_count": 7941100832,
       "floating_parameter_count": 7941100832,
       "parameter_counts_by_dtype": {
@@ -589,7 +589,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 382
+      "load_sequence": 390
     },
     {
       "model_name": "DINOv2-Large",

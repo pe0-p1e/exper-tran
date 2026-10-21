@@ -1,14 +1,14 @@
 {
   "policy": {
-    "version": "integrated_selection_v1",
+    "version": "integrated_selection_v2_optional_ILA",
     "shortlist_structure": "one resident-model tap and one new-model unit when available",
     "max_units": 4,
     "beam_width": 2,
     "shortlist_per_parent": 2,
-    "source_pool": "ILA latest-peak plus best two positive one-step PP gains/model; max3/model",
+    "source_pool": "ILA optional peak, best two source gains and strongest evaluated singleton/model; at most4/model",
     "shortlist": "positive source gain * (1+CKA novelty) * (1+gradient residual novelty) * (1-negative-dot fraction) / predicted marginal seconds",
     "no_peak": "explicit source-gain fallback, never claim an ILA peak",
-    "search": "FDA-inspired actual conditional attacks on bounded source shortlist; two Pareto beam states",
+    "search": "FDA-inspired actual conditional attacks from measured strongest singleton and measured strongest pair; retain parents in cost Pareto beam; ILA not mandatory",
     "final_tolerance_pp": 5,
     "ablation_stage": 3,
     "final_target_feedback": false
@@ -17,65 +17,202 @@
     "qwen": [
       {
         "size": 1,
-        "condition": "V8_75035d0a2f9a053d84",
+        "condition": "V8_3c54f30622a2b53f45",
         "units": [
           [
             "CLIP ViT-L/14",
-            21
+            11
           ]
         ],
-        "selection": "source-only ILA seed",
-        "no_peak": false
+        "selection": "measured held-out development singleton; ILA optional",
+        "policy_version": "integrated_selection_v2_optional_ILA"
       },
       {
         "size": 2,
-        "parent": "V8_75035d0a2f9a053d84",
+        "condition": "V8_387ae9851abcc95227",
+        "selection": "measured real joint pair development seed; not singleton success union"
+      },
+      {
+        "size": 2,
+        "round": 1,
+        "parent": "V8_3c54f30622a2b53f45",
         "condition": "V8_a85360b524dc58ea31",
         "added": [
           "CLIP ViT-L/14",
-          11
+          21
         ],
-        "source_prior": 62.34547095228516,
+        "source_prior": 56.55666263214343,
         "shortlist_only": true
       },
       {
         "size": 2,
-        "parent": "V8_75035d0a2f9a053d84",
-        "condition": "V8_c77def00d906286387",
+        "round": 1,
+        "parent": "V8_3c54f30622a2b53f45",
+        "condition": "V8_a8c091f1e3b726bc52",
+        "added": [
+          "InternVL3.5-2B-HF",
+          14
+        ],
+        "source_prior": 31.41498789333723,
+        "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "parent": "V8_387ae9851abcc95227",
+        "condition": "V8_86e4b3b0e1d12be6c0",
         "added": [
           "InternVL3.5-2B-HF",
           11
         ],
-        "source_prior": 27.04028576474237,
+        "source_prior": 112.74313617391519,
+        "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "parent": "V8_387ae9851abcc95227",
+        "condition": "V8_0e5d6e456c8d31bdf9",
+        "added": [
+          "Gemma 4 E2B-it",
+          15
+        ],
+        "source_prior": 8.894827404485351,
         "shortlist_only": true
       }
     ],
     "internvl": [
       {
         "size": 1,
-        "condition": "V8_05f4a244f9ea7e5af6",
+        "condition": "V8_17a6425e9f26e6c2bf",
         "units": [
           [
-            "CLIP ViT-L/14",
-            21
+            "Qwen3.5-2B",
+            14
           ]
         ],
-        "selection": "source-only ILA seed",
-        "no_peak": false
+        "selection": "measured held-out development singleton; ILA optional",
+        "policy_version": "integrated_selection_v2_optional_ILA"
+      },
+      {
+        "size": 2,
+        "condition": "V8_0d00433d84e97401d8",
+        "selection": "measured real joint pair development seed; not singleton success union"
+      },
+      {
+        "size": 2,
+        "round": 1,
+        "parent": "V8_17a6425e9f26e6c2bf",
+        "condition": "V8_bb0c06f741551a8dd0",
+        "added": [
+          "Qwen3.5-2B",
+          17
+        ],
+        "source_prior": 40.939928535326416,
+        "shortlist_only": true
+      },
+      {
+        "size": 2,
+        "round": 1,
+        "parent": "V8_17a6425e9f26e6c2bf",
+        "condition": "V8_d6fb251d4df43e8847",
+        "added": [
+          "CLIP ViT-L/14",
+          11
+        ],
+        "source_prior": 33.4251216851537,
+        "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "parent": "V8_0d00433d84e97401d8",
+        "condition": "V8_5ae2beb303f55bbaa1",
+        "added": [
+          "Qwen3.5-2B",
+          17
+        ],
+        "source_prior": 50.45334743630601,
+        "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "parent": "V8_0d00433d84e97401d8",
+        "condition": "V8_428af3b1df2768be38",
+        "added": [
+          "CLIP ViT-L/14",
+          11
+        ],
+        "source_prior": 31.363174549061288,
+        "shortlist_only": true
       }
     ],
     "gemma4": [
       {
         "size": 1,
-        "condition": "V8_f14cf1386c848b45dc",
+        "condition": "V8_1302a3c70a920d9a9c",
         "units": [
           [
-            "CLIP ViT-L/14",
-            21
+            "InternVL3.5-2B-HF",
+            14
           ]
         ],
-        "selection": "source-only ILA seed",
-        "no_peak": false
+        "selection": "measured held-out development singleton; ILA optional",
+        "policy_version": "integrated_selection_v2_optional_ILA"
+      },
+      {
+        "size": 2,
+        "condition": "V8_b7a2c0a8e70774a61f",
+        "selection": "measured real joint pair development seed; not singleton success union"
+      },
+      {
+        "size": 2,
+        "round": 1,
+        "parent": "V8_1302a3c70a920d9a9c",
+        "condition": "V8_0804406e1d56ce93f9",
+        "added": [
+          "InternVL3.5-2B-HF",
+          11
+        ],
+        "source_prior": 90.20354324759151,
+        "shortlist_only": true
+      },
+      {
+        "size": 2,
+        "round": 1,
+        "parent": "V8_1302a3c70a920d9a9c",
+        "condition": "V8_47e723acbf82a15007",
+        "added": [
+          "CLIP ViT-L/14",
+          11
+        ],
+        "source_prior": 26.523609590334985,
+        "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "parent": "V8_b7a2c0a8e70774a61f",
+        "condition": "V8_f0377a7c3a80dfd527",
+        "added": [
+          "CLIP ViT-L/14",
+          11
+        ],
+        "source_prior": 88.44933861251269,
+        "shortlist_only": true
+      },
+      {
+        "size": 3,
+        "round": 1,
+        "parent": "V8_b7a2c0a8e70774a61f",
+        "condition": "V8_b51b11b92c54c41687",
+        "added": [
+          "InternVL3.5-2B-HF",
+          11
+        ],
+        "source_prior": 30.931550138299745,
+        "shortlist_only": true
       }
     ]
   },

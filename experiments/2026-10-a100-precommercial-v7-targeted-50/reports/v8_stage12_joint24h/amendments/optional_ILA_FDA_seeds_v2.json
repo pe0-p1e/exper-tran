@@ -1,0 +1,13 @@
+{
+  "at": 1792561506.6309164,
+  "prior_lock": "9272868ec82008f7622603ce731dd2ea3b989c67496484c3e663769b52e3d328",
+  "new_lock": "806ec679eaaeca67ada089c627842359e873b8b80d96a1df63cc2d64af51d26e",
+  "reason": "User asks alternative after weak ILA fixed seed; layer choice now primarily FDA conditional evidence. Use already-evaluated strong single/pair starts, retain parents, ILA only optional candidate. No final or commercial feedback, no primary PP change. Original v1 failures and search trace preserved.",
+  "tests": "33 passed",
+  "development_evidence": [
+    "ILA CLIP21->Qwen9:0/10",
+    "CLIP11+21->Qwen9:2/10"
+  ],
+  "no_full_ablation": true,
+  "deadline_reset": false
+}
