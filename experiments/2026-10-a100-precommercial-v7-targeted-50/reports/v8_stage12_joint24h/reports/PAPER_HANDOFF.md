@@ -1,12 +1,12 @@
 # V8 Stage 1–2 handoff
 
-Status: RUNNING. Completed evaluations: 203/236 planned so far.
+Status: RUNNING. Completed evaluations: 208/236 planned so far.
 
 Algorithm: strict BF16, native spatial-token mean features,48 references/class, .5 cosine target pull + .5 source push,50 steps,L∞16/255,DI, equal per-image L1-normalized proxy gradients. Layer losses are averaged inside each model before proxy normalization. No output-head, patch or margin loss.
 
 Family exclusion applies to each actual validator, including Qwen9/InternVL8/GemmaE4. Final open-weight target150-image cohorts remain sealed. Historical10-image screening is development data; exploratory30 and confirmation50 are separately frozen. Stage2 reuses confirmation images only after selection lock.
 
-BF16 audit load events: 753. Failed audit events: 0.
+BF16 audit load events: 784. Failed audit events: 0.
 
 Failures retained: 4. See scheduler.json and attempts/*/exit.json; missing results are not zeros.
 
@@ -231,7 +231,901 @@ Failures retained: 4. See scheduler.json and attempts/*/exit.json; missing resul
 }
 
 ## GPT confirmation
-PENDING: no calls/results claimed.
+{
+  "complete": true,
+  "status": "COMPLETE",
+  "methods": [
+    {
+      "method": "selected",
+      "N": 50,
+      "completed_pairs": 50,
+      "hits": 35,
+      "ASR": 0.7,
+      "directions": [
+        {
+          "transition": "T01",
+          "hits": 10,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T03",
+          "hits": 9,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T05",
+          "hits": 5,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T07",
+          "hits": 9,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T09",
+          "hits": 2,
+          "N": 10,
+          "completed": 10
+        }
+      ],
+      "images": [
+        {
+          "image_id": "train/n01443537/n01443537_8401.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7627.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17770.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15544.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12677.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15793.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13097.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_11988.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_2279.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1514.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 10,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7844.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_815.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9651.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_750.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_18178.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_18348.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17590.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17516.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_16020.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1516.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13519.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12962.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16494.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13871.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12834.JPEG",
+          "transition": "T07",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1568.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1892.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 9,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1864.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1926.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 3,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1836.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 1,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7324.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1136.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7856.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9534.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_16824.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17184.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_18009.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_16567.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1362.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15997.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12711.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_14237.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1490.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13010.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13246.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1183.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1400.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_229.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 9,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1939.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1702.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 10,
+          "parser_status": "ok"
+        }
+      ]
+    },
+    {
+      "method": "uniform",
+      "N": 50,
+      "completed_pairs": 50,
+      "hits": 35,
+      "ASR": 0.7,
+      "directions": [
+        {
+          "transition": "T01",
+          "hits": 10,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T03",
+          "hits": 9,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T05",
+          "hits": 5,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T07",
+          "hits": 9,
+          "N": 10,
+          "completed": 10
+        },
+        {
+          "transition": "T09",
+          "hits": 2,
+          "N": 10,
+          "completed": 10
+        }
+      ],
+      "images": [
+        {
+          "image_id": "train/n01443537/n01443537_8401.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7627.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17770.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_15544.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12677.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15793.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13097.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_11988.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_2279.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1514.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 10,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7844.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_815.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9651.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_750.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_18178.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_18348.JPEG",
+          "transition": "T03",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17590.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17516.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_16020.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1516.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_13519.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12962.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_16494.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13871.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_12834.JPEG",
+          "transition": "T07",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1568.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1892.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 9,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1864.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1926.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 3,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1836.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 1,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7324.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_1136.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_7856.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n01443537/n01443537_9534.JPEG",
+          "transition": "T01",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 2,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_16824.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17184.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_18009.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n07753275/n07753275_16567.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 4,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_1362.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_15997.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_12711.JPEG",
+          "transition": "T05",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n03642806/n03642806_14237.JPEG",
+          "transition": "T05",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 5,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1490.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13010.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_13246.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n09472597/n09472597_1183.JPEG",
+          "transition": "T07",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1400.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 6,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_229.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 9,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1939.JPEG",
+          "transition": "T09",
+          "target_hit": false,
+          "clean_correct": true,
+          "adv_label": 8,
+          "parser_status": "ok"
+        },
+        {
+          "image_id": "train/n04254680/n04254680_1702.JPEG",
+          "transition": "T09",
+          "target_hit": true,
+          "clean_correct": true,
+          "adv_label": 10,
+          "parser_status": "ok"
+        }
+      ]
+    }
+  ],
+  "unique_completed_requests": 100,
+  "planned_unique_requests": 100,
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "route": "existing subscription Codex CLI",
+  "actual_server_snapshot": "undisclosed unless present in raw traces",
+  "method_selected_before_GPT": true
+}
 
 ## Interpretation and Stage3 discussion
 No claim of universal visual head, proven causal mechanism or first multi-model/multi-layer attack. CKA/RSA and gradient conflict are diagnostics, not success surrogates. An exact implementation combination alone is not a novelty claim.
