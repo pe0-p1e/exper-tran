@@ -1,6 +1,7 @@
 """Reuse existing predictive reservations, add measured free-memory guard."""
 from common import *
 import subprocess
+from host_memory import proc_rss_gib,snapshot,BASE
 
 def telemetry():
  line=subprocess.check_output(['nvidia-smi','--query-gpu=memory.total,memory.used,memory.free,utilization.gpu','--format=csv,noheader,nounits'],text=True).strip().splitlines()
@@ -10,7 +11,38 @@ def telemetry():
   parts=l.split(',')
   if len(parts)==2 and parts[0].strip().isdigit():processes.append(dict(pid=int(parts[0]),gib=float(parts[1])/1024 if parts[1].strip().isdigit() else 0))
  mem={l.split(':')[0]:int(l.split()[1]) for l in Path('/proc/meminfo').read_text().splitlines() if ':' in l and len(l.split())>1 and l.split()[1].isdigit()}
- return dict(total=total/1024,used=used/1024,free=free/1024,utilization=util,processes=processes,host_available=mem['MemAvailable']/2**20)
+ return dict(total=total/1024,used=used/1024,free=free/1024,utilization=util,processes=processes,host_available=mem['MemAvailable']/2**20,
+  host_total=mem['MemTotal']/2**20,host_cgroup=snapshot(BASE) if (BASE/'memory.max').exists() else None)
+
+def host_estimate(c,mode):
+ # Parameter bytes are actual audited full BF16 checkpoints, including unused CPU language weights.
+ names=[c['validator']] if mode in ['evaluate','evaluate30'] else list(c['layers'])
+ audit=read(ROOT/'audits/model_dtype_audit.json',[]);weights={}
+ for a in audit:
+  if a.get('all_floating_parameters_bf16') and a.get('revision')==REG.get(a['model_name'],{}).get('revision'):
+   weights[a['model_name']]=sum(a['parameter_bytes_by_dtype'].values())/2**30
+ missing=set(names)-weights.keys()
+ if missing:raise RuntimeError('Host RAM calibration missing audited model bytes: '+str(sorted(missing)))
+ # Full-parameter loader/offload peak + framework/cache allowance. Never shrink parameters to fit.
+ baseline=sum(weights[n] for n in names)*1.15+3
+ history=read(ROOT/'host_memory_peaks.json',{})
+ observed=history.get(digest([mode,sorted(names)]),0)
+ return max(6.,baseline,observed*1.15+1)
+
+def full_gpu_reservation(c,base):
+ audit=read(ROOT/'audits/model_dtype_audit.json',[]);weights={}
+ for a in audit:
+  if a.get('all_floating_parameters_bf16') and a.get('revision')==REG.get(a['model_name'],{}).get('revision'):
+   weights[a['model_name']]=sum(a['parameter_bytes_by_dtype'].values())/2**30
+ if any(n not in weights for n in c['layers']):return None
+ # Deliberately overestimate by adding all full weights to the vision-calibrated reservation.
+ return base+sum(weights[n] for n in c['layers'])*1.1
+
+def host_admit(t,active,request):
+ reserve=max(12,t['host_total']*.1)
+ caps=sum(j.get('host_reservation_gib',proc_rss_gib(j['process_identity']['pid'])+4) for j in active)
+ growth=sum(max(0,j.get('host_reservation_gib',proc_rss_gib(j['process_identity']['pid'])+4)-proc_rss_gib(j['process_identity']['pid'])) for j in active)
+ return caps+request<=t['host_total']-reserve and t['host_available']>=request+growth+reserve
 
 def estimate(c,mode):
  if mode in ['ila','ila_smoke']:return 20.0
@@ -33,7 +65,7 @@ def estimate(c,mode):
  measured=max(measurements+actual,default=0)
  return max(pred,measured*1.15+1.5)
 
-def admit(t,active,request,limit,startup_extra=0):
+def admit(t,active,request,limit,startup_extra=0,host_request=None):
  if len(active)>=min(8,limit):return False
  headroom=max(8,t['total']*.1)
  own={j['process_identity']['pid'] for j in active}
@@ -41,7 +73,8 @@ def admit(t,active,request,limit,startup_extra=0):
  foreign=max(0,t['used']-measured_own)
  # Full reservations account for growth of workers not yet at their peak.
  reserved=sum(j['reservation'] for j in active)
- return (reserved+request+foreign+startup_extra<=min(72,t['total']-headroom) and t['free']>=request+startup_extra+headroom and t['host_available']>=max(12,request*.8+6))
+ return (reserved+request+foreign+startup_extra<=min(72,t['total']-headroom) and t['free']>=request+startup_extra+headroom and
+  (host_admit(t,active,host_request) if host_request is not None else t['host_available']>=max(12,request*.8+6)))
 
 def failure_kind(text,returncode):
  s=text.lower()

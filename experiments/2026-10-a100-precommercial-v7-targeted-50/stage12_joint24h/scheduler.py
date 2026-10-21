@@ -1,7 +1,7 @@
 """One admission owner, existing GPU lock/predictions, restartable job leases."""
 from common import *
 import argparse,subprocess,signal,traceback,random
-from resources import telemetry,estimate,admit,failure_kind
+from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_gpu_reservation
 from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2
 STOP=False
 
@@ -59,12 +59,23 @@ def own_signal(j,sig):
 def reconcile(s):
  active=[]
  for j in s['active']:
+  if j.get('host_cgroup') and Path(j['host_cgroup']).exists():
+   from host_memory import snapshot
+   h=snapshot(j['host_cgroup']);j['host_memory']=h
+   c=read(ROOT/'jobs'/(j['id']+'.json'))['condition']
+   names=[c['validator']] if j['mode'] in ['evaluate','evaluate30'] else sorted(c['layers'])
+   peaks=read(ROOT/'host_memory_peaks.json',{});key=digest([j['mode'],sorted(names)])
+   peaks[key]=max(peaks.get(key,0),h['peak_gib']);atomic(ROOT/'host_memory_peaks.json',peaks)
+  if j.get('placement')=='full_gpu':
+   plan=read(ROOT/'attempts'/j['id']/str(j['attempt'])/'placement_ready.json')
+   if plan:j['host_reservation_gib']=max(6.,j.get('host_memory',{}).get('current_gib',0)*1.2+1)
   if same_process(j['process_identity']):active.append(j);continue
   if complete(j):s['completed'].append(j['id']);continue
   text=Path(j['log']).read_text(errors='replace')[-5000:] if Path(j['log']).exists() else ''
   exit=read(ROOT/'attempts'/j['id']/str(j['attempt'])/'exit.json',{})
   if exit.get('status')=='STOPPED':continue
-  kind=exit.get('kind') or (failure_kind(text,0) if exit or 'Traceback' in text else 'resource_or_interrupt')
+  kind=('oom' if j.get('host_memory',{}).get('events',{}).get('oom_kill',0) else
+   exit.get('kind') or (failure_kind(text,0) if exit or 'Traceback' in text else 'resource_or_interrupt'))
   s['failures'].append(dict(job=j['id'],kind=kind,at=time.time(),log=j['log'],error=text[-1500:]))
   attempts=s['attempts'].get(j['id'],0)+1;s['attempts'][j['id']]=attempts
   if kind=='code' or attempts>=3:s['blocked'].append(j['id'])
@@ -76,24 +87,33 @@ def reconcile(s):
 def launch(s,c,mode):
  jid=save_job(c,mode)
  if jid in s['blocked'] or jid in {j['id'] for j in s['active']} or time.time()<s['retry_after'].get(jid,0):return False
- t=telemetry();reservation=estimate(c,mode)
+ t=telemetry();reservation=estimate(c,mode);host_reservation=host_estimate(c,mode)
  from resources import resident_profile
  profile=resident_profile(c) if mode=='attack' else None
+ placement='visual_gpu'
+ full_reservation=full_gpu_reservation(c,reservation) if profile else None
+ # Spend spare VRAM on the unused BF16 weights to avoid replicated CPU backbones.
+ if full_reservation and admit(t,s['active'],full_reservation,s['worker_limit'],0,host_reservation):
+  reservation=full_reservation;placement='full_gpu'
  worker_cap=max(reservation-.2,profile['load_cap_GiB']) if profile else reservation-.2
  startup_extra=max(0,worker_cap-reservation)
- if not admit(t,s['active'],reservation,s['worker_limit'],startup_extra):return False
+ if not admit(t,s['active'],reservation,s['worker_limit'],startup_extra,host_reservation):return False
  # Recheck actual free memory immediately before admission.
- if not admit(telemetry(),s['active'],reservation,s['worker_limit'],startup_extra):return False
+ if not admit(telemetry(),s['active'],reservation,s['worker_limit'],startup_extra,host_reservation):return False
  if mode=='attack' and c['id'] not in s['admitted']:
   if len(s['admitted'])>=270:s['blocked'].append(jid);return False
   s['admitted'].append(c['id'])
  attempt=s['attempts'].get(jid,0);log=ROOT/'logs'/(jid+f'_{attempt}.log');log.parent.mkdir(parents=True,exist_ok=True)
  cmd=[sys.executable,str(HERE/'worker.py'),mode,'--job',jid,'--attempt',str(attempt)]
  env={**os.environ,'SUPPLEMENT_MEMORY_CAP_GIB':str(min(worker_cap,t['total']-1)),'V8_RESIDENT_LIMIT_GIB':str(max(0,reservation-3)),'V8_RESERVED_GIB':str(reservation),'V8_STEADY_CAP_GIB':str(reservation-.2) if profile else ''}
+ env['V8_HOST_CAP_GIB']=str(host_reservation)
+ env['V8_WEIGHT_PLACEMENT']=placement
  fd=int(os.environ['V8_ADMISSION_FD'])
  with log.open('a') as stream:p=subprocess.Popen(cmd,stdout=stream,stderr=subprocess.STDOUT,env=env,pass_fds=(fd,),start_new_session=True)
  identity=await_identity(p.pid,str(HERE/'worker.py'))
- s['active'].append(dict(id=jid,mode=mode,condition=c['id'],reservation=reservation,process_identity=identity,attempt=attempt,log=str(log),started=time.time()))
+ from host_memory import BASE
+ s['active'].append(dict(id=jid,mode=mode,condition=c['id'],reservation=reservation,host_reservation_gib=host_reservation,
+  host_cgroup=str(BASE/f"worker-{identity['pid']}-{identity['start']}"),placement=placement,process_identity=identity,attempt=attempt,log=str(log),started=time.time()))
  atomic(ROOT/'scheduler.json',s);print('V8 dispatch',jid,round(reservation,2),'GiB',flush=True);return True
 
 def run_stage2(s,deadline,count=50):
@@ -176,7 +196,7 @@ def main():
    if s['active']:time.sleep(3);continue
    s['state']='SMOKE_PASS';s['phase']='SMOKE';state_write(s);return 0
   else:
-   s['worker_limit']=min(8,max(s['worker_limit'],1+len(s['completed'])//3)) if not any(x['kind']=='oom' for x in s['failures']) else s['worker_limit']
+   s['worker_limit']=8 # Upper bound only; per-job physical RAM/VRAM reservation determines actual concurrency.
    phase,conditions=plan_next(s);pending=[]
    for c in conditions:
     if c['split']=='confirm':

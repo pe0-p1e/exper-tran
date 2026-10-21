@@ -160,6 +160,17 @@ def method_screen(fam,g):
 def plan_next(state):
  from ila_selection import conditions as diagnostics,done,smoke_done
  from selection import proxy_conditions,layer_conditions,score,top,uniform
+ locked=read(ROOT/'method_lock.json')
+ if locked:
+  # Runtime source amendments cannot reselect or rewrite an already frozen method.
+  if locked['stage2_cohort_sha256']!=sha(ROOT/'manifests/confirm.json'):raise RuntimeError('Frozen confirmation cohort changed')
+  confirm=[]
+  for fam in VALIDATORS:
+   for key,label in [('primary','selected'),('uniform','uniform')]:
+    layers=locked['families'][fam][key];legal(layers,VALIDATORS[fam])
+    confirm.append(reuse_make(fam,layers,label,split='confirm'))
+  missing=list({c['id']:c for c in confirm if not eval_done(c)}.values())
+  return ('INTEGRATED_CONFIRM50',missing) if missing else ('STAGE1_COMPLETE',[])
  # Reuse completed matched proxy/layer results; do not schedule historical full ablation.
  bases=diagnostics();missing=[c for c in bases if not attack_done(c)]
  if missing:return 'ILA_BASELINES',missing

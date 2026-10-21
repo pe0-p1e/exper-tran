@@ -7,6 +7,7 @@ def main():
  global STOP
  ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','evaluate30','calibrate','calibrate_resident','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
  check_lock();job=read(ROOT/'jobs'/(a.job+'.json'));c=job['condition'];legal(c['layers'],c['validator'])
+ os.environ['V8_JOB_ID']=a.job;os.environ['V8_ATTEMPT']=a.attempt
  dest=ROOT/'attempts'/a.job/a.attempt;dest.mkdir(parents=True,exist_ok=True)
  def sig(*_):
   global STOP
@@ -17,6 +18,10 @@ def main():
   while not ended.is_set():atomic(dest/'heartbeat.json',dict(at=time.time(),pid=os.getpid(),position=position.copy()));ended.wait(15)
  threading.Thread(target=heartbeat,daemon=True).start()
  try:
+  from host_memory import enforce
+  cap=float(os.environ['V8_HOST_CAP_GIB'])
+  containment=enforce(cap)
+  atomic(dest/'host_memory_cap.json',containment)
   from supplement_registry import install,memory_cap
   install();memory_cap()
   import torch
@@ -94,7 +99,7 @@ def bank(m):
 def load_models(c):
  import torch,gc
  from vision_features import VisionProxy
- result=[]
+ result=[];full_gpu=os.environ.get('V8_WEIGHT_PLACEMENT')=='full_gpu'
  for name,layers in c['layers'].items():
   with (ROOT/'model_initialization.lock').open('a') as h:
    fcntl.flock(h,fcntl.LOCK_EX)
@@ -102,15 +107,18 @@ def load_models(c):
    if m.layers!=layers:raise RuntimeError('Native visual block mismatch')
    from device_residency import install
    install(m)
-   m.to('cuda');model_fingerprint(m);bank(m);m.to('cpu');result.append(m);gc.collect();torch.cuda.empty_cache()
+   if full_gpu:m.model.to('cuda')
+   m.to('cuda');model_fingerprint(m);bank(m)
+   if not full_gpu:m.to('cpu')
+   result.append(m);gc.collect();torch.cuda.empty_cache()
  from device_residency import parameter_gib,may_reside
  total=sum(parameter_gib(m._v8_visual) for m in result)
  import torch
  free,total_gpu=torch.cuda.mem_get_info()
  reservation=float(os.environ.get('V8_RESERVED_GIB','16'))
- resident=may_reside(total,reservation,free/2**30,max(8,total_gpu/2**30*.1))
+ resident=full_gpu or may_reside(total,reservation,free/2**30,max(8,total_gpu/2**30*.1))
  atomic(ROOT/'residency_plans'/(c['id']+'.json'),dict(strategy='visual_resident_v2',models=list(c['layers']),visual_parameter_GiB=total,
-   reservation_GiB=reservation,resident=resident,free_GiB=free/2**30,language_parameters='BF16_CPU_unused_no_forward',steps_unchanged=True))
+   reservation_GiB=reservation,resident=resident,free_GiB=free/2**30,language_parameters='BF16_GPU_unused_no_forward' if full_gpu else 'BF16_CPU_unused_no_forward',steps_unchanged=True))
  for m in result:
   m._v8resident=resident
   if resident:m.to('cuda')
@@ -119,6 +127,10 @@ def load_models(c):
  steady_cap=os.environ.get('V8_STEADY_CAP_GIB')
  if steady_cap:
   torch.cuda.empty_cache();torch.cuda.set_per_process_memory_fraction(float(steady_cap)/(total_gpu/2**30))
+ if full_gpu:
+  import ctypes
+  gc.collect();ctypes.CDLL(None).malloc_trim(0)
+  atomic(ROOT/'attempts'/os.environ['V8_JOB_ID']/os.environ['V8_ATTEMPT']/'placement_ready.json',dict(full_BF16_parameters_GPU=True,no_language_forward=True))
  return result
 
 def tensor(r):
