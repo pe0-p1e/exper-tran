@@ -1,5 +1,5 @@
 {
-  "load_events": 526,
+  "load_events": 527,
   "all_pass": true,
   "latest": [
     {
@@ -90,7 +90,7 @@
       "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
       "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T10:08:26.736523+00:00",
+      "audited_utc": "2026-10-21T10:36:34.555349+00:00",
       "total_parameter_count": 2348347392,
       "floating_parameter_count": 2348347392,
       "parameter_counts_by_dtype": {
@@ -161,14 +161,14 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 4720989184,
-        "cuda_reserved_bytes": 5056233472,
-        "cuda_allocated_gib": 4.396763801574707,
-        "cuda_reserved_gib": 4.708984375
+        "cuda_allocated_bytes": 4696710144,
+        "cuda_reserved_bytes": 5014290432,
+        "cuda_allocated_gib": 4.374152183532715,
+        "cuda_reserved_gib": 4.669921875
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 526
+      "load_sequence": 527
     },
     {
       "model_name": "Gemma 4 E2B-it",
