@@ -1,5 +1,5 @@
 {
-  "load_events": 581,
+  "load_events": 585,
   "all_pass": true,
   "latest": [
     {
@@ -7,7 +7,7 @@
       "repo_id": "openai/clip-vit-large-patch14",
       "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T11:30:59.761018+00:00",
+      "audited_utc": "2026-10-21T11:54:55.144676+00:00",
       "total_parameter_count": 427616513,
       "floating_parameter_count": 427616513,
       "parameter_counts_by_dtype": {
@@ -83,14 +83,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 575
+      "load_sequence": 583
     },
     {
       "model_name": "InternVL3.5-2B-HF",
       "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
       "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T11:31:26.712174+00:00",
+      "audited_utc": "2026-10-21T11:55:01.100885+00:00",
       "total_parameter_count": 2348347392,
       "floating_parameter_count": 2348347392,
       "parameter_counts_by_dtype": {
@@ -161,21 +161,21 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 4712141824,
+        "cuda_allocated_bytes": 4709192704,
         "cuda_reserved_bytes": 5035261952,
-        "cuda_allocated_gib": 4.388524055480957,
+        "cuda_allocated_gib": 4.385777473449707,
         "cuda_reserved_gib": 4.689453125
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 577
+      "load_sequence": 584
     },
     {
       "model_name": "Gemma 4 E2B-it",
       "repo_id": "google/gemma-4-E2B-it",
       "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T11:31:14.200240+00:00",
+      "audited_utc": "2026-10-21T11:55:19.657487+00:00",
       "total_parameter_count": 5104297504,
       "floating_parameter_count": 5104297504,
       "parameter_counts_by_dtype": {
@@ -244,14 +244,14 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 10221598208,
+        "cuda_allocated_bytes": 10225530368,
         "cuda_reserved_bytes": 10290724864,
-        "cuda_allocated_gib": 9.519605159759521,
+        "cuda_allocated_gib": 9.523267269134521,
         "cuda_reserved_gib": 9.583984375
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 576
+      "load_sequence": 585
     },
     {
       "model_name": "Qwen3.5-2B",
@@ -343,7 +343,7 @@
       "repo_id": "Qwen/Qwen3.5-9B",
       "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T11:39:43.990085+00:00",
+      "audited_utc": "2026-10-21T11:54:26.286305+00:00",
       "total_parameter_count": 9409813744,
       "floating_parameter_count": 9409813744,
       "parameter_counts_by_dtype": {
@@ -421,7 +421,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 579
+      "load_sequence": 582
     },
     {
       "model_name": "InternVL3.5-8B-HF",

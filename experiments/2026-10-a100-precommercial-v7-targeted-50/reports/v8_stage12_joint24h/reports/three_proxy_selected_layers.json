@@ -1,0 +1,504 @@
+{
+  "complete": false,
+  "pending": 12,
+  "rows": [
+    {
+      "family": "qwen",
+      "split": "screen",
+      "strategy": "uniform4",
+      "condition": "V8_d49bc6897a65105d60",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          3,
+          7,
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 4,
+      "complete": true,
+      "hits": 8,
+      "N": 10,
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 8,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "seconds": 189.7188413143158,
+        "backwards": 1500,
+        "peak": 8.7578125
+      }
+    },
+    {
+      "family": "qwen",
+      "split": "screen",
+      "strategy": "independent_top2",
+      "condition": "V8_aa5c941f3cb8d5516f",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "qwen",
+      "split": "screen",
+      "strategy": "geometry_selected2",
+      "condition": "V8_57d0ac47711eba9b22",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "qwen",
+      "split": "screen",
+      "strategy": "independent_top3",
+      "condition": "V8_2bc365150258ea7de8",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "qwen",
+      "split": "screen",
+      "strategy": "geometry_selected3",
+      "condition": "V8_e52d828a315f13ac2b",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          3,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "internvl",
+      "split": "screen",
+      "strategy": "uniform4",
+      "condition": "V8_f925cb7ed04c3b7c13",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Gemma 4 E2B-it": [
+          3,
+          7,
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 4,
+      "complete": true,
+      "hits": 10,
+      "N": 10,
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 10,
+        "N": 10,
+        "minimum": 2,
+        "directions": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 206.17512369155884,
+        "backwards": 1500,
+        "peak": 8.48828125
+      }
+    },
+    {
+      "family": "internvl",
+      "split": "screen",
+      "strategy": "independent_top2",
+      "condition": "V8_387aca15fae19c9b05",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "internvl",
+      "split": "screen",
+      "strategy": "geometry_selected2",
+      "condition": "V8_de1caf622cdeea722d",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          17
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "internvl",
+      "split": "screen",
+      "strategy": "independent_top3",
+      "condition": "V8_ea1a8e7794e68f3b48",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          11,
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          11,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "internvl",
+      "split": "screen",
+      "strategy": "geometry_selected3",
+      "condition": "V8_383882a24fb242d08e",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          11,
+          14,
+          17
+        ],
+        "Gemma 4 E2B-it": [
+          1,
+          3,
+          15
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "gemma4",
+      "split": "screen",
+      "strategy": "uniform4",
+      "condition": "V8_04b95758d68a6db9a8",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 4,
+      "complete": true,
+      "hits": 9,
+      "N": 10,
+      "paired_vs_uniform": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "compute": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 2732.2850058078766,
+        "backwards": 1500,
+        "peak": 4.974609375
+      }
+    },
+    {
+      "family": "gemma4",
+      "split": "screen",
+      "strategy": "independent_top2",
+      "condition": "V8_c85fa0c2cd8e8161b6",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          11,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          14,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "gemma4",
+      "split": "screen",
+      "strategy": "geometry_selected2",
+      "condition": "V8_8bf3eee60cdd018b1b",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14
+        ],
+        "Qwen3.5-2B": [
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 2,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "gemma4",
+      "split": "screen",
+      "strategy": "independent_top3",
+      "condition": "V8_87cb2cfaedcdfb5717",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          11,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    },
+    {
+      "family": "gemma4",
+      "split": "screen",
+      "strategy": "geometry_selected3",
+      "condition": "V8_73a6db2e81d9ea6a6c",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          5,
+          14,
+          17
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          17
+        ]
+      },
+      "proxy_count": 3,
+      "layers_per_proxy": 3,
+      "complete": false,
+      "hits": null,
+      "N": 10,
+      "paired_vs_uniform": null,
+      "compute": null
+    }
+  ],
+  "not_a_2proxy_or_3total_tap_experiment": true,
+  "independent_ranking_not_assumed_joint_optimal": true,
+  "geometry_is_prescreen_not_mathematical_guarantee": true
+}
