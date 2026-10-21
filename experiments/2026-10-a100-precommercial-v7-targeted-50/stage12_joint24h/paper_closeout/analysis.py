@@ -38,7 +38,12 @@ def calculate():
                     with np.load(npz) as a:y=a['z'].reshape(-1,a['z'].shape[-1])
                     for proxy,layers in c['layers'].items():
                         for layer in layers:
-                            x=reference(proxy,layer);item=dict(condition=c['id'],proxy=proxy,layer=layer,target=target,N=len(x),CKA=cka(x,y),RSA=rsa(x,y),sample_ids='same ordered10classes x48reference IDs')
+                            key=C.digest([C.REG[proxy],layer,C.REG[target],'same ordered480 references'])
+                            cache=OUT/'cross_geometry_cache'/(key+'.json');item=C.read(cache)
+                            if item is None:
+                                x=reference(proxy,layer);item=dict(proxy=proxy,layer=layer,target=target,N=len(x),CKA=cka(x,y),RSA=rsa(x,y),sample_ids='same ordered10classes x48reference IDs')
+                                C.atomic(cache,item)
+                            item=dict(condition=c['id'],**item)
                             cross.append(item);geometry.append(item)
             def mean(key,values):
                 vals=[r[key] for r in values if r.get(key) is not None];return float(np.mean(vals)) if vals else None
@@ -188,6 +193,15 @@ def main(deadline):
             C.atomic(OUT/'analysis_error.json',dict(at=time.time(),error=str(e),traceback=traceback.format_exc()))
         finished=C.read(C.ROOT/'scheduler.json',{}).get('state')=='COMPLETE'
         if stop or finished or time.time()>=deadline-1800:
+            # A stop signal can precede the final atomic worker receipts. Drain only
+            # verified own leases, then recalculate/export those last measurements.
+            until=min(deadline,time.time()+600)
+            while time.time()<until:
+                own=C.read(C.ROOT/'scheduler.json',{}).get('active',[])
+                if not any(C.same_process(j['process_identity']) for j in own):break
+                time.sleep(3)
+            try:calculate();projections()
+            except Exception as e:C.atomic(OUT/'final_analysis_error.json',dict(error=str(e),at=time.time()))
             try:publish()
             except Exception as e:C.atomic(OUT/'publication_error.json',dict(error=str(e),at=time.time()))
             C.atomic(OUT/'analysis_driver_result.json',dict(status='CHECKPOINTED',at=time.time()));return
