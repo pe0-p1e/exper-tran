@@ -1,0 +1,226 @@
+{
+  "validator": "Gemma 4 E4B-it",
+  "development_only": true,
+  "used_for_selection": true,
+  "rows": [
+    {
+      "condition": "V8_1302a3c70a920d9a9c",
+      "layers": {
+        "InternVL3.5-2B-HF": [
+          14
+        ]
+      },
+      "proxy_count": 1,
+      "tap_count": 1,
+      "hits": 7,
+      "N": 10,
+      "directions": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "score": {
+        "hits": 7,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          1,
+          1,
+          2
+        ],
+        "seconds": 1518.8721520900726,
+        "backwards": 500,
+        "peak": 4.912109375
+      },
+      "paired_with_previous": null,
+      "evidence_sha256": "156c03bf5ec793be94001191d79088c65c78b863b5864f1352d2813c5d6e12c5"
+    },
+    {
+      "condition": "V8_0804406e1d56ce93f9",
+      "layers": {
+        "InternVL3.5-2B-HF": [
+          11,
+          14
+        ]
+      },
+      "proxy_count": 1,
+      "tap_count": 2,
+      "hits": 7,
+      "N": 10,
+      "directions": [
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      "score": {
+        "hits": 7,
+        "N": 10,
+        "minimum": 0,
+        "directions": [
+          0,
+          2,
+          1,
+          2,
+          2
+        ],
+        "seconds": 1338.5855178833008,
+        "backwards": 500,
+        "peak": 4.9140625
+      },
+      "paired_with_previous": {
+        "gained": 1,
+        "lost": 1
+      },
+      "evidence_sha256": "ad4db41646cd1835365686fa49e407fc5ce8e9a1302c8894e8925592d66355ff"
+    },
+    {
+      "condition": "V8_b995b713d868291b86",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14
+        ]
+      },
+      "proxy_count": 2,
+      "tap_count": 3,
+      "hits": 9,
+      "N": 10,
+      "directions": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 1362.5763728618622,
+        "backwards": 1000,
+        "peak": 4.93359375
+      },
+      "paired_with_previous": {
+        "gained": 2,
+        "lost": 0
+      },
+      "evidence_sha256": "2707149e46a50d0fd7f2b277727d337b659acc92286f7ba19aa98f451e85e29c"
+    },
+    {
+      "condition": "V8_e4d755260a585ffcf4",
+      "layers": {
+        "CLIP ViT-L/14": [
+          11
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          20
+        ]
+      },
+      "proxy_count": 2,
+      "tap_count": 4,
+      "hits": 9,
+      "N": 10,
+      "directions": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 1421.1831896305084,
+        "backwards": 1000,
+        "peak": 4.93359375
+      },
+      "paired_with_previous": {
+        "gained": 0,
+        "lost": 0
+      },
+      "evidence_sha256": "684f543c607d78c7421d316886c0e73596a5fa99bba98013a22e4b6c8eff2f95"
+    },
+    {
+      "condition": "V8_04b95758d68a6db9a8",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "tap_count": 12,
+      "hits": 9,
+      "N": 10,
+      "directions": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "score": {
+        "hits": 9,
+        "N": 10,
+        "minimum": 1,
+        "directions": [
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "seconds": 2732.2850058078766,
+        "backwards": 1500,
+        "peak": 4.974609375
+      },
+      "paired_with_previous": {
+        "gained": 0,
+        "lost": 0
+      },
+      "evidence_sha256": "19798a8ec8c4fa4ce11c63f457a56cf88c6345a81af67ca273e790efa680c9fc"
+    }
+  ],
+  "conclusion": "Three units match twelve-unit uniform9/10; fourth unit adds no success. Not a confirmed ASR improvement or proof of lower walltime.",
+  "actual_gradient_fusion": "mean layer losses within each proxy, then per-image L1 gradient normalization, then equal proxy mean"
+}

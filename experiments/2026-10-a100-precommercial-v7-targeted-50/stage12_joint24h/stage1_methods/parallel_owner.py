@@ -19,9 +19,11 @@ def research_pending(phase):
     try:
         verify_extension()
         import combo_selection as J
+        from stage1_methods.fixed_four import plan as fixed_four_plan
+        four_conditions,four_ready=fixed_four_plan()
         status,conditions=P.plan_next(J.source_geometry())
         P.report()
-        return conditions,status=='READY'
+        return list({c['id']:c for c in four_conditions+conditions}.values()),status=='READY' and four_ready
     except Exception as e:
         # Supplemental research failure cannot stop frozen primary confirmation/CLI.
         import traceback
