@@ -5,7 +5,7 @@ STOP=False
 
 def main():
  global STOP
- ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','evaluate30','calibrate','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','evaluate30','calibrate','calibrate_resident','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
  check_lock();job=read(ROOT/'jobs'/(a.job+'.json'));c=job['condition'];legal(c['layers'],c['validator'])
  dest=ROOT/'attempts'/a.job/a.attempt;dest.mkdir(parents=True,exist_ok=True)
  def sig(*_):
@@ -35,7 +35,7 @@ def main():
    from ila_selection import run
    run(c,position,lambda:STOP,smoke_only=a.mode=='ila_smoke')
   elif a.mode in ['evaluate','evaluate30']:evaluate(c,position,limit=30 if a.mode=='evaluate30' else None)
-  else:attack(c,position,calibrate=a.mode=='calibrate')
+  else:attack(c,position,calibrate='resident_v2' if a.mode=='calibrate_resident' else a.mode=='calibrate')
   atomic(dest/'exit.json',dict(status='STOPPED' if STOP else 'COMPLETE',at=time.time()))
  except BaseException as e:
   text=traceback.format_exc();(dest/'traceback.txt').write_text(text)
@@ -100,12 +100,25 @@ def load_models(c):
    fcntl.flock(h,fcntl.LOCK_EX)
    m=VisionProxy(name,[(l+.5)/REG[name]['expected_vision_depth'] for l in layers],role='v8_attack_proxy')
    if m.layers!=layers:raise RuntimeError('Native visual block mismatch')
+   from device_residency import install
+   install(m)
    m.to('cuda');model_fingerprint(m);bank(m);m.to('cpu');result.append(m);gc.collect();torch.cuda.empty_cache()
- total=sum(sum(p.numel()*p.element_size() for p in (m.model.model.vision_tower if m.spec['family']=='gemma4' else m.model).parameters()) for m in result)/2**30
- resident=total<=float(os.environ.get('V8_RESIDENT_LIMIT_GIB','16'))
+ from device_residency import parameter_gib,may_reside
+ total=sum(parameter_gib(m._v8_visual) for m in result)
+ import torch
+ free,total_gpu=torch.cuda.mem_get_info()
+ reservation=float(os.environ.get('V8_RESERVED_GIB','16'))
+ resident=may_reside(total,reservation,free/2**30,max(8,total_gpu/2**30*.1))
+ atomic(ROOT/'residency_plans'/(c['id']+'.json'),dict(strategy='visual_resident_v2',models=list(c['layers']),visual_parameter_GiB=total,
+   reservation_GiB=reservation,resident=resident,free_GiB=free/2**30,language_parameters='BF16_CPU_unused_no_forward',steps_unchanged=True))
  for m in result:
   m._v8resident=resident
   if resident:m.to('cuda')
+  from strict_model_audit import audit_loaded_model
+  audit_loaded_model(m.model,model_name=m.name,revision=m.spec['revision'],role='v8_visual_residency_proxy',repo_id=m.spec['repo_id'],output_dir=ROOT,vision_depth=m.depth)
+ steady_cap=os.environ.get('V8_STEADY_CAP_GIB')
+ if steady_cap:
+  torch.cuda.empty_cache();torch.cuda.set_per_process_memory_fraction(float(steady_cap)/(total_gpu/2**30))
  return result
 
 def tensor(r):
@@ -136,8 +149,9 @@ def attack(c,position,calibrate=False):
      if not torch.isfinite(g).all() or (g.abs().flatten(1).sum(1)==0).any():raise RuntimeError('Disconnected calibration gradient')
      measurements.append(dict(model=m.name,batch=size,allocated_gib=torch.cuda.max_memory_allocated()/2**30,reserved_gib=torch.cuda.max_memory_reserved()/2**30))
      del x,loss,g;torch.cuda.empty_cache()
-    m.to('cpu');gc.collect();torch.cuda.empty_cache()
-   atomic(ROOT/'calibration'/(c['id']+'.json'),dict(status='PASS',measurements=measurements,seconds=time.time()-began));return
+    if not m._v8resident:m.to('cpu')
+    gc.collect();torch.cuda.empty_cache()
+   atomic(ROOT/('calibration_resident_v2' if calibrate=='resident_v2' else 'calibration')/(c['id']+'.json'),dict(status='PASS',measurements=measurements,seconds=time.time()-began));return
   # Deliberately serial models within one image. Aggregate FP32 gradients only.
   for ix,r in enumerate(rr):
    if STOP:break
@@ -195,7 +209,7 @@ def attack(c,position,calibrate=False):
    for name,x in [('clean',clean[0]),('adv',adv[0])]:
     p=dest/(name+'.tmp.png');save_png_tensor(x,p);os.replace(p,dest/(name+'.png'))
    bound=assert_png_linf(dest/'clean.png',dest/'adv.png')
-   atomic(dest/'state.json',dict(status='COMPLETE',science=digest(scientific(c)),condition=c['id'],image_id=r['image_id'],transition=r['transition'],source=r['source'],target=r['target'],
+   atomic(dest/'state.json',dict(status='COMPLETE',execution_strategy='visual_resident_v2',science=digest(scientific(c)),condition=c['id'],image_id=r['image_id'],transition=r['transition'],source=r['source'],target=r['target'],
     models=list(c['layers']),layers=c['layers'],steps=c['steps'],seed=42,target_access=False,linf_png=bound,
     clean=str(dest/'clean.png'),adv=str(dest/'adv.png'),png_hashes={str(dest/(x+'.png')):sha(dest/(x+'.png')) for x in ['clean','adv']},
     semantic=semantic,visual_forward_counts=[dict(model=m.name,calls=m.forward_calls-before) for m,before in zip(models,counts_before)],seconds=time.time()-t0,peak_reserved_gib=torch.cuda.max_memory_reserved()/2**30,trace=traces,model_backward_calls=c['steps']*len(models)))

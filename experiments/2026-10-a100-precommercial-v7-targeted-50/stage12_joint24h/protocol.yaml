@@ -3,7 +3,7 @@ study: stage12_joint24h
 steps: 50
 pull: 0.5
 push: 0.5
-max_workers: 6
+max_workers: 8
 max_candidates: 270
 beam_width: 2
 candidate_depths: [0.125, 0.25, 0.5, 0.625, 0.75, 1.0]
@@ -28,3 +28,6 @@ ila_diagnostic_native_taps: all
 integrated_max_units: 4
 integrated_source_shortlist_per_parent: 2
 integrated_beam_width: 2
+
+# User2026-10-21: increase admission maximum8, vision-resident execution.
+device_placement: exact_visual_modules_GPU_unused_language_BF16_CPU

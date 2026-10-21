@@ -26,6 +26,7 @@ def save_job(c,mode):
 
 def complete(j):
  c=read(ROOT/'jobs'/(j['id']+'.json'))['condition']
+ if j['mode']=='calibrate_resident':return (ROOT/'calibration_resident_v2'/(c['id']+'.json')).exists()
  if j['mode']=='evaluate30':
   from stage1_methods.early_confirm import done
   return done(c)
@@ -76,15 +77,19 @@ def launch(s,c,mode):
  jid=save_job(c,mode)
  if jid in s['blocked'] or jid in {j['id'] for j in s['active']} or time.time()<s['retry_after'].get(jid,0):return False
  t=telemetry();reservation=estimate(c,mode)
- if not admit(t,s['active'],reservation,s['worker_limit']):return False
+ from resources import resident_profile
+ profile=resident_profile(c) if mode=='attack' else None
+ worker_cap=max(reservation-.2,profile['load_cap_GiB']) if profile else reservation-.2
+ startup_extra=max(0,worker_cap-reservation)
+ if not admit(t,s['active'],reservation,s['worker_limit'],startup_extra):return False
  # Recheck actual free memory immediately before admission.
- if not admit(telemetry(),s['active'],reservation,s['worker_limit']):return False
+ if not admit(telemetry(),s['active'],reservation,s['worker_limit'],startup_extra):return False
  if mode=='attack' and c['id'] not in s['admitted']:
   if len(s['admitted'])>=270:s['blocked'].append(jid);return False
   s['admitted'].append(c['id'])
  attempt=s['attempts'].get(jid,0);log=ROOT/'logs'/(jid+f'_{attempt}.log');log.parent.mkdir(parents=True,exist_ok=True)
  cmd=[sys.executable,str(HERE/'worker.py'),mode,'--job',jid,'--attempt',str(attempt)]
- env={**os.environ,'SUPPLEMENT_MEMORY_CAP_GIB':str(min(reservation-.2,t['total']-1)),'V8_RESIDENT_LIMIT_GIB':str(max(2,reservation-7))}
+ env={**os.environ,'SUPPLEMENT_MEMORY_CAP_GIB':str(min(worker_cap,t['total']-1)),'V8_RESIDENT_LIMIT_GIB':str(max(0,reservation-3)),'V8_RESERVED_GIB':str(reservation),'V8_STEADY_CAP_GIB':str(reservation-.2) if profile else ''}
  fd=int(os.environ['V8_ADMISSION_FD'])
  with log.open('a') as stream:p=subprocess.Popen(cmd,stdout=stream,stderr=subprocess.STDOUT,env=env,pass_fds=(fd,),start_new_session=True)
  identity=await_identity(p.pid,str(HERE/'worker.py'))
@@ -162,16 +167,16 @@ def main():
    stop_stage2()
    for j in s['active']:own_signal(j,signal.SIGTERM)
    s['state']='PARTIAL_DEADLINE';state_write(s);break
-  calibrations=[c for c in smokes if not (ROOT/'calibration'/(c['id']+'.json')).exists()]
+  calibrations=[c for c in smokes if not (ROOT/'calibration_resident_v2'/(c['id']+'.json')).exists()]
   smoke_attacks=[c for c in smokes if not attack_done(c)]
-  if calibrations:phase='CALIBRATION';pending=[(c,'calibrate') for c in calibrations]
+  if calibrations:phase='CALIBRATION';pending=[(c,'calibrate_resident') for c in calibrations]
   elif smoke_attacks:phase='SMOKE';pending=[(c,'attack') for c in smoke_attacks]
   elif any(not eval_done(c) for c in smokes):phase='SMOKE_NATIVE_VALIDATION';pending=[(c,'evaluate') for c in smokes if not eval_done(c)]
   elif a.smoke_only:
    if s['active']:time.sleep(3);continue
    s['state']='SMOKE_PASS';s['phase']='SMOKE';state_write(s);return 0
   else:
-   s['worker_limit']=min(6,max(s['worker_limit'],1+len(s['completed'])//3)) if not any(x['kind']=='oom' for x in s['failures']) else s['worker_limit']
+   s['worker_limit']=min(8,max(s['worker_limit'],1+len(s['completed'])//3)) if not any(x['kind']=='oom' for x in s['failures']) else s['worker_limit']
    phase,conditions=plan_next(s);pending=[]
    for c in conditions:
     if c['split']=='confirm':
