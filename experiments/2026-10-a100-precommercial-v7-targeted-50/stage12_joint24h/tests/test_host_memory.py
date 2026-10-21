@@ -5,6 +5,9 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import resources as R
 
 class HostMemoryTests(unittest.TestCase):
+ def test_spare_host_ram_favors_vision_only_gpu(self):
+  self.assertFalse(R.prefer_full_gpu(dict(host_total=118,host_available=106),20))
+  self.assertTrue(R.prefer_full_gpu(dict(host_total=118,host_available=35),20))
  def test_future_loading_growth_is_reserved(self):
   jobs=[dict(host_reservation_gib=20,process_identity=dict(pid=1))]
   with patch.object(R,'proc_rss_gib',return_value=2):

@@ -38,6 +38,11 @@ def full_gpu_reservation(c,base):
  # Deliberately overestimate by adding all full weights to the vision-calibrated reservation.
  return base+sum(weights[n] for n in c['layers'])*1.1
 
+def prefer_full_gpu(t,host_request):
+ # CPU offload is the default while RAM is plentiful: unused LM weights must
+ # not consume scarce GPU admission slots ahead of runnable vision work.
+ return t['host_available'] < 2*host_request+max(12,t['host_total']*.1)
+
 def host_admit(t,active,request):
  reserve=max(12,t['host_total']*.1)
  caps=sum(j.get('host_reservation_gib',proc_rss_gib(j['process_identity']['pid'])+4) for j in active)

@@ -1,7 +1,7 @@
 """One admission owner, existing GPU lock/predictions, restartable job leases."""
 from common import *
 import argparse,subprocess,signal,traceback,random
-from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_gpu_reservation
+from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_gpu_reservation,prefer_full_gpu
 from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2
 STOP=False
 
@@ -92,8 +92,8 @@ def launch(s,c,mode):
  profile=resident_profile(c) if mode=='attack' else None
  placement='visual_gpu'
  full_reservation=full_gpu_reservation(c,reservation) if profile else None
- # Spend spare VRAM on the unused BF16 weights to avoid replicated CPU backbones.
- if full_reservation and admit(t,s['active'],full_reservation,s['worker_limit'],0,host_reservation):
+ # Favor more vision jobs via explicit CPU language offload when host RAM allows.
+ if full_reservation and prefer_full_gpu(t,host_reservation) and admit(t,s['active'],full_reservation,s['worker_limit'],0,host_reservation):
   reservation=full_reservation;placement='full_gpu'
  worker_cap=max(reservation-.2,profile['load_cap_GiB']) if profile else reservation-.2
  startup_extra=max(0,worker_cap-reservation)
