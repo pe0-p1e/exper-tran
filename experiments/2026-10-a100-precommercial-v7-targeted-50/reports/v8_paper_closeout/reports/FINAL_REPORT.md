@@ -1,6 +1,6 @@
 # Final experiment closeout
 
-Updated UTC: 2026-10-21 19:02:45
+Updated UTC: 2026-10-21 19:18:27
 
 GPT50 is USED FOR SELECTION by explicit user instruction. Final150 is separate; final outcomes cannot change frozen settings.
 Models: GPT-6.1 Sol, GPT-6 Sol, GPT-5.6 Sol, all low; no Astra, no paid API fallback.
@@ -25,7 +25,7 @@ Pure PP, BF16 unquantized,50steps,16/255,DI,equal per-image L1-normalized proxy 
 ## ratio30: PARTIAL
 - gpt-6.1-sol / pull_0.25: 3 hits, 30/30 completed; ASR=0.1
 - gpt-6.1-sol / pull_0.5: 19 hits, 30/30 completed; ASR=0.6333333333333333
-- gpt-6.1-sol / pull_0.75: 16 hits, 28/30 completed; ASR=None
+- gpt-6.1-sol / pull_0.75: 17 hits, 30/30 completed; ASR=0.5666666666666667
 - gpt-6.1-sol / pull_1.0: 17 hits, 30/30 completed; ASR=0.5666666666666667
 
 Missing measurements remain N/A, never zero. Closed-model target DeltaR/CKA/RSA are unavailable. Correlations are exploratory and correlated across shared images/models. No causality claim.
