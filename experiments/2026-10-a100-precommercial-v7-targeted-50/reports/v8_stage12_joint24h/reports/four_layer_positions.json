@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "pending": 1,
+  "pending": 2,
   "rows": [
     {
       "family": "qwen",
@@ -606,9 +606,95 @@
       "proxy_count": 3,
       "taps_per_proxy": 4,
       "total_taps": 12,
+      "complete": true,
+      "hits": 9,
+      "N": 10,
+      "ASR": 0.9,
+      "directions": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "paired": {
+        "gained": 0,
+        "lost": 0,
+        "net": 0
+      },
+      "seconds": 4052.5048809051514,
+      "backwards": 1500,
+      "peak_GiB": 4.9765625
+    },
+    {
+      "family": "gemma4",
+      "split": "explore",
+      "scheme": "uniform_quartiles",
+      "condition": "V8_c2efb191dbc9b217f3",
+      "layers": {
+        "CLIP ViT-L/14": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "Qwen3.5-2B": [
+          5,
+          11,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          5,
+          11,
+          17,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "taps_per_proxy": 4,
+      "total_taps": 12,
       "complete": false,
       "hits": null,
-      "N": 10,
+      "N": 30,
+      "ASR": null,
+      "directions": null,
+      "paired": null,
+      "seconds": null,
+      "backwards": null,
+      "peak_GiB": null
+    },
+    {
+      "family": "gemma4",
+      "split": "explore",
+      "scheme": "shifted_quartiles",
+      "condition": "V8_fc3bff189f33d1d586",
+      "layers": {
+        "CLIP ViT-L/14": [
+          2,
+          8,
+          14,
+          20
+        ],
+        "Qwen3.5-2B": [
+          2,
+          8,
+          14,
+          20
+        ],
+        "InternVL3.5-2B-HF": [
+          2,
+          8,
+          14,
+          20
+        ]
+      },
+      "proxy_count": 3,
+      "taps_per_proxy": 4,
+      "total_taps": 12,
+      "complete": false,
+      "hits": null,
+      "N": 30,
       "ASR": null,
       "directions": null,
       "paired": null,
