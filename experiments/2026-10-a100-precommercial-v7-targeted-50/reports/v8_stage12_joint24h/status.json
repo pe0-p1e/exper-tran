@@ -1,77 +1,8 @@
 {
-  "at": 1792590319.785745,
-  "state": "RUNNING",
+  "at": 1792590564.830994,
+  "state": "BLOCKED_REQUIRES_INTERVENTION",
   "stage": "STAGE2_AND_STAGE1_RESEARCH",
-  "active": [
-    {
-      "id": "V8_86f5a983236ec38bdf_attack",
-      "mode": "attack",
-      "condition": "V8_86f5a983236ec38bdf",
-      "reservation": 7.568359375,
-      "host_reservation_gib": 24.049282455444335,
-      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-471228-26000608",
-      "placement": "visual_gpu",
-      "process_identity": {
-        "pid": 471228,
-        "start": "26000608",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_86f5a983236ec38bdf_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_86f5a983236ec38bdf_attack_0.log",
-      "started": 1792590145.4551494,
-      "host_memory": {
-        "path": "/sys/fs/cgroup/v8-joint-selection/worker-471228-26000608",
-        "current_gib": 22.843780517578125,
-        "peak_gib": 22.847198486328125,
-        "max_gib": 24.04928207397461,
-        "events": {
-          "low": 0,
-          "high": 487,
-          "max": 0,
-          "oom": 0,
-          "oom_kill": 0,
-          "oom_group_kill": 0
-        }
-      },
-      "position_signature": "f450d9856b88cb3989bd97360cc0eb35ac8eb8b0b9ff1f61076cac5835f82917",
-      "last_progress": 1792590296.1614578
-    },
-    {
-      "id": "V8_1c9c3a5e9e04d7996f_attack",
-      "mode": "attack",
-      "condition": "V8_1c9c3a5e9e04d7996f",
-      "reservation": 5.141015625,
-      "host_reservation_gib": 16.592900466918945,
-      "host_cgroup": "/sys/fs/cgroup/v8-joint-selection/worker-471583-26012704",
-      "placement": "visual_gpu",
-      "process_identity": {
-        "pid": 471583,
-        "start": "26012704",
-        "command": "/home/ubuntu/exper-tran/.venv-a100/bin/python /home/ubuntu/exper-tran-v8/experiments/2026-10-a100-precommercial-v7-targeted-50/stage12_joint24h/worker.py attack --job V8_1c9c3a5e9e04d7996f_attack --attempt 0 ",
-        "state": "R"
-      },
-      "attempt": 0,
-      "log": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/logs/V8_1c9c3a5e9e04d7996f_attack_0.log",
-      "started": 1792590266.4123015,
-      "host_memory": {
-        "path": "/sys/fs/cgroup/v8-joint-selection/worker-471583-26012704",
-        "current_gib": 11.841781616210938,
-        "peak_gib": 11.84527587890625,
-        "max_gib": 16.592899322509766,
-        "events": {
-          "low": 0,
-          "high": 0,
-          "max": 0,
-          "oom": 0,
-          "oom_kill": 0,
-          "oom_group_kill": 0
-        }
-      },
-      "position_signature": "4d34bb5674c2d0160362116e13552b7740ea3a45cc3c6f8fd5239d5a230305b3",
-      "last_progress": 1792590309.59701
-    }
-  ],
+  "active": [],
   "failures": [
     {
       "job": "V8_e52d828a315f13ac2b_attack",
@@ -104,24 +35,15 @@
   ],
   "gpu": {
     "total": 80.0,
-    "used": 8.0908203125,
-    "free": 71.162109375,
-    "utilization": 98.0,
-    "processes": [
-      {
-        "pid": 471228,
-        "gib": 5.203125
-      },
-      {
-        "pid": 471583,
-        "gib": 2.876953125
-      }
-    ],
-    "host_available": 85.79778671264648,
+    "used": 0.0,
+    "free": 79.251953125,
+    "utilization": 0.0,
+    "processes": [],
+    "host_available": 113.68306732177734,
     "host_total": 118.00906753540039,
     "host_cgroup": {
       "path": "/sys/fs/cgroup/v8-joint-selection",
-      "current_gib": 85.68263626098633,
+      "current_gib": 57.96108627319336,
       "peak_gib": 100.71051406860352,
       "max_gib": 106.00906753540039,
       "events": {
@@ -134,9 +56,9 @@
       }
     }
   },
-  "remaining_hours": 4.889797039230665,
-  "conditions_admitted": 268,
-  "completed_jobs": 547,
+  "remaining_hours": 4.821728914380073,
+  "conditions_admitted": 270,
+  "completed_jobs": 555,
   "max_workers": 8,
   "method_frozen": true,
   "stage2": {

@@ -1,6 +1,11 @@
 {
-  "complete_pairs": 87,
+  "complete_pairs": 88,
   "pending": [
+    {
+      "condition": "V8_414176b357b243a41e",
+      "status": "PENDING_OR_INVALID",
+      "reason": "('{\"CLS\": 0, \"DI\": true, \"RNG\": \"sha256(seed,image_id,stream); individual forward per image independent of microbatch\", \"alpha\": 0.00392156862745098, \"epsilon\": 0.06274509803921569, \"family\": \"gemma4\", \"fusion\": \"equal_per_image_L1_proxy_gradient_mean\", \"layer_reduction\": \"mean_before_proxy_normalization\", \"momentum\": 1.0, \"parameter_dtype\": \"bfloat16\", \"patch\": 0, \"pull\": 0.5, \"push\": 0.5, \"seed\": 42, \"split\": \"screen\", \"steps\": 50, \"validator\": \"Gemma 4 E4B-it\", \"version\": \"8.1\"}', (('CLIP ViT-L/14', 21),))"
+    },
     {
       "condition": "V8_9ef9f831c9c885c30a",
       "status": "PENDING_OR_INVALID",
