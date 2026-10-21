@@ -1,0 +1,7689 @@
+{
+  "policy": {
+    "version": "integrated_selection_v1",
+    "shortlist_structure": "one resident-model tap and one new-model unit when available",
+    "max_units": 4,
+    "beam_width": 2,
+    "shortlist_per_parent": 2,
+    "source_pool": "ILA latest-peak plus best two positive one-step PP gains/model; max3/model",
+    "shortlist": "positive source gain * (1+CKA novelty) * (1+gradient residual novelty) * (1-negative-dot fraction) / predicted marginal seconds",
+    "no_peak": "explicit source-gain fallback, never claim an ILA peak",
+    "search": "FDA-inspired actual conditional attacks on bounded source shortlist; two Pareto beam states",
+    "final_tolerance_pp": 5,
+    "ablation_stage": 3,
+    "final_target_feedback": false
+  },
+  "inputs": {
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/d0780d24c0d094220a.json": "6b84e9939a35f0511ec4a96243de8bfa3392e0a8ffc820cc8c3c0cd803bbbe07",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/3a71a6fbc523d04811.json": "bc1004d4747fae7301f27fb81295c78ea09bc98f4a08e128de9a749c5be0d644",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/3b365b382d33444259.json": "906f8ef9f621260d0d8d50a3af54905ce7900e42cdec21d53c4e87b24b0d688a",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/755cf8466016b50c2e.json": "cca1e6ee9c3980e9a1e4b7786b67d3111f51eec272057ff0ba16969d0baa8e59",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/7b4d41ea6c7794abb7.json": "2b603d85ed7cf6b533618cd492aebd5148c78712487a8020df361196bf797f39",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/8deb1b83e0d4d47607.json": "a53e46fd8ae77867536329d80305454f458e5e8fe26d37e9824233b9695db67b",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/3d2812b5292cc3de07.json": "79bf8b0f41a79207b4bafcbc3840b3532aa030c5f68eca82f9f1eae79a6d0a94",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/f3c847f4f41e44d877.json": "873a3287e4a162e3d38deb0d34dcb820351c8f4f73e5c887f2f47d60c2540d75",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/0befd5c17c9e989203.json": "93ab21adabddb7a782eeebc95e66b8e3349a48310e6efb356c61e4f74b457e6c",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/375bdd50aa6f/c75cdb0aec1101b606.json": "02138773dfcea145132f4069404f21d525c84e6bb1bd077ca989ad5514e0fe5f",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/d0780d24c0d094220a.json": "638722fc58032688a366e18de11340d8f4e69902b38f82d9968c2628b302e9a1",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/3a71a6fbc523d04811.json": "6f638e41726014404424b4f90fa4638e53fcc0a1f8b224d8290ed13032038d90",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/3b365b382d33444259.json": "abfc4bd496ecfde62a128cf4a2ee92acc42dde7c0323d63a5b12fc4eb32ab2b3",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/755cf8466016b50c2e.json": "0285c764fcd92b470ceece7342d2c6b361cf08e063b1e2b44c892f91ddc76b2d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/7b4d41ea6c7794abb7.json": "be561ddf4da4af066e395d0837b4ca9b2db2569cbce6703efa1dee3cbfcc2339",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/8deb1b83e0d4d47607.json": "f1c8f6c8e8e9895338d0d5d5bcb9c0d9a1680af09390f5bea344a0845a4800e9",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/3d2812b5292cc3de07.json": "3a8ebe35eaf839903045310224ac37571a42b90116d1def82ca1a88b8c0ef173",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/f3c847f4f41e44d877.json": "37ae6b745948bb4d4e8e6868ba2e6dc5445df22f3fc3d7573da5bec1b8e7403e",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/0befd5c17c9e989203.json": "6091fd9d5f262e8767454a0988aa2647edf089c8ccde168d8bb108ef7fcab5b7",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/2eca981ec284/c75cdb0aec1101b606.json": "6e7da605baa6e9765b2d247130762556870ea95645cd6eee6edd2181f31e14c4",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/d0780d24c0d094220a.json": "e62613d61c6d552d05314e77abea07fe06453d63de0dd7ef20ff1103493dfc0a",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/3a71a6fbc523d04811.json": "015c1ccfc96af884ac16ed54e83028cdc20324f23f7a6b0bd9f35ebb50b821dc",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/3b365b382d33444259.json": "a3aa19ab2a44dc5a14168acc21c85d99eb73fb4bd9854eb78dc0116b99a17c1d",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/755cf8466016b50c2e.json": "d4b96d9bcb81b7f741d261a203e5951b9b8c6cb0d49c6cf3e2b13a219afc70ad",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/7b4d41ea6c7794abb7.json": "f11944e2cdc7dcac488d3d2e9c6d353cdb289cb4e63904198b885a24648f8aa6",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/8deb1b83e0d4d47607.json": "3fb6dd9e5587bec3bea1b2a97fc736d6f022210ffa4b9ccf0893bfbe460917f3",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/3d2812b5292cc3de07.json": "de68a8d045083fafb04ea2ea2b55c1ee676758622de88863a73ebf74c13e2ac0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/f3c847f4f41e44d877.json": "3852e1c0aebb8640178c97cd24823b2b7346670ec13e5fbd54e10170b35e7314",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/0befd5c17c9e989203.json": "e6d291fcb5c64f28c34aca4a49e7e12e3bd6e863f32e90faaf7d4e1d5510a6b8",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/453cab2efaae/c75cdb0aec1101b606.json": "4756abc15ec234cac23bc3f45419299472e75c07a39860d410406ab8b07ddb56",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/d0780d24c0d094220a.json": "d1f22ae6e900fd406f966c49c25a85a35778ff6818cfe35a4f9b5771f6ac6300",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/3a71a6fbc523d04811.json": "d0561d8218c958bffc3c7beb29644b0e49f0226188b1edc0616b81545d6337f9",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/3b365b382d33444259.json": "5251ee2984ee8a3f3cdcc6404f2581d4f13cbe370c07767192b3622b5a68769f",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/755cf8466016b50c2e.json": "4e3a95eb33a3fd90ed311f2ed867830b266cc86a1511e3092c159f930ccccec4",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/7b4d41ea6c7794abb7.json": "6b738bec052895baf2ac55f2658da09bba09a3bf1f2af5f9b212c61e97a95ff0",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/8deb1b83e0d4d47607.json": "591579229bddc5bc75118e06f7beeaf78fba7411ad207adbe724427e5584d6d6",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/3d2812b5292cc3de07.json": "46d55a85a602a2204cba19b61a5a4b30faf1c11bde071d4a4e0b0f6bc7da4809",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/f3c847f4f41e44d877.json": "0e3c3fbbc00bcb0ece7fd1587cc7d046b0339827b33f5c9b40ed6a4542a232b9",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/0befd5c17c9e989203.json": "507fba166281d97b6e5f243ed97ff84144321c0e146ff51fcee706713c1acc6e",
+    "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/selection_gradients/d0d3bf3394bc/c75cdb0aec1101b606.json": "1eb53f82efc6436f2d4e78fda4d1de68d938abf5a3a2aa52ea97c65071400258"
+  },
+  "source_only": true,
+  "units": [
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 0,
+      "quality": 0.008103305101394653,
+      "seconds": 0.07673680782318115
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 2,
+      "quality": 0.008681017160415649,
+      "seconds": 0.06852128505706787
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 5,
+      "quality": 0.020070213079452514,
+      "seconds": 0.07192058563232422
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 11,
+      "quality": 0.04425390958786011,
+      "seconds": 0.07905817031860352
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 14,
+      "quality": 0.02977333068847656,
+      "seconds": 0.08144006729125977
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 17,
+      "quality": 0.042862462997436526,
+      "seconds": 0.08514800071716308
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 21,
+      "quality": 0.046798688173294065,
+      "seconds": 0.09216158390045166
+    },
+    {
+      "model": "CLIP ViT-L/14",
+      "layer": 23,
+      "quality": 0.022266334295272826,
+      "seconds": 0.09399456977844238
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 1,
+      "quality": 0.0009037613868713379,
+      "seconds": 0.18256120681762694
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 3,
+      "quality": 0.000985872745513916,
+      "seconds": 0.22534542083740233
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 4,
+      "quality": 0.0017014026641845703,
+      "seconds": 0.19413397312164307
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 7,
+      "quality": 0.0005286335945129395,
+      "seconds": 0.21758713722229003
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 9,
+      "quality": 0.0005820691585540771,
+      "seconds": 0.21818344593048095
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 11,
+      "quality": 0.0006599187850952149,
+      "seconds": 0.23976507186889648
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 14,
+      "quality": 0.0012012362480163575,
+      "seconds": 0.2465510606765747
+    },
+    {
+      "model": "Gemma 4 E2B-it",
+      "layer": 15,
+      "quality": 0.0034270107746124266,
+      "seconds": 0.2518560171127319
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 2,
+      "quality": 0.00409737229347229,
+      "seconds": 0.0667407751083374
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 5,
+      "quality": 0.012594574689865112,
+      "seconds": 0.060185599327087405
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 11,
+      "quality": 0.04396888613700867,
+      "seconds": 0.06506052017211914
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 14,
+      "quality": 0.05154171586036682,
+      "seconds": 0.07058696746826172
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 17,
+      "quality": 0.04354215860366821,
+      "seconds": 0.06890432834625244
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 20,
+      "quality": 0.03296254873275757,
+      "seconds": 0.07035481929779053
+    },
+    {
+      "model": "InternVL3.5-2B-HF",
+      "layer": 23,
+      "quality": 0.012998425960540771,
+      "seconds": 0.07159554958343506
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 0,
+      "quality": 0.001330810785293579,
+      "seconds": 0.12531354427337646
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 2,
+      "quality": 0.0053864061832427975,
+      "seconds": 0.10195674896240234
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 5,
+      "quality": 0.012238234281539917,
+      "seconds": 0.10027287006378174
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 10,
+      "quality": 0.01516040563583374,
+      "seconds": 0.10692174434661865
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 11,
+      "quality": 0.01605549454689026,
+      "seconds": 0.1093334674835205
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 14,
+      "quality": 0.023373132944107054,
+      "seconds": 0.10919668674468994
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 17,
+      "quality": 0.026119744777679442,
+      "seconds": 0.11679813861846924
+    },
+    {
+      "model": "Qwen3.5-2B",
+      "layer": 23,
+      "quality": 6.616115570068359e-06,
+      "seconds": 0.12991020679473878
+    }
+  ],
+  "pairs": [
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "CKA": 0.8440982638792277,
+      "RSA": 0.8423790170852181,
+      "gradient_cos": 0.25459107756614685,
+      "gradient_abs_cos": 0.25459107756614685,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "CKA": 0.596730103526974,
+      "RSA": 0.6270609896215547,
+      "gradient_cos": 0.10464409738779068,
+      "gradient_abs_cos": 0.10464409738779068,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "CKA": 0.43153035341782187,
+      "RSA": 0.40794239521245435,
+      "gradient_cos": 0.018961714580655098,
+      "gradient_abs_cos": 0.022904209792613983,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "CKA": 0.3177068495025838,
+      "RSA": 0.2752135863055383,
+      "gradient_cos": 0.004034566227346659,
+      "gradient_abs_cos": 0.00847936887294054,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "CKA": 0.2421128790271944,
+      "RSA": 0.20673997719346082,
+      "gradient_cos": 0.005195849575102329,
+      "gradient_abs_cos": 0.011480952613055706,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "CKA": 0.17425581354313716,
+      "RSA": 0.06089577062788392,
+      "gradient_cos": 0.002254724968224764,
+      "gradient_abs_cos": 0.009487565606832504,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.1958182912083543,
+      "RSA": 0.13766196717048915,
+      "gradient_cos": 0.00024711285368539393,
+      "gradient_abs_cos": 0.008825677447021008,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.7822776802518255,
+      "RSA": 0.7031884533956405,
+      "gradient_cos": 0.06275252997875214,
+      "gradient_abs_cos": 0.09568633884191513,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.7911842823310952,
+      "RSA": 0.7115771418969792,
+      "gradient_cos": 0.05286649614572525,
+      "gradient_abs_cos": 0.05286649614572525,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.7946901967762137,
+      "RSA": 0.7070735019292331,
+      "gradient_cos": 0.023615702986717224,
+      "gradient_abs_cos": 0.023615702986717224,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.6385041775335647,
+      "RSA": 0.5929204736915079,
+      "gradient_cos": 0.01760893687605858,
+      "gradient_abs_cos": 0.01760893687605858,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.5590314426505218,
+      "RSA": 0.535364246341608,
+      "gradient_cos": 0.01338379830121994,
+      "gradient_abs_cos": 0.01338379830121994,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.4514560109629637,
+      "RSA": 0.4382578621215193,
+      "gradient_cos": 0.0054249390959739685,
+      "gradient_abs_cos": 0.006933207157999277,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.3270993350357716,
+      "RSA": 0.3243918804750088,
+      "gradient_cos": 0.00029358724714256823,
+      "gradient_abs_cos": 0.0048508308827877045,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.2619498786333965,
+      "RSA": 0.2570713656033693,
+      "gradient_cos": -0.0007667432655580342,
+      "gradient_abs_cos": 0.003614098532125354,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.8794262951646368,
+      "RSA": 0.85772083510843,
+      "gradient_cos": 0.11861131340265274,
+      "gradient_abs_cos": 0.11861131340265274,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.70103606966586,
+      "RSA": 0.7135579492361175,
+      "gradient_cos": 0.046675026416778564,
+      "gradient_abs_cos": 0.046675026416778564,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.551521516297605,
+      "RSA": 0.5170078780790288,
+      "gradient_cos": 0.011033196933567524,
+      "gradient_abs_cos": 0.011033196933567524,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.42160157218781663,
+      "RSA": 0.38926291809305935,
+      "gradient_cos": 0.005251344759017229,
+      "gradient_abs_cos": 0.006797169800847769,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.3264036938442841,
+      "RSA": 0.35524260700938004,
+      "gradient_cos": 0.00203627347946167,
+      "gradient_abs_cos": 0.004491395317018032,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.2739977312701746,
+      "RSA": 0.3005830873932738,
+      "gradient_cos": 0.0008471920154988766,
+      "gradient_abs_cos": 0.003698547137901187,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.2617019154431537,
+      "RSA": 0.26338511187268876,
+      "gradient_cos": 0.0004418289754539728,
+      "gradient_abs_cos": 0.004406576044857502,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.8360611594443994,
+      "RSA": 0.800543149829309,
+      "gradient_cos": 0.13988766074180603,
+      "gradient_abs_cos": 0.13988766074180603,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.8212036164845212,
+      "RSA": 0.7759904342457885,
+      "gradient_cos": 0.120139479637146,
+      "gradient_abs_cos": 0.120139479637146,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.8108575860485213,
+      "RSA": 0.7525057180385442,
+      "gradient_cos": 0.04473615437746048,
+      "gradient_abs_cos": 0.04473615437746048,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.7787574595451392,
+      "RSA": 0.6886991873349608,
+      "gradient_cos": 0.004147191997617483,
+      "gradient_abs_cos": 0.005465516354888678,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.7770270537019999,
+      "RSA": 0.6821713302609717,
+      "gradient_cos": 0.0030303741805255413,
+      "gradient_abs_cos": 0.004502379335463047,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.7779186115346538,
+      "RSA": 0.6773773871013122,
+      "gradient_cos": 0.003581919940188527,
+      "gradient_abs_cos": 0.00543806841596961,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.706175732687744,
+      "RSA": 0.618728989027514,
+      "gradient_cos": 0.0015275190817192197,
+      "gradient_abs_cos": 0.005469778086990118,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.37300958322797706,
+      "RSA": 0.3148285656859488,
+      "gradient_cos": 0.0014750262489542365,
+      "gradient_abs_cos": 0.006770305335521698,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "CKA": 0.8836920812439718,
+      "RSA": 0.8733211558659236,
+      "gradient_cos": 0.266886830329895,
+      "gradient_abs_cos": 0.266886830329895,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "CKA": 0.633359786844799,
+      "RSA": 0.5522081883014882,
+      "gradient_cos": 0.025938883423805237,
+      "gradient_abs_cos": 0.03850795328617096,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "CKA": 0.47825445138617856,
+      "RSA": 0.37144520139442605,
+      "gradient_cos": 0.0001960136869456619,
+      "gradient_abs_cos": 0.015487047843635082,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "CKA": 0.37139752877096655,
+      "RSA": 0.2965740382930281,
+      "gradient_cos": 0.006660802755504847,
+      "gradient_abs_cos": 0.020455511286854744,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "CKA": 0.27267449019523604,
+      "RSA": 0.12352594248075276,
+      "gradient_cos": -0.003727333154529333,
+      "gradient_abs_cos": 0.012213194742798805,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.30653285514998035,
+      "RSA": 0.2192815768584731,
+      "gradient_cos": -0.006345804780721664,
+      "gradient_abs_cos": 0.014823824167251587,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.6240330911551317,
+      "RSA": 0.5754531407338608,
+      "gradient_cos": 0.06317037343978882,
+      "gradient_abs_cos": 0.07817728072404861,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.7229388962739414,
+      "RSA": 0.6758930017020977,
+      "gradient_cos": 0.05924103781580925,
+      "gradient_abs_cos": 0.05924103781580925,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.7801060854255483,
+      "RSA": 0.7063403312206087,
+      "gradient_cos": 0.028166810050606728,
+      "gradient_abs_cos": 0.028166810050606728,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.8024251891860728,
+      "RSA": 0.6867944443580014,
+      "gradient_cos": 0.02186785265803337,
+      "gradient_abs_cos": 0.02186785265803337,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.7443907688720462,
+      "RSA": 0.6450363959432457,
+      "gradient_cos": 0.015890244394540787,
+      "gradient_abs_cos": 0.015890244394540787,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.6242583612271245,
+      "RSA": 0.5415446275166583,
+      "gradient_cos": 0.0029355266597121954,
+      "gradient_abs_cos": 0.006894034333527088,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.4759346273914491,
+      "RSA": 0.42254338751612364,
+      "gradient_cos": -0.0023105787113308907,
+      "gradient_abs_cos": 0.006229507736861706,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.402556914531563,
+      "RSA": 0.36677083563492663,
+      "gradient_cos": -0.003463177476078272,
+      "gradient_abs_cos": 0.006056465208530426,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.8713075592496053,
+      "RSA": 0.8631845122920898,
+      "gradient_cos": 0.09905271977186203,
+      "gradient_abs_cos": 0.09905271977186203,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.8839601899184647,
+      "RSA": 0.8739172721992874,
+      "gradient_cos": 0.06784488260746002,
+      "gradient_abs_cos": 0.06784488260746002,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.6802098663537718,
+      "RSA": 0.5953600445195654,
+      "gradient_cos": 0.006059617735445499,
+      "gradient_abs_cos": 0.010413534007966518,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.5530853735595502,
+      "RSA": 0.4593778726344371,
+      "gradient_cos": 0.005408638156950474,
+      "gradient_abs_cos": 0.006158196832984686,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.46384726438388757,
+      "RSA": 0.40438367400876496,
+      "gradient_cos": 0.005165452603250742,
+      "gradient_abs_cos": 0.0058415671810507774,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.4189333645567238,
+      "RSA": 0.3358688045456944,
+      "gradient_cos": 0.004814696032553911,
+      "gradient_abs_cos": 0.0060244775377213955,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.3980454953303808,
+      "RSA": 0.30972581861180537,
+      "gradient_cos": 0.005129048600792885,
+      "gradient_abs_cos": 0.005735279992222786,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.7070800544587195,
+      "RSA": 0.7225457547044551,
+      "gradient_cos": 0.13549001514911652,
+      "gradient_abs_cos": 0.13549001514911652,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.676232718866675,
+      "RSA": 0.6552418400135893,
+      "gradient_cos": 0.14623428881168365,
+      "gradient_abs_cos": 0.14623428881168365,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.6557702272519852,
+      "RSA": 0.598066940029566,
+      "gradient_cos": 0.060383450239896774,
+      "gradient_abs_cos": 0.060383450239896774,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.5883983859521988,
+      "RSA": 0.4942915242722914,
+      "gradient_cos": 0.003606649814173579,
+      "gradient_abs_cos": 0.007684079464524984,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.5905700741604111,
+      "RSA": 0.49342937397430237,
+      "gradient_cos": 0.001840235316194594,
+      "gradient_abs_cos": 0.00645234202966094,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.6099828088125807,
+      "RSA": 0.5309790118310296,
+      "gradient_cos": 0.0019724175799638033,
+      "gradient_abs_cos": 0.006854901555925608,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5973143525744837,
+      "RSA": 0.5365271227854029,
+      "gradient_cos": -0.0019787424243986607,
+      "gradient_abs_cos": 0.006492398679256439,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.40658641680441016,
+      "RSA": 0.29977780344504057,
+      "gradient_cos": -0.004587757401168346,
+      "gradient_abs_cos": 0.007096825633198023,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "CKA": 0.760218563636469,
+      "RSA": 0.6418767057049779,
+      "gradient_cos": 0.10087330639362335,
+      "gradient_abs_cos": 0.10315346717834473,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "CKA": 0.5931485423091613,
+      "RSA": 0.42188578127061727,
+      "gradient_cos": 0.012590778060257435,
+      "gradient_abs_cos": 0.024511972442269325,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "CKA": 0.4706364304339808,
+      "RSA": 0.32931338830301526,
+      "gradient_cos": 0.004133670125156641,
+      "gradient_abs_cos": 0.035344354808330536,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "CKA": 0.36032803570547745,
+      "RSA": 0.1547488864121488,
+      "gradient_cos": -0.005336166359484196,
+      "gradient_abs_cos": 0.021012410521507263,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.39859015488839183,
+      "RSA": 0.25484728828693726,
+      "gradient_cos": 0.00032819435000419617,
+      "gradient_abs_cos": 0.019678087905049324,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.4113245725903474,
+      "RSA": 0.44849189047742005,
+      "gradient_cos": -0.010419130325317383,
+      "gradient_abs_cos": 0.02108079381287098,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.5485369585002114,
+      "RSA": 0.6029419711882134,
+      "gradient_cos": 0.02157670073211193,
+      "gradient_abs_cos": 0.02676595374941826,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.6487331888036756,
+      "RSA": 0.6775975090173093,
+      "gradient_cos": 0.030385900288820267,
+      "gradient_abs_cos": 0.030385900288820267,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.7933392304777553,
+      "RSA": 0.7252821128609708,
+      "gradient_cos": 0.0632748156785965,
+      "gradient_abs_cos": 0.06373108178377151,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.7848025167262381,
+      "RSA": 0.7130180728534772,
+      "gradient_cos": 0.07019958645105362,
+      "gradient_abs_cos": 0.07019958645105362,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.7098442426951096,
+      "RSA": 0.6225771783115102,
+      "gradient_cos": 0.0465269610285759,
+      "gradient_abs_cos": 0.0465269610285759,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.5938638432990759,
+      "RSA": 0.4910525825726558,
+      "gradient_cos": 0.018998030573129654,
+      "gradient_abs_cos": 0.018998030573129654,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.5122118060295883,
+      "RSA": 0.4032653525720271,
+      "gradient_cos": 0.011014051735401154,
+      "gradient_abs_cos": 0.013941578567028046,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.6749247486448262,
+      "RSA": 0.6918090154180918,
+      "gradient_cos": 0.04266078397631645,
+      "gradient_abs_cos": 0.04266078397631645,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.8692277250323492,
+      "RSA": 0.8655530598326066,
+      "gradient_cos": 0.16031846404075623,
+      "gradient_abs_cos": 0.16031846404075623,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.7256386997145918,
+      "RSA": 0.6363533114503492,
+      "gradient_cos": 0.04425639286637306,
+      "gradient_abs_cos": 0.04425639286637306,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.6252208195553199,
+      "RSA": 0.5031017351027884,
+      "gradient_cos": 0.010099361650645733,
+      "gradient_abs_cos": 0.010099361650645733,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.557323848442758,
+      "RSA": 0.47362406417098046,
+      "gradient_cos": 0.008092747069895267,
+      "gradient_abs_cos": 0.00887337513267994,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.5327406506797985,
+      "RSA": 0.4257683532239369,
+      "gradient_cos": 0.01090578455477953,
+      "gradient_abs_cos": 0.011071955785155296,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.5105415427238765,
+      "RSA": 0.40600920299561327,
+      "gradient_cos": 0.010934295132756233,
+      "gradient_abs_cos": 0.011484451591968536,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.49140223459199783,
+      "RSA": 0.5798008346581116,
+      "gradient_cos": 0.056013934314250946,
+      "gradient_abs_cos": 0.056013934314250946,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.48502474106469917,
+      "RSA": 0.5461299584290604,
+      "gradient_cos": 0.23168912529945374,
+      "gradient_abs_cos": 0.23168912529945374,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.4742347335215193,
+      "RSA": 0.4939319469903031,
+      "gradient_cos": 0.16739855706691742,
+      "gradient_abs_cos": 0.16739855706691742,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.3979302810525475,
+      "RSA": 0.3750926143253863,
+      "gradient_cos": 0.019985347986221313,
+      "gradient_abs_cos": 0.019985347986221313,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.4035168541977023,
+      "RSA": 0.37374323287395184,
+      "gradient_cos": 0.012100452557206154,
+      "gradient_abs_cos": 0.013260206207633018,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.43953758397793424,
+      "RSA": 0.426590712009732,
+      "gradient_cos": 0.006125337444245815,
+      "gradient_abs_cos": 0.008920883759856224,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.47795790472675886,
+      "RSA": 0.464385095100306,
+      "gradient_cos": -0.002322352258488536,
+      "gradient_abs_cos": 0.010614831931889057,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.44902145484593253,
+      "RSA": 0.3529398853243293,
+      "gradient_cos": 0.0014414669713005424,
+      "gradient_abs_cos": 0.009262309409677982,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "CKA": 0.8963308050201508,
+      "RSA": 0.8365355831396397,
+      "gradient_cos": 0.35256317257881165,
+      "gradient_abs_cos": 0.3720100224018097,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "CKA": 0.7418998208882741,
+      "RSA": 0.6188547709409833,
+      "gradient_cos": 0.14819540083408356,
+      "gradient_abs_cos": 0.17163196206092834,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "CKA": 0.6207234868516536,
+      "RSA": 0.3748668000355881,
+      "gradient_cos": 0.02695195935666561,
+      "gradient_abs_cos": 0.11047619581222534,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.6467770070408221,
+      "RSA": 0.43056546811074403,
+      "gradient_cos": 0.013711385428905487,
+      "gradient_abs_cos": 0.14023205637931824,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.2590214167190509,
+      "RSA": 0.23264770954584196,
+      "gradient_cos": 0.001194120617583394,
+      "gradient_abs_cos": 0.00869747530668974,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.35483292899340935,
+      "RSA": 0.32519677899058996,
+      "gradient_cos": 0.003227540757507086,
+      "gradient_abs_cos": 0.008360816165804863,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.44620756542579,
+      "RSA": 0.39712091823789153,
+      "gradient_cos": 0.00423451978713274,
+      "gradient_abs_cos": 0.008912550285458565,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.6421504387937419,
+      "RSA": 0.521880343506415,
+      "gradient_cos": 0.020352836698293686,
+      "gradient_abs_cos": 0.02055526152253151,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.7120900301455619,
+      "RSA": 0.6058584350814697,
+      "gradient_cos": 0.04096546024084091,
+      "gradient_abs_cos": 0.04096546024084091,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.7861494727090906,
+      "RSA": 0.7153021589373909,
+      "gradient_cos": 0.06738109141588211,
+      "gradient_abs_cos": 0.06738109141588211,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.8263049204615197,
+      "RSA": 0.7655814161248975,
+      "gradient_cos": 0.05005292221903801,
+      "gradient_abs_cos": 0.05005292221903801,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.7749410947029386,
+      "RSA": 0.6792526679791024,
+      "gradient_cos": 0.029238248243927956,
+      "gradient_abs_cos": 0.029238248243927956,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.48112005347063846,
+      "RSA": 0.4637996497001562,
+      "gradient_cos": 0.005743661429733038,
+      "gradient_abs_cos": 0.00850581657141447,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.6539534951781618,
+      "RSA": 0.5874549822569075,
+      "gradient_cos": 0.021368538960814476,
+      "gradient_abs_cos": 0.021368538960814476,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.8485405510673659,
+      "RSA": 0.8193385153747889,
+      "gradient_cos": 0.12055327743291855,
+      "gradient_abs_cos": 0.12055327743291855,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.8577109767493175,
+      "RSA": 0.8158802703960202,
+      "gradient_cos": 0.058732349425554276,
+      "gradient_abs_cos": 0.058732349425554276,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.7800079831073766,
+      "RSA": 0.6480679847108374,
+      "gradient_cos": 0.039628446102142334,
+      "gradient_abs_cos": 0.039628446102142334,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.7346112612490213,
+      "RSA": 0.4986337972850703,
+      "gradient_cos": 0.02933484874665737,
+      "gradient_abs_cos": 0.02933484874665737,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.7298528580673345,
+      "RSA": 0.4778557396865957,
+      "gradient_cos": 0.03136161342263222,
+      "gradient_abs_cos": 0.03136161342263222,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.32897051127867943,
+      "RSA": 0.32558466773519834,
+      "gradient_cos": 0.007424606941640377,
+      "gradient_abs_cos": 0.009825510904192924,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.3238081813527673,
+      "RSA": 0.3171028026135121,
+      "gradient_cos": 0.021366095170378685,
+      "gradient_abs_cos": 0.02750449813902378,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.33633232514118117,
+      "RSA": 0.3271927508296281,
+      "gradient_cos": 0.0897146463394165,
+      "gradient_abs_cos": 0.0897146463394165,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.30567663989913574,
+      "RSA": 0.306376198716796,
+      "gradient_cos": 0.06121370196342468,
+      "gradient_abs_cos": 0.06121370196342468,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.32099104952875707,
+      "RSA": 0.32155453485542584,
+      "gradient_cos": 0.040676623582839966,
+      "gradient_abs_cos": 0.04206026718020439,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.4203062927279764,
+      "RSA": 0.42209200082292586,
+      "gradient_cos": 0.03328021243214607,
+      "gradient_abs_cos": 0.03443960100412369,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5366137194867975,
+      "RSA": 0.4450113367986197,
+      "gradient_cos": 0.02045920118689537,
+      "gradient_abs_cos": 0.027197083458304405,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.5933427400217912,
+      "RSA": 0.32050322834336814,
+      "gradient_cos": 0.007653738372027874,
+      "gradient_abs_cos": 0.014433421194553375,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "CKA": 0.8997402481255754,
+      "RSA": 0.8142761454837177,
+      "gradient_cos": 0.4163818955421448,
+      "gradient_abs_cos": 0.4660056531429291,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "CKA": 0.7263330259908812,
+      "RSA": 0.3910441284375908,
+      "gradient_cos": 0.18069833517074585,
+      "gradient_abs_cos": 0.237904354929924,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.7666538394120336,
+      "RSA": 0.4602808240095576,
+      "gradient_cos": 0.2027357518672943,
+      "gradient_abs_cos": 0.2571682333946228,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.17151186291144824,
+      "RSA": 0.12669974462263586,
+      "gradient_cos": 0.0013026008382439613,
+      "gradient_abs_cos": 0.00485664326697588,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.2478481870061724,
+      "RSA": 0.1907235622742795,
+      "gradient_cos": 0.0037529082037508488,
+      "gradient_abs_cos": 0.005952650215476751,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.3253910570046909,
+      "RSA": 0.24686214910452536,
+      "gradient_cos": 0.005841831676661968,
+      "gradient_abs_cos": 0.006391639821231365,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.49016429584671767,
+      "RSA": 0.32312858228871,
+      "gradient_cos": 0.009024903178215027,
+      "gradient_abs_cos": 0.011582535691559315,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.5630025924416183,
+      "RSA": 0.39842674190724675,
+      "gradient_cos": 0.01627742126584053,
+      "gradient_abs_cos": 0.016936838626861572,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.6728794792569254,
+      "RSA": 0.541004281472081,
+      "gradient_cos": 0.03059699572622776,
+      "gradient_abs_cos": 0.03059699572622776,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.8188252813151778,
+      "RSA": 0.7413328296241944,
+      "gradient_cos": 0.030354592949151993,
+      "gradient_abs_cos": 0.030354592949151993,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.8630557326354961,
+      "RSA": 0.7691311931039204,
+      "gradient_cos": 0.01447399239987135,
+      "gradient_abs_cos": 0.01924559287726879,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.35199954922903476,
+      "RSA": 0.3249413372690636,
+      "gradient_cos": 0.0006227151025086641,
+      "gradient_abs_cos": 0.002494131913408637,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.49493843344619387,
+      "RSA": 0.38718809359831674,
+      "gradient_cos": 0.006472372449934483,
+      "gradient_abs_cos": 0.009144170209765434,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.7531121677815629,
+      "RSA": 0.6710127980591093,
+      "gradient_cos": 0.04706393554806709,
+      "gradient_abs_cos": 0.04706393554806709,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.8898921974955019,
+      "RSA": 0.8026129788949898,
+      "gradient_cos": 0.04633786156773567,
+      "gradient_abs_cos": 0.046893276274204254,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.8717215703630277,
+      "RSA": 0.6720094155186308,
+      "gradient_cos": 0.03371109813451767,
+      "gradient_abs_cos": 0.034640029072761536,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.8098509115101684,
+      "RSA": 0.4812504703587476,
+      "gradient_cos": 0.021604711189866066,
+      "gradient_abs_cos": 0.02195681631565094,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.8127041172740052,
+      "RSA": 0.4635519321188205,
+      "gradient_cos": 0.01858317106962204,
+      "gradient_abs_cos": 0.019333023577928543,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.22574906831305966,
+      "RSA": 0.1911274609384433,
+      "gradient_cos": 0.0010150049347430468,
+      "gradient_abs_cos": 0.007877398282289505,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.2250105923866221,
+      "RSA": 0.1904057530469927,
+      "gradient_cos": 0.012170624919235706,
+      "gradient_abs_cos": 0.016317743808031082,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.24034845888791195,
+      "RSA": 0.20836561157982134,
+      "gradient_cos": 0.03227546438574791,
+      "gradient_abs_cos": 0.03227546438574791,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.23077764009964757,
+      "RSA": 0.21471736142286535,
+      "gradient_cos": 0.028201226145029068,
+      "gradient_abs_cos": 0.028201226145029068,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.2506901987727272,
+      "RSA": 0.2345143418160165,
+      "gradient_cos": 0.025731122121214867,
+      "gradient_abs_cos": 0.026820966973900795,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.38880129043881295,
+      "RSA": 0.36780192465485384,
+      "gradient_cos": 0.03115038573741913,
+      "gradient_abs_cos": 0.03199557214975357,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5739151137385966,
+      "RSA": 0.44096404205593936,
+      "gradient_cos": 0.015652460977435112,
+      "gradient_abs_cos": 0.01855732873082161,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.6958753431288343,
+      "RSA": 0.35390442589447124,
+      "gradient_cos": 0.003133760765194893,
+      "gradient_abs_cos": 0.010630759410560131,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "CKA": 0.7876693815714702,
+      "RSA": 0.4946155439026861,
+      "gradient_cos": 0.30485495924949646,
+      "gradient_abs_cos": 0.30485495924949646,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.8407690408966036,
+      "RSA": 0.5787559557580411,
+      "gradient_cos": 0.2677948474884033,
+      "gradient_abs_cos": 0.41029906272888184,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.11943370406164837,
+      "RSA": 0.06645984531016044,
+      "gradient_cos": 0.0021500897128134966,
+      "gradient_abs_cos": 0.004059698898345232,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.1792305482857851,
+      "RSA": 0.11516441181678161,
+      "gradient_cos": 0.0003692122991196811,
+      "gradient_abs_cos": 0.005097485147416592,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.24327583878497727,
+      "RSA": 0.1595411991614241,
+      "gradient_cos": 0.0031250794418156147,
+      "gradient_abs_cos": 0.004325351677834988,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.3728199349829063,
+      "RSA": 0.21336669214807596,
+      "gradient_cos": 0.004930389113724232,
+      "gradient_abs_cos": 0.007383115589618683,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.4328398131061612,
+      "RSA": 0.27029123219687573,
+      "gradient_cos": 0.008217645809054375,
+      "gradient_abs_cos": 0.010720094665884972,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.535887270204355,
+      "RSA": 0.37704758364231306,
+      "gradient_cos": 0.022152099758386612,
+      "gradient_abs_cos": 0.02238125167787075,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.710441789673695,
+      "RSA": 0.5825433507009699,
+      "gradient_cos": 0.02884451486170292,
+      "gradient_abs_cos": 0.02884451486170292,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.8400824947824592,
+      "RSA": 0.7116299212131136,
+      "gradient_cos": 0.0221576988697052,
+      "gradient_abs_cos": 0.0249323733150959,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.2713399190443906,
+      "RSA": 0.26324168495309097,
+      "gradient_cos": 0.0014740800252184272,
+      "gradient_abs_cos": 0.004320016596466303,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.3888058861949854,
+      "RSA": 0.3175176594344712,
+      "gradient_cos": -0.0014248518273234367,
+      "gradient_abs_cos": 0.008222764357924461,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.6279688801850387,
+      "RSA": 0.5182579952369861,
+      "gradient_cos": 0.02512681856751442,
+      "gradient_abs_cos": 0.026643281802535057,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.7984958213308053,
+      "RSA": 0.6593466991808974,
+      "gradient_cos": 0.025380272418260574,
+      "gradient_abs_cos": 0.025380272418260574,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.8859425186736732,
+      "RSA": 0.6540257271399413,
+      "gradient_cos": 0.039466869086027145,
+      "gradient_abs_cos": 0.039466869086027145,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.8211575802629779,
+      "RSA": 0.43914474464510905,
+      "gradient_cos": 0.030145298689603806,
+      "gradient_abs_cos": 0.030145298689603806,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.8197226928360591,
+      "RSA": 0.4138600565964931,
+      "gradient_cos": 0.02837364748120308,
+      "gradient_abs_cos": 0.02837364748120308,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.16232341498340067,
+      "RSA": 0.1276075241848282,
+      "gradient_cos": -0.0002987920888699591,
+      "gradient_abs_cos": 0.00623597577214241,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.16103367189396064,
+      "RSA": 0.11767996840599118,
+      "gradient_cos": 0.0049286410212516785,
+      "gradient_abs_cos": 0.01519396435469389,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.17370596882078396,
+      "RSA": 0.12264526913978918,
+      "gradient_cos": 0.014778664335608482,
+      "gradient_abs_cos": 0.015215709805488586,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.17109720672996867,
+      "RSA": 0.1372086410984073,
+      "gradient_cos": 0.014252913184463978,
+      "gradient_abs_cos": 0.016280192881822586,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.19101372147698373,
+      "RSA": 0.15714626481492433,
+      "gradient_cos": 0.018253615126013756,
+      "gradient_abs_cos": 0.020263424143195152,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.34627225132298256,
+      "RSA": 0.31909487568329503,
+      "gradient_cos": 0.029606038704514503,
+      "gradient_abs_cos": 0.02999885007739067,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5880270481031229,
+      "RSA": 0.4614385721383646,
+      "gradient_cos": 0.028188228607177734,
+      "gradient_abs_cos": 0.03274335339665413,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.7556090549272323,
+      "RSA": 0.3858951188775994,
+      "gradient_cos": 0.006778164766728878,
+      "gradient_abs_cos": 0.01389260869473219,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "CKA": 0.9094164439157089,
+      "RSA": 0.8459926628633554,
+      "gradient_cos": 0.567510187625885,
+      "gradient_abs_cos": 0.567510187625885,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.10735838146446859,
+      "RSA": -0.050339289202661404,
+      "gradient_cos": -0.0014502175617963076,
+      "gradient_abs_cos": 0.00456079188734293,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.14921304182699055,
+      "RSA": -0.028987799500238505,
+      "gradient_cos": -0.0008204042678698897,
+      "gradient_abs_cos": 0.005814374890178442,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.1949162511696094,
+      "RSA": -0.0006729494666003529,
+      "gradient_cos": -0.00029379065381363034,
+      "gradient_abs_cos": 0.0038228356279432774,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.2972136930356077,
+      "RSA": 0.0727063027745394,
+      "gradient_cos": 0.00137417484074831,
+      "gradient_abs_cos": 0.0050742896273732185,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.3474276514819574,
+      "RSA": 0.12992128840279885,
+      "gradient_cos": 0.0017452897736802697,
+      "gradient_abs_cos": 0.007947211153805256,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.4486853852435182,
+      "RSA": 0.2413170720702924,
+      "gradient_cos": 0.005685725249350071,
+      "gradient_abs_cos": 0.011474247090518475,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.5999756169818701,
+      "RSA": 0.32164769235480284,
+      "gradient_cos": 0.007445656694471836,
+      "gradient_abs_cos": 0.009806128218770027,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.6733417630499299,
+      "RSA": 0.2960214597942181,
+      "gradient_cos": 0.002288371790200472,
+      "gradient_abs_cos": 0.009936212562024593,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.19652276383157607,
+      "RSA": 0.03964255393117345,
+      "gradient_cos": -0.0016148838913068175,
+      "gradient_abs_cos": 0.0022184355184435844,
+      "negative_dot_fraction": 0.9,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.3019522900687992,
+      "RSA": 0.11727316913310304,
+      "gradient_cos": 0.002986760111525655,
+      "gradient_abs_cos": 0.0055992030538618565,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.520806421568297,
+      "RSA": 0.30974874436278943,
+      "gradient_cos": 0.00640633562579751,
+      "gradient_abs_cos": 0.008321826346218586,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.6495938967485206,
+      "RSA": 0.3985319314291821,
+      "gradient_cos": 0.002183877397328615,
+      "gradient_abs_cos": 0.005821391940116882,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.6948449750398167,
+      "RSA": 0.37048923758237495,
+      "gradient_cos": 0.00639264564961195,
+      "gradient_abs_cos": 0.007412218954414129,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.6614027763319978,
+      "RSA": 0.2794478954604708,
+      "gradient_cos": 0.006112000904977322,
+      "gradient_abs_cos": 0.008785663172602654,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.6710113341666896,
+      "RSA": 0.2836766420285083,
+      "gradient_cos": 0.00675935810431838,
+      "gradient_abs_cos": 0.009722474962472916,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.13463422370158648,
+      "RSA": 0.007564493843248376,
+      "gradient_cos": -0.003443155437707901,
+      "gradient_abs_cos": 0.003889224259182811,
+      "negative_dot_fraction": 0.9,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.1346101989292825,
+      "RSA": 0.01157333700747267,
+      "gradient_cos": 0.0005990123609080911,
+      "gradient_abs_cos": 0.007440980523824692,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.1461153021527018,
+      "RSA": 0.027524369392440316,
+      "gradient_cos": 0.005283938255161047,
+      "gradient_abs_cos": 0.014722928404808044,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.14983328900188583,
+      "RSA": 0.08014220609437875,
+      "gradient_cos": 0.005695349536836147,
+      "gradient_abs_cos": 0.007392287254333496,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.16597036410049484,
+      "RSA": 0.09229171277738463,
+      "gradient_cos": 0.007333875633776188,
+      "gradient_abs_cos": 0.009754303842782974,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.289698105815645,
+      "RSA": 0.1718593038542766,
+      "gradient_cos": 0.004626506939530373,
+      "gradient_abs_cos": 0.00805774424225092,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.4793220079004255,
+      "RSA": 0.21850010492955713,
+      "gradient_cos": 0.012443112209439278,
+      "gradient_abs_cos": 0.015290580689907074,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        21
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.6389906599818412,
+      "RSA": 0.267497862283061,
+      "gradient_cos": 0.008190357126295567,
+      "gradient_abs_cos": 0.008190357126295567,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "CKA": 0.125149815360376,
+      "RSA": 0.06471554433177451,
+      "gradient_cos": 0.0008007679134607315,
+      "gradient_abs_cos": 0.005486282519996166,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.1723707554846461,
+      "RSA": 0.09847338633496315,
+      "gradient_cos": -0.0006980709731578827,
+      "gradient_abs_cos": 0.0049788570031523705,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.22201054890883165,
+      "RSA": 0.13093080022453524,
+      "gradient_cos": 9.620832133805379e-05,
+      "gradient_abs_cos": 0.0038471054285764694,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.3377065123970521,
+      "RSA": 0.1974609042588782,
+      "gradient_cos": 0.0010330346412956715,
+      "gradient_abs_cos": 0.0058565810322761536,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.3887667674608937,
+      "RSA": 0.24387210630960326,
+      "gradient_cos": 0.0013336077099666,
+      "gradient_abs_cos": 0.007696014828979969,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.4773821096573065,
+      "RSA": 0.33641262053319576,
+      "gradient_cos": 0.007567814085632563,
+      "gradient_abs_cos": 0.010796526446938515,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.6179132669534166,
+      "RSA": 0.41271677666351286,
+      "gradient_cos": 0.007334606256335974,
+      "gradient_abs_cos": 0.010997127741575241,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.7060586845687697,
+      "RSA": 0.3892023517762357,
+      "gradient_cos": 0.004970811307430267,
+      "gradient_abs_cos": 0.011007094755768776,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.2243865123014643,
+      "RSA": 0.16652024840194052,
+      "gradient_cos": -0.0003844655875582248,
+      "gradient_abs_cos": 0.002960307290777564,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.3255005402132128,
+      "RSA": 0.22615335271857467,
+      "gradient_cos": 0.004376758821308613,
+      "gradient_abs_cos": 0.005468497984111309,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.5377690350126411,
+      "RSA": 0.3565191849586442,
+      "gradient_cos": 0.011843668296933174,
+      "gradient_abs_cos": 0.01272638887166977,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.6828412891127049,
+      "RSA": 0.4500075043530805,
+      "gradient_cos": 0.010898105800151825,
+      "gradient_abs_cos": 0.013220371678471565,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.7554588468118781,
+      "RSA": 0.47896226634640177,
+      "gradient_cos": 0.014554107561707497,
+      "gradient_abs_cos": 0.016147688031196594,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.7339434199246072,
+      "RSA": 0.4047604346931406,
+      "gradient_cos": 0.014524166472256184,
+      "gradient_abs_cos": 0.015786824747920036,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.7310345871743954,
+      "RSA": 0.3641939109515677,
+      "gradient_cos": 0.011486577801406384,
+      "gradient_abs_cos": 0.016697712242603302,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.15224645642446508,
+      "RSA": 0.11986693988753186,
+      "gradient_cos": 0.0008443620754405856,
+      "gradient_abs_cos": 0.004323624074459076,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.14898747869499507,
+      "RSA": 0.09887660861513224,
+      "gradient_cos": 0.004001046065241098,
+      "gradient_abs_cos": 0.010065257549285889,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.16004607774544988,
+      "RSA": 0.10021918491465029,
+      "gradient_cos": 0.00798796210438013,
+      "gradient_abs_cos": 0.011561332270503044,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.15606093544967709,
+      "RSA": 0.12525349920037274,
+      "gradient_cos": 0.009827321395277977,
+      "gradient_abs_cos": 0.01179277990013361,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.17294795762260554,
+      "RSA": 0.13850267549364542,
+      "gradient_cos": 0.010063898749649525,
+      "gradient_abs_cos": 0.01617114618420601,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.30426970819940136,
+      "RSA": 0.23978700024678673,
+      "gradient_cos": 0.012208625674247742,
+      "gradient_abs_cos": 0.017302099615335464,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5146864255160499,
+      "RSA": 0.32450425138834404,
+      "gradient_cos": 0.018347904086112976,
+      "gradient_abs_cos": 0.0193965882062912,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "CLIP ViT-L/14",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.6930604968188288,
+      "RSA": 0.36627784658409845,
+      "gradient_cos": 0.01651911623775959,
+      "gradient_abs_cos": 0.017172513529658318,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "CKA": 0.9757010217017338,
+      "RSA": 0.9512729988759082,
+      "gradient_cos": 0.2366330623626709,
+      "gradient_abs_cos": 0.24270907044410706,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.9253898922429412,
+      "RSA": 0.8752532632540151,
+      "gradient_cos": 0.055542074143886566,
+      "gradient_abs_cos": 0.08014102280139923,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.6857809901706785,
+      "RSA": 0.7158137521892826,
+      "gradient_cos": 0.001824934035539627,
+      "gradient_abs_cos": 0.0412135124206543,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.570616853557408,
+      "RSA": 0.6157778760603676,
+      "gradient_cos": 0.004375825170427561,
+      "gradient_abs_cos": 0.023331062868237495,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.42065376009813205,
+      "RSA": 0.45128172423919205,
+      "gradient_cos": 0.008730926550924778,
+      "gradient_abs_cos": 0.029546689242124557,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.25231473634800833,
+      "RSA": 0.2664545310249851,
+      "gradient_cos": -0.0005258984165266156,
+      "gradient_abs_cos": 0.028522178530693054,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.15977836476454008,
+      "RSA": 0.146713460281849,
+      "gradient_cos": -0.005124677903950214,
+      "gradient_abs_cos": 0.021314283832907677,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.744727880060164,
+      "RSA": 0.7016016733521588,
+      "gradient_cos": 0.08296789228916168,
+      "gradient_abs_cos": 0.09316594898700714,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.5385094624975352,
+      "RSA": 0.5276404219823928,
+      "gradient_cos": -0.018682731315493584,
+      "gradient_abs_cos": 0.04231703653931618,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.38862301160326645,
+      "RSA": 0.3131142507400234,
+      "gradient_cos": -0.004307958297431469,
+      "gradient_abs_cos": 0.00823269598186016,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.27334364277353673,
+      "RSA": 0.2146053757783925,
+      "gradient_cos": 0.0018518794095143676,
+      "gradient_abs_cos": 0.004964981693774462,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.2062227340671717,
+      "RSA": 0.3090267241544171,
+      "gradient_cos": 0.002084882464259863,
+      "gradient_abs_cos": 0.004384216386824846,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.18982560600809587,
+      "RSA": 0.3484712175759028,
+      "gradient_cos": 0.0016006429214030504,
+      "gradient_abs_cos": 0.004346976988017559,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.16816458232299755,
+      "RSA": 0.2689775586743105,
+      "gradient_cos": 6.613582081627101e-05,
+      "gradient_abs_cos": 0.00286305439658463,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.9765301248377477,
+      "RSA": 0.9297398575566538,
+      "gradient_cos": 0.1358642578125,
+      "gradient_abs_cos": 0.14662496745586395,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.9585114991973305,
+      "RSA": 0.9192076598361687,
+      "gradient_cos": 0.03543991595506668,
+      "gradient_abs_cos": 0.06699011474847794,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.9403431320297976,
+      "RSA": 0.8643626712536454,
+      "gradient_cos": -0.0027670010458678007,
+      "gradient_abs_cos": 0.016657162457704544,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.9101578807735411,
+      "RSA": 0.7987168020368516,
+      "gradient_cos": -0.0020132572390139103,
+      "gradient_abs_cos": 0.006093739066272974,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.9031020341190319,
+      "RSA": 0.769247063572972,
+      "gradient_cos": -0.000953103241045028,
+      "gradient_abs_cos": 0.004473008681088686,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.8891057077958407,
+      "RSA": 0.7173380314841304,
+      "gradient_cos": 0.0012947872746735811,
+      "gradient_abs_cos": 0.0036267500836402178,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.7945558805833106,
+      "RSA": 0.6275544316219053,
+      "gradient_cos": 0.002585423644632101,
+      "gradient_abs_cos": 0.006264974363148212,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        1
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.38487129356418104,
+      "RSA": 0.3945487577415988,
+      "gradient_cos": 0.001996853621676564,
+      "gradient_abs_cos": 0.005345579236745834,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "CKA": 0.9789370088872699,
+      "RSA": 0.9671709008995157,
+      "gradient_cos": 0.28454264998435974,
+      "gradient_abs_cos": 0.38998502492904663,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.7929577708971742,
+      "RSA": 0.8391965391210885,
+      "gradient_cos": 0.08963079750537872,
+      "gradient_abs_cos": 0.13773265480995178,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.6776467683175315,
+      "RSA": 0.7374233051014794,
+      "gradient_cos": 0.06443855166435242,
+      "gradient_abs_cos": 0.10539908707141876,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.5137009041110897,
+      "RSA": 0.5543760268333853,
+      "gradient_cos": 0.009261676110327244,
+      "gradient_abs_cos": 0.04715272784233093,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.3258112511775425,
+      "RSA": 0.3452605711202436,
+      "gradient_cos": -0.017406512051820755,
+      "gradient_abs_cos": 0.03861120343208313,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.22377096808767621,
+      "RSA": 0.21100235279706425,
+      "gradient_cos": -0.021803710609674454,
+      "gradient_abs_cos": 0.02804671786725521,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.7858885966990736,
+      "RSA": 0.7391828507944816,
+      "gradient_cos": 0.0598984956741333,
+      "gradient_abs_cos": 0.0598984956741333,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.6425243773530454,
+      "RSA": 0.6357947279864726,
+      "gradient_cos": 0.026603350415825844,
+      "gradient_abs_cos": 0.027916286140680313,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.4672579147237797,
+      "RSA": 0.38948141773605727,
+      "gradient_cos": -0.003679797751829028,
+      "gradient_abs_cos": 0.008886382915079594,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.345079428960154,
+      "RSA": 0.2804704137020688,
+      "gradient_cos": 0.0022498159669339657,
+      "gradient_abs_cos": 0.004567533265799284,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.2736587096217308,
+      "RSA": 0.36603181112934313,
+      "gradient_cos": 0.00045434795902110636,
+      "gradient_abs_cos": 0.003986574709415436,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.2560904978005113,
+      "RSA": 0.40194272815750626,
+      "gradient_cos": 0.0009146573138423264,
+      "gradient_abs_cos": 0.0034610931761562824,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.23062481618188105,
+      "RSA": 0.32024684305040396,
+      "gradient_cos": -0.0002229746023658663,
+      "gradient_abs_cos": 0.00318095157854259,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.9696803057896248,
+      "RSA": 0.9219097759135864,
+      "gradient_cos": 0.07099218666553497,
+      "gradient_abs_cos": 0.07099218666553497,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.9406927626078367,
+      "RSA": 0.8956721546491065,
+      "gradient_cos": 0.052130959928035736,
+      "gradient_abs_cos": 0.05238530784845352,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.9173706217963605,
+      "RSA": 0.8294927619462675,
+      "gradient_cos": 0.012484125792980194,
+      "gradient_abs_cos": 0.02088061347603798,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.8745285755049574,
+      "RSA": 0.7395832155468991,
+      "gradient_cos": 0.0023163962177932262,
+      "gradient_abs_cos": 0.006960253231227398,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.8696376913158685,
+      "RSA": 0.715606075254245,
+      "gradient_cos": 0.002993042813614011,
+      "gradient_abs_cos": 0.006309353746473789,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.8650839773061403,
+      "RSA": 0.692649734681503,
+      "gradient_cos": 0.002489360049366951,
+      "gradient_abs_cos": 0.004689954221248627,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.7880310313494806,
+      "RSA": 0.6326471647380721,
+      "gradient_cos": 0.00031001726165413857,
+      "gradient_abs_cos": 0.005579596385359764,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        3
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.41846619965140225,
+      "RSA": 0.4238292098404889,
+      "gradient_cos": -0.002209806116297841,
+      "gradient_abs_cos": 0.0031588529236614704,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "CKA": 0.8651529038542866,
+      "RSA": 0.9018945892651624,
+      "gradient_cos": 0.510629415512085,
+      "gradient_abs_cos": 0.510629415512085,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.7615495086973076,
+      "RSA": 0.813129442855407,
+      "gradient_cos": 0.38666948676109314,
+      "gradient_abs_cos": 0.38666948676109314,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.6010975932115369,
+      "RSA": 0.6344568309660235,
+      "gradient_cos": 0.15422524511814117,
+      "gradient_abs_cos": 0.20046181976795197,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.4056563429811742,
+      "RSA": 0.4164634157294557,
+      "gradient_cos": -0.012526525184512138,
+      "gradient_abs_cos": 0.09041672199964523,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.29288418545427847,
+      "RSA": 0.26460735877839103,
+      "gradient_cos": -0.038520555943250656,
+      "gradient_abs_cos": 0.06722038984298706,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.8034674287086987,
+      "RSA": 0.7540512172087455,
+      "gradient_cos": 0.025632178410887718,
+      "gradient_abs_cos": 0.025632178410887718,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.7112731324261682,
+      "RSA": 0.6953188162781541,
+      "gradient_cos": 0.03163307160139084,
+      "gradient_abs_cos": 0.03163307160139084,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.5382108231823124,
+      "RSA": 0.46191428407072743,
+      "gradient_cos": 0.004688083194196224,
+      "gradient_abs_cos": 0.008543357253074646,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.4151721587410744,
+      "RSA": 0.3436047890270153,
+      "gradient_cos": 0.0016210617031902075,
+      "gradient_abs_cos": 0.0036851440090686083,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.3416139876531541,
+      "RSA": 0.4274231987193644,
+      "gradient_cos": -0.0004152526962570846,
+      "gradient_abs_cos": 0.002685088897123933,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.3222675611310684,
+      "RSA": 0.4590345461594322,
+      "gradient_cos": 0.0006258321227505803,
+      "gradient_abs_cos": 0.004170830361545086,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.2966580872699379,
+      "RSA": 0.37802825869170104,
+      "gradient_cos": 0.001068095676600933,
+      "gradient_abs_cos": 0.0038758604787290096,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.9371708903063771,
+      "RSA": 0.8795931510403752,
+      "gradient_cos": 0.03628700226545334,
+      "gradient_abs_cos": 0.03628700226545334,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.9073955805834325,
+      "RSA": 0.8450233256945843,
+      "gradient_cos": 0.03549511358141899,
+      "gradient_abs_cos": 0.03549511358141899,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.8846893272732732,
+      "RSA": 0.7850293990642121,
+      "gradient_cos": 0.020123401656746864,
+      "gradient_abs_cos": 0.020123401656746864,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.8368050772088214,
+      "RSA": 0.6859741282567196,
+      "gradient_cos": 0.0008191855740733445,
+      "gradient_abs_cos": 0.004842571448534727,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.8339436490568094,
+      "RSA": 0.6656444199840953,
+      "gradient_cos": 5.436884384835139e-05,
+      "gradient_abs_cos": 0.004320490639656782,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.8392654024445978,
+      "RSA": 0.6618974384551999,
+      "gradient_cos": 0.001005616970360279,
+      "gradient_abs_cos": 0.002961986232548952,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.7784650004407186,
+      "RSA": 0.6251667932395112,
+      "gradient_cos": 0.0017815526807680726,
+      "gradient_abs_cos": 0.00575490016490221,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        4
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.4543884800238796,
+      "RSA": 0.4591952667682667,
+      "gradient_cos": -0.0010742967715486884,
+      "gradient_abs_cos": 0.004270045552402735,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "CKA": 0.9720236900484165,
+      "RSA": 0.9705606638373349,
+      "gradient_cos": 0.835180401802063,
+      "gradient_abs_cos": 0.835180401802063,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.8465125396141508,
+      "RSA": 0.8173904265044262,
+      "gradient_cos": 0.41612258553504944,
+      "gradient_abs_cos": 0.41612258553504944,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.6128056024573723,
+      "RSA": 0.5452219267023719,
+      "gradient_cos": 0.11598680168390274,
+      "gradient_abs_cos": 0.1324223130941391,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.44303069573419307,
+      "RSA": 0.3377907650570642,
+      "gradient_cos": 0.03071075677871704,
+      "gradient_abs_cos": 0.06604091823101044,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.7122181179723689,
+      "RSA": 0.6667655473770567,
+      "gradient_cos": 0.01807628944516182,
+      "gradient_abs_cos": 0.018091510981321335,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.7685446823751805,
+      "RSA": 0.6983850529529976,
+      "gradient_cos": 0.05879094451665878,
+      "gradient_abs_cos": 0.05879094451665878,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.6351869213578714,
+      "RSA": 0.526317460255251,
+      "gradient_cos": 0.03487403318285942,
+      "gradient_abs_cos": 0.035886116325855255,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.5373191803561593,
+      "RSA": 0.4221266294933208,
+      "gradient_cos": 0.0099493358284235,
+      "gradient_abs_cos": 0.010768186300992966,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.4797763710324684,
+      "RSA": 0.4784039867837374,
+      "gradient_cos": 0.010481937788426876,
+      "gradient_abs_cos": 0.01050669513642788,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.4854406959673655,
+      "RSA": 0.5106818185569003,
+      "gradient_cos": 0.00891024898737669,
+      "gradient_abs_cos": 0.008990262635052204,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.4451756910313934,
+      "RSA": 0.416620090713953,
+      "gradient_cos": 0.00912424735724926,
+      "gradient_abs_cos": 0.010762521997094154,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.7297507753839491,
+      "RSA": 0.7481571527692541,
+      "gradient_cos": 0.033657465130090714,
+      "gradient_abs_cos": 0.033657465130090714,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.7010582461855875,
+      "RSA": 0.7082634885297225,
+      "gradient_cos": 0.05510387569665909,
+      "gradient_abs_cos": 0.05510387569665909,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.683109924063247,
+      "RSA": 0.6574471417133411,
+      "gradient_cos": 0.05495884269475937,
+      "gradient_abs_cos": 0.05495884269475937,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.6253088835790755,
+      "RSA": 0.5653354626855984,
+      "gradient_cos": 0.00888823438435793,
+      "gradient_abs_cos": 0.008939558640122414,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.6284880324570566,
+      "RSA": 0.5550259361143608,
+      "gradient_cos": 0.004468243569135666,
+      "gradient_abs_cos": 0.007055763155221939,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.6495958560616862,
+      "RSA": 0.5651954259514566,
+      "gradient_cos": 0.0058179390616714954,
+      "gradient_abs_cos": 0.006726744119077921,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.636298420806475,
+      "RSA": 0.5482453032294725,
+      "gradient_cos": 0.006921487860381603,
+      "gradient_abs_cos": 0.007709679659456015,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        7
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.4664257655210415,
+      "RSA": 0.43638630735755835,
+      "gradient_cos": 0.0008151739602908492,
+      "gradient_abs_cos": 0.005353628657758236,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "CKA": 0.9307992098206652,
+      "RSA": 0.908696768337742,
+      "gradient_cos": 0.6356748938560486,
+      "gradient_abs_cos": 0.6356748938560486,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.7159657285009814,
+      "RSA": 0.6476773577916386,
+      "gradient_cos": 0.22057458758354187,
+      "gradient_abs_cos": 0.22057458758354187,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.5232514726942571,
+      "RSA": 0.41467536773633906,
+      "gradient_cos": 0.08239905536174774,
+      "gradient_abs_cos": 0.11472535133361816,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.6378278015311672,
+      "RSA": 0.6122690740447702,
+      "gradient_cos": 0.013018110767006874,
+      "gradient_abs_cos": 0.014125552959740162,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.7317845913039995,
+      "RSA": 0.6767083758866181,
+      "gradient_cos": 0.05906806141138077,
+      "gradient_abs_cos": 0.05906806141138077,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.6705514375503526,
+      "RSA": 0.5884838069630285,
+      "gradient_cos": 0.062323056161403656,
+      "gradient_abs_cos": 0.062323056161403656,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.5954721828052874,
+      "RSA": 0.49714327526546953,
+      "gradient_cos": 0.020915860310196877,
+      "gradient_abs_cos": 0.021349439397454262,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.5429567882588805,
+      "RSA": 0.525522345045443,
+      "gradient_cos": 0.020298350602388382,
+      "gradient_abs_cos": 0.0203879214823246,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.5599626715243303,
+      "RSA": 0.5452839727691283,
+      "gradient_cos": 0.016044098883867264,
+      "gradient_abs_cos": 0.016044098883867264,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.5212761715765385,
+      "RSA": 0.4661484225071195,
+      "gradient_cos": 0.014140209183096886,
+      "gradient_abs_cos": 0.01504247635602951,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.6203286828448732,
+      "RSA": 0.6585633611394583,
+      "gradient_cos": 0.02582838013768196,
+      "gradient_abs_cos": 0.02582838013768196,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.5999256020036986,
+      "RSA": 0.6319050363747661,
+      "gradient_cos": 0.0530957393348217,
+      "gradient_abs_cos": 0.0530957393348217,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.5903066251152367,
+      "RSA": 0.5965118718587302,
+      "gradient_cos": 0.07530002295970917,
+      "gradient_abs_cos": 0.07530002295970917,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.5391070049391984,
+      "RSA": 0.5207782332570348,
+      "gradient_cos": 0.01701832376420498,
+      "gradient_abs_cos": 0.01701832376420498,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.5451403771757262,
+      "RSA": 0.5151026209688221,
+      "gradient_cos": 0.009344902820885181,
+      "gradient_abs_cos": 0.011349676176905632,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.5796478716664071,
+      "RSA": 0.5429136187400692,
+      "gradient_cos": 0.0101504847407341,
+      "gradient_abs_cos": 0.01134540606290102,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5885237496227429,
+      "RSA": 0.5312611718183013,
+      "gradient_cos": 0.006396504584699869,
+      "gradient_abs_cos": 0.009751961566507816,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        9
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.48447833989471395,
+      "RSA": 0.43022752341821213,
+      "gradient_cos": 0.0020156523678451777,
+      "gradient_abs_cos": 0.0078064510598778725,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "CKA": 0.8812020804267947,
+      "RSA": 0.8474917375135037,
+      "gradient_cos": 0.4476706087589264,
+      "gradient_abs_cos": 0.4476706087589264,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.6801247845244227,
+      "RSA": 0.5966587414145341,
+      "gradient_cos": 0.18270370364189148,
+      "gradient_abs_cos": 0.18270370364189148,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.5220824941615391,
+      "RSA": 0.5118577447955404,
+      "gradient_cos": 0.006080330349504948,
+      "gradient_abs_cos": 0.0072740064933896065,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.6410840358840985,
+      "RSA": 0.593887932634694,
+      "gradient_cos": 0.03778473287820816,
+      "gradient_abs_cos": 0.03778473287820816,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.7202951694520197,
+      "RSA": 0.6806847888486766,
+      "gradient_cos": 0.09196311235427856,
+      "gradient_abs_cos": 0.09196311235427856,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.6930140581395036,
+      "RSA": 0.6284826851443119,
+      "gradient_cos": 0.045202579349279404,
+      "gradient_abs_cos": 0.045202579349279404,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.6432313767827665,
+      "RSA": 0.6060994074617078,
+      "gradient_cos": 0.03891899436712265,
+      "gradient_abs_cos": 0.03891899436712265,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.6616176854802999,
+      "RSA": 0.5950940595476997,
+      "gradient_cos": 0.028205877169966698,
+      "gradient_abs_cos": 0.028205877169966698,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.6420288028028439,
+      "RSA": 0.5674200164729666,
+      "gradient_cos": 0.02377469465136528,
+      "gradient_abs_cos": 0.02377469465136528,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.4706672937711529,
+      "RSA": 0.5012004445217824,
+      "gradient_cos": 0.011032555252313614,
+      "gradient_abs_cos": 0.011644164100289345,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.4568019628476474,
+      "RSA": 0.487007494099732,
+      "gradient_cos": 0.02272268757224083,
+      "gradient_abs_cos": 0.02272268757224083,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.4592116281544032,
+      "RSA": 0.47806465956196464,
+      "gradient_cos": 0.06897688657045364,
+      "gradient_abs_cos": 0.06897688657045364,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.426313631355873,
+      "RSA": 0.43751082422640486,
+      "gradient_cos": 0.036481473594903946,
+      "gradient_abs_cos": 0.0366067998111248,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.4362593176678848,
+      "RSA": 0.43818509587216936,
+      "gradient_cos": 0.026439834386110306,
+      "gradient_abs_cos": 0.027994360774755478,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.5006253970084905,
+      "RSA": 0.5047494052339137,
+      "gradient_cos": 0.023964153602719307,
+      "gradient_abs_cos": 0.025046834722161293,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5521579701598257,
+      "RSA": 0.5171131057592138,
+      "gradient_cos": 0.011024413630366325,
+      "gradient_abs_cos": 0.012866029515862465,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.5343437307212455,
+      "RSA": 0.4389741588582516,
+      "gradient_cos": 0.0032438733614981174,
+      "gradient_abs_cos": 0.0069638751447200775,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "CKA": 0.8917136253338848,
+      "RSA": 0.8617590391296049,
+      "gradient_cos": 0.5484248399734497,
+      "gradient_abs_cos": 0.5484248399734497,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.38383627498557754,
+      "RSA": 0.4102949652054,
+      "gradient_cos": -0.0002653893898241222,
+      "gradient_abs_cos": 0.006130650639533997,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.5201728343826525,
+      "RSA": 0.4835921459937148,
+      "gradient_cos": 0.018077854067087173,
+      "gradient_abs_cos": 0.018579639494419098,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.7429586077745025,
+      "RSA": 0.7076949103258964,
+      "gradient_cos": 0.06021706387400627,
+      "gradient_abs_cos": 0.06021706387400627,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.8028946834079236,
+      "RSA": 0.7423695641804158,
+      "gradient_cos": 0.04009302332997322,
+      "gradient_abs_cos": 0.04009302332997322,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.7690007872305641,
+      "RSA": 0.6853166115173628,
+      "gradient_cos": 0.04184120148420334,
+      "gradient_abs_cos": 0.04184120148420334,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.759163221126569,
+      "RSA": 0.6145146092780521,
+      "gradient_cos": 0.02950333058834076,
+      "gradient_abs_cos": 0.02950333058834076,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.7675433884559553,
+      "RSA": 0.6374353260529928,
+      "gradient_cos": 0.03180386871099472,
+      "gradient_abs_cos": 0.03180386871099472,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.29752600281250946,
+      "RSA": 0.32252382743473396,
+      "gradient_cos": 0.0037985320668667555,
+      "gradient_abs_cos": 0.005305321421474218,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.2928751907340352,
+      "RSA": 0.30868393033143726,
+      "gradient_cos": 0.009353898465633392,
+      "gradient_abs_cos": 0.009688010439276695,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.30736923379780967,
+      "RSA": 0.317503604499628,
+      "gradient_cos": 0.04155117645859718,
+      "gradient_abs_cos": 0.04155117645859718,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.2973232577833297,
+      "RSA": 0.30523190890551527,
+      "gradient_cos": 0.029229560866951942,
+      "gradient_abs_cos": 0.029229560866951942,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.3127000812441006,
+      "RSA": 0.31303983738479313,
+      "gradient_cos": 0.02482883632183075,
+      "gradient_abs_cos": 0.0260717011988163,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.4220470515199615,
+      "RSA": 0.44225091967985897,
+      "gradient_cos": 0.028568143025040627,
+      "gradient_abs_cos": 0.029526447877287865,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5458464519771209,
+      "RSA": 0.5101364247960014,
+      "gradient_cos": 0.022403251379728317,
+      "gradient_abs_cos": 0.023607725277543068,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.63088305726003,
+      "RSA": 0.47113286431351575,
+      "gradient_cos": 0.004320594947785139,
+      "gradient_abs_cos": 0.0074290381744503975,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "CKA": 0.31344868461000597,
+      "RSA": 0.3513944277526747,
+      "gradient_cos": 6.447937630582601e-05,
+      "gradient_abs_cos": 0.004853794816881418,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.4438694651190445,
+      "RSA": 0.41002486959690465,
+      "gradient_cos": 0.008176800794899464,
+      "gradient_abs_cos": 0.008820230141282082,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.6918394331616928,
+      "RSA": 0.6206432235614228,
+      "gradient_cos": 0.0360695943236351,
+      "gradient_abs_cos": 0.0360695943236351,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.8128565879392379,
+      "RSA": 0.6936511351716206,
+      "gradient_cos": 0.02084018662571907,
+      "gradient_abs_cos": 0.027507808059453964,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.8281642575021302,
+      "RSA": 0.640992904809593,
+      "gradient_cos": 0.03295295685529709,
+      "gradient_abs_cos": 0.03546672314405441,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.7854242397525821,
+      "RSA": 0.531942101584158,
+      "gradient_cos": 0.021077485755085945,
+      "gradient_abs_cos": 0.026176098734140396,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.8066578876594726,
+      "RSA": 0.59690610494627,
+      "gradient_cos": 0.026842376217246056,
+      "gradient_abs_cos": 0.029967496171593666,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.20279533686570564,
+      "RSA": 0.20786691206922475,
+      "gradient_cos": -0.002149635925889015,
+      "gradient_abs_cos": 0.0048361243680119514,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.20307338004288256,
+      "RSA": 0.19412505062525387,
+      "gradient_cos": 0.0054174140095710754,
+      "gradient_abs_cos": 0.006182198878377676,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.21875247013457358,
+      "RSA": 0.19996006082682374,
+      "gradient_cos": 0.024796459823846817,
+      "gradient_abs_cos": 0.024796459823846817,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.21842858372550558,
+      "RSA": 0.19946291966392432,
+      "gradient_cos": 0.01497495174407959,
+      "gradient_abs_cos": 0.01639469340443611,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.23689574415902315,
+      "RSA": 0.21437198995161005,
+      "gradient_cos": 0.009150378406047821,
+      "gradient_abs_cos": 0.015067391097545624,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.37817639701150113,
+      "RSA": 0.39233215168106106,
+      "gradient_cos": 0.015034222975373268,
+      "gradient_abs_cos": 0.020418062806129456,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.577332971866221,
+      "RSA": 0.5345572528477922,
+      "gradient_cos": 0.01225821953266859,
+      "gradient_abs_cos": 0.019222743809223175,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Gemma 4 E2B-it",
+        15
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.7022580136525944,
+      "RSA": 0.44697501892112657,
+      "gradient_cos": 0.0014677236322313547,
+      "gradient_abs_cos": 0.006248631048947573,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "CKA": 0.8802269307169789,
+      "RSA": 0.8758559936944035,
+      "gradient_cos": 0.19487936794757843,
+      "gradient_abs_cos": 0.19487936794757843,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.7097828521469287,
+      "RSA": 0.6290036058271583,
+      "gradient_cos": 0.009682536125183105,
+      "gradient_abs_cos": 0.026287367567420006,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.5412044593552384,
+      "RSA": 0.4617796323188248,
+      "gradient_cos": -0.000563292414881289,
+      "gradient_abs_cos": 0.0033505293540656567,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.41426258220830037,
+      "RSA": 0.4400417363806886,
+      "gradient_cos": 0.002118054311722517,
+      "gradient_abs_cos": 0.006193552631884813,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.35406463513746383,
+      "RSA": 0.38776037924327744,
+      "gradient_cos": 0.0006259573856368661,
+      "gradient_abs_cos": 0.006983034312725067,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.3266699766091035,
+      "RSA": 0.35326749847821726,
+      "gradient_cos": 0.0007641059928573668,
+      "gradient_abs_cos": 0.004477993119508028,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.7920171896437488,
+      "RSA": 0.7984689474994936,
+      "gradient_cos": 0.104500412940979,
+      "gradient_abs_cos": 0.104500412940979,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.7500817885356144,
+      "RSA": 0.7072131400963299,
+      "gradient_cos": 0.07209376245737076,
+      "gradient_abs_cos": 0.07209376245737076,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.7331034345164774,
+      "RSA": 0.6555764171983877,
+      "gradient_cos": 0.0236826129257679,
+      "gradient_abs_cos": 0.0236826129257679,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.6832231477551041,
+      "RSA": 0.5542063317628558,
+      "gradient_cos": 0.004445692058652639,
+      "gradient_abs_cos": 0.005992166232317686,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.6819949327728427,
+      "RSA": 0.5442434639138689,
+      "gradient_cos": 0.003256099298596382,
+      "gradient_abs_cos": 0.005101610906422138,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.6909388050287479,
+      "RSA": 0.5771277328294429,
+      "gradient_cos": 0.001710548996925354,
+      "gradient_abs_cos": 0.002698007505387068,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.6502347738192301,
+      "RSA": 0.5912751894341103,
+      "gradient_cos": 0.0021809712052345276,
+      "gradient_abs_cos": 0.0030228893738240004,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.37958370310111467,
+      "RSA": 0.35906881365571375,
+      "gradient_cos": 0.0009948337683454156,
+      "gradient_abs_cos": 0.0023832384031265974,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "CKA": 0.81853650059078,
+      "RSA": 0.7327529305161176,
+      "gradient_cos": 0.07152263820171356,
+      "gradient_abs_cos": 0.08456744998693466,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.6527762413096312,
+      "RSA": 0.5384702282825737,
+      "gradient_cos": 0.017802609130740166,
+      "gradient_abs_cos": 0.030130261555314064,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.5270934299123695,
+      "RSA": 0.4737884561815255,
+      "gradient_cos": 0.01201755739748478,
+      "gradient_abs_cos": 0.027088910341262817,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.4739266076623848,
+      "RSA": 0.4067317756680473,
+      "gradient_cos": 0.010727356187999249,
+      "gradient_abs_cos": 0.02135375514626503,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.4449384936292639,
+      "RSA": 0.39169017423893593,
+      "gradient_cos": 0.011151988990604877,
+      "gradient_abs_cos": 0.024953991174697876,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.6010408626536937,
+      "RSA": 0.6513606663314999,
+      "gradient_cos": 0.045971013605594635,
+      "gradient_abs_cos": 0.045971013605594635,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.5887153249696468,
+      "RSA": 0.5994962478463792,
+      "gradient_cos": 0.17365500330924988,
+      "gradient_abs_cos": 0.17365500330924988,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.5759897892302941,
+      "RSA": 0.5450746090436984,
+      "gradient_cos": 0.09953265637159348,
+      "gradient_abs_cos": 0.09953265637159348,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.510516005050329,
+      "RSA": 0.43735961388569583,
+      "gradient_cos": 0.010874219238758087,
+      "gradient_abs_cos": 0.011985558085143566,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.5137690150974364,
+      "RSA": 0.43542742415032715,
+      "gradient_cos": 0.005452250130474567,
+      "gradient_abs_cos": 0.00929543562233448,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.536226591289129,
+      "RSA": 0.4952971213572749,
+      "gradient_cos": 0.002996172057464719,
+      "gradient_abs_cos": 0.008524746634066105,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5396120912220919,
+      "RSA": 0.5298324982914129,
+      "gradient_cos": -0.0013858346501365304,
+      "gradient_abs_cos": 0.005918930284678936,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.4010144019117551,
+      "RSA": 0.34522316975414225,
+      "gradient_cos": 0.001256773597560823,
+      "gradient_abs_cos": 0.00479591591283679,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "CKA": 0.9065150213903505,
+      "RSA": 0.8842015632259593,
+      "gradient_cos": 0.4271702170372009,
+      "gradient_abs_cos": 0.4271702170372009,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.7641390016005801,
+      "RSA": 0.6949709183403472,
+      "gradient_cos": 0.2777235209941864,
+      "gradient_abs_cos": 0.2777235209941864,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.6892854559747201,
+      "RSA": 0.5388925279913492,
+      "gradient_cos": 0.20915286242961884,
+      "gradient_abs_cos": 0.20915286242961884,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.6698364785313538,
+      "RSA": 0.5144223709382976,
+      "gradient_cos": 0.1645924150943756,
+      "gradient_abs_cos": 0.17375817894935608,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.4415623130286895,
+      "RSA": 0.408441190841848,
+      "gradient_cos": 0.007412181235849857,
+      "gradient_abs_cos": 0.009477860294282436,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.43140101056307584,
+      "RSA": 0.40611054583517037,
+      "gradient_cos": 0.02560439147055149,
+      "gradient_abs_cos": 0.02567562833428383,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.4427272554653308,
+      "RSA": 0.4235766110530865,
+      "gradient_cos": 0.08597122132778168,
+      "gradient_abs_cos": 0.08597122132778168,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.41307505606124295,
+      "RSA": 0.3862533016074696,
+      "gradient_cos": 0.04956452175974846,
+      "gradient_abs_cos": 0.04956452175974846,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.4246466973057841,
+      "RSA": 0.3927523621980184,
+      "gradient_cos": 0.03444772958755493,
+      "gradient_abs_cos": 0.03606646507978439,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.5007798482931419,
+      "RSA": 0.4621873391908957,
+      "gradient_cos": 0.030911272391676903,
+      "gradient_abs_cos": 0.031459130346775055,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5790869389208126,
+      "RSA": 0.4880943531034949,
+      "gradient_cos": 0.015506547875702381,
+      "gradient_abs_cos": 0.02289857342839241,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.5461709306070646,
+      "RSA": 0.35292413071849366,
+      "gradient_cos": 0.006040181033313274,
+      "gradient_abs_cos": 0.013680776581168175,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "CKA": 0.9115284332748764,
+      "RSA": 0.812363498143874,
+      "gradient_cos": 0.6115201711654663,
+      "gradient_abs_cos": 0.6115201711654663,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.836569512941485,
+      "RSA": 0.6131022428185009,
+      "gradient_cos": 0.47652655839920044,
+      "gradient_abs_cos": 0.5140250325202942,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.8158281769970545,
+      "RSA": 0.5391664829077112,
+      "gradient_cos": 0.31453800201416016,
+      "gradient_abs_cos": 0.35981354117393494,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.32163543345951906,
+      "RSA": 0.29021871435992314,
+      "gradient_cos": 0.0010920788627117872,
+      "gradient_abs_cos": 0.004396685399115086,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.31605001455667886,
+      "RSA": 0.29442258342626276,
+      "gradient_cos": 0.003743672277778387,
+      "gradient_abs_cos": 0.006892980542033911,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.3321919424150941,
+      "RSA": 0.3225073657839105,
+      "gradient_cos": 0.02139952778816223,
+      "gradient_abs_cos": 0.02139952778816223,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.32022317787410726,
+      "RSA": 0.3200382496906473,
+      "gradient_cos": 0.02435491234064102,
+      "gradient_abs_cos": 0.032059017568826675,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.337784728499351,
+      "RSA": 0.3356153660463924,
+      "gradient_cos": 0.023989688605070114,
+      "gradient_abs_cos": 0.03224637359380722,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.4556691275368905,
+      "RSA": 0.4267175798081294,
+      "gradient_cos": 0.03166886046528816,
+      "gradient_abs_cos": 0.03166886046528816,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.6033703480888676,
+      "RSA": 0.4615976795883524,
+      "gradient_cos": 0.013294637203216553,
+      "gradient_abs_cos": 0.021959122270345688,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.6705719800343908,
+      "RSA": 0.37393133045087196,
+      "gradient_cos": 0.0029324195347726345,
+      "gradient_abs_cos": 0.014390203170478344,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "CKA": 0.9485354053477378,
+      "RSA": 0.8797897017913261,
+      "gradient_cos": 0.7952351570129395,
+      "gradient_abs_cos": 0.7952351570129395,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.9205707949729535,
+      "RSA": 0.7619326974426062,
+      "gradient_cos": 0.5417091846466064,
+      "gradient_abs_cos": 0.5417091846466064,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.2476250471045438,
+      "RSA": 0.3500611387063035,
+      "gradient_cos": -0.0011963722063228488,
+      "gradient_abs_cos": 0.003590749576687813,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.24278117129913795,
+      "RSA": 0.32047037978899173,
+      "gradient_cos": 0.0035550049506127834,
+      "gradient_abs_cos": 0.00824686884880066,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.2570815557636182,
+      "RSA": 0.3259539925507719,
+      "gradient_cos": 0.01964017190039158,
+      "gradient_abs_cos": 0.01964017190039158,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.2463221348727218,
+      "RSA": 0.2952779697484266,
+      "gradient_cos": 0.01681743748486042,
+      "gradient_abs_cos": 0.018104471266269684,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.264352605538666,
+      "RSA": 0.2972775250050621,
+      "gradient_cos": 0.016272898763418198,
+      "gradient_abs_cos": 0.01822739467024803,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.4058321228149435,
+      "RSA": 0.41025363208104976,
+      "gradient_cos": 0.027640167623758316,
+      "gradient_abs_cos": 0.027640167623758316,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.6117092481266347,
+      "RSA": 0.5208426810131679,
+      "gradient_cos": 0.025226149708032608,
+      "gradient_abs_cos": 0.025226149708032608,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.7751185658002977,
+      "RSA": 0.5857466546910869,
+      "gradient_cos": 0.007746501825749874,
+      "gradient_abs_cos": 0.012103867717087269,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "CKA": 0.9542959723731939,
+      "RSA": 0.8646704216618263,
+      "gradient_cos": 0.7199239134788513,
+      "gradient_abs_cos": 0.7199239134788513,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.2228939603477566,
+      "RSA": 0.36325740120282884,
+      "gradient_cos": 0.00021708293934352696,
+      "gradient_abs_cos": 0.004121360369026661,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.21920493391924434,
+      "RSA": 0.3218834262079139,
+      "gradient_cos": 0.006960792932659388,
+      "gradient_abs_cos": 0.008554046042263508,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.23368164772599934,
+      "RSA": 0.31791885721918545,
+      "gradient_cos": 0.019984355196356773,
+      "gradient_abs_cos": 0.019984355196356773,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.21942851630463533,
+      "RSA": 0.2728294676802894,
+      "gradient_cos": 0.009220854379236698,
+      "gradient_abs_cos": 0.014220410957932472,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.2356274962324732,
+      "RSA": 0.26442906646109854,
+      "gradient_cos": 0.00904890801757574,
+      "gradient_abs_cos": 0.014834165573120117,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.36960300230206133,
+      "RSA": 0.36307114487460423,
+      "gradient_cos": 0.02022312395274639,
+      "gradient_abs_cos": 0.020655639469623566,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5722036483754646,
+      "RSA": 0.4963369406999444,
+      "gradient_cos": 0.02116522379219532,
+      "gradient_abs_cos": 0.021229514852166176,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        20
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.778086680052458,
+      "RSA": 0.6654648987671459,
+      "gradient_cos": 0.009727162308990955,
+      "gradient_abs_cos": 0.012604156509041786,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "CKA": 0.2032219386145648,
+      "RSA": 0.2971517292707241,
+      "gradient_cos": 0.0010475249728187919,
+      "gradient_abs_cos": 0.0036255784798413515,
+      "negative_dot_fraction": 0.5,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.19978775557183784,
+      "RSA": 0.2609369825783966,
+      "gradient_cos": 0.006644056178629398,
+      "gradient_abs_cos": 0.007644291035830975,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.21454662031841387,
+      "RSA": 0.250073574245294,
+      "gradient_cos": 0.018411260098218918,
+      "gradient_abs_cos": 0.018411260098218918,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.20487919384455142,
+      "RSA": 0.209212727547061,
+      "gradient_cos": 0.013331929221749306,
+      "gradient_abs_cos": 0.01577840931713581,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.22110060730017636,
+      "RSA": 0.19857292779353258,
+      "gradient_cos": 0.012230956926941872,
+      "gradient_abs_cos": 0.015200868248939514,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.36304027080890494,
+      "RSA": 0.35012389775975505,
+      "gradient_cos": 0.018328670412302017,
+      "gradient_abs_cos": 0.020550653338432312,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.5775982658273366,
+      "RSA": 0.5237052021130993,
+      "gradient_cos": 0.021880321204662323,
+      "gradient_abs_cos": 0.022754136472940445,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "InternVL3.5-2B-HF",
+        23
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.7915399029107698,
+      "RSA": 0.6492306710519136,
+      "gradient_cos": 0.009061077609658241,
+      "gradient_abs_cos": 0.011883122846484184,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "CKA": 0.9674255750792207,
+      "RSA": 0.9269986732267723,
+      "gradient_cos": 0.30878180265426636,
+      "gradient_abs_cos": 0.30878180265426636,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.9463160683433077,
+      "RSA": 0.8611725336419803,
+      "gradient_cos": 0.0836438238620758,
+      "gradient_abs_cos": 0.0836438238620758,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.9130736364094033,
+      "RSA": 0.7748962434758447,
+      "gradient_cos": 0.01344251073896885,
+      "gradient_abs_cos": 0.014446569606661797,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.9080759160257584,
+      "RSA": 0.7522731830294359,
+      "gradient_cos": 0.008287218399345875,
+      "gradient_abs_cos": 0.010130423121154308,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.9004877609333809,
+      "RSA": 0.7253207244718681,
+      "gradient_cos": 0.009286290965974331,
+      "gradient_abs_cos": 0.009774507954716682,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.8103651190707212,
+      "RSA": 0.6583175357309036,
+      "gradient_cos": 0.004262901842594147,
+      "gradient_abs_cos": 0.008700182661414146,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        0
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.40381298362619583,
+      "RSA": 0.40246392384142493,
+      "gradient_cos": -0.0020265686325728893,
+      "gradient_abs_cos": 0.00866667926311493,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "CKA": 0.993958655765941,
+      "RSA": 0.9763170445319158,
+      "gradient_cos": 0.31538254022598267,
+      "gradient_abs_cos": 0.31538254022598267,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.9757066664060275,
+      "RSA": 0.9188666318249465,
+      "gradient_cos": 0.03483585640788078,
+      "gradient_abs_cos": 0.03489457815885544,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.9711887218851442,
+      "RSA": 0.898578277580604,
+      "gradient_cos": 0.01841113530099392,
+      "gradient_abs_cos": 0.01874913088977337,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.9397157082598689,
+      "RSA": 0.8143059512907909,
+      "gradient_cos": 0.010289618745446205,
+      "gradient_abs_cos": 0.014408069662749767,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.8248288614314438,
+      "RSA": 0.6927609487413529,
+      "gradient_cos": 0.002447965554893017,
+      "gradient_abs_cos": 0.01587255857884884,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        2
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.3916325751717737,
+      "RSA": 0.3686427961525036,
+      "gradient_cos": 0.0011905686696991324,
+      "gradient_abs_cos": 0.012802965939044952,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "CKA": 0.9841560836078858,
+      "RSA": 0.9529757099510088,
+      "gradient_cos": 0.12257426977157593,
+      "gradient_abs_cos": 0.12257426977157593,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.9800726617821851,
+      "RSA": 0.9361725483139169,
+      "gradient_cos": 0.0736488625407219,
+      "gradient_abs_cos": 0.0736488625407219,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.9391250579246649,
+      "RSA": 0.8123603178334753,
+      "gradient_cos": 0.04604324698448181,
+      "gradient_abs_cos": 0.04604324698448181,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.8236154483122813,
+      "RSA": 0.6749346123241068,
+      "gradient_cos": 0.024777961894869804,
+      "gradient_abs_cos": 0.03763836994767189,
+      "negative_dot_fraction": 0.4,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        5
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.39953346602795736,
+      "RSA": 0.35326587836073986,
+      "gradient_cos": 0.010220477357506752,
+      "gradient_abs_cos": 0.0275327917188406,
+      "negative_dot_fraction": 0.3,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "CKA": 0.9984714052624657,
+      "RSA": 0.9937584411633104,
+      "gradient_cos": 0.8868976831436157,
+      "gradient_abs_cos": 0.8868976831436157,
+      "negative_dot_fraction": 0.0,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.9610662496108382,
+      "RSA": 0.8908738327370003,
+      "gradient_cos": 0.45735281705856323,
+      "gradient_abs_cos": 0.5937994122505188,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.8326383068874678,
+      "RSA": 0.7053400382871258,
+      "gradient_cos": 0.3590470552444458,
+      "gradient_abs_cos": 0.44739165902137756,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        10
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.3895805048205594,
+      "RSA": 0.30993349511130763,
+      "gradient_cos": 0.043058980256319046,
+      "gradient_abs_cos": 0.17598673701286316,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "CKA": 0.9668064718606396,
+      "RSA": 0.9052920731419927,
+      "gradient_cos": 0.5705432891845703,
+      "gradient_abs_cos": 0.7069516181945801,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.842434586568205,
+      "RSA": 0.7143667152713375,
+      "gradient_cos": 0.3877561390399933,
+      "gradient_abs_cos": 0.5099927186965942,
+      "negative_dot_fraction": 0.1,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        11
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.4014886241656175,
+      "RSA": 0.294222998821297,
+      "gradient_cos": 0.05794809013605118,
+      "gradient_abs_cos": 0.21699579060077667,
+      "negative_dot_fraction": 0.6,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "CKA": 0.931039621484854,
+      "RSA": 0.8739732505691429,
+      "gradient_cos": 0.5147997736930847,
+      "gradient_abs_cos": 0.6021150946617126,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        14
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.5288859248780171,
+      "RSA": 0.39698492908997884,
+      "gradient_cos": -0.03589301183819771,
+      "gradient_abs_cos": 0.3294317424297333,
+      "negative_dot_fraction": 0.7,
+      "N": 10
+    },
+    {
+      "left": [
+        "Qwen3.5-2B",
+        17
+      ],
+      "right": [
+        "Qwen3.5-2B",
+        23
+      ],
+      "CKA": 0.7304702401885808,
+      "RSA": 0.5940520939730367,
+      "gradient_cos": 0.16567781567573547,
+      "gradient_abs_cos": 0.47779354453086853,
+      "negative_dot_fraction": 0.2,
+      "N": 10
+    }
+  ]
+}

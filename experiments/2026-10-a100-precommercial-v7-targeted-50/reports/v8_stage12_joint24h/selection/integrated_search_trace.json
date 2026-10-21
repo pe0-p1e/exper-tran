@@ -1,0 +1,84 @@
+{
+  "policy": {
+    "version": "integrated_selection_v1",
+    "shortlist_structure": "one resident-model tap and one new-model unit when available",
+    "max_units": 4,
+    "beam_width": 2,
+    "shortlist_per_parent": 2,
+    "source_pool": "ILA latest-peak plus best two positive one-step PP gains/model; max3/model",
+    "shortlist": "positive source gain * (1+CKA novelty) * (1+gradient residual novelty) * (1-negative-dot fraction) / predicted marginal seconds",
+    "no_peak": "explicit source-gain fallback, never claim an ILA peak",
+    "search": "FDA-inspired actual conditional attacks on bounded source shortlist; two Pareto beam states",
+    "final_tolerance_pp": 5,
+    "ablation_stage": 3,
+    "final_target_feedback": false
+  },
+  "families": {
+    "qwen": [
+      {
+        "size": 1,
+        "condition": "V8_75035d0a2f9a053d84",
+        "units": [
+          [
+            "CLIP ViT-L/14",
+            21
+          ]
+        ],
+        "selection": "source-only ILA seed",
+        "no_peak": false
+      },
+      {
+        "size": 2,
+        "parent": "V8_75035d0a2f9a053d84",
+        "condition": "V8_a85360b524dc58ea31",
+        "added": [
+          "CLIP ViT-L/14",
+          11
+        ],
+        "source_prior": 62.34547095228516,
+        "shortlist_only": true
+      },
+      {
+        "size": 2,
+        "parent": "V8_75035d0a2f9a053d84",
+        "condition": "V8_c77def00d906286387",
+        "added": [
+          "InternVL3.5-2B-HF",
+          11
+        ],
+        "source_prior": 27.04028576474237,
+        "shortlist_only": true
+      }
+    ],
+    "internvl": [
+      {
+        "size": 1,
+        "condition": "V8_05f4a244f9ea7e5af6",
+        "units": [
+          [
+            "CLIP ViT-L/14",
+            21
+          ]
+        ],
+        "selection": "source-only ILA seed",
+        "no_peak": false
+      }
+    ],
+    "gemma4": [
+      {
+        "size": 1,
+        "condition": "V8_f14cf1386c848b45dc",
+        "units": [
+          [
+            "CLIP ViT-L/14",
+            21
+          ]
+        ],
+        "selection": "source-only ILA seed",
+        "no_peak": false
+      }
+    ]
+  },
+  "stage3_full_ablation": "DEFERRED_BY_USER_2026-10-21",
+  "old_results_reused": true
+}

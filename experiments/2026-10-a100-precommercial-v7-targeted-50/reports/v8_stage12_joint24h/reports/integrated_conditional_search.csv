@@ -1,0 +1,6 @@
+family,size,condition,parent,added,source_prior,status,hits,N,parent_hits,gained_images,lost_images
+qwen,1,V8_75035d0a2f9a053d84,,null,,COMPLETE,0,10,,,
+qwen,2,V8_a85360b524dc58ea31,V8_75035d0a2f9a053d84,"[""CLIP ViT-L/14"", 11]",62.34547095228516,COMPLETE,2,10,0,2,0
+qwen,2,V8_c77def00d906286387,V8_75035d0a2f9a053d84,"[""InternVL3.5-2B-HF"", 11]",27.04028576474237,PENDING,,,,,
+internvl,1,V8_05f4a244f9ea7e5af6,,null,,PENDING,,,,,
+gemma4,1,V8_f14cf1386c848b45dc,,null,,PENDING,,,,,
