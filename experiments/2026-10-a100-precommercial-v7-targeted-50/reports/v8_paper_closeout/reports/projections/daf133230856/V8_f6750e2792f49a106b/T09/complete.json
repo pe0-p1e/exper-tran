@@ -1,0 +1,8 @@
+{
+  "joint_fit": true,
+  "normalization": "L2",
+  "random_state": 42,
+  "perplexity": 30,
+  "N": 156,
+  "reverse_direction_present": false
+}
