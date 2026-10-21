@@ -1,6 +1,13 @@
 version: proxy_followup_v1
 mode: prepare_until_layer_freeze
 purpose: proxy_selection_with_frozen_layers
+comparison_scope:
+  proxy_only: freeze_model_specific_layers_to_isolate_proxy_identity
+  joint_model_layer: reopen_native_layer_candidates_conditioned_on_current_subset
+  singleton_rank_is_hard_filter: false
+  retain_weaker_singleton_complementarity_controls: true
+  joint_decision: actual_joint_attack_gain_and_lost_images_under_matched_compute
+  joint_search_dispatch: existing_integrated_owner_not_this_static_compiler
 layer_strategy: FDA_inspired_conditional_joint_utility
 primary_attack:
   pull: 0.5

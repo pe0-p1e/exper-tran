@@ -12,6 +12,10 @@ User2026-10-21: prepare proxy selection from the reviewed literature, run after 
 
 ## Controlled core matrix
 
+### Proxy-only controls versus joint selection
+
+The frozen layer policy applies ONLY to proxy-identity controls. It is not a permanent constraint on joint model–layer selection. After this control, the joint selector must reopen eligible native layers conditioned on the current model/layer subset: a weak singleton layer or proxy can still supply a useful complementary direction. Do not restrict joint candidates to each model's best singleton layers or the winning proxy-only subset. Retain bounded weaker-singleton controls and allow add, replace and remove proposals; judge them by actual joint attacks, gained AND lost images, and matched compute. Gradient cosine/CKA are prescreens, never proof of complementarity or a hard singleton-rank veto. Keep joint and independently selected configurations as separate method identities. This static compiler materializes only the proxy-only controls; joint proposals remain with the existing integrated selection owner and require their own immutable condition identities.
+
 V=CLIP-L/14. Every checkpoint uses the same frozen model-specific layer policy across all rows,50-step1:1 PP,DI,BF16,equal normalized fusion and fixed GT cohorts.
 
 | Large confirmation target | Development screen | A | B |
