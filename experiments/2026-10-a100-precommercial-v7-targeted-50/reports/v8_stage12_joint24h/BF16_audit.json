@@ -1,5 +1,5 @@
 {
-  "load_events": 440,
+  "load_events": 441,
   "all_pass": true,
   "latest": [
     {
@@ -513,7 +513,7 @@
       "repo_id": "google/gemma-4-E4B-it",
       "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T07:27:42.120770+00:00",
+      "audited_utc": "2026-10-21T07:28:40.468906+00:00",
       "total_parameter_count": 7941100832,
       "floating_parameter_count": 7941100832,
       "parameter_counts_by_dtype": {
@@ -589,7 +589,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 440
+      "load_sequence": 441
     },
     {
       "model_name": "DINOv2-Large",
