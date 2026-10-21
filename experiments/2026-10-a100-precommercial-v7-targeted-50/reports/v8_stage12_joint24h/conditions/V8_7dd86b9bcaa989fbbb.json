@@ -1,0 +1,30 @@
+{
+  "version": "8.1",
+  "model_order": [
+    "CLIP ViT-L/14"
+  ],
+  "family": "qwen",
+  "validator": "Qwen3.5-9B",
+  "layers": {
+    "CLIP ViT-L/14": [
+      5
+    ]
+  },
+  "split": "screen",
+  "steps": 50,
+  "seed": 42,
+  "epsilon": 0.06274509803921569,
+  "alpha": 0.00392156862745098,
+  "momentum": 1.0,
+  "pull": 0.5,
+  "push": 0.5,
+  "DI": true,
+  "CLS": 0,
+  "patch": 0,
+  "parameter_dtype": "bfloat16",
+  "fusion": "equal_per_image_L1_proxy_gradient_mean",
+  "layer_reduction": "mean_before_proxy_normalization",
+  "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+  "id": "V8_7dd86b9bcaa989fbbb",
+  "label": "layer_single"
+}
