@@ -1,0 +1,31 @@
+{
+  "version": "8.1",
+  "model_order": [
+    "CLIP ViT-L/14"
+  ],
+  "family": "gemma4",
+  "validator": "Gemma 4 E4B-it",
+  "layers": {
+    "CLIP ViT-L/14": [
+      2,
+      14
+    ]
+  },
+  "split": "screen",
+  "steps": 50,
+  "seed": 42,
+  "epsilon": 0.06274509803921569,
+  "alpha": 0.00392156862745098,
+  "momentum": 1.0,
+  "pull": 0.5,
+  "push": 0.5,
+  "DI": true,
+  "CLS": 0,
+  "patch": 0,
+  "parameter_dtype": "bfloat16",
+  "fusion": "equal_per_image_L1_proxy_gradient_mean",
+  "layer_reduction": "mean_before_proxy_normalization",
+  "RNG": "sha256(seed,image_id,stream); individual forward per image independent of microbatch",
+  "id": "V8_6cc03c7945fc7583e4",
+  "label": "joint_pair"
+}
