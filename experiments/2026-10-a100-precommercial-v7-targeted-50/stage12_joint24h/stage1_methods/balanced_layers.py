@@ -76,7 +76,7 @@ def plan(g):
             winners={}
             for k in [2,3]:
                 options=[(label,c) for label,c in cc.items() if label.endswith(str(k))]
-                label,c=max(options,key=lambda item:S.rank(item[1]));winners[k]=dict(strategy=label,condition=c['id'])
+                label,c=max(options,key=lambda item:S.rank(item[1]));winners[str(k)]=dict(strategy=label,condition=c['id'])
             C.freeze(OUT/(fam+'_promotion.json'),dict(rule='best_development_screen_candidate_at_each_layer_count',winners=winners,feedback='screen10_only'))
             base30,cs30=make_conditions(fam,choice,'explore');jobs.append(('uniform4',base30))
             if not C.attack_done(base30) or not C.eval_done(base30):pending.append(base30)

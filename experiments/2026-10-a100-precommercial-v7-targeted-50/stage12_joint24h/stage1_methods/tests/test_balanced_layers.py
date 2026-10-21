@@ -1,10 +1,25 @@
-import sys,tempfile,unittest
+import sys,tempfile,unittest,contextlib
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]))
 from stage1_methods import balanced_layers as B
 
 class ThreeProxyTests(unittest.TestCase):
+ def test_completed_promotion_survives_json_roundtrip(self):
+  with tempfile.TemporaryDirectory() as d,contextlib.ExitStack() as stack:
+   root=Path(d)
+   for obj,attr,value in [(B.C,'ROOT',root),(B.J,'ROOT',root),(B,'OUT',root/'three')]:stack.enter_context(patch.object(obj,attr,value))
+   for split in ['screen','explore']:B.C.atomic(root/'manifests'/(split+'.json'),dict(images=[]))
+   def choice(fam,g):
+    return dict(selected={f'{method}{k}':{n:list(range(k)) for n in B.C.POOLS[fam][:3]} for method in ['independent_top','geometry_selected'] for k in [2,3]})
+   stack.enter_context(patch.object(B,'select',side_effect=choice))
+   stack.enter_context(patch.object(B.C,'attack_done',return_value=True));stack.enter_context(patch.object(B.C,'eval_done',return_value=True))
+   stack.enter_context(patch.object(B.S,'rank',return_value=(1,)))
+   stack.enter_context(patch.object(B.S,'score',return_value=dict(hits=8,N=10)))
+   stack.enter_context(patch.object(B,'pair_outcomes',return_value=None))
+   B.plan({});before=B.C.sha(root/'three/qwen_promotion.json')
+   B.plan({});self.assertEqual(before,B.C.sha(root/'three/qwen_promotion.json'))
+   self.assertEqual(set(B.C.read(root/'three/qwen_promotion.json')['winners']),{'2','3'})
  def test_source_selection_keeps_each_model_and_can_pick_weak_singleton(self):
   order=['a','b','c'];pool=[(n,l) for n in order for l in range(4)];seeds=[(n,0) for n in order]
   with patch.object(B.J,'prior',side_effect=lambda g,u,cur:100 if u[1]==3 else 10-u[1]):
