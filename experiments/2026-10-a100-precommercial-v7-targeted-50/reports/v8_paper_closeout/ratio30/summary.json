@@ -462,6 +462,47 @@
           "seconds": 4.534020900726318
         }
       ]
+    },
+    {
+      "method": "pull_1.0",
+      "model": "gpt-6.1-sol",
+      "N": 30,
+      "completed_pairs": 0,
+      "hits": 0,
+      "ASR": null,
+      "directions": [
+        {
+          "transition": "T01",
+          "hits": 0,
+          "N": 6,
+          "observed": 0
+        },
+        {
+          "transition": "T03",
+          "hits": 0,
+          "N": 6,
+          "observed": 0
+        },
+        {
+          "transition": "T05",
+          "hits": 0,
+          "N": 6,
+          "observed": 0
+        },
+        {
+          "transition": "T07",
+          "hits": 0,
+          "N": 6,
+          "observed": 0
+        },
+        {
+          "transition": "T09",
+          "hits": 0,
+          "N": 6,
+          "observed": 0
+        }
+      ],
+      "images": []
     }
   ],
   "expected_conditions": 5,
