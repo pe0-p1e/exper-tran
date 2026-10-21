@@ -1,5 +1,5 @@
 {
-  "load_events": 491,
+  "load_events": 518,
   "all_pass": true,
   "latest": [
     {
@@ -7,7 +7,7 @@
       "repo_id": "openai/clip-vit-large-patch14",
       "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T09:21:10.014719+00:00",
+      "audited_utc": "2026-10-21T09:43:40.817807+00:00",
       "total_parameter_count": 427616513,
       "floating_parameter_count": 427616513,
       "parameter_counts_by_dtype": {
@@ -83,14 +83,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 489
+      "load_sequence": 516
     },
     {
       "model_name": "InternVL3.5-2B-HF",
       "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
       "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T09:21:20.601082+00:00",
+      "audited_utc": "2026-10-21T09:43:47.183960+00:00",
       "total_parameter_count": 2348347392,
       "floating_parameter_count": 2348347392,
       "parameter_counts_by_dtype": {
@@ -161,21 +161,21 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 4720989184,
-        "cuda_reserved_bytes": 5056233472,
-        "cuda_allocated_gib": 4.396763801574707,
-        "cuda_reserved_gib": 4.708984375
+        "cuda_allocated_bytes": 4713124864,
+        "cuda_reserved_bytes": 5035261952,
+        "cuda_allocated_gib": 4.389439582824707,
+        "cuda_reserved_gib": 4.689453125
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 491
+      "load_sequence": 517
     },
     {
       "model_name": "Gemma 4 E2B-it",
       "repo_id": "google/gemma-4-E2B-it",
       "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T09:09:51.496857+00:00",
+      "audited_utc": "2026-10-21T09:44:06.211224+00:00",
       "total_parameter_count": 5104297504,
       "floating_parameter_count": 5104297504,
       "parameter_counts_by_dtype": {
@@ -244,21 +244,21 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 10209115648,
+        "cuda_allocated_bytes": 10233394688,
         "cuda_reserved_bytes": 10290724864,
-        "cuda_allocated_gib": 9.50797986984253,
+        "cuda_allocated_gib": 9.530591487884521,
         "cuda_reserved_gib": 9.583984375
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 484
+      "load_sequence": 518
     },
     {
       "model_name": "Qwen3.5-2B",
       "repo_id": "Qwen/Qwen3.5-2B",
       "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T09:21:13.350513+00:00",
+      "audited_utc": "2026-10-21T09:41:43.608127+00:00",
       "total_parameter_count": 2213241664,
       "floating_parameter_count": 2213241664,
       "parameter_counts_by_dtype": {
@@ -336,14 +336,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 490
+      "load_sequence": 511
     },
     {
       "model_name": "Qwen3.5-9B",
       "repo_id": "Qwen/Qwen3.5-9B",
       "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T09:09:07.056806+00:00",
+      "audited_utc": "2026-10-21T09:42:53.283309+00:00",
       "total_parameter_count": 9409813744,
       "floating_parameter_count": 9409813744,
       "parameter_counts_by_dtype": {
@@ -421,14 +421,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 483
+      "load_sequence": 514
     },
     {
       "model_name": "InternVL3.5-8B-HF",
       "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
       "revision": "741a7d03020411e666c6109218ab71e08151ef86",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T09:20:49.309205+00:00",
+      "audited_utc": "2026-10-21T09:43:23.625398+00:00",
       "total_parameter_count": 8528318464,
       "floating_parameter_count": 8528318464,
       "parameter_counts_by_dtype": {
@@ -506,7 +506,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 488
+      "load_sequence": 515
     },
     {
       "model_name": "Gemma 4 E4B-it",
