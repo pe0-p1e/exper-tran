@@ -1,40 +1,45 @@
 id,label,family,split,validator,models,status,attack_images,N,hits,ASR,minimum_direction_hits,attack_seconds,backwards,peak_reserved_gib
 V8_0101de398e9f6f36dc,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [2]}",COMPLETE,10,10,0,0.0,0,1654.015372991562,500,4.912109375
+V8_015a52391ea4d86ad4,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [17, 21]}",COMPLETE,10,10,2,0.2,0,37.0066876411438,500,0.7890625
 V8_02505f8235f1e1f18d,layer_single,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [2]}",COMPLETE,10,10,0,0.0,0,1425.6258754730225,500,4.912109375
 V8_025767c4f6fd70b299,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [17, 23]}",COMPLETE,10,10,4,0.4,0,1598.3687822818756,500,4.3203125
 V8_036c64af313c61b321,joint_pair,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [2], ""Gemma 4 E2B-it"": [1]}",COMPLETE,10,10,0,0.0,0,128.72263550758362,1000,4.302734375
 V8_04b95758d68a6db9a8,proxy_uniform,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23]}",COMPLETE,10,10,9,0.9,1,2732.2850058078766,1500,4.974609375
-V8_04f6b5b8db7ca8e4ff,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14, 23]}",PARTIAL,10,10,,,,,,
+V8_04f6b5b8db7ca8e4ff,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14, 23]}",COMPLETE,10,10,8,0.8,1,45.97603368759155,500,1.103515625
 V8_05267d6f98d4444850,proxy_fixed_FDA2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 17], ""Gemma 4 E2B-it"": [9, 15], ""InternVL3.5-2B-HF"": [2, 17]}",COMPLETE,10,10,8,0.8,1,176.56395959854126,1500,8.697265625
 V8_05f4a244f9ea7e5af6,integrated_ILA_seed,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [21]}",COMPLETE,10,10,1,0.1,0,32.565951108932495,500,1.001953125
 V8_070251e314fdb5d09c,joint_pair,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [1, 15]}",COMPLETE,10,10,3,0.3,0,139.01921319961548,500,3.4609375
 V8_07b85a88af68ebb92e,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [5]}",COMPLETE,10,10,0,0.0,0,1318.4031558036804,500,4.318359375
 V8_0804406e1d56ce93f9,integrated_FDA_joint_2,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11, 14]}",COMPLETE,10,10,7,0.7,0,1338.5855178833008,500,4.9140625
 V8_08a4a16f6b6ba0ef06,FDA_conditional_3,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17]}",COMPLETE,10,10,7,0.7,1,33.87425255775452,500,1.005859375
-V8_090e761a4dab0b6457,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [5, 14, 17]}",QUEUED,0,10,,,,,,
+V8_090e761a4dab0b6457,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [5, 14, 17]}",COMPLETE,10,10,6,0.6,0,195.95142769813538,500,0.822265625
 V8_0939dcfb2f9aa9ccda,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [14]}",COMPLETE,10,10,4,0.4,0,31.026159286499023,500,1.001953125
+V8_0c246db43e442e4800,proxy_fixed_FDA2,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14, 23], ""Qwen3.5-2B"": [14, 17]}",PARTIAL,6,10,,,,,,
 V8_0d00433d84e97401d8,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [15], ""Qwen3.5-2B"": [14]}",COMPLETE,10,10,9,0.9,1,161.85215711593628,1000,7.619140625
 V8_0d546e0f7ef31399e1,proxy_vision_single,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17, 23]}",COMPLETE,10,10,8,0.8,1,37.06437921524048,500,1.02734375
 V8_0e32b29b70a7cb479c,joint_pair,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11], ""Gemma 4 E2B-it"": [1]}",COMPLETE,10,10,2,0.2,0,119.48889255523682,1000,4.30078125
 V8_0e5d6e456c8d31bdf9,integrated_FDA_joint_3,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11], ""Gemma 4 E2B-it"": [15], ""InternVL3.5-2B-HF"": [17]}",COMPLETE,10,10,7,0.7,0,178.8035910129547,1500,8.677734375
+V8_0e7c2311d351c105f0,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 17, 21]}",COMPLETE,10,10,4,0.4,0,34.4994010925293,500,0.791015625
 V8_0e9c88a6af96a22c64,proxy_fixed_FDA2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 17], ""InternVL3.5-2B-HF"": [2, 17]}",COMPLETE,10,10,8,0.8,1,2358.4058787822723,1000,4.93359375
 V8_0eb7b757c126d81f4f,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [17]}",COMPLETE,10,10,1,0.1,0,29.783565998077393,500,1.001953125
 V8_0ebf4ea46aca0565f9,layer_single,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [7]}",COMPLETE,10,10,0,0.0,0,112.41355895996094,500,3.44140625
 V8_0f5be6a75920f1e12d,weak_pair_complementarity_control,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [21], ""InternVL3.5-2B-HF"": [5]}",COMPLETE,10,10,0,0.0,0,128.418616771698,1000,1.744140625
 V8_0f7a85a9e8c1ce8fc4,FDA_conditional_4,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 14, 17]}",COMPLETE,10,10,8,0.8,1,32.94520282745361,500,1.02734375
 V8_1302a3c70a920d9a9c,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14]}",COMPLETE,10,10,7,0.7,1,1518.8721520900726,500,4.912109375
+V8_156392c07c153a39a1,proxy_fixed_FDA2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11], ""Gemma 4 E2B-it"": [3, 15]}",PARTIAL,10,10,,,,,,
 V8_1709449c91153ca7e8,layer_single,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [5]}",COMPLETE,10,10,0,0.0,0,1435.5537481307983,500,4.912109375
 V8_179fa3a388aa413384,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [5, 17]}",COMPLETE,10,10,5,0.5,0,1771.9298930168152,500,4.9140625
 V8_17a6425e9f26e6c2bf,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [14]}",COMPLETE,10,10,6,0.6,0,1338.3040425777435,500,4.318359375
 V8_18240e92934412108d,fixed4_interior_swap,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [5, 11, 14, 23], ""Qwen3.5-2B"": [5, 11, 14, 23], ""InternVL3.5-2B-HF"": [5, 11, 14, 23]}",COMPLETE,10,10,9,0.9,1,4052.5048809051514,1500,4.9765625
 V8_18d2e9cd7ef43f0fb6,layer_single,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [23]}",COMPLETE,10,10,2,0.2,0,1470.187385559082,500,4.912109375
 V8_1a699a1f2b2acb6862,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [2], ""Gemma 4 E2B-it"": [1]}",COMPLETE,10,10,0,0.0,0,92.11811208724976,1000,4.302734375
-V8_1a90d7dace759cdbd6,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 21], ""Gemma 4 E2B-it"": [15]}",QUEUED,0,10,,,,,,
-V8_1b49768be6915d3908,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [23], ""Gemma 4 E2B-it"": [15]}",QUEUED,0,10,,,,,,
+V8_1a90d7dace759cdbd6,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 21], ""Gemma 4 E2B-it"": [15]}",COMPLETE,10,10,7,0.7,0,227.76463866233826,1000,4.087890625
+V8_1b49768be6915d3908,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [23], ""Gemma 4 E2B-it"": [15]}",COMPLETE,10,10,6,0.6,0,256.34601068496704,1000,4.087890625
 V8_1bdc2eb66a9806a704,FDA_conditional_3,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 17, 23]}",COMPLETE,10,10,7,0.7,0,35.874916791915894,500,1.025390625
 V8_1cf5fd9b1660d0c0b1,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 23]}",COMPLETE,10,10,4,0.4,0,42.35977339744568,500,1.0234375
 V8_1ee322e4adca053349,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [11]}",COMPLETE,10,10,5,0.5,0,1393.8041779994965,500,4.318359375
-V8_1fb690beed7be9c533,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14, 17]}",PARTIAL,10,10,,,,,,
+V8_1fb690beed7be9c533,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14, 17]}",COMPLETE,10,10,6,0.6,0,37.22300863265991,500,1.103515625
+V8_204bb662bfa65c02f7,FDA_conditional_3,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [5, 14, 23]}",COMPLETE,10,10,8,0.8,1,63.467397689819336,500,1.123046875
 V8_20544de296e6a60852,integrated_FDA_joint_3,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11, 14, 20]}",COMPLETE,10,10,8,0.8,1,1114.9611217975616,500,4.931640625
 V8_2087be0d71cd5b864a,fixed4_interior_swap,internvl,explore,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 14, 23], ""Qwen3.5-2B"": [5, 11, 14, 23], ""Gemma 4 E2B-it"": [3, 7, 9, 15]}",COMPLETE,30,30,27,0.9,4,661.4769010543823,4500,8.48828125
 V8_225b863451a8b9dccf,proxy_VLM_B_single,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,10,10,2,0.2,0,123.12437009811401,500,3.5
@@ -46,18 +51,22 @@ V8_2b8ec6d0de5b758c8f,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B""
 V8_2bc365150258ea7de8,three_proxy_independent_top3,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 14, 17], ""InternVL3.5-2B-HF"": [14, 17, 23], ""Gemma 4 E2B-it"": [1, 11, 15]}",COMPLETE,10,10,9,0.9,1,282.7604715824127,1500,4.693359375
 V8_2d9b7b2eac3755140a,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [11]}",COMPLETE,10,10,5,0.5,0,1199.39532828331,500,4.318359375
 V8_2f597bd21b645fcfc2,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11]}",COMPLETE,10,10,5,0.5,0,32.64052700996399,500,1.00390625
+V8_2f76271b91e422652f,FDA_conditional_4,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [11, 14, 17, 23]}",COMPLETE,10,10,7,0.7,0,112.98513054847717,500,0.82421875
 V8_2f97f3ce4f2b0f7fbd,joint_pair,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [1], ""InternVL3.5-2B-HF"": [2]}",COMPLETE,10,10,0,0.0,0,131.59466528892517,1000,7.81640625
 V8_302a17fbd47b49ea35,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [5]}",COMPLETE,10,10,0,0.0,0,1404.352056503296,500,4.318359375
 V8_31c6700857f49011c9,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [2, 14]}",COMPLETE,10,10,6,0.6,0,1699.613505601883,500,4.9140625
 V8_324fa30bdd7f37fc27,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [2], ""Qwen3.5-2B"": [23]}",COMPLETE,10,10,0,0.0,0,1937.6033527851105,1000,4.318359375
+V8_339ba8c72af45b7fd5,proxy_fixed_FDA2,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11, 14], ""Qwen3.5-2B"": [14, 17]}",PARTIAL,7,10,,,,,,
 V8_33a7df8ad47caeb46d,proxy_same_family_large,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [5, 11, 17, 23], ""Qwen3.5-9B"": [6, 13, 20, 26]}",COMPLETE,10,10,8,0.8,1,9087.28635764122,1000,17.78515625
 V8_3513b09642328cd05b,layer_single,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [1]}",COMPLETE,10,10,0,0.0,0,96.90109729766846,500,3.44140625
+V8_356ce639f8cc1db845,FDA_conditional_3,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [2, 14, 23]}",COMPLETE,10,10,8,0.8,1,62.33871245384216,500,1.123046875
 V8_358c5209f80c69ee4e,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [11, 15]}",COMPLETE,10,10,2,0.2,0,127.3955283164978,500,3.4609375
 V8_36c858a3ab0b97a015,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [1], ""Qwen3.5-2B"": [14]}",COMPLETE,10,10,2,0.2,0,181.73869800567627,1000,7.619140625
 V8_383882a24fb242d08e,three_proxy_geometry_selected3,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11, 14, 17], ""Qwen3.5-2B"": [11, 14, 17], ""Gemma 4 E2B-it"": [1, 3, 15]}",COMPLETE,10,10,10,1.0,2,531.134756565094,1500,17.658203125
 V8_387aca15fae19c9b05,three_proxy_independent_top2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11, 14], ""Qwen3.5-2B"": [14, 17], ""Gemma 4 E2B-it"": [11, 15]}",COMPLETE,10,10,10,1.0,2,578.7847971916199,1500,4.712890625
 V8_387ae9851abcc95227,joint_pair,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11], ""InternVL3.5-2B-HF"": [17]}",COMPLETE,10,10,7,0.7,0,1710.0063009262085,1000,4.9140625
 V8_38f339b5ac05a92953,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [14, 23]}",COMPLETE,10,10,6,0.6,0,1516.4257514476776,500,4.3203125
+V8_3a6db0e021497554fe,FDA_conditional_4,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [2, 14, 17, 23]}",COMPLETE,10,10,7,0.7,0,109.25929713249207,500,0.82421875
 V8_3b89a4b7b99bc61fcb,proxy_uniform,internvl,explore,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,30,30,26,0.8666666666666667,4,934.5749275684357,4500,8.48828125
 V8_3c54f30622a2b53f45,layer_single,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11]}",COMPLETE,10,10,5,0.5,0,28.76794981956482,500,1.001953125
 V8_3d73cae5c130e7958b,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [9, 15]}",COMPLETE,10,10,3,0.3,0,113.7538959980011,500,3.4609375
@@ -75,15 +84,18 @@ V8_484c16c77e90f74ad1,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B""
 V8_4a88e8befc644cf33e,integrated_FDA_joint_3,gemma4,explore,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11, 14, 20]}",COMPLETE,30,30,21,0.7,3,4413.2888724803925,1500,4.93359375
 V8_4ae6a4cb5c928182b8,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11]}",COMPLETE,10,10,5,0.5,0,28.33456063270569,500,1.001953125
 V8_4afc7e51152fdd7e5d,three_proxy_independent_top3,qwen,explore,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 14, 17], ""InternVL3.5-2B-HF"": [14, 17, 23], ""Gemma 4 E2B-it"": [1, 11, 15]}",COMPLETE,30,30,28,0.9333333333333333,5,712.7917876243591,4500,17.9296875
+V8_4b08fe938d91ca12f6,FDA_conditional_4,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [5, 11, 14, 23]}",COMPLETE,10,10,7,0.7,0,59.63803219795227,500,1.123046875
 V8_4b31b542b800ee92fc,joint_pair,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [1], ""InternVL3.5-2B-HF"": [17]}",COMPLETE,10,10,2,0.2,0,185.02308297157288,1000,7.81640625
+V8_4b487b56ca20a188b4,proxy_fixed_FDA2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11], ""Qwen3.5-2B"": [14, 17]}",COMPLETE,10,10,10,1.0,2,165.2820782661438,1000,1.4140625
 V8_4b95d6b7d08d952b3f,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 14]}",COMPLETE,10,10,5,0.5,0,37.25962042808533,500,1.00390625
 V8_4c15fa768ee5b57290,FDA_conditional_2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11, 23]}",COMPLETE,10,10,5,0.5,0,33.588314056396484,500,1.0234375
 V8_4c3cd5fde7c1bfb051,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [3, 15]}",COMPLETE,10,10,2,0.2,0,123.37966537475586,500,3.4609375
 V8_4cd9221b41c9592db5,joint_pair,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [2, 11]}",COMPLETE,10,10,5,0.5,0,26.830754041671753,500,1.00390625
-V8_4e016aaca567a3d5f0,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [14, 17, 23]}",QUEUED,0,10,,,,,,
+V8_4e016aaca567a3d5f0,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [14, 17, 23]}",COMPLETE,10,10,8,0.8,0,196.58367657661438,500,0.822265625
 V8_4ea14882b8e9fb087a,proxy_vision_DINO_VLM,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""DINOv2-Large"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23]}",COMPLETE,10,10,9,0.9,1,2050.7810728549957,1500,4.9765625
+V8_4ff20378a34595b5ee,FDA_conditional_4,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [5, 14, 17, 23]}",COMPLETE,10,10,7,0.7,0,106.01147055625916,500,0.82421875
 V8_502677c283a427d5c8,proxy_vision_DINO_VLM,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""DINOv2-Large"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23]}",COMPLETE,10,10,9,0.9,1,1992.7831110954285,1500,4.34375
-V8_525cd0e4772dc48fbb,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [11, 17]}",PARTIAL,10,10,,,,,,
+V8_525cd0e4772dc48fbb,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [11, 17]}",COMPLETE,10,10,6,0.6,0,183.19185948371887,500,0.80078125
 V8_52ad0d57cf9c3cf71d,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [2], ""InternVL3.5-2B-HF"": [14]}",COMPLETE,10,10,4,0.4,0,1840.2720732688904,1000,4.9140625
 V8_5396beeede41f0241d,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [15], ""Qwen3.5-2B"": [23]}",COMPLETE,10,10,6,0.6,0,202.18439984321594,1000,7.619140625
 V8_542469e9b47afa8538,FDA_conditional_2,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [7, 15]}",COMPLETE,10,10,5,0.5,0,220.8589677810669,500,3.4609375
@@ -100,14 +112,20 @@ V8_5c6d374f471f10dba2,fixed4_interior_swap,qwen,explore,Qwen3.5-9B,"{""CLIP ViT-
 V8_5cc3a15bc29397a48c,three_proxy_geometry_selected2,internvl,explore,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11, 17], ""Qwen3.5-2B"": [14, 17], ""Gemma 4 E2B-it"": [1, 15]}",COMPLETE,30,30,27,0.9,5,1137.8831334114075,4500,17.658203125
 V8_5d6a57c82a08c05c11,integrated_FDA_joint_4,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11], ""InternVL3.5-2B-HF"": [11, 14], ""Qwen3.5-2B"": [14]}",COMPLETE,10,10,9,0.9,1,2208.9460735321045,1500,4.916015625
 V8_5fc4210deb0d7fecca,FDA_conditional_2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11]}",COMPLETE,10,10,6,0.6,0,28.415165901184082,500,1.00390625
+V8_608da97d951678cd26,proxy_fixed_FDA2,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11, 14], ""InternVL3.5-2B-HF"": [14, 23], ""Qwen3.5-2B"": [14, 17]}",QUEUED,0,10,,,,,,
 V8_617c2439eb2c75d7d0,proxy_vision_VLM_A,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23]}",COMPLETE,10,10,10,1.0,2,1580.3491480350494,1000,4.34375
+V8_621d82ab048e12892a,FDA_conditional_3,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11, 14, 23]}",COMPLETE,10,10,8,0.8,1,44.19558811187744,500,1.123046875
 V8_62c02c4f1c1028ded4,joint_pair,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [15], ""InternVL3.5-2B-HF"": [2]}",COMPLETE,10,10,2,0.2,0,223.9166123867035,1000,7.8359375
 V8_640a81c63a37b76999,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [17]}",COMPLETE,10,10,6,0.6,0,1601.374927997589,500,4.318359375
 V8_64a89cc85beb4b58b7,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [14, 17]}",COMPLETE,10,10,5,0.5,0,1805.6798141002655,500,4.9140625
 V8_64d3d0acc934c82cdf,joint_pair,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [2], ""InternVL3.5-2B-HF"": [2]}",COMPLETE,10,10,0,0.0,0,1562.9458320140839,1000,4.9140625
 V8_653b980c76a82501bd,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [14, 17]}",COMPLETE,10,10,5,0.5,0,42.48475384712219,500,0.7890625
+V8_655e2b1f38919e393d,FDA_conditional_4,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11, 14, 17, 23]}",COMPLETE,10,10,7,0.7,0,55.77642369270325,500,1.123046875
 V8_658aa949ea99f50136,FDA_conditional_3,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [2, 11, 17]}",COMPLETE,10,10,6,0.6,0,41.37548208236694,500,1.005859375
+V8_6623fb1e244efd9f13,FDA_conditional_3,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [14, 17, 23]}",COMPLETE,10,10,7,0.7,0,44.716660022735596,500,1.123046875
 V8_6770d2277e54ce056c,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [7, 15]}",COMPLETE,10,10,3,0.3,0,119.56174445152283,500,3.4609375
+V8_6ba4c0c20a3aaca51f,FDA_conditional_4,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [2, 11, 14, 23]}",COMPLETE,10,10,7,0.7,0,61.2259464263916,500,1.123046875
+V8_6bab5704d1575855d8,proxy_fixed_FDA2,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11, 14], ""InternVL3.5-2B-HF"": [14, 23]}",PARTIAL,10,10,,,,,,
 V8_6bec9ce8a55f483da4,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [7]}",COMPLETE,10,10,0,0.0,0,101.64172220230103,500,3.44140625
 V8_6cc03c7945fc7583e4,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [2, 14]}",COMPLETE,10,10,4,0.4,0,33.46035623550415,500,1.00390625
 V8_6cc9d82ba646377b29,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [2], ""Gemma 4 E2B-it"": [15]}",COMPLETE,10,10,6,0.6,0,152.1197817325592,1000,4.302734375
@@ -163,7 +181,7 @@ V8_a59ca13fdaf669df3a,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4
 V8_a70831c15da07ad465,proxy_uniform,qwen,explore,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,30,30,28,0.9333333333333333,5,750.487024307251,4500,8.7578125
 V8_a85360b524dc58ea31,integrated_FDA_joint_2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 21]}",COMPLETE,10,10,2,0.2,0,37.7104766368866,500,1.00390625
 V8_a8c091f1e3b726bc52,integrated_FDA_joint_2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11], ""InternVL3.5-2B-HF"": [14]}",COMPLETE,10,10,5,0.5,0,2013.6470427513123,1000,4.9140625
-V8_aa55fee31f971bf5ed,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [2, 17]}",PARTIAL,10,10,,,,,,
+V8_aa55fee31f971bf5ed,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [2, 17]}",COMPLETE,10,10,5,0.5,0,201.75715351104736,500,0.80078125
 V8_aa5c941f3cb8d5516f,three_proxy_independent_top2,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11, 14], ""InternVL3.5-2B-HF"": [14, 17], ""Gemma 4 E2B-it"": [11, 15]}",COMPLETE,10,10,7,0.7,0,199.37409853935242,1500,8.716796875
 V8_ac2f5e6d6b36b91bd1,layer_single,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [17]}",COMPLETE,10,10,4,0.4,0,1506.923066854477,500,4.912109375
 V8_af905e89e952aa788b,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11], ""Qwen3.5-2B"": [23]}",COMPLETE,10,10,6,0.6,0,1500.0355834960938,1000,4.318359375
@@ -180,7 +198,7 @@ V8_b6e52020a5a474755f,proxy_fixed_FDA2,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it
 V8_b7a2c0a8e70774a61f,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [14], ""Qwen3.5-2B"": [17]}",COMPLETE,10,10,8,0.8,1,1810.1179790496826,1000,4.318359375
 V8_b94156be424da0db4a,integrated_FDA_joint_3,gemma4,explore,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11], ""InternVL3.5-2B-HF"": [11, 14]}",COMPLETE,30,30,22,0.7333333333333333,3,6642.316021203995,3000,4.931640625
 V8_b995b713d868291b86,integrated_FDA_joint_3,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11], ""InternVL3.5-2B-HF"": [11, 14]}",COMPLETE,10,10,9,0.9,1,1362.5763728618622,1000,4.93359375
-V8_b9f4d84c3c94268fc7,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [5, 17]}",PARTIAL,10,10,,,,,,
+V8_b9f4d84c3c94268fc7,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [5, 17]}",COMPLETE,10,10,5,0.5,0,215.16418600082397,500,0.80078125
 V8_ba502cc36004258af8,proxy_same_family_scale,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [3, 7, 11, 15], ""Gemma 4 E4B-it"": [3, 7, 11, 15]}",COMPLETE,10,10,5,0.5,0,214.763836145401,1000,3.83203125
 V8_baa1ecb11d5255cf5d,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11]}",COMPLETE,10,10,5,0.5,0,1572.311191558838,500,4.912109375
 V8_bb0c06f741551a8dd0,integrated_FDA_joint_2,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [14, 17]}",COMPLETE,10,10,8,0.8,0,1418.2514114379883,500,4.3203125
@@ -199,18 +217,19 @@ V8_ca37b9a7d4a18e57e1,proxy_vision_single,gemma4,screen,Gemma 4 E4B-it,"{""CLIP 
 V8_cce4fbcc5c9d4a06f2,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [1], ""Qwen3.5-2B"": [23]}",COMPLETE,10,10,0,0.0,0,194.58128452301025,1000,7.619140625
 V8_cd606cfa508376641b,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [2, 11]}",COMPLETE,10,10,3,0.3,0,47.250848054885864,500,1.00390625
 V8_cebdcfdb69d1f98d66,smoke,internvl,smoke,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,2,2,0,0.0,0,2.746432304382324,12,8.486328125
-V8_cf8009baad61268030,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [2, 14, 17]}",QUEUED,0,10,,,,,,
+V8_cf8009baad61268030,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [2, 14, 17]}",COMPLETE,10,10,6,0.6,0,189.84666681289673,500,0.822265625
 V8_cf910711ed297189e4,proxy_VLM_A_single,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [5, 11, 17, 23]}",COMPLETE,10,10,7,0.7,0,1135.8411221504211,500,4.32421875
 V8_d14fbc42efc6654b0f,joint_pair,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [2], ""Qwen3.5-2B"": [23]}",COMPLETE,10,10,0,0.0,0,3035.847855091095,1000,4.916015625
 V8_d155c2c9ed33e38839,layer_single,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [9]}",COMPLETE,10,10,0,0.0,0,127.44724798202515,500,3.44140625
 V8_d2f53b30022a4d922e,layer_single,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [3]}",COMPLETE,10,10,0,0.0,0,100.20070099830627,500,3.44140625
 V8_d3ee0a14008dbf9c9b,proxy_same_family_scale,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [5, 11, 17, 23], ""Qwen3.5-4B"": [5, 11, 17, 23]}",COMPLETE,10,10,6,0.6,0,4038.240836620331,1000,8.666015625
+V8_d42d193eda24ed990e,proxy_fixed_FDA2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11], ""Gemma 4 E2B-it"": [3, 15], ""Qwen3.5-2B"": [14, 17]}",PARTIAL,3,10,,,,,,
 V8_d49bc6897a65105d60,proxy_uniform,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,10,10,8,0.8,1,189.7188413143158,1500,8.7578125
 V8_d5a70b473957ebdd65,smoke,gemma4,smoke,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""InternVL3.5-2B-HF"": [5, 11, 17, 23]}",QUEUED,0,2,,,,,,
 V8_d69c782425fc97a532,proxy_VLM_A_single,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [5, 11, 17, 23]}",COMPLETE,10,10,6,0.6,0,1326.9479734897614,500,4.32421875
 V8_d6be9a6f70bed97dc9,layer_single,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [15]}",COMPLETE,10,10,3,0.3,0,146.57087421417236,500,3.44140625
 V8_d6fb251d4df43e8847,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11], ""Qwen3.5-2B"": [14]}",COMPLETE,10,10,7,0.7,0,1260.565989971161,1000,4.318359375
-V8_d7ec94b6a5ede9f875,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [14, 17]}",PARTIAL,10,10,,,,,,
+V8_d7ec94b6a5ede9f875,FDA_conditional_2,gemma4,screen,Gemma 4 E4B-it,"{""Qwen3.5-2B"": [14, 17]}",COMPLETE,10,10,7,0.7,0,102.09447288513184,500,0.80078125
 V8_d97625173c876ae1e9,FDA_conditional_2,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [17, 23]}",COMPLETE,10,10,5,0.5,0,1768.014922618866,500,4.93359375
 V8_db01d23d943b3b12a4,fixed4_interior_swap,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [5, 11, 14, 23], ""InternVL3.5-2B-HF"": [5, 11, 14, 23], ""Gemma 4 E2B-it"": [3, 7, 9, 15]}",COMPLETE,10,10,9,0.9,1,245.1399495601654,1500,8.7578125
 V8_db6d28b21c0e55add1,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [17]}",COMPLETE,10,10,3,0.3,0,31.220621585845947,500,1.001953125
@@ -218,7 +237,7 @@ V8_ddea8960176f67e3ff,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/1
 V8_de1caf622cdeea722d,three_proxy_geometry_selected2,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11, 17], ""Qwen3.5-2B"": [14, 17], ""Gemma 4 E2B-it"": [1, 15]}",COMPLETE,10,10,10,1.0,2,569.8948085308075,1500,4.712890625
 V8_de1d501809096c2f7e,joint_pair,qwen,screen,Qwen3.5-9B,"{""Gemma 4 E2B-it"": [15], ""InternVL3.5-2B-HF"": [17]}",COMPLETE,10,10,6,0.6,0,225.23744225502014,1000,7.81640625
 V8_e0b9fc3d4b3ed86a6b,layer_single,qwen,explore,Qwen3.5-9B,"{""CLIP ViT-L/14"": [11]}",COMPLETE,30,30,10,0.3333333333333333,0,115.94010257720947,1500,1.001953125
-V8_e0e0042bdb5f23d23f,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [11, 14, 17]}",QUEUED,0,10,,,,,,
+V8_e0e0042bdb5f23d23f,FDA_conditional_3,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [11, 14, 17]}",COMPLETE,10,10,7,0.7,0,191.06239008903503,500,0.822265625
 V8_e1cd93ecf675c1f848,joint_pair,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [11], ""Gemma 4 E2B-it"": [1]}",COMPLETE,10,10,2,0.2,0,92.70307326316833,1000,4.30078125
 V8_e2a6cdc023f8a7224c,uniform,internvl,confirm,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,50,50,40,0.8,5,1879.5111982822418,7500,17.697265625
 V8_e4d755260a585ffcf4,integrated_FDA_joint_4,gemma4,screen,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [11], ""InternVL3.5-2B-HF"": [11, 14, 20]}",COMPLETE,10,10,9,0.9,1,1421.1831896305084,1000,4.93359375
@@ -238,12 +257,13 @@ V8_f399c792931e869c8c,three_proxy_geometry_selected3,gemma4,explore,Gemma 4 E4B-
 V8_f44ebc208227bc86a7,layer_single,internvl,screen,InternVL3.5-8B-HF,"{""Qwen3.5-2B"": [23]}",COMPLETE,10,10,2,0.2,0,1359.901555299759,500,4.318359375
 V8_f5a21a68080d5d4d1b,FDA_conditional_2,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [3, 15]}",COMPLETE,10,10,6,0.6,0,195.42300629615784,500,3.4609375
 V8_f5db5919ea403f8e4e,proxy_vision_single,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23]}",COMPLETE,10,10,8,0.8,1,34.85582113265991,500,1.02734375
-V8_f62b6e71f945f6875a,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [17, 21, 23], ""Gemma 4 E2B-it"": [15]}",QUEUED,0,10,,,,,,
+V8_f62b6e71f945f6875a,joint_local_move,qwen,screen,Qwen3.5-9B,"{""CLIP ViT-L/14"": [17, 21, 23], ""Gemma 4 E2B-it"": [15]}",COMPLETE,10,10,7,0.7,0,265.7040944099426,1000,4.087890625
 V8_f67f978bccf2748a2e,proxy_same_family_scale,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [5, 11, 17, 23], ""InternVL3.5-4B-HF"": [5, 11, 17, 23]}",COMPLETE,10,10,7,0.7,0,5386.7922213077545,1000,9.404296875
 V8_f697d4be25fdf116b2,proxy_cross_VLM,qwen,screen,Qwen3.5-9B,"{""InternVL3.5-2B-HF"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,10,10,5,0.5,0,172.5522038936615,1000,7.89453125
 V8_f925cb7ed04c3b7c13,proxy_uniform,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [5, 11, 17, 23], ""Qwen3.5-2B"": [5, 11, 17, 23], ""Gemma 4 E2B-it"": [3, 7, 11, 15]}",COMPLETE,10,10,10,1.0,2,206.17512369155884,1500,8.48828125
 V8_f98b60a89bfb698bf2,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [17]}",COMPLETE,10,10,4,0.4,0,1419.6996994018555,500,4.912109375
 V8_f997cc66be08730b6a,layer_single,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [23]}",COMPLETE,10,10,5,0.5,0,1402.52508020401,500,4.912109375
+V8_fb2a653b7bae2a4a3b,proxy_fixed_FDA2,internvl,screen,InternVL3.5-8B-HF,"{""Gemma 4 E2B-it"": [3, 15], ""Qwen3.5-2B"": [14, 17]}",PARTIAL,6,10,,,,,,
 V8_fb91ac4aa4268a0074,integrated_FDA_joint_4,gemma4,screen,Gemma 4 E4B-it,"{""InternVL3.5-2B-HF"": [11, 14, 20], ""Qwen3.5-2B"": [14]}",COMPLETE,10,10,9,0.9,1,2320.3771340847015,1000,4.916015625
 V8_fc3bff189f33d1d586,fixed4_shifted_quartiles,gemma4,explore,Gemma 4 E4B-it,"{""CLIP ViT-L/14"": [2, 8, 14, 20], ""Qwen3.5-2B"": [2, 8, 14, 20], ""InternVL3.5-2B-HF"": [2, 8, 14, 20]}",COMPLETE,30,30,26,0.8666666666666667,4,3329.2084078788757,4500,4.955078125
 V8_fd0d74bcf35be3ba29,fixed4_shifted_quartiles,internvl,screen,InternVL3.5-8B-HF,"{""CLIP ViT-L/14"": [2, 8, 14, 20], ""Qwen3.5-2B"": [2, 8, 14, 20], ""Gemma 4 E2B-it"": [1, 5, 9, 13]}",COMPLETE,10,10,7,0.7,1,269.2208716869354,1500,8.486328125

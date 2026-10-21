@@ -1,4 +1,9 @@
 condition,family,transition,N,joint_hits,left_hits,right_hits,clean_target_hits,joint_ASR,left_ASR,right_ASR,clean_target_ASR,I,joint_only_hits,gains_vs_best,losses_vs_best
+V8_015a52391ea4d86ad4,qwen,T01,2,0,1,0,0,0.0,0.5,0.0,0.0,-0.5,0,0,1
+V8_015a52391ea4d86ad4,qwen,T03,2,1,2,0,0,0.5,1.0,0.0,0.0,-0.5,0,0,1
+V8_015a52391ea4d86ad4,qwen,T05,2,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0
+V8_015a52391ea4d86ad4,qwen,T07,2,1,0,0,0,0.5,0.0,0.0,0.0,0.5,1,1,0
+V8_015a52391ea4d86ad4,qwen,T09,2,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0
 V8_025767c4f6fd70b299,gemma4,T01,2,1,1,0,0,0.5,0.5,0.0,0.0,0.0,0,0,0
 V8_025767c4f6fd70b299,gemma4,T03,2,1,2,0,0,0.5,1.0,0.0,0.0,-0.5,0,0,1
 V8_025767c4f6fd70b299,gemma4,T05,2,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0
