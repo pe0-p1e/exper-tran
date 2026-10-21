@@ -1,14 +1,14 @@
 {
   "latest": {
-    "utc": "2026-10-21T16:43:23Z",
-    "workers": 4,
-    "full_gpu_workers": 2,
-    "GPU_used_GiB": 45.05078125,
+    "utc": "2026-10-21T16:50:56Z",
+    "workers": 3,
+    "full_gpu_workers": 1,
+    "GPU_used_GiB": 28.873046875,
     "GPU_utilization": 100.0,
-    "host_available_GiB": 81.79973983764648,
-    "reserved_host_caps_GiB": 56.891910552978516,
-    "attack_images_last5min": 42,
-    "attack_images_per_minute_5min": 8.4,
+    "host_available_GiB": 78.13724136352539,
+    "reserved_host_caps_GiB": 55.801629066467285,
+    "attack_images_last5min": 33,
+    "attack_images_per_minute_5min": 6.6,
     "open_target_images_last5min": 30,
     "actual_GPT_requests_last5min": 0
   },
