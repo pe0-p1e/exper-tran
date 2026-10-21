@@ -68,6 +68,13 @@ class IntegratedSelectionTests(unittest.TestCase):
 if __name__=='__main__':unittest.main()
 
 class ConcurrentSelectionTests(unittest.TestCase):
+ def test_large_target_priority_defers_search_and_ignores_blocked_cells(self):
+  import scheduler as S
+  q=[(dict(id='search'),'attack'),(dict(id='qwen'),'evaluate_large_qwen'),(dict(id='intern'),'evaluate_large_internvl')]
+  jobs,priority=S.prioritize_large(q)
+  self.assertTrue(priority);self.assertEqual([c['id'] for c,m in jobs],['intern','qwen'])
+  jobs,priority=S.prioritize_large(q,['qwen_evaluate_large_qwen','intern_evaluate_large_internvl'])
+  self.assertFalse(priority);self.assertEqual(jobs,q)
  def test_shared_queue_fairness_and_no_duplicates(self):
   import scheduler as S
   primary=[(dict(id='new1'),'ila'),(dict(id='new2'),'ila')]

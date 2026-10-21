@@ -5,6 +5,14 @@ from resources import telemetry,estimate,admit,failure_kind,host_estimate,full_g
 from stage1_methods.parallel_owner import research_pending,stage2_progress,stop_stage2
 STOP=False
 
+def prioritize_large(pending,blocked=()):
+ # A ready frozen large-target evaluation owns admission before any more search.
+ large=[(c,m) for c,m in pending if m in LARGE_EVAL_MODES and c['id']+'_'+m not in blocked]
+ if not large:return pending,False
+ # Start the smallest large target first for an early measured result, then27B/31B.
+ order={'evaluate_large_internvl':0,'evaluate_large_qwen':1,'evaluate_large_gemma4':2}
+ return sorted(large,key=lambda item:(order[item[1]],item[0]['id'])),True
+
 def fair_pending(primary,background,active,legacy_ids):
  # Fair queue lanes, single admission owner; no second scheduler or forced parallelism.
  queues=[list(primary),list(background)];counts=[sum(j['condition'] not in legacy_ids for j in active),sum(j['condition'] in legacy_ids for j in active)]
@@ -238,6 +246,13 @@ def main():
      state_write(s);time.sleep(5);continue
     s['state']='PARTIAL_STAGE1_TIMEBOX';s['phase']='STAGE2_BLOCKED_NO_VALID_METHOD_LOCK';state_write(s);break
   s['phase']=phase
+  pending,large_first=prioritize_large(pending,s['blocked'])
+  if large_first:
+   s['priority']='FROZEN_LARGE_TARGETS_FIRST'
+   for job in s['active']:
+    if job['mode'] not in LARGE_EVAL_MODES and not job.get('priority_yield_sent'):
+     own_signal(job,signal.SIGTERM);job['priority_yield_sent']=time.time()
+  else:s['priority']='SELECTED_CONFIRMATION_AND_BOUNDED_RESEARCH'
   for c,mode in pending:
    if len(s['active'])>=s['worker_limit']:break
    launch(s,c,mode)
