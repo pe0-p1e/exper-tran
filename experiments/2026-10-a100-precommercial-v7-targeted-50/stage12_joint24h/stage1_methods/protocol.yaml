@@ -1,0 +1,43 @@
+version: stage1_literature_methods_v1
+mode: prepared_not_activated
+primary_objective: frozen_1_to_1_pure_pull_push
+selection_data: screen10_then_explore30_no_confirmation_feedback
+final_targets_for_selection: false
+family_exclusion: whole_validator_family
+max_new_screen_conditions: 96
+existing_owner_total_condition_cap: 270
+FDA:
+  adaptation: real_conditional_greedy_native_layers_without_auxiliary_classifiers
+  candidate_pool: all_six_predeclared_depths_not_top_singletons_only
+  all_core_models_cardinality: 2
+  best_development_FDA2_model_per_family_cardinality: 4
+proxy:
+  fixed_layer_policy: per_model_completed_FDA2_frozen_before_proxy_comparison
+  subsets: all_7_nonempty_subsets_of_3_legal_proxies
+PRAF:
+  adaptation: prototype_gradient_alignment_at_cached_identical_random_start_and_DI_state
+  anchor: equal_mean_of_L1_normalized_deepest_PP_gradients
+  ranks: [1, 3, 5]
+  adjacent_native_blocks: excluded_within_model
+  original_clean_CLS_target_image_and_progressive_stages: NOT_REPRODUCED
+joint:
+  independent: choose_proxy_subset_then_individually_best_two_layers
+  greedy: actual_joint_gain_with_add_replace_remove
+  beam_width: 2
+  max_units: 4
+  max_models: 3
+  rounds: 2
+  proposals_per_parent: 3
+  retain_weaker_pair_control: true
+  geometry_is_prescreen_only: true
+  low_CKA_alone_is_not_complementarity: true
+comparison:
+  report_model_count_and_tap_count: true
+  compute_matching: report_actual_backwards_latency_VRAM_and_Pareto_not_equal_cost_claim
+  track_gained_and_lost_images: true
+  full_ablation_stage: 3
+owner:
+  new_scheduler: false
+  max_workers: 6
+  activate_only_with_tested_source_lock_amendment: true
+  no_stage2_before_required_methods_complete: true

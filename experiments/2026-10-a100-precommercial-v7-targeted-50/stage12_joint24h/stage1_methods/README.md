@@ -1,0 +1,40 @@
+# Stage1 literature-method trials — prepared, not activated
+
+User2026-10-21 requests preparing these as Stage1 method attempts, before method freeze and Stage2; full ablation stays Stage3. This package is isolated from currently executing sources. It creates no second scheduler, no model inference, no commercial calls. Existing six-worker admission owner, BF16 audit, PNG receipts, family exclusion and persistent output root are reused.
+
+## Implemented trial sequence
+
+| Arm | Runnable planner behavior | Fair control / limitation |
+|---|---|---|
+| FDA-inspired | For each of three legal core models/family, start best of six native singleton depths and test every remaining addition to reach2 taps. Continue the strongest measured FDA2 backbone/family to3,4 taps; the other backbones stay at2 for this bounded method pilot. Actual new joint attacks decide; reuse valid exact prior conditions. | No auxiliary FDA predictors, no output-head losses; no claim to reproduce FDA(N). Six predeclared depths, not all native blocks. |
+| Fixed-layer proxy | Freeze each model's measured FDA2 layer policy in a DEVELOPMENT lock, then generate all7 nonempty subsets of three proxies/family. | Avoid the circular requirement for the final method lock. Same layers across proxy identities. |
+| PRAF-inspired PP alignment | Rank each native candidate's cached PP pixel gradient against an equal mean of deepest per-proxy normalized PP gradients; remove adjacent native blocks/model and select spaced ranks1,3,5. | Selection-only adaptation: random-start+DI state, prototypes, spatial means. Original PRAF uses clean gradients, global CLS and target images, stagewise selection; NOT faithfully reproduced here. |
+| Independent selection | Choose proxy subset on development scores, then take its models' individually best two measured layers. Generate and evaluate real joint PNGs. | Not a union of single-layer success masks. Report its possibly different total taps and compute. |
+| Joint conditional search | Reopen all six depth candidates plus cached source-proposed taps; actual gain determines Greedy/Beam2 retention. Two bounded rounds, at most3 proposals/parent: replace/remove/add; at most4 active units/3 models. | No singleton-ASR hard filter. Include an actual pair containing the weakest measured singleton and its low-CKA partner, regardless of its singleton ranking. Low CKA is a control, not proof of complementarity. |
+
+Joint proposals use source effectiveness, CKA and gradient compatibility to reduce queue size. No theorem or faithful PRAF/FDA/AdaEA/CWA/FiT reproduction is claimed. Strong parents remain available after harmful additions. FDA4 is retained as evidence; proxy-only control freezes FDA2 for uniform cost within each model. Larger FDA4 and independent multi-model configurations need not have equal tap count to joint4: all counts and actual backward/time/VRAM must be reported, and same-budget claims require actual matched evidence.
+
+AdaEA contributes source-contribution diagnostics; primary fusion remains equal normalized gradients. CWA contributes compatibility motivation, not its SAM/CSE optimizer. FiT's final-target query selector is prohibited; development validators only. SEA temporal resampling is not in this queue. These are deliberate adaptations for the fixed Pure PP selection question, not a promise to run every paper's full algorithm.
+
+## Entry and owner integration
+
+`bash experiments/2026-10-a100-precommercial-v7-targeted-50/run_stage1_methods.sh prepare` generates `stage1_methods/preparation.json` and `owner_integration.patch` under the persistent V8 output root. `plan` computes adaptive pending work and receipts CPU-side; it does NOT admit jobs. `status` and `report` read/reconcile actual artifacts.
+
+The tested owner patch inserts `stage1_methods.planner.plan_next(g)` **after existing integrated pilots finish and BEFORE exploration/final freeze**, and includes its nominees in the existing exploration30 finalist Pareto selection. The existing scheduler then runs ordinary attack/evaluate workers, reusing exact identities, resource monitoring, retries and checkpointing. It cannot transition to Stage2 while this mandatory gate is unfinished. No alternate process or shell loop dispatches GPU jobs.
+
+Preparation does NOT apply this live-source patch. Activation requires the connected agent to verify current source, apply the exact tested patch, retain/amend study_lock.json and restart/adopt only the admission controller without terminating attack workers. Nested planner source hashes, protocol and screen manifest are also immutably recorded at first planning. Changed sources fail closed and require a retained amendment. This is the remaining activation step, not a user request to run individual stages. The original absolute deadline is never reset; a timebox/cap conflict must report PARTIAL, not silently bypass Stage1.
+
+Maximum96 new registered screen conditions, within the existing owner cap270. Existing matches reduce new runs; resource budget does not imply all trials fit the remaining hours. Candidate-cap failure is explicit and cannot produce a completed method lock. No new large-validator checkpoint exists in this preparation: Qwen9/Intern8/GemmaE4 remain development-only; Qwen27/Intern14/Gemma31 confirmation is postfreeze via the separate prepared package. Final150 remains sealed.
+
+## Provenance and reports
+
+`source_lock.json`, per-family FDA trace, proxy layer-policy lock, PRAF rank/input-hash record, joint move trace, condition registry and results.json. Completed results require both attack PNG integrity and complete matching development evaluation. Pending/partial has null score. Before final publication use the existing per-image paired analysis to report gains/losses, per-direction hits/N, uncertainty and loading/compute cost. This package adds no target feedback or new image eligibility rule.
+
+## Primary sources
+
+- FDA(N),NeurIPS2020 supplementaryB,C: https://proceedings.neurips.cc/paper/2020/file/eefc7bfe8fd6e2c8c01aa6ca7b1aab1a-Supplemental.pdf — conditional greedy layer additions, auxiliary predictors; original leaves FDA+ensemble combination to future work.
+- PRAF,arXiv2605.09902v1,§3.3 Eq2–4 and implementation§4.1: https://arxiv.org/html/2605.09902v1 — ensemble-global direction, candidate-layer gradient cosine, spaced ranks1,3,5. Preprint status, not a verified conference publication.
+- AdaEA,ICCV2023: https://arxiv.org/abs/2308.02897 — adaptive contribution weighting/filter, not static model-layer selection.
+- CWA,ICLR2024: https://proceedings.iclr.cc/paper_files/paper/2024/hash/53fe824f289060ce705ed7c01dae59d2-Abstract-Conference.html — flatness and proximity to individual optima, not low CKA alone.
+- FiT,ICCV2023: https://arxiv.org/abs/2304.02312 — source selection with preliminary target queries, excluded from final-target-driven selection here.
+- Ensemble theory,ICML2025: https://proceedings.mlr.press/v267/yao25f.html — vulnerability/diversity/complexity background, no theorem of optimal model-layer selection by CKA.
