@@ -15,9 +15,9 @@ def telemetry():
 def estimate(c,mode):
  if mode in ['ila','ila_smoke']:return 20.0
  import run_proxy_study as previous
- names=[c['validator']] if mode=='evaluate' else list(c['layers'])
- try:pred=previous.reservation(names,'evaluation' if mode=='evaluate' else 'attack',previous.weight_events())
- except KeyError:pred=32 if mode=='evaluate' else 28
+ names=[c['validator']] if mode in ['evaluate','evaluate30'] else list(c['layers'])
+ try:pred=previous.reservation(names,'evaluation' if mode in ['evaluate','evaluate30'] else 'attack',previous.weight_events())
+ except KeyError:pred=32 if mode in ['evaluate','evaluate30'] else 28
  measurements=[]
  for path in (ROOT/'calibration').glob('*.json'):
   d=read(path)

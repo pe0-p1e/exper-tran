@@ -43,3 +43,13 @@ owner:
   no_stage2_before_required_methods_complete: false
   primary_confirmation_and_commercial_do_not_wait_for_supplement: true
   supplement_cannot_rewrite_frozen_primary: true
+confirmation_stream:
+  early_images: 30
+  early_images_per_direction: 6
+  full_images: 50
+  full_images_per_direction: 10
+  pilot10_reused_in_early30: true
+  commercial_starts_after_30_PNGs_for_frozen_methods: true
+  open_evaluation_shares_per_image_receipts: true
+  requests_reused_from_30_to_50: true
+  30_development_images_are_not_commercial_confirmation: true

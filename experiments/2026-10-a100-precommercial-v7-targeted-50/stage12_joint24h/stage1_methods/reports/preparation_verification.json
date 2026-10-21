@@ -65,12 +65,16 @@
   "original_clean_PRAF_reproduction": false,
   "no_model_inference": true,
   "active_source_lock_unchanged": true,
-  "unit_integration_tests_passed": 20,
+  "unit_integration_tests_passed": 28,
   "existing_proxy_preparation_tests_passed": 8,
-  "campaign_activation": "ACTIVATED_PARALLEL",
+  "campaign_activation": "ACTIVATED_NESTED30_THEN50_PARALLEL",
   "GPU_attack_results": "NOT_CLAIMED_BY_PREPARATION",
   "test_scope": "simulated adaptive owner receipts plus actual cached source-gradient CPU ranking",
   "existing_owner_tests_passed": 33,
   "main_confirmation_waits_for_supplement": false,
-  "commercial_calls_started": false
+  "commercial_calls_started": false,
+  "early_confirmation_images": 30,
+  "full_confirmation_images": 50,
+  "commercial_call_reuse": "same_hashed_request_ids",
+  "controller_reload_verified": true
 }

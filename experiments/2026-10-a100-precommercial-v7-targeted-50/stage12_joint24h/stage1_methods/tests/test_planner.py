@@ -130,13 +130,13 @@ class ParallelTests(unittest.TestCase):
   from stage1_methods import parallel_owner as A
   with tempfile.TemporaryDirectory() as d,patch.object(A.C,'ROOT',Path(d)):
    A.C.atomic(Path(d)/'stage2/parallel_driver.json',dict(identity={'pid':0}))
-   with patch.object(A.C,'same_process',return_value=False),patch.object(A.subprocess,'Popen',side_effect=AssertionError('no retry')):
+   with patch.object(A,'verify_extension'),patch.object(A.C,'same_process',return_value=False),patch.object(A.subprocess,'Popen',side_effect=AssertionError('no retry')):
     self.assertEqual(A.stage2_progress(0),'BLOCKED')
  def test_controller_restart_adopts_commercial_child(self):
   from stage1_methods import parallel_owner as A
   with tempfile.TemporaryDirectory() as d,patch.object(A.C,'ROOT',Path(d)):
    A.C.atomic(Path(d)/'stage2/parallel_driver.json',dict(identity={'pid':0}))
-   with patch.object(A.C,'same_process',return_value=True),patch.object(A.subprocess,'Popen',side_effect=AssertionError('no duplicate')):
+   with patch.object(A,'verify_extension'),patch.object(A.C,'same_process',return_value=True),patch.object(A.subprocess,'Popen',side_effect=AssertionError('no duplicate')):
     self.assertEqual(A.stage2_progress(0),'RUNNING')
  def test_research_failure_is_quarantined(self):
   from stage1_methods import parallel_owner as A
@@ -150,8 +150,9 @@ class DriverIsolationTests(unittest.TestCase):
   from stage1_methods import stage2_driver as D
   with tempfile.TemporaryDirectory() as d,patch.object(D.C,'ROOT',Path(d)),patch.object(D.C,'check_lock',return_value={}):
    root=Path(d);D.C.atomic(root/'scheduler.json',dict(owner='GPU',phase='paper'))
-   def fake(s,deadline):D.S.state_write(dict(phase='STAGE2',active=[]));return True
-   with patch.object(D.sys,'argv',['driver','--deadline','9999999999']),patch.object(D.S,'run_stage2',side_effect=fake),patch.object(D.S,'state_write'),patch.object(D.signal,'signal'):
+   D.C.atomic(root/'method_lock.json',dict(stage2_primary_family='qwen',stage2_methods=['selected','uniform'],families={'qwen':dict(primary={P.C.V:[0]},uniform={P.C.V:[1]})}))
+   def fake(s,deadline,count=50):D.S.state_write(dict(phase='STAGE2',active=[]));return True
+   with patch.object(D.sys,'argv',['driver','--deadline','9999999999']),patch.object(D.S,'run_stage2',side_effect=fake),patch.object(D.S,'state_write'),patch.object(D.signal,'signal'),patch('stage1_methods.early_confirm.frozen',return_value=True):
     self.assertEqual(D.main(),0)
    self.assertEqual(D.C.read(root/'scheduler.json'),dict(owner='GPU',phase='paper'))
    self.assertEqual(D.C.read(root/'stage2/parallel_driver_result.json')['status'],'COMPLETE')

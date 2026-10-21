@@ -5,7 +5,7 @@ STOP=False
 
 def main():
  global STOP
- ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','calibrate','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('mode',choices=['attack','evaluate','evaluate30','calibrate','ila','ila_smoke']);ap.add_argument('--job',required=True);ap.add_argument('--attempt',default='0');a=ap.parse_args()
  check_lock();job=read(ROOT/'jobs'/(a.job+'.json'));c=job['condition'];legal(c['layers'],c['validator'])
  dest=ROOT/'attempts'/a.job/a.attempt;dest.mkdir(parents=True,exist_ok=True)
  def sig(*_):
@@ -34,7 +34,7 @@ def main():
   if a.mode in ['ila','ila_smoke']:
    from ila_selection import run
    run(c,position,lambda:STOP,smoke_only=a.mode=='ila_smoke')
-  elif a.mode=='evaluate':evaluate(c,position)
+  elif a.mode in ['evaluate','evaluate30']:evaluate(c,position,limit=30 if a.mode=='evaluate30' else None)
   else:attack(c,position,calibrate=a.mode=='calibrate')
   atomic(dest/'exit.json',dict(status='STOPPED' if STOP else 'COMPLETE',at=time.time()))
  except BaseException as e:
@@ -120,6 +120,9 @@ def attack(c,position,calibrate=False):
  from attack_optimizers import differentiable_resize_pad,normalize_pixel_gradients
  from primary_ml_cka.artifacts.png import save_png_tensor,assert_png_linf
  loading_start=time.time();models=load_models(c);loading_seconds=time.time()-loading_start;rr=cohort(c['split'])['images']
+ if c['split']=='confirm':
+  from stage1_methods.early_confirm import ordered_cases
+  rr=ordered_cases(rr)
  config=dict(loss='pull_push',patch_weight=0,projector_weight=0,pull_weight=.5,push_weight=.5)
  began=time.time();nforward=0;nback=0
  try:
@@ -201,7 +204,7 @@ def attack(c,position,calibrate=False):
  finally:
   for m in models:m.close()
 
-def evaluate(c,position):
+def evaluate(c,position,limit=None):
  import torch,yaml
  from primary_ml_cka.models.backends.transformers_backend import load_processor
  from primary_ml_cka.models.backends.target_transformers_generation import load_target_for_generation
@@ -214,7 +217,13 @@ def evaluate(c,position):
  from common import REG
  from common import legal
  legal(c['layers'],c['validator'])
- if not attack_done(c):raise RuntimeError('Evaluation before complete freeze')
+ if limit==30:
+  from stage1_methods.early_confirm import frozen,cases,path as early_path
+  if not frozen(c,30):raise RuntimeError('Early evaluation requires frozen method and all30 valid PNGs')
+  evaluation_cases=cases(30);result_path=early_path(c)
+ else:
+  if not attack_done(c):raise RuntimeError('Evaluation before complete freeze')
+  evaluation_cases=cohort(c['split'])['images'];result_path=eval_path(c)
  from common import rows as unused
  # Canonical prompt and parser exactly reused from the existing evaluator.
  import importlib.util
@@ -227,7 +236,7 @@ def evaluate(c,position):
   model=load_target_for_generation(snapshot,torch.device('cuda'),precision='bf16')
   audit_loaded_model(model,model_name=name,revision=s['revision'],role='v8_held_out_dev_validator',repo_id=s['repo_id'],output_dir=ROOT)
  gen=TransformersTargetGenerator(model,processor);result=[]
- for ix,r in enumerate(cohort(c['split'])['images']):
+ for ix,r in enumerate(evaluation_cases):
   if STOP:break
   position.update(image=ix,phase='validation');receipt=read(image_receipt(c,r['image_id']));dest=ROOT/'validation_images'/c['id']/(digest(r['image_id'])[:18]+'.json')
   if dest.exists():
@@ -245,7 +254,7 @@ def evaluate(c,position):
     target_hit=adv.parsed_label==r['target'],clean_correct=clean['label']==r['source'],off_target=adv.parsed_label not in [None,r['source'],r['target']])
    atomic(dest,value)
   result.append(value)
- N=len(cohort(c['split'])['images']);complete=len(result)==N
- atomic(eval_path(c),dict(complete=complete,science=digest(scientific(c)),condition=c['id'],model=name,images=result,N=N,completed=len(result),hits=sum(r['target_hit'] for r in result),ASR=sum(r['target_hit'] for r in result)/N if complete else None,role='CONFIRMATION' if c['split']=='confirm' else 'USED_FOR_SELECTION',final_target_access=False))
+ N=len(evaluation_cases);complete=len(result)==N
+ atomic(result_path,dict(complete=complete,science=digest(scientific(c)),condition=c['id'],model=name,images=result,N=N,completed=len(result),hits=sum(r['target_hit'] for r in result),ASR=sum(r['target_hit'] for r in result)/N if complete else None,role='CONFIRMATION' if c['split']=='confirm' else 'USED_FOR_SELECTION',final_target_access=False))
  del gen,model,processor;torch.cuda.empty_cache()
 if __name__=='__main__':main()

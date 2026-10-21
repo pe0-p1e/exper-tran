@@ -26,6 +26,9 @@ def save_job(c,mode):
 
 def complete(j):
  c=read(ROOT/'jobs'/(j['id']+'.json'))['condition']
+ if j['mode']=='evaluate30':
+  from stage1_methods.early_confirm import done
+  return done(c)
  if j['mode']=='ila':
   from ila_selection import done
   return done(c)
@@ -42,6 +45,8 @@ def state_write(s):
  status=dict(at=time.time(),state=s.get('state','RUNNING'),stage=s.get('phase'),active=s.get('active',[]),failures=s.get('failures',[]),
   gpu=t,remaining_hours=max(0,deadline-time.time())/3600,conditions_admitted=len(s.get('admitted',[])),completed_jobs=len(s.get('completed',[])),
   max_workers=s.get('worker_limit',1),method_frozen=(ROOT/'method_lock.json').exists(),stage2=read(ROOT/'stage2/summary.json',{}))
+ from stage1_methods.early_confirm import summarize as early_summary
+ status['confirmation30']=early_summary()
  atomic(ROOT/'status.json',status)
  (ROOT/'STATUS.md').write_text('# V8 live status\n\n'+json.dumps(status,indent=2)+'\n')
 
@@ -86,17 +91,17 @@ def launch(s,c,mode):
  s['active'].append(dict(id=jid,mode=mode,condition=c['id'],reservation=reservation,process_identity=identity,attempt=attempt,log=str(log),started=time.time()))
  atomic(ROOT/'scheduler.json',s);print('V8 dispatch',jid,round(reservation,2),'GiB',flush=True);return True
 
-def run_stage2(s,deadline):
+def run_stage2(s,deadline,count=50):
  from stage2_cli import prepare_packs,summarize
- s['phase']='STAGE2';state_write(s)
- try:packs=prepare_packs()
+ s['phase']='STAGE2_'+str(count);state_write(s)
+ try:packs=prepare_packs(count=count)
  except Exception as e:
   atomic(ROOT/'stage2/blocker.json',dict(status='BLOCKED_METHOD_OR_ARTIFACT',reason=str(e)));return False
  # Known complete CLI chain is reused; failures stop without account/model rotation.
- for limit in [20,100]:
+ for limit in [20,2*count]:
   for pack in packs:
    if time.time()>=deadline-3600 or STOP:return False
-   log=ROOT/'logs'/f'stage2_{pack.name}_{limit}.log'
+   log=ROOT/'logs'/f'stage2_{count}_{pack.name}_{limit}.log'
    with log.open('a') as f:
     p=subprocess.Popen([sys.executable,str(HERE/'stage2_cli.py'),'--pack',str(pack),'--limit',str(limit)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
    atomic(ROOT/'stage2/active.json',dict(process_identity=await_identity(p.pid,str(HERE/'stage2_cli.py')),method=pack.name,limit=limit,started=time.time()))
@@ -108,8 +113,8 @@ def run_stage2(s,deadline):
      return False
     state_write(s);time.sleep(15)
    if p.returncode:
-    atomic(ROOT/'stage2/blocker.json',dict(status='BLOCKED_CLI',log=str(log),exit=p.returncode,reason=log.read_text(errors='replace')[-2000:],no_paid_fallback=True));summarize();return False
- return summarize()
+    atomic(ROOT/'stage2/blocker.json',dict(status='BLOCKED_CLI',log=str(log),exit=p.returncode,reason=log.read_text(errors='replace')[-2000:],no_paid_fallback=True));summarize(count=count);return False
+ return summarize(count=count)
 
 def main():
  global STOP
@@ -169,15 +174,19 @@ def main():
    s['worker_limit']=min(6,max(s['worker_limit'],1+len(s['completed'])//3)) if not any(x['kind']=='oom' for x in s['failures']) else s['worker_limit']
    phase,conditions=plan_next(s);pending=[]
    for c in conditions:
+    if c['split']=='confirm':
+     from stage1_methods.early_confirm import pending as confirm_pending
+     pending+=confirm_pending(c);continue
     mode='ila_smoke' if phase=='ILA_DIAGNOSTIC_SMOKE' else 'ila' if phase=='ILA_SOURCE_DIAGNOSTIC' else 'evaluate' if attack_done(c) else 'attack';pending.append((c,mode))
    legacy=original_pair_controls();legacy_ids={c['id'] for c in legacy}
    background=[(c,'evaluate' if attack_done(c) else 'attack') for c in legacy if not eval_done(c)]
+   if (ROOT/'method_lock.json').exists():s['commercial_state']=stage2_progress(deadline)
    paper,paper_ready=research_pending(phase)
    paper_background=[(c,'evaluate' if attack_done(c) else 'attack') for c in paper if not eval_done(c)]
    background+=paper_background
    s['paper_research']=dict(pending=len(paper_background),complete=paper_ready,blocked=read(ROOT/'stage1_methods/blocked.json'))
    # Prioritize evaluation to release adaptive search prerequisites.
-   pending.sort(key=lambda x:x[1]!='evaluate');background.sort(key=lambda x:x[1]!='evaluate')
+   pending.sort(key=lambda x:x[1] not in ['evaluate','evaluate30']);background.sort(key=lambda x:x[1] not in ['evaluate','evaluate30'])
    pending=fair_pending(pending,background,s['active'],legacy_ids|{c['id'] for c in paper})
    s['parallel_queues']=dict(primary_stage=phase,original_pairs_completed=sum(eval_done(c) for c in legacy),original_pairs_total=len(legacy),remaining_background=len(background))
    if phase=='STAGE1_COMPLETE':
