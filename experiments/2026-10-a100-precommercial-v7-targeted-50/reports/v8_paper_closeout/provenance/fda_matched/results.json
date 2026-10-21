@@ -112,7 +112,7 @@
     {
       "family": "internvl",
       "method": "uniform2",
-      "complete": false,
+      "complete": true,
       "condition": "V8_69197cde765453520b",
       "layers": {
         "CLIP ViT-L/14": [
@@ -131,7 +131,7 @@
       "proxy_count": 3,
       "taps_per_proxy": 2,
       "N": 30,
-      "hits": null
+      "hits": 25
     },
     {
       "family": "internvl",
@@ -294,11 +294,49 @@
       "taps_per_proxy": 4,
       "N": 30,
       "hits": 27
+    },
+    {
+      "family": "gemma4",
+      "method": "FDA4",
+      "complete": false,
+      "condition": "V8_28e9f84feb52a78bb0",
+      "layers": {
+        "CLIP ViT-L/14": [
+          2,
+          11,
+          14,
+          17
+        ],
+        "Qwen3.5-2B": [
+          2,
+          14,
+          17,
+          23
+        ],
+        "InternVL3.5-2B-HF": [
+          11,
+          14,
+          17,
+          23
+        ]
+      },
+      "proxy_count": 3,
+      "taps_per_proxy": 4,
+      "N": 30,
+      "hits": null
     }
   ],
   "paired": [
     {
       "family": "qwen",
+      "baseline": "uniform2",
+      "selected": "FDA2",
+      "gained": 1,
+      "lost": 0,
+      "net": 1
+    },
+    {
+      "family": "internvl",
       "baseline": "uniform2",
       "selected": "FDA2",
       "gained": 1,
@@ -880,6 +918,6 @@
       ]
     }
   },
-  "pending": 6,
+  "pending": 3,
   "selection_uses_screen_only": true
 }
