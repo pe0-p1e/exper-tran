@@ -28,10 +28,11 @@ def publish():
   groups={}
   with trace.open() as f:
    for r in csv.DictReader(f):
-    key=(r['condition'],r['left'],r['right']);v=groups.setdefault(key,[0,0.,0.,0.,0.]);v[0]+=1;v[1]+=float(r['cos']);v[2]+=float(r['cancellation']);v[3]+=float(r['negative_dot']=='True');v[4]+=float(r.get('negative_pixel_fraction',0))
+    key=(r['condition'],r['left'],r['right']);v=groups.setdefault(key,[0,0.,0.,0.,0.,0]);v[0]+=1;v[1]+=float(r['cos']);v[2]+=float(r['cancellation']);v[3]+=float(r['negative_dot']=='True')
+    if r.get('negative_pixel_fraction') not in [None,'']:v[4]+=float(r['negative_pixel_fraction']);v[5]+=1
   with (DEST/'gradient_compatibility_aggregate.csv').open('w') as f:
-   w=csv.writer(f);w.writerow(['condition','left','right','observations','mean_cos','mean_cancellation','negative_dot_fraction','negative_pixel_fraction'])
-   for key,v in groups.items():w.writerow([*key,v[0],*[x/v[0] for x in v[1:]]])
+   w=csv.writer(f);w.writerow(['condition','left','right','observations','mean_cos','mean_cancellation','negative_dot_fraction','negative_pixel_fraction','negative_pixel_observations'])
+   for key,v in groups.items():w.writerow([*key,v[0],*[x/v[0] for x in v[1:4]],v[4]/v[5] if v[5] else '',v[5]])
  with LOCK.open('a') as h:
   fcntl.flock(h,fcntl.LOCK_EX)
   subprocess.run(['git','add',str(DEST.relative_to(REPO))],cwd=REPO,check=True)
