@@ -1,5 +1,5 @@
 {
-  "load_events": 422,
+  "load_events": 431,
   "all_pass": true,
   "latest": [
     {
@@ -7,7 +7,7 @@
       "repo_id": "openai/clip-vit-large-patch14",
       "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T06:41:46.994143+00:00",
+      "audited_utc": "2026-10-21T06:51:30.700330+00:00",
       "total_parameter_count": 427616513,
       "floating_parameter_count": 427616513,
       "parameter_counts_by_dtype": {
@@ -83,14 +83,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 420
+      "load_sequence": 427
     },
     {
       "model_name": "InternVL3.5-2B-HF",
       "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
       "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T06:42:18.117041+00:00",
+      "audited_utc": "2026-10-21T06:55:49.769648+00:00",
       "total_parameter_count": 2348347392,
       "floating_parameter_count": 2348347392,
       "parameter_counts_by_dtype": {
@@ -161,14 +161,14 @@
         "hf_device_map": null
       },
       "cuda_memory": {
-        "cuda_allocated_bytes": 4708701184,
-        "cuda_reserved_bytes": 5035261952,
-        "cuda_allocated_gib": 4.385319709777832,
-        "cuda_reserved_gib": 4.689453125
+        "cuda_allocated_bytes": 4696710144,
+        "cuda_reserved_bytes": 5014290432,
+        "cuda_allocated_gib": 4.374152183532715,
+        "cuda_reserved_gib": 4.669921875
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 422
+      "load_sequence": 430
     },
     {
       "model_name": "Gemma 4 E2B-it",
@@ -258,7 +258,7 @@
       "repo_id": "Qwen/Qwen3.5-2B",
       "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
       "role": "v8_attack_proxy",
-      "audited_utc": "2026-10-21T06:26:20.871562+00:00",
+      "audited_utc": "2026-10-21T06:55:57.033055+00:00",
       "total_parameter_count": 2213241664,
       "floating_parameter_count": 2213241664,
       "parameter_counts_by_dtype": {
@@ -336,14 +336,14 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 412
+      "load_sequence": 431
     },
     {
       "model_name": "Qwen3.5-9B",
       "repo_id": "Qwen/Qwen3.5-9B",
       "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T06:28:10.820038+00:00",
+      "audited_utc": "2026-10-21T06:45:50.683931+00:00",
       "total_parameter_count": 9409813744,
       "floating_parameter_count": 9409813744,
       "parameter_counts_by_dtype": {
@@ -421,7 +421,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 414
+      "load_sequence": 423
     },
     {
       "model_name": "InternVL3.5-8B-HF",
@@ -513,7 +513,7 @@
       "repo_id": "google/gemma-4-E4B-it",
       "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
       "role": "v8_held_out_dev_validator",
-      "audited_utc": "2026-10-21T06:41:28.450027+00:00",
+      "audited_utc": "2026-10-21T06:55:31.592087+00:00",
       "total_parameter_count": 7941100832,
       "floating_parameter_count": 7941100832,
       "parameter_counts_by_dtype": {
@@ -589,7 +589,7 @@
       },
       "all_floating_parameters_bf16": true,
       "status": "pass",
-      "load_sequence": 419
+      "load_sequence": 429
     },
     {
       "model_name": "DINOv2-Large",
