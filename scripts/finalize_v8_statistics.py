@@ -76,6 +76,8 @@ def run():
                 if not valid:errors.append('Invalid PNG/provenance: '+str(p))
                 from PIL import Image
                 clean=np.array(Image.open(s['clean']).convert('RGB'),dtype=np.int16);adv=np.array(Image.open(s['adv']).convert('RGB'),dtype=np.int16)
+                canonical=np.array(Image.open(r['path']).convert('RGB'),dtype=np.int16)
+                if not np.array_equal(clean,canonical):errors.append('Receipt clean differs from frozen cohort PNG: '+str(p))
                 pixel_linf=int(np.abs(adv-clean).max())
                 if clean.shape!=(224,224,3) or adv.shape!=clean.shape or pixel_linf>16:errors.append('Saved PNG pixel bound/shape failed: '+str(p))
                 if s.get('steps')!=50 or s.get('seed')!=42:errors.append('Attack steps/seed mismatch: '+str(p))
@@ -93,6 +95,18 @@ def run():
                 for kind,response in records.items():
                     rid=r['requests'][kind]
                     if response.get('request_id')!=rid or response['identity']['model']!=model or response.get('tool_calls')!=0:errors.append('Commercial identity/tools mismatch: '+rid)
+                    raw=response.get('raw_output','');line=next((line.strip() for line in raw.splitlines() if line.strip()),'')
+                    parsed=int(line)+1 if line in tuple('0123456789') else None
+                    if parsed!=response.get('parsed_label'):errors.append('Raw response/parser mismatch: '+rid)
+                    trace=OUT/study/'responses'/model/rid/'stdout.jsonl'
+                    if not trace.exists():errors.append('Missing raw request trace: '+rid)
+                    else:
+                        events=[json.loads(line) for line in trace.read_text().splitlines() if line.strip().startswith('{')]
+                        sessions=[e.get('thread_id') for e in events if e.get('type')=='thread.started']
+                        messages=[e.get('item',{}) for e in events if e.get('type')=='item.completed']
+                        answers=[e.get('text','').strip() for e in messages if e.get('type')=='agent_message']
+                        tools=[e for e in messages if e.get('type') not in ['agent_message','reasoning','error']]
+                        if sessions!=[response.get('session_id')] or not any(e.get('type')=='turn.completed' for e in events) or not answers or answers[-1]!=raw.strip() or tools:errors.append('Fresh-session/raw/tool trace mismatch: '+rid)
                     blind=pack/'blinded'/rid
                     if response['identity']['image_sha256']!=C.sha(blind/'image.png') or response['identity']['prompt_sha256']!=C.sha(blind/'prompt.txt'):errors.append('Commercial image/prompt hash mismatch: '+rid)
                 iid=r['image_id']

@@ -137,14 +137,15 @@ def driver(deadline):
                 if blocked:
                     # Only reviewed timeout-only interruptions may be retried. Successful
                     # results are immutable and skipped by the existing request runner.
-                    from paper_closeout.cli_recovery import recover_timeouts
+                    from paper_closeout.cli_recovery import recover_blocked,QuotaAuthBlock
                     try:
-                        recovered=recover_timeouts(root,model,order)
-                        if not recovered:raise RuntimeError('No timeout-only unscored attempt available for recovery')
+                        recovered=recover_blocked(root,model,order,blocked['log'])
+                    except QuotaAuthBlock as exc:
+                        C.atomic(OUT/'commercial_driver_result.json',dict(status='BLOCKED_QUOTA_OR_AUTH',reason=str(exc)));return 2
                     except RuntimeError as exc:
                         C.atomic(root/'blocked'/key,{**blocked,'recovery_error':str(exc)});continue
                     stamp=str(time.time_ns());archive=root/'recovery_history'/stamp
-                    C.atomic(archive,dict(study=study,model=model,method=path.name,previous=blocked))
+                    C.atomic(archive,dict(study=study,model=model,method=path.name,previous=blocked,recovery=recovered))
                     (root/'blocked'/key).unlink()
                 log=root/'logs'/(model+'_'+path.name+'.log');log.parent.mkdir(parents=True,exist_ok=True)
                 with log.open('a') as f:
@@ -156,8 +157,8 @@ def driver(deadline):
                 if child.returncode:
                     C.atomic(root/'blocked'/key,dict(log=str(log),reason='Inspect retained incomplete trace; no duplicate scored request',exit=child.returncode))
                     # A transport/quota/auth failure must not cause model/account rotation.
-                    text=log.read_text(errors='replace').lower()
-                    if any(x in text for x in ['429','rate limit','quota','logged in','authentication']):
+                    from paper_closeout.cli_recovery import fatal_transport
+                    if fatal_transport(root,model,order):
                         C.atomic(OUT/'commercial_driver_result.json',dict(status='BLOCKED_QUOTA_OR_AUTH',log=str(log)));return 2
                 summarize(study)
             a=summarize('commercial50');b=summarize('commercial150');ratios=summarize('ratio30')

@@ -1,5 +1,5 @@
 """Bounded, auditable transport-only recovery; never retry a scored response."""
-import json, shutil, subprocess, time
+import json, re, shutil, subprocess, time
 from pathlib import Path
 import common as C
 
@@ -59,3 +59,34 @@ def install_timeout_capture():
                     (folder/name).write_text(value.decode(errors='replace') if isinstance(value,bytes) else value)
             raise
     subprocess.run=run
+
+
+class QuotaAuthBlock(RuntimeError):
+    pass
+
+def fatal_transport(root, model, order):
+    for rid in order:
+        folder=root/'responses'/model/rid
+        if (folder/'result.json').exists() or not (folder/'transport_error.json').exists(): continue
+        text=' '.join((folder/n).read_text(errors='replace') for n in ['stderr.txt','timeout_stderr.txt','stdout.jsonl','timeout_stdout.jsonl'] if (folder/n).exists()).lower()
+        if re.search(r'\b429\b|rate.limit|quota|authentication|unauthorized|not logged in',text):
+            return dict(request_id=rid,reason='Quota/auth/rate-limit transport evidence; stop whole commercial route')
+    return None
+
+def recover_blocked(root, model, order, log):
+    fatal=fatal_transport(root,model,order)
+    if fatal:raise QuotaAuthBlock(fatal['reason'])
+    n=recover_timeouts(root,model,order)
+    if n:return dict(retried_timeout_attempts=n)
+    # Another method may already have repaired the SAME shared clean request.
+    # Reconcile only the exact last timeout request named in the retained log.
+    text=Path(log).read_text(errors='replace')
+    tail=text.rsplit('Traceback (most recent call last):',1)[-1]
+    if 'RuntimeError: CLI request timed out; do not count as a completed observation' not in tail:
+        raise RuntimeError('Unknown/non-timeout block requires manual review')
+    ids=re.findall(r'/responses/'+re.escape(model)+r'/(r_[0-9a-f]+)/answer\.txt',text)
+    if ids and ids[-1] in order:
+        rid=ids[-1];result=C.read(root/'responses'/model/rid/'result.json')
+        if result and result.get('request_id')==rid and result.get('identity',{}).get('model')==model:
+            return dict(shared_timeout_already_resolved=rid,no_duplicate_request=True)
+    raise RuntimeError('No reviewed timeout or resolved shared request is available')

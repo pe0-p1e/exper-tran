@@ -163,3 +163,9 @@ a final report/publish, and archives the full output tree and source snapshot to
 `/home/ubuntu/experiment-checkpoints/` on `/dev/vda1`. It never starts GPU work.
 The full PNG corpus and raw CLI traces remain local; GitHub receives compact
 numerical results and reports. PARTIAL is never labeled COMPLETE.
+
+Shared clean requests are single measurements. If another method has already
+restored the exact timed-out request, its successful immutable result clears the
+old method-local timeout marker. The exact request ID and last timeout trace
+must match; unrelated/unknown errors are never cleared. Quota/auth/rate-limit
+evidence stops the whole commercial route, not just one method.

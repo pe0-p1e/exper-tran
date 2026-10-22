@@ -39,4 +39,26 @@ class RecoveryTests(unittest.TestCase):
     with self.assertRaises(subprocess.TimeoutExpired):subprocess.run(cmd,input='prompt',timeout=180)
    self.assertEqual(fake.call_args.kwargs['timeout'],600)
    self.assertEqual((Path(tmp)/'timeout_stdout.jsonl').read_text(),'partial')
+
+class SharedRecoveryTests(unittest.TestCase):
+ def test_shared_clean_recovered_by_other_method_clears_old_timeout(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);rid='r_ab12';f=root/'responses/model'/rid
+   C.atomic(f/'result.json',dict(request_id=rid,identity={'model':'model'}))
+   log=root/'old.log';log.write_text(f"/responses/model/{rid}/answer.txt\nTraceback (most recent call last):\nRuntimeError: CLI request timed out; do not count as a completed observation\n")
+   self.assertEqual(R.recover_blocked(root,'model',[rid],log)['shared_timeout_already_resolved'],rid)
+ def test_new_unknown_error_is_not_cleared_by_old_shared_success(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);rid='r_ab12';C.atomic(root/'responses/model'/rid/'result.json',dict(request_id=rid,identity={'model':'model'}))
+   log=root/'old.log';log.write_text(f"/responses/model/{rid}/answer.txt\nTraceback (most recent call last):\nKeyError: changed key\n")
+   with self.assertRaises(RuntimeError):R.recover_blocked(root,'model',[rid],log)
+ def test_quota_blocks_all_methods_not_just_one_condition(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);f=root/'responses/model/r_ab12';C.atomic(f/'transport_error.json',{'kind':'nonzero_exit'});(f/'stderr.txt').write_text('HTTP 429 rate limit')
+   with self.assertRaises(R.QuotaAuthBlock):R.recover_blocked(root,'model',['r_ab12'],root/'none.log')
+ def test_thread_id_containing_429_is_not_rate_limit(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);f=root/'responses/model/r_ab12';C.atomic(f/'transport_error.json',{'kind':'timeout'});(f/'timeout_stdout.jsonl').write_text('{"thread_id":"a429e"}')
+   self.assertIsNone(R.fatal_transport(root,'model',['r_ab12']))
+
 if __name__=='__main__':unittest.main()
