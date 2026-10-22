@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Independent receipt-level closeout checks and paired statistics; no inference."""
-import argparse,csv,itertools,json,sys,time
+import argparse,csv,fcntl,itertools,json,sys,time
 from collections import defaultdict
 from pathlib import Path
 import numpy as np
@@ -47,11 +47,16 @@ def run():
         for method,v in methods.items():specs.append(('final150',fam,method,v['condition']))
     for fam,conditions in ratio.items():
         for c in conditions:specs.append(('ratio30',fam,'pull_'+str(c['pull']),c))
+    for fam,methods in C.read(OUT/'followup_conditions.json',{}).items():
+        for method,splits in methods.items():
+            for split,c in splits.items():specs.append(('development_'+split,fam,method,c))
     seen_receipts=set()
     for study,fam,method,c in specs:
         C.legal(c['layers'],C.VALIDATORS[fam]);mode='evaluate_large_'+fam;target=C.LARGE_EVAL_MODES[mode]
         manifest=C.cohort(c['split'])['images'];expected={r['image_id']:r for r in manifest}
-        ev=C.read(C.ROOT/'large_validation'/target/(c['id']+'.json'))
+        if study.startswith('development_'):
+            target=C.VALIDATORS[fam];ev=C.read(C.eval_path(c))
+        else:ev=C.read(C.ROOT/'large_validation'/target/(c['id']+'.json'))
         if not ev:
             # Historical directory naming is model name (verify rather than infer).
             candidates=list((C.ROOT/'large_validation').glob('*/'+c['id']+'.json'))
@@ -129,7 +134,7 @@ def run():
     cohort_audit=C.read(OUT/'final150_cohort_audit.json')
     write_csv(report/'paired_comparisons.csv',comparisons);write_csv(report/'confidence_intervals.csv',stats);write_csv(report/'completion_matrix.csv',completion);write_csv(report/'png_integrity.csv',receipts)
     C.atomic(report/'independent_validation.json',dict(at=time.time(),status='PASS' if not errors else 'FAIL',errors=errors,
-      verified_attack_receipts=len(receipts),BF16_events=len(audit),BF16_nonpass=len(bad),expected_completed_conditions=len(completion),
+      verified_attack_receipts=len(receipts),BF16_events=len(audit),BF16_nonpass=len(bad),planned_conditions=len(completion),completed_conditions=sum(r['status']=='COMPLETE' for r in completion),
       incomplete_conditions=sum(r['status']!='COMPLETE' for r in completion),source_script_sha256=C.sha(Path(__file__)),
       final_method_lock_sha256=C.sha(OUT/'final_method_lock.json'),cohort_audit=cohort_audit,
       limits=['BF16 audit verifies recorded loads; not unavailable closed-model weights','No seed replication or causal/equivalence proof','No representation geometry available for closed models']))
@@ -159,6 +164,9 @@ def run():
     narrative+=['','## Direction breakdown','','|Target|Method|Direction|Hits / planned N|Observed|','|---|---|---|---:|---:|']
     for r in stats:
         if r['study'] in ['final150','commercial150'] and r['transition']!='ALL':narrative.append(f"|{r['target']}|{r['method']}|{r['transition']}|{r['hits']}/{r['N']}|{r['observed']}|")
+    narrative+=['','## Additional matched30/50 held-out surrogate validation','','These development rows are method-selection evidence, not final-target confirmation.','','|Validator|Method|Split|Hits / N|Observed|','|---|---|---|---:|---:|']
+    for r in stats:
+        if r['study'].startswith('development_') and r['transition']=='ALL':narrative.append(f"|{r['target']}|{r['method']}|{r['study']}|{r['hits']}/{r['N']}|{r['observed']}|")
     narrative+=['','## Uniform4 Pull/Push ratio controls on matched30','','|Target|Pull|Push|Hits / N|Observed|','|---|---:|---:|---:|---:|']
     for r in stats:
         if r['study']=='ratio30' and r['transition']=='ALL':
@@ -176,4 +184,7 @@ def run():
     (report/'PAIRED_INTERPRETATION.md').write_text('\n'.join(text)+'\n')
     print(json.dumps(dict(errors=errors,conditions=len(completion),incomplete=sum(r['status']!='COMPLETE' for r in completion),paired_comparisons=len(comparisons),pngs=len(receipts))))
     return 1 if errors else 0
-if __name__=='__main__':raise SystemExit(run())
+if __name__=='__main__':
+    with (OUT/'statistics.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        raise SystemExit(run())
