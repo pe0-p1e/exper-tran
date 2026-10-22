@@ -1,8 +1,8 @@
 # V8 final experiment results
 
-Updated UTC: 2026-10-22 02:51:04
+Updated UTC: 2026-10-22 02:55:12
 
-Status: PARTIAL
+Status: FINISHED_WITH_USER_CANCELLATIONS
 
 ## Protocol and selection
 
@@ -246,3 +246,4 @@ Full PNGs, raw response traces, failed attempts and restartable checkpoints rema
 
 Only a fixed five-direction ten-class task and one primary seed were evaluated here. These results do not establish open-ended VQA, category generality, universal transfer or a causal mechanism. Small method differences are not automatically significant; shared images across models must not be treated as independent extra samples.
 Incomplete planned conditions: 3. Missing results are N/A; no failed or incomplete response is counted as a complete150 run.
+User decision: remaining GPT5.6 evaluation was cancelled because individual requests took around five minutes. Its partial responses are retained as incomplete observations; the other completed experiments are unchanged.

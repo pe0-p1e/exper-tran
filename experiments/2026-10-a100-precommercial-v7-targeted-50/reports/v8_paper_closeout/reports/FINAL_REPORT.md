@@ -1,6 +1,6 @@
 # Final experiment closeout
 
-Updated UTC: 2026-10-22 02:54:35
+Updated UTC: 2026-10-22 02:55:14
 
 GPT50 is USED FOR SELECTION by explicit user instruction. Final150 is separate; final outcomes cannot change frozen settings.
 Models: GPT-6.1 Sol, GPT-6 Sol, GPT-5.6 Sol, all low; no Astra, no paid API fallback.
@@ -50,3 +50,6 @@ Pure PP, BF16 unquantized,50steps,16/255,DI,equal per-image L1-normalized proxy 
 Missing measurements remain N/A, never zero. Closed-model target DeltaR/CKA/RSA are unavailable. Correlations are exploratory and correlated across shared images/models. No causality claim.
 PCA/t-SNE are fitted jointly per model/class pair; missing reverse-direction attacks are explicitly absent, not fabricated. No new reverse attack campaign is claimed.
 Complete numerical receipts, gradient traces, configurations and image-level results are in the uploaded compressed data bundle; full PNGs and raw CLI traces stay on the persistent root disk.
+
+## User cancellation
+Remaining GPT5.6 requests were cancelled by the user because some requests waited around five minutes. Completed partial results are preserved; no further GPT5.6 requests are scheduled. Other completed results are unchanged.

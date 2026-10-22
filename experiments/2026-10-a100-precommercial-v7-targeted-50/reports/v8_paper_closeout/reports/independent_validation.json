@@ -1,5 +1,5 @@
 {
-  "at": 1792637464.1550314,
+  "at": 1792637712.1371374,
   "status": "PASS",
   "errors": [],
   "verified_attack_receipts": 2520,
@@ -8,7 +8,8 @@
   "planned_conditions": 63,
   "completed_conditions": 60,
   "incomplete_conditions": 3,
-  "source_script_sha256": "0fa8d8a5d455480ff833825934926eb2dd289b185ee30db3fb9907b9c4f1c009",
+  "cancelled_conditions": 3,
+  "source_script_sha256": "45a0f47079143a5bb32c4b7448d08227cdff3a7b9673949acf182954e87eef33",
   "final_method_lock_sha256": "d0bf75b5ef845d6b8d683688debd8b75a5403abc1dc429bbe693964597faee8c",
   "cohort_audit": {
     "N": 150,

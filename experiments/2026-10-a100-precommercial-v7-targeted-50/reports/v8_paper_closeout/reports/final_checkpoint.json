@@ -1,0 +1,9 @@
+{
+  "status": "FINISHED_WITH_USER_CANCELLATIONS",
+  "persistent_root": "/home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h",
+  "device": "/dev/vda1",
+  "source_commit": "e277a5f171cd414633b8c668db6b50889a40ddd9",
+  "full_PNGs_raw_CLI_failed_attempts_preserved": true,
+  "compact_GitHub_only": true,
+  "at": 1792637717.379433
+}

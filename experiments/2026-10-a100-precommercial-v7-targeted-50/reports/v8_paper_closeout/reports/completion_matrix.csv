@@ -48,9 +48,9 @@ commercial50,gpt-6.1-sol,selected4,50,50,COMPLETE,36
 commercial50,gpt-6.1-sol,selected_prior,50,50,COMPLETE,35
 commercial50,gpt-6.1-sol,uniform2,50,50,COMPLETE,31
 commercial50,gpt-6.1-sol,uniform4,50,50,COMPLETE,35
-commercial150,gpt-5.6-sol,FDA,2,150,PARTIAL,2
-commercial150,gpt-5.6-sol,selected,3,150,PARTIAL,3
-commercial150,gpt-5.6-sol,uniform,12,150,PARTIAL,10
+commercial150,gpt-5.6-sol,FDA,2,150,CANCELLED_BY_USER,2
+commercial150,gpt-5.6-sol,selected,3,150,CANCELLED_BY_USER,3
+commercial150,gpt-5.6-sol,uniform,12,150,CANCELLED_BY_USER,10
 commercial150,gpt-6-sol,FDA,150,150,COMPLETE,123
 commercial150,gpt-6-sol,selected,150,150,COMPLETE,130
 commercial150,gpt-6-sol,uniform,150,150,COMPLETE,127
