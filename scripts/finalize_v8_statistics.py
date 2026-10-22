@@ -136,6 +136,8 @@ def run():
     for rows in by.values():
         ordered=sorted(rows,key=lambda r:r['McNemar_exact_p']);prev=0
         for i,row in enumerate(ordered):prev=max(prev,min(1,(len(rows)-i)*row['McNemar_exact_p']));row['Holm_p_within_target']=prev
+    used_models={model for _,fam,_,c in specs for model in [*c['layers'],C.VALIDATORS[fam],C.LARGE_EVAL_MODES['evaluate_large_'+fam]]}
+    C.atomic(report/'model_revisions.json',{name:C.REG[name] for name in sorted(used_models)})
     audit=C.read(C.ROOT/'audits/model_dtype_audit.json',[]);bad=[v for v in audit if v.get('status')!='pass']
     if bad:errors.append('BF16 audit has non-pass events')
     refs=set()
@@ -190,6 +192,7 @@ def run():
         'Fixed 1:1 cosine-prototype Pull–Push; 48 disjoint references/class; deepest and intermediate native spatial-token mean pooling; four layers per proxy in the three frozen finalists. Each target uses CLIP plus two VLM proxies outside its entire target family. Equal per-image L1-normalized proxy gradient averaging; BF16 unquantized open weights; 50 steps; 224px; epsilon16/255; alpha1/255; momentum1; DI; deterministic seed42.',
         'The user authorized selecting selected4, FDA4 and uniform4 with seven predeclared GPT6.1-low 50-image development comparisons. This is commercial-feedback-assisted development, not untouched confirmation. Final150 has disjoint IDs/pixels and was not used for retuning. Generic commercial packets use the qwen-style CLIP/InternVL2B/GemmaE2B proxy pool.',
         'Selected4 uses independently ranked native layers from the historical ten-image development scan; FDA4 uses conditional greedy joint-loss additions. Both are adaptations evaluated here, not faithful FDA auxiliary-classifier reproduction. All final methods use three proxies and four layers/proxy, so these final rows do not demonstrate lower compute for selected4.',
+        'Commercial target names are explicit requested Codex CLI slugs, all low effort via the existing subscription. The backend snapshot is undisclosed by this CLI; no stronger server-version claim is made. Client/version/access evidence is in commercial_preflight.json and retained raw traces.',
         '', '## Final150 target success over all ground-truth-selected images', '',
         '|Target|Method|Hits / planned N|Observed pairs|ASR|Wilson 95% CI|','|---|---|---:|---:|---:|---|']
     for r in final_rows:
@@ -211,7 +214,7 @@ def run():
     narrative+=['','## Statistical interpretation','',*text[2:], '', '## Measurements and reproducibility', '',
         f'Independently verified {len(receipts)} unique frozen attack receipts and decoded PNG pixel bounds. Recorded BF16 loads: {len(audit)}; non-pass events: {len(bad)}. Full parameter requirements apply only to inspectable open weights; closed weights are unavailable.',
         f"Sum of per-image measured attack execution: {sum(r['seconds'] or 0 for r in receipts)/3600:.2f} worker-hours; backwards: {sum(r['backwards'] or 0 for r in receipts)}. Concurrent worker durations are not GPU walltime, and exclude offline selection, cache creation and failed attempts.",
-        'Exact revisions and each native layer are in final_method_lock.json and all_BF16_load_audits.json.gz. results.csv/per_image.csv/per_direction.csv contain open target DeltaR, margins and cross-model CKA/RSA. confidence_intervals.csv, paired_comparisons.csv, completion_matrix.csv and png_integrity.csv provide independent audit outputs.',
+        'Exact open-model revisions are in reports/model_revisions.json and all_BF16_load_audits.json.gz; each selected native layer is in final_method_lock.json. results.csv/per_image.csv/per_direction.csv contain open target DeltaR, margins and cross-model CKA/RSA. confidence_intervals.csv, paired_comparisons.csv, completion_matrix.csv and png_integrity.csv provide independent audit outputs.',
         'projections/ exports joint PCA and t-SNE coordinates plus images for every available final target/method/direction. Each fit includes both reference classes plus clean/adversarial images; reverse attacks are absent. t-SNE distances are qualitative. CKA/RSA are means across proxy-layer/target reference geometry; individual values are exported. Closed-model DeltaR/CKA/RSA are N/A.',
         'examples/paired_examples.png displays the first frozen image per direction, with clean/Uniform/Selected/FDA images side by side; no success-based example selection. Exact image IDs and PNG hashes are in examples/index.json.',
         'Full PNGs, raw response traces, failed attempts and restartable checkpoints remain on the persistent root disk under '+str(C.ROOT)+'. GitHub carries code and compact complete numerical data, not the full image corpus.',
