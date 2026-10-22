@@ -50,7 +50,7 @@ commercial50,gpt-6.1-sol,uniform2,50,50,COMPLETE,31
 commercial50,gpt-6.1-sol,uniform4,50,50,COMPLETE,35
 commercial150,gpt-5.6-sol,FDA,2,150,PARTIAL,2
 commercial150,gpt-5.6-sol,selected,3,150,PARTIAL,3
-commercial150,gpt-5.6-sol,uniform,6,150,PARTIAL,6
+commercial150,gpt-5.6-sol,uniform,10,150,PARTIAL,8
 commercial150,gpt-6-sol,FDA,150,150,COMPLETE,123
 commercial150,gpt-6-sol,selected,150,150,COMPLETE,130
 commercial150,gpt-6-sol,uniform,150,150,COMPLETE,127

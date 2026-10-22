@@ -1,0 +1,62 @@
+{
+  "CLIP ViT-L/14": {
+    "repo_id": "openai/clip-vit-large-patch14",
+    "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "family": "clip",
+    "expected_vision_depth": 24
+  },
+  "Gemma 4 31B-it": {
+    "repo_id": "google/gemma-4-31B-it",
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "family": "gemma4",
+    "expected_vision_depth": 27
+  },
+  "Gemma 4 E2B-it": {
+    "repo_id": "google/gemma-4-E2B-it",
+    "revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+    "family": "gemma4",
+    "expected_vision_depth": 16
+  },
+  "Gemma 4 E4B-it": {
+    "repo_id": "google/gemma-4-E4B-it",
+    "revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+    "family": "gemma4",
+    "expected_vision_depth": 16
+  },
+  "InternVL3.5-14B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-14B-HF",
+    "revision": "226b96d5912e69159abc0384cefcbd51487fdce0",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "InternVL3.5-2B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-2B-HF",
+    "revision": "3f301ffcf3dcbb47893afae6650ea3e78d96fb6d",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "InternVL3.5-8B-HF": {
+    "repo_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+    "family": "internvl",
+    "expected_vision_depth": 24
+  },
+  "Qwen3.5-27B": {
+    "repo_id": "Qwen/Qwen3.5-27B",
+    "revision": "fc05daec18b0a78c049392ed2e771dde82bdf654",
+    "family": "qwen",
+    "expected_vision_depth": 27
+  },
+  "Qwen3.5-2B": {
+    "repo_id": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "family": "qwen",
+    "expected_vision_depth": 24
+  },
+  "Qwen3.5-9B": {
+    "repo_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "family": "qwen",
+    "expected_vision_depth": 27
+  }
+}

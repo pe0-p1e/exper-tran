@@ -1,6 +1,6 @@
 # V8 final experiment results
 
-Updated UTC: 2026-10-22 02:31:12
+Updated UTC: 2026-10-22 02:44:25
 
 Status: PARTIAL
 
@@ -9,6 +9,7 @@ Status: PARTIAL
 Fixed 1:1 cosine-prototype Pull–Push; 48 disjoint references/class; deepest and intermediate native spatial-token mean pooling; four layers per proxy in the three frozen finalists. Each target uses CLIP plus two VLM proxies outside its entire target family. Equal per-image L1-normalized proxy gradient averaging; BF16 unquantized open weights; 50 steps; 224px; epsilon16/255; alpha1/255; momentum1; DI; deterministic seed42.
 The user authorized selecting selected4, FDA4 and uniform4 with seven predeclared GPT6.1-low 50-image development comparisons. This is commercial-feedback-assisted development, not untouched confirmation. Final150 has disjoint IDs/pixels and was not used for retuning. Generic commercial packets use the qwen-style CLIP/InternVL2B/GemmaE2B proxy pool.
 Selected4 uses independently ranked native layers from the historical ten-image development scan; FDA4 uses conditional greedy joint-loss additions. Both are adaptations evaluated here, not faithful FDA auxiliary-classifier reproduction. All final methods use three proxies and four layers/proxy, so these final rows do not demonstrate lower compute for selected4.
+Commercial target names are explicit requested Codex CLI slugs, all low effort via the existing subscription. The backend snapshot is undisclosed by this CLI; no stronger server-version claim is made. Client/version/access evidence is in commercial_preflight.json and retained raw traces.
 
 ## Final150 target success over all ground-truth-selected images
 
@@ -25,13 +26,38 @@ Selected4 uses independently ranked native layers from the historical ten-image 
 |Gemma 4 31B-it|FDA|139/150|150|92.67%|[0.873, 0.959]|
 |gpt-5.6-sol|FDA|2/150|2|N/A|N/A|
 |gpt-5.6-sol|selected|3/150|3|N/A|N/A|
-|gpt-5.6-sol|uniform|6/150|6|N/A|N/A|
+|gpt-5.6-sol|uniform|8/150|10|N/A|N/A|
 |gpt-6-sol|FDA|123/150|150|82.00%|[0.751, 0.873]|
 |gpt-6-sol|selected|130/150|150|86.67%|[0.803, 0.912]|
 |gpt-6-sol|uniform|127/150|150|84.67%|[0.780, 0.896]|
 |gpt-6.1-sol|FDA|106/150|150|70.67%|[0.629, 0.774]|
 |gpt-6.1-sol|selected|109/150|150|72.67%|[0.650, 0.792]|
 |gpt-6.1-sol|uniform|105/150|150|70.00%|[0.622, 0.768]|
+
+## Clean baseline and parser diagnostics
+
+These diagnostics do not change image eligibility or the primary denominator. New targeted hits exclude images already predicted as the desired target when clean.
+
+|Target|Method|Clean correct / observed|Clean already-target|New targeted hits|Invalid clean / adv|
+|---|---|---:|---:|---:|---:|
+|Qwen3.5-27B|uniform|150/150|0|138|0/0|
+|Qwen3.5-27B|selected|150/150|0|137|0/0|
+|Qwen3.5-27B|FDA|150/150|0|137|0/0|
+|InternVL3.5-14B-HF|uniform|138/150|0|139|12/1|
+|InternVL3.5-14B-HF|selected|138/150|0|140|12/0|
+|InternVL3.5-14B-HF|FDA|138/150|0|134|12/1|
+|Gemma 4 31B-it|uniform|150/150|0|137|0/2|
+|Gemma 4 31B-it|selected|150/150|0|134|0/3|
+|Gemma 4 31B-it|FDA|150/150|0|139|0/3|
+|gpt-5.6-sol|FDA|2/2|0|2|0/0|
+|gpt-5.6-sol|selected|3/3|0|3|0/0|
+|gpt-5.6-sol|uniform|10/10|0|8|0/0|
+|gpt-6-sol|FDA|149/150|0|123|0/0|
+|gpt-6-sol|selected|149/150|0|130|0/0|
+|gpt-6-sol|uniform|149/150|0|127|0/0|
+|gpt-6.1-sol|FDA|150/150|0|106|0/0|
+|gpt-6.1-sol|selected|150/150|0|109|0/0|
+|gpt-6.1-sol|uniform|150/150|0|105|0/0|
 
 ## Direction breakdown
 
@@ -93,10 +119,10 @@ Selected4 uses independently ranked native layers from the historical ten-image 
 |gpt-5.6-sol|selected|T07|0/30|0|
 |gpt-5.6-sol|selected|T09|0/30|0|
 |gpt-5.6-sol|uniform|T01|2/30|2|
-|gpt-5.6-sol|uniform|T03|1/30|1|
-|gpt-5.6-sol|uniform|T05|1/30|1|
-|gpt-5.6-sol|uniform|T07|1/30|1|
-|gpt-5.6-sol|uniform|T09|1/30|1|
+|gpt-5.6-sol|uniform|T03|2/30|2|
+|gpt-5.6-sol|uniform|T05|2/30|2|
+|gpt-5.6-sol|uniform|T07|1/30|2|
+|gpt-5.6-sol|uniform|T09|1/30|2|
 |gpt-6-sol|FDA|T01|29/30|30|
 |gpt-6-sol|FDA|T03|26/30|30|
 |gpt-6-sol|FDA|T05|21/30|30|
@@ -211,7 +237,7 @@ Integrity checks: PASS; incomplete conditions: 3.
 
 Independently verified 2520 unique frozen attack receipts and decoded PNG pixel bounds. Recorded BF16 loads: 1955; non-pass events: 0. Full parameter requirements apply only to inspectable open weights; closed weights are unavailable.
 Sum of per-image measured attack execution: 27.25 worker-hours; backwards: 378000. Concurrent worker durations are not GPU walltime, and exclude offline selection, cache creation and failed attempts.
-Exact revisions and each native layer are in final_method_lock.json and all_BF16_load_audits.json.gz. results.csv/per_image.csv/per_direction.csv contain open target DeltaR, margins and cross-model CKA/RSA. confidence_intervals.csv, paired_comparisons.csv, completion_matrix.csv and png_integrity.csv provide independent audit outputs.
+Exact open-model revisions are in reports/model_revisions.json and all_BF16_load_audits.json.gz; each selected native layer is in final_method_lock.json. results.csv/per_image.csv/per_direction.csv contain open target DeltaR, margins and cross-model CKA/RSA. confidence_intervals.csv, paired_comparisons.csv, completion_matrix.csv and png_integrity.csv provide independent audit outputs.
 projections/ exports joint PCA and t-SNE coordinates plus images for every available final target/method/direction. Each fit includes both reference classes plus clean/adversarial images; reverse attacks are absent. t-SNE distances are qualitative. CKA/RSA are means across proxy-layer/target reference geometry; individual values are exported. Closed-model DeltaR/CKA/RSA are N/A.
 examples/paired_examples.png displays the first frozen image per direction, with clean/Uniform/Selected/FDA images side by side; no success-based example selection. Exact image IDs and PNG hashes are in examples/index.json.
 Full PNGs, raw response traces, failed attempts and restartable checkpoints remain on the persistent root disk under /home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h. GitHub carries code and compact complete numerical data, not the full image corpus.
