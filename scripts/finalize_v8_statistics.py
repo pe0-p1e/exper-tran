@@ -70,7 +70,7 @@ def run():
             if not r:errors.append('Unexpected evaluation image: '+iid);continue
             hit=x.get('adv_label')==r['target'];clean=x.get('clean_label')==r['source']
             if hit!=x.get('target_hit'):errors.append('Hit/parser mismatch: '+c['id']+'/'+iid)
-            data[iid]=dict(hit=hit,clean_correct=clean,transition=r['transition'])
+            data[iid]=dict(hit=hit,clean_correct=clean,clean_target=x.get('clean_label')==r['target'],clean_valid=x.get('clean_label') is not None,adv_valid=x.get('adv_label') is not None,transition=r['transition'])
             p=C.image_receipt(c,iid)
             if str(p) not in seen_receipts:
                 seen_receipts.add(str(p));valid=C.valid_receipt(p,c);s=C.read(p,{})
@@ -112,7 +112,7 @@ def run():
                     if response['identity']['image_sha256']!=C.sha(blind/'image.png') or response['identity']['prompt_sha256']!=C.sha(blind/'prompt.txt'):errors.append('Commercial image/prompt hash mismatch: '+rid)
                 iid=r['image_id']
                 if iid in data:errors.append('Duplicate commercial pair: '+iid)
-                data[iid]=dict(hit=records['adversarial']['parsed_label']==r['target_label'],clean_correct=records['clean']['parsed_label']==r['source_label'],transition=r['transition'])
+                data[iid]=dict(hit=records['adversarial']['parsed_label']==r['target_label'],clean_correct=records['clean']['parsed_label']==r['source_label'],clean_target=records['clean']['parsed_label']==r['target_label'],clean_valid=records['clean']['parsed_label'] is not None,adv_valid=records['adversarial']['parsed_label'] is not None,transition=r['transition'])
             key=(study,model);groups[key][pack.name]=data;expected={r['image_id'] for r in manifest.get('cases',[])};cohorts[key]=expected
             completion.append(dict(study=study,model=model,method=pack.name,observed=len(data),N=len(expected),status='COMPLETE' if len(data)==len(expected) else 'PARTIAL',hits=sum(x['hit'] for x in data.values())))
     stats=[];comparisons=[]
@@ -124,7 +124,7 @@ def run():
                 planned=len(expected) if tid=='ALL' else len(expected)//5;complete=n==planned
                 lo,hi=wilson(h,n) if complete else (None,None)
                 stats.append(dict(study=study,target=target,method=method,transition=tid,hits=h,N=planned,observed=n,ASR=h/planned if complete else None,Wilson95_low=lo,Wilson95_high=hi,
-                    clean_correct=sum(v['clean_correct'] for v in values),clean_correct_hits=sum(v['hit'] and v['clean_correct'] for v in values),
+                    clean_correct=sum(v['clean_correct'] for v in values),clean_accuracy=sum(v['clean_correct'] for v in values)/planned if complete else None,clean_target_hits=sum(v['clean_target'] for v in values),new_target_hits=sum(v['hit'] and not v['clean_target'] for v in values),clean_parser_invalid=sum(not v['clean_valid'] for v in values),adv_parser_invalid=sum(not v['adv_valid'] for v in values),clean_correct_hits=sum(v['hit'] and v['clean_correct'] for v in values),
                     clean_correct_ASR=sum(v['hit'] and v['clean_correct'] for v in values)/sum(v['clean_correct'] for v in values) if complete and any(v['clean_correct'] for v in values) else None))
         if study!='commercial50':
             for a,b in itertools.combinations(sorted(methods),2):
@@ -196,6 +196,8 @@ def run():
         interval=f"[{r['Wilson95_low']:.3f}, {r['Wilson95_high']:.3f}]" if r['ASR'] is not None else 'N/A'
         asr=f"{100*r['ASR']:.2f}%" if r['ASR'] is not None else 'N/A'
         narrative.append(f"|{r['target']}|{r['method']}|{r['hits']}/{r['N']}|{r['observed']}|{asr}|{interval}|")
+    narrative+=['','## Clean baseline and parser diagnostics','','These diagnostics do not change image eligibility or the primary denominator. New targeted hits exclude images already predicted as the desired target when clean.','','|Target|Method|Clean correct / observed|Clean already-target|New targeted hits|Invalid clean / adv|','|---|---|---:|---:|---:|---:|']
+    for r in final_rows:narrative.append(f"|{r['target']}|{r['method']}|{r['clean_correct']}/{r['observed']}|{r['clean_target_hits']}|{r['new_target_hits']}|{r['clean_parser_invalid']}/{r['adv_parser_invalid']}|")
     narrative+=['','## Direction breakdown','','|Target|Method|Direction|Hits / planned N|Observed|','|---|---|---|---:|---:|']
     for r in stats:
         if r['study'] in ['final150','commercial150'] and r['transition']!='ALL':narrative.append(f"|{r['target']}|{r['method']}|{r['transition']}|{r['hits']}/{r['N']}|{r['observed']}|")
