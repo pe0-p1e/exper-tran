@@ -1,0 +1,61 @@
+"""Bounded, auditable transport-only recovery; never retry a scored response."""
+import json, shutil, subprocess, time
+from pathlib import Path
+import common as C
+
+MAX_TIMEOUT_RETRIES = 3
+REQUEST_TIMEOUT = 600
+
+def recover_timeouts(root, model, order):
+    """Archive only timed-out unscored attempts. Unknown/complete traces fail closed."""
+    recovered=0
+    for rid in order:
+        folder=root/'responses'/model/rid
+        if (folder/'result.json').exists():
+            continue
+        error=C.read(folder/'transport_error.json')
+        if not error:
+            continue
+        if error.get('kind')!='timeout':
+            raise RuntimeError('Non-timeout failure requires review: '+rid)
+        events=[]
+        for name in ['stdout.jsonl','timeout_stdout.jsonl']:
+            if (folder/name).exists():
+                for line in (folder/name).read_text(errors='replace').splitlines():
+                    if line.strip().startswith('{'):
+                        try: events.append(json.loads(line))
+                        except json.JSONDecodeError: raise RuntimeError('Malformed interrupted trace: '+rid)
+        if any(e.get('type')=='turn.completed' or e.get('item',{}).get('type')=='agent_message' for e in events) or (folder/'answer.txt').exists():
+            raise RuntimeError('Potential returned answer requires manual reconciliation: '+rid)
+        text=' '.join((folder/n).read_text(errors='replace') for n in ['stderr.txt','timeout_stderr.txt'] if (folder/n).exists()).lower()
+        if any(s in text for s in ['429','rate limit','quota','authentication','unauthorized']):
+            raise RuntimeError('Quota/auth failure; no automatic retry: '+rid)
+        attempts=folder/'failed_attempts';n=len(list(attempts.glob('attempt_*'))) if attempts.exists() else 0
+        if n>=MAX_TIMEOUT_RETRIES:
+            raise RuntimeError('Timeout retry limit reached: '+rid)
+        dest=attempts/f'attempt_{n+1:02d}';dest.mkdir(parents=True)
+        names=[p for p in folder.iterdir() if p.is_file() and p.name!='retry_history.json']
+        evidence={p.name:C.sha(p) for p in names}
+        for p in names: shutil.move(str(p),str(dest/p.name))
+        C.atomic(dest/'audit.json',dict(request_id=rid,model=model,retry=n+1,at=time.time(),files=evidence,
+            previous_scored_response=False,server_completion_unknown=True,reason='transport timeout; no returned observable answer',
+            science_unchanged=True,timeout_seconds=REQUEST_TIMEOUT))
+        C.atomic(folder/'retry_history.json',dict(transport_retries=n+1,all_failed_attempts_retained=True,one_scored_result_only=True))
+        recovered+=1
+    return recovered
+
+def install_timeout_capture():
+    """Adapt timeout/capture only; leave the immutable legacy isolation/parser intact."""
+    original=subprocess.run
+    def run(cmd,*args,**kwargs):
+        is_request=isinstance(cmd,list) and len(cmd)>1 and cmd[:2]==['codex','exec']
+        if not is_request: return original(cmd,*args,**kwargs)
+        kwargs['timeout']=REQUEST_TIMEOUT
+        try: return original(cmd,*args,**kwargs)
+        except subprocess.TimeoutExpired as exc:
+            folder=Path(cmd[cmd.index('--output-last-message')+1]).parent
+            for name,value in [('timeout_stdout.jsonl',exc.stdout),('timeout_stderr.txt',exc.stderr)]:
+                if value is not None:
+                    (folder/name).write_text(value.decode(errors='replace') if isinstance(value,bytes) else value)
+            raise
+    subprocess.run=run

@@ -93,6 +93,8 @@ def run_pack(path,model,limit):
     old.checked_order=checked
     study=path.parents[2];sys.argv=[sys.argv[0],'--images',str(count),'--model',model,'--pack-dir',str(path),
       '--result-dir',str(study/'responses'/model),'--limit',str(limit)]
+    from paper_closeout.cli_recovery import install_timeout_capture
+    install_timeout_capture()
     old.main()
 
 def driver(deadline):
@@ -132,7 +134,18 @@ def driver(deadline):
                 done=sum((root/'responses'/model/rid/'result.json').exists() for rid in order)
                 limit=min(2*N,(done//20+1)*20)
                 key=C.digest([study,model,path.name])[:18];blocked=C.read(root/'blocked'/key)
-                if blocked:continue
+                if blocked:
+                    # Only reviewed timeout-only interruptions may be retried. Successful
+                    # results are immutable and skipped by the existing request runner.
+                    from paper_closeout.cli_recovery import recover_timeouts
+                    try:
+                        recovered=recover_timeouts(root,model,order)
+                        if not recovered:raise RuntimeError('No timeout-only unscored attempt available for recovery')
+                    except RuntimeError as exc:
+                        C.atomic(root/'blocked'/key,{**blocked,'recovery_error':str(exc)});continue
+                    stamp=str(time.time_ns());archive=root/'recovery_history'/stamp
+                    C.atomic(archive,dict(study=study,model=model,method=path.name,previous=blocked))
+                    (root/'blocked'/key).unlink()
                 log=root/'logs'/(model+'_'+path.name+'.log');log.parent.mkdir(parents=True,exist_ok=True)
                 with log.open('a') as f:
                     child=subprocess.Popen([sys.executable,__file__,'--run-pack',str(path),'--model',model,'--limit',str(limit)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)

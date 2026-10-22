@@ -138,3 +138,28 @@ Full BF16 weights, references, per-image RNG and attack math are unchanged.
 The controller adopts live workers on update; physical headroom,72GiB total
 GPU reservations and maximum8 workers remain enforced. Higher concurrency is not
 a claim of proportional speedup; compare actual image completions and runtime.
+
+## Transport recovery and final audit (2026-10-22)
+
+The isolated CLI adapter waits up to600s per request and retains partial timeout
+stdout/stderr. An unscored timeout can be retried at most3 times, with each failed
+attempt archived by request ID. A returned answer/completed turn requires manual
+reconciliation; successful result.json records are immutable and never resent.
+Unknown failures and quota/authentication errors are not automatically retried.
+No model, image, prompt, low effort, parser, attack or paid route is changed.
+
+`scripts/finalize_v8_statistics.py` independently checks canonical evaluator and
+CLI records, fixed cohorts, decoded PNG pixel bounds, recorded BF16 events,
+reference/attack IDs, numerators/denominators and request image/prompt hashes.
+It produces completion_matrix.csv, confidence_intervals.csv (Wilson), exact
+paired McNemar tests with within-target Holm correction, direction-stratified
+paired-bootstrap intervals, and FINAL_EXPERIMENT_REPORT.md. Non-significance
+is not equivalence, and correlated target-image rows are not pooled as replicates.
+
+The CPU-only `scripts/watch_v8_final_closeout.py` monitors the already running
+commercial driver and refreshes these checks. After completion (or an explicit
+bounded external blocker), it drains only its verified analysis service, performs
+a final report/publish, and archives the full output tree and source snapshot to
+`/home/ubuntu/experiment-checkpoints/` on `/dev/vda1`. It never starts GPU work.
+The full PNG corpus and raw CLI traces remain local; GitHub receives compact
+numerical results and reports. PARTIAL is never labeled COMPLETE.
