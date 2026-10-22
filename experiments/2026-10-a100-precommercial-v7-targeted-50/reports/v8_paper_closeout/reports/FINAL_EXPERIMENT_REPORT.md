@@ -1,6 +1,6 @@
 # V8 final experiment results
 
-Updated UTC: 2026-10-22 02:44:25
+Updated UTC: 2026-10-22 02:46:26
 
 Status: PARTIAL
 
@@ -26,7 +26,7 @@ Commercial target names are explicit requested Codex CLI slugs, all low effort v
 |Gemma 4 31B-it|FDA|139/150|150|92.67%|[0.873, 0.959]|
 |gpt-5.6-sol|FDA|2/150|2|N/A|N/A|
 |gpt-5.6-sol|selected|3/150|3|N/A|N/A|
-|gpt-5.6-sol|uniform|8/150|10|N/A|N/A|
+|gpt-5.6-sol|uniform|9/150|11|N/A|N/A|
 |gpt-6-sol|FDA|123/150|150|82.00%|[0.751, 0.873]|
 |gpt-6-sol|selected|130/150|150|86.67%|[0.803, 0.912]|
 |gpt-6-sol|uniform|127/150|150|84.67%|[0.780, 0.896]|
@@ -51,7 +51,7 @@ These diagnostics do not change image eligibility or the primary denominator. Ne
 |Gemma 4 31B-it|FDA|150/150|0|139|0/3|
 |gpt-5.6-sol|FDA|2/2|0|2|0/0|
 |gpt-5.6-sol|selected|3/3|0|3|0/0|
-|gpt-5.6-sol|uniform|10/10|0|8|0/0|
+|gpt-5.6-sol|uniform|11/11|0|9|0/0|
 |gpt-6-sol|FDA|149/150|0|123|0/0|
 |gpt-6-sol|selected|149/150|0|130|0/0|
 |gpt-6-sol|uniform|149/150|0|127|0/0|
@@ -118,7 +118,7 @@ These diagnostics do not change image eligibility or the primary denominator. Ne
 |gpt-5.6-sol|selected|T05|1/30|1|
 |gpt-5.6-sol|selected|T07|0/30|0|
 |gpt-5.6-sol|selected|T09|0/30|0|
-|gpt-5.6-sol|uniform|T01|2/30|2|
+|gpt-5.6-sol|uniform|T01|3/30|3|
 |gpt-5.6-sol|uniform|T03|2/30|2|
 |gpt-5.6-sol|uniform|T05|2/30|2|
 |gpt-5.6-sol|uniform|T07|1/30|2|
