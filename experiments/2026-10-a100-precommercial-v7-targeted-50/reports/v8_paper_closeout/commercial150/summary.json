@@ -159,8 +159,8 @@
       "method": "uniform",
       "model": "gpt-5.6-sol",
       "N": 150,
-      "completed_pairs": 11,
-      "hits": 9,
+      "completed_pairs": 12,
+      "hits": 10,
       "ASR": null,
       "directions": [
         {
@@ -171,9 +171,9 @@
         },
         {
           "transition": "T03",
-          "hits": 2,
+          "hits": 3,
           "N": 30,
-          "observed": 2
+          "observed": 3
         },
         {
           "transition": "T05",
@@ -348,6 +348,20 @@
             "adversarial": "r_bd0c1be5a5f40e3fa14de1a0"
           },
           "seconds": 4.19634485244751
+        },
+        {
+          "image_id": "train/n07753275/n07753275_17359.JPEG",
+          "transition": "T03",
+          "target_hit": true,
+          "clean_correct": true,
+          "clean_label": 3,
+          "adv_label": 4,
+          "parser_status": "ok",
+          "requests": {
+            "clean": "r_bd3e1f3421a634e860ee3ab0",
+            "adversarial": "r_26bdf4936598b9fcd00ecada"
+          },
+          "seconds": 3.412307024002075
         }
       ]
     },

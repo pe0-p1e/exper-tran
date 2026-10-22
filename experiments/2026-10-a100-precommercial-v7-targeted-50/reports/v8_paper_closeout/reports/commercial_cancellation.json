@@ -1,0 +1,16 @@
+{
+  "at": 1792637570.8444655,
+  "model": "gpt-5.6-sol",
+  "reason": "User cancelled remaining GPT5.6 evaluation because requests wait about5minutes",
+  "status": "CANCELLED_BY_USER",
+  "in_flight": [
+    {
+      "pid": 1705814,
+      "start": "30721361",
+      "command": "codex exec --ignore-user-config --ignore-rules --skip-git-repo-check --ephemeral --sandbox read-only --json --cd /tmp/imagecheck-iud4moum --model gpt-5.6-sol -c project_doc_max_bytes=0 -c model_reasoning_effort=\"low\" -c web_search=\"disabled\" --output-last-message /home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h/paper_closeout/commercial150/responses/gpt-5.6-sol/r_a831dffcce4e5fdc6f942a37/answer.txt --disable apps --disable shell_tool --disable unified_exec --disable multi_agent --disable browser_use --disable computer_use --disable image_generation --disable skill_search --disable view_image --disable hooks --enable skip_host_skill_discovery --image /tmp/imagecheck-iud4moum/image.png - ",
+      "state": "S"
+    }
+  ],
+  "completed_results_preserved": true,
+  "no_further_requests_authorized": true
+}
