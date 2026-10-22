@@ -1,0 +1,46 @@
+study,model,method,observed,N,status,hits
+final150,Qwen3.5-27B,uniform,150,150,COMPLETE,138
+final150,Qwen3.5-27B,selected,150,150,COMPLETE,137
+final150,Qwen3.5-27B,FDA,150,150,COMPLETE,137
+final150,InternVL3.5-14B-HF,uniform,150,150,COMPLETE,139
+final150,InternVL3.5-14B-HF,selected,150,150,COMPLETE,140
+final150,InternVL3.5-14B-HF,FDA,150,150,COMPLETE,134
+final150,Gemma 4 31B-it,uniform,150,150,COMPLETE,137
+final150,Gemma 4 31B-it,selected,150,150,COMPLETE,134
+final150,Gemma 4 31B-it,FDA,150,150,COMPLETE,139
+ratio30,Qwen3.5-27B,pull_1.0,30,30,COMPLETE,20
+ratio30,Qwen3.5-27B,pull_0.25,30,30,COMPLETE,8
+ratio30,Qwen3.5-27B,pull_0.5,30,30,COMPLETE,27
+ratio30,Qwen3.5-27B,pull_0.75,30,30,COMPLETE,26
+ratio30,Qwen3.5-27B,pull_0.0,30,30,COMPLETE,4
+ratio30,InternVL3.5-14B-HF,pull_1.0,30,30,COMPLETE,18
+ratio30,InternVL3.5-14B-HF,pull_0.25,30,30,COMPLETE,6
+ratio30,InternVL3.5-14B-HF,pull_0.5,30,30,COMPLETE,27
+ratio30,InternVL3.5-14B-HF,pull_0.75,30,30,COMPLETE,27
+ratio30,InternVL3.5-14B-HF,pull_0.0,30,30,COMPLETE,2
+ratio30,Gemma 4 31B-it,pull_1.0,30,30,COMPLETE,23
+ratio30,Gemma 4 31B-it,pull_0.25,30,30,COMPLETE,8
+ratio30,Gemma 4 31B-it,pull_0.5,30,30,COMPLETE,25
+ratio30,Gemma 4 31B-it,pull_0.75,30,30,COMPLETE,26
+ratio30,Gemma 4 31B-it,pull_0.0,30,30,COMPLETE,2
+commercial50,gpt-6.1-sol,FDA2,50,50,COMPLETE,34
+commercial50,gpt-6.1-sol,FDA3,50,50,COMPLETE,32
+commercial50,gpt-6.1-sol,FDA4,50,50,COMPLETE,36
+commercial50,gpt-6.1-sol,selected4,50,50,COMPLETE,36
+commercial50,gpt-6.1-sol,selected_prior,50,50,COMPLETE,35
+commercial50,gpt-6.1-sol,uniform2,50,50,COMPLETE,31
+commercial50,gpt-6.1-sol,uniform4,50,50,COMPLETE,35
+commercial150,gpt-5.6-sol,FDA,2,150,PARTIAL,2
+commercial150,gpt-5.6-sol,selected,3,150,PARTIAL,3
+commercial150,gpt-5.6-sol,uniform,5,150,PARTIAL,5
+commercial150,gpt-6-sol,FDA,150,150,COMPLETE,123
+commercial150,gpt-6-sol,selected,150,150,COMPLETE,130
+commercial150,gpt-6-sol,uniform,150,150,COMPLETE,127
+commercial150,gpt-6.1-sol,FDA,150,150,COMPLETE,106
+commercial150,gpt-6.1-sol,selected,150,150,COMPLETE,109
+commercial150,gpt-6.1-sol,uniform,150,150,COMPLETE,105
+ratio30,gpt-6.1-sol,pull_0.0,30,30,COMPLETE,3
+ratio30,gpt-6.1-sol,pull_0.25,30,30,COMPLETE,3
+ratio30,gpt-6.1-sol,pull_0.5,30,30,COMPLETE,19
+ratio30,gpt-6.1-sol,pull_0.75,30,30,COMPLETE,17
+ratio30,gpt-6.1-sol,pull_1.0,30,30,COMPLETE,17

@@ -1,0 +1,23 @@
+{
+  "at": 1792635950.206491,
+  "status": "PASS",
+  "errors": [],
+  "verified_attack_receipts": 1800,
+  "BF16_events": 1955,
+  "BF16_nonpass": 0,
+  "expected_completed_conditions": 45,
+  "incomplete_conditions": 3,
+  "source_script_sha256": "9bbf6a461b175af9fb7f4156c7af4eb92db21592f33df30e01ba078b63255fb4",
+  "final_method_lock_sha256": "d0bf75b5ef845d6b8d683688debd8b75a5403abc1dc429bbe693964597faee8c",
+  "cohort_audit": {
+    "N": 150,
+    "manifest_sha256": "608f0e2c6ae1767a63623f8cca2f6eddecfa3e0b6791f538c731b85bf3ae5f49",
+    "reference_attack_disjoint": true,
+    "ID_and_decoded_pixel_disjoint": true
+  },
+  "limits": [
+    "BF16 audit verifies recorded loads; not unavailable closed-model weights",
+    "No seed replication or causal/equivalence proof",
+    "No representation geometry available for closed models"
+  ]
+}
