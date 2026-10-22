@@ -148,6 +148,25 @@ def run():
       'FDA-inspired selection is an adaptation, not reproduction of auxiliary-classifier FDA. CKA/RSA are descriptive and cannot establish transfer mechanism alone.',
       'Interpret ratios only on their matched30 cohort; final150 and historical dev cohorts have different difficulty. Missing responses are unscored and never zeros.',
       '',f'Integrity checks: {"PASS" if not errors else "FAIL"}; incomplete conditions: {sum(r["status"]!="COMPLETE" for r in completion)}.']
+    # A small contact sheet is display-only; retain the exact, unmodified input PNGs locally.
+    examples=report/'examples';examples.mkdir(parents=True,exist_ok=True)
+    if not (examples/'paired_examples.png').exists():
+        import matplotlib;matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+        from PIL import Image
+        labels=['goldfish','monarch butterfly','pineapple','acoustic guitar','laptop','espresso','volcano','rocking chair','soccer ball','school bus']
+        cases=[next(r for r in C.cohort('final150')['images'] if r['transition']==tid) for tid in C.TIDS]
+        fig,axes=plt.subplots(5,4,figsize=(10,13));index=[]
+        for row,r in enumerate(cases):
+            methods=['uniform','selected','FDA'];first=final['families']['qwen']['uniform']['condition'];clean=C.read(C.image_receipt(first,r['image_id']))['clean']
+            paths=[clean]+[C.read(C.image_receipt(final['families']['qwen'][m]['condition'],r['image_id']))['adv'] for m in methods]
+            for col,(name,path) in enumerate(zip(['clean',*methods],paths)):
+                axes[row,col].imshow(Image.open(path));axes[row,col].axis('off');axes[row,col].set_title(name,fontsize=10)
+                index.append(dict(image_id=r['image_id'],transition=r['transition'],method=name,path=path,sha256=C.sha(path)))
+            axes[row,0].text(0,-.07,labels[r['source']-1]+' → '+labels[r['target']-1],transform=axes[row,0].transAxes,fontsize=9)
+        fig.suptitle('Same frozen150 images: clean and three methods; first image per direction',fontsize=12)
+        fig.tight_layout(rect=(0,.01,1,.97));fig.savefig(examples/'paired_examples.png',dpi=150);plt.close(fig)
+        C.atomic(examples/'index.json',dict(selection='first image per direction in frozen final150 manifest; not chosen by success',images=index,display_only=True))
     # Durable report uses human-readable method names and all planned rows.
     final_rows=[r for r in stats if r['study'] in ['final150','commercial150'] and r['transition']=='ALL']
     narrative=['# V8 final experiment results', '',f'Updated UTC: {time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime())}',
@@ -155,6 +174,7 @@ def run():
         '', '## Protocol and selection', '',
         'Fixed 1:1 cosine-prototype Pull–Push; 48 disjoint references/class; deepest and intermediate native spatial-token mean pooling; four layers per proxy in the three frozen finalists. Each target uses CLIP plus two VLM proxies outside its entire target family. Equal per-image L1-normalized proxy gradient averaging; BF16 unquantized open weights; 50 steps; 224px; epsilon16/255; alpha1/255; momentum1; DI; deterministic seed42.',
         'The user authorized selecting selected4, FDA4 and uniform4 with seven predeclared GPT6.1-low 50-image development comparisons. This is commercial-feedback-assisted development, not untouched confirmation. Final150 has disjoint IDs/pixels and was not used for retuning. Generic commercial packets use the qwen-style CLIP/InternVL2B/GemmaE2B proxy pool.',
+        'Selected4 uses independently ranked native layers from the historical ten-image development scan; FDA4 uses conditional greedy joint-loss additions. Both are adaptations evaluated here, not faithful FDA auxiliary-classifier reproduction. All final methods use three proxies and four layers/proxy, so these final rows do not demonstrate lower compute for selected4.',
         '', '## Final150 target success over all ground-truth-selected images', '',
         '|Target|Method|Hits / planned N|Observed pairs|ASR|Wilson 95% CI|','|---|---|---:|---:|---:|---|']
     for r in final_rows:
@@ -176,6 +196,7 @@ def run():
         f"Sum of per-image measured attack execution: {sum(r['seconds'] or 0 for r in receipts)/3600:.2f} worker-hours; backwards: {sum(r['backwards'] or 0 for r in receipts)}. Concurrent worker durations are not GPU walltime, and exclude offline selection, cache creation and failed attempts.",
         'Exact revisions and each native layer are in final_method_lock.json and all_BF16_load_audits.json.gz. results.csv/per_image.csv/per_direction.csv contain open target DeltaR, margins and cross-model CKA/RSA. confidence_intervals.csv, paired_comparisons.csv, completion_matrix.csv and png_integrity.csv provide independent audit outputs.',
         'projections/ exports joint PCA and t-SNE coordinates plus images for every available final target/method/direction. Each fit includes both reference classes plus clean/adversarial images; reverse attacks are absent. t-SNE distances are qualitative. CKA/RSA are means across proxy-layer/target reference geometry; individual values are exported. Closed-model DeltaR/CKA/RSA are N/A.',
+        'examples/paired_examples.png displays the first frozen image per direction, with clean/Uniform/Selected/FDA images side by side; no success-based example selection. Exact image IDs and PNG hashes are in examples/index.json.',
         'Full PNGs, raw response traces, failed attempts and restartable checkpoints remain on the persistent root disk under '+str(C.ROOT)+'. GitHub carries code and compact complete numerical data, not the full image corpus.',
         '', '## Limits and outstanding work', '',
         'Only a fixed five-direction ten-class task and one primary seed were evaluated here. These results do not establish open-ended VQA, category generality, universal transfer or a causal mechanism. Small method differences are not automatically significant; shared images across models must not be treated as independent extra samples.',
