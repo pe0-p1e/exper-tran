@@ -1,0 +1,51 @@
+{
+  "archives": [
+    {
+      "family": "qwen",
+      "file": "final150_qwen27b_and_all_gpt_clean_adv.zip",
+      "sha256": "df6b83a00e56f8cc2621fed7f1a6c526e3b9bc193a9c1ce5fd86a53f48572ab5",
+      "bytes": 60433975,
+      "clean_PNGs": 150,
+      "adversarial_PNGs": 450,
+      "pairs": 450,
+      "methods": [
+        "uniform",
+        "selected",
+        "FDA"
+      ]
+    },
+    {
+      "family": "internvl",
+      "file": "final150_internvl14b_clean_adv.zip",
+      "sha256": "2c785d50dd0036616cd8d6eb5c8e5953a04d5d372cff14aca2e8a8bf559f0e67",
+      "bytes": 60482910,
+      "clean_PNGs": 150,
+      "adversarial_PNGs": 450,
+      "pairs": 450,
+      "methods": [
+        "uniform",
+        "selected",
+        "FDA"
+      ]
+    },
+    {
+      "family": "gemma4",
+      "file": "final150_gemma31b_clean_adv.zip",
+      "sha256": "6196f55871a546199a1949ac44676529ed51b7a859e91bcd1bd56d52def9d4f8",
+      "bytes": 60371322,
+      "clean_PNGs": 150,
+      "adversarial_PNGs": 450,
+      "pairs": 450,
+      "methods": [
+        "uniform",
+        "selected",
+        "FDA"
+      ]
+    }
+  ],
+  "all_final150_families": true,
+  "PNG_total_including_shared_clean_per_archive": 1800,
+  "unique_adversarial_images": 1350,
+  "clean_unique_across_families": 150,
+  "commercial_subset": "final150_qwen27b_and_all_gpt_clean_adv.zip"
+}
