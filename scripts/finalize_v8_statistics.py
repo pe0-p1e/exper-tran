@@ -39,6 +39,7 @@ def paired(a,b,seed=42):
         bootstrap='10000 paired image resamples, stratified by direction; seed42',test_unit='image, not model-image pooled observations')
 
 def run():
+    C.check_lock()
     report=OUT/'reports';errors=[];completion=[];cohorts={};groups=defaultdict(dict);directions=[];receipts=[]
     final=C.read(OUT/'final_method_lock.json');ratio=C.read(OUT/'pull_push_ablation_lock.json')
     # Read canonical final/ratio target evaluator files independently of analysis CSVs.

@@ -89,4 +89,11 @@ def recover_blocked(root, model, order, log):
         rid=ids[-1];result=C.read(root/'responses'/model/rid/'result.json')
         if result and result.get('request_id')==rid and result.get('identity',{}).get('model')==model:
             return dict(shared_timeout_already_resolved=rid,no_duplicate_request=True)
+        folder=root/'responses'/model/rid;history=C.read(folder/'retry_history.json',{})
+        attempts=sorted((folder/'failed_attempts').glob('attempt_*'))
+        active=[folder/n for n in ['transport_error.json','stdout.jsonl','timeout_stdout.jsonl','answer.txt']]
+        if attempts and len(attempts)==history.get('transport_retries') and len(attempts)<=MAX_TIMEOUT_RETRIES and not any(p.exists() for p in active):
+            audit=C.read(attempts[-1]/'audit.json',{})
+            if audit.get('request_id')==rid and audit.get('previous_scored_response') is False:
+                return dict(archived_retry_ready=rid,retry_count_unchanged=True)
     raise RuntimeError('No reviewed timeout or resolved shared request is available')
