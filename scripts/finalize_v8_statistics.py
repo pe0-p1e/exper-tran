@@ -114,7 +114,7 @@ def run():
                 if iid in data:errors.append('Duplicate commercial pair: '+iid)
                 data[iid]=dict(hit=records['adversarial']['parsed_label']==r['target_label'],clean_correct=records['clean']['parsed_label']==r['source_label'],clean_target=records['clean']['parsed_label']==r['target_label'],clean_valid=records['clean']['parsed_label'] is not None,adv_valid=records['adversarial']['parsed_label'] is not None,transition=r['transition'])
             key=(study,model);groups[key][pack.name]=data;expected={r['image_id'] for r in manifest.get('cases',[])};cohorts[key]=expected
-            completion.append(dict(study=study,model=model,method=pack.name,observed=len(data),N=len(expected),status='COMPLETE' if len(data)==len(expected) else 'PARTIAL',hits=sum(x['hit'] for x in data.values())))
+            completion.append(dict(study=study,model=model,method=pack.name,observed=len(data),N=len(expected),status='COMPLETE' if len(data)==len(expected) else ('CANCELLED_BY_USER' if model=='gpt-5.6-sol' and (OUT/'reports/commercial_cancellation.json').exists() else 'PARTIAL'),hits=sum(x['hit'] for x in data.values())))
     stats=[];comparisons=[]
     for (study,target),methods in groups.items():
         expected=cohorts[(study,target)]
@@ -152,7 +152,7 @@ def run():
     write_csv(report/'paired_comparisons.csv',comparisons);write_csv(report/'confidence_intervals.csv',stats);write_csv(report/'completion_matrix.csv',completion);write_csv(report/'png_integrity.csv',receipts)
     C.atomic(report/'independent_validation.json',dict(at=time.time(),status='PASS' if not errors else 'FAIL',errors=errors,
       verified_attack_receipts=len(receipts),BF16_events=len(audit),BF16_nonpass=len(bad),planned_conditions=len(completion),completed_conditions=sum(r['status']=='COMPLETE' for r in completion),
-      incomplete_conditions=sum(r['status']!='COMPLETE' for r in completion),source_script_sha256=C.sha(Path(__file__)),
+      incomplete_conditions=sum(r['status']!='COMPLETE' for r in completion),cancelled_conditions=sum(r['status']=='CANCELLED_BY_USER' for r in completion),source_script_sha256=C.sha(Path(__file__)),
       final_method_lock_sha256=C.sha(OUT/'final_method_lock.json'),cohort_audit=cohort_audit,
       limits=['BF16 audit verifies recorded loads; not unavailable closed-model weights','No seed replication or causal/equivalence proof','No representation geometry available for closed models']))
     text=['# Paired final150 interpretation','', 'Pure 1:1 Pull–Push, three legal proxies, four layers/model. GPT50 selected among predeclared candidates; final150 was evaluated after freeze.',
@@ -187,7 +187,7 @@ def run():
     # Durable report uses human-readable method names and all planned rows.
     final_rows=[r for r in stats if r['study'] in ['final150','commercial150'] and r['transition']=='ALL']
     narrative=['# V8 final experiment results', '',f'Updated UTC: {time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime())}',
-        '', 'Status: '+('COMPLETE' if all(r['status']=='COMPLETE' for r in completion) and not errors else 'PARTIAL'),
+        '', 'Status: '+('COMPLETE' if all(r['status']=='COMPLETE' for r in completion) and not errors else ('FINISHED_WITH_USER_CANCELLATIONS' if not errors and all(r['status'] in ['COMPLETE','CANCELLED_BY_USER'] for r in completion) else 'PARTIAL')),
         '', '## Protocol and selection', '',
         'Fixed 1:1 cosine-prototype Pull–Push; 48 disjoint references/class; deepest and intermediate native spatial-token mean pooling; four layers per proxy in the three frozen finalists. Each target uses CLIP plus two VLM proxies outside its entire target family. Equal per-image L1-normalized proxy gradient averaging; BF16 unquantized open weights; 50 steps; 224px; epsilon16/255; alpha1/255; momentum1; DI; deterministic seed42.',
         'The user authorized selecting selected4, FDA4 and uniform4 with seven predeclared GPT6.1-low 50-image development comparisons. This is commercial-feedback-assisted development, not untouched confirmation. Final150 has disjoint IDs/pixels and was not used for retuning. Generic commercial packets use the qwen-style CLIP/InternVL2B/GemmaE2B proxy pool.',
@@ -220,7 +220,8 @@ def run():
         'Full PNGs, raw response traces, failed attempts and restartable checkpoints remain on the persistent root disk under '+str(C.ROOT)+'. GitHub carries code and compact complete numerical data, not the full image corpus.',
         '', '## Limits and outstanding work', '',
         'Only a fixed five-direction ten-class task and one primary seed were evaluated here. These results do not establish open-ended VQA, category generality, universal transfer or a causal mechanism. Small method differences are not automatically significant; shared images across models must not be treated as independent extra samples.',
-        f"Incomplete planned conditions: {sum(r['status']!='COMPLETE' for r in completion)}. Missing results are N/A; no failed or incomplete response is counted as a complete150 run."]
+        f"Incomplete planned conditions: {sum(r['status']!='COMPLETE' for r in completion)}. Missing results are N/A; no failed or incomplete response is counted as a complete150 run.",
+        'User decision: remaining GPT5.6 evaluation was cancelled because individual requests took around five minutes. Its partial responses are retained as incomplete observations; the other completed experiments are unchanged.' if (OUT/'reports/commercial_cancellation.json').exists() else 'No user cancellation recorded.']
     (report/'FINAL_EXPERIMENT_REPORT.md').write_text('\n'.join(narrative)+'\n')
     (report/'PAIRED_INTERPRETATION.md').write_text('\n'.join(text)+'\n')
     print(json.dumps(dict(errors=errors,conditions=len(completion),incomplete=sum(r['status']!='COMPLETE' for r in completion),paired_comparisons=len(comparisons),pngs=len(receipts))))

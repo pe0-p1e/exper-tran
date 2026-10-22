@@ -22,11 +22,13 @@ def finish(complete):
     refresh()
     from paper_closeout.analysis import calculate,projections
     calculate();projections()
+    if (OUT/'reports/commercial_cancellation.json').exists():
+        p=OUT/'reports/FINAL_REPORT.md';p.write_text(p.read_text()+'\n## User cancellation\nRemaining GPT5.6 requests were cancelled by the user because some requests waited around five minutes. Completed partial results are preserved; no further GPT5.6 requests are scheduled. Other completed results are unchanged.\n')
     validation=C.read(OUT/'reports/independent_validation.json')
     if complete and (validation['errors'] or validation['incomplete_conditions']):raise RuntimeError('Final audit has missing or invalid conditions')
-    status='COMPLETE' if complete else 'PARTIAL_BLOCKED'
+    status='COMPLETE' if complete else ('FINISHED_WITH_USER_CANCELLATIONS' if (OUT/'reports/commercial_cancellation.json').exists() else 'PARTIAL_BLOCKED')
     C.atomic(OUT/'status.json',dict(at=time.time(),state=status,complete=complete,scope='User-authorized paper closeout only; historical stage1 states preserved',
-        pending=validation['incomplete_conditions'],analysis='COMPLETE',final_frozen=True,commercial=C.read(OUT/'commercial_driver_result.json')))
+        pending=validation['incomplete_conditions']-validation.get('cancelled_conditions',0),cancelled=validation.get('cancelled_conditions',0),analysis='COMPLETE',final_frozen=True,commercial=C.read(OUT/'commercial_driver_result.json')))
     # Full experiment records remain on root disk; publish just this compact receipt.
     root_mount=subprocess.check_output(['findmnt','-n','-o','SOURCE','--target',str(C.ROOT)],text=True).strip()
     if root_mount!='/dev/vda1':raise RuntimeError('Expected persistent root device; archive requires storage review: '+root_mount)
