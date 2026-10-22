@@ -1,13 +1,14 @@
 {
-  "at": 1792635950.206491,
+  "at": 1792636270.72365,
   "status": "PASS",
   "errors": [],
-  "verified_attack_receipts": 1800,
+  "verified_attack_receipts": 2520,
   "BF16_events": 1955,
   "BF16_nonpass": 0,
-  "expected_completed_conditions": 45,
+  "planned_conditions": 63,
+  "completed_conditions": 60,
   "incomplete_conditions": 3,
-  "source_script_sha256": "9bbf6a461b175af9fb7f4156c7af4eb92db21592f33df30e01ba078b63255fb4",
+  "source_script_sha256": "3cf083d4ebf2a4c269d86353f4074f101e502b1adeea6b21de75ac72ba42ecb5",
   "final_method_lock_sha256": "d0bf75b5ef845d6b8d683688debd8b75a5403abc1dc429bbe693964597faee8c",
   "cohort_audit": {
     "N": 150,

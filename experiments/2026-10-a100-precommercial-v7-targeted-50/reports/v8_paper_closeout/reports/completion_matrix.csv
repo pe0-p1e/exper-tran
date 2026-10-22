@@ -23,6 +23,24 @@ ratio30,Gemma 4 31B-it,pull_0.25,30,30,COMPLETE,8
 ratio30,Gemma 4 31B-it,pull_0.5,30,30,COMPLETE,25
 ratio30,Gemma 4 31B-it,pull_0.75,30,30,COMPLETE,26
 ratio30,Gemma 4 31B-it,pull_0.0,30,30,COMPLETE,2
+development_explore,Qwen3.5-9B,selected4,30,30,COMPLETE,27
+development_confirm,Qwen3.5-9B,selected4,50,50,COMPLETE,45
+development_explore,Qwen3.5-9B,FDA3,30,30,COMPLETE,26
+development_confirm,Qwen3.5-9B,FDA3,50,50,COMPLETE,45
+development_explore,Qwen3.5-9B,FDA4,30,30,COMPLETE,28
+development_confirm,Qwen3.5-9B,FDA4,50,50,COMPLETE,47
+development_explore,InternVL3.5-8B-HF,selected4,30,30,COMPLETE,28
+development_confirm,InternVL3.5-8B-HF,selected4,50,50,COMPLETE,44
+development_explore,InternVL3.5-8B-HF,FDA3,30,30,COMPLETE,25
+development_confirm,InternVL3.5-8B-HF,FDA3,50,50,COMPLETE,46
+development_explore,InternVL3.5-8B-HF,FDA4,30,30,COMPLETE,26
+development_confirm,InternVL3.5-8B-HF,FDA4,50,50,COMPLETE,42
+development_explore,Gemma 4 E4B-it,selected4,30,30,COMPLETE,29
+development_confirm,Gemma 4 E4B-it,selected4,50,50,COMPLETE,46
+development_explore,Gemma 4 E4B-it,FDA3,30,30,COMPLETE,28
+development_confirm,Gemma 4 E4B-it,FDA3,50,50,COMPLETE,45
+development_explore,Gemma 4 E4B-it,FDA4,30,30,COMPLETE,28
+development_confirm,Gemma 4 E4B-it,FDA4,50,50,COMPLETE,45
 commercial50,gpt-6.1-sol,FDA2,50,50,COMPLETE,34
 commercial50,gpt-6.1-sol,FDA3,50,50,COMPLETE,32
 commercial50,gpt-6.1-sol,FDA4,50,50,COMPLETE,36
@@ -32,7 +50,7 @@ commercial50,gpt-6.1-sol,uniform2,50,50,COMPLETE,31
 commercial50,gpt-6.1-sol,uniform4,50,50,COMPLETE,35
 commercial150,gpt-5.6-sol,FDA,2,150,PARTIAL,2
 commercial150,gpt-5.6-sol,selected,3,150,PARTIAL,3
-commercial150,gpt-5.6-sol,uniform,5,150,PARTIAL,5
+commercial150,gpt-5.6-sol,uniform,6,150,PARTIAL,6
 commercial150,gpt-6-sol,FDA,150,150,COMPLETE,123
 commercial150,gpt-6-sol,selected,150,150,COMPLETE,130
 commercial150,gpt-6-sol,uniform,150,150,COMPLETE,127

@@ -1,6 +1,6 @@
 # V8 final experiment results
 
-Updated UTC: 2026-10-22 02:25:50
+Updated UTC: 2026-10-22 02:31:12
 
 Status: PARTIAL
 
@@ -8,6 +8,7 @@ Status: PARTIAL
 
 Fixed 1:1 cosine-prototype Pull–Push; 48 disjoint references/class; deepest and intermediate native spatial-token mean pooling; four layers per proxy in the three frozen finalists. Each target uses CLIP plus two VLM proxies outside its entire target family. Equal per-image L1-normalized proxy gradient averaging; BF16 unquantized open weights; 50 steps; 224px; epsilon16/255; alpha1/255; momentum1; DI; deterministic seed42.
 The user authorized selecting selected4, FDA4 and uniform4 with seven predeclared GPT6.1-low 50-image development comparisons. This is commercial-feedback-assisted development, not untouched confirmation. Final150 has disjoint IDs/pixels and was not used for retuning. Generic commercial packets use the qwen-style CLIP/InternVL2B/GemmaE2B proxy pool.
+Selected4 uses independently ranked native layers from the historical ten-image development scan; FDA4 uses conditional greedy joint-loss additions. Both are adaptations evaluated here, not faithful FDA auxiliary-classifier reproduction. All final methods use three proxies and four layers/proxy, so these final rows do not demonstrate lower compute for selected4.
 
 ## Final150 target success over all ground-truth-selected images
 
@@ -24,7 +25,7 @@ The user authorized selecting selected4, FDA4 and uniform4 with seven predeclare
 |Gemma 4 31B-it|FDA|139/150|150|92.67%|[0.873, 0.959]|
 |gpt-5.6-sol|FDA|2/150|2|N/A|N/A|
 |gpt-5.6-sol|selected|3/150|3|N/A|N/A|
-|gpt-5.6-sol|uniform|5/150|5|N/A|N/A|
+|gpt-5.6-sol|uniform|6/150|6|N/A|N/A|
 |gpt-6-sol|FDA|123/150|150|82.00%|[0.751, 0.873]|
 |gpt-6-sol|selected|130/150|150|86.67%|[0.803, 0.912]|
 |gpt-6-sol|uniform|127/150|150|84.67%|[0.780, 0.896]|
@@ -91,7 +92,7 @@ The user authorized selecting selected4, FDA4 and uniform4 with seven predeclare
 |gpt-5.6-sol|selected|T05|1/30|1|
 |gpt-5.6-sol|selected|T07|0/30|0|
 |gpt-5.6-sol|selected|T09|0/30|0|
-|gpt-5.6-sol|uniform|T01|1/30|1|
+|gpt-5.6-sol|uniform|T01|2/30|2|
 |gpt-5.6-sol|uniform|T03|1/30|1|
 |gpt-5.6-sol|uniform|T05|1/30|1|
 |gpt-5.6-sol|uniform|T07|1/30|1|
@@ -126,6 +127,31 @@ The user authorized selecting selected4, FDA4 and uniform4 with seven predeclare
 |gpt-6.1-sol|uniform|T05|20/30|30|
 |gpt-6.1-sol|uniform|T07|27/30|30|
 |gpt-6.1-sol|uniform|T09|13/30|30|
+
+## Additional matched30/50 held-out surrogate validation
+
+These development rows are method-selection evidence, not final-target confirmation.
+
+|Validator|Method|Split|Hits / N|Observed|
+|---|---|---|---:|---:|
+|Qwen3.5-9B|selected4|development_explore|27/30|30|
+|Qwen3.5-9B|FDA3|development_explore|26/30|30|
+|Qwen3.5-9B|FDA4|development_explore|28/30|30|
+|Qwen3.5-9B|selected4|development_confirm|45/50|50|
+|Qwen3.5-9B|FDA3|development_confirm|45/50|50|
+|Qwen3.5-9B|FDA4|development_confirm|47/50|50|
+|InternVL3.5-8B-HF|selected4|development_explore|28/30|30|
+|InternVL3.5-8B-HF|FDA3|development_explore|25/30|30|
+|InternVL3.5-8B-HF|FDA4|development_explore|26/30|30|
+|InternVL3.5-8B-HF|selected4|development_confirm|44/50|50|
+|InternVL3.5-8B-HF|FDA3|development_confirm|46/50|50|
+|InternVL3.5-8B-HF|FDA4|development_confirm|42/50|50|
+|Gemma 4 E4B-it|selected4|development_explore|29/30|30|
+|Gemma 4 E4B-it|FDA3|development_explore|28/30|30|
+|Gemma 4 E4B-it|FDA4|development_explore|28/30|30|
+|Gemma 4 E4B-it|selected4|development_confirm|46/50|50|
+|Gemma 4 E4B-it|FDA3|development_confirm|45/50|50|
+|Gemma 4 E4B-it|FDA4|development_confirm|45/50|50|
 
 ## Uniform4 Pull/Push ratio controls on matched30
 
@@ -183,10 +209,11 @@ Integrity checks: PASS; incomplete conditions: 3.
 
 ## Measurements and reproducibility
 
-Independently verified 1800 unique frozen attack receipts and decoded PNG pixel bounds. Recorded BF16 loads: 1955; non-pass events: 0. Full parameter requirements apply only to inspectable open weights; closed weights are unavailable.
-Sum of per-image measured attack execution: 20.83 worker-hours; backwards: 270000. Concurrent worker durations are not GPU walltime, and exclude offline selection, cache creation and failed attempts.
+Independently verified 2520 unique frozen attack receipts and decoded PNG pixel bounds. Recorded BF16 loads: 1955; non-pass events: 0. Full parameter requirements apply only to inspectable open weights; closed weights are unavailable.
+Sum of per-image measured attack execution: 27.25 worker-hours; backwards: 378000. Concurrent worker durations are not GPU walltime, and exclude offline selection, cache creation and failed attempts.
 Exact revisions and each native layer are in final_method_lock.json and all_BF16_load_audits.json.gz. results.csv/per_image.csv/per_direction.csv contain open target DeltaR, margins and cross-model CKA/RSA. confidence_intervals.csv, paired_comparisons.csv, completion_matrix.csv and png_integrity.csv provide independent audit outputs.
 projections/ exports joint PCA and t-SNE coordinates plus images for every available final target/method/direction. Each fit includes both reference classes plus clean/adversarial images; reverse attacks are absent. t-SNE distances are qualitative. CKA/RSA are means across proxy-layer/target reference geometry; individual values are exported. Closed-model DeltaR/CKA/RSA are N/A.
+examples/paired_examples.png displays the first frozen image per direction, with clean/Uniform/Selected/FDA images side by side; no success-based example selection. Exact image IDs and PNG hashes are in examples/index.json.
 Full PNGs, raw response traces, failed attempts and restartable checkpoints remain on the persistent root disk under /home/ubuntu/exper-tran/outputs/a100_precommercial_v8_joint_selection24h. GitHub carries code and compact complete numerical data, not the full image corpus.
 
 ## Limits and outstanding work
