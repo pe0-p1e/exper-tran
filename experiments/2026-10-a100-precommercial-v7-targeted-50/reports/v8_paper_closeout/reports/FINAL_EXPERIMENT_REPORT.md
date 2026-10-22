@@ -247,3 +247,9 @@ Full PNGs, raw response traces, failed attempts and restartable checkpoints rema
 Only a fixed five-direction ten-class task and one primary seed were evaluated here. These results do not establish open-ended VQA, category generality, universal transfer or a causal mechanism. Small method differences are not automatically significant; shared images across models must not be treated as independent extra samples.
 Incomplete planned conditions: 3. Missing results are N/A; no failed or incomplete response is counted as a complete150 run.
 User decision: remaining GPT5.6 evaluation was cancelled because individual requests took around five minutes. Its partial responses are retained as incomplete observations; the other completed experiments are unchanged.
+
+## Complete published images and numeric intermediates
+
+All three final target-family-excluded image sets are published under [final_images](../final_images/README.md). Each ZIP contains150 shared clean PNGs and450 adversarial PNGs across Uniform/Selected/FDA, plus pairing and SHA256 manifests. The Qwen/GPT image set is60,433,975bytes; InternVL is60,482,910bytes; Gemma is60,371,322bytes.
+
+[The numerical supplement](../intermediate_supplement/README.md) inventories57,279 scientific files across V8 and the prior V7 exploratory/ablation roots. It references23,632 already published equivalents and adds33,647 files in49 checksum-verified chunks (1,020,863,320bytes compressed). This includes raw gradient measurements, reference embeddings, layer/model-selection diagnostics, exploratory and ablation data. See coverage.json and file_inventory.json.gz for exact scope and locations. Weights, authentication, raw commercial sessions, preflight environments and non-final image corpora stay local.
